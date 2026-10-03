@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معدل التغير - حساب معدل التغير من الجداول والرسوم البيانية - مادة الرياضيات">
+    <title>معدل التغير | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .graph-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .graph-visual svg { max-width: 100%; height: auto; }
+        .rate-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-primary); margin: 15px 0; }
+        .rate-card h4 { color: var(--subject-primary); margin-bottom: 10px; }
+        .rate-card .formula { font-family: 'Fira Code', monospace; font-size: 1.2rem; font-weight: 700; color: var(--subject-primary); text-align: center; margin: 15px 0; direction: ltr; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-chart-line"></i> معدل التغير</h1>
+            <p>حساب معدل التغير من الجداول والرسوم البيانية</p>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف نقيس سرعة التغير في الكميات المختلفة؟</strong>
+                <p style="margin-top: 10px;">معدل التغير يصف كيف تتغير كمية بالنسبة لأخرى. نستخدمه في حياتنا اليومية: سرعة السيارة (كم/ساعة)، معدل النمو (سم/سنة)، سعر الوحدة (ريال/كجم). هذا الدرس يعلمك حساب معدل التغير من الجداول والرسوم البيانية!</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو معدل التغير؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو معدل التغير؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> معدل التغير هو النسبة بين مقدار التغير في كمية إلى مقدار التغير في كمية أخرى مرتبطة بها.
+            </div>
+
+            <div class="rate-card">
+                <h4><i class="fas fa-calculator"></i> صيغة معدل التغير</h4>
+                <div class="formula">
+                    معدل التغير = (التغير في y) / (التغير في x)
+                </div>
+                <div class="formula" style="font-size: 1rem;">
+                    Rate of Change = (y₂ - y₁) / (x₂ - x₁)
+                </div>
+                <p style="text-align: center; margin-top: 10px;">
+                    حيث (x₁, y₁) و (x₂, y₂) هما نقطتان على الرسم البياني أو في الجدول
+                </p>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-car"></i> مثال: سرعة السيارة</h3>
+                    <p>إذا قطعت سيارة 120 كم في ساعتين:</p>
+                    <div class="math-box" style="font-size: 1rem;">
+                        معدل التغير = 120 كم / 2 ساعة = 60 كم/ساعة
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-seedling"></i> مثال: نمو النبات</h3>
+                    <p>إذا نما نبات 15 سم في 5 أيام:</p>
+                    <div class="math-box" style="font-size: 1rem;">
+                        معدل التغير = 15 سم / 5 أيام = 3 سم/يوم
+                    </div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> وحدات معدل التغير:</h4>
+                <p>معدل التغير يُعبر عنه دائماً بوحدة "كمية/وحدة زمنية" أو "كمية/كمية أخرى":</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>كم/ساعة (سرعة)</li>
+                    <li>ريال/كجم (سعر الوحدة)</li>
+                    <li>لتر/دقيقة (معدل التدفق)</li>
+                    <li>نقطة/ساعة (معدل الإنتاج)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: حساب معدل التغير من الجدول -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> ثانياً: حساب معدل التغير من الجدول</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الخطوات:</strong>
+                <ol style="margin-top: 10px; padding-right: 20px;">
+                    <li>اختر أي صفين متتاليين في الجدول.</li>
+                    <li>احسب الفرق في قيم y (التغير في y).</li>
+                    <li>احسب الفرق في قيم x (التغير في x).</li>
+                    <li>اقسم التغير في y على التغير في x.</li>
+                </ol>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: معدل التغير من جدول</h4>
+                <p><strong>المسألة:</strong> الجدول التالي يوضح المسافة المقطوعة بواسطة دراجة مع مرور الزمن:</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الزمن (ساعات) - x</th>
+                                <th>المسافة (كم) - y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>15</td></tr>
+                            <tr><td>2</td><td>30</td></tr>
+                            <tr><td>3</td><td>45</td></tr>
+                            <tr><td>4</td><td>60</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اختر صفين متتاليين</h4>
+                    <p>النقطة الأولى: (1, 15) والنقطة الثانية: (2, 30)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب التغير في y</h4>
+                    <div class="calculation">Δy = 30 - 15 = 15 كم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب التغير في x</h4>
+                    <div class="calculation">Δx = 2 - 1 = 1 ساعة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> احسب معدل التغير</h4>
+                    <div class="calculation">معدل التغير = 15 / 1 = 15 كم/ساعة</div>
+                </div>
+
+                <div class="math-box">
+                    معدل التغير = 15 كم/ساعة
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: جدول بمعدل تغير ثابت</h4>
+                <p><strong>المسألة:</strong> هل معدل التغير ثابت في الجدول التالي؟</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>عدد الساعات - x</th>
+                                <th>عدد الكتب - y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2</td><td>6</td></tr>
+                            <tr><td>4</td><td>12</td></tr>
+                            <tr><td>6</td><td>18</td></tr>
+                            <tr><td>8</td><td>24</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب معدل التغير بين أول نقطتين</h4>
+                    <div class="calculation">(12 - 6) / (4 - 2) = 6 / 2 = 3 كتب/ساعة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب معدل التغير بين ثاني وثالث نقطتين</h4>
+                    <div class="calculation">(18 - 12) / (6 - 4) = 6 / 2 = 3 كتب/ساعة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب معدل التغير بين ثالث ورابع نقطتين</h4>
+                    <div class="calculation">(24 - 18) / (8 - 6) = 6 / 2 = 3 كتب/ساعة</div>
+                </div>
+
+                <div class="solution">✅ نعم، معدل التغير ثابت = 3 كتب/ساعة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: جدول بمعدل تغير غير ثابت</h4>
+                <p><strong>المسألة:</strong> هل معدل التغير ثابت في الجدول التالي؟</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم - x</th>
+                                <th>الارتفاع (سم) - y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>5</td></tr>
+                            <tr><td>2</td><td>8</td></tr>
+                            <tr><td>3</td><td>14</td></tr>
+                            <tr><td>4</td><td>17</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب معدل التغير بين أول نقطتين</h4>
+                    <div class="calculation">(8 - 5) / (2 - 1) = 3 / 1 = 3 سم/يوم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب معدل التغير بين ثاني وثالث نقطتين</h4>
+                    <div class="calculation">(14 - 8) / (3 - 2) = 6 / 1 = 6 سم/يوم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> قارن</h4>
+                    <p style="text-align: center;">3 ≠ 6 ➔ معدل التغير غير ثابت</p>
+                </div>
+
+                <div class="solution" style="border-right-color: #e67e22; color: #e67e22;">❌ لا، معدل التغير غير ثابت (يتغير من 3 إلى 6 سم/يوم)</div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: حساب معدل التغير من الرسم البياني -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> ثالثاً: حساب معدل التغير من الرسم البياني</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الطريقة:</strong> اختر أي نقطتين على الخط المستقيم، ثم طبق صيغة معدل التغير.
+            </div>
+
+            <div class="graph-visual">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مثال على رسم بياني</h4>
+                <svg width="400" height="300" viewBox="0 0 400 300">
+                    <!-- المحاور -->
+                    <line x1="50" y1="250" x2="350" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="50" y1="50" x2="50" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- تسميات المحاور -->
+                    <text x="200" y="280" font-family="Tajawal" font-size="14" font-weight="700" fill="#2c3e50" text-anchor="middle">الزمن (ساعات)</text>
+                    <text x="20" y="150" font-family="Tajawal" font-size="14" font-weight="700" fill="#2c3e50" text-anchor="middle" transform="rotate(-90, 20, 150)">المسافة (كم)</text>
+                    
+                    <!-- الأرقام على المحور السيني -->
+                    <text x="100" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">1</text>
+                    <text x="150" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">2</text>
+                    <text x="200" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">3</text>
+                    <text x="250" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">4</text>
+                    <text x="300" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">5</text>
+                    
+                    <!-- الأرقام على المحور الصادي -->
+                    <text x="35" y="210" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="end">20</text>
+                    <text x="35" y="170" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="end">40</text>
+                    <text x="35" y="130" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="end">60</text>
+                    <text x="35" y="90" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="end">80</text>
+                    <text x="35" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="end">100</text>
+                    
+                    <!-- الخط المستقيم -->
+                    <line x1="50" y1="250" x2="300" y2="50" stroke="#27ae60" stroke-width="3"/>
+                    
+                    <!-- النقاط -->
+                    <circle cx="100" cy="210" r="6" fill="#e74c3c"/>
+                    <circle cx="200" cy="130" r="6" fill="#e74c3c"/>
+                    
+                    <!-- تسميات النقاط -->
+                    <text x="110" y="200" font-family="Fira Code" font-size="12" fill="#e74c3c">(1, 20)</text>
+                    <text x="210" y="120" font-family="Fira Code" font-size="12" fill="#e74c3c">(3, 60)</text>
+                    
+                    <!-- مثلث التغير -->
+                    <line x1="100" y1="210" x2="200" y2="210" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+                    <line x1="200" y1="210" x2="200" y2="130" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="150" y="230" font-family="Fira Code" font-size="11" fill="#3498db" text-anchor="middle">Δx = 2</text>
+                    <text x="220" y="170" font-family="Fira Code" font-size="11" fill="#3498db">Δy = 40</text>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: حساب معدل التغير من الرسم البياني</h4>
+                <p><strong>المسألة:</strong> احسب معدل التغير من الرسم البياني أعلاه.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اختر نقطتين على الخط</h4>
+                    <div class="calculation">النقطة الأولى: (1, 20)</div>
+                    <div class="calculation">النقطة الثانية: (3, 60)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب التغير في y</h4>
+                    <div class="calculation">Δy = 60 - 20 = 40 كم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب التغير في x</h4>
+                    <div class="calculation">Δx = 3 - 1 = 2 ساعة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> احسب معدل التغير</h4>
+                    <div class="calculation">معدل التغير = 40 / 2 = 20 كم/ساعة</div>
+                </div>
+
+                <div class="math-box">
+                    معدل التغير = 20 كم/ساعة
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: رسم بياني بمعدل تغير سالب</h4>
+                <p><strong>المسألة:</strong> خزان ماء يحتوي على 100 لتر، ويُفرغ بمعدل ثابت. بعد 4 ساعات، تبقى 20 لتر. ما معدل التغير؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">النقطة الأولى: (0, 100) - البداية</div>
+                    <div class="calculation">النقطة الثانية: (4, 20) - بعد 4 ساعات</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب التغير في y</h4>
+                    <div class="calculation">Δy = 20 - 100 = -80 لتر</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب التغير في x</h4>
+                    <div class="calculation">Δx = 4 - 0 = 4 ساعات</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> احسب معدل التغير</h4>
+                    <div class="calculation">معدل التغير = -80 / 4 = -20 لتر/ساعة</div>
+                </div>
+
+                <div class="math-box">
+                    معدل التغير = -20 لتر/ساعة (سالب لأن الكمية تنقص)
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تفسير إشارة معدل التغير:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>معدل تغير موجب (+):</strong> الكمية تزداد مع الزمن (مثل: النمو، المسافة)</li>
+                    <li><strong>معدل تغير سالب (-):</strong> الكمية تنقص مع الزمن (مثل: التفريغ، التبريد)</li>
+                    <li><strong>معدل تغير صفر (0):</strong> الكمية ثابتة لا تتغير</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: معدل التغير الثابت vs المتغير -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> رابعاً: معدل التغير الثابت والمتغير</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> معدل التغير الثابت</h3>
+                    <p>عندما يكون معدل التغير نفسه بين أي نقطتين.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>الرسم البياني: <strong>خط مستقيم</strong></li>
+                        <li>الجدول: الفروق متساوية</li>
+                        <li>مثال: سرعة ثابتة</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        y = 3x (معدل التغير = 3 دائماً)
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-times-circle"></i> معدل التغير المتغير</h3>
+                    <p>عندما يتغير معدل التغير بين نقاط مختلفة.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>الرسم البياني: <strong>منحنى</strong></li>
+                        <li>الجدول: الفروق غير متساوية</li>
+                        <li>مثال: تسارع السيارة</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        y = x² (معدل التغير يتغير)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: تحديد نوع معدل التغير</h4>
+                <p><strong>المسألة:</strong> هل معدل التغير ثابت أم متغير في الجدول التالي؟</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الزمن (دقائق) - x</th>
+                                <th>درجة الحرارة (°م) - y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0</td><td>20</td></tr>
+                            <tr><td>5</td><td>35</td></tr>
+                            <tr><td>10</td><td>45</td></tr>
+                            <tr><td>15</td><td>50</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب معدل التغير بين أول نقطتين</h4>
+                    <div class="calculation">(35 - 20) / (5 - 0) = 15 / 5 = 3 °م/دقيقة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب معدل التغير بين ثاني وثالث نقطتين</h4>
+                    <div class="calculation">(45 - 35) / (10 - 5) = 10 / 5 = 2 °م/دقيقة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب معدل التغير بين ثالث ورابع نقطتين</h4>
+                    <div class="calculation">(50 - 45) / (15 - 10) = 5 / 5 = 1 °م/دقيقة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> قارن</h4>
+                    <p style="text-align: center;">3 ≠ 2 ≠ 1 ➔ معدل التغير متغير (يتناقص)</p>
+                </div>
+
+                <div class="solution" style="border-right-color: #e74c3c; color: #e74c3c;">❌ معدل التغير <strong>متغير</strong> (يتناقص من 3 إلى 1 °م/دقيقة)</div>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-tachometer-alt"></i> مثال 7: سرعة السيارة</h4>
+                <p><strong>المسألة:</strong> سيارة تسير بسرعة ثابتة. الجدول يوضح المسافة المقطوعة:</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الزمن (ساعات)</th>
+                                <th>المسافة (كم)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>80</td></tr>
+                            <tr><td>2</td><td>160</td></tr>
+                            <tr><td>3</td><td>240</td></tr>
+                            <tr><td>4</td><td>320</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب معدل التغير</h4>
+                    <div class="calculation">(160 - 80) / (2 - 1) = 80 / 1 = 80 كم/ساعة</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تحقق من الثبات</h4>
+                    <div class="calculation">(240 - 160) / (3 - 2) = 80 كم/ساعة ✓</div>
+                    <div class="calculation">(320 - 240) / (4 - 3) = 80 كم/ساعة ✓</div>
+                </div>
+
+                <div class="math-box">
+                    سرعة السيارة = 80 كم/ساعة (ثابتة)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-coins"></i> مثال 8: سعر الوحدة</h4>
+                <p><strong>المسألة:</strong> إذا كان سعر 3 كجم من التفاح 15 ريالاً، وسعر 5 كجم 25 ريالاً، فما سعر الكيلوغرام الواحد؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">النقطة الأولى: (3, 15)</div>
+                    <div class="calculation">النقطة الثانية: (5, 25)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب معدل التغير</h4>
+                    <div class="calculation">(25 - 15) / (5 - 3) = 10 / 2 = 5 ريال/كجم</div>
+                </div>
+
+                <div class="math-box">
+                    سعر الكيلوغرام = 5 ريال
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-water"></i> مثال 9: معدل تدفق الماء</h4>
+                <p><strong>المسألة:</strong> خزان يُملأ بمعدل ثابت. بعد 2 دقيقة يحتوي على 30 لتر، وبعد 6 دقائق يحتوي على 90 لتر. ما معدل التدفق؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">النقطة الأولى: (2, 30)</div>
+                    <div class="calculation">النقطة الثانية: (6, 90)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب معدل التغير</h4>
+                    <div class="calculation">(90 - 30) / (6 - 2) = 60 / 4 = 15 لتر/دقيقة</div>
+                </div>
+
+                <div class="math-box">
+                    معدل التدفق = 15 لتر/دقيقة
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: عكس البسط والمقام</h4>
+                <p>معدل التغير = (التغير في y) / (التغير في x) وليس العكس!</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">(60-20)/(3-1) = 40/2 = 20</span></p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">(3-1)/(60-20) = 2/40 = 0.05</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: استخدام نقاط غير متتالية في الجدول</h4>
+                <p>عند حساب معدل التغير من الجدول، استخدم صفين متتاليين أو أي صفين مع التأكد من حساب الفرق بشكل صحيح.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: نسيان الوحدات</h4>
+                <p>معدل التغير يجب أن يُكتب مع وحداته الصحيحة (مثل: كم/ساعة، ريال/كجم).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الاعتقاد أن معدل التغير دائماً ثابت</h4>
+                <p>تحقق دائماً من حساب معدل التغير بين نقاط مختلفة. إذا كانت النتائج مختلفة، فمعدل التغير متغير.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>معدل التغير:</strong> النسبة بين التغير في كمية إلى التغير في كمية أخرى.</li>
+                <li><strong>الصيغة:</strong> معدل التغير = (y₂ - y₁) / (x₂ - x₁).</li>
+                <li><strong>من الجدول:</strong> اختر صفين متتاليين، احسب الفروق، ثم اقسم.</li>
+                <li><strong>من الرسم البياني:</strong> اختر نقطتين على الخط، طبق الصيغة.</li>
+                <li><strong>معدل التغير الثابت:</strong> خط مستقيم، الفروق متساوية.</li>
+                <li><strong>معدل التغير المتغير:</strong> منحنى، الفروق غير متساوية.</li>
+                <li><strong>الإشارة:</strong> موجب (زيادة)، سالب (نقصان)، صفر (ثابت).</li>
+                <li><strong>الوحدات:</strong> دائماً اكتب وحدات معدل التغير (مثل: كم/ساعة).</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "إذا كانت السيارة تقطع 100 كم في ساعتين، فما معدل التغير (السرعة)؟",
+                options: ["25 كم/ساعة", "50 كم/ساعة", "100 كم/ساعة", "200 كم/ساعة"],
+                correct: 1,
+                explanation: "معدل التغير = 100 كم / 2 ساعة = 50 كم/ساعة."
+            },
+            {
+                sentence: "من الجدول: (1, 10), (2, 20), (3, 30). ما معدل التغير؟",
+                options: ["5", "10", "15", "20"],
+                correct: 1,
+                explanation: "معدل التغير = (20-10)/(2-1) = 10/1 = 10."
+            },
+            {
+                sentence: "إذا كان معدل التغير سالباً، فهذا يعني أن الكمية:",
+                options: ["تزداد", "تنقص", "ثابتة", "تتغير بشكل عشوائي"],
+                correct: 1,
+                explanation: "معدل التغير السالب يعني أن الكمية تنقص مع الزمن."
+            },
+            {
+                sentence: "رسم بياني على شكل خط مستقيم يمثل:",
+                options: ["معدل تغير متغير", "معدل تغير ثابت", "لا معدل تغير", "معدل تغير سالب فقط"],
+                correct: 1,
+                explanation: "الخط المستقيم في الرسم البياني يمثل معدل تغير ثابت."
+            },
+            {
+                sentence: "خزان يُفرغ من 100 لتر إلى 40 لتر في 3 دقائق. ما معدل التغير؟",
+                options: ["20 لتر/دقيقة", "-20 لتر/دقيقة", "30 لتر/دقيقة", "-30 لتر/دقيقة"],
+                correct: 1,
+                explanation: "معدل التغير = (40-100)/(3-0) = -60/3 = -20 لتر/دقيقة."
+            },
+            {
+                sentence: "أي من التالي يمثل معدل تغير غير ثابت؟",
+                options: ["y = 2x", "y = 5x + 3", "y = x²", "y = 10"],
+                correct: 2,
+                explanation: "y = x² يمثل منحنى (معدل تغير متغير)، بينما البقية خطوط مستقيمة (معدل تغير ثابت)."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

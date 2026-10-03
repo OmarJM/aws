@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأعداد الحقيقية - مفهومها وتصنيفها إلى نسبية وغير نسبية - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>الأعداد الحقيقية | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .number-line-real { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .number-line-real .line { position: relative; height: 4px; background: var(--subject-primary); margin: 30px 5%; direction: ltr; }
+        .number-line-real .point { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; }
+        .number-line-real .point.rational { background: var(--success-color); }
+        .number-line-real .point.irrational { background: var(--error-color); }
+        .number-line-real .label { position: absolute; top: 20px; transform: translateX(-50%); font-family: 'Fira Code', monospace; font-weight: 700; font-size: 0.85rem; }
+        .venn-diagram { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .venn-diagram svg { max-width: 100%; height: auto; }
+        .classification-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .class-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid var(--subject-primary); text-align: center; }
+        .class-card.rational { border-top-color: #27ae60; }
+        .class-card.irrational { border-top-color: #e74c3c; }
+        .class-card h4 { margin-bottom: 10px; }
+        .class-card.rational h4 { color: #27ae60; }
+        .class-card.irrational h4 { color: #e74c3c; }
+        .class-card .examples { font-family: 'Fira Code', monospace; font-size: 1.1rem; margin-top: 10px; direction: ltr; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-infinity"></i> الأعداد الحقيقية</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل كل الأعداد يمكن كتابتها على صورة كسر؟</strong>
+                <p style="margin-top: 10px;">في الدروس السابقة، تعلمنا الأعداد النسبية التي يمكن كتابتها على صورة a/b. لكن هل توجد أعداد لا يمكن كتابتها بهذه الصورة؟ نعم! تسمى <strong>الأعداد غير النسبية (الصماء)</strong>. ومجموع الأعداد النسبية وغير النسبية يُسمى <strong>الأعداد الحقيقية</strong>.</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هي الأعداد الحقيقية؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هي الأعداد الحقيقية؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الأعداد الحقيقية هي جميع الأعداد التي يمكن تمثيلها على خط الأعداد. وتشمل:
+                <ul style="margin-top: 10px; padding-right: 20px;">
+                    <li>الأعداد النسبية (كسور وأعداد عشرية منتهية أو دورية)</li>
+                    <li>الأعداد غير النسبية (أعداد عشرية غير منتهية وغير دورية)</li>
+                </ul>
+            </div>
+
+            <div class="math-box">
+                ℝ = ℚ ∪ ℚ'
+            </div>
+            <p style="text-align: center; margin: 15px 0;">
+                حيث: <strong></strong> = الأعداد الحقيقية، <strong>ℚ</strong> = الأعداد النسبية، <strong>ℚ'</strong> = الأعداد غير النسبية
+            </p>
+
+            <div class="number-line-real">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-ruler-horizontal"></i> خط الأعداد الحقيقية</h4>
+                <p style="margin-bottom: 15px;">كل نقطة على خط الأعداد تمثل عدداً حقيقياً واحداً، وكل عدد حقيقي يمثل نقطة واحدة على الخط.</p>
+                <div class="line" style="position: relative; height: 4px; background: var(--subject-primary); margin: 30px 5%;">
+                    <div class="point irrational" style="left: 15%;"><div class="label" style="color: var(--error-color);">-π</div></div>
+                    <div class="point rational" style="left: 30%;"><div class="label" style="color: var(--success-color);">-2</div></div>
+                    <div class="point rational" style="left: 50%;"><div class="label" style="color: var(--success-color);">0</div></div>
+                    <div class="point irrational" style="left: 65%;"><div class="label" style="color: var(--error-color);">√2</div></div>
+                    <div class="point rational" style="left: 80%;"><div class="label" style="color: var(--success-color);">3.5</div></div>
+                    <div class="point irrational" style="left: 90%;"><div class="label" style="color: var(--error-color);">π</div></div>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    <span style="color: var(--success-color);">●</span> أعداد نسبية &nbsp;&nbsp;&nbsp;
+                    <span style="color: var(--error-color);">●</span> أعداد غير نسبية
+                </p>
+            </div>
+        </div>
+
+        <!-- ثانياً: تصنيف الأعداد الحقيقية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sitemap"></i> ثانياً: تصنيف الأعداد الحقيقية</h2>
+            
+            <div class="two-columns">
+                <div class="column-card rational" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> الأعداد النسبية (ℚ)</h3>
+                    <p style="margin-bottom: 10px;">كل عدد يمكن كتابته على صورة a/b حيث a, b أعداد صحيحة و b ≠ 0</p>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li>أعداد صحيحة: ...-2, -1, 0, 1, 2...</li>
+                        <li>كسور: 1/2, 3/4, -5/7</li>
+                        <li>أعداد عشرية منتهية: 0.5, 2.75</li>
+                        <li>أعداد عشرية دورية: 0.333..., 0.1666...</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 15px;">
+                        5 = 5/1, &nbsp; 0.75 = 3/4, &nbsp; 0.333... = 1/3
+                    </div>
+                </div>
+
+                <div class="column-card irrational" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-times-circle"></i> الأعداد غير النسبية (ℚ')</h3>
+                    <p style="margin-bottom: 10px;">أعداد <strong>لا يمكن</strong> كتابتها على صورة كسر a/b</p>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li>أعداد عشرية غير منتهية</li>
+                        <li>أعداد عشرية غير دورية</li>
+                        <li>جذور تربيعية لأعداد غير مربعات كاملة</li>
+                        <li>بعض الثوابت الرياضية الشهيرة</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 15px;">
+                        2 ≈ 1.41421356..., &nbsp; π ≈ 3.14159265...
+                    </div>
+                </div>
+            </div>
+
+            <div class="venn-diagram">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مخطط فين للأعداد</h4>
+                <svg width="500" height="300" viewBox="0 0 500 300">
+                    <!-- الأعداد الحقيقية -->
+                    <rect x="10" y="10" width="480" height="280" rx="20" fill="rgba(41, 128, 185, 0.1)" stroke="#2980b9" stroke-width="3"/>
+                    <text x="250" y="35" font-family="Tajawal" font-size="16" font-weight="700" fill="#2980b9" text-anchor="middle">الأعداد الحقيقية (ℝ)</text>
+                    
+                    <!-- الأعداد النسبية -->
+                    <ellipse cx="180" cy="160" rx="140" ry="110" fill="rgba(39, 174, 96, 0.15)" stroke="#27ae60" stroke-width="3"/>
+                    <text x="180" y="70" font-family="Tajawal" font-size="14" font-weight="700" fill="#27ae60" text-anchor="middle">الأعداد النسبية (ℚ)</text>
+                    <text x="180" y="95" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">1/2, 0.75, -3, 0.333...</text>
+                    
+                    <!-- الأعداد غير النسبية -->
+                    <ellipse cx="340" cy="160" rx="130" ry="110" fill="rgba(231, 76, 60, 0.15)" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="340" y="70" font-family="Tajawal" font-size="14" font-weight="700" fill="#e74c3c" text-anchor="middle">الأعداد غير النسبية (ℚ')</text>
+                    <text x="340" y="95" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">√2, π, e, √3</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الأعداد غير النسبية الشهيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-star"></i> ثالثاً: الأعداد غير النسبية الشهيرة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-square-root-alt"></i> 1. الجذر التربيعي لـ 2 (√2)</h4>
+                <p><strong>القيمة التقريبية:</strong> <span style="font-family: 'Fira Code', monospace;">√2 ≈ 1.4142135623730950488...</span></p>
+                <p style="margin-top: 10px;">هو طول قطر مربع طول ضلعه 1. أثبت الإغريق القدماء أنه لا يمكن كتابته على صورة كسر.</p>
+                <div class="math-box">
+                    √2 × √2 = 2
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-circle"></i> 2. العدد باي (π)</h4>
+                <p><strong>القيمة التقريبية:</strong> <span style="font-family: 'Fira Code', monospace;">π ≈ 3.14159265358979323846...</span></p>
+                <p style="margin-top: 10px;">هو نسبة محيط الدائرة إلى قطرها. يظهر في جميع مسائل الهندسة الدائرية.</p>
+                <div class="math-box">
+                    محيط الدائرة = 2πنق
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-chart-line"></i> 3. العدد e (عدد أويلر)</h4>
+                <p><strong>القيمة التقريبية:</strong> <span style="font-family: 'Fira Code', monospace;">e ≈ 2.71828182845904523536...</span></p>
+                <p style="margin-top: 10px;">يظهر في النمو الأسي والفوائد المركبة والاحتمالات.</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-square-root-alt"></i> 4. جذور الأعداد غير المربعات الكاملة</h4>
+                <p>أي عدد ليس مربعاً كاملاً، جذره التربيعي عدد غير نسبي:</p>
+                <div class="math-box" style="font-size: 1.1rem;">
+                    √3 ≈ 1.732..., &nbsp; √5 ≈ 2.236..., &nbsp; √7 ≈ 2.645...
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> كيف تتعرف على العدد غير النسبي؟</h4>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>إذا كان العدد العشري <strong>لا ينتهي</strong> و<strong>لا يتكرر</strong> بنمط دوري ➔ غير نسبي</li>
+                    <li>إذا كان الجذر التربيعي لعدد <strong>ليس مربعاً كاملاً</strong> ➔ غير نسبي</li>
+                    <li>الثوابت الرياضية الشهيرة مثل π و e ➔ غير نسبية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: أمثلة على التصنيف -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> رابعاً: أمثلة على التصنيف</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">العدد</th>
+                            <th style="width: 25%;">النوع</th>
+                            <th style="width: 50%;">السبب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">7</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>يمكن كتابته 7/1</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">-3/4</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>كسر اعتيادي</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">0.25</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>عشري منتهٍ = 1/4</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">0.333...</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>عشري دوري = 1/3</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">√9</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>√9 = 3 (مربع كامل)</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">√2</td>
+                            <td style="color: #e74c3c; font-weight: 700;">غير نسبي</td>
+                            <td>2 ليس مربعاً كاملاً</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">π</td>
+                            <td style="color: #e74c3c; font-weight: 700;">غير نسبي</td>
+                            <td>عدد عشري غير منتهٍ وغير دوري</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">√16</td>
+                            <td style="color: #27ae60; font-weight: 700;">نسبي</td>
+                            <td>√16 = 4 (مربع كامل)</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace; font-weight: 700;">0.1010010001...</td>
+                            <td style="color: #e74c3c; font-weight: 700;">غير نسبي</td>
+                            <td>نمط غير دوري (يزيد صفر في كل مرة)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p><strong>√9 نسبي</strong> لأن 9 مربع كامل (3×3=9)، لكن <strong>√10 غير نسبي</strong> لأن 10 ليس مربعاً كاملاً.</p>
+                <p style="margin-top: 10px;">لا تحكم على العدد من شكله فقط، بل احسب قيمته الفعلية!</p>
+            </div>
+        </div>
+
+        <!-- خامساً: خصائص الأعداد الحقيقية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> خامساً: خصائص الأعداد الحقيقية</h2>
+            
+            <div class="classification-grid">
+                <div class="class-card">
+                    <h4><i class="fas fa-infinity"></i> لا نهائية</h4>
+                    <p>بين أي عددين حقيقيين، يوجد عدد لا نهائي من الأعداد الحقيقية الأخرى</p>
+                </div>
+                <div class="class-card">
+                    <h4><i class="fas fa-ruler"></i> كثيفة</h4>
+                    <p>لا توجد "فجوات" على خط الأعداد الحقيقية</p>
+                </div>
+                <div class="class-card">
+                    <h4><i class="fas fa-balance-scale"></i> مرتبة</h4>
+                    <p>يمكن مقارنة أي عددين حقيقيين (أكبر، أصغر، أو متساويان)</p>
+                </div>
+                <div class="class-card">
+                    <h4><i class="fas fa-calculator"></i> مغلقة</h4>
+                    <p>الجمع والطرح والضرب والقسمة (على غير الصفر) تعطي أعداداً حقيقية</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> خاصية الكثافة:</h4>
+                <p>بين 1 و 2 يوجد عدد لا نهائي من الأعداد الحقيقية: 1.1, 1.11, 1.111, 1.1111, ... وهكذا إلى ما لا نهاية!</p>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-circle"></i> مثال 1: حساب محيط الدائرة</h4>
+                <p><strong>المسألة:</strong> دائرة نصف قطرها 5 سم. احسب محيطها.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> القانون</h4>
+                    <div class="calculation">المحيط = 2πنق</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> التعويض</h4>
+                    <div class="calculation">المحيط = 2 × π × 5 = 10π</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التقريب</h4>
+                    <div class="calculation">10π ≈ 10 × 3.14159 ≈ 31.4159 سم</div>
+                </div>
+
+                <div class="math-box">
+                    المحيط ≈ 31.42 سم
+                </div>
+                <p style="text-align: center; margin-top: 10px; color: var(--text-muted);">
+                    <i class="fas fa-info-circle"></i> الناتج الدقيق هو 10π (عدد غير نسبي)، والتقريب يعطينا عدداً نسبياً
+                </p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-square"></i> مثال 2: قطر المربع</h4>
+                <p><strong>المسألة:</strong> مربع طول ضلعه 1 م. أوجد طول قطره.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> طبق نظرية فيثاغورس</h4>
+                    <div class="calculation">القطر² = 1² + 1² = 2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خذ الجذر التربيعي</h4>
+                    <div class="calculation">القطر = √2</div>
+                </div>
+
+                <div class="math-box">
+                    القطر = √2 ≈ 1.414 م
+                </div>
+                <p style="text-align: center; margin-top: 10px; color: var(--text-muted);">
+                    <i class="fas fa-info-circle"></i> √2 عدد غير نسبي - لا يمكن التعبير عنه بكسر دقيق
+                </p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-chart-line"></i> مثال 3: النمو الأسي</h4>
+                <p><strong>المسألة:</strong> بكتيريا تتضاعف كل ساعة. بعد 1 ساعة، كم يكون العدد؟ (استخدم e)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> صيغة النمو الأسي</h4>
+                    <div class="calculation">N(t) = N₀ × eᵗ</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> التعويض (N₀ = 1, t = 1)</h4>
+                    <div class="calculation">N(1) = 1 × e¹ = e</div>
+                </div>
+
+                <div class="math-box">
+                    العدد ≈ 2.718 بكتيريا
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن كل جذر تربيعي غير نسبي</h4>
+                <p><strong>√4 = 2</strong> (نسبي!) لأن 4 مربع كامل. لكن <strong>√5</strong> غير نسبي لأن 5 ليس مربعاً كاملاً.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الاعتقاد أن π = 22/7</h4>
+                <p>22/7 ≈ 3.142857... هو <strong>تقريب</strong> لـ π، لكن π نفسه عدد غير نسبي لا يمكن كتابته ككسر دقيق.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن الأعداد العشرية الطويلة غير نسبية</h4>
+                <p>0.333333... (يتكرر 3 إلى ما لا نهاية) هو <strong>نسبي</strong> = 1/3. المهم هو وجود <strong>نمط دوري</strong>.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان أن الصفر عدد نسبي</h4>
+                <p>0 = 0/1، إذن الصفر عدد نسبي (وبالتالي حقيقي).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الجذر التربيعي للعدد السالب</h4>
+                <p>√(-4) <strong>ليس عدداً حقيقياً</strong>! الأعداد الحقيقية لا تشمل الجذور التربيعية للأعداد السالبة (تلك أعداد تخيلية).</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الأعداد الحقيقية (ℝ):</strong> جميع الأعداد على خط الأعداد.</li>
+                <li><strong>الأعداد النسبية (ℚ):</strong> يمكن كتابتها a/b (كسور، عشرية منتهية أو دورية).</li>
+                <li><strong>الأعداد غير النسبية (ℚ'):</strong> لا يمكن كتابتها a/b (عشرية غير منتهية وغير دورية).</li>
+                <li><strong>أمثلة غير نسبية:</strong> √2, 3, π, e, √5, √7...</li>
+                <li><strong>العلاقة:</strong> ℝ =  ∪ ℚ' (اتحاد المجموعتين).</li>
+                <li><strong>التقاطع:</strong> ℚ ∩ ' = ∅ (لا يوجد عدد نسبي وغير نسبي في نفس الوقت).</li>
+                <li><strong>تنبيه:</strong> √9 = 3 (نسبي) لأن 9 مربع كامل، لكن 10 غير نسبي.</li>
+                <li><strong>تنبيه:</strong> √(-4) ليس عدداً حقيقياً.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "أي من الأعداد التالية عدد غير نسبي؟",
+                options: ["√9", "√16", "√2", "0.75"],
+                correct: 2,
+                explanation: "√9=3 و √16=4 (مربعات كاملة، نسبية). 0.75=3/4 (نسبي). √2 لا يمكن تبسيطه لعدد صحيح، فهو غير نسبي."
+            },
+            {
+                sentence: "العدد π (باي) ينتمي إلى مجموعة:",
+                options: ["الأعداد النسبية", "الأعداد غير النسبية", "الأعداد الصحيحة", "الأعداد الطبيعية"],
+                correct: 1,
+                explanation: "π ≈ 3.14159265... عدد عشري غير منتهٍ وغير دوري، لذا هو غير نسبي."
+            },
+            {
+                sentence: "أي عبارة صحيحة؟",
+                options: ["كل عدد نسبي هو عدد حقيقي", "كل عدد حقيقي هو عدد نسبي", "√4 عدد غير نسبي", "π = 22/7 بالضبط"],
+                correct: 0,
+                explanation: "كل عدد نسبي هو حقيقي ✓. لكن العكس غير صحيح (π حقيقي لكن غير نسبي). √4=2 نسبي. π ≈ 22/7 تقريب فقط."
+            },
+            {
+                sentence: "العدد 0.101001000100001... (يزيد صفر في كل مرة) هو:",
+                options: ["نسبي", "غير نسبي", "صحيح", "طبيعي"],
+                correct: 1,
+                explanation: "رغم وجود نمط، لكنه ليس نمطاً دورياً (يتغير في كل مرة)، لذا العدد غير منتهٍ وغير دوري = غير نسبي."
+            },
+            {
+                sentence: "√(-9) هو:",
+                options: ["عدد حقيقي سالب", "عدد نسبي", "ليس عدداً حقيقياً", "عدد غير نسبي"],
+                correct: 2,
+                explanation: "الجذر التربيعي للعدد السالب ليس عدداً حقيقياً (هو عدد تخيلي). الأعداد الحقيقية لا تشمل جذور الأعداد السالبة."
+            },
+            {
+                sentence: "كم عدداً حقيقياً يوجد بين 1 و 2؟",
+                options: ["10 أعداد", "100 عدد", "1000 عدد", "عدد لا نهائي"],
+                correct: 3,
+                explanation: "بين أي عددين حقيقيين يوجد عدد لا نهائي من الأعداد الحقيقية (خاصية الكثافة): 1.1, 1.11, 1.111, ..."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

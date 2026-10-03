@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة اللغة الصينية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ - المنهج السعودي">
+    <title>مادة اللغة الصينية | ثاني متوسط | فصل أول 1448هـ</title>
+
+    <!-- خطوط عربية وصينية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ملفات الأنماط الرئيسية -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* ============ متغيرات محلية خاصة بالصفحة ============ */
+        :root {
+            --chinese-red: #c0392b;
+            --chinese-yellow: #f39c12;
+            --btn-blue: #1e3a8a;
+            --btn-red: #dc2626;
+        }
+
+        [data-theme="dark"] {
+            --btn-blue: #3b5bdb;
+            --btn-red: #ef4444;
+        }
+
+        /* ============ تنسيق الصفحة ============ */
+        body {
+            font-family: 'Tajawal', 'Cairo', 'Noto Sans SC', sans-serif;
+        }
+
+        /* شريط الطالب */
+        .student-dedication {
+            background: linear-gradient(135deg, var(--chinese-red), #b71c1c);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* الأقسام */
+        .hero {
+            background: linear-gradient(135deg, var(--chinese-red), #b71c1c);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .hero .chinese-title {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 2rem;
+            color: var(--chinese-yellow);
+            margin-bottom: 15px;
+            direction: ltr;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            color: var(--btn-blue);
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 800;
+        }
+
+        [data-theme="dark"] .section-title {
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--chinese-red);
+            border-radius: 2px;
+        }
+
+        .section-title i {
+            margin-left: 10px;
+        }
+
+        /* شبكة الوحدات */
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        .unit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .unit-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--chinese-red);
+            background-color: #ddd;
+        }
+
+        .unit-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .unit-badge {
+            display: inline-block;
+            background-color: var(--chinese-red);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .unit-title-ar {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--btn-blue);
+            margin-bottom: 10px;
+        }
+
+        [data-theme="dark"] .unit-title-ar {
+            color: var(--primary-color);
+        }
+
+        .unit-title-en {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .unit-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .unit-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #000;
+        }
+
+        .unit-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .unit-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-align: center;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-blue {
+            background-color: var(--btn-blue);
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background-color: #152c6e;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .btn-red {
+            background-color: var(--btn-red);
+            color: white;
+        }
+
+        .btn-red:hover {
+            background-color: #b91c1c;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* شبكة الدروس */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .lesson-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .lesson-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--chinese-red);
+            background-color: #ddd;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .lesson-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lesson-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .lesson-info .chinese-text {
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--chinese-red);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .lesson-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .pdf-btn,
+        .explanation-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .pdf-btn {
+            background-color: var(--btn-red);
+        }
+
+        .pdf-btn:hover {
+            background-color: #b91c1c;
+            color: white;
+        }
+
+        .explanation-btn {
+            background-color: var(--btn-blue);
+        }
+
+        .explanation-btn:hover {
+            background-color: #152c6e;
+            color: white;
+        }
+
+        /* قسم الاختبار */
+        .quiz-section {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--chinese-yellow);
+            border: 1px solid var(--border-color);
+        }
+
+        .quiz-btn {
+            display: inline-block;
+            background-color: var(--chinese-red);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .quiz-btn:hover {
+            background-color: #b71c1c;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* التجاوب */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .units-grid { grid-template-columns: 1fr; }
+            .lessons-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.5rem; }
+            .unit-buttons { flex-direction: column; }
+        }
+
+        /* إخفاء الروابط في الجوال (من style.css يتم التجاوب) */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body class="subject-chinese">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-user-graduate"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    منصتي التعليمية
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="english.html">الإنجليزية</a></li>
+                    <li><a href="chinese.html" class="active">الصينية</a></li>
+                    <li><a href="../quizzes/chinese-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم البطل -->
+    <section class="hero">
+        <h1>مادة اللغة الصينية</h1>
+        <div class="chinese-title">中文课</div>
+        <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+    </section>
+
+    <main class="container">
+
+        <!-- القسم الأول: الوحدات الأساسية -->
+        <h2 class="section-title"><i class="fas fa-book"></i> القسم الأول: الوحدات الأساسية (Units 1-4)</h2>
+
+        <div class="units-grid">
+            <!-- الوحدة الأولى -->
+            <div class="unit-card">
+                <img src="../images/chinese/lesson1.jpg" alt="الوحدة الأولى" class="unit-image" loading="lazy">
+                <div class="unit-content">
+                    <span class="unit-badge">Unit 1</span>
+                    <h3 class="unit-title-ar">الوحدة الأولى</h3>
+                    <h4 class="unit-title-en">التحيات والتعارف الأساسي</h4>
+                    <p class="unit-desc">
+                        يتعلم الطالب أساسيات التحية باللغة الصينية، وكيفية السؤال عن الاسم والعمر والبلد، مع التدرب على النطق الصحيح والتعارف مع الآخرين.
+                    </p>
+                    <div class="unit-video">
+                        <iframe src="https://www.youtube.com/embed/8iT3QZrlfjM" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                    </div>
+                    <div class="unit-buttons">
+                        <a href="../lessons/chinese/lesson1.html" class="btn btn-blue">
+                            <i class="fas fa-book-reader"></i> شرح مفصل
+                        </a>
+                        <a href="../pdf/chinese/lesson1.pdf" class="btn btn-red" download>
+                            <i class="fas fa-file-pdf"></i> تحميل الملخص
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الوحدة الثانية -->
+            <div class="unit-card">
+                <img src="../images/chinese/lesson2.jpg" alt="الوحدة الثانية" class="unit-image" loading="lazy">
+                <div class="unit-content">
+                    <span class="unit-badge">Unit 2</span>
+                    <h3 class="unit-title-ar">الوحدة الثانية</h3>
+                    <h4 class="unit-title-en">أساسيات اللغة والنطق</h4>
+                    <p class="unit-desc">
+                        مقدمة شاملة لقواعد اللغة الصينية، نظام بينين (Pinyin)، الحروف الأولية والنهائية، والنغمات الأربع الأساسية في اللغة الصينية.
+                    </p>
+                    <div class="unit-video">
+                        <iframe src="https://www.youtube.com/embed/gMZDR33Qf8o" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                    </div>
+                    <div class="unit-buttons">
+                        <a href="../lessons/chinese/lesson2.html" class="btn btn-blue">
+                            <i class="fas fa-book-reader"></i> شرح مفصل
+                        </a>
+                        <a href="../pdf/chinese/lesson2.pdf" class="btn btn-red" download>
+                            <i class="fas fa-file-pdf"></i> تحميل الملخص
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الوحدة الثالثة -->
+            <div class="unit-card">
+                <img src="../images/chinese/lesson3.jpg" alt="الوحدة الثالثة" class="unit-image" loading="lazy">
+                <div class="unit-content">
+                    <span class="unit-badge">Unit 3</span>
+                    <h3 class="unit-title-ar">الوحدة الثالثة</h3>
+                    <h4 class="unit-title-en">الضمائر، الأرقام، والاستفهام</h4>
+                    <p class="unit-desc">
+                        تعلم الضمائر الأساسية، الأعداد من 1 إلى 100، أدوات الاستفهام، وكيفية السؤال عن العمر والعمل والتاريخ باللغة الصينية.
+                    </p>
+                    <div class="unit-video">
+                        <iframe src="https://www.youtube.com/embed/vYSudNaAnHY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                    </div>
+                    <div class="unit-buttons">
+                        <a href="../lessons/chinese/lesson3.html" class="btn btn-blue">
+                            <i class="fas fa-book-reader"></i> شرح مفصل
+                        </a>
+                        <a href="../pdf/chinese/lesson3.pdf" class="btn btn-red" download>
+                            <i class="fas fa-file-pdf"></i> تحميل الملخص
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الوحدة الرابعة -->
+            <div class="unit-card">
+                <img src="../images/chinese/lesson4.jpg" alt="الوحدة الرابعة" class="unit-image" loading="lazy">
+                <div class="unit-content">
+                    <span class="unit-badge">Unit 4</span>
+                    <h3 class="unit-title-ar">الوحدة الرابعة</h3>
+                    <h4 class="unit-title-en">الأزمنة والأفعال</h4>
+                    <p class="unit-desc">
+                        شرح مفصل للأزمنة في اللغة الصينية: الماضي، المضارع، المستقبل، وكيفية صياغة جمل الأمر والنهي باستخدام الأدوات المناسبة.
+                    </p>
+                    <div class="unit-video">
+                        <iframe src="https://www.youtube.com/embed/g0cMUtFFvWw" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                    </div>
+                    <div class="unit-buttons">
+                        <a href="../lessons/chinese/lesson4.html" class="btn btn-blue">
+                            <i class="fas fa-book-reader"></i> شرح مفصل
+                        </a>
+                        <a href="../pdf/chinese/lesson4.pdf" class="btn btn-red" download>
+                            <i class="fas fa-file-pdf"></i> تحميل الملخص
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الدروس التفصيلية -->
+        <h2 class="section-title"><i class="fas fa-video"></i> الدروس التفصيلية</h2>
+
+        <!-- الوحدة الأولى: الدروس -->
+        <h3 style="color: var(--btn-blue); margin: 30px 0 20px; font-size: 1.5rem;">الوحدة الأولى: التحيات والتعارف الأساسي</h3>
+        <div class="lessons-grid">
+            <!-- الدرس الأول -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson5.jpg" alt="الدرس الأول" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/8iT3QZrlfjM" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الأول: من كورس المفردات - التحية</h3>
+                    <div class="chinese-text">你好 (Nǐ hǎo)</div>
+                    <p class="lesson-desc">يتناول هذا الدرس أساسيات التحية باللغة الصينية، وكيفية قول "مرحباً" واستخدامها في المواقف اليومية مع النطق الصحيح.</p>
+                    <a href="../lessons/chinese/lesson5.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson5.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الثاني -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson6.jpg" alt="الدرس الثاني" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/4DV0oE-pDxY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثاني: AI小语، مرحباً!</h3>
+                    <div class="chinese-text">AI小语，你好！</div>
+                    <p class="lesson-desc">مقدمة تفاعلية وممتعة مع الشخصية التعليمية الذكية لتعلم أساسيات التحية والترحيب باللغة الصينية.</p>
+                    <a href="../lessons/chinese/lesson6.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson6.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الثالث -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson7.jpg" alt="الدرس الثالث" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cqBZ7kkVNfE" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثالث: ما اسمك باللغة الصينية؟</h3>
+                    <div class="chinese-text">你叫什么名字 (Nǐ jiào shénme míngzi)</div>
+                    <p class="lesson-desc">يتعلم الطالب كيفية السؤال عن الاسم والإجابة عنه باستخدام الجملة الأساسية، مع التدرب على نطق الكلمات.</p>
+                    <a href="../lessons/chinese/lesson7.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson7.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الرابع -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson8.jpg" alt="الدرس الرابع" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ssJGtpHJDW8" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الرابع: كيف نتعرف على الآخرين | التعارف</h3>
+                    <div class="chinese-text">认识新朋友</div>
+                    <p class="lesson-desc">محادثات عملية للتعارف، تشمل السؤال عن الاسم، العمر، والبلد، وكيفية تقديم النفس للآخرين بأدب.</p>
+                    <a href="../lessons/chinese/lesson8.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson8.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- الوحدة الثانية: الدروس -->
+        <h3 style="color: var(--btn-blue); margin: 30px 0 20px; font-size: 1.5rem;">الوحدة الثانية: أساسيات اللغة والنطق</h3>
+        <div class="lessons-grid">
+            <!-- الدرس الخامس -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson9.jpg" alt="الدرس الخامس" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/gMZDR33Qf8o" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الخامس: أساسيات اللغة الصينية في دقائق</h3>
+                    <div class="chinese-text">基础指南</div>
+                    <p class="lesson-desc">دليلك السريع والشامل للبداية الصحيحة في تعلم اللغة الصينية، يغطي الأساسيات الهامة للمبتدئين.</p>
+                    <a href="../lessons/chinese/lesson9.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson9.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس السادس -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson10.jpg" alt="الدرس السادس" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Fz3Uzj5xpCc" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس السادس: مقدمة في قواعد اللغة الصينية</h3>
+                    <div class="chinese-text">Chinese grammar lesson 1</div>
+                    <p class="lesson-desc">مقدمة مبسطة لقواعد اللغة الصينية، وتركيب الجملة الأساسي (فاعل + فعل + مفعول به).</p>
+                    <a href="../lessons/chinese/lesson10.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson10.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس السابع -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson11.jpg" alt="الدرس السابع" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/QcnAQGwEios" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس السابع: ما هي الرموز و بين ين (Pinyin)</h3>
+                    <div class="chinese-text">拼音 (Pīnyīn)</div>
+                    <p class="lesson-desc">شرح نظام بينين (Pinyin) لتمثيل نطق الحروف الصينية، وأهميته كأساس للتعلم الصحيح.</p>
+                    <a href="../lessons/chinese/lesson11.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson11.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الثامن -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson12.jpg" alt="الدرس الثامن" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/hz8he0m4as4" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثامن: حروف الأبجدية الصينية</h3>
+                    <div class="chinese-text">Chinese alphabet</div>
+                    <p class="lesson-desc">تفصيل الحروف الأولية (Initials) وكيفية نطقها بشكل صحيح وفقاً للمعايير الصينية.</p>
+                    <a href="../lessons/chinese/lesson12.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson12.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس التاسع -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson13.jpg" alt="الدرس التاسع" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/QQFACk7og0s" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس التاسع: Initial final tones | النغمات</h3>
+                    <div class="chinese-text">声调 (Shēngdiào)</div>
+                    <p class="lesson-desc">شرح النغمات الأربع في اللغة الصينية وكيفية تغيير النغمة لتغيير معنى الكلمة تماماً.</p>
+                    <a href="../lessons/chinese/lesson13.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson13.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس العاشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson14.jpg" alt="الدرس العاشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0LjYrohNJvQ" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس العاشر: قواعد النغمات والحروف المتحركة</h3>
+                    <div class="chinese-text">元音和声调规则</div>
+                    <p class="lesson-desc">تطبيق عملي على قواعد النغمات والحروف المتحركة (Finals) في نظام بينين.</p>
+                    <a href="../lessons/chinese/lesson14.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson14.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الحادي عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson15.jpg" alt="الدرس الحادي عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/a3AMNQMtVFk" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الحادي عشر: كيف يتكون البنين (Initial & Final)</h3>
+                    <div class="chinese-text">声母和韵母</div>
+                    <p class="lesson-desc">مراجعة شاملة ومعمقة لكيفية تكوين المقاطع الصوتية من دمج الحروف الأولية والنهائية.</p>
+                    <a href="../lessons/chinese/lesson15.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson15.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- الوحدة الثالثة: الدروس -->
+        <h3 style="color: var(--btn-blue); margin: 30px 0 20px; font-size: 1.5rem;">الوحدة الثالثة: الضمائر، الأرقام، والاستفهام</h3>
+        <div class="lessons-grid">
+            <!-- الدرس الثاني عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson16.jpg" alt="الدرس الثاني عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/vYSudNaAnHY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثاني عشر: أدوات الاستفهام والضمائر</h3>
+                    <div class="chinese-text">疑问代词和代词</div>
+                    <p class="lesson-desc">شرح شامل لضمائر المتكلم والمخاطب والغائب، وأدوات الاستفهام الأساسية مثل (من، ماذا، أين، متى).</p>
+                    <a href="../lessons/chinese/lesson16.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson16.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الثالث عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson17.jpg" alt="الدرس الثالث عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/je8qjyKSYhY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثالث عشر: الأعداد باللغة الصينية</h3>
+                    <div class="chinese-text">中文数字</div>
+                    <p class="lesson-desc">تعلم الأرقام من 1 إلى 100 وكيفية استخدامها في العد والحسابات البسيطة والمحادثات اليومية.</p>
+                    <a href="../lessons/chinese/lesson17.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson17.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الرابع عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson18.jpg" alt="الدرس الرابع عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/qbxMJYb1oFc" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الرابع عشر: كيف نسأل عن العمر باللغة الصينية</h3>
+                    <div class="chinese-text">你多大？ / 你几岁？</div>
+                    <p class="lesson-desc">كيفية السؤال عن العمر والإجابة عنه بشكل صحيح ومهذب باستخدام الجمل المناسبة لكل فئة عمرية.</p>
+                    <a href="../lessons/chinese/lesson18.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson18.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الخامس عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson19.jpg" alt="الدرس الخامس عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/gUIPkystGhw" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الخامس عشر: السؤال عن العمل والعمر والبلد</h3>
+                    <div class="chinese-text">你做什么工作؟</div>
+                    <p class="lesson-desc">تطبيق عملي شامل لطرح الأسئلة الشخصية والتعرف على الآخرين بطريقة مهذبة ومنظمة.</p>
+                    <a href="../lessons/chinese/lesson19.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson19.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس السادس عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson20.jpg" alt="الدرس السادس عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cmYgepKXToY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس السادس عشر: كيف نسأل عن التاريخ باللغة الصينية</h3>
+                    <div class="chinese-text">今天几号؟</div>
+                    <p class="lesson-desc">كيفية السؤال عن التاريخ واليوم والسنة باللغة الصينية وترتيب عناصر الجملة الزمنية بشكل صحيح.</p>
+                    <a href="../lessons/chinese/lesson20.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson20.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- الوحدة الرابعة: الدروس -->
+        <h3 style="color: var(--btn-blue); margin: 30px 0 20px; font-size: 1.5rem;">الوحدة الرابعة: الأزمنة والأفعال</h3>
+        <div class="lessons-grid">
+            <!-- الدرس السابع عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson21.jpg" alt="الدرس السابع عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/g0cMUtFFvWw" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس السابع عشر: الفعل الماضي بالصينية</h3>
+                    <div class="chinese-text">过去时</div>
+                    <p class="lesson-desc">كيفية التعبير عن الزمن الماضي في اللغة الصينية واستخدام أدوات مثل "了" (le) للإشارة إلى اكتمال الفعل.</p>
+                    <a href="../lessons/chinese/lesson21.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson21.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس الثامن عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson22.jpg" alt="الدرس الثامن عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/eGlHqCuhPTE" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس الثامن عشر: الفعل المضارع بالصينية</h3>
+                    <div class="chinese-text">现在时</div>
+                    <p class="lesson-desc">كيفية صياغة الجمل في الزمن المضارع والتعبير عن الأفعال المستمرة باستخدام "在" (zài).</p>
+                    <a href="../lessons/chinese/lesson22.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson22.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس التاسع عشر -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson23.jpg" alt="الدرس التاسع عشر" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/1YXlTEnReVE" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس التاسع عشر: الفعل المستقبل بالصينية</h3>
+                    <div class="chinese-text">将来时</div>
+                    <p class="lesson-desc">كيفية التعبير عن المستقبل والنية في القيام بفعل ما باستخدام أدوات مثل "会" (huì) أو "要" (yào).</p>
+                    <a href="../lessons/chinese/lesson23.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson23.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+
+            <!-- الدرس العشرون -->
+            <div class="lesson-card">
+                <img src="../images/chinese/lesson24.jpg" alt="الدرس العشرون" class="lesson-image" loading="lazy">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/j_7djws6MxM" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+                </div>
+                <div class="lesson-info">
+                    <h3>الدرس العشرون: فعل الأمر والنهي</h3>
+                    <div class="chinese-text">命令和禁止</div>
+                    <p class="lesson-desc">كيفية صياغة جمل الأمر والنهي باللغة الصينية باستخدام "请" (qǐng) للطلب المهذب و "别" (bié) للنهي.</p>
+                    <a href="../lessons/chinese/lesson24.html" class="explanation-btn"><i class="fas fa-book-reader"></i> شرح مفصل</a>
+                    <a href="../pdf/chinese/lesson24.pdf" class="pdf-btn" download><i class="fas fa-file-pdf"></i> تحميل الملخص (PDF)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم الاختبار -->
+        <section class="quiz-section">
+            <h2><i class="fas fa-brain"></i> اختبر معلوماتك في اللغة الصينية (تصحيح تلقائي)</h2>
+            <p style="margin-top: 15px; color: var(--text-muted);">Test your Chinese skills with these questions!</p>
+            <a href="../quizzes/chinese-quiz.html" class="quiz-btn">
+                الانتقال إلى بنك الأسئلة الشامل <i class="fas fa-arrow-left"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- ملفات السكربتات -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأحماض والقواعد والتعادل والرقم الهيدروجيني - مادة العلوم - الصف الثاني المتوسط">
+    <title>الأحماض، القواعد، التعادل، والرقم الهيدروجيني | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #27ae60; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(39, 174, 96, 0.08); border-right: 4px solid #27ae60; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #27ae60; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #2ecc71; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #27ae60; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #27ae60; margin: 15px 0; }
+        .step-box h4 { color: #27ae60; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #27ae60; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: #2ecc71; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #27ae60; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(39, 174, 96, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #2ecc71; margin-bottom: 15px; }
+        .example-card h4 { color: #27ae60; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #2ecc71; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #27ae60; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #27ae60; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(39, 174, 96, 0.05), rgba(46, 204, 113, 0.05)); border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #27ae60; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #27ae60; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #27ae60; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #27ae60; color: #27ae60; }
+        .ph-scale { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .ph-scale svg { max-width: 100%; height: auto; }
+        .property-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; transition: transform 0.3s; }
+        .property-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .property-card h4 { margin-bottom: 10px; color: #27ae60; }
+        .property-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #27ae60; }
+        .property-card.acid { border-top-color: #e74c3c; }
+        .property-card.acid h4, .property-card.acid .icon { color: #e74c3c; }
+        .property-card.base { border-top-color: #3498db; }
+        .property-card.base h4, .property-card.base .icon { color: #3498db; }
+        .reaction-diagram { background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.1)); border: 2px solid #27ae60; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .reaction-diagram .main-formula { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 800; color: #27ae60; margin: 15px 0; direction: ltr; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-flask"></i> الأحماض، القواعد، التعادل، والرقم الهيدروجيني</h1>
+            <p>خصائص الأحماض والقواعد، مقياس pH، وتفاعلات التعادل</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا يكون الليمون حامضاً والصابون قلوياً؟ وكيف نقيس ذلك؟</strong>
+                <p style="margin-top: 10px;">من حولنا مواد كثيرة بعضها <strong>حمضي</strong> (مثل الليمون والخل) وبعضها <strong>قاعدي</strong> (مثل الصابون والأمونيا). في هذا الدرس، سنتعلم خصائص كل منها، وكيف نقيس درجة الحموضة والقلوية باستخدام <strong>مقياس pH</strong>، وماذا يحدث عند مزجها معاً!</p>
+            </div>
+
+            <div class="ph-scale">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مقياس pH من 0 إلى 14</h4>
+                <svg width="700" height="150" viewBox="0 0 700 150">
+                    <!-- شريط pH -->
+                    <rect x="50" y="60" width="600" height="30" rx="5" fill="url(#phGradient)"/>
+                    
+                    <!-- الأرقام -->
+                    <text x="50" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">0</text>
+                    <text x="100" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">1</text>
+                    <text x="150" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">2</text>
+                    <text x="200" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">3</text>
+                    <text x="250" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">4</text>
+                    <text x="300" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">5</text>
+                    <text x="350" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">6</text>
+                    <text x="400" y="50" font-family="Fira Code" font-size="14" font-weight="700" fill="#2c3e50" text-anchor="middle">7</text>
+                    <text x="450" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">8</text>
+                    <text x="500" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">9</text>
+                    <text x="550" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">10</text>
+                    <text x="600" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">11</text>
+                    <text x="650" y="50" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">12</text>
+                    
+                    <!-- التسميات -->
+                    <text x="150" y="120" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">أحماض قوية</text>
+                    <text x="400" y="120" font-family="Tajawal" font-size="14" fill="#27ae60" text-anchor="middle" font-weight="700">متعادل</text>
+                    <text x="600" y="120" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">قواعد قوية</text>
+                    
+                    <defs>
+                        <linearGradient id="phGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#2ecc71;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هي الأحماض؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lemon"></i> أولاً: ما هي الأحماض؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الأحماض هي مواد كيميائية تطلق أيونات الهيدروجين (H⁺) عند ذوبانها في الماء، وتتميز بطعمها الحامض.
+            </div>
+
+            <div class="three-columns">
+                <div class="property-card acid">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <h4>الطعم</h4>
+                    <p>حامض (لا تتذوق الأحماض في المختبر!)</p>
+                </div>
+                <div class="property-card acid">
+                    <div class="icon"><i class="fas fa-hand-paper"></i></div>
+                    <h4>الملمس</h4>
+                    <p>لا تسبب شعوراً زلقاً</p>
+                </div>
+                <div class="property-card acid">
+                    <div class="icon"><i class="fas fa-vial"></i></div>
+                    <h4>التأثير على ورق عباد الشمس</h4>
+                    <p>يحول لونه من الأزرق إلى الأحمر</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> أمثلة شائعة على الأحماض</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الحمض</th>
+                                <th>الصيغة الكيميائية</th>
+                                <th>الموجود في</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>حمض الهيدروكلوريك</td>
+                                <td style="font-family: 'Fira Code', monospace;">HCl</td>
+                                <td>عصارة المعدة</td>
+                            </tr>
+                            <tr>
+                                <td>حمض الخليك</td>
+                                <td style="font-family: 'Fira Code', monospace;">CH₃COOH</td>
+                                <td>الخل</td>
+                            </tr>
+                            <tr>
+                                <td>حمض الستريك</td>
+                                <td style="font-family: 'Fira Code', monospace;">C₆HO₇</td>
+                                <td>الحمضيات (ليمون، برتقال)</td>
+                            </tr>
+                            <tr>
+                                <td>حمض الكبريتيك</td>
+                                <td style="font-family: 'Fira Code', monospace;">H₂SO₄</td>
+                                <td>بطاريات السيارات</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> ملاحظة مهمة:</h4>
+                <p>بعض الأحماض <strong>قوية جداً</strong> وخطيرة (مثل حمض الكبريتيك)، وبعضها <strong>ضعيف</strong> وآمن (مثل حمض الستريك في الليمون). لا تتذوق أو تلمس أي مادة كيميائية في المختبر!</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: ما هي القواعد؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-soap"></i> ثانياً: ما هي القواعد (القلويات)؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> القواعد هي مواد كيميائية تطلق أيونات الهيدروكسيد (OH⁻) عند ذوبانها في الماء، وتتميز بطعمها المر وملمسها الزلق.
+            </div>
+
+            <div class="three-columns">
+                <div class="property-card base">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <h4>الطعم</h4>
+                    <p>مر (لا تتذوق القواعد في المختبر!)</p>
+                </div>
+                <div class="property-card base">
+                    <div class="icon"><i class="fas fa-hand-paper"></i></div>
+                    <h4>الملمس</h4>
+                    <p>زلقة (مثل الصابون)</p>
+                </div>
+                <div class="property-card base">
+                    <div class="icon"><i class="fas fa-vial"></i></div>
+                    <h4>التأثير على ورق عباد الشمس</h4>
+                    <p>يحول لونه من الأحمر إلى الأزرق</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> أمثلة شائعة على القواعد</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>القاعدة</th>
+                                <th>الصيغة الكيميائية</th>
+                                <th>الموجود في</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>هيدروكسيد الصوديوم</td>
+                                <td style="font-family: 'Fira Code', monospace;">NaOH</td>
+                                <td>منظفات الأفران</td>
+                            </tr>
+                            <tr>
+                                <td>هيدروكسيد الكالسيوم</td>
+                                <td style="font-family: 'Fira Code', monospace;">Ca(OH)₂</td>
+                                <td>الجير المطفأ (البناء)</td>
+                            </tr>
+                            <tr>
+                                <td>الأمونيا</td>
+                                <td style="font-family: 'Fira Code', monospace;">NH₃</td>
+                                <td>منظفات الزجاج</td>
+                            </tr>
+                            <tr>
+                                <td>بيكربونات الصوديوم</td>
+                                <td style="font-family: 'Fira Code', monospace;">NaHCO₃</td>
+                                <td>الخَبز، معجون الأسنان</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: مقياس pH -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-ruler"></i> ثالثاً: مقياس الرقم الهيدروجيني (pH)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> مقياس pH هو مقياس رقمي من 0 إلى 14 يُستخدم لقياس درجة حموضة أو قلوية المحلول.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-arrow-down"></i> pH أقل من 7</h3>
+                    <p><strong>المحلول حمضي</strong></p>
+                    <p style="margin-top: 10px;">كلما قل الرقم، زادت قوة الحمض</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        pH = 1 → حمض قوي جداً
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-equals"></i> pH = 7</h3>
+                    <p><strong>المحلول متعادل</strong></p>
+                    <p style="margin-top: 10px;">ليس حمضياً ولا قاعدياً</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        الماء النقي pH = 7
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-card" style="border-top: 5px solid #3498db; margin-top: 15px;">
+                <h3 style="color: #3498db;"><i class="fas fa-arrow-up"></i> pH أكبر من 7</h3>
+                <p><strong>المحلول قاعدي (قلوي)</strong></p>
+                <p style="margin-top: 10px;">كلما زاد الرقم، زادت قوة القاعدة</p>
+                <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                    pH = 14 → قاعدة قوية جداً
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على قيم pH لمواد شائعة</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>المادة</th>
+                                <th>قيمة pH التقريبية</th>
+                                <th>النوع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>حمض البطارية</td>
+                                <td style="font-family: 'Fira Code', monospace;">1</td>
+                                <td style="color: #e74c3c; font-weight: 700;">حمض قوي</td>
+                            </tr>
+                            <tr>
+                                <td>عصير الليمون</td>
+                                <td style="font-family: 'Fira Code', monospace;">2</td>
+                                <td style="color: #e74c3c;">حمض</td>
+                            </tr>
+                            <tr>
+                                <td>الخل</td>
+                                <td style="font-family: 'Fira Code', monospace;">3</td>
+                                <td style="color: #e74c3c;">حمض</td>
+                            </tr>
+                            <tr>
+                                <td>عصير الطماطم</td>
+                                <td style="font-family: 'Fira Code', monospace;">4</td>
+                                <td style="color: #e74c3c;">حمض</td>
+                            </tr>
+                            <tr>
+                                <td>القهوة السوداء</td>
+                                <td style="font-family: 'Fira Code', monospace;">5</td>
+                                <td style="color: #e74c3c;">حمض ضعيف</td>
+                            </tr>
+                            <tr>
+                                <td>الحليب</td>
+                                <td style="font-family: 'Fira Code', monospace;">6</td>
+                                <td style="color: #e74c3c;">حمض ضعيف جداً</td>
+                            </tr>
+                            <tr>
+                                <td>الماء النقي</td>
+                                <td style="font-family: 'Fira Code', monospace;">7</td>
+                                <td style="color: #27ae60; font-weight: 700;">متعادل</td>
+                            </tr>
+                            <tr>
+                                <td>ماء البحر</td>
+                                <td style="font-family: 'Fira Code', monospace;">8</td>
+                                <td style="color: #3498db;">قاعدة ضعيفة</td>
+                            </tr>
+                            <tr>
+                                <td>بيكربونات الصوديوم</td>
+                                <td style="font-family: 'Fira Code', monospace;">9</td>
+                                <td style="color: #3498db;">قاعدة</td>
+                            </tr>
+                            <tr>
+                                <td>الصابون</td>
+                                <td style="font-family: 'Fira Code', monospace;">10</td>
+                                <td style="color: #3498db;">قاعدة</td>
+                            </tr>
+                            <tr>
+                                <td>الأمونيا المنزلية</td>
+                                <td style="font-family: 'Fira Code', monospace;">11</td>
+                                <td style="color: #3498db;">قاعدة</td>
+                            </tr>
+                            <tr>
+                                <td>مبيض الملابس</td>
+                                <td style="font-family: 'Fira Code', monospace;">13</td>
+                                <td style="color: #3498db; font-weight: 700;">قاعدة قوية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة سهلة للحفظ:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>pH &lt; 7:</strong> حمضي (كلما قل الرقم، زادت الحموضة)</li>
+                    <li><strong>pH = 7:</strong> متعادل (مثل الماء النقي)</li>
+                    <li><strong>pH &gt; 7:</strong> قاعدي (كلما زاد الرقم، زادت القلوية)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: كيفية قياس pH -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-vial"></i> رابعاً: كيفية قياس pH</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>طرق قياس pH:</strong>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-flask"></i> 1. ورق عباد الشمس</h3>
+                    <p>ورق خاص يتغير لونه حسب حموضة المحلول</p>
+                    <ul style="padding-right: 20px; margin-top: 10px;">
+                        <li>الأحمر ➔ يتحول للأزرق في القواعد</li>
+                        <li>الأزرق ➔ يتحول للأحمر في الأحماض</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-tint"></i> 2. دليل عالمي (Universal Indicator)</h3>
+                    <p>سائل يتغير لونه عبر طيف كامل من الألوان</p>
+                    <ul style="padding-right: 20px; margin-top: 10px;">
+                        <li>أحمر ➔ حمض قوي</li>
+                        <li>أخضر ➔ متعادل</li>
+                        <li>أزرق/بنفسجي ➔ قاعدة قوية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column-card" style="border-top: 4px solid #27ae60; margin-top: 15px;">
+                <h3 style="color: #27ae60;"><i class="fas fa-microchip"></i> 3. جهاز قياس pH (pH Meter)</h3>
+                <p>جهاز إلكتروني دقيق يعطي قراءة رقمية مباشرة لقيمة pH</p>
+                <p style="margin-top: 10px;"><strong>يستخدم في:</strong> المختبرات، المستشفيات، مراقبة جودة المياه</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: تحديد نوع المحلول</h4>
+                <p><strong>المسألة:</strong> محلول قيمة pH له تساوي 4.5. ما نوع هذا المحلول؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> قارن القيمة بـ 7</h4>
+                    <div class="calculation">4.5 < 7</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استنتج النوع</h4>
+                    <p>بما أن pH أقل من 7، فالمحلول <strong>حمضي</strong></p>
+                </div>
+
+                <div class="math-box">
+                    المحلول حمضي (pH = 4.5)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: مقارنة حموضة مواد</h4>
+                <p><strong>المسألة:</strong> أيهما أكثر حموضة: عصير الليمون (pH = 2) أم الخل (pH = 3)؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> تذكّر القاعدة</h4>
+                    <p>كلما <strong>قل</strong> رقم pH، <strong>زادت</strong> الحموضة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن القيم</h4>
+                    <div class="calculation">2 < 3</div>
+                </div>
+
+                <div class="math-box">
+                    عصير الليمون أكثر حموضة من الخل
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تفاعل التعادل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> خامساً: تفاعل التعادل</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> تفاعل التعادل هو تفاعل كيميائي بين حمض وقاعدة لإنتاج ملح وماء، ويكون الناتج متعادلاً (pH = 7).
+            </div>
+
+            <div class="reaction-diagram">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">الصيغة العامة لتفاعل التعادل:</p>
+                <div class="main-formula">
+                    حمض + قاعدة → ملح + ماء
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    Acid + Base → Salt + Water
+                </p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: تعادل حمض الهيدروكلوريك مع هيدروكسيد الصوديوم</h4>
+                <p><strong>المسألة:</strong> اكتب معادلة تفاعل حمض HCl مع قاعدة NaOH</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المتفاعلات</h4>
+                    <div class="calculation">HCl + NaOH →</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حدد النواتج</h4>
+                    <p>الملح: NaCl (كلوريد الصوديوم = ملح الطعام)</p>
+                    <p>الماء: H₂O</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اكتب المعادلة الكاملة</h4>
+                    <div class="calculation">HCl + NaOH → NaCl + H₂O</div>
+                </div>
+
+                <div class="math-box">
+                    HCl + NaOH → NaCl + H₂O
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: تعادل حمض الكبريتيك مع هيدروكسيد الكالسيوم</h4>
+                <p><strong>المسألة:</strong> اكتب معادلة تفاعل H₂SO₄ مع Ca(OH)₂</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المتفاعلات</h4>
+                    <div class="calculation">H₂SO₄ + Ca(OH)₂ →</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حدد النواتج</h4>
+                    <p>الملح: CaSO₄ (كبريتات الكالسيوم = الجبس)</p>
+                    <p>الماء: H₂O</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> وازن المعادلة</h4>
+                    <div class="calculation">H₂SO + Ca(OH)₂ → CaSO₄ + 2H₂O</div>
+                </div>
+
+                <div class="math-box">
+                    H₂SO₄ + Ca(OH)₂ → CaSO₄ + 2H₂O
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: حساب pH بعد التعادل</h4>
+                <p><strong>المسألة:</strong> إذا مزجنا محلول حمضي pH = 3 مع محلول قاعدي pH = 11 بكميات متساوية، فما pH المحلول الناتج؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> افهم العملية</h4>
+                    <p>حمض + قاعدة → تعادل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> النتائج</h4>
+                    <p>إذا كانت الكميات متساوية والقوى متقاربة، يحدث تعادل كامل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> pH الناتج</h4>
+                    <div class="calculation">pH = 7 (متعادل)</div>
+                </div>
+
+                <div class="math-box">
+                    pH الناتج = 7 (محلول متعادل)
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> شروط التعادل الكامل:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>كميات متساوية من الحمض والقاعدة</li>
+                    <li>قوة متساوية (حمض قوي مع قاعدة قوية)</li>
+                    <li>النتيجة: pH = 7 (متعادل تماماً)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-stomach"></i> مثال 6: حموضة المعدة</h4>
+                <p><strong>المسألة:</strong> لماذا نأخذ أدوية مضادة للحموضة عند الشعور بحرقة المعدة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المشكلة</h4>
+                    <p>المعدة تفرز حمض HCl لهضم الطعام، أحياناً تفرز كمية زائدة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحل</h4>
+                    <p>أدوية مضادة للحموضة تحتوي على قواعد ضعيفة (مثل Mg(OH)₂)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التفاعل</h4>
+                    <div class="calculation">HCl + Mg(OH)₂ → MgCl₂ + 2H₂O</div>
+                    <p>يحدث تعادل ➔ تقل الحموضة ➔ تختفي الحرقة</p>
+                </div>
+
+                <div class="solution">✅ التعادل الكيميائي يخفف حموضة المعدة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-tooth"></i> مثال 7: تسوس الأسنان</h4>
+                <p><strong>المسألة:</strong> لماذا ينصح باستخدام معجون أسنان يحتوي على الفلورايد بعد تناول الأطعمة السكرية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المشكلة</h4>
+                    <p>البكتيريا في الفم تحول السكر إلى أحماض تهاجم مينا الأسنان</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحل</h4>
+                    <p>معجون الأسنان قاعدي (pH ≈ 9-10) يعادل الأحماض</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>يحدث تعادل ➔ تحمي الأسنان من التسوس</p>
+                </div>
+
+                <div class="solution">✅ المعجون القاعدي يعادل أحماض البكتيريا</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-seedling"></i> مثال 8: الزراعة والتربة</h4>
+                <p><strong>المسألة:</strong> لماذا يضيف المزارعون الجير (CaO) للتربة الحمضية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المشكلة</h4>
+                    <p>بعض الترب حمضية جداً (pH منخفض) مما يضر نمو النباتات</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحل</h4>
+                    <p>الجير (CaO) مادة قاعدية تعادل حموضة التربة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>يرتفع pH التربة ➔ تصبح مناسبة للزراعة</p>
+                </div>
+
+                <div class="solution">✅ الجير القاعدي يعادل حموضة التربة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-bug"></i> مثال 9: لدغات الحشرات</h4>
+                <p><strong>المسألة:</strong> لماذا نضع معجون صودا الخبز (قاعدي) على لدغة النحلة (حمضية)؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المشكلة</h4>
+                    <p>لدغة النحلة تحقن حمض الفورميك (HCOOH) في الجلد</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحل</h4>
+                    <p>صودا الخبز (NaHCO₃) مادة قاعدية تعادل الحمض</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>يحدث تعادل  يقل الألم والالتهاب</p>
+                </div>
+
+                <div class="solution">✅ القاعدة تعادل حمض اللدغة وتخفف الألم</div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن جميع الأحماض خطيرة</h4>
+                <p>ليست كل الأحماض خطيرة! حمض الستريك في الليمون وحمض الخليك في الخل آمنان للاستخدام اليومي.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين قوة الحمض وتركيزه</h4>
+                <p><strong>القوة:</strong> قدرة الحمض على التأين (ثابتة لكل حمض).</p>
+                <p><strong>التركيز:</strong> كمية الحمض في المحلول (يمكن تغييرها).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن pH = 0 هو الأكثر حموضة</h4>
+                <p>مقياس pH يمكن أن يكون <strong>سالباً</strong> للأحماض المركزة جداً! لكن في الحياة اليومية، نستخدم 0-14.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان أن التعادل يحتاج كميات متساوية</h4>
+                <p>إذا أضفت حمضاً كثيراً لقاعدة قليلة، لن يحدث تعادل كامل! المحلول سيبقى حمضياً.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: تذوق أو لمس المواد الكيميائية</h4>
+                <p><strong>تحذير أمني:</strong> لا تتذوق أو تلمس أي مادة كيميائية في المختبر، حتى لو بدت آمنة!</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #27ae60;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الأحماض:</strong> تطلق H⁺ في الماء، طعمها حامض، تحول عباد الشمس للأحمر.</li>
+                <li><strong>القواعد:</strong> تطلق OH⁻ في الماء، طعمها مر، ملمسها زلق، تحول عباد الشمس للأزرق.</li>
+                <li><strong>مقياس pH:</strong> من 0 إلى 14، حيث 7 متعادل، أقل من 7 حمضي، أكثر من 7 قاعدي.</li>
+                <li><strong>طرق القياس:</strong> ورق عباد الشمس، الدليل العالمي، جهاز pH Meter.</li>
+                <li><strong>تفاعل التعادل:</strong> حمض + قاعدة → ملح + ماء.</li>
+                <li><strong>شروط التعادل:</strong> كميات متساوية وقوى متقاربة.</li>
+                <li><strong>التطبيقات:</strong> أدوية المعدة، معجون الأسنان، الزراعة، لدغات الحشرات.</li>
+                <li><strong>تنبيه:</strong> لا تتذوق أو تلمس المواد الكيميائية في المختبر!</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;"> أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما قيمة pH للماء النقي؟",
+                options: ["0", "7", "14", "1"],
+                correct: 1,
+                explanation: "الماء النقي متعادل، وقيمة pH له تساوي 7."
+            },
+            {
+                sentence: "إذا كان pH لمحلول = 3، فما نوع هذا المحلول؟",
+                options: ["حمضي", "متعادل", "قاعدي", "لا يمكن التحديد"],
+                correct: 0,
+                explanation: "pH أقل من 7 يعني أن المحلول حمضي."
+            },
+            {
+                sentence: "ما ناتج تفاعل التعادل بين حمض وقاعدة؟",
+                options: ["حمض + ماء", "ملح + ماء", "قاعدة + ملح", "غاز + ماء"],
+                correct: 1,
+                explanation: "تفاعل التعادل: حمض + قاعدة → ملح + ماء."
+            },
+            {
+                sentence: "أي مادة تستخدم لمعادلة حموضة المعدة؟",
+                options: ["خل", "ليمون", "مضادات الحموضة (قواعد ضعيفة)", "حمض الكبريتيك"],
+                correct: 2,
+                explanation: "مضادات الحموضة تحتوي على قواعد ضعيفة تعادل حمض المعدة الزائد."
+            },
+            {
+                sentence: "ما تأثير القاعدة على ورق عباد الشمس الأزرق؟",
+                options: ["يتحول للأحمر", "يتحول للأخضر", "يبقى أزرق", "يتحول للأصفر"],
+                correct: 2,
+                explanation: "القاعدة تحول ورق عباد الشمس الأحمر إلى الأزرق، والأزرق يبقى أزرق."
+            },
+            {
+                sentence: "لماذا يضيف المزارعون الجير للتربة الحمضية؟",
+                options: ["لزيادة الحموضة", "لتعادل الحموضة وجعل التربة مناسبة للزراعة", "لتلوين التربة", "لقتل الحشرات"],
+                correct: 1,
+                explanation: "الجير مادة قاعدية تعادل حموضة التربة وترفع pH لتصبح مناسبة لنمو النباتات."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

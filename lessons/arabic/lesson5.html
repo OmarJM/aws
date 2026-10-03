@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="رسم الألف اللينة في آخر الحروف - القاعدة العامة والاستثناءات - مادة لغتي الخالدة">
+    <title>رسم الألف اللينة في آخر الحروف | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .letter-display {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-color);
+            border-radius: 15px;
+            margin: 15px 0;
+            color: var(--subject-primary);
+            border: 2px dashed var(--subject-secondary);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .column-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-primary);
+        }
+        .column-card.rule { border-top-color: var(--success-color); }
+        .column-card.exception { border-top-color: var(--error-color); }
+        .column-card h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column-card.rule h3 { color: var(--success-color); }
+        .column-card.exception h3 { color: var(--error-color); }
+        .column-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .column-card ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .column-card.rule ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            color: var(--success-color);
+        }
+        .column-card.exception ul li::before {
+            content: '\f071';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            color: var(--error-color);
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 {
+            color: #f1c40f;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 {
+            color: #f0909a;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .sentence {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+        .example-card .analysis {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 8px 0;
+        }
+        .example-card .answer {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .mnemonic-box {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.1), rgba(21, 152, 149, 0.1));
+            border: 2px solid var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .mnemonic-box h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .mnemonic-sentence {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: var(--subject-accent);
+            font-weight: 700;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        [data-theme="dark"] .mnemonic-sentence {
+            color: var(--subject-secondary);
+        }
+
+        /* نشاط تفاعلي */
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(21, 152, 149, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+            .letter-display { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-pen-alt"></i> رسم الألف اللينة في آخر الحروف</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: تعريف الألف اللينة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: تعريف الألف اللينة وأنواعها</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> الألف اللينة هي ألف ساكنة مفتوح ما قبلها، وتأتي في آخر الكلمة.
+            </div>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">
+                ولها <strong>صورتان فقط</strong> في الرسم الإملائي:
+            </p>
+
+            <div class="two-columns">
+                <div>
+                    <h3 style="color: var(--subject-primary); text-align: center; margin-bottom: 10px;">
+                        <i class="fas fa-check-circle"></i> الصورة الأولى
+                    </h3>
+                    <div class="letter-display">ا</div>
+                    <p style="text-align: center; font-weight: 600;">ألف قائمة (ممدودة)</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--subject-primary); text-align: center; margin-bottom: 10px;">
+                        <i class="fas fa-check-circle"></i> الصورة الثانية
+                    </h3>
+                    <div class="letter-display">ى</div>
+                    <p style="text-align: center; font-weight: 600;">ألف مقصورة (على هيئة ياء غير منقوطة)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: القاعدة العامة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> ثانياً: القاعدة العامة لرسم الألف اللينة في الحروف</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الأصلية:</strong> الألف اللينة في آخر الحروف تُكتب دائماً على صورة <strong>ألف قائمة (ا)</strong>، لأنها حروف سماعية لا تخضع لقواعد الاشتقاق.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 20px 0 15px;">أمثلة على الحروف التي تكتب بألف قائمة (ا):</h3>
+            
+            <div class="letter-display" style="font-size: 2rem; letter-spacing: 10px;">
+                لا - ما - يا - ألا - حاشا - عدا - كلا - إلا
+            </div>
+        </div>
+
+        <!-- ثالثاً: الاستثناءات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> ثالثاً: الاستثناء (القاعدة السماعية المحصورة)</h2>
+            
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                هناك <strong>أربعة حروف فقط</strong> لا تتبع القاعدة العامة، بل تُكتب فيها الألف اللينة دائماً على صورة <strong>ألف مقصورة (ى)</strong>، ويجب حفظها حفظاً لأنها سماعية ولا قياس لها.
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card rule">
+                    <h3><i class="fas fa-check-circle"></i> القاعدة العامة</h3>
+                    <p style="margin-bottom: 15px;">تُكتب الألف اللينة في الحروف:</p>
+                    <ul>
+                        <li>لا</li>
+                        <li>ما</li>
+                        <li>يا</li>
+                        <li>ألا</li>
+                        <li>حاشا</li>
+                        <li>عدا</li>
+                        <li>كلا</li>
+                        <li>إلا</li>
+                    </ul>
+                </div>
+                <div class="column-card exception">
+                    <h3><i class="fas fa-exclamation-circle"></i> الاستثناءات الأربعة</h3>
+                    <p style="margin-bottom: 15px;">تُكتب ألفها مقصورة (ى):</p>
+                    <ul>
+                        <li>إلى (حرف جر)</li>
+                        <li>على (حرف جر)</li>
+                        <li>حتى (حرف جر أو غاية)</li>
+                        <li>بلى (حرف جواب)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mnemonic-box">
+                <h3><i class="fas fa-lightbulb"></i> جملة مساعدة للحفظ</h3>
+                <p>يُنصح الطلاب بحفظ هذه الكلمات الأربع في جملة واحدة لتسهيل تذكرها:</p>
+                <div class="mnemonic-sentence">
+                    "بلى، سأذهب إلى المدرسة على حتى الصباح"
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 10px;">
+                    <i class="fas fa-info-circle"></i> الكلمات الملونة في الجملة هي الاستثناءات الأربعة التي تُكتب بألف مقصورة.
+                </p>
+            </div>
+        </div>
+
+        <!-- رابعاً: توضيح كلمة "إلا" -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-search"></i> رابعاً: توضيح دقيق لكلمة "إلا"</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-circle"></i> موضع اللبس الشائع!</h4>
+                <p style="margin-bottom: 15px;">
+                    قد يخلط بعض الطلاب بإدراج كلمة <strong>"إلا"</strong> ضمن الاستثناءات التي تكتب بألف مقصورة، ولكن هذا <strong>غير صحيح</strong>.
+                </p>
+                <p>
+                    كلمة <strong>"إلا"</strong> (حرف استثناء) تتبع <strong>القاعدة العامة</strong>، وتُكتب دائماً بألف قائمة <strong>(ا)</strong>.
+                </p>
+            </div>
+
+            <div class="table-responsive" style="margin-top: 20px;">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50%; background-color: var(--success-color);">✅ الصواب (تتبع القاعدة العامة)</th>
+                            <th style="width: 50%; background-color: var(--error-color);">❌ الاستثناءات الأربعة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 1.2rem; font-weight: 700; text-align: center;">إلا - ألا - ما - لا</td>
+                            <td style="font-size: 1.2rem; font-weight: 700; text-align: center;">إلى - على - حتى - بلى</td>
+                        </tr>
+                        <tr>
+                            <td>تُكتب بألف قائمة (ا)</td>
+                            <td>تُكتب بألف مقصورة (ى)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- خامساً: تنبيه اتصال "ما" -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-link"></i> خامساً: تنبيه إملائي هام (اتصال الحروف بـ "ما")</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-info-circle"></i>
+                <strong>القاعدة المتقدمة:</strong> إذا اتصلت حروف الجر الاستثنائية (إلى، على) بـ (ما) الاستفهامية أو المصدرية، فإن الألف المقصورة تتحول وتُكتب <strong>ألفاً قائمة (ا)</strong>.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">أمثلة صحيحة:</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle" style="color: var(--success-color);"></i> المثال الأول:</h4>
+                <div class="sentence">"<span style="color: var(--subject-primary);">إلى ما</span> ترمي من وراء هذا العمل؟"</div>
+                <div class="answer">
+                    ✅ تكتب: <strong>إلى ما</strong> (بفصل الكلمتين)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle" style="color: var(--success-color);"></i> المثال الثاني:</h4>
+                <div class="sentence">"<span style="color: var(--subject-primary);">على ما</span> تعتمد في نجاحك؟"</div>
+                <div class="answer">
+                    ✅ تكتب: <strong>على ما</strong> (بفصل الكلمتين)
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> ملاحظة هامة:</h4>
+                <p>بينما تبقى <strong>"حتى"</strong> و <strong>"بلى"</strong> كما هي عند اتصالهما بـ "ما":</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>حتى ما ✅</li>
+                    <li>بلى ما ✅</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> سادساً: تطبيقات عملية</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 20px;">📝 التطبيق 1: اختر الرسم الإملائي الصحيح</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال الأول:</h4>
+                <div class="sentence">"سأسافر (إلى / الى) المدينة غدًا."</div>
+                <div class="answer">
+                    ✅ الإجابة الصحيحة: <strong>إلى</strong> (لأنها من الحروف الأربعة الاستثنائية التي تكتب بألف مقصورة).
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال الثاني:</h4>
+                <div class="sentence">"لن أتخلى عن وطني (إلا / إلَى) بالموت."</div>
+                <div class="answer">
+                    ✅ الإجابة الصحيحة: <strong>إلا</strong> (لأنها حرف استثناء يتبع القاعدة العامة ويكتب بألف قائمة).
+                </div>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 20px;">🔍 التطبيق 2: حدد الكلمة المكتوبة بخطأ إملائي وصححها</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-search"></i> الجملة:</h4>
+                <div class="sentence">"يجب أن نحرص على نظافة فصلنا حتى ننال رضا المعلم."</div>
+                <div class="answer">
+                    ✅ التحليل: جميع الكلمات صحيحة. (على، حتى) كُتبتا بألف مقصورة كما يجب.
+                </div>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 20px;">🎯 التطبيق 3: تطبيق قاعدة "ما"</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال:</h4>
+                <div class="sentence">"إلى (ما / مى) سيؤول هذا الأمر؟"</div>
+                <div class="answer">
+                    ✅ الإجابة الصحيحة: <strong>ما</strong> (تكتب الألف قائمة عند اتصال "إلى" بـ "ما" الاستفهامية).
+                </div>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الرسم الإملائي الصحيح</h3>
+                
+                <div id="quizContainer">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة النشاط
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الألف اللينة:</strong> ألف ساكنة مفتوح ما قبلها، وتأتي في آخر الكلمة.</li>
+                <li><strong>صورتاها:</strong> ألف قائمة (ا) وألف مقصورة (ى).</li>
+                <li><strong>القاعدة العامة:</strong> تُكتب الألف اللينة في الحروف بألف قائمة (ا).</li>
+                <li><strong>الاستثناءات الأربعة:</strong> (إلى، على، حتى، بلى) تُكتب بألف مقصورة (ى).</li>
+                <li><strong>كلمة "إلا":</strong> تتبع القاعدة العامة وتُكتب بألف قائمة (ا).</li>
+                <li><strong>قاعدة "ما":</strong> عند اتصال (إلى، على) بـ (ما)، تُكتب الألف قائمة.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <!-- سكربت النشاط التفاعلي -->
+    <script>
+        // بيانات الأسئلة
+        const quizQuestions = [
+            {
+                sentence: "سأسافر (إلى / الى) المدينة غدًا.",
+                options: ["إلى", "الى"],
+                correct: 0,
+                explanation: "كلمة 'إلى' من الاستثناءات الأربعة التي تُكتب بألف مقصورة."
+            },
+            {
+                sentence: "لن أتخلى عن وطني (إلا / إلَى) بالموت.",
+                options: ["إلا", "إلَى"],
+                correct: 0,
+                explanation: "كلمة 'إلا' حرف استثناء يتبع القاعدة العامة ويكتب بألف قائمة."
+            },
+            {
+                sentence: "(على / علَى) الطالب أن يجتهد.",
+                options: ["على", "علَى"],
+                correct: 0,
+                explanation: "كلمة 'على' من الاستثناءات الأربعة، ولكن تُكتب بألف مقصورة (ى) وليس بألف قائمة."
+            },
+            {
+                sentence: "(حتى / حتا) وصلنا إلى المدرسة.",
+                options: ["حتى", "حتا"],
+                correct: 0,
+                explanation: "كلمة 'حتى' من الاستثناءات الأربعة التي تُكتب بألف مقصورة."
+            },
+            {
+                sentence: "(إلى ما / إلى مى) سيؤول هذا الأمر؟",
+                options: ["إلى ما", "إلى مى"],
+                correct: 0,
+                explanation: "عند اتصال 'إلى' بـ 'ما' الاستفهامية، تُكتب الألف قائمة (ما) وليس مقصورة."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            
+            let html = `
+                <div class="quiz-question">
+                    ${question.sentence}
+                </div>
+                <div class="quiz-options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${index})">${option}</div>`;
+            });
+            
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (answered[currentQuestion]) return;
+            
+            const question = quizQuestions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            answered[currentQuestion] = true;
+            
+            if (selectedIndex === question.correct) {
+                options[selectedIndex].classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${question.explanation}`;
+                score++;
+            } else {
+                options[selectedIndex].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${question.explanation}`;
+            }
+            
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            
+            const finalScore = document.getElementById('finalScore');
+            finalScore.style.display = 'block';
+            
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${percentage}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            
+            loadQuestion();
+        }
+
+        // تحميل السؤال الأول عند بدء الصفحة
+        loadQuestion();
+    </script>
+</body>
+</html>

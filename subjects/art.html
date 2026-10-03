@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة التربية الفنية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ - المنهج السعودي">
+    <title>التربية الفنية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة جداً بمادة التربية الفنية */
+        .art-banner {
+            background: linear-gradient(135deg, #e74c3c, #e67e22, #f1c40f, #2ecc71, #3498db, #9b59b6);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .art-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .art-banner h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        .art-banner p {
+            font-size: 1rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        .health-tips {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+            border-right: 5px solid var(--subject-secondary);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        [data-theme="dark"] .health-tips {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .health-tips h3 {
+            color: var(--subject-accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .health-tips h3 { color: var(--subject-secondary); }
+        .health-tips ul { list-style: none; padding: 0; }
+        .health-tips li {
+            padding: 8px 0;
+            padding-right: 25px;
+            position: relative;
+            color: var(--text-color);
+        }
+        .health-tips li::before {
+            content: "\f1fc";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--subject-primary);
+        }
+        .gallery-section {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .gallery-section h2 {
+            color: var(--subject-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #e74c3c, #e67e22, #f1c40f, #2ecc71, #3498db, #9b59b6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        .gallery-note {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: var(--bg-color);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        [data-theme="dark"] .gallery-note { color: #aaa; }
+    </style>
+</head>
+<body class="subject-art">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-palette"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="art.html" class="active">التربية الفنية</a></li>
+                    <li><a href="../quizzes/art-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <h1 style="font-family: 'Cairo', sans-serif; font-weight: 900;">🎨 عالم الفن والإبداع 🎨</h1>
+            <h1><i class="fas fa-paint-brush"></i> مادة التربية الفنية</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- بانر إبداعي -->
+        <div class="art-banner">
+            <h3><i class="fas fa-star"></i> هل تعلم؟</h3>
+            <p>الألوان الأساسية الثلاثة (الأحمر، الأصفر، الأزرق) لا يمكن الحصول عليها بمزج أي ألوان أخرى، لكن يمكن مزجها للحصول على جميع الألوان الأخرى!</p>
+        </div>
+
+        <!-- نصائح فنية -->
+        <div class="health-tips">
+            <h3><i class="fas fa-lightbulb"></i> نصائح ذهبية للفنان المبدع</h3>
+            <ul>
+                <li>ابدأ دائماً برسم مخطط أولي خفيف قبل التلوين.</li>
+                <li>استخدم قلم الرصاص (HB أو 2B) للرسومات الأولية.</li>
+                <li>تعلم أساسيات نظرية الألوان (الأساسية، الثانوية، المكملة).</li>
+                <li>مارس الرسم يومياً ولو لمدة 15 دقيقة فقط.</li>
+                <li>استلهم من الطبيعة والفنانين الكبار حول العالم.</li>
+            </ul>
+        </div>
+
+        <!-- شبكة الدروس (سيتم بناؤها ديناميكياً بواسطة JavaScript) -->
+        <div class="lessons-grid" id="lessonsContainer"></div>
+
+        <!-- معرض الأعمال الفنية -->
+        <div class="gallery-section">
+            <h2><i class="fas fa-images"></i> معرض الأعمال الفنية</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">استلهم من هذه الأعمال الفنية المتنوعة، وستتمكن قريباً من إضافة أعمالك الخاصة هنا.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><i class="fas fa-palette"></i></div>
+                <div class="gallery-item"><i class="fas fa-paint-brush"></i></div>
+                <div class="gallery-item"><i class="fas fa-pen-nib"></i></div>
+                <div class="gallery-item"><i class="fas fa-pencil-ruler"></i></div>
+                <div class="gallery-item"><i class="fas fa-shapes"></i></div>
+                <div class="gallery-item"><i class="fas fa-swatchbook"></i></div>
+                <div class="gallery-item"><i class="fas fa-bezier-curve"></i></div>
+                <div class="gallery-item"><i class="fas fa-fill-drip"></i></div>
+            </div>
+
+            <div class="gallery-note">
+                <i class="fas fa-info-circle"></i> 
+                هذا المعرض حالياً نموذجي. يمكنك رفع صور أعمالك الفنية في مجلد <code>images/art/gallery/</code> لعرضها هنا.
+            </div>
+        </div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/art-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة التربية الفنية فقط         -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'art';
+        
+        // بيانات دروس التربية الفنية المحدثة بالروابط الجديدة
+        const LESSONS_DATA = [
+            { title: "الخط الخارجي للشكل (1)", desc: "تعلم كيفية رسم الخط الخارجي للأشكال وتحديد ملامحها الأساسية.", videoId: "TbKTdNh7zM0", image: "lesson1.jpg", pdf: "lesson1.pdf" },
+            { title: "الخط الخارجي للشكل (2) - 1448هـ", desc: "تطبيقات عملية متقدمة على رسم الخط الخارجي للأشكال.", videoId: "e_pR04_zHCg", image: "lesson2.jpg", pdf: "lesson2.pdf" },
+            { title: "المنظور والظل والنور (1)", desc: "مفاهيم أساسية في رسم المنظور وتوزيع الظل والنور لإظهار العمق.", videoId: "dmTWMrUeeNE", image: "lesson3.jpg", pdf: "lesson3.pdf" },
+            { title: "المنظور والظل والنور (2) - 1448هـ", desc: "تطبيقات عملية على إظهار العمق باستخدام تقنيات الظل والنور.", videoId: "e_qdvvelbVo", image: "lesson4.jpg", pdf: "lesson4.pdf" },
+            { title: "الخامات المختلفة في اللوحات المسطحة (1)", desc: "التعرف على أنواع الخامات وكيفية استخدامها في اللوحات الفنية.", videoId: "Pkb7ITcwk3c", image: "lesson5.jpg", pdf: "lesson5.pdf" },
+            { title: "الخامات المختلفة في اللوحات المسطحة (2) - 1448هـ", desc: "تطبيقات عملية لدمج الخامات المختلفة لإثراء اللوحة الفنية.", videoId: "MKQBZ8HKb4Q", image: "lesson6.jpg", pdf: "lesson6.pdf" },
+            { title: "مراجعة الفترة الأولى (1)", desc: "مراجعة شاملة لأهم المفاهيم والمهارات الفنية للفترة الأولى.", videoId: "uc9wV53OfjE", image: "lesson7.jpg", pdf: "lesson7.pdf" },
+            { title: "مراجعة الفترة الأولى (2)", desc: "نماذج أسئلة وتطبيقات مراجعة شاملة للفترة الأولى.", videoId: "8XiLx8-8g1o", image: "lesson8.jpg", pdf: "lesson8.pdf" },
+            { title: "رسم وحدة زخرفية لانهائية (1)", desc: "أساسيات تصميم الوحدات الزخرفية ومبادئ تكرارها.", videoId: "2POy2Fdp-s4", image: "lesson9.jpg", pdf: "lesson9.pdf" },
+            { title: "تصميم مبتكر لا نهائي للوحدة الزخرفية - عملي", desc: "تطبيق عملي خطوة بخطوة لرسم وتلوين وحدة زخرفية.", videoId: "YclFqWpnWSs", image: "lesson10.jpg", pdf: "lesson10.pdf" },
+            { title: "حل تقويم الوحدة الثانية (مجال الزخرفة)", desc: "حل شامل ومناقشة لأسئلة تقويم وحدة الزخرفة.", videoId: "pyrjdDwwWIs", image: "lesson11.jpg", pdf: "lesson11.pdf" },
+            { title: "تناغميات لونية بالباتيك (1)", desc: "مقدمة عن فن الباتيك وكيفية تحقيق التناغم اللوني.", videoId: "0g6NBFgOrds", image: "lesson12.jpg", pdf: "lesson12.pdf" },
+            { title: "تناغميات لونية بالباتيك (2) - 1448هـ", desc: "تطبيقات عملية على تلوين لوحات الباتيك.", videoId: "8oN9gYPKm6o", image: "lesson13.jpg", pdf: "lesson13.pdf" },
+            { title: "تقنيات فن الباتيك (1)", desc: "شرح أدوات وطرق تطبيق الشمع والألوان في فن الباتيك.", videoId: "zT5H83e4J_k", image: "lesson14.jpg", pdf: "lesson14.pdf" },
+            { title: "تقنيات فن الباتيك (2) - 1448هـ", desc: "تطبيقات متقدمة على تقنيات صبغ القماش.", videoId: "Wsn_WvXbjz4", image: "lesson15.jpg", pdf: "lesson15.pdf" },
+            { title: "الباتيك المعاصر (1)", desc: "استكشاف الأساليب الحديثة والمعاصرة في فن الباتيك.", videoId: "qDl_OtziLNI", image: "lesson16.jpg", pdf: "lesson16.pdf" },
+            { title: "الباتيك المعاصر (2) - 1448هـ", desc: "تطبيقات إبداعية على فن الباتيك المعاصر.", videoId: "JD4vjDQnadQ", image: "lesson17.jpg", pdf: "lesson17.pdf" },
+            { title: "حل تقويم الوحدة الثالثة (مجال الطباعة)", desc: "حل ومناقشة أسئلة تقويم وحدة الطباعة (الباتيك).", videoId: "ns8wHR--VyY", image: "lesson18.jpg", pdf: "lesson18.pdf" },
+            { title: "البلاطات الخزفية (1)", desc: "مقدمة عن تشكيل البلاطات الخزفية وتقنياتها الأساسية.", videoId: "D2jF6xV6iQ8", image: "lesson19.jpg", pdf: "lesson19.pdf" },
+            { title: "البلاطات الخزفية (2) - 1448هـ", desc: "تطبيقات عملية على تشكيل وزخرفة البلاطات الخزفية.", videoId: "oqtkQZbtTkk", image: "lesson20.jpg", pdf: "lesson20.pdf" },
+            { title: "تزجيج الأواني الفخارية (1)", desc: "مفهوم التزجيج وأنواع المواد المستخدمة فيه.", videoId: "Md4qf-i4hEo", image: "lesson21.jpg", pdf: "lesson21.pdf" },
+            { title: "تزجيج الأواني الفخارية (2)", desc: "خطوات تطبيق التزجيج على الأواني الفخارية.", videoId: "75OKLIw9s9I", image: "lesson22.jpg", pdf: "lesson22.pdf" },
+            { title: "تزجيج الأواني الفخارية (3) - 1448هـ", desc: "تطبيقات متقدمة ونصائح للحصول على نتائج تزجيج مثالية.", videoId: "hTijV8LaC4c", image: "lesson23.jpg", pdf: "lesson23.pdf" },
+            { title: "حل كتاب التربية الفنية للصف الثاني المتوسط ف1", desc: "حل شامل ومناقشة لأنشطة وواجبات الكتاب المدرسي.", videoId: "i1ft1GdRI88", image: "lesson24.jpg", pdf: "lesson24.pdf" },
+            { title: "المشروع الفصلي", desc: "أفكار وتوجيهات لتنفيذ المشروع الفصلي النهائي بأفضل صورة.", videoId: "l5qiL56hLy0", image: "lesson25.jpg", pdf: "lesson25.pdf" }
+        ];
+        
+        // بناء بطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/e67e22/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> فنان مبدع! نتيجتك: ${score} من ${questions.length}.`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> جيد جداً! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

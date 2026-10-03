@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="استحقاق الله للعبادة وحده لا شريك له - مادة الدراسات الإسلامية - الصف الثاني المتوسط">
+    <title>استحقاق الله للعبادة | الدراسات الإسلامية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #1e8449, #27ae60); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-family: 'Amiri', serif; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.95; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #1e8449; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #27ae60; padding-bottom: 10px; font-family: 'Amiri', serif; }
+        .highlight-box { background-color: rgba(30, 132, 73, 0.08); border-right: 4px solid #1e8449; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #1e8449; }
+        .quran-box { background: linear-gradient(135deg, #fef9e7, #fdebd0); border: 2px solid #f39c12; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.4rem; color: #7d6608; line-height: 2; }
+        .hadith-box { background: linear-gradient(135deg, #eafaf1, #d5f5e3); border: 2px solid #27ae60; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.2rem; color: #1e8449; line-height: 1.8; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #27ae60; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; font-weight: 700; color: #1e8449; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #1e8449; margin: 15px 0; }
+        .step-box h4 { color: #1e8449; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e8449; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #1e8449; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(30, 132, 73, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .four-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-family: 'Amiri', serif; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #f39c12; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #1e8449; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #27ae60; margin-bottom: 15px; }
+        .example-card h4 { color: #1e8449; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #1e8449; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #27ae60; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #1e8449; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #1e8449; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(30, 132, 73, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed #1e8449; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #1e8449; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-family: 'Amiri', serif; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Amiri', serif; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Amiri', serif; }
+        .quiz-option:hover { border-color: #1e8449; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #1e8449; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #1e8449; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #1e8449; color: #1e8449; }
+        .worship-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #1e8449; text-align: center; transition: transform 0.3s; }
+        .worship-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .worship-card h4 { margin-bottom: 10px; color: #1e8449; font-family: 'Amiri', serif; }
+        .worship-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #1e8449; }
+        .worship-card.heart { border-top-color: #e74c3c; }
+        .worship-card.heart h4, .worship-card.heart .icon { color: #e74c3c; }
+        .worship-card.tongue { border-top-color: #3498db; }
+        .worship-card.tongue h4, .worship-card.tongue .icon { color: #3498db; }
+        .worship-card.body { border-top-color: #27ae60; }
+        .worship-card.body h4, .worship-card.body .icon { color: #27ae60; }
+        .worship-card.wealth { border-top-color: #f39c12; }
+        .worship-card.wealth h4, .worship-card.wealth .icon { color: #f39c12; }
+        .evidence-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 5px solid #f39c12; margin: 15px 0; }
+        .evidence-card h4 { color: #f39c12; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .bismillah { text-align: center; font-family: 'Amiri', serif; font-size: 2rem; color: #1e8449; margin: 20px 0; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns, .four-columns { grid-template-columns: 1fr; } .quran-box { font-size: 1.1rem; } }
+    </style>
+</head>
+<body class="subject-islamic">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-book-quran"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/islamic.html" class="active">الدراسات الإسلامية</a></li>
+                    <li><a href="../../quizzes/islamic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/islamic.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الإسلامية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-mosque"></i> استحقاق الله للعبادة وحده لا شريك له</h1>
+            <p>معنى لا إله إلا الله، أدلة استحقاق الله للعبادة، وأنواع العبادة</p>
+            <p>مادة الدراسات الإسلامية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا خُلقنا؟ وما غاية وجودنا في هذه الحياة؟</strong>
+                <p style="margin-top: 10px;">أخبرنا الله تعالى في كتابه الكريم أن الحكمة من خلقنا هي عبادته وحده لا شريك له. وفي هذا الدرس، سنتعلم معنى <strong>لا إله إلا الله</strong>، و<strong>لماذا يستحق الله وحده العبادة</strong>، و<strong>أنواع العبادة</strong> التي أمرنا بها.</p>
+            </div>
+
+            <div class="quran-box">
+                ﴿ وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الذاريات: 56]</p>
+            </div>
+        </div>
+
+        <!-- أولاً: معنى لا إله إلا الله -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: معنى لا إله إلا الله</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>لا إله إلا الله</strong> هي كلمة التوحيد، وأساس الدين الإسلامي، وأول أركانه.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-ban"></i> الجزء الأول: "لا إله"</h3>
+                    <p><strong>النفي:</strong> نفي العبادة عن كل ما سوى الله تعالى.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>لا معبود بحق إلا الله</li>
+                        <li>نفي الألوهية عن الأصنام والأشخاص</li>
+                        <li>براءة من كل ما يُعبد من دون الله</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> الجزء الثاني: "إلا الله"</h3>
+                    <p><strong>الإثبات:</strong> إثبات العبادة لله وحده.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>إفراد الله بالعبادة</li>
+                        <li>تخصيص الله وحده بكل أنواع العبادة</li>
+                        <li>الإقرار بأن الله هو المعبود بحق</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif; font-size: 1.4rem;">
+                لا إله إلا الله = نفي + إثبات
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الفرق بين "الإله" و"الله":</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>الإله:</strong> كل ما يُتخذ معبوداً (قد يكون حقاً أو باطلاً)</li>
+                    <li><strong>الله:</strong> الاسم الخاص بالمعبود الحق، الذي له الأسماء الحسنى والصفات العُلى</li>
+                </ul>
+            </div>
+
+            <div class="quran-box">
+                ﴿ قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الإخلاص]</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: أدلة استحقاق الله للعبادة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-scroll"></i> ثانياً: أدلة استحقاق الله للعبادة وحده</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>يستحق الله تعالى العبادة وحده بأدلة متعددة:</strong>
+            </div>
+
+            <div class="evidence-card">
+                <h4><i class="fas fa-book-quran"></i> الدليل الأول: الأدلة من القرآن الكريم</h4>
+                <p>أمر الله تعالى في كتابه بعبادته وحده، ونهى عن الشرك به.</p>
+                
+                <div class="quran-box" style="font-size: 1.2rem;">
+                    ﴿ وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ 
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة الإسراء: 23]</p>
+                </div>
+                
+                <div class="quran-box" style="font-size: 1.2rem;">
+                    ﴿ أَلَا لِلَّهِ الدِّينُ الْخَالِصُ ﴾
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة الزمر: 3]</p>
+                </div>
+            </div>
+
+            <div class="evidence-card">
+                <h4><i class="fas fa-star-and-crescent"></i> الدليل الثاني: الأدلة من السنة النبوية</h4>
+                <p>أخبرنا النبي  أن العبادة حق لله وحده.</p>
+                
+                <div class="hadith-box">
+                    <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                    <p>عن معاذ بن جبل رضي الله عنه قال: قال رسول الله ﷺ:</p>
+                    <p style="font-weight: 700; margin: 10px 0;">"حق الله على العباد أن يعبدوه ولا يشركوا به شيئاً"</p>
+                    <p style="font-size: 0.9rem; color: #666;">[متفق عليه]</p>
+                </div>
+            </div>
+
+            <div class="evidence-card">
+                <h4><i class="fas fa-brain"></i> الدليل الثالث: دليل الفطرة</h4>
+                <p>فطر الله تعالى الإنسان على التوحيد وعبادته وحده.</p>
+                
+                <div class="hadith-box">
+                    <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                    <p>قال رسول الله :</p>
+                    <p style="font-weight: 700; margin: 10px 0;">"كل مولود يولد على الفطرة، فأبواه يهودانه أو ينصرانه أو يمجسانه"</p>
+                    <p style="font-size: 0.9rem; color: #666;">[رواه البخاري]</p>
+                </div>
+            </div>
+
+            <div class="evidence-card">
+                <h4><i class="fas fa-balance-scale"></i> الدليل الرابع: دليل العقل</h4>
+                <p>العقل السليم يدل على أن الخالق وحده هو المستحق للعبادة.</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>الخالق هو الذي أوجد كل شيء من العدم</li>
+                    <li>الرازق هو الذي يوفر sustenance لكل المخلوقات</li>
+                    <li>المُدبِّر هو الذي يتصرف في الكون بحكمة</li>
+                    <li>فمن له هذه الصفات وحده يستحق العبادة</li>
+                </ul>
+            </div>
+
+            <div class="evidence-card">
+                <h4><i class="fas fa-globe"></i> الدليل الخامس: دليل الكون</h4>
+                <p>الكون بشهادة أنه مخلوق ومدبَّر يدل على عظمة خالقه.</p>
+                
+                <div class="quran-box" style="font-size: 1.2rem;">
+                    ﴿ إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الْأَلْبَابِ ﴾
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة آل عمران: 190]</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> خلاصة الأدلة:</h4>
+                <p>الله تعالى يستحق العبادة وحده لأنه:</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>هو الخالق الرازق المدبِّر</li>
+                    <li>له الأسماء الحسنى والصفات العُلى</li>
+                    <li>أمرنا بعبادته في كتابه وسنة نبيه</li>
+                    <li>فطرنا على توحيده</li>
+                    <li>عقلنا يدل على استحقاقه للعبادة</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: أنواع العبادة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-praying-hands"></i> ثالثاً: أنواع العبادة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>العبادة:</strong> اسم جامع لكل ما يحبه الله تعالى ويرضاه من الأقوال والأعمال الظاهرة والباطنة.
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif;">
+                العبادة = كل قول أو عمل يحبه الله ويرضاه
+            </div>
+
+            <div class="four-columns">
+                <div class="worship-card heart">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h4>عبادات قلبية</h4>
+                    <p>تتعلق بالقلب</p>
+                    <ul style="padding-right: 10px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                        <li>الإخلاص</li>
+                        <li>التوكل</li>
+                        <li>المحبة</li>
+                        <li>الرجاء</li>
+                        <li>الخشية</li>
+                    </ul>
+                </div>
+                <div class="worship-card tongue">
+                    <div class="icon"><i class="fas fa-comment-dots"></i></div>
+                    <h4>عبادات قولية</h4>
+                    <p>تتعلق باللسان</p>
+                    <ul style="padding-right: 10px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                        <li>الشهادة</li>
+                        <li>الذكر</li>
+                        <li>الدعاء</li>
+                        <li>قراءة القرآن</li>
+                        <li>القول الحسن</li>
+                    </ul>
+                </div>
+                <div class="worship-card body">
+                    <div class="icon"><i class="fas fa-hands"></i></div>
+                    <h4>عبادات بدنية</h4>
+                    <p>تتعلق بالجسد</p>
+                    <ul style="padding-right: 10px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                        <li>الصلاة</li>
+                        <li>الصيام</li>
+                        <li>الحج</li>
+                        <li>الجهاد</li>
+                        <li>الوضوء</li>
+                    </ul>
+                </div>
+                <div class="worship-card wealth">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>عبادات مالية</h4>
+                    <p>تتعلق بالمال</p>
+                    <ul style="padding-right: 10px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                        <li>الزكاة</li>
+                        <li>الصدقة</li>
+                        <li>الوقف</li>
+                        <li>النفقة</li>
+                        <li>الكفارات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على العبادات الشاملة</h4>
+                <p>بعض العبادات تجمع بين أكثر من نوع:</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الصلاة</h4>
+                    <p>تجمع بين: <strong>القلب</strong> (الخشوع) + <strong>القول</strong> (القراءة والذكر) + <strong>البدن</strong> (الركوع والسجود)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحج</h4>
+                    <p>يجمع بين: <strong>البدن</strong> (الطواف والسعي) + <strong>المال</strong> (النفقة) + <strong>القلب</strong> (الإخلاص)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الزكاة</h4>
+                    <p>تجمع بين: <strong>المال</strong> (إخراج الزكاة) + <strong>القلب</strong> (الإخلاص) + <strong>البدن</strong> (بذل الجهد)</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة مهمة:</h4>
+                <p>العبادة لا تُقبل إلا بشرطين:</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>الإخلاص لله:</strong> أن يكون العمل خالصاً لوجه الله تعالى</li>
+                    <li><strong>المتابعة للنبي ﷺ:</strong> أن يكون العمل وفق السنة النبوية</li>
+                </ul>
+                
+                <div class="quran-box" style="font-size: 1.1rem; margin-top: 15px;">
+                    ﴿ فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا ﴾
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة الكهف: 110]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: شروط قبول العبادة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-check-double"></i> رابعاً: شروط قبول العبادة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>لكي تُقبل العبادة عند الله تعالى، لا بد من توفر شروط:</strong>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-heart"></i> الشرط الأول: الإخلاص</h3>
+                    <p>أن يقصد العبد بعبادته وجه الله تعالى وحده، لا رياء ولا سمعة.</p>
+                    
+                    <div class="hadith-box" style="margin-top: 10px;">
+                        <p style="font-size: 1rem;">قال ﷺ: "إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى"</p>
+                        <p style="font-size: 0.85rem; color: #666;">[متفق عليه]</p>
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-book"></i> الشرط الثاني: المتابعة</h3>
+                    <p>أن تكون العبادة موافقة لهدي النبي ﷺ في كيفيتها وكميتها.</p>
+                    
+                    <div class="hadith-box" style="margin-top: 10px;">
+                        <p style="font-size: 1rem;">قال ﷺ: "من عمل عملاً ليس عليه أمرنا فهو رد"</p>
+                        <p style="font-size: 0.85rem; color: #666;">[رواه مسلم]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>إذا فُقد أحد هذين الشرطين، لم تُقبل العبادة:</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>من عمل عملاً صالحاً لكن لم يخلص فيه لله ➔ <strong>مردود</strong></li>
+                    <li>من عمل عملاً مخلصاً لكن لم يتبع فيه النبي ﷺ ➔ <strong>مردود</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-mosque"></i> مثال 1: في الصلاة</h4>
+                <p><strong>المسألة:</strong> كيف نُطبق التوحيد في صلاتنا اليومية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإخلاص لله</h4>
+                    <p>نُصلي لله وحده، لا رياء ولا سمعة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> متابعة النبي ﷺ</h4>
+                    <p>نُصلي كما صلى النبي ﷺ في الأركان والواجبات</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الخشوع</h4>
+                    <p>نحضر قلوبنا ونتدبر ما نقول في الصلاة</p>
+                </div>
+
+                <div class="solution">✅ الصلاة المقبولة = إخلاص + متابعة + خشوع</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-hand-holding-heart"></i> مثال 2: في الصدقة</h4>
+                <p><strong>المسألة:</strong> كيف نجعل الصدقة عبادة مقبولة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> إخلاص النية لله</h4>
+                    <p>لا نريد بها مدحاً من الناس ولا ثناءً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اتباع السنة</h4>
+                    <p>نتصدق بالطيب من أموالنا، ونُخفي الصدقة إن أمكن</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> عدم المن والأذى</h4>
+                    <p>لا نمنّ على من تصدقنا عليه ولا نؤذيه</p>
+                </div>
+
+                <div class="quran-box" style="font-size: 1rem;">
+                    ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُبْطِلُوا صَدَقَاتِكُم بِالْمَنِّ وَالْأَذَىٰ ﴾
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة البقرة: 264]</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-user-friends"></i> مثال 3: في التعامل مع الآخرين</h4>
+                <p><strong>المسألة:</strong> كيف نعبد الله في تعاملنا اليومي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> صدق الحديث</h4>
+                    <p>الصدق عبادة، والكذب معصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أداء الأمانة</h4>
+                    <p>الأمانة عبادة، والخيانة معصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> بر الوالدين</h4>
+                    <p>بر الوالدين من أعظم العبادات بعد الصلاة</p>
+                </div>
+
+                <div class="solution">✅ كل عمل صالح نعمله ابتغاء وجه الله فهو عبادة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 4: في طلب العلم</h4>
+                <p><strong>المسألة:</strong> كيف نجعل طلب العلم عبادة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> النية الصالحة</h4>
+                    <p>نطلب العلم لرفع الجهل عن أنفسنا وعن غيرنا</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> العمل بما تعلمنا</h4>
+                    <p>العلم بدون عمل لا ينفع صاحبه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تعليم الآخرين</h4>
+                    <p>نشر العلم صدقة جارية</p>
+                </div>
+
+                <div class="hadith-box" style="margin-top: 10px;">
+                    <p style="font-size: 1rem;">قال ﷺ: "من سلك طريقاً يلتمس فيه علماً سهّل الله له به طريقاً إلى الجنة"</p>
+                    <p style="font-size: 0.85rem; color: #666;">[رواه مسلم]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: فوائد تحقيق التوحيد -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gift"></i> سادساً: فوائد تحقيق التوحيد</h2>
+            
+            <div class="three-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-door-open"></i> دخول الجنة</h3>
+                    <p>من حقق التوحيد ومات عليه دخل الجنة</p>
+                    <div class="hadith-box" style="margin-top: 10px; font-size: 0.95rem;">
+                        <p>قال ﷺ: "من مات وهو يعلم أنه لا إله إلا الله دخل الجنة"</p>
+                        <p style="font-size: 0.8rem; color: #666;">[رواه مسلم]</p>
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-shield-alt"></i> الأمن من النار</h3>
+                    <p>التوحيد يحرر من النار</p>
+                    <div class="hadith-box" style="margin-top: 10px; font-size: 0.95rem;">
+                        <p>قال ﷺ: "لا يلج النار أحد قال لا إله إلا الله"</p>
+                        <p style="font-size: 0.8rem; color: #666;">[رواه البخاري]</p>
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-smile"></i> السعادة في الدنيا</h3>
+                    <p>التوحيد يجلب الطمأنينة والسعادة</p>
+                    <div class="quran-box" style="margin-top: 10px; font-size: 1rem;">
+                        ﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾
+                        <p style="font-size: 0.8rem;">[الرعد: 28]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-columns" style="margin-top: 20px;">
+                <div class="column-card" style="border-top: 5px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-unlock"></i> تفريج الكربات</h3>
+                    <p>التوحيد سبب لتفريج الهموم وإزالة الغموم</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-arrow-up"></i> رفع الدرجات</h3>
+                    <p>كلما حقق العبد التوحيد، ارتفعت درجاته في الجنة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن التلفظ بالشهادة يكفي</h4>
+                <p>لا بد مع التلفظ من <strong>العمل بمقتضاها</strong> (الإخلاص لله وترك الشرك).</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> قولها + العمل بها + الاعتقاد الجازم</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> التلفظ بها دون عمل أو اعتقاد</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: حصر العبادة في الشعائر فقط</h4>
+                <p>العبادة <strong>أوسع</strong> من الصلاة والصيام! كل عمل صالح ابتغاء وجه الله فهو عبادة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>أمثلة على العبادات غير الشعائرية:</strong> بر الوالدين، الصدقة، الابتسامة، إماطة الأذى عن الطريق، طلب العلم.</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الرياء في العبادة</h4>
+                <p>من يعمل العبادة ليراه الناس فقد <strong>أشرك</strong> في عبادة الله.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> إخفاء العبادة ما أمكن</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> التباهي بالعبادة أمام الناس</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الابتداع في العبادة</h4>
+                <p>من أحدث عبادة <strong>لم يشرعها الله</strong> ولا رسوله ﷺ فقد ضل.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> العبادة وفق السنة</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> اختراع عبادات جديدة</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الغلو في الصالحين</h4>
+                <p>دعاء الأموات والاستغاثة بهم <strong>شرك أكبر</strong> يُخرج من الملة.</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #1e8449;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>لا إله إلا الله:</strong> نفي العبادة عما سوى الله + إثباتها لله وحده.</li>
+                <li><strong>أدلة استحقاق الله للعبادة:</strong> القرآن، السنة، الفطرة، العقل، الكون.</li>
+                <li><strong>العبادة:</strong> كل ما يحبه الله ويرضاه من الأقوال والأعمال.</li>
+                <li><strong>أنواع العبادة:</strong> قلبية، قولية، بدنية، مالية.</li>
+                <li><strong>شروط قبول العبادة:</strong> الإخلاص لله + متابعة النبي ﷺ.</li>
+                <li><strong>فوائد التوحيد:</strong> دخول الجنة، الأمن من النار، السعادة، تفريج الكربات.</li>
+                <li><strong>تنبيه:</strong> العبادة أوسع من الشعائر، وكل عمل صالح عبادة.</li>
+                <li><strong>تنبيه:</strong> الرياء والابتداع يُبطلان العبادة.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #1e8449; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما معنى 'لا إله' في كلمة التوحيد؟",
+                options: ["نفي وجود الله", "نفي العبادة عن كل ما سوى الله", "نفي الخالق", "نفي الرزق"],
+                correct: 1,
+                explanation: "'لا إله' تعني نفي العبادة عن كل ما سوى الله تعالى، أي لا معبود بحق إلا الله."
+            },
+            {
+                sentence: "أي من الأدلة التالية تدل على فطرة الله الإنسان على التوحيد؟",
+                options: ["دليل العقل", "دليل الكون", "دليل الفطرة", "دليل القرآن"],
+                correct: 2,
+                explanation: "دليل الفطرة: أن الله فطر كل مولود على التوحيد، كما في حديث 'كل مولود يولد على الفطرة'."
+            },
+            {
+                sentence: "أي من العبادات التالية تُعد عبادة قلبية؟",
+                options: ["الصلاة", "الصيام", "التوكل على الله", "الزكاة"],
+                correct: 2,
+                explanation: "التوكل عبادة قلبية تتعلق بالقلب، بينما الصلاة والصيام والزكاة عبادات بدنية ومالية."
+            },
+            {
+                sentence: "ما الشرطان اللازم توافرهما لقبول العبادة؟",
+                options: [
+                    "الكمية والكيفية",
+                    "الإخلاص لله ومتابعة النبي ",
+                    "السرعة والإتقان",
+                    "الجاه والمال"
+                ],
+                correct: 1,
+                explanation: "لا تُقبل العبادة إلا بالإخلاص لله تعالى والمتابعة للنبي ﷺ."
+            },
+            {
+                sentence: "ما معنى 'إلا الله' في كلمة التوحيد؟",
+                options: ["نفي الألوهية", "إثبات العبادة لله وحده", "نفي الخلق", "إثبات الصفات"],
+                correct: 1,
+                explanation: "'إلا الله' تعني إثبات العبادة لله وحده لا شريك له، وهو الجزء الإيجابي من كلمة التوحيد."
+            },
+            {
+                sentence: "أي من الأعمال التالية يُعد من العبادات المالية؟",
+                options: ["الصلاة", "الصدقة", "الصيام", "الذكر"],
+                correct: 1,
+                explanation: "الصدقة عبادة مالية تتعلق بالمال، وهي من أعظم القربات إلى الله تعالى."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="التكبير والتصغير - عامل القياس وتأثيره على الأطوال والمساحات - مادة الرياضيات">
+    <title>التكبير والتصغير | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .scale-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .scale-visual svg { max-width: 100%; height: auto; }
+        .effect-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid var(--subject-primary); text-align: center; }
+        .effect-card.lengths { border-top-color: #3498db; }
+        .effect-card.perimeter { border-top-color: #27ae60; }
+        .effect-card.area { border-top-color: #e67e22; }
+        .effect-card h4 { margin-bottom: 10px; }
+        .effect-card.lengths h4 { color: #3498db; }
+        .effect-card.perimeter h4 { color: #27ae60; }
+        .effect-card.area h4 { color: #e67e22; }
+        .effect-card .formula { font-family: 'Fira Code', monospace; font-size: 1.2rem; font-weight: 700; margin: 10px 0; direction: ltr; }
+        .effect-card.lengths .formula { color: #3498db; }
+        .effect-card.perimeter .formula { color: #27ae60; }
+        .effect-card.area .formula { color: #e67e22; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-expand-arrows-alt"></i> التكبير والتصغير</h1>
+            <p>مفهوم عامل القياس وتأثيره على أطوال أضلاع ومساحات الأشكال</p>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ماذا يحدث للأطوال والمساحات عندما نكبر أو نصغر شكلاً؟</strong>
+                <p style="margin-top: 10px;">عندما نكبر صورة في الهاتف، أو ننظر إلى خريطة، أو نشاهد نموذجاً مصغراً لمبنى، فإننا نستخدم مفهوم <strong>التكبير والتصغير</strong>. لكن هل تتضاعف المساحة بنفس مقدار تضاعف الطول؟ هذا ما سنكتشفه في هذا الدرس!</p>
+            </div>
+
+            <div class="scale-visual">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-image"></i> مثال بصري: تكبير صورة</h4>
+                <svg width="500" height="200" viewBox="0 0 500 200">
+                    <!-- الصورة الأصلية -->
+                    <rect x="30" y="50" width="80" height="80" fill="rgba(41, 128, 185, 0.3)" stroke="#2980b9" stroke-width="2"/>
+                    <text x="70" y="150" font-family="Tajawal" font-size="12" fill="#2980b9" text-anchor="middle">الأصلية</text>
+                    <text x="70" y="170" font-family="Fira Code" font-size="11" fill="#2980b9" text-anchor="middle">4×4</text>
+                    
+                    <!-- سهم التكبير -->
+                    <line x1="130" y1="90" x2="200" y2="90" stroke="#e67e22" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="165" y="80" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle">× 2</text>
+                    
+                    <!-- الصورة المكبرة -->
+                    <rect x="220" y="30" width="160" height="160" fill="rgba(230, 126, 34, 0.3)" stroke="#e67e22" stroke-width="2"/>
+                    <text x="300" y="210" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle">المكبرة (×2)</text>
+                    <text x="300" y="228" font-family="Fira Code" font-size="11" fill="#e67e22" text-anchor="middle">8×8</text>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e67e22"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 15px; font-size: 1rem;">
+                    <strong>لاحظ:</strong> الطول تضاعف 2 مرات (4→8)، لكن المساحة تضاعفت 4 مرات (16→64)!
+                </p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو التكبير والتصغير؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو التكبير والتصغير؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> التكبير والتصغير هو عملية تغيير حجم الشكل مع الحفاظ على <strong>نفس النسب والشكل</strong> (أي أن الشكل الجديد يشبه الشكل الأصلي).
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-search-plus"></i> التكبير</h3>
+                    <p>جعل الشكل <strong>أكبر</strong> من الأصل مع الحفاظ على النسب</p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        عامل القياس k > 1
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">مثال: تكبير صورة، خريطة مفصلة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-search-minus"></i> التصغير</h3>
+                    <p>جعل الشكل <strong>أصغر</strong> من الأصل مع الحفاظ على النسب</p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        عامل القياس 0 < k < 1
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">مثال: نموذج مصغر، خريطة عامة</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> مفهوم التشابه:</h4>
+                <p>الشكلان الناتجان عن التكبير أو التصغير يكونان <strong>متشابهين</strong> (نفس الشكل، أحجام مختلفة). الزوايا متساوية، والأضلاع متناسبة.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: عامل القياس (معامل التكبير) -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> ثانياً: عامل القياس (معامل التكبير)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> عامل القياس (k) هو النسبة بين طول ضلع في الشكل الجديد إلى طول الضلع المناظر له في الشكل الأصلي.
+            </div>
+
+            <div class="math-box" style="font-size: 1.5rem;">
+                k = طول الضلع في الشكل الجديد / طول الضلع في الشكل الأصلي
+            </div>
+
+            <div class="three-columns">
+                <div class="effect-card lengths">
+                    <h4><i class="fas fa-expand"></i> k > 1</h4>
+                    <p><strong>تكبير</strong></p>
+                    <div class="formula">مثال: k = 2</div>
+                    <p style="font-size: 0.9rem;">الشكل الجديد أكبر بمرتين</p>
+                </div>
+                <div class="effect-card perimeter">
+                    <h4><i class="fas fa-compress"></i> 0 < k < 1</h4>
+                    <p><strong>تصغير</strong></p>
+                    <div class="formula">مثال: k = 1/2</div>
+                    <p style="font-size: 0.9rem;">الشكل الجديد نصف الحجم</p>
+                </div>
+                <div class="effect-card area">
+                    <h4><i class="fas fa-equals"></i> k = 1</h4>
+                    <p><strong>نفس الحجم</strong></p>
+                    <div class="formula">مثال: k = 1</div>
+                    <p style="font-size: 0.9rem;">الشكلان متطابقان</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: حساب عامل القياس</h4>
+                <p><strong>المسألة:</strong> مستطيل طوله 5 سم، تم تكبيره فأصبح طوله 15 سم. ما عامل القياس؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الأطوال</h4>
+                    <div class="calculation">الطول الأصلي = 5 سم</div>
+                    <div class="calculation">الطول الجديد = 15 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب عامل القياس</h4>
+                    <div class="calculation">k = 15 ÷ 5 = 3</div>
+                </div>
+
+                <div class="math-box">
+                    عامل القياس k = 3 (تكبير 3 مرات)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: حساب طول ضلع جديد</h4>
+                <p><strong>المسألة:</strong> مثلث ضلعه 8 سم، تم تصغيره بعامل قياس 1/4. ما طول الضلع الجديد؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> استخدم الصيغة</h4>
+                    <div class="calculation">الطول الجديد = الطول الأصلي × k</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عوض واحسب</h4>
+                    <div class="calculation">الطول الجديد = 8 × (1/4) = 2 سم</div>
+                </div>
+
+                <div class="math-box">
+                    الطول الجديد = 2 سم
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: تأثير عامل القياس على الأطوال -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-ruler"></i> ثالثاً: تأثير عامل القياس على الأطوال</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> عند التكبير أو التصغير بعامل قياس k، تُضرب <strong>جميع الأطوال</strong> في k.
+            </div>
+
+            <div class="math-box">
+                الطول الجديد = الطول الأصلي × k
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: تكبير مستطيل</h4>
+                <p><strong>المسألة:</strong> مستطيل أبعاده 6 سم × 4 سم، كُبّر بعامل قياس 2.5. أوجد أبعاده الجديدة.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الطول الجديد</h4>
+                    <div class="calculation">6 × 2.5 = 15 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> العرض الجديد</h4>
+                    <div class="calculation">4 × 2.5 = 10 سم</div>
+                </div>
+
+                <div class="math-box">
+                    الأبعاد الجديدة: 15 سم × 10 سم
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: تصغير مثلث</h4>
+                <p><strong>المسألة:</strong> مثلث أطوال أضلاعه 9 سم، 12 سم، 15 سم. صُغّر بعامل قياس 1/3. أوجد أطوال أضلاعه الجديدة.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الضلع الأول</h4>
+                    <div class="calculation">9 × (1/3) = 3 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الضلع الثاني</h4>
+                    <div class="calculation">12 × (1/3) = 4 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الضلع الثالث</h4>
+                    <div class="calculation">15 × (1/3) = 5 سم</div>
+                </div>
+
+                <div class="math-box">
+                    الأضلاع الجديدة: 3 سم، 4 سم، 5 سم
+                </div>
+                <p style="text-align: center; margin-top: 10px; color: var(--text-muted);">
+                    <i class="fas fa-info-circle"></i> لاحظ أن النسب محفوظة: 3:4:5 = 9:12:15
+                </p>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> خاصية مهمة:</h4>
+                <p>عند التكبير أو التصغير، <strong>الزوايا لا تتغير</strong>! فقط الأطوال تتغير. هذا ما يحافظ على شكل الشكل.</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: تأثير عامل القياس على المحيط -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-circle-notch"></i> رابعاً: تأثير عامل القياس على المحيط</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> المحيط يتغير بنفس عامل القياس k.
+            </div>
+
+            <div class="math-box">
+                المحيط الجديد = المحيط الأصلي × k
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: محيط مستطيل مكبر</h4>
+                <p><strong>المسألة:</strong> مستطيل محيطه 20 سم، كُبّر بعامل قياس 3. ما محيطه الجديد؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> طبّق القاعدة</h4>
+                    <div class="calculation">المحيط الجديد = 20 × 3 = 60 سم</div>
+                </div>
+
+                <div class="math-box">
+                    المحيط الجديد = 60 سم
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: التحقق من القاعدة</h4>
+                <p><strong>المسألة:</strong> مثلث أطوال أضلاعه 3، 4، 5 سم. كُبّر بعامل قياس 2. تحقق أن المحيط تضاعف بنفس العامل.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المحيط الأصلي</h4>
+                    <div class="calculation">3 + 4 + 5 = 12 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الأضلاع الجديدة</h4>
+                    <div class="calculation">3×2=6، 4×2=8، 5×2=10</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المحيط الجديد</h4>
+                    <div class="calculation">6 + 8 + 10 = 24 سم</div>
+                    <div class="calculation">24 ÷ 12 = 2 = k ✓</div>
+                </div>
+
+                <div class="math-box">
+                    المحيط تضاعف بنفس عامل القياس (2)
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تأثير عامل القياس على المساحة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-square"></i> خامساً: تأثير عامل القياس على المساحة</h2>
+            
+            <div class="highlight-box" style="border-right-color: #e74c3c; background-color: rgba(231, 76, 60, 0.08);">
+                <i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                <strong>القاعدة الذهبية (الأهم في الدرس!):</strong> المساحة تتغير بمربع عامل القياس k².
+            </div>
+
+            <div class="math-box" style="font-size: 1.5rem; border-color: #e74c3c;">
+                المساحة الجديدة = المساحة الأصلية × k²
+            </div>
+
+            <div class="scale-visual">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> لماذا k² وليس k؟</h4>
+                <svg width="500" height="250" viewBox="0 0 500 250">
+                    <!-- المربع الأصلي -->
+                    <rect x="30" y="80" width="100" height="100" fill="rgba(41, 128, 185, 0.3)" stroke="#2980b9" stroke-width="2"/>
+                    <text x="80" y="135" font-family="Fira Code" font-size="14" fill="#2980b9" text-anchor="middle">3×3</text>
+                    <text x="80" y="200" font-family="Tajawal" font-size="12" fill="#2980b9" text-anchor="middle">المساحة = 9</text>
+                    
+                    <!-- سهم -->
+                    <line x1="150" y1="130" x2="220" y2="130" stroke="#e67e22" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="185" y="120" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle">k = 2</text>
+                    
+                    <!-- المربع المكبر -->
+                    <rect x="240" y="30" width="200" height="200" fill="rgba(230, 126, 34, 0.3)" stroke="#e67e22" stroke-width="2"/>
+                    <!-- تقسيم المربع المكبر إلى 4 مربعات صغيرة -->
+                    <line x1="340" y1="30" x2="340" y2="230" stroke="#e67e22" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="240" y1="130" x2="440" y2="130" stroke="#e67e22" stroke-width="1" stroke-dasharray="5,5"/>
+                    
+                    <text x="290" y="85" font-family="Fira Code" font-size="12" fill="#e67e22" text-anchor="middle">3×3</text>
+                    <text x="390" y="85" font-family="Fira Code" font-size="12" fill="#e67e22" text-anchor="middle">3×3</text>
+                    <text x="290" y="185" font-family="Fira Code" font-size="12" fill="#e67e22" text-anchor="middle">3×3</text>
+                    <text x="390" y="185" font-family="Fira Code" font-size="12" fill="#e67e22" text-anchor="middle">3×3</text>
+                    
+                    <text x="340" y="250" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle">المساحة = 36 = 9 × 4 = 9 × 2²</text>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e67e22"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 15px; font-size: 1rem;">
+                    <strong>التفسير:</strong> عندما نكبر الطول 2 مرات، نكبر العرض 2 مرات أيضاً. إذن المساحة = 2 × 2 = 4 مرات!
+                </p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 7: مساحة مستطيل مكبر</h4>
+                <p><strong>المسألة:</strong> مستطيل مساحته 15 سم²، كُبّر بعامل قياس 3. ما مساحته الجديدة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب k²</h4>
+                    <div class="calculation">k² = 3² = 9</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب المساحة الجديدة</h4>
+                    <div class="calculation">المساحة الجديدة = 15 × 9 = 135 سم²</div>
+                </div>
+
+                <div class="math-box">
+                    المساحة الجديدة = 135 سم²
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 8: التحقق من قاعدة المساحة</h4>
+                <p><strong>المسألة:</strong> مستطيل أبعاده 5 سم × 3 سم، كُبّر بعامل قياس 2. تحقق أن المساحة تضاعفت 4 مرات (2²).</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المساحة الأصلية</h4>
+                    <div class="calculation">5 × 3 = 15 سم²</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الأبعاد الجديدة</h4>
+                    <div class="calculation">5 × 2 = 10 سم</div>
+                    <div class="calculation">3 × 2 = 6 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المساحة الجديدة</h4>
+                    <div class="calculation">10 × 6 = 60 سم²</div>
+                    <div class="calculation">60 ÷ 15 = 4 = 2² = k² ✓</div>
+                </div>
+
+                <div class="math-box">
+                    المساحة تضاعفت 4 مرات = k²
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 9: تصغير دائرة</h4>
+                <p><strong>المسألة:</strong> دائرة مساحتها 100π سم²، صُغّرت بعامل قياس 1/2. ما مساحتها الجديدة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب k²</h4>
+                    <div class="calculation">k² = (1/2)² = 1/4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب المساحة الجديدة</h4>
+                    <div class="calculation">المساحة الجديدة = 100π × (1/4) = 25π سم²</div>
+                </div>
+
+                <div class="math-box">
+                    المساحة الجديدة = 25π سم²
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: جدول ملخص للتأثيرات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> سادساً: جدول ملخص لتأثيرات عامل القياس</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الخاصية</th>
+                            <th>عامل التغير</th>
+                            <th>الصيغة</th>
+                            <th>مثال (k=3)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الأطوال</strong> (أضلاع، ارتفاع...)</td>
+                            <td style="color: #3498db; font-weight: 700;">k</td>
+                            <td style="font-family: 'Fira Code', monospace;">L' = L × k</td>
+                            <td>تتضاعف 3 مرات</td>
+                        </tr>
+                        <tr>
+                            <td><strong>المحيط</strong></td>
+                            <td style="color: #27ae60; font-weight: 700;">k</td>
+                            <td style="font-family: 'Fira Code', monospace;">P' = P × k</td>
+                            <td>يتضاعف 3 مرات</td>
+                        </tr>
+                        <tr>
+                            <td><strong>المساحة</strong></td>
+                            <td style="color: #e74c3c; font-weight: 700;">k²</td>
+                            <td style="font-family: 'Fira Code', monospace;">A' = A × k²</td>
+                            <td>تتضاعف 9 مرات</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة للحفظ:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>الأطوال والمحيط:</strong> تتغير بعامل <strong>k</strong> (أس 1)</li>
+                    <li><strong>المساحة:</strong> تتغير بعامل <strong>k²</strong> (أس 2)</li>
+                    <li><strong>الحجم (في السنوات القادمة):</strong> يتغير بعامل <strong>k³</strong> (أس 3)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-map"></i> مثال 10: الخرائط</h4>
+                <p><strong>المسألة:</strong> خريطة بنسبة رسم 1:10000. إذا كانت مساحة بحيرة على الخريطة 5 سم²، فما مساحتها الحقيقية بالمتر المربع؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد عامل القياس</h4>
+                    <div class="calculation">k = 10000 (للأطوال)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب عامل القياس للمساحة</h4>
+                    <div class="calculation">k² = 10000² = 100,000,000</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب المساحة الحقيقية</h4>
+                    <div class="calculation">المساحة الحقيقية = 5 × 100,000,000 = 500,000,000 سم²</div>
+                    <div class="calculation">= 50,000 م² (لأن 1 م² = 10,000 سم²)</div>
+                </div>
+
+                <div class="math-box">
+                    المساحة الحقيقية = 50,000 م²
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-camera"></i> مثال 11: تكبير صورة</h4>
+                <p><strong>المسألة:</strong> صورة أبعادها 10 سم × 15 سم، كُبّرت لتصبح بعرض 25 سم. ما الطول الجديد؟ وما نسبة المساحة الجديدة إلى القديمة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب عامل القياس</h4>
+                    <div class="calculation">k = 25 ÷ 10 = 2.5</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب الطول الجديد</h4>
+                    <div class="calculation">الطول الجديد = 15 × 2.5 = 37.5 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب نسبة المساحتين</h4>
+                    <div class="calculation">k² = 2.5² = 6.25</div>
+                    <p style="text-align: center;">المساحة الجديدة = 6.25 × المساحة القديمة</p>
+                </div>
+
+                <div class="math-box">
+                    الطول الجديد = 37.5 سم، المساحة تتضاعف 6.25 مرة
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-building"></i> مثال 12: نموذج معماري</h4>
+                <p><strong>المسألة:</strong> نموذج مصغر لمبنى بعامل قياس 1:50. إذا كانت مساحة قاعدة النموذج 200 سم²، فما مساحة قاعدة المبنى الحقيقي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> عامل القياس للأطوال</h4>
+                    <div class="calculation">k = 50</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عامل القياس للمساحة</h4>
+                    <div class="calculation">k² = 50² = 2500</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المساحة الحقيقية</h4>
+                    <div class="calculation">200 × 2500 = 500,000 سم² = 50 م²</div>
+                </div>
+
+                <div class="math-box">
+                    مساحة قاعدة المبنى = 50 م²
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-paint-brush"></i> مثال 13: طلاء جدار</h4>
+                <p><strong>المسألة:</strong> جدار مساحته 12 م² يحتاج إلى 3 لتر طلاء. إذا كُبّر الجدار بعامل قياس 2، فكم لتر طلاء يحتاج؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المساحة الجديدة</h4>
+                    <div class="calculation">k² = 2² = 4</div>
+                    <div class="calculation">المساحة الجديدة = 12 × 4 = 48 م²</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> كمية الطلاء</h4>
+                    <p>نسبة الطلاء: 3 لتر / 12 م² = 0.25 لتر/م²</p>
+                    <div class="calculation">الطلاء المطلوب = 48 × 0.25 = 12 لتر</div>
+                </div>
+
+                <div class="math-box">
+                    يحتاج إلى 12 لتر طلاء
+                </div>
+            </div>
+        </div>
+
+        <!-- ثامناً: مسائل مركبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-puzzle-piece"></i> ثامناً: مسائل مركبة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 14: إيجاد عامل القياس من المساحات</h4>
+                <p><strong>المسألة:</strong> مستطيلان متشابهان، مساحة الأول 20 سم² ومساحة الثاني 180 سم². ما عامل القياس؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نسبة المساحتين</h4>
+                    <div class="calculation">180 ÷ 20 = 9</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عامل القياس k</h4>
+                    <div class="calculation">k² = 9</div>
+                    <div class="calculation">k = √9 = 3</div>
+                </div>
+
+                <div class="math-box">
+                    عامل القياس = 3
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 15: مسألة عكسية</h4>
+                <p><strong>المسألة:</strong> صورة مساحتها 200 سم²، صُغّرت فأصبحت مساحتها 50 سم². ما عامل التصغير؟ وإذا كان طولها الأصلي 20 سم، فما طولها الجديد؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نسبة المساحتين</h4>
+                    <div class="calculation">50 ÷ 200 = 1/4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عامل القياس</h4>
+                    <div class="calculation">k² = 1/4</div>
+                    <div class="calculation">k = √(1/4) = 1/2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الطول الجديد</h4>
+                    <div class="calculation">20 × (1/2) = 10 سم</div>
+                </div>
+
+                <div class="math-box">
+                    عامل التصغير = 1/2، الطول الجديد = 10 سم
+                </div>
+            </div>
+        </div>
+
+        <!-- تاسعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> تاسعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن المساحة تتغير بنفس عامل الأطوال</h4>
+                <p>الأطوال تتغير بـ <strong>k</strong>، لكن المساحة تتغير بـ <strong>k²</strong>!</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>❌ خاطئ:</strong> إذا k=3، فالمساحة تتضاعف 3 مرات</p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> إذا k=3، فالمساحة تتضاعف 9 مرات (3²)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان أن الزوايا لا تتغير</h4>
+                <p>عند التكبير أو التصغير، <strong>الزوايا تبقى كما هي</strong>. فقط الأطوال تتغير.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الخلط بين k و k² عند الحساب العكسي</h4>
+                <p>إذا عُرفت نسبة المساحتين، عامل القياس = <strong>الجذر التربيعي</strong> للنسبة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> إذا كانت المساحة الجديدة 4 أضعاف القديمة، فإن k = 4 = <strong>2</strong> (وليس 4)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: عدم توحيد الوحدات</h4>
+                <p>تأكد أن جميع الأطوال بنفس الوحدة قبل الحساب، خاصة في مسائل الخرائط.</p>
+            </div>
+        </div>
+
+        <!-- عاشراً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>التكبير:</strong> k > 1 (الشكل يكبر).</li>
+                <li><strong>التصغير:</strong> 0 < k < 1 (الشكل يصغر).</li>
+                <li><strong>عامل القياس k:</strong> = الطول الجديد ÷ الطول الأصلي.</li>
+                <li><strong>تأثير k على الأطوال:</strong> الطول الجديد = الطول الأصلي × k.</li>
+                <li><strong>تأثير k على المحيط:</strong> المحيط الجديد = المحيط الأصلي × k.</li>
+                <li><strong>تأثير k على المساحة:</strong> المساحة الجديدة = المساحة الأصلية × k².</li>
+                <li><strong>الزوايا:</strong> لا تتغير عند التكبير أو التصغير.</li>
+                <li><strong>القاعدة الذهبية:</strong> الأطوال والمحيط بـ k، المساحة بـ k².</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "مستطيل طوله 8 سم، كُبّر بعامل قياس 3. ما طوله الجديد؟",
+                options: ["11 سم", "16 سم", "24 سم", "64 سم"],
+                correct: 2,
+                explanation: "الطول الجديد = 8 × 3 = 24 سم."
+            },
+            {
+                sentence: "مثلث مساحته 10 سم²، كُبّر بعامل قياس 4. ما مساحته الجديدة؟",
+                options: ["40 سم²", "80 سم²", "160 سم²", "160 سم²"],
+                correct: 2,
+                explanation: "المساحة الجديدة = 10 × 4² = 10 × 16 = 160 سم²."
+            },
+            {
+                sentence: "إذا كان عامل القياس k = 1/2، فهذا يعني:",
+                options: ["تكبير الضعف", "تصغير للنصف", "نفس الحجم", "تصغير للربع"],
+                correct: 1,
+                explanation: "k = 1/2 يعني تصغير (لأن k < 1)، والأطوال تصبح نصف الأصلية."
+            },
+            {
+                sentence: "مربع طول ضلعه 5 سم، كُبّر بعامل قياس 3. ما محيطه الجديد؟",
+                options: ["15 سم", "30 سم", "45 سم", "60 سم"],
+                correct: 3,
+                explanation: "المحيط الأصلي = 4×5 = 20 سم. المحيط الجديد = 20 × 3 = 60 سم."
+            },
+            {
+                sentence: "مساحة الشكل الجديد 9 أضعاف مساحة الشكل الأصلي. ما عامل القياس k؟",
+                options: ["3", "9", "81", "1/3"],
+                correct: 0,
+                explanation: "k² = 9، إذن k = √9 = 3."
+            },
+            {
+                sentence: "خريطة بنسبة 1:1000. مساحة حديقة على الخريطة 2 سم². ما مساحتها الحقيقية بالمتر المربع؟",
+                options: ["2000 م²", "20000 م²", "200 م²", "20 م²"],
+                correct: 2,
+                explanation: "k = 1000 للأطوال. k² = 1,000,000 للمساحة. المساحة الحقيقية = 2 × 1,000,000 = 2,000,000 سم² = 200 م²."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

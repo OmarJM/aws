@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الاسم المقصور والاسم المنقوص - تعريفهما وإعرابهما والفرق بينهما - مادة لغتي الخالدة">
+    <title>الاسم المقصور والاسم المنقوص | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .letter-display {
+            font-family: 'Amiri', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 25px;
+            background: var(--bg-color);
+            border-radius: 15px;
+            margin: 15px 0;
+            color: var(--subject-primary);
+            border: 2px dashed var(--subject-secondary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .column-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .column-card.maqsur { border-top: 4px solid #3498db; }
+        .column-card.manqus { border-top: 4px solid #e67e22; }
+        .column-card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column-card.maqsur h3 { color: #3498db; }
+        .column-card.manqus h3 { color: #e67e22; }
+        .column-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .column-card ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .column-card.maqsur ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            color: #3498db;
+        }
+        .column-card.manqus ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            color: #e67e22;
+        }
+
+        .grammar-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .grammar-box h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .grammar-box .sentence {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            font-family: 'Amiri', serif;
+        }
+        .grammar-box .analysis {
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        .grammar-box .analysis strong {
+            color: var(--subject-primary);
+        }
+
+        .word-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0 3px;
+            font-family: 'Amiri', serif;
+        }
+        .tag-maqsur { background: #3498db; color: white; }
+        .tag-manqus { background: #e67e22; color: white; }
+        .tag-raf { background: #27ae60; color: white; }
+        .tag-nasb { background: #e74c3c; color: white; }
+        .tag-jarr { background: #9b59b6; color: white; }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .sentence {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            font-family: 'Amiri', serif;
+        }
+        .example-card .answer {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong { color: var(--subject-primary); }
+
+        .comparison-table {
+            margin: 25px 0;
+        }
+        .comparison-table th:first-child {
+            background: var(--subject-accent);
+        }
+        .comparison-table .maqsur-col {
+            background: rgba(52, 152, 219, 0.1);
+        }
+        .comparison-table .manqus-col {
+            background: rgba(230, 126, 34, 0.1);
+        }
+
+        /* نشاط تفاعلي */
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(21, 152, 149, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Amiri', serif;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            font-family: 'Amiri', serif;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+            .letter-display { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-pen-nib"></i> الاسم المقصور والاسم المنقوص</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: الاسم المقصور -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: الاسم المقصور</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> الاسم المقصور هو: كل اسم معرب ينتهي بألف لازمة زائدة، ويكون حرفها الذي قبلها مفتوحاً.
+            </div>
+
+            <div class="letter-display">
+                <span class="word-tag tag-maqsur">فَتَى</span>
+                <span class="word-tag tag-maqsur">هُدَى</span>
+                <span class="word-tag tag-maqsur">مُوسَى</span>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📌 أنواع ألف الاسم المقصور:</h3>
+            
+            <div class="two-columns">
+                <div class="column-card maqsur">
+                    <h3><i class="fas fa-check-circle"></i> 1. ألف ممدودة (ا)</h3>
+                    <p style="margin-bottom: 15px;">تُكتب ألفاً قائمة في آخر الكلمة.</p>
+                    <ul>
+                        <li>عَصَا</li>
+                        <li>فَتَى</li>
+                        <li>هُدَى</li>
+                        <li>مُصْطَفَى</li>
+                    </ul>
+                </div>
+                <div class="column-card maqsur">
+                    <h3><i class="fas fa-check-circle"></i> 2. ألف مقصورة (ى)</h3>
+                    <p style="margin-bottom: 15px;">تُكتب على هيئة ياء غير منقوطة.</p>
+                    <ul>
+                        <li>مَسْعَى</li>
+                        <li>مَرْضَى</li>
+                        <li>مُدَّعَى</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> كيف نعرف أصل الألف (واو) أم (ياء)؟</h4>
+                <p>نرد الاسم إلى مصدره أو فعله:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>عَصَا</strong> ← <strong>عَصَوَ</strong> (الأصل واو)</li>
+                    <li><strong>هُدَى</strong> ← <strong>هَدَى</strong> (الأصل ياء)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: إعراب الاسم المقصور -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-signature"></i> ثانياً: إعراب الاسم المقصور</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الذهبية:</strong> يُعرب الاسم المقصور بحركات مقدرة منع من ظهورها التعذر، في جميع حالاته (رفعاً، ونصباً، وجراً).
+            </div>
+
+            <div class="grammar-box">
+                <h4><i class="fas fa-arrow-up" style="color: #27ae60;"></i> حالة الرفع:</h4>
+                <div class="sentence">جاءَ <span class="word-tag tag-maqsur">الفَتَى</span> المُجْتَهِدُ.</div>
+                <div class="analysis">
+                    <strong>الفَتَى:</strong> فاعل مرفوع، وعلامة رفعه <strong>الضمة المقدرة</strong> على الألف منع من ظهورها التعذر.
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <h4><i class="fas fa-arrow-down" style="color: #e74c3c;"></i> حالة النصب:</h4>
+                <div class="sentence">رأيتُ <span class="word-tag tag-maqsur">الفَتَى</span> المُجْتَهِدَ.</div>
+                <div class="analysis">
+                    <strong>الفَتَى:</strong> مفعول به منصوب، وعلامة نصبه <strong>الفتحة المقدرة</strong> على الألف منع من ظهورها التعذر.
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <h4><i class="fas fa-minus" style="color: #9b59b6;"></i> حالة الجر:</h4>
+                <div class="sentence">سلَّمتُ على <span class="word-tag tag-maqsur">الفَتَى</span> المُجْتَهِدِ.</div>
+                <div class="analysis">
+                    <strong>الفَتَى:</strong> اسم مجرور، وعلامة جره <strong>الكسرة المقدرة</strong> على الألف منع من ظهورها التعذر.
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا "التعذر"؟</h4>
+                <p>لأن الألف في الاسم المقصور <strong>حرف علة</strong>، ولا يمكن أن تقبل الحركات (الضمة، الفتحة، الكسرة) بشكل مباشر، فنُقدِّر الحركات عليها.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الاسم المنقوص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> ثالثاً: الاسم المنقوص</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> الاسم المنقوص هو: كل اسم معرب ينتهي بياء لازمة زائدة، ويكون حرفها الذي قبلها مكسوراً.
+            </div>
+
+            <div class="letter-display">
+                <span class="word-tag tag-manqus">القَاضِي</span>
+                <span class="word-tag tag-manqus">المُحَامِي</span>
+                <span class="word-tag tag-manqus">الدَّاعِي</span>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 أمثلة على الاسم المنقوص:</h3>
+            <ul style="padding-right: 20px; font-size: 1.1rem; line-height: 2;">
+                <li><strong>القَاضِي</strong> - <strong>المُحَامِي</strong> - <strong>الدَّاعِي</strong> - <strong>الرَّامِي</strong></li>
+                <li><strong>المُهْتَدِي</strong> - <strong>المُصَلِّي</strong> - <strong>السَّاعِي</strong></li>
+            </ul>
+        </div>
+
+        <!-- رابعاً: إعراب الاسم المنقوص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-signature"></i> رابعاً: إعراب الاسم المنقوص</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الدقيقة:</strong> يختلف إعراب الاسم المنقوص حسب موقعه (المعرفة أو النكرة) وحسب حركته.
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">الحالة الإعرابية</th>
+                            <th style="width: 40%;">إذا كان <strong>معرفة</strong> (بـ "ال")</th>
+                            <th style="width: 40%;">إذا كان <strong>نكرة</strong> (بدون "ال")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الرفع</strong></td>
+                            <td>تُحذف الياء، وتُقدَّر الضمة.<br><small>مثال: جاءَ <strong>القاضي</strong> ➔ جاءَ القاضِ</small></td>
+                            <td>تُحذف الياء، وتُقدَّر الضمة.<br><small>مثال: جاءَ <strong>قاضٍ</strong></small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>النصب</strong></td>
+                            <td>تظهر الياء، وتُقدَّر الفتحة.<br><small>مثال: رأيتُ <strong>القاضيَ</strong></small></td>
+                            <td>تظهر الياء، وتُقدَّر الفتحة.<br><small>مثال: رأيتُ <strong>قاضيًا</strong></small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>الجر</strong></td>
+                            <td>تظهر الياء، وتُقدَّر الكسرة.<br><small>مثال: سلَّمتُ على <strong>القاضيِ</strong></small></td>
+                            <td>تظهر الياء، وتُقدَّر الكسرة.<br><small>مثال: سلَّمتُ على <strong>قاضٍ</strong></small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه هام جداً:</h4>
+                <p>لا تُحذف ياء الاسم المنقوص في حالة <strong>النصب</strong> إلا إذا كانت <strong>مفتوحة وتُرى</strong> (أي في النكرة المنصوبة).</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال صحيح:</strong> "رأيتُ <span style="color: var(--success-color); font-weight: 700;">قاضيًا</span>" ✅ (ياء منقوصة مفتوحة تُرى)</p>
+                    <p><strong>مثال خاطئ:</strong> "رأيتُ <span style="color: var(--error-color); font-weight: 700;">قاضٍ</span>" ❌ (لا تحذف الياء في المعرفة المنصوبة)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: جدول مقارنة شامل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> خامساً: الفرق بين الاسم المقصور والمنقوص</h2>
+            
+            <p style="margin-bottom: 20px;">هذا الجدول يُعد "خريطة كنز" للتمييز بين النوعين في أي جملة:</p>
+
+            <div class="table-responsive comparison-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">وجه المقارنة</th>
+                            <th style="width: 37.5%; background: #3498db;">الاسم المقصور</th>
+                            <th style="width: 37.5%; background: #e67e22;">الاسم المنقوص</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الحرف الأخير</strong></td>
+                            <td class="maqsur-col">ينتهي بألف (ا) أو (ى)</td>
+                            <td class="manqus-col">ينتهي بياء (ي)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الحركة</strong></td>
+                            <td class="maqsur-col">مفتوحة (مُصْطَفَى)</td>
+                            <td class="manqus-col">مكسورة (القَاضِي)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مثال</strong></td>
+                            <td class="maqsur-col" style="font-family: 'Amiri', serif; font-size: 1.2rem;">هُدَى - فَتَى - مُوسَى</td>
+                            <td class="manqus-col" style="font-family: 'Amiri', serif; font-size: 1.2rem;">القَاضِي - المُحَامِي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الحركة الإعرابية الأصلية</strong></td>
+                            <td class="maqsur-col">مقدرة دائماً (التعذر)</td>
+                            <td class="manqus-col">مقدرة في الرفع والجر، ظاهرة في النصب</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> سادساً: تطبيقات عملية محلولة</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 20px;">📝 التطبيق 1: صنّف الكلمات الآتية إلى (مقصور / منقوص)</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> الكلمات:</h4>
+                <div class="sentence" style="font-size: 1.3rem; letter-spacing: 3px;">
+                    مُشْتَرِي - عَدُوّ - فَتَى - دَاعِي - طَغَى - مُهْتَدِي
+                </div>
+                <div class="answer">
+                    <strong>الحل:</strong><br>
+                    • <span class="word-tag tag-maqsur">مقصور</span>: فَتَى (ينتهي بألف مقصورة) - طَغَى (ينتهي بألف ممدودة)<br>
+                    • <span class="word-tag tag-manqus">منقوص</span>: مُشْتَرِي - عَدُوّ - دَاعِي - مُهْتَدِي (جميعها تنتهي بياء)
+                </div>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 20px;">🔍 التطبيق 2: أعرب ما تحته خط</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> الجملة 1:</h4>
+                <div class="sentence">رأيتُ <u>القَاضِيَ</u> العادِلَ.</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong> القَاضِيَ: مفعول به منصوب، وعلامة نصبه <strong>الفتحة الظاهرة</strong> (لأنه اسم منقوص معرفة في حالة النصب).
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> الجملة 2:</h4>
+                <div class="sentence">مررتُ بـ<u>قاضٍ</u> عادلٍ.</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong> قاضٍ: اسم مجرور، وعلامة جره <strong>الكسرة المقدرة</strong> على الياء منع من ظهورها الثقل (لأنه اسم منقوص نكرة في حالة الجر).
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> الجملة 3:</h4>
+                <div class="sentence">جاءَ <u>الفَتَى</u> المُجْتَهِدُ.</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong> الفَتَى: فاعل مرفوع، وعلامة رفعه <strong>الضمة المقدرة</strong> على الألف منع من ظهورها التعذر (لأنه اسم مقصور).
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات حول أخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات حول أخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 1: الخلط بين المقصور والمنقوص</h4>
+                <p>تذكر دائماً:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>المقصور:</strong> ينتهي بألف (ممدودة أو مقصورة) + ما قبلها مفتوح.</li>
+                    <li><strong>المنقوص:</strong> ينتهي بياء + ما قبلها مكسور.</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 2: حذف ياء المنقوص في النصب</h4>
+                <p>يُحذف ياء الاسم المنقوص في حالة <strong>النصب</strong> فقط إذا كان <strong>نكرة</strong> وتُرى الياء مفتوحة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال صحيح:</strong> "رأيتُ <span style="color: var(--success-color); font-weight: 700;">قاضيًا</span>" ✅ (نكرة منصوبة + ياء مفتوحة تُرى)</p>
+                    <p><strong>مثال خاطئ:</strong> "رأيتُ <span style="color: var(--error-color); font-weight: 700;">القاضي</span> بدون ياء" ❌ (معرفة لا تحذف ياؤها في النصب)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 3: نسيان أن المقصور تُقدَّر حركاته دائماً</h4>
+                <p>الاسم المقصور لا تظهر عليه الحركات أبداً (لأن الألف لا تقبل الحركات)، بل تُقدَّر دائماً.</p>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> صنّف الاسم: مقصور أم منقوص؟</h3>
+                
+                <div id="quizContainer">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة النشاط
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الاسم المقصور:</strong> اسم معرب ينتهي بألف لازمة (ممدودة أو مقصورة)، وحرفها الذي قبلها مفتوح.</li>
+                <li><strong>إعراب المقصور:</strong> تُقدَّر عليه الحركات دائماً (الضمة، الفتحة، الكسرة) منع من ظهورها التعذر.</li>
+                <li><strong>الاسم المنقوص:</strong> اسم معرب ينتهي بياء لازمة، وحرفها الذي قبلها مكسور.</li>
+                <li><strong>إعراب المنقوص:</strong>
+                    <ul style="padding-right: 20px; margin-top: 5px;">
+                        <li>في الرفع: تُحذف الياء وتُقدَّر الضمة.</li>
+                        <li>في النصب (نكرة): تظهر الياء وتُقدَّر الفتحة.</li>
+                        <li>في الجر: تظهر الياء وتُقدَّر الكسرة.</li>
+                    </ul>
+                </li>
+                <li><strong>القاعدة الذهبية:</strong> انظر إلى الحرف الأخير وحركة ما قبله للتمييز بين النوعين.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <!-- سكربت النشاط التفاعلي -->
+    <script>
+        // بيانات الأسئلة
+        const quizQuestions = [
+            {
+                sentence: "صنّف الاسم: 'فَتَى'",
+                options: ["اسم مقصور", "اسم منقوص"],
+                correct: 0,
+                explanation: "'فَتَى' اسم مقصور لأنه ينتهي بألف مقصورة (ى)، وحرفها الذي قبلها مفتوح."
+            },
+            {
+                sentence: "صنّف الاسم: 'القَاضِي'",
+                options: ["اسم مقصور", "اسم منقوص"],
+                correct: 1,
+                explanation: "'القَاضِي' اسم منقوص لأنه ينتهي بياء لازمة، وحرفها الذي قبلها مكسور."
+            },
+            {
+                sentence: "صنّف الاسم: 'مُوسَى'",
+                options: ["اسم مقصور", "اسم منقوص"],
+                correct: 0,
+                explanation: "'مُوسَى' اسم مقصور لأنه ينتهي بألف ممدودة (ا)، وحرفها الذي قبلها مفتوح."
+            },
+            {
+                sentence: "صنّف الاسم: 'الدَّاعِي'",
+                options: ["اسم مقصور", "اسم منقوص"],
+                correct: 1,
+                explanation: "'الدَّاعِي' اسم منقوص لأنه ينتهي بياء لازمة، وحرفها الذي قبلها مكسور."
+            },
+            {
+                sentence: "ما إعراب 'الفَتَى' في جملة: 'جاءَ الفَتَى'؟",
+                options: ["فاعل مرفوع بالضمة الظاهرة", "فاعل مرفوع بالضمة المقدرة", "مفعول به منصوب"],
+                correct: 1,
+                explanation: "'الفَتَى' فاعل مرفوع وعلامة رفعه الضمة المقدرة على الألف منع من ظهورها التعذر، لأنه اسم مقصور."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            
+            let html = `
+                <div class="quiz-question">
+                    ${question.sentence}
+                </div>
+                <div class="quiz-options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${index})">${option}</div>`;
+            });
+            
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (answered[currentQuestion]) return;
+            
+            const question = quizQuestions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            answered[currentQuestion] = true;
+            
+            if (selectedIndex === question.correct) {
+                options[selectedIndex].classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${question.explanation}`;
+                score++;
+            } else {
+                options[selectedIndex].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${question.explanation}`;
+            }
+            
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            
+            const finalScore = document.getElementById('finalScore');
+            finalScore.style.display = 'block';
+            
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${percentage}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            
+            loadQuestion();
+        }
+
+        // تحميل السؤال الأول عند بدء الصفحة
+        loadQuestion();
+    </script>
+</body>
+</html>

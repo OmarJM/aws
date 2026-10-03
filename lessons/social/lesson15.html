@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الغلاف الحيوي - مفهومه ومكوناته وتفاعله مع الغلافات الأخرى - مادة الدراسات الاجتماعية">
+    <title>الغلاف الحيوي | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        :root{--bio-green:#2e7d32;--bio-dark:#1b5e20;--bio-light:#a5d6a7;--bio-blue:#1976d2;--bio-brown:#6d4c41;--bio-orange:#f57c00;--bio-yellow:#fbc02d;--bio-red:#c62828}
+        .lesson-hero{background:linear-gradient(135deg,#2e7d32,#1b5e20);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#2e7d32;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #1b5e20;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(46,125,50,.08);border-right:4px solid #2e7d32;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#1b5e20}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #fbc02d;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #2e7d32;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#1b5e20}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #2e7d32;margin:15px 0}
+        .step-box h4{color:#2e7d32;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#2e7d32;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .step-box .calculation{font-family:'Fira Code',monospace;background:var(--card-bg);padding:10px 15px;border-radius:8px;margin:10px 0;direction:ltr;text-align:center;font-size:1.1rem;font-weight:600;color:#2e7d32}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#2e7d32;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .custom-table tr:hover{background-color:rgba(46,125,50,.05)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #fbc02d;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .golden-tip{background:linear-gradient(135deg,#3d3200,#4a3d00)}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .warning-box{background:linear-gradient(135deg,#3d1015,#4a1520)}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#2e7d32;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #1b5e20;margin-bottom:15px}
+        .example-card h4{color:#2e7d32;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #2e7d32;font-weight:600;color:#1b5e20;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #1b5e20;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#2e7d32;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#2e7d32}
+        .interactive-activity{background:linear-gradient(135deg,rgba(46,125,50,.05),rgba(27,94,32,.05));border:2px dashed #2e7d32;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#2e7d32;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#2e7d32;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#2e7d32;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #2e7d32}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#2e7d32;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#2e7d32;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #2e7d32;color:#2e7d32}
+        .bio-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;transition:transform .3s}
+        .bio-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .bio-card h4{margin-bottom:10px;font-family:'Amiri',serif}
+        .bio-card .icon{font-size:2.5rem;margin-bottom:10px}
+        .bio-card.plants{border-top:5px solid #2e7d32}
+        .bio-card.plants h4,.bio-card.plants .icon{color:#2e7d32}
+        .bio-card.animals{border-top:5px solid #1976d2}
+        .bio-card.animals h4,.bio-card.animals .icon{color:#1976d2}
+        .bio-card.micro{border-top:5px solid #f57c00}
+        .bio-card.micro h4,.bio-card.micro .icon{color:#f57c00}
+        .bio-card.humans{border-top:5px solid #c62828}
+        .bio-card.humans h4,.bio-card.humans .icon{color:#c62828}
+        .sphere-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;border-top:5px solid #2e7d32}
+        .sphere-card h4{margin-bottom:10px;font-family:'Amiri',serif;color:#2e7d32}
+        .sphere-card .icon{font-size:2.5rem;margin-bottom:10px;color:#2e7d32}
+        .sphere-card.litho{border-top-color:#6d4c41}
+        .sphere-card.litho h4,.sphere-card.litho .icon{color:#6d4c41}
+        .sphere-card.atmo{border-top-color:#1976d2}
+        .sphere-card.atmo h4,.sphere-card.atmo .icon{color:#1976d2}
+        .sphere-card.hydro{border-top-color:#0277bd}
+        .sphere-card.hydro h4,.sphere-card.hydro .icon{color:#0277bd}
+        .sphere-card.bio{border-top-color:#2e7d32}
+        .sphere-card.bio h4,.sphere-card.bio .icon{color:#2e7d32}
+        .ecosystem-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #1b5e20}
+        .ecosystem-card h4{margin-bottom:10px;color:#1b5e20;font-family:'Amiri',serif}
+        .ecosystem-card .icon{font-size:2rem;margin-bottom:10px;color:#1b5e20}
+        .earth-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .earth-visual svg{max-width:100%;height:auto}
+        .lesson-intro{background:linear-gradient(135deg,rgba(46,125,50,.05),rgba(27,94,32,.05));border:2px solid #2e7d32;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#2e7d32;font-family:'Amiri',serif;margin-bottom:15px}
+        .bismillah{text-align:center;font-family:'Amiri',serif;font-size:2rem;color:#2e7d32;margin:20px 0}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-leaf"></i> الغلاف الحيوي</h1>
+            <p>مفهوم الغلاف الحيوي، مكوناته، وتفاعله مع الغلافات الأخرى</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ما هو الغلاف الحيوي؟ ولماذا يُعدّ فريداً بين أغلفة الأرض؟</strong>
+                <p style="margin-top:10px">الغلاف الحيوي (Biosphere) هو <strong>الطبقة الرقيقة من الأرض</strong> التي توجد فيها الحياة، ويمتد من أعماق المحيطات إلى قمم الجبال العالية. وهو <strong>يتفاعل مع الغلافات الأخرى</strong> (الصخري، الجوي، المائي) في نظام متكامل. في هذا الدرس، سنتعرف على <strong>مفهوم الغلاف الحيوي</strong>، و<strong>مكوناته</strong>، و<strong>تفاعله مع الغلافات الأخرى</strong>.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-globe"></i> عن الغلاف الحيوي</h3>
+                <p><strong>التعريف:</strong> جزء من الأرض توجد فيه الحياة</p>
+                <p><strong>الامتداد:</strong> من أعماق المحيطات إلى قمم الجبال</p>
+                <p><strong>المكونات:</strong> النباتات، الحيوانات، الكائنات الدقيقة، الإنسان</p>
+                <p><strong>التفاعل:</strong> مع الغلاف الصخري والجوي والمائي</p>
+            </div>
+
+            <div class="earth-visual">
+                <h4 style="color:#2e7d32;margin-bottom:15px"><i class="fas fa-globe-americas"></i> الغلاف الحيوي والغلافات الأخرى</h4>
+                <svg width="600" height="350" viewBox="0 0 600 350">
+                    <!-- الأرض -->
+                    <circle cx="300" cy="175" r="120" fill="#6d4c41" stroke="#4e342e" stroke-width="3"/>
+                    
+                    <!-- المحيطات -->
+                    <path d="M 200 175 Q 250 150 300 175 Q 350 200 400 175" fill="none" stroke="#0277bd" stroke-width="3"/>
+                    <text x="300" y="200" font-family="Tajawal" font-size="11" fill="#0277bd" text-anchor="middle" font-weight="700">المحيطات (الغلاف المائي)</text>
+                    
+                    <!-- اليابسة -->
+                    <path d="M 220 150 Q 250 130 280 150 Q 300 170 320 150 Q 350 130 380 150" fill="#a1887f" stroke="#6d4c41" stroke-width="2"/>
+                    <text x="300" y="140" font-family="Tajawal" font-size="11" fill="#6d4c41" text-anchor="middle" font-weight="700">اليابسة (الغلاف الصخري)</text>
+                    
+                    <!-- الغلاف الجوي -->
+                    <circle cx="300" cy="175" r="150" fill="none" stroke="#1976d2" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="300" y="50" font-family="Tajawal" font-size="11" fill="#1976d2" text-anchor="middle" font-weight="700">الغلاف الجوي</text>
+                    
+                    <!-- الغلاف الحيوي -->
+                    <circle cx="300" cy="175" r="135" fill="none" stroke="#2e7d32" stroke-width="3"/>
+                    <text x="300" y="320" font-family="Tajawal" font-size="13" fill="#2e7d32" text-anchor="middle" font-weight="700">الغلاف الحيوي (يغطي كل شيء)</text>
+                    
+                    <!-- أيقونات الحياة -->
+                    <text x="250" y="160" font-size="20">🌳</text>
+                    <text x="350" y="160" font-size="20">🐦</text>
+                    <text x="300" y="230" font-size="20">🐟</text>
+                    <text x="220" y="200" font-size="20">🌿</text>
+                    <text x="380" y="200" font-size="20">🦋</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: مفهوم الغلاف الحيوي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: مفهوم الغلاف الحيوي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الغلاف الحيوي (Biosphere):</strong> الجزء من الأرض الذي توجد فيه الحياة، ويمتد من أعماق المحيطات إلى ارتفاعات عالية في الغلاف الجوي.
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ وَمَا مِن دَابَّةٍ فِي الْأَرْضِ وَلَا طَائِرٍ يَطِيرُ بِجَنَاحَيْهِ إِلَّا أُمَمٌ أَمْثَالُكُم ۚ ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة الأنعام: 38]</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #2e7d32">
+                    <h3 style="color:#2e7d32"><i class="fas fa-leaf"></i> التعريف العلمي</h3>
+                    <p><strong>الغلاف الحيوي:</strong> النظام البيئي العالمي الذي يضم جميع الكائنات الحية وتفاعلاتها مع البيئة المحيطة.</p>
+                    <p style="margin-top:10px"><strong>الامتداد:</strong></p>
+                    <ul style="padding-right:20px;margin-top:5px;line-height:2">
+                        <li><strong>أعلى نقطة:</strong> حوالي 10 كم فوق سطح البحر</li>
+                        <li><strong>أعمق نقطة:</strong> حوالي 11 كم تحت سطح البحر (خندق ماريانا)</li>
+                        <li><strong>السمك الكلي:</strong> حوالي 20-22 كم</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #1976d2">
+                    <h3 style="color:#1976d2"><i class="fas fa-globe"></i> الخصائص</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>ديناميكي:</strong> يتغير باستمرار</li>
+                        <li><strong>متكامل:</strong> يتفاعل مع الغلافات الأخرى</li>
+                        <li><strong>هش:</strong> حساس للتغيرات</li>
+                        <li><strong>متنوع:</strong> يضم ملايين الأنواع</li>
+                        <li><strong>مترابط:</strong> كل كائن يعتمد على غيره</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family:'Amiri',serif;font-size:1.3rem">
+                الغلاف الحيوي = الكائنات الحية + بيئتها + التفاعلات بينها
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على امتداد الغلاف الحيوي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> في الغلاف الجوي</h4>
+                    <p>الطيور الطائرة (حتى 8 كم)، البكتيريا العالقة (حتى 10 كم)، الحشرات الطائرة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> على سطح الأرض</h4>
+                    <p>الغابات، الصحاري، المروج، المدن، المزارع - كل مكان توجد فيه حياة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> في الغلاف المائي</h4>
+                    <p>الأسماك، الشعاب المرجانية، العوالق، الثدييات البحرية - من السطح إلى الأعماق.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> في الغلاف الصخري</h4>
+                    <p>الكهوف، التربة، أعماق الأرض (بكتيريا تعيش على أعماق عدة كيلومترات).</p>
+                </div>
+
+                <div class="solution">✅ الغلاف الحيوي يغطي كل مكان توجد فيه الحياة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا الغلاف الحيوي فريد؟</h4>
+                <p>الأرض هي <strong>الكوكب الوحيد المعروف</strong> في الكون الذي يحتوي على غلاف حيوي نشط. الكواكب الأخرى (مثل المريخ والزهرة) لا توجد فيها حياة معروفة حتى الآن.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: مكونات الغلاف الحيوي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> ثانياً: مكونات الغلاف الحيوي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>المكونات:</strong> يضم الغلاف الحيوي ملايين الأنواع من الكائنات الحية، تُصنف إلى أربع مجموعات رئيسية.
+            </div>
+
+            <div class="four-columns">
+                <div class="bio-card plants">
+                    <div class="icon"><i class="fas fa-tree"></i></div>
+                    <h4>1. النباتات</h4>
+                    <p>المنتِجات</p>
+                    <p style="margin-top:10px;font-size:.9rem">تصنع غذاءها بالبناء الضوئي</p>
+                </div>
+                <div class="bio-card animals">
+                    <div class="icon"><i class="fas fa-paw"></i></div>
+                    <h4>2. الحيوانات</h4>
+                    <p>المستهلكات</p>
+                    <p style="margin-top:10px;font-size:.9rem">تتغذى على النباتات أو غيرها</p>
+                </div>
+                <div class="bio-card micro">
+                    <div class="icon"><i class="fas fa-bacteria"></i></div>
+                    <h4>3. الكائنات الدقيقة</h4>
+                    <p>المحللات</p>
+                    <p style="margin-top:10px;font-size:.9rem">بكتيريا، فطريات، طحالب</p>
+                </div>
+                <div class="bio-card humans">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h4>4. الإنسان</h4>
+                    <p>الكائن العاقل</p>
+                    <p style="margin-top:10px;font-size:.9rem">يؤثر في الغلاف الحيوي بشكل كبير</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل المكونات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> النباتات (Producers)</h4>
+                    <p><strong>الدور:</strong> تحويل الطاقة الشمسية إلى غذاء عبر البناء الضوئي.</p>
+                    <p><strong>الأنواع:</strong> الأشجار، الشجيرات، الأعشاب، الطحالب.</p>
+                    <p><strong>الأهمية:</strong> أساس السلسلة الغذائية، إنتاج الأكسجين، تثبيت التربة.</p>
+                    <p><strong>أمثلة من المملكة:</strong> نخيل التمر، أشجار السدر، نباتات العرعر في السروات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الحيوانات (Consumers)</h4>
+                    <p><strong>الدور:</strong> استهلاك النباتات أو الحيوانات الأخرى.</p>
+                    <p><strong>الأنواع:</strong></p>
+                    <ul style="padding-right:20px;margin-top:5px;line-height:2">
+                        <li><strong>آكلات العشب:</strong> الإبل، الغنم، الأرانب</li>
+                        <li><strong>آكلات اللحم:</strong> الأسود، الذئاب، الصقور</li>
+                        <li><strong>آكلات كل شيء:</strong> البشر، الدببة، الخنازير</li>
+                    </ul>
+                    <p><strong>أمثلة من المملكة:</strong> المها العربي، الوعل، النمر العربي، الصقور.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الكائنات الدقيقة (Decomposers)</h4>
+                    <p><strong>الدور:</strong> تحليل المواد العضوية وإعادة العناصر للتربة.</p>
+                    <p><strong>الأنواع:</strong> البكتيريا، الفطريات، الأوليات، الفيروسات.</p>
+                    <p><strong>الأهمية:</strong> تدوير العناصر، تحليل النفايات، تثبيت النيتروجين.</p>
+                    <p><strong>أمثلة:</strong> بكتيريا التربة، فطر عيش الغراب، الطحالب الدقيقة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الإنسان (Humans)</h4>
+                    <p><strong>الدور:</strong> كائن عاقل يُعدل البيئة بشكل كبير.</p>
+                    <p><strong>التأثير الإيجابي:</strong> الزراعة، حماية البيئة، البحث العلمي.</p>
+                    <p><strong>التأثير السلبي:</strong> التلوث، إزالة الغابات، الصيد الجائر.</p>
+                    <p><strong>المسؤولية:</strong> الحفاظ على التوازن البيئي للأجيال القادمة.</p>
+                </div>
+
+                <div class="solution">✅ كل مكون له دور حيوي في استمرارية الغلاف الحيوي</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> التنوع البيولوجي في المملكة العربية السعودية</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> النباتات</h4>
+                    <p>أكثر من <strong>2250 نوعاً</strong> من النباتات، منها: الطلح، السمر، الأرطى، العرفج، أشجار المانجروف في السواحل.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الحيوانات البرية</h4>
+                    <p>أكثر من <strong>70 نوعاً</strong> من الثدييات، منها: الريم، الغزلان، الضباع، الثعالب، القوارض.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الطيور</h4>
+                    <p>أكثر من <strong>450 نوعاً</strong>، منها: الصقور، النعام، الحبارى، طيور Migratory على مسارات الهجرة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الحياة البحرية</h4>
+                    <p>في البحر الأحمر: <strong>أكثر من 1000 نوع</strong> من الأسماك، والشعاب المرجانية الغنية.</p>
+                </div>
+
+                <div class="solution">✅ المملكة غنية بالتنوع البيولوجي رغم مناخها الصحراوي</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> السلسلة الغذائية:</h4>
+                <p>الكائنات الحية مرتبطة في <strong>سلاسل غذائية</strong>:</p>
+                <div class="calculation">الشمس ➔ النباتات ➔ آكلات العشب ➔ آكلات اللحم ➔ المحللات</div>
+                <p style="margin-top:10px">كل كائن يعتمد على الذي قبله، وإذا اختل أحدها، اختل النظام كله.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: النظم البيئية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tree"></i> ثالثاً: النظم البيئية (Ecosystems)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>النظام البيئي:</strong> مجتمع من الكائنات الحية تتفاعل مع بعضها ومع البيئة المحيطة.
+            </div>
+
+            <div class="three-columns">
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-tree"></i></div>
+                    <h4>الغابات</h4>
+                    <p>نظم غنية بالأنواع</p>
+                    <p style="margin-top:10px;font-size:.9rem">أمطار غزيرة، تنوع عالي</p>
+                </div>
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-sun"></i></div>
+                    <h4>الصحاري</h4>
+                    <p>نظم متكيفة مع الجفاف</p>
+                    <p style="margin-top:10px;font-size:.9rem">أمطار قليلة، حياة متخصصة</p>
+                </div>
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>المحيطات</h4>
+                    <p>أكبر النظم البيئية</p>
+                    <p style="margin-top:10px;font-size:.9rem">تغطي 71% من الأرض</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top:15px">
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>الجبال</h4>
+                    <p>نظم متدرجة</p>
+                    <p style="margin-top:10px;font-size:.9rem">تتنوع مع الارتفاع</p>
+                </div>
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-seedling"></i></div>
+                    <h4>المراعي</h4>
+                    <p>نظم عشبية</p>
+                    <p style="margin-top:10px;font-size:.9rem">مصدر للغذاء والرعشة</p>
+                </div>
+                <div class="ecosystem-card">
+                    <div class="icon"><i class="fas fa-fish"></i></div>
+                    <h4>المياه العذبة</h4>
+                    <p>أنهار وبحيرات</p>
+                    <p style="margin-top:10px;font-size:.9rem">نظم مائية داخلية</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مكونات النظام البيئي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> العوامل اللاحيوية (Abiotic)</h4>
+                    <p>العناصر غير الحية: الشمس، الماء، الهواء، التربة، المعادن، درجة الحرارة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> العوامل الحيوية (Biotic)</h4>
+                    <p>جميع الكائنات الحية: نباتات، حيوانات، كائنات دقيقة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> التفاعلات</h4>
+                    <p>العلاقات بين الكائنات: افتراس، تطفل، تبادل منفعة، تنافس.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> دورة المواد</h4>
+                    <p>دورة الماء، دورة الكربون، دورة النيتروجين - كلها تربط المكونات.</p>
+                </div>
+
+                <div class="solution">✅ النظام البيئي وحدة متكاملة من الكائنات والبيئة</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>النظام البيئي</th>
+                            <th>الموقع</th>
+                            <th>المناخ</th>
+                            <th>النباتات</th>
+                            <th>الحيوانات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الغابات الاستوائية</strong></td>
+                            <td>خط الاستواء</td>
+                            <td>حار رطب</td>
+                            <td>أشجار كثيفة</td>
+                            <td>تنوع عالي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الصحاري</strong></td>
+                            <td>15°-35°</td>
+                            <td>حار جاف</td>
+                            <td>نباتات شوكية</td>
+                            <td>حيوانات متكيفة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>المحيطات</strong></td>
+                            <td>71% من الأرض</td>
+                            <td>متنوع</td>
+                            <td>طحالب، عوالق</td>
+                            <td>أسماك، ثدييات</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التندرا</strong></td>
+                            <td>القطب الشمالي</td>
+                            <td>بارد جداً</td>
+                            <td>طحالب، أشنة</td>
+                            <td>دب قطبي، رنة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- رابعاً: تفاعل الغلاف الحيوي مع الغلافات الأخرى -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync-alt"></i> رابعاً: تفاعل الغلاف الحيوي مع الغلافات الأخرى</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التفاعل:</strong> الغلاف الحيوي لا يعمل بمعزل عن غيره، بل يتفاعل باستمرار مع الغلاف الصخري والجوي والمائي.
+            </div>
+
+            <div class="four-columns">
+                <div class="sphere-card litho">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>الغلاف الصخري</h4>
+                    <p>اليابسة والتربة</p>
+                </div>
+                <div class="sphere-card atmo">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h4>الغلاف الجوي</h4>
+                    <p>الهواء والغازات</p>
+                </div>
+                <div class="sphere-card hydro">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>الغلاف المائي</h4>
+                    <p>المحيطات والأنهار</p>
+                </div>
+                <div class="sphere-card bio">
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
+                    <h4>الغلاف الحيوي</h4>
+                    <p>الكائنات الحية</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> التفاعل مع الغلاف الصخري</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> تكوين التربة</h4>
+                    <p>الكائنات الحية (جذور النباتات، ديدان الأرض، بكتيريا) تُفتت الصخور وتُكون التربة الخصبة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تدوير المعادن</h4>
+                    <p>النباتات تمتص المعادن من التربة، والحيوانات تأكل النباتات، والمحللات تعيد المعادن للتربة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تكوين الصخور الرسوبية</h4>
+                    <p>بقايا الكائنات الحية (أصداف، عظام) تتحول عبر ملايين السنين إلى صخور رسوبية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الوقود الأحفوري</h4>
+                    <p>بقايا النباتات والحيوانات القديمة تحولت إلى نفط وفحم وغاز طبيعي.</p>
+                </div>
+
+                <div class="solution">✅ الغلاف الحيوي يُشكل الغلاف الصخري ويُشكل به</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> التفاعل مع الغلاف الجوي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دورة الأكسجين وثاني أكسيد الكربون</h4>
+                    <p><strong>النباتات:</strong> تمتص CO₂ وتطلق O₂ (بناء ضوئي).</p>
+                    <p><strong>الحيوانات:</strong> تمتص O₂ وتطلق CO₂ (تنفس).</p>
+                    <p>هذه الدورة تحافظ على توازن الغازات في الجو.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> دورة النيتروجين</h4>
+                    <p>بكتيريا التربة تحول نيتروجين الهواء إلى مركبات يستفيد منها النبات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تنظيم المناخ</h4>
+                    <p>الغابات تمتص CO₂ (غاز دفيئة) فتُساعد في تنظيم حرارة الأرض.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> طبقة الأوزون</h4>
+                    <p>الكائنات الحية (خاصة البكتيريا الزرقاء) ساهمت تاريخياً في تكوين طبقة الأوزون التي تحمينا من الأشعة الضارة.</p>
+                </div>
+
+                <div class="solution">✅ الغلاف الحيوي والغلاف الجوي في توازن دقيق</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> التفاعل مع الغلاف المائي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دورة الماء</h4>
+                    <p>النباتات تمتص الماء من التربة وتطلقه في الجو (نتح). هذا يُساهم في دورة الماء العالمية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> النظم المائية</h4>
+                    <p>المحيطات والأنهار والبحيرات تضم نظماً بيئية كاملة (أسماك، طحالب، شعاب مرجانية).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تنقية الماء</h4>
+                    <p>الكائنات الدقيقة والنباتات المائية تُنقي الماء من الملوثات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تخزين الكربون</h4>
+                    <p>المحيطات تمتص كميات هائلة من CO₂ بمساعدة العوالق النباتية.</p>
+                </div>
+
+                <div class="solution">✅ الماء والحياة وجهان لعملة واحدة</div>
+            </div>
+
+            <div class="earth-visual">
+                <h4 style="color:#2e7d32;margin-bottom:15px"><i class="fas fa-sync-alt"></i> التفاعلات بين الغلافات</h4>
+                <svg width="700" height="300" viewBox="0 0 700 300">
+                    <!-- الغلاف الصخري -->
+                    <rect x="50" y="200" width="150" height="80" fill="#a1887f" stroke="#6d4c41" stroke-width="2" rx="10"/>
+                    <text x="125" y="245" font-family="Tajawal" font-size="13" fill="#4e342e" text-anchor="middle" font-weight="700">الغلاف الصخري</text>
+                    
+                    <!-- الغلاف الجوي -->
+                    <rect x="500" y="200" width="150" height="80" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="10"/>
+                    <text x="575" y="245" font-family="Tajawal" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">الغلاف الجوي</text>
+                    
+                    <!-- الغلاف المائي -->
+                    <rect x="50" y="20" width="150" height="80" fill="#b3e5fc" stroke="#0277bd" stroke-width="2" rx="10"/>
+                    <text x="125" y="65" font-family="Tajawal" font-size="13" fill="#01579b" text-anchor="middle" font-weight="700">الغلاف المائي</text>
+                    
+                    <!-- الغلاف الحيوي (في الوسط) -->
+                    <circle cx="350" cy="150" r="70" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3"/>
+                    <text x="350" y="145" font-family="Tajawal" font-size="14" fill="#1b5e20" text-anchor="middle" font-weight="700">الغلاف</text>
+                    <text x="350" y="165" font-family="Tajawal" font-size="14" fill="#1b5e20" text-anchor="middle" font-weight="700">الحيوي</text>
+                    
+                    <!-- الأسهم -->
+                    <line x1="200" y1="240" x2="280" y2="180" stroke="#6d4c41" stroke-width="2" marker-end="url(#arrow7)"/>
+                    <line x1="280" y1="180" x2="200" y2="240" stroke="#6d4c41" stroke-width="2" marker-end="url(#arrow7)"/>
+                    
+                    <line x1="500" y1="240" x2="420" y2="180" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow7)"/>
+                    <line x1="420" y1="180" x2="500" y2="240" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow7)"/>
+                    
+                    <line x1="200" y1="60" x2="280" y2="120" stroke="#0277bd" stroke-width="2" marker-end="url(#arrow7)"/>
+                    <line x1="280" y1="120" x2="200" y2="60" stroke="#0277bd" stroke-width="2" marker-end="url(#arrow7)"/>
+                    
+                    <line x1="420" y1="120" x2="500" y2="60" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow7)"/>
+                    <line x1="500" y1="60" x2="420" y2="120" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow7)"/>
+                    
+                    <defs>
+                        <marker id="arrow7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2e7d32"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الدورات البيوجيوكيميائية:</h4>
+                <p>التفاعل بين الغلافات يتم عبر <strong>دورات بيوجيوكيميائية</strong> (Biogeochemical Cycles):</p>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>دورة الماء:</strong> بين المحيطات والغلاف الجوي واليابسة</li>
+                    <li><strong>دورة الكربون:</strong> بين الكائنات الحية والغلاف الجوي والمحيطات</li>
+                    <li><strong>دورة النيتروجين:</strong> بين الغلاف الجوي والتربة والكائنات الحية</li>
+                    <li><strong>دورة الفوسفور:</strong> بين الصخور والتربة والكائنات الحية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: التوازن البيئي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> خامساً: التوازن البيئي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التوازن البيئي:</strong> حالة الاستقرار في النظام البيئي، حيث تتوازن أعداد الكائنات الحية ومواردها.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #2e7d32">
+                    <h3 style="color:#2e7d32"><i class="fas fa-check-circle"></i> عوامل التوازن</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>السلاسل الغذائية المتوازنة</li>
+                        <li>دورات المواد الطبيعية</li>
+                        <li>التنوع البيولوجي</li>
+                        <li>القدرة على التكيف</li>
+                        <li>التكاثر الطبيعي</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #c62828">
+                    <h3 style="color:#c62828"><i class="fas fa-times-circle"></i> عوامل الاختلال</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>التلوث</li>
+                        <li>إزالة الغابات</li>
+                        <li>الصيد الجائر</li>
+                        <li>التغير المناخي</li>
+                        <li>الأنواع الدخيلة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على التوازن البيئي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> توازن المفترس والفريسة</h4>
+                    <p>إذا كثرت الفرائس ➔ يكثر المفترس ➔ تقل الفرائس ➔ يقل المفترس ➔ تعود الفرائس للزيادة... وهكذا.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> توازن الغازات</h4>
+                    <p>النباتات تمتص CO₂ وتطلق O₂، والحيوانات تفعل العكس ➔ توازن في الغازات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> توازن الماء</h4>
+                    <p>التبخر ➔ التكاثف ➔ المطر ➔ الجريان ➔ التبخر... دورة مستمرة.</p>
+                </div>
+
+                <div class="solution">✅ التوازن البيئي ضروري لاستمرار الحياة</div>
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ وَمَا خَلَقْنَا السَّمَاءَ وَالْأَرْضَ وَمَا بَيْنَهُمَا لَاعِبِينَ ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة الدخان: 38]</p>
+            </div>
+        </div>
+
+        <!-- سادساً: التهديدات التي تواجه الغلاف الحيوي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> سادساً: التهديدات التي تواجه الغلاف الحيوي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التحديات:</strong> يواجه الغلاف الحيوي تهديدات متعددة بسبب النشاط البشري والتغيرات الطبيعية.
+            </div>
+
+            <div class="three-columns">
+                <div class="bio-card" style="border-top-color:#c62828">
+                    <div class="icon" style="color:#c62828"><i class="fas fa-smog"></i></div>
+                    <h4 style="color:#c62828">1. التلوث</h4>
+                    <p>تلوث الهواء والماء والتربة</p>
+                    <p style="margin-top:10px;font-size:.9rem">يؤثر على صحة الكائنات</p>
+                </div>
+                <div class="bio-card" style="border-top-color:#f57c00">
+                    <div class="icon" style="color:#f57c00"><i class="fas fa-tree"></i></div>
+                    <h4 style="color:#f57c00">2. إزالة الغابات</h4>
+                    <p>قطع الأشجار على نطاق واسع</p>
+                    <p style="margin-top:10px;font-size:.9rem">فقدان موائل الكائنات</p>
+                </div>
+                <div class="bio-card" style="border-top-color:#1976d2">
+                    <div class="icon" style="color:#1976d2"><i class="fas fa-temperature-high"></i></div>
+                    <h4 style="color:#1976d2">3. التغير المناخي</h4>
+                    <p>ارتفاع حرارة الأرض</p>
+                    <p style="margin-top:10px;font-size:.9rem">يؤثر على النظم البيئية</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top:15px">
+                <div class="bio-card" style="border-top-color:#6d4c41">
+                    <div class="icon" style="color:#6d4c41"><i class="fas fa-paw"></i></div>
+                    <h4 style="color:#6d4c41">4. انقراض الأنواع</h4>
+                    <p>فقدان التنوع البيولوجي</p>
+                    <p style="margin-top:10px;font-size:.9rem">انقراض 1000 ضعف المعدل الطبيعي</p>
+                </div>
+                <div class="bio-card" style="border-top-color:#0277bd">
+                    <div class="icon" style="color:#0277bd"><i class="fas fa-water"></i></div>
+                    <h4 style="color:#0277bd">5. تلوث المحيطات</h4>
+                    <p>البلاستيك والمواد الكيميائية</p>
+                    <p style="margin-top:10px;font-size:.9rem">يؤثر على الحياة البحرية</p>
+                </div>
+                <div class="bio-card" style="border-top-color:#1b5e20">
+                    <div class="icon" style="color:#1b5e20"><i class="fas fa-city"></i></div>
+                    <h4 style="color:#1b5e20">6. التمدن</h4>
+                    <p>توسع المدن على حساب الطبيعة</p>
+                    <p style="margin-top:10px;font-size:.9rem">فقدان المساحات الخضراء</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> جهود المملكة في حماية الغلاف الحيوي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> المحميات الطبيعية</h4>
+                    <p>إنشاء أكثر من <strong>20 محمية طبيعية</strong> مثل: محمية الخنفة، محمية التيسية، محمية جزر فرسان.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> إعادة التأهيل</h4>
+                    <p>إعادة توطين الأنواع المهددة بالانقراض مثل: المها العربي، النمر العربي.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> التشجير</h4>
+                    <p>مبادرات زراعة ملايين الأشجار (مثل: مبادرة السعودية الخضراء).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الطاقة المتجددة</h4>
+                    <p>التحول نحو الطاقة الشمسية وطاقة الرياح لتقليل الانبعاثات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> التشريعات</h4>
+                    <p>قوانين حماية البيئة والرفق بالحيوان ومكافحة التلوث.</p>
+                </div>
+
+                <div class="solution">✅ المملكة تبذل جهوداً كبيرة لحماية الغلاف الحيوي</div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تحذير:</h4>
+                <p>إذا استمرت التهديدات بالمعدل الحالي، قد نفقد <strong>50% من الأنواع الحية</strong> بحلول عام 2100. حماية الغلاف الحيوي مسؤولية الجميع.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-recycle"></i> مثال 1: في حياتنا اليومية</h4>
+                <p><strong>المسألة:</strong> كيف نساهم في حماية الغلاف الحيوي؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> ترشيد الاستهلاك</h4>
+                    <p>تقليل استخدام البلاستيك، إعادة التدوير، شراء المنتجات المحلية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> توفير الطاقة</h4>
+                    <p>إطفاء الأضواء غير الضرورية، استخدام الأجهزة الموفرة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> زراعة الأشجار</h4>
+                    <p>المشاركة في مبادرات التشجير، زراعة حديقة منزلية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الحفاظ على الماء</h4>
+                    <p>ترشيد استهلاك الماء، إصلاح التسريبات</p>
+                </div>
+
+                <div class="solution">✅ كل فرد يمكنه المساهمة في حماية الغلاف الحيوي</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 2: في المدرسة</h4>
+                <p><strong>المسألة:</strong> كيف ننشر الوعي البيئي؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الأندية البيئية</h4>
+                    <p>المشاركة في الأندية البيئية المدرسية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الحملات التوعوية</h4>
+                    <p>تنظيم حملات نظافة وتشجير</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> البحوث العلمية</h4>
+                    <p>إجراء بحوث عن البيئة المحلية</p>
+                </div>
+
+                <div class="solution">✅ المدرسة بيئة مثالية لنشر الوعي البيئي</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-briefcase"></i> مثال 3: في المستقبل المهني</h4>
+                <p><strong>المسألة:</strong> ما الوظائف المتعلقة بالغلاف الحيوي؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> العلوم البيئية</h4>
+                    <p>دراسة البيئة وحمايتها</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الهندسة البيئية</h4>
+                    <p>تصميم حلول للتلوث</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الزراعة المستدامة</h4>
+                    <p>إنتاج الغذاء بطرق صديقة للبيئة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الطاقة المتجددة</h4>
+                    <p>تطوير مصادر طاقة نظيفة</p>
+                </div>
+
+                <div class="solution">✅ مستقبل أخضر يحتاج إلى كفاءات متخصصة</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن الغلاف الحيوي ثابت</h4>
+                <p>الغلاف الحيوي <strong>ديناميكي</strong> يتغير باستمرار بفعل العوامل الطبيعية والبشرية.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين الغلاف الحيوي والغلاف الجوي</h4>
+                <p><strong>الغلاف الجوي:</strong> طبقة الغازات حول الأرض. <strong>الغلاف الحيوي:</strong> الكائنات الحية في كل الأغلفة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن الإنسان خارج النظام البيئي</h4>
+                <p>الإنسان <strong>جزء من الغلاف الحيوي</strong> ويتأثر به ويؤثر فيه، وليس منفصلاً عنه.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: تجاهل أهمية الكائنات الدقيقة</h4>
+                <p>الكائنات الدقيقة (البكتيريا، الفطريات) <strong>أساسية</strong> لدورات المواد وتحلل النفايات.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الاعتقاد أن التلوث يؤثر فقط على الإنسان</h4>
+                <p>التلوث يؤثر على <strong>جميع الكائنات الحية</strong> ويختل بسببه التوازن البيئي.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: نسيان أن الغلاف الحيوي محدود</h4>
+                <p>موارد الأرض <strong>محدودة</strong>، والاستهلاك الجائر يؤدي إلى استنزافها.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #2e7d32">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الغلاف الحيوي:</strong> جزء الأرض الذي توجد فيه الحياة.</li>
+                <li><strong>الامتداد:</strong> من أعماق المحيطات إلى قمم الجبال (حوالي 20 كم).</li>
+                <li><strong>المكونات:</strong> النباتات، الحيوانات، الكائنات الدقيقة، الإنسان.</li>
+                <li><strong>النباتات:</strong> منتِجات، تصنع الغذاء بالبناء الضوئي.</li>
+                <li><strong>الحيوانات:</strong> مستهلكات، تتغذى على النباتات أو غيرها.</li>
+                <li><strong>الكائنات الدقيقة:</strong> محللات، تعيد العناصر للتربة.</li>
+                <li><strong>الإنسان:</strong> كائن عاقل يؤثر بشكل كبير في الغلاف الحيوي.</li>
+                <li><strong>النظم البيئية:</strong> غابات، صحاري، محيطات، جبال، مراعي.</li>
+                <li><strong>التفاعل مع الغلاف الصخري:</strong> تكوين التربة، تدوير المعادن.</li>
+                <li><strong>التفاعل مع الغلاف الجوي:</strong> دورة الأكسجين والكربون.</li>
+                <li><strong>التفاعل مع الغلاف المائي:</strong> دورة الماء، النظم المائية.</li>
+                <li><strong>التوازن البيئي:</strong> حالة الاستقرار في النظام البيئي.</li>
+                <li><strong>التهديدات:</strong> التلوث، إزالة الغابات، التغير المناخي.</li>
+                <li><strong>جهود المملكة:</strong> المحميات الطبيعية، التشجير، الطاقة المتجددة.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#2e7d32;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#1b5e20"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#2e7d32;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#2e7d32;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما هو الغلاف الحيوي؟",
+                options: [
+                    "طبقة الهواء حول الأرض",
+                    "جزء من الأرض توجد فيه الحياة",
+                    "طبقة الماء في المحيطات",
+                    "الطبقة الصخرية للأرض"
+                ],
+                correct: 1,
+                explanation: "الغلاف الحيوي هو الجزء من الأرض الذي توجد فيه الحياة، ويمتد من أعماق المحيطات إلى قمم الجبال."
+            },
+            {
+                sentence: "ما الدور الرئيسي للنباتات في الغلاف الحيوي؟",
+                options: ["مستهلكات", "محللات", "منتِجات", "مفترسات"],
+                correct: 2,
+                explanation: "النباتات منتِجات (Producers) لأنها تصنع غذاءها بنفسها عبر عملية البناء الضوئي باستخدام الطاقة الشمسية."
+            },
+            {
+                sentence: "أيّ غلاف يتفاعل مع الغلاف الحيوي في دورة الأكسجين وثاني أكسيد الكربون؟",
+                options: ["الغلاف الصخري", "الغلاف الجوي", "الغلاف المائي", "الغلاف الجليدي"],
+                correct: 1,
+                explanation: "الغلاف الجوي يتفاعل مع الغلاف الحيوي في دورة الأكسجين وثاني أكسيد الكربون عبر البناء الضوئي والتنفس."
+            },
+            {
+                sentence: "ما النظام البيئي الذي يغطي 71% من سطح الأرض؟",
+                options: ["الغابات", "الصحاري", "المحيطات", "الجبال"],
+                correct: 2,
+                explanation: "المحيطات تغطي حوالي 71% من سطح الأرض، وهي أكبر النظم البيئية على الكوكب."
+            },
+            {
+                sentence: "ما أهم تهديد يواجه الغلاف الحيوي اليوم؟",
+                options: ["الزلازل", "البراكين", "التلوث والأنشطة البشرية", "الكسوف"],
+                correct: 2,
+                explanation: "التلوث والأنشطة البشرية (إزالة الغابات، الصيد الجائر، التغير المناخي) هي أهم التهديدات التي تواجه الغلاف الحيوي."
+            },
+            {
+                sentence: "ما دور الكائنات الدقيقة (المحللات) في النظام البيئي؟",
+                options: [
+                    "إنتاج الغذاء",
+                    "استهلاك النباتات",
+                    "تحليل المواد العضوية وإعادة العناصر للتربة",
+                    "افتراس الحيوانات"
+                ],
+                correct: 2,
+                explanation: "الكائنات الدقيقة (البكتيريا، الفطريات) تقوم بتحليل المواد العضوية الميتة وإعادة العناصر الغذائية للتربة، مما يُكمل دورة المواد."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

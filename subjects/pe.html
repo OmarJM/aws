@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة التربية البدنية والدفاع عن النفس - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>التربية البدنية والدفاع عن النفس | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة جداً جداً بمادة التربية البدنية فقط */
+        .fitness-tips {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-right: 5px solid var(--subject-primary);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        [data-theme="dark"] .fitness-tips {
+            background: linear-gradient(135deg, #1b3a1b, #254725);
+        }
+        .fitness-tips h3 {
+            color: var(--subject-accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .fitness-tips h3 {
+            color: var(--subject-primary);
+        }
+        .fitness-tips ul { list-style: none; padding: 0; }
+        .fitness-tips li {
+            padding: 8px 0;
+            padding-right: 25px;
+            position: relative;
+            color: var(--text-color);
+        }
+        .fitness-tips li::before {
+            content: "\f44b";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--subject-secondary);
+        }
+
+        .timer-section {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+        .timer-display {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 5px;
+        }
+        .timer-controls, .timer-presets {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .timer-btn {
+            background-color: white;
+            color: var(--subject-primary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+        .timer-btn:hover { transform: scale(1.05); }
+        .preset-btn {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .preset-btn:hover {
+            background-color: white;
+            color: var(--subject-primary);
+        }
+    </style>
+</head>
+<body class="subject-pe">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-running"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="pe.html" class="active">التربية البدنية</a></li>
+                    <li><a href="../quizzes/pe-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="ابحث عن درس..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-dumbbell"></i> مادة التربية البدنية والدفاع عن النفس</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- بانر تحفيزي (ثابت لأنه مميز للمادة) -->
+        <div class="motivational-banner">
+            <h2><i class="fas fa-trophy"></i> العقل السليم في الجسم السليم</h2>
+            <p>الرياضة ليست مجرد نشاط بدني، بل هي أسلوب حياة يبني الجسد والعقل والإرادة</p>
+        </div>
+
+        <!-- نصائح رياضية (ثابتة لأنها مميزة للمادة) -->
+        <div class="fitness-tips">
+            <h3><i class="fas fa-lightbulb"></i> نصائح ذهبية للرياضي المتميز</h3>
+            <ul>
+                <li>قم بتمارين الإحماء لمدة 10 دقائق قبل أي نشاط رياضي.</li>
+                <li>اشرب الماء بانتظام قبل وأثناء وبعد التمرين.</li>
+                <li>ارتدِ الملابس والأحذية الرياضية المناسبة لكل نشاط.</li>
+                <li>استمع لجسمك وتوقف عند الشعور بألم شديد.</li>
+                <li>احرص على النوم الكافي (8 ساعات) لتعافي العضلات.</li>
+                <li>مارس الرياضة بانتظام 3-5 مرات أسبوعياً على الأقل.</li>
+            </ul>
+        </div>
+
+        <!-- سيتم بناء الأقسام والدروس هنا ديناميكياً بواسطة JavaScript -->
+        <div id="lessonsContainer"></div>
+
+        <!-- مؤقت التمارين (ثابت لأنه مميز للمادة) -->
+        <div class="timer-section">
+            <h2><i class="fas fa-stopwatch"></i> مؤقت التمارين التفاعلي</h2>
+            <p>استخدم هذا المؤقت لتنظيم تمارينك والحفاظ على وقت محدد لكل تمرين</p>
+            
+            <div class="timer-display" id="timerDisplay">00:00</div>
+            
+            <div class="timer-controls">
+                <button class="timer-btn" onclick="startTimer()"><i class="fas fa-play"></i> ابدأ</button>
+                <button class="timer-btn" onclick="pauseTimer()"><i class="fas fa-pause"></i> إيقاف مؤقت</button>
+                <button class="timer-btn" onclick="resetTimer()"><i class="fas fa-redo"></i> إعادة ضبط</button>
+            </div>
+
+            <div class="timer-presets">
+                <button class="preset-btn" onclick="setPreset(30)">30 ثانية</button>
+                <button class="preset-btn" onclick="setPreset(60)">دقيقة</button>
+                <button class="preset-btn" onclick="setPreset(120)">دقيقتان</button>
+                <button class="preset-btn" onclick="setPreset(300)">5 دقائق</button>
+            </div>
+        </div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر (سيتم بناؤه ديناميكياً) -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/pe-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة التربية البدنية فقط        -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'pe';
+        
+        // بيانات دروس التربية البدنية مقسمة حسب الأقسام
+        const LESSONS_DATA = [
+            { section: 'section1', title: 'إثراء - التربية البدنية والدفاع عن النفس', desc: 'مقدمة شاملة عن أهمية التربية البدنية، أهدافها، ومكونات اللياقة البدنية المتكاملة.', videoId: 'RBQZO6FoM00', image: 'lesson1.jpg', pdf: 'lesson1.pdf', badge: 'مقدمة' },
+            { section: 'section1', title: 'مكونات الوحدة التدريبية', desc: 'فهم مكونات الوحدة التدريبية: الإحماء، النشاط الرئيسي، التهدئة، وأهمية كل مرحلة.', videoId: 'BB8R89dFxbw', image: 'lesson2.jpg', pdf: 'lesson2.pdf', badge: 'لياقة بدنية' },
+            { section: 'section1', title: 'اللياقة القلبية التنفسية', desc: 'مفهوم اللياقة القلبية التنفسية، تمارينها الأساسية، وفوائدها لصحة القلب والرئتين.', videoId: 'VuxBuVwbAe4', image: 'lesson3.jpg', pdf: 'lesson3.pdf', badge: 'لياقة بدنية' },
+            { section: 'section1', title: 'اللياقة القلبية التنفسية - القدرة العضلية', desc: 'الفرق بين القدرة العضلية والقوة العضلية، تمارين تطوير القدرة العضلية، وقياس الأداء.', videoId: 'S8B9RQROuis', image: 'lesson4.jpg', pdf: 'lesson4.pdf', badge: 'لياقة بدنية' },
+            { section: 'section2', title: 'وقفة المشي (اب-سوجي)', desc: 'تعلم وقفة المشي الأساسية في التايكوندو، وضع القدمين، توزيع الوزن، وتطبيقاتها العملية.', videoId: 'XGEOP1tkABg', image: 'lesson5.jpg', pdf: 'lesson5.pdf', badge: 'تايكوندو' },
+            { section: 'section3', title: 'الضربة الساحقة المستقيمة (Spike)', desc: 'تقنية الضربة الساحقة في الكرة الطائرة، خطوات الأداء الصحيح، والتدريب على الدقة والقوة.', videoId: 'jpHGkqxHCu4', image: 'lesson6.jpg', pdf: 'lesson6.pdf', badge: 'كرة طائرة' },
+            { section: 'section4', title: 'المسكة الغربية للمضرب والإرسال المستقيم من أعلى', desc: 'تعلم طريقة المسكة الغربية للمضرب، وتقنية الإرسال المستقيم من أعلى، مع التدريبات التطبيقية.', videoId: 'Po32t_pyHco', image: 'lesson7.jpg', pdf: 'lesson7.pdf', badge: 'تنس طاولة' }
+        ];
+        
+        // بناء الأقسام وبطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            const sections = [
+                { id: 'section1', title: 'القسم الأول: اللياقة البدنية', icon: 'fas fa-heartbeat' },
+                { id: 'section2', title: 'القسم الثاني: الدفاع عن النفس (تايكوندو)', icon: 'fas fa-hand-fist' },
+                { id: 'section3', title: 'القسم الثالث: الكرة الطائرة', icon: 'fas fa-volleyball-ball' },
+                { id: 'section4', title: 'القسم الرابع: تنس الطاولة', icon: 'fas fa-table-tennis' }
+            ];
+            
+            sections.forEach(sec => {
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerHTML = `<i class="${sec.icon}"></i><span>${sec.title}</span>`;
+                container.appendChild(sectionTitle);
+                
+                const grid = document.createElement('div');
+                grid.className = 'lessons-grid';
+                grid.id = sec.id;
+                container.appendChild(grid);
+            });
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const grid = document.getElementById(lesson.section);
+                if (!grid) return;
+                
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/27ae60/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <span class="section-badge">${lesson.badge}</span>
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> بطل رياضي! نتيجتك: ${score} من ${questions.length}.`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> رياضي متميز! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // ==========================================
+        // منطق مؤقت التمارين التفاعلي
+        // ==========================================
+        let timerInterval;
+        let timeLeft = 0;
+        let isRunning = false;
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timerDisplay').textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            if (isRunning) return;
+            if (timeLeft === 0) timeLeft = 60;
+            
+            isRunning = true;
+            timerInterval = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    alert('⏰ انتهى الوقت! أحسنت في التمرين');
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = 0;
+            updateTimerDisplay();
+        }
+
+        function setPreset(seconds) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = seconds;
+            updateTimerDisplay();
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="عناصر الطقس والمناخ - درجة الحرارة والرطوبة والرياح والضغط الجوي والتساقط - مادة الدراسات الاجتماعية">
+    <title>عناصر الطقس والمناخ | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        :root{--sky-blue:#2980b9;--sky-dark:#1a5276;--sky-light:#d6eaf8;--elem-red:#e74c3c;--elem-blue:#2980b9;--elem-green:#27ae60;--elem-orange:#e67e22;--elem-purple:#8e44ad}
+        .lesson-hero{background:linear-gradient(135deg,#2980b9,#1a5276);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#2980b9;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #27ae60;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(41,128,185,.08);border-right:4px solid #2980b9;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#1a5276}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #e67e22;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #2980b9;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#1a5276}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #2980b9;margin:15px 0}
+        .step-box h4{color:#2980b9;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#2980b9;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .step-box .calculation{font-family:'Fira Code',monospace;background:var(--card-bg);padding:10px 15px;border-radius:8px;margin:10px 0;direction:ltr;text-align:center;font-size:1.1rem;font-weight:600;color:#27ae60}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#2980b9;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .five-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #e67e22;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .golden-tip{background:linear-gradient(135deg,#3d3200,#4a3d00)}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .warning-box{background:linear-gradient(135deg,#3d1015,#4a1520)}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#2980b9;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #27ae60;margin-bottom:15px}
+        .example-card h4{color:#2980b9;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #27ae60;font-weight:600;color:#1a5276;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #27ae60;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#2980b9;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#2980b9}
+        .interactive-activity{background:linear-gradient(135deg,rgba(41,128,185,.05),rgba(39,174,96,.05));border:2px dashed #2980b9;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#2980b9;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#2980b9;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#27ae60;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #27ae60}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#2980b9;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#2980b9;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #2980b9;color:#2980b9}
+        .elem-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;transition:transform .3s}
+        .elem-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .elem-card h4{margin-bottom:10px;font-family:'Amiri',serif}
+        .elem-card .icon{font-size:2.5rem;margin-bottom:10px}
+        .elem-card.temp{border-top:5px solid #e74c3c}
+        .elem-card.temp h4,.elem-card.temp .icon{color:#e74c3c}
+        .elem-card.humid{border-top:5px solid #2980b9}
+        .elem-card.humid h4,.elem-card.humid .icon{color:#2980b9}
+        .elem-card.wind{border-top:5px solid #27ae60}
+        .elem-card.wind h4,.elem-card.wind .icon{color:#27ae60}
+        .elem-card.press{border-top:5px solid #8e44ad}
+        .elem-card.press h4,.elem-card.press .icon{color:#8e44ad}
+        .elem-card.precip{border-top:5px solid #e67e22}
+        .elem-card.precip h4,.elem-card.precip .icon{color:#e67e22}
+        .lesson-intro{background:linear-gradient(135deg,rgba(41,128,185,.05),rgba(39,174,96,.05));border:2px solid #2980b9;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#2980b9;font-family:'Amiri',serif;margin-bottom:15px}
+        .bismillah{text-align:center;font-family:'Amiri',serif;font-size:2rem;color:#2980b9;margin:20px 0}
+        .weather-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .weather-visual svg{max-width:100%;height:auto}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns,.five-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-cloud-sun-rain"></i> عناصر الطقس والمناخ</h4>
+            <p>درجة الحرارة، الرطوبة، الرياح، الضغط الجوي، والتساقط</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ما العناصر التي تُحدد حالة الطقس والمناخ في أي مكان على الأرض؟</strong>
+                <p style="margin-top:10px">الطقس والمناخ يتحددان من خلال <strong>خمسة عناصر رئيسية</strong> تتفاعل مع بعضها البعض: <strong>درجة الحرارة</strong>، و<strong>الرطوبة</strong>، و<strong>الرياح</strong>، و<strong>الضغط الجوي</strong>، و<strong>التساقط</strong>. فهم هذه العناصر يساعدنا على فهم الطقس اليومي والتنبؤ بالمناخ.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-thermometer-half"></i> عناصر الطقس والمناخ الخمسة</h3>
+                <p><strong>1. درجة الحرارة:</strong> مقدار سخونة أو برودة الجو</p>
+                <p><strong>2. الرطوبة:</strong> كمية بخار الماء في الهواء</p>
+                <p><strong>3. الرياح:</strong> حركة الهواء الأفقية</p>
+                <p><strong>4. الضغط الجوي:</strong> وزن عمود الهواء</p>
+                <p><strong>5. التساقط:</strong> الأمطار والثلوج والبرد</p>
+            </div>
+
+            <div class="weather-visual">
+                <h4 style="color:#2980b9;margin-bottom:15px"><i class="fas fa-cloud-sun-rain"></i> عناصر الطقس والمناخ</h4>
+                <svg width="700" height="220" viewBox="0 0 700 220">
+                    <!-- دائرة مركزية -->
+                    <circle cx="350" cy="110" r="50" fill="rgba(41,128,185,.15)" stroke="#2980b9" stroke-width="2"/>
+                    <text x="350" y="105" font-family="Tajawal" font-size="14" fill="#2980b9" text-anchor="middle" font-weight="700">الطقس</text>
+                    <text x="350" y="115" font-family="Tajawal" font-size="12" fill="#2980b9" text-anchor="middle">والمناخ</text>
+                    
+                    <!-- درجة الحرارة -->
+                    <circle cx="120" cy="50" r="35" fill="rgba(231,76,60,.15)" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="120" y="48" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle" font-weight="700">درجة</text>
+                    <text x="120" y="60" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle" font-weight="700">الحرارة</text>
+                    <line x1="155" y1="70" x2="305" y2="100" stroke="#e74c3c" stroke-width="1.5"/>
+                    
+                    <!-- الرطوبة -->
+                    <circle cx="350" cy="30" r="35" fill="rgba(41,128,185,.15)" stroke="#2980b9" stroke-width="2"/>
+                    <text x="350" y="35" font-family="Tajawal" font-size="11" fill="#2980b9" text-anchor="middle" font-weight="700">الرطوبة</text>
+                    <line x1="350" y1="65" x2="350" y2="60" stroke="#2980b9" stroke-width="1.5"/>
+                    
+                    <!-- الرياح -->
+                    <circle cx="580" cy="50" r="35" fill="rgba(39,174,96,.15)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="580" y="55" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle" font-weight="700">الرياح</text>
+                    <line x1="545" y1="70" x2="395" y2="100" stroke="#27ae60" stroke-width="1.5"/>
+                    
+                    <!-- الضغط -->
+                    <circle cx="180" cy="180" r="35" fill="rgba(142,68,173,.15)" stroke="#8e44ad" stroke-width="2"/>
+                    <text x="180" y="178" font-family="Tajawal" font-size="11" fill="#8e44ad" text-anchor="middle" font-weight="700">الضغط</text>
+                    <text x="180" y="190" font-family="Tajawal" font-size="11" fill="#8e44ad" text-anchor="middle" font-weight="700">الجوي</text>
+                    <line x1="215" y1="170" x2="305" y2="120" stroke="#8e44ad" stroke-width="1.5"/>
+                    
+                    <!-- التساقط -->
+                    <circle cx="520" cy="180" r="35" fill="rgba(230,126,34,.15)" stroke="#e67e22" stroke-width="2"/>
+                    <text x="520" y="183" font-family="Tajawal" font-size="11" fill="#e67e22" text-anchor="middle" font-weight="700">التساقط</text>
+                    <line x1="485" y1="170" x2="395" y2="120" stroke="#e67e22" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: درجة الحرارة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-temperature-high"></i> أولاً: درجة الحرارة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>درجة الحرارة:</strong> مقدار سخونة أو برودة الهواء في مكان معين، وهي أهم عناصر الطقس والمناخ.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #e74c3c">
+                    <h3 style="color:#e74c3c"><i class="fas fa-thermometer-half"></i> التعريف</h3>
+                    <p>مقدار سخونة أو برودة الهواء، وتُقاس بـ<strong>الترمومتر</strong>.</p>
+                    <p style="margin-top:10px"><strong>الوحدات:</strong></p>
+                    <ul style="padding-right:20px;margin-top:5px;line-height:2">
+                        <li>الدرجة المئوية (°م) - الأكثر استخداماً</li>
+                        <li>الفهرنهايت (°ف) - في أمريكا</li>
+                        <li>الكلفن (K) - في العلوم</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #e67e22">
+                    <h3 style="color:#e67e22"><i class="fas fa-sun"></i> المصدر الرئيسي</h3>
+                    <p><strong>الشمس</strong> هي المصدر الرئيسي لحرارة الأرض.</p>
+                    <p style="margin-top:10px"><strong>العوامل المؤثرة:</strong></p>
+                    <ul style="padding-right:20px;margin-top:5px;line-height:2">
+                        <li>خط العرض (القرب من الاستواء)</li>
+                        <li>الارتفاع عن سطح البحر</li>
+                        <li>القرب من المسطحات المائية</li>
+                        <li>التيارات البحرية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> العوامل المؤثرة في درجة الحرارة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> خط العرض</h4>
+                    <p>كلما اقتربنا من <strong>خط الاستواء</strong>، زادت الحرارة (لأن أشعة الشمس عمودية). وكلما ابتعدنا نحو القطبين، انخفضت الحرارة.</p>
+                    <div class="calculation">الاستواء (0°) = حار | القطب (90°) = بارد</div>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الارتفاع عن سطح البحر</h4>
+                    <p>كلما ارتفعنا عن سطح البحر، <strong>انخفضت</strong> درجة الحرارة.</p>
+                    <div class="calculation">تنخفض الحرارة 6.5°م لكل 1000م ارتفاعاً</div>
+                    <p><strong>مثال:</strong> مدينة أبها (2200م) أبرد من الرياض (600م)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> القرب من المسطحات المائية</h4>
+                    <p>المسطحات المائية <strong>تُعدل</strong> درجة الحرارة: تُبرّد صيفاً وتُدفئ شتاءً.</p>
+                    <p><strong>مثال:</strong> جدة (ساحلية) أقل حرارة من الرياض (داخلية) صيفاً</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> التيارات البحرية</h4>
+                    <p><strong>التيارات الدافئة:</strong> ترفع حرارة السواحل (مثل تيار الخليج).</p>
+                    <p><strong>التيارات الباردة:</strong> تخفض حرارة السواحل (مثل تيار بيرو).</p>
+                </div>
+
+                <div class="solution">✅ درجة الحرارة تتأثر بخط العرض والارتفاع والقرب من البحر والتيارات</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> أمثلة من المملكة العربية السعودية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>الرياض:</strong> حارة صيفاً (45°م) بسبب البعد عن البحر</li>
+                    <li><strong>أبها:</strong> معتدلة صيفاً (30°م) بسبب الارتفاع</li>
+                    <li><strong>جدة:</strong> حارة رطبة بسبب القرب من البحر الأحمر</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: الرطوبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tint"></i> ثانياً: الرطوبة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الرطوبة:</strong> كمية بخار الماء الموجودة في الهواء، وتُقاس بـ<strong>الهيجرومتر</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #2980b9">
+                    <h3 style="color:#2980b9"><i class="fas fa-tint"></i> أنواع الرطوبة</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>الرطوبة المطلقة:</strong> كمية بخار الماء الفعلية في الهواء (جم/م³)</li>
+                        <li><strong>الرطوبة النسبية:</strong> نسبة بخار الماء الفعلي إلى أقصى ما يحتمله الهواء (%)</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #e67e22">
+                    <h3 style="color:#e67e22"><i class="fas fa-tachometer-alt"></i> العوامل المؤثرة</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>درجة الحرارة:</strong> كلما ارتفعت الحرارة، زادت قدرة الهواء على حمل بخار الماء</li>
+                        <li><strong>القرب من الماء:</strong> القرب من البحار يزيد الرطوبة</li>
+                        <li><strong>الرياح:</strong> تنقل بخار الماء من مكان لآخر</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على الرطوبة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الرطوبة العالية</h4>
+                    <p>عندما تكون الرطوبة النسبية <strong>أكثر من 70%</strong>، نشعر بالحر الشديد حتى لو كانت الحرارة معتدلة.</p>
+                    <p><strong>مثال:</strong> جدة صيفاً (رطوبة 80%+) تشعر بحرارة أعلى من الحرارة الفعلية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الرطوبة المنخفضة</h4>
+                    <p>عندما تكون الرطوبة <strong>أقل من 30%</strong>، نشعر بالجفاف.</p>
+                    <p><strong>مثال:</strong> الرياض شتاءً (رطوبة 20%) تشعر بجفاف الجلد.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الرطوبة والتساقط</h4>
+                    <p>عندما تصل الرطوبة النسبية إلى <strong>100%</strong>، يتكاثف بخار الماء ويتساقط على شكل أمطار.</p>
+                </div>
+
+                <div class="solution">✅ الرطوبة تحدد مدى شعورنا بالحرارة أو البرودة</div>
+            </div>
+
+            <div class="math-box" style="font-family:'Amiri',serif">
+                الرطوبة النسبية = (بخار الماء الفعلي ÷ أقصى بخار يحتمله الهواء) × 100%
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا نشعر بالحر الشديد في جدة صيفاً؟</h4>
+                <p>لأن الرطوبة العالية تمنع تبخر العرق من الجلد، فلا يبرد الجسم. لذلك نشعر بحرارة <strong>45°م</strong> وكأنها <strong>50°م</strong>!</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الرياح -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-wind"></i> ثالثاً: الرياح</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الرياح:</strong> حركة الهواء الأفقية من مناطق الضغط المرتفع إلى مناطق الضغط المنخفض، وتُقاس بـ<strong>الأنيمومتر</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #27ae60">
+                    <h3 style="color:#27ae60"><i class="fas fa-wind"></i> أنواع الرياح</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>الرياح الدائمة:</strong> تهب باستمرار في اتجاه واحد (مثل الرياح التجارية)</li>
+                        <li><strong>الرياح الموسمية:</strong> تهب في مواسم معينة (مثل رياح الهند الموسمية)</li>
+                        <li><strong>الرياح اليومية:</strong> تتغير يومياً (مثل رياح البحر والبر)</li>
+                        <li><strong>الرياح المحلية:</strong> تهب في مناطق محددة (مثل رياح السموم)</p>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #8e44ad">
+                    <h3 style="color:#8e44ad"><i class="fas fa-compass"></i> العوامل المؤثرة</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>الضغط الجوي:</strong> الرياح تهب من المرتفع إلى المنخفض</li>
+                        <li><strong>دوران الأرض:</strong> يُحرف اتجاه الرياح</li>
+                        <li><strong>التضاريس:</strong> الجبال تحرف مسار الرياح</li>
+                        <li><strong>المسطحات المائية:</strong> تُسبب رياحاً محلية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على الرياح</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الرياح التجارية</h4>
+                    <p>رياح دائمة تهب من مناطق الضغط المرتفع (30°) نحو خط الاستواء. كانت تُستخدم في الملاحة البحرية قديماً.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> رياح البحر والبر</h4>
+                    <p><strong>نهاراً:</strong> رياح من البحر إلى البر (لأن البر أسخن).</p>
+                    <p><strong>ليلاً:</strong> رياح من البر إلى البحر (لأن البحر أدفأ).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> رياح السموم</h4>
+                    <p>رياح حارة جافة تهب في الصحاري العربية صيفاً، ترفع الحرارة فوق 50°م.</p>
+                </div>
+
+                <div class="solution">✅ الرياح تنقل الحرارة والرطوبة من مكان لآخر</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> كيف نقيس الرياح؟</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>السرعة:</strong> تُقاس بالأنيمومتر (كم/ساعة أو عقدة)</li>
+                    <li><strong>الاتجاه:</strong> يُقاس بدوارة الرياح (ريشة الرياح)</li>
+                    <li><strong>مقياس بوفورت:</strong> مقياس من 0-12 لوصف شدة الرياح</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: الضغط الجوي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tachometer-alt"></i> رابعاً: الضغط الجوي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الضغط الجوي:</strong> وزن عمود الهواء فوق نقطة معينة على سطح الأرض، ويُقاس بـ<strong>البارومتر</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #8e44ad">
+                    <h3 style="color:#8e44ad"><i class="fas fa-tachometer-alt"></i> التعريف والقياس</h3>
+                    <p><strong>الضغط الجوي:</strong> وزن عمود الهواء الممتد من سطح الأرض إلى أعلى الغلاف الجوي.</p>
+                    <p style="margin-top:10px"><strong>الوحدة:</strong> مليبار (mb) أو هيكتوباسكال (hPa)</p>
+                    <p style="margin-top:10px"><strong>الضغط المعياري:</strong> 1013.25 مليبار عند سطح البحر</p>
+                </div>
+                <div class="column-card" style="border-top:5px solid #e67e22">
+                    <h3 style="color:#e67e22"><i class="fas fa-chart-line"></i> العوامل المؤثرة</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>الارتفاع:</strong> كلما ارتفعنا، انخفض الضغط</li>
+                        <li><strong>درجة الحرارة:</strong> الهواء الحار أخف (ضغط منخفض)</li>
+                        <li><strong>الرطوبة:</strong> الهواء الرطب أخف (ضغط منخفض)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أنواع الضغط الجوي</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الضغط المرتفع</h4>
+                    <p>هواء بارد ثقيل يهبط للأسفل ➔ طقس <strong>صافٍ وجاف</strong>.</p>
+                    <p><strong>مثال:</strong> أيام الشتاء الصافية الباردة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الضغط المنخفض</h4>
+                    <p>هواء حار خفيف يصعد للأعلى ➔ طقس <strong>غائم وممطر</strong>.</p>
+                    <p><strong>مثال:</strong> أيام العواصف الرعدية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تأثير الارتفاع</h4>
+                    <p>عند الصعود للجبال، ينخفض الضغط ➔ نشعر بصعوبة التنفس.</p>
+                    <p><strong>مثال:</strong> متسلقو الجبال يحتاجون أكسجين إضافي.</p>
+                </div>
+
+                <div class="solution">✅ الضغط الجوي يتحكم في حركة الرياح والطقس</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> كيف نقرأ البارومتر؟</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>ضغط مرتفع (>1013 mb):</strong> طقس صافٍ ومستقر</li>
+                    <li><strong>ضغط منخفض (<1013 mb):</strong> طقس عاصف وممطر</li>
+                    <li><strong>انخفاض سريع:</strong> عاصفة قادمة!</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: التساقط -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-cloud-rain"></i> خامساً: التساقط</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التساقط:</strong> كل أشكال المياه التي تتساقط من الغلاف الجوي إلى سطح الأرض، وتُقاس بـ<strong>مقياس المطر</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #e67e22">
+                    <h3 style="color:#e67e22"><i class="fas fa-cloud-rain"></i> أنواع التساقط</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>المطر:</strong> قطرات ماء سائلة (الأكثر شيوعاً)</li>
+                        <li><strong>الثلج:</strong> بلورات ثلجية (عند البرودة الشديدة)</li>
+                        <li><strong>البرد:</strong> كرات ثلجية صلبة</li>
+                        <li><strong>الندى:</strong> تكاثف بخار الماء على الأسطح الباردة</li>
+                        <li><strong>الصقيع:</strong> تجمد بخار الماء على الأسطح</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #2980b9">
+                    <h3 style="color:#2980b9"><i class="fas fa-cloud"></i> كيف يتكون المطر؟</h4>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>التبخر:</strong> يتبخر الماء من المسطحات المائية</li>
+                        <li><strong>التكاثف:</strong> يبرد بخار الماء ويتكاثف على شكل قطرات</li>
+                        <li><strong>التساقط:</strong> عندما تكبر القطرات، تتساقط مطراً</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> العوامل المؤثرة في التساقط</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الرطوبة</h4>
+                    <p>كلما زادت الرطوبة، زادت احتمالية التساقط.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الرياح</h4>
+                    <p>الرياح تنقل بخار الماء من المسطحات المائية إلى اليابسة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> التضاريس</h4>
+                    <p>الجبال تحجز الرياح الرطبة ➔ أمطار على المنحدر المواجه (ظل المطر على الجانب الآخر).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> القرب من المسطحات المائية</h4>
+                    <p>المناطق القريبة من البحار والمحيطات أكثر مطراً.</p>
+                </div>
+
+                <div class="solution">✅ التساقط يتأثر بالرطوبة والرياح والتضاريس</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> أمطار المملكة العربية السعودية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>عسير:</strong> أكثر المناطق مطراً (300-500 مم) بسبب المرتفعات</li>
+                    <li><strong>الربع الخالي:</strong> أقل المناطق مطراً (أقل من 50 مم)</li>
+                    <li><strong>الأمطار:</strong> غالباً شتوية وموسمية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-plane"></i> مثال 1: السفر والطيران</h4>
+                <p><strong>المسألة:</strong> كيف تؤثر عناصر الطقس على الطيران؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الرياح</h4>
+                    <p>الرياح القوية تُؤخر الرحلات الجوية وتُغيّر مسار الطائرة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الضغط الجوي</h4>
+                    <p>الضغط المنخفض يُسبب اضطرابات جوية (مطبات هوائية)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> التساقط</h4>
+                    <p>الأمطار الغزيرة والثلوج تُؤخر الرحلات</p>
+                </div>
+
+                <div class="solution">✅ عناصر الطقس تُحدد سلامة الرحلات الجوية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-seedling"></i> مثال 2: الزراعة</h4>
+                <p><strong>المسألة:</strong> كيف تؤثر عناصر الطقس على الزراعة؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> درجة الحرارة</h4>
+                    <p>تُحدد نوع المحاصيل (القمح للمعتدل، النخيل للحار)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> التساقط</h4>
+                    <p>يُحدد كمية الري اللازمة ونوع المحاصيل</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الرطوبة</h4>
+                    <p>تُؤثر على نمو المحاصيل وانتشار الأمراض</p>
+                </div>
+
+                <div class="solution">✅ عناصر الطقس تُحدد نجاح الزراعة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-tshirt"></i> مثال 3: اختيار الملابس</h4>
+                <p><strong>المسألة:</strong> كيف نختار ملابسنا حسب عناصر الطقس؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> درجة الحرارة</h4>
+                    <p>ملابس خفيفة صيفاً، ثقيلة شتاءً</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الرطوبة</h4>
+                    <p>ملابس قطنية في الرطوبة العالية (لتمتص العرق)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الرياح والتساقط</h4>
+                    <p>ملابس واقية من الرياح والأمطار</p>
+                </div>
+
+                <div class="solution">✅ عناصر الطقس تُحدد ملابسنا اليومية</div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين الحرارة والرطوبة</h4>
+                <p><strong>الحرارة:</strong> مقدار السخونة. <strong>الرطوبة:</strong> كمية بخار الماء. قد تكون الحرارة معتدلة لكن الرطوبة عالية فنشعر بحر شديد!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الاعتقاد أن الرياح تهب عشوائياً</h4>
+                <p>الرياح تهب من مناطق <strong>الضغط المرتفع</strong> إلى <strong>المنخفض</strong> بشكل منتظم، وليست عشوائية.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الخلط بين الضغط المرتفع والمنخفض</h4>
+                <p><strong>المرتفع:</strong> طقس صافٍ. <strong>المنخفض:</strong> طقس عاصف. وليس العكس!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان تأثير الارتفاع على الحرارة والضغط</h4>
+                <p>كلما ارتفعنا: <strong>انخفضت الحرارة</strong> (6.5°م/1000م) و<strong>انخفض الضغط</strong>.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الخلط بين المطر والثلج والبرد</h4>
+                <p>جميعها أشكال <strong>تساقط</strong>، لكنها تختلف حسب درجة الحرارة: المطر (سائل)، الثلج (بلورات)، البرد (كرات ثلجية).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: تجاهل تأثير الرطوبة على الإحساس</h4>
+                <p>الرطوبة العالية تجعل الحرارة تبدو أشد. لذلك نشعر في جدة بحرارة 45°م وكأنها 50°م!</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #2980b9">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>درجة الحرارة:</strong> مقدار سخونة الجو، تُقاس بالترمومتر (°م). تتأثر بخط العرض والارتفاع والقرب من البحر.</li>
+                <li><strong>الرطوبة:</strong> كمية بخار الماء في الهواء، تُقاس بالهيجرومتر (%). تتأثر بالحرارة والقرب من الماء.</li>
+                <li><strong>الرياح:</strong> حركة الهواء من الضغط المرتفع للمنخفض، تُقاس بالأنيمومتر (كم/ساعة).</li>
+                <li><strong>الضغط الجوي:</strong> وزن عمود الهواء، يُقاس بالبارومتر (مليبار). المرتفع = صافٍ، المنخفض = عاصف.</li>
+                <li><strong>التساقط:</strong> المطر والثلج والبرد والندى، تُقاس بمقياس المطر (مم).</li>
+                <li><strong>العوامل المشتركة:</strong> خط العرض، الارتفاع، القرب من البحر، التيارات البحرية، التضاريس.</li>
+                <li><strong>التفاعل:</strong> العناصر الخمس تتفاعل مع بعضها لتُحدد الطقس والمناخ.</li>
+                <li><strong>تنبيه:</strong> لا نخلط بين الحرارة والرطوبة، ولا بين الضغط المرتفع والمنخفض.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#2980b9;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#27ae60"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#2980b9;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#2980b9;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما الأداة التي تقيس درجة الحرارة؟",
+                options: ["البارومتر", "الأنيمومتر", "الترمومتر", "الهيجرومتر"],
+                correct: 2,
+                explanation: "الترمومتر (Thermometer) هو الأداة التي تقيس درجة الحرارة بوحدة الدرجة المئوية (°م)."
+            },
+            {
+                sentence: "كم تنخفض درجة الحرارة تقريباً لكل 1000م ارتفاعاً؟",
+                options: ["1°م", "3°م", "6.5°م", "10°م"],
+                correct: 2,
+                explanation: "تنخفض درجة الحرارة حوالي 6.5°م لكل 1000م ارتفاعاً عن سطح البحر."
+            },
+            {
+                sentence: "من أين تهب الرياح؟",
+                options: [
+                    "من الضغط المنخفض للمرتفع",
+                    "من الضغط المرتفع للمنخفض",
+                    "من الشرق للغرب دائماً",
+                    "من البحر للبر دائماً"
+                ],
+                correct: 1,
+                explanation: "الرياح تهب من مناطق الضغط المرتفع إلى مناطق الضغط المنخفض."
+            },
+            {
+                sentence: "ما نوع الطقس المرتبط بالضغط المنخفض؟",
+                options: ["صافٍ وجاف", "عاصف وممطر", "بارد وجاف", "حار وجاف"],
+                correct: 1,
+                explanation: "الضغط المنخفض يرتبط بالطقس العاصف والممطر، لأن الهواء الحار الخفيف يصعد للأعلى ويتكاثف."
+            },
+            {
+                sentence: "ما الأداة التي تقيس الرطوبة؟",
+                options: ["الترمومتر", "البارومتر", "الأنيمومتر", "الهيجرومتر"],
+                correct: 3,
+                explanation: "الهيجرومتر (Hygrometer) هو الأداة التي تقيس الرطوبة النسبية بوحدة النسبة المئوية (%)."
+            },
+            {
+                sentence: "ما أشكال التساقط؟",
+                options: [
+                    "المطر فقط",
+                    "المطر والثلج فقط",
+                    "المطر والثلج والبرد والندى والصقيع",
+                    "الثلج والبرد فقط"
+                ],
+                correct: 2,
+                explanation: "التساقط يشمل جميع أشكال المياه المتساقطة: المطر، الثلج، البرد، الندى، والصقيع."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

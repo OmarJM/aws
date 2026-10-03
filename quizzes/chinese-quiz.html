@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بنك الأسئلة الشامل - مادة اللغة الصينية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>中文测验 | بنك أسئلة اللغة الصينية | 1448هـ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة جداً جداً ببنك أسئلة اللغة الصينية فقط */
+        .chinese-text {
+            font-family: 'Noto Sans SC', 'Tajawal', sans-serif;
+            font-size: 1.3rem;
+            color: var(--subject-accent);
+            font-weight: 700;
+            direction: ltr;
+            display: inline-block;
+        }
+        [data-theme="dark"] .chinese-text { color: var(--subject-secondary); }
+
+        .result-chinese, .welcome-chinese {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.5rem;
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            direction: ltr;
+            font-weight: 700;
+        }
+        [data-theme="dark"] .result-chinese, 
+        [data-theme="dark"] .welcome-chinese { color: var(--subject-secondary); }
+        
+        .welcome-chinese { font-size: 2rem; }
+    </style>
+</head>
+<body class="quiz-page subject-chinese">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-yin-yang"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="../subjects/chinese.html">الصينية</a></li>
+                    <li><a href="chinese-quiz.html" class="active">بنك الأسئلة</a></li>
+                </ul>
+
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <div class="chinese-title">中文测验</div>
+            <h1><i class="fas fa-language"></i> بنك أسئلة اللغة الصينية</h1>
+            <div class="subtitle">✦ 第二中学 • 第一学期 • 1448 ✦</div>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | 1448هـ</p>
+        </div>
+
+        <!-- لوحة الإحصائيات -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <i class="fas fa-question-circle"></i>
+                <h3 id="totalQuestions">0</h3>
+                <p>إجمالي الأسئلة</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <h3 id="totalLessons">0</h3>
+                <p>عدد الوحدات</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-trophy"></i>
+                <h3 id="bestScore">-</h3>
+                <p>أفضل نتيجة</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-history"></i>
+                <h3 id="attemptsCount">0</h3>
+                <p>عدد المحاولات</p>
+            </div>
+        </div>
+
+        <!-- شاشة الترحيب -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <i class="fas fa-dragon"></i>
+            <div class="welcome-chinese">欢迎来到中文测验！</div>
+            <h2>مرحباً بك في بنك أسئلة اللغة الصينية</h2>
+            <p>اختبر مهاراتك في اللغة الصينية من خلال أسئلة متنوعة تغطي المفردات الأساسية، الأرقام، العائلة، المدرسة، الطعام، الهوايات، الوقت، والثقافة الصينية.</p>
+            
+            <div class="features-list">
+                <div class="feature-item"><i class="fas fa-check-circle"></i><span>تصحيح تلقائي فوري</span></div>
+                <div class="feature-item"><i class="fas fa-filter"></i><span>فلترة حسب الوحدة</span></div>
+                <div class="feature-item"><i class="fas fa-chart-line"></i><span>تتبع تقدمك</span></div>
+                <div class="feature-item"><i class="fas fa-random"></i><span>ترتيب عشوائي</span></div>
+            </div>
+        </div>
+
+        <!-- لوحة التحكم -->
+        <div class="control-panel">
+            <h2><i class="fas fa-sliders-h"></i> إعدادات الاختبار | 测验设置</h2>
+            
+            <div class="control-row">
+                <div class="control-group">
+                    <label><i class="fas fa-book"></i> اختر الوحدة | 选择单元:</label>
+                    <select id="lessonFilter">
+                        <option value="all">جميع الوحدات | 所有单元</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label><i class="fas fa-list-ol"></i> عدد الأسئلة | 问题数量:</label>
+                    <select id="questionCount">
+                        <option value="5">5 أسئلة</option>
+                        <option value="10" selected>10 أسئلة</option>
+                        <option value="15">15 سؤال</option>
+                        <option value="all">جميع الأسئلة</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label><i class="fas fa-random"></i> ترتيب الأسئلة | 顺序:</label>
+                    <select id="shuffleOption">
+                        <option value="yes">ترتيب عشوائي</option>
+                        <option value="no">الترتيب الأصلي</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-buttons">
+                <button class="btn btn-primary" onclick="startQuiz()">
+                    <i class="fas fa-play"></i> ابدأ الاختبار | 开始测验
+                </button>
+                <button class="btn btn-outline" onclick="QuizSystem.clearStats()">
+                    <i class="fas fa-eraser"></i> مسح الإحصائيات | 清除统计
+                </button>
+            </div>
+        </div>
+
+        <!-- منطقة الأسئلة -->
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <i class="fas fa-tasks"></i>
+                    <span id="progressText">تم الإجابة على 0 من 0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div id="questionsArea"></div>
+
+            <div class="control-buttons">
+                <button class="btn btn-success" onclick="QuizSystem.submit()">
+                    <i class="fas fa-check-circle"></i> تصحيح الإجابات | 检查答案
+                </button>
+            </div>
+        </div>
+
+        <!-- لوحة النتائج -->
+        <div class="results-panel" id="resultsPanel">
+            <div class="score-circle" id="scoreCircle">
+                <div class="score-number" id="scoreNumber">0%</div>
+                <div class="score-label" id="scoreLabel">النتيجة | 成绩</div>
+            </div>
+            
+            <div class="result-message" id="resultMessage">أحسنت!</div>
+            <div class="result-chinese" id="resultChinese">太棒了！</div>
+            <p id="resultDescription"></p>
+
+            <div class="result-details">
+                <div class="detail-item correct">
+                    <i class="fas fa-check-circle"></i>
+                    <h4 id="correctCount">0</h4>
+                    <p>إجابات صحيحة | 正确</p>
+                </div>
+                <div class="detail-item wrong">
+                    <i class="fas fa-times-circle"></i>
+                    <h4 id="wrongCount">0</h4>
+                    <p>إجابات خاطئة | 错误</p>
+                </div>
+                <div class="detail-item skipped">
+                    <i class="fas fa-minus-circle"></i>
+                    <h4 id="skippedCount">0</h4>
+                    <p>بدون إجابة | 未答</p>
+                </div>
+            </div>
+
+            <div class="control-buttons">
+                <button class="btn btn-primary" onclick="QuizSystem.review()">
+                    <i class="fas fa-eye"></i> مراجعة الإجابات | 查看答案
+                </button>
+                <button class="btn btn-warning" onclick="QuizSystem.reset()">
+                    <i class="fas fa-redo"></i> اختبار جديد | 新测验
+                </button>
+                <button class="btn btn-outline" onclick="window.location.href='../index.html'">
+                    <i class="fas fa-home"></i> العودة للرئيسية | 返回主页
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | منصة GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+    <script src="../js/quiz.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بتهيئة اختبار المادة فقط         -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'chinese';
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            // تعيين المادة الحالية للنظام
+            QuizSystem.setSubject(SUBJECT);
+            
+            // ملء قائمة الدروس ديناميكياً من بنك الأسئلة
+            const lessons = QuestionBank.getLessons(SUBJECT);
+            const select = document.getElementById('lessonFilter');
+            lessons.forEach(lesson => {
+                const option = document.createElement('option');
+                option.value = lesson;
+                option.textContent = lesson;
+                select.appendChild(option);
+            });
+            
+            // تحديث الإحصائيات الأولية
+            const stats = QuestionBank.getStats(SUBJECT);
+            document.getElementById('totalQuestions').textContent = stats.totalQuestions;
+            document.getElementById('totalLessons').textContent = stats.totalLessons;
+            QuizSystem.updateStatsDisplay();
+        });
+        
+        // دالة بدء الاختبار المخصصة لهذه الصفحة
+        function startQuiz() {
+            const lesson = document.getElementById('lessonFilter').value;
+            const countOption = document.getElementById('questionCount').value;
+            const shuffle = document.getElementById('shuffleOption').value === 'yes';
+            
+            const count = countOption === 'all' ? 999 : parseInt(countOption);
+            
+            const options = { shuffleOptions: shuffle };
+            if (lesson !== 'all') options.lesson = lesson;
+            
+            const questions = QuestionBank.getRandom(SUBJECT, count, options);
+            
+            if (questions.length === 0) {
+                alert('لا توجد أسئلة متاحة لهذا الخيار!');
+                return;
+            }
+            
+            QuizSystem.start(questions, SUBJECT);
+        }
+    </script>
+</body>
+</html>

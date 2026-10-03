@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ضرب الأعداد النسبية - قاعدة الضرب وإشارات الضرب والتبسيط - مادة الرياضيات">
+    <title>ضرب الأعداد النسبية | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(41, 128, 185, 0.08);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .math-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--subject-secondary);
+            margin: 15px 0;
+            text-align: center;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--subject-primary);
+            direction: ltr;
+        }
+        .math-box .fraction {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .math-box .fraction .num {
+            display: block;
+            border-bottom: 2px solid var(--subject-primary);
+            padding: 0 10px 3px;
+        }
+        .math-box .fraction .den {
+            display: block;
+            padding: 3px 10px 0;
+        }
+
+        .step-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .step-box h4 {
+            color: var(--subject-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .step-box .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--subject-primary);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .step-box .calculation {
+            font-family: 'Fira Code', monospace;
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            direction: ltr;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--subject-accent);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(41, 128, 185, 0.05);
+        }
+
+        .signs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .sign-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .sign-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .sign-card.positive { border-top: 5px solid var(--success-color); }
+        .sign-card.negative { border-top: 5px solid var(--error-color); }
+        .sign-card.mixed { border-top: 5px solid #e67e22; }
+        .sign-card .sign-symbol {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 10px 0;
+            font-family: 'Fira Code', monospace;
+        }
+        .sign-card.positive .sign-symbol { color: var(--success-color); }
+        .sign-card.negative .sign-symbol { color: var(--error-color); }
+        .sign-card.mixed .sign-symbol { color: #e67e22; }
+        .sign-card h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .sign-card.positive h4 { color: var(--success-color); }
+        .sign-card.negative h4 { color: var(--error-color); }
+        .sign-card.mixed h4 { color: #e67e22; }
+        .sign-card .example {
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            margin-top: 10px;
+            padding: 8px;
+            background: var(--card-bg);
+            border-radius: 6px;
+            direction: ltr;
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .problem {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            direction: ltr;
+        }
+        .example-card .solution {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong { color: var(--subject-primary); }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 15px 15px 15px 60px;
+            margin-bottom: 10px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border-right: 3px solid var(--subject-secondary);
+        }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--subject-primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Fira Code', monospace;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-family: 'Fira Code', monospace;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .signs-grid { grid-template-columns: 1fr; }
+            .math-box { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-calculator"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <a href="../../subjects/math.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات
+        </a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-times"></i> ضرب الأعداد النسبية</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا لا نحتاج إلى توحيد المقامات عند ضرب الكسور؟</strong>
+                <p style="margin-top: 10px;">على عكس الجمع والطرح، الضرب يتم مباشرة بضرب البسط في البسط والمقام في المقام، ثم التبسيط إن أمكن.</p>
+            </div>
+        </div>
+
+        <!-- أولاً: قاعدة ضرب الكسور -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: قاعدة ضرب الكسور</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الذهبية:</strong> لضرب كسرين، اضرب البسط في البسط، والمقام في المقام.
+            </div>
+
+            <div class="math-box">
+                <span class="fraction">
+                    <span class="num">a</span>
+                    <span class="den">b</span>
+                </span>
+                &nbsp; × &nbsp;
+                <span class="fraction">
+                    <span class="num">c</span>
+                    <span class="den">d</span>
+                </span>
+                &nbsp; = &nbsp;
+                <span class="fraction">
+                    <span class="num">a × c</span>
+                    <span class="den">b × d</span>
+                </span>
+                &nbsp; حيث b, d ≠ 0
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 مثال توضيحي:</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> احسب: <span style="font-family: 'Fira Code', monospace;">2/3 × 4/5</span></h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اضرب البسطين</h4>
+                    <div class="calculation">2 × 4 = 8</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب المقامين</h4>
+                    <div class="calculation">3 × 5 = 15</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <div class="calculation">2/3 × 4/5 = 8/15</div>
+                </div>
+
+                <div class="math-box">
+                    النتيجة النهائية: 8/15
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> نصيحة ذهبية:</h4>
+                <p>على عكس الجمع والطرح، <strong>لا تحتاج إلى توحيد المقامات</strong> عند الضرب! فقط اضرب مباشرة.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: إشارات الضرب -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-plus-minus"></i> ثانياً: قواعد إشارات الضرب</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الأساسية:</strong> إشارات الأعداد تحدد إشارة الناتج.
+            </div>
+
+            <div class="signs-grid">
+                <div class="sign-card positive">
+                    <h4>موجب × موجب</h4>
+                    <div class="sign-symbol">+ × + = +</div>
+                    <p>الناتج <strong>موجب</strong></p>
+                    <div class="example">3 × 4 = 12</div>
+                </div>
+                <div class="sign-card negative">
+                    <h4>سالب × سالب</h4>
+                    <div class="sign-symbol">− × − = +</div>
+                    <p>الناتج <strong>موجب</strong></p>
+                    <div class="example">(−3) × (−4) = 12</div>
+                </div>
+                <div class="sign-card mixed">
+                    <h4>موجب × سالب</h4>
+                    <div class="sign-symbol">+ × − = −</div>
+                    <p>الناتج <strong>سالب</strong></p>
+                    <div class="example">3 × (−4) = −12</div>
+                </div>
+                <div class="sign-card mixed">
+                    <h4>سالب × موجب</h4>
+                    <div class="sign-symbol">− × + = −</div>
+                    <p>الناتج <strong>سالب</strong></p>
+                    <div class="example">(−3) × 4 = −12</div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة سهلة للحفظ:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>الإشارات المتشابهة</strong> (+ مع + أو − مع −) ➔ الناتج <strong>موجب</strong></li>
+                    <li><strong>الإشارات المختلفة</strong> (+ مع −) ➔ الناتج <strong>سالب</strong></li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: احسب <span style="font-family: 'Fira Code', monospace;">(−5/6) × (−2/3)</span></h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الإشارة</h4>
+                    <p>سالب × سالب = <strong>موجب</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب القيم المطلقة</h4>
+                    <div class="calculation">(5 × 2) / (6 × 3) = 10/18</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> بسّط الكسر</h4>
+                    <div class="calculation">10/18 = 5/9 (بالقسمة على 2)</div>
+                </div>
+
+                <div class="math-box">
+                    النتيجة النهائية: 5/9
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: التبسيط قبل الضرب -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-compress-alt"></i> ثالثاً: التبسيط قبل الضرب</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> يمكنك التبسيط قبل الضرب لتسهيل الحسابات، بشرط أن يكون العامل المشترك بين بسط كسر ومقام الكسر الآخر.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 مثال: احسب <span style="font-family: 'Fira Code', monospace;">3/5 × 5/9</span></h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الطريقة الأولى: الضرب ثم التبسيط</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اضرب مباشرة</h4>
+                    <div class="calculation">(3 × 5) / (5 × 9) = 15/45</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بسّط (بالقسمة على 15)</h4>
+                    <div class="calculation">15/45 = 1/3</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الطريقة الثانية: التبسيط قبل الضرب (الأسهل!)</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن عوامل مشتركة</h4>
+                    <p>لاحظ أن <strong>5</strong> في البسط الأول = <strong>5</strong> في المقام الثاني ➔ احذفهما</p>
+                    <p>و <strong>3</strong> في البسط الثاني يقبل القسمة على <strong>3</strong> في البسط الأول ➔ 3÷3=1 و 9÷3=3</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب الأعداد المبسطة</h4>
+                    <div class="calculation">1/1 × 1/3 = 1/3</div>
+                </div>
+
+                <div class="math-box">
+                    النتيجة النهائية: 1/3
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> نصيحة ذهبية:</h4>
+                <p>التبسيط قبل الضرب <strong>أسهل وأسرع</strong> من التبسيط بعد الضرب، خاصة مع الأعداد الكبيرة!</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: ضرب الأعداد الكسرية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> رابعاً: ضرب الأعداد الكسرية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> حوّل العدد الكسري إلى كسر غير كسري أولاً، ثم اضرب.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 مثال: احسب <span style="font-family: 'Fira Code', monospace;">2⅓ × 3½</span></h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الحل خطوة بخطوة:</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الأعداد الكسرية إلى كسور</h4>
+                    <div class="calculation">2⅓ = (2×3+1)/3 = 7/3</div>
+                    <div class="calculation">3½ = (3×2+1)/2 = 7/2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب الكسرين</h4>
+                    <div class="calculation">7/3 × 7/2 = 49/6</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حوّل النتيجة إلى عدد كسري (اختياري)</h4>
+                    <div class="calculation">49 ÷ 6 = 8 والباقي 1 ➔ 8⅙</div>
+                </div>
+
+                <div class="math-box">
+                    النتيجة النهائية: 49/6 أو 8⅙
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> خطأ شائع جداً!</h4>
+                <p><strong>لا تضرب الأعداد الصحيحة مع بعضها والكسور مع بعضها!</strong></p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">2⅓ × 3½ = 6⅙</span></p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">2⅓ × 3½ = 8⅙</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: مسائل حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: مسائل حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-ruler-combined"></i> مثال 1: محيط المستطيل</h4>
+                <p><strong>المسألة:</strong> مستطيل طوله <span style="font-family: 'Fira Code', monospace;">4½</span> سم، وعرضه <span style="font-family: 'Fira Code', monospace;">2⅓</span> سم. أوجد محيطه.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> القانون</h4>
+                    <div class="calculation">المحيط = 2 × (الطول + العرض)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل الأعداد الكسرية</h4>
+                    <div class="calculation">4½ = 9/2 &nbsp;&nbsp;|&nbsp;&nbsp; 2⅓ = 7/3</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اجمع (بتوحيد المقامات)</h4>
+                    <div class="calculation">9/2 + 7/3 = 27/6 + 14/6 = 41/6</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> اضرب في 2</h4>
+                    <div class="calculation">2 × 41/6 = 82/6 = 41/3 = 13⅔</div>
+                </div>
+
+                <div class="math-box">
+                    المحيط = 13⅔ سم
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-car"></i> مثال 2: المسافة = السرعة × الزمن</h4>
+                <p><strong>المسألة:</strong> تسير سيارة بسرعة <span style="font-family: 'Fira Code', monospace;">80</span> كم/ساعة لمدة <span style="font-family: 'Fira Code', monospace;">2¼</span> ساعة. كم المسافة المقطوعة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل العدد الكسري</h4>
+                    <div class="calculation">2¼ = 9/4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب</h4>
+                    <div class="calculation">80 × 9/4 = 720/4 = 180</div>
+                </div>
+
+                <div class="math-box">
+                    المسافة = 180 كم
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: أسئلة مهمة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> سادساً: أسئلة مهمة للتفكير</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-think-peaks"></i> السؤال: ماذا يحدث عند ضرب عدد في كسر أقل من 1؟</h4>
+                <p>عند ضرب أي عدد (غير الصفر) في كسر <strong>أقل من 1</strong> (كسر حقيقي)، تكون النتيجة <strong>أصغر</strong> من العدد الأصلي.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><i class="fas fa-lightbulb"></i> مثال:</h4>
+                    <div class="calculation">10 × 1/2 = 5</div>
+                    <p style="text-align: center;">نلاحظ أن 5 < 10 ✓</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-think-peaks"></i> السؤال: ماذا يحدث عند ضرب عدد في كسر أكبر من 1؟</h4>
+                <p>عند ضرب أي عدد موجب في كسر <strong>أكبر من 1</strong> (عدد كسري)، تكون النتيجة <strong>أكبر</strong> من العدد الأصلي.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><i class="fas fa-lightbulb"></i> مثال:</h4>
+                    <div class="calculation">10 × 3/2 = 15</div>
+                    <p style="text-align: center;">نلاحظ أن 15 > 10 ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: جدول ملخص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> سابعاً: جدول ملخص لقواعد الضرب</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الحالة</th>
+                            <th>القاعدة</th>
+                            <th>مثال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>كسر × كسر</strong></td>
+                            <td>بسط × بسط / مقام × مقام</td>
+                            <td style="font-family: 'Fira Code', monospace;">2/3 × 4/5 = 8/15</td>
+                        </tr>
+                        <tr>
+                            <td><strong>عدد صحيح × كسر</strong></td>
+                            <td>اضرب العدد في البسط</td>
+                            <td style="font-family: 'Fira Code', monospace;">3 × 2/5 = 6/5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>عدد كسري × عدد كسري</strong></td>
+                            <td>حوّل إلى كسر أولاً ثم اضرب</td>
+                            <td style="font-family: 'Fira Code', monospace;">2⅓ × 3½ = 8⅙</td>
+                        </tr>
+                        <tr>
+                            <td><strong>إشارات متشابهة</strong></td>
+                            <td>الناتج موجب</td>
+                            <td style="font-family: 'Fira Code', monospace;">(−3) × (−4) = 12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>إشارات مختلفة</strong></td>
+                            <td>الناتج سالب</td>
+                            <td style="font-family: 'Fira Code', monospace;">3 × (−4) = −12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات هامة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 1: التبسيط قبل الضرب</h4>
+                <p>يمكنك التبسيط بين بسط كسر ومقام الكسر الآخر، <strong>ولكن ليس بين بسطين أو مقامين</strong>.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">3/5 × 5/9</span> (تبسيط 5 مع 5)</p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">3/5 × 5/9</span> (تبسيط 3 مع 5)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 2: الأعداد الكسرية</h4>
+                <p>لا تضرب الأعداد الصحيحة مع بعضها والكسور مع بعضها! حوّل أولاً إلى كسر غير كسري.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 3: تحليل الوحدات في المسائل</h4>
+                <p>في المسائل الحياتية، تأكد من أن الوحدات تتفق مع بعضها (كم/ساعة × ساعة = كم).</p>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة النشاط
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>قاعدة الضرب:</strong> بسط × بسط / مقام × مقام.</li>
+                <li><strong>لا حاجة لتوحيد المقامات</strong> عند الضرب (على عكس الجمع والطرح).</li>
+                <li><strong>إشارات الضرب:</strong>
+                    <ul style="padding-right: 20px; margin-top: 5px;">
+                        <li>متشابهة (+ مع + أو − مع −) ➔ الناتج موجب</li>
+                        <li>مختلفة (+ مع −) ➔ الناتج سالب</li>
+                    </ul>
+                </li>
+                <li><strong>التبسيط:</strong> يمكن التبسيط قبل الضرب بين بسط كسر ومقام الكسر الآخر.</li>
+                <li><strong>الأعداد الكسرية:</strong> حوّلها إلى كسور غير كسرية أولاً ثم اضرب.</li>
+                <li><strong>المسائل الحياتية:</strong> تأكد من الوحدات (المسافة = السرعة × الزمن).</li>
+                <li><strong>ضرب عدد في كسر أقل من 1:</strong> النتيجة أصغر من العدد الأصلي.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "احسب: 2/3 × 3/4",
+                options: ["6/12", "1/2", "2/4", "5/7"],
+                correct: 1,
+                explanation: "2/3 × 3/4 = 6/12 = 1/2 (بعد التبسيط بالقسمة على 6)."
+            },
+            {
+                sentence: "ما ناتج: (−5) × (−2/3)؟",
+                options: ["−10/3", "10/3", "−7/3", "7/3"],
+                correct: 1,
+                explanation: "سالب × سالب = موجب. (−5) × (−2/3) = 10/3."
+            },
+            {
+                sentence: "حوّل 1⅖ إلى كسر غير كسري:",
+                options: ["5/2", "7/5", "12/5", "2/5"],
+                correct: 1,
+                explanation: "1⅖ = (1×5+2)/5 = 7/5."
+            },
+            {
+                sentence: "احسب: 3/5 × 5/9 (باستخدام التبسيط)",
+                options: ["15/45", "1/3", "8/14", "3/9"],
+                correct: 1,
+                explanation: "بتبسيط 5 مع 5، و 3 مع 9 (يصبح 3): 1/1 × 1/3 = 1/3."
+            },
+            {
+                sentence: "إذا كان طول مستطيل 5½ سم وعرضه 2⅔ سم، فما مساحته؟",
+                options: ["14⅙ سم²", "15 سم²", "10 سم²", "7½ سم²"],
+                correct: 0,
+                explanation: "المساحة = الطول × العرض = 11/2 × 8/3 = 88/6 = 44/3 = 14⅔ سم². (تم التصحيح: الإجابة الصحيحة هي 14⅔)"
+            }
+        ];
+
+        // تصحيح السؤال الخامس
+        quizQuestions[4].correct = 0;
+        quizQuestions[4].explanation = "المساحة = الطول × العرض = 11/2 × 8/3 = 88/6 = 44/3 = 14⅔ سم².";
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            
+            let html = `
+                <div class="quiz-question">
+                    ${question.sentence}
+                </div>
+                <div class="quiz-options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${index})">${option}</div>`;
+            });
+            
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (answered[currentQuestion]) return;
+            
+            const question = quizQuestions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            answered[currentQuestion] = true;
+            
+            if (selectedIndex === question.correct) {
+                options[selectedIndex].classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${question.explanation}`;
+                score++;
+            } else {
+                options[selectedIndex].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${question.explanation}`;
+            }
+            
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            
+            const finalScore = document.getElementById('finalScore');
+            finalScore.style.display = 'block';
+            
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${percentage}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            
+            loadQuestion();
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

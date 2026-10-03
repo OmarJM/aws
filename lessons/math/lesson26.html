@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المعدل الثابت للتغير - فهم مفهوم الميل - مادة الرياضيات">
+    <title>المعدل الثابت للتغير (الميل) | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .slope-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .slope-visual svg { max-width: 100%; height: auto; }
+        .slope-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .slope-type { background: var(--bg-color); padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid var(--subject-primary); }
+        .slope-type.positive { border-top-color: #27ae60; }
+        .slope-type.negative { border-top-color: #e74c3c; }
+        .slope-type.zero { border-top-color: #3498db; }
+        .slope-type h4 { margin-bottom: 10px; }
+        .slope-type.positive h4 { color: #27ae60; }
+        .slope-type.negative h4 { color: #e74c3c; }
+        .slope-type.zero h4 { color: #3498db; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } .slope-types { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-chart-line"></i> المعدل الثابت للتغير (الميل)</h1>
+            <p>فهم مفهوم الميل كمعدل ثابت للتغير في العلاقات الخطية</p>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ما هو المعدل الثابت للتغير؟ ولماذا نسميه "الميل"؟</strong>
+                <p style="margin-top: 10px;">في العلاقات الخطية، يتغير y بمعدل ثابت بالنسبة لتغير x. هذا المعدل الثابت نسميه <strong>الميل (Slope)</strong>. الميل يخبرنا مدى انحدار أو ارتفاع الخط المستقيم، وهو أساسي في فهم العلاقات الرياضية والحياتية!</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو المعدل الثابت للتغير؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو المعدل الثابت للتغير؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> المعدل الثابت للتغير هو النسبة بين التغير في y والتغير في x بين أي نقطتين على الخط المستقيم.
+            </div>
+
+            <div class="math-box">
+                المعدل الثابت للتغير = (التغير في y) / (التغير في x) = Δy / Δx
+            </div>
+
+            <p style="margin: 15px 0; line-height: 1.8;">
+                حيث:
+            </p>
+            <ul style="padding-right: 20px; line-height: 2;">
+                <li><strong>Δy (دلتا y):</strong> الفرق في قيم y = y₂ - y₁</li>
+                <li><strong>Δx (دلتا x):</strong> الفرق في قيم x = x₂ - x₁</li>
+            </ul>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> مثال من الحياة</h3>
+                    <p><strong>سرعة السيارة:</strong> إذا قطعت سيارة 60 كم في ساعة واحدة، و 120 كم في ساعتين، و 180 كم في 3 ساعات...</p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        المعدل = 60/1 = 120/2 = 180/3 = 60 كم/ساعة
+                    </div>
+                    <p style="text-align: center;">المعدل <strong>ثابت</strong> = 60 كم/ساعة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-times-circle"></i> مثال غير ثابت</h3>
+                    <p><strong>نمو الطفل:</strong> ينمو الطفل 5 سم في السنة الأولى، 8 سم في الثانية، 6 سم في الثالثة...</p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        5/1 ≠ 8/2 ≠ 6/3
+                    </div>
+                    <p style="text-align: center;">المعدل <strong>غير ثابت</strong></p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> القاعدة الذهبية:</h4>
+                <p>إذا كان المعدل الثابت للتغير <strong>ثابتاً</strong> بين أي نقطتين، فالعلاقة <strong>خطية</strong> وتمثل بخط مستقيم.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: الميل (Slope) -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-mountain"></i> ثانياً: الميل (Slope)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الميل = المعدل الثابت للتغير</strong>
+            </div>
+
+            <p style="margin-bottom: 20px;">الميل (m) هو مقياس لانحدار الخط المستقيم، ويُحسب بالصيغة:</p>
+
+            <div class="math-box" style="font-size: 1.5rem;">
+                m = (y₂ - y₁) / (x₂ - x₁)
+            </div>
+
+            <p style="text-align: center; margin: 15px 0;">
+                حيث (x₁, y₁) و (x₂, y₂) هما أي نقطتين على الخط المستقيم
+            </p>
+
+            <div class="slope-visual">
+                <h4 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> تمثيل بصري للميل</h4>
+                <svg width="400" height="300" viewBox="0 0 400 300">
+                    <!-- المحاور -->
+                    <line x1="50" y1="250" x2="350" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="50" y1="50" x2="50" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- تسميات المحاور -->
+                    <text x="360" y="255" font-family="Tajawal" font-size="14" font-weight="700" fill="#2c3e50">x</text>
+                    <text x="40" y="40" font-family="Tajawal" font-size="14" font-weight="700" fill="#2c3e50">y</text>
+                    
+                    <!-- الخط المستقيم -->
+                    <line x1="80" y1="220" x2="320" y2="100" stroke="#2980b9" stroke-width="3"/>
+                    
+                    <!-- النقاط -->
+                    <circle cx="80" cy="220" r="6" fill="#e74c3c"/>
+                    <circle cx="320" cy="100" r="6" fill="#e74c3c"/>
+                    
+                    <!-- تسميات النقاط -->
+                    <text x="60" y="240" font-family="Fira Code" font-size="12" fill="#e74c3c">(1, 2)</text>
+                    <text x="300" y="90" font-family="Fira Code" font-size="12" fill="#e74c3c">(5, 4)</text>
+                    
+                    <!-- مثلث الميل -->
+                    <line x1="80" y1="220" x2="320" y2="220" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+                    <line x1="320" y1="220" x2="320" y2="100" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+                    
+                    <!-- تسميات Δx و Δy -->
+                    <text x="200" y="240" font-family="Fira Code" font-size="13" fill="#27ae60" text-anchor="middle">Δx = 4</text>
+                    <text x="340" y="160" font-family="Fira Code" font-size="13" fill="#27ae60">Δy = 2</text>
+                    
+                    <!-- حساب الميل -->
+                    <text x="200" y="280" font-family="Fira Code" font-size="14" fill="#2980b9" text-anchor="middle" font-weight="700">m = Δy/Δx = 2/4 = 0.5</text>
+                </svg>
+            </div>
+
+            <div class="slope-types">
+                <div class="slope-type positive">
+                    <h4><i class="fas fa-arrow-up"></i> ميل موجب</h4>
+                    <p>الخط يرتفع من اليسار إلى اليمين</p>
+                    <div class="math-box" style="font-size: 1rem;">m > 0</div>
+                </div>
+                <div class="slope-type negative">
+                    <h4><i class="fas fa-arrow-down"></i> ميل سالب</h4>
+                    <p>الخط ينخفض من اليسار إلى اليمين</p>
+                    <div class="math-box" style="font-size: 1rem;">m < 0</div>
+                </div>
+                <div class="slope-type zero">
+                    <h4><i class="fas fa-minus"></i> ميل صفر</h4>
+                    <p>الخط أفقي (مستوى)</p>
+                    <div class="math-box" style="font-size: 1rem;">m = 0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: حساب الميل من الجدول -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> ثالثاً: حساب الميل من الجدول</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: جدول بمعدل ثابت</h4>
+                <p><strong>المسألة:</strong> احسب الميل من الجدول التالي:</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>x (الزمن بالساعات)</th>
+                                <th>y (المسافة بالكم)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>60</td></tr>
+                            <tr><td>2</td><td>120</td></tr>
+                            <tr><td>3</td><td>180</td></tr>
+                            <tr><td>4</td><td>240</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اختر أي نقطتين</h4>
+                    <div class="calculation">النقطة الأولى: (1, 60)</div>
+                    <div class="calculation">النقطة الثانية: (2, 120)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب Δy و Δx</h4>
+                    <div class="calculation">Δy = 120 - 60 = 60</div>
+                    <div class="calculation">Δx = 2 - 1 = 1</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الميل</h4>
+                    <div class="calculation">m = Δy / Δx = 60 / 1 = 60</div>
+                </div>
+
+                <div class="math-box">
+                    الميل = 60 كم/ساعة
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: التحقق من ثبات الميل</h4>
+                <p><strong>المسألة:</strong> هل الميل ثابت في الجدول التالي؟</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>x</th>
+                                <th>y</th>
+                                <th>الميل بين النقاط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0</td><td>2</td><td>-</td></tr>
+                            <tr><td>1</td><td>5</td><td>(5-2)/(1-0) = 3</td></tr>
+                            <tr><td>2</td><td>8</td><td>(8-5)/(2-1) = 3</td></tr>
+                            <tr><td>3</td><td>11</td><td>(11-8)/(3-2) = 3</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب الميل بين كل نقطتين متتاليتين</h4>
+                    <div class="calculation">بين (0,2) و (1,5): m = 3</div>
+                    <div class="calculation">بين (1,5) و (2,8): m = 3</div>
+                    <div class="calculation">بين (2,8) و (3,11): m = 3</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن النتائج</h4>
+                    <p style="text-align: center;">جميع قيم الميل = 3 (ثابتة)</p>
+                </div>
+
+                <div class="solution">✅ الميل ثابت = 3، والعلاقة خطية</div>
+            </div>
+        </div>
+
+        <!-- رابعاً: حساب الميل من الرسم البياني -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> رابعاً: حساب الميل من الرسم البياني</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: حساب الميل من الرسم</h4>
+                <p><strong>المسألة:</strong> احسب ميل الخط المستقيم الذي يمر بالنقطتين (2, 3) و (6, 11).</p>
+                
+                <div class="slope-visual" style="margin: 15px 0;">
+                    <svg width="350" height="250" viewBox="0 0 350 250">
+                        <!-- المحاور -->
+                        <line x1="40" y1="220" x2="320" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                        <line x1="40" y1="30" x2="40" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                        
+                        <!-- الخط المستقيم -->
+                        <line x1="100" y1="180" x2="260" y2="60" stroke="#2980b9" stroke-width="3"/>
+                        
+                        <!-- النقاط -->
+                        <circle cx="100" cy="180" r="6" fill="#e74c3c"/>
+                        <circle cx="260" cy="60" r="6" fill="#e74c3c"/>
+                        
+                        <!-- تسميات النقاط -->
+                        <text x="80" y="200" font-family="Fira Code" font-size="11" fill="#e74c3c">(2, 3)</text>
+                        <text x="240" y="50" font-family="Fira Code" font-size="11" fill="#e74c3c">(6, 11)</text>
+                        
+                        <!-- مثلث الميل -->
+                        <line x1="100" y1="180" x2="260" y2="180" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+                        <line x1="260" y1="180" x2="260" y2="60" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <text x="180" y="200" font-family="Fira Code" font-size="12" fill="#27ae60" text-anchor="middle">Δx = 4</text>
+                        <text x="280" y="120" font-family="Fira Code" font-size="12" fill="#27ae60">Δy = 8</text>
+                    </svg>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">(x₁, y₁) = (2, 3)</div>
+                    <div class="calculation">(x₂, y₂) = (6, 11)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق صيغة الميل</h4>
+                    <div class="calculation">m = (y₂ - y₁) / (x₂ - x₁)</div>
+                    <div class="calculation">m = (11 - 3) / (6 - 2)</div>
+                    <div class="calculation">m = 8 / 4 = 2</div>
+                </div>
+
+                <div class="math-box">
+                    الميل = 2
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: ميل سالب</h4>
+                <p><strong>المسألة:</strong> احسب ميل الخط الذي يمر بالنقطتين (1, 8) و (4, 2).</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">(x₁, y₁) = (1, 8)</div>
+                    <div class="calculation">(x₂, y₂) = (4, 2)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">m = (2 - 8) / (4 - 1)</div>
+                    <div class="calculation">m = -6 / 3 = -2</div>
+                </div>
+
+                <div class="math-box">
+                    الميل = -2 (سالب، الخط ينخفض)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: ميل صفر (خط أفقي)</h4>
+                <p><strong>المسألة:</strong> احسب ميل الخط الذي يمر بالنقطتين (2, 5) و (7, 5).</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد النقطتين</h4>
+                    <div class="calculation">(x₁, y₁) = (2, 5)</div>
+                    <div class="calculation">(x₂, y₂) = (7, 5)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">m = (5 - 5) / (7 - 2)</div>
+                    <div class="calculation">m = 0 / 5 = 0</div>
+                </div>
+
+                <div class="math-box">
+                    الميل = 0 (خط أفقي)
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: معادلة الخط المستقيم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> خامساً: معادلة الخط المستقيم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الصيغة العامة:</strong> y = mx + b
+            </div>
+
+            <p style="margin-bottom: 20px;">حيث:</p>
+            <ul style="padding-right: 20px; line-height: 2;">
+                <li><strong>m:</strong> الميل (المعدل الثابت للتغير)</li>
+                <li><strong>b:</strong> الجزء المقطوع من محور y (قيمة y عندما x = 0)</li>
+                <li><strong>x:</strong> المتغير المستقل</li>
+                <li><strong>y:</strong> المتغير التابع</li>
+            </ul>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: إيجاد معادلة الخط</h4>
+                <p><strong>المسألة:</strong> خط مستقيم ميله 3 ويقطع محور y عند النقطة (0, 2). اكتب معادلته.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 3</div>
+                    <div class="calculation">b = 2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عوض في الصيغة</h4>
+                    <div class="calculation">y = mx + b</div>
+                    <div class="calculation">y = 3x + 2</div>
+                </div>
+
+                <div class="math-box">
+                    معادلة الخط: y = 3x + 2
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 7: إيجاد الميل والجزء المقطوع</h4>
+                <p><strong>المسألة:</strong> من المعادلة y = -2x + 5، أوجد الميل والجزء المقطوع من محور y.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> قارن مع الصيغة العامة y = mx + b</h4>
+                    <div class="calculation">m = -2</div>
+                    <div class="calculation">b = 5</div>
+                </div>
+
+                <div class="math-box">
+                    الميل = -2، الجزء المقطوع = 5
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-taxi"></i> مثال 8: أجرة التاكسي</h4>
+                <p><strong>المسألة:</strong> أجرة التاكسي 5 ريالات للبداية، و 2 ريال لكل كيلومتر. اكتب معادلة التكلفة واحسب تكلفة رحلة 10 كم.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الميل والجزء المقطوع</h4>
+                    <div class="calculation">m = 2 (ريال/كم)</div>
+                    <div class="calculation">b = 5 (ريالات)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اكتب المعادلة</h4>
+                    <div class="calculation">y = 2x + 5</div>
+                    <p>حيث y = التكلفة، x = المسافة بالكم</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب تكلفة 10 كم</h4>
+                    <div class="calculation">y = 2(10) + 5 = 20 + 5 = 25 ريال</div>
+                </div>
+
+                <div class="math-box">
+                    التكلفة = 25 ريال
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-water"></i> مثال 9: ملء خزان ماء</h4>
+                <p><strong>المسألة:</strong> خزان يحتوي على 50 لتر ماء، ويُملأ بمعدل 10 لتر/دقيقة. اكتب معادلة حجم الماء واحسب الحجم بعد 7 دقائق.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 10 (لتر/دقيقة)</div>
+                    <div class="calculation">b = 50 (لتر)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اكتب المعادلة</h4>
+                    <div class="calculation">y = 10x + 50</div>
+                    <p>حيث y = الحجم باللتر، x = الزمن بالدقائق</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الحجم بعد 7 دقائق</h4>
+                    <div class="calculation">y = 10(7) + 50 = 70 + 50 = 120 لتر</div>
+                </div>
+
+                <div class="math-box">
+                    الحجم بعد 7 دقائق = 120 لتر
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-mobile-alt"></i> مثال 10: باقة الهاتف</h4>
+                <p><strong>المسألة:</strong> باقة هاتف تكلف 30 ريالاً شهرياً + 0.5 ريال لكل دقيقة اتصال. إذا استخدمت 40 دقيقة، فكم تدفع؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المعادلة</h4>
+                    <div class="calculation">y = 0.5x + 30</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عوض عن x = 40</h4>
+                    <div class="calculation">y = 0.5(40) + 30 = 20 + 30 = 50 ريال</div>
+                </div>
+
+                <div class="math-box">
+                    التكلفة = 50 ريال
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: عكس البسط والمقام</h4>
+                <p>الميل = Δy / Δx (وليس Δx / Δy)</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">m = (11-3)/(6-2) = 8/4 = 2</span></p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">m = (6-2)/(11-3) = 4/8 = 0.5</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: طرح الإحداثيات بترتيب خاطئ</h4>
+                <p>يجب أن يكون الطرح بنفس الترتيب: (y₂ - y₁) و (x₂ - x₁)</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: القسمة على صفر</h4>
+                <p>إذا كان x₂ = x₁ (خط عمودي)، فالميل <strong>غير معرّف</strong> (لا يمكن القسمة على صفر).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان الوحدات</h4>
+                <p>الميل له وحدات! مثال: كم/ساعة، ريال/كم، لتر/دقيقة...</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المعدل الثابت للتغير:</strong> النسبة بين التغير في y والتغير في x.</li>
+                <li><strong>الميل (m):</strong> = (y₂ - y₁) / (x₂ - x₁)</li>
+                <li><strong>ميل موجب:</strong> الخط يرتفع من اليسار لليمين.</li>
+                <li><strong>ميل سالب:</strong> الخط ينخفض من اليسار لليمين.</li>
+                <li><strong>ميل صفر:</strong> خط أفقي.</li>
+                <li><strong>ميل غير معرّف:</strong> خط عمودي (القسمة على صفر).</li>
+                <li><strong>معادلة الخط:</strong> y = mx + b</li>
+                <li><strong>التطبيقات:</strong> السرعة، التكلفة، النمو، إلخ.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "احسب الميل بين النقطتين (1, 3) و (4, 9):",
+                options: ["2", "3", "4", "6"],
+                correct: 0,
+                explanation: "m = (9-3)/(4-1) = 6/3 = 2"
+            },
+            {
+                sentence: "إذا كان الميل سالباً، فالخط:",
+                options: ["يرتفع من اليسار لليمين", "ينخفض من اليسار لليمين", "أفقي", "عمودي"],
+                correct: 1,
+                explanation: "الميل السالب يعني أن الخط ينخفض من اليسار إلى اليمين."
+            },
+            {
+                sentence: "ما ميل الخط الأفقي y = 5؟",
+                options: ["0", "1", "5", "غير معرّف"],
+                correct: 0,
+                explanation: "الخط الأفقي له ميل = 0 لأن Δy = 0."
+            },
+            {
+                sentence: "من المعادلة y = 3x + 7، ما قيمة الميل؟",
+                options: ["3", "7", "10", "21"],
+                correct: 0,
+                explanation: "في y = mx + b، الميل m = 3."
+            },
+            {
+                sentence: "سيارة تقطع 100 كم في ساعتين. ما معدل التغير (السرعة)؟",
+                options: ["25 كم/ساعة", "50 كم/ساعة", "100 كم/ساعة", "200 كم/ساعة"],
+                correct: 1,
+                explanation: "المعدل = 100/2 = 50 كم/ساعة."
+            },
+            {
+                sentence: "ما ميل الخط العمودي x = 4؟",
+                options: ["0", "1", "4", "غير معرّف"],
+                correct: 3,
+                explanation: "الخط العمودي له ميل غير معرّف لأن Δx = 0 (القسمة على صفر)."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

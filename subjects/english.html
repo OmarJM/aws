@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة اللغة الإنجليزية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>اللغة الإنجليزية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية وإنجليزية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+</head>
+<body class="subject-english">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-language"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="english.html" class="active">English</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="../quizzes/english-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="Search lessons..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <div class="english-title">English Language</div>
+            <h1><i class="fas fa-book-reader"></i> مادة اللغة الإنجليزية</h1>
+            <div class="subtitle">✦ SUPER GOAL 2 ✦ FIRST SEMESTER ✦ 1448H ✦</div>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- سيتم بناء الأقسام والدروس هنا ديناميكياً بواسطة JavaScript -->
+        <div id="lessonsContainer"></div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك في اللغة الإنجليزية (تصحيح تلقائي)</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Test your English skills with these questions!</p>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/english-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة اللغة الإنجليزية فقط      -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'english';
+        
+        // بيانات دروس اللغة الإنجليزية مقسمة حسب الأقسام
+        const LESSONS_DATA = [
+            // القسم الأول
+            { section: 'section1', title: 'الوحدة الأولى', english: 'Are you here on vacation?', desc: 'التحية، السؤال عن البلد، مفردات السفر والسياحة، واستخدام Verb to be.', videoId: 'Ixy3Yt0TAXc', image: 'lesson1.jpg', pdf: 'lesson1.pdf', badge: 'Unit 1' },
+            { section: 'section1', title: 'الوحدة الثانية', english: 'What are they making?', desc: 'المضارع المستمر (Present Continuous)، وصف الأنشطة الجارية الآن.', videoId: 'JshBL_mT-SA', image: 'lesson2.jpg', pdf: 'lesson2.pdf', badge: 'Unit 2' },
+            { section: 'section1', title: 'الوحدة الثالثة', english: "Who's who?", desc: 'الضمائر، السؤال عن الأشخاص، المهن، وجمع الأسماء الشاذة.', videoId: 'TUkh2F_GLk8', image: 'lesson3.jpg', pdf: 'lesson3.pdf', badge: 'Unit 3' },
+            
+            // القسم الثاني
+            { section: 'section2', title: 'الوحدة الرابعة', english: 'Favourite pastimes', desc: 'الهوايات المفضلة، استخدام Gerund بعد أفعال مثل enjoy, like, love.', videoId: 'R_t_ZLgcuNo', image: 'lesson4.jpg', pdf: 'lesson4.pdf', badge: 'Unit 4' },
+            { section: 'section2', title: 'الوحدة الخامسة', english: 'Is there any ice cream?', desc: 'some/any، الأسماء المعدودة وغير المعدودة، واستخدام There is/are.', videoId: 'J5kg9U4OVjM', image: 'lesson5.jpg', pdf: 'lesson5.pdf', badge: 'Unit 5' },
+            { section: 'section2', title: 'الوحدة السادسة', english: 'What was it like?', desc: 'الماضي البسيط (Past Simple)، الأفعال الشاذة، والتحدث عن الأحداث الماضية.', videoId: 'mq8xZJ_KaxE', image: 'lesson6.jpg', pdf: 'lesson6.pdf', badge: 'Unit 6' },
+            
+            // القسم الثالث
+            { section: 'section3', title: 'ساعة التأسيس: كيف تبدأ بتعلم الإنجليزية من الصفر؟', english: 'How to start learning English?', desc: 'خطوات تعلم اللغة الإنجليزية للمبتدئين، وأساسيات النطق والقراءة.', videoId: 'SPdG0qlveio', image: 'lesson7.jpg', pdf: 'lesson7.pdf', badge: 'Foundation' },
+            { section: 'section3', title: 'الدرس الأول للمبتدئين', english: 'English for Beginners - Lesson 1', desc: 'التعريف بالنفس، السؤال عن الاسم والعمر، والمهن الأساسية.', videoId: 'awVFGdQmDJA', image: 'lesson8.jpg', pdf: 'lesson8.pdf', badge: 'Foundation' },
+            { section: 'section3', title: 'الدرس الثاني للمبتدئين', english: 'Name, Age, and Occupation', desc: 'التعمق في التعريف بالنفس: الاسم، العمر، المهنة، والبلد.', videoId: 'F3LH9ZBxhSU', image: 'lesson9.jpg', pdf: 'lesson9.pdf', badge: 'Foundation' }
+        ];
+        
+        // بناء الأقسام وبطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            const sections = [
+                { id: 'section1', title: 'القسم الأول: الوحدات الأساسية (Units 1-3)', icon: 'fas fa-book' },
+                { id: 'section2', title: 'القسم الثاني: الوحدات المتقدمة (Units 4-6)', icon: 'fas fa-book-open' },
+                { id: 'section3', title: 'القسم الثالث: دروس تأسيسية (Foundation)', icon: 'fas fa-graduation-cap' }
+            ];
+            
+            sections.forEach(sec => {
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerHTML = `<i class="${sec.icon}"></i><span>${sec.title}</span>`;
+                container.appendChild(sectionTitle);
+                
+                const grid = document.createElement('div');
+                grid.className = 'lessons-grid';
+                grid.id = sec.id;
+                container.appendChild(grid);
+            });
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const grid = document.getElementById(lesson.section);
+                if (!grid) return;
+                
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title + ' ' + lesson.english);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/1e3a8a/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <span class="section-badge">${lesson.badge}</span>
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        ${lesson.english ? `<div class="lesson-english">${lesson.english}</div>` : ''}
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> Check Answers
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> Excellent! نتيجتك: ${score} من ${questions.length}. Perfect!`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> Very Good! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. Keep practicing!`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

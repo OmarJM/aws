@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الحرارة ودرجة الحرارة والحرارة النوعية - مادة العلوم - الصف الثاني المتوسط">
+    <title>الحرارة ودرجة الحرارة والحرارة النوعية | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #e67e22, #f39c12); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #e67e22; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f39c12; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(230, 126, 34, 0.08); border-right: 4px solid #e67e22; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #e67e22; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #f39c12; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #e67e22; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #e67e22; margin: 15px 0; }
+        .step-box h4 { color: #e67e22; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #e67e22; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: #f39c12; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #e67e22; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(230, 126, 34, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #e67e22; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #f39c12; margin-bottom: 15px; }
+        .example-card h4 { color: #e67e22; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #f39c12; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #e67e22; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #e67e22; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(230, 126, 34, 0.05), rgba(243, 156, 18, 0.05)); border: 2px dashed #e67e22; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #e67e22; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #e67e22; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #e67e22; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #e67e22; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #e67e22; color: #e67e22; }
+        .thermometer-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .thermometer-visual svg { max-width: 100%; height: auto; }
+        .formula-card { background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(243, 156, 18, 0.1)); border: 2px solid #e67e22; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .formula-card .main-formula { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 800; color: #e67e22; margin: 15px 0; direction: ltr; }
+        .comparison-table { background: var(--bg-color); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .comparison-table h4 { color: #e67e22; margin-bottom: 15px; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-thermometer-half"></i> الحرارة ودرجة الحرارة والحرارة النوعية</h1>
+            <p>الفرق بين الحرارة ودرجة الحرارة، ومفهوم الحرارة النوعية</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل الحرارة ودرجة الحرارة شيئان متشابهان؟</strong>
+                <p style="margin-top: 10px;">كثير من الناس يخلطون بين الحرارة ودرجة الحرارة، لكنهما مفهومان مختلفان تماماً! في هذا الدرس، سنتعلم الفرق بينهما، ونفهم مفهوم الحرارة النوعية الذي يفسر لماذا تسخن بعض المواد أسرع من غيرها.</p>
+            </div>
+
+            <div class="thermometer-visual">
+                <h4 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مثال توضيحي</h4>
+                <svg width="500" height="200" viewBox="0 0 500 200">
+                    <!-- كوب صغير -->
+                    <rect x="50" y="80" width="80" height="100" fill="rgba(231, 76, 60, 0.2)" stroke="#e74c3c" stroke-width="2" rx="5"/>
+                    <text x="90" y="70" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">كوب صغير</text>
+                    <text x="90" y="140" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle">100 مل ماء</text>
+                    <text x="90" y="160" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle">90°C</text>
+                    
+                    <!-- سهم -->
+                    <line x1="150" y1="130" x2="200" y2="130" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="175" y="120" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle">نفس درجة الحرارة</text>
+                    
+                    <!-- حوض كبير -->
+                    <rect x="220" y="60" width="200" height="120" fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="2" rx="5"/>
+                    <text x="320" y="50" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">حوض استحمام</text>
+                    <text x="320" y="130" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle">100 لتر ماء</text>
+                    <text x="320" y="150" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle">90°C</text>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top: 15px; font-size: 1rem;">
+                    <strong>السؤال:</strong> أيهما يحتوي على طاقة حرارية أكبر؟ (الإجابة: الحوض، لأنه يحتوي على كمية ماء أكبر!)
+                </p>
+            </div>
+        </div>
+
+        <!-- أولاً: الفرق بين الحرارة ودرجة الحرارة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> أولاً: الفرق بين الحرارة ودرجة الحرارة</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-fire"></i> الحرارة (Heat)</h3>
+                    <p><strong>التعريف:</strong> الطاقة التي تنتقل من الجسم الأعلى درجة حرارة إلى الجسم الأقل درجة حرارة.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li><strong>نوعها:</strong> طاقة</li>
+                        <li><strong>وحدة قياسها:</strong> الجول (J)</li>
+                        <li><strong>تعتمد على:</strong> الكتلة ودرجة الحرارة ونوع المادة</li>
+                        <li><strong>مثال:</strong> كمية الطاقة في كوب الشاي</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-thermometer-half"></i> درجة الحرارة (Temperature)</h3>
+                    <p><strong>التعريف:</strong> مقياس لمتوسط الطاقة الحركية لجزيئات المادة.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li><strong>نوعها:</strong> مقياس (ليست طاقة)</li>
+                        <li><strong>وحدة قياسها:</strong> السيليزي (°C) أو الكلفن (K)</li>
+                        <li><strong>تعتمد على:</strong> متوسط سرعة الجزيئات فقط</li>
+                        <li><strong>مثال:</strong> قراءة ميزان الحرارة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+                <h4><i class="fas fa-table"></i> جدول المقارنة الشامل</h4>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>وجه المقارنة</th>
+                            <th style="background: #e74c3c;">الحرارة</th>
+                            <th style="background: #3498db;">درجة الحرارة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>التعريف</strong></td>
+                            <td>طاقة تنتقل بين الأجسام</td>
+                            <td>مقياس لمتوسط الطاقة الحركية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الوحدة</strong></td>
+                            <td>الجول (J)</td>
+                            <td>السيليزي (°C) أو الكلفن (K)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الاعتماد على الكتلة</strong></td>
+                            <td>نعم ✓</td>
+                            <td>لا ✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الاتجاه</strong></td>
+                            <td>من الأعلى للأقل درجة حرارة</td>
+                            <td>لا اتجاه لها</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الأداة</strong></td>
+                            <td>مسعر الحرارة</td>
+                            <td>ميزان الحرارة (ثرمومتر)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تشبيه بسيط للفهم:</h4>
+                <p>تخيل أن <strong>درجة الحرارة</strong> مثل <strong>سرعة السيارات</strong> على الطريق، بينما <strong>الحرارة</strong> مثل <strong>الطاقة الكلية</strong> لجميع السيارات.</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>طريق به 10 سيارات سريعة = درجة حرارة عالية، حرارة متوسطة</li>
+                    <li>طريق به 1000 سيارة سريعة = نفس درجة الحرارة، لكن حرارة أكبر بكثير!</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: مفهوم الحرارة النوعية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-atom"></i> ثانياً: مفهوم الحرارة النوعية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الحرارة النوعية هي كمية الحرارة اللازمة لرفع درجة حرارة 1 جرام من المادة بمقدار 1 درجة سيليزية.
+            </div>
+
+            <div class="formula-card">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">صيغة حساب الحرارة:</p>
+                <div class="main-formula">
+                    Q = m × c × ΔT
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    حيث: Q = الحرارة (جول)، m = الكتلة (جرام)، c = الحرارة النوعية (جول/جرام.°C)، ΔT = التغير في درجة الحرارة (°C)
+                </p>
+            </div>
+
+            <div class="three-columns">
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-tint"></i> الماء</h3>
+                    <p><strong>الحرارة النوعية:</strong> 4.18 جول/جرام.°C</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يحتاج طاقة كبيرة لتسخينه، ويحتفظ بالحرارة طويلاً</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #95a5a6;">
+                    <h3 style="color: #95a5a6;"><i class="fas fa-cube"></i> الحديد</h3>
+                    <p><strong>الحرارة النوعية:</strong> 0.45 جول/جرام.°C</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يسخن بسرعة ويبرد بسرعة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-coins"></i> النحاس</h3>
+                    <p><strong>الحرارة النوعية:</strong> 0.39 جول/جرام.°C</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يستخدم في أواني الطبخ لنقله السريع للحرارة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال توضيحي: لماذا يسخن الرمل أسرع من الماء؟</h4>
+                <p><strong>الملاحظة:</strong> على الشاطئ، الرمل حار جداً بينما الماء بارد نسبياً، رغم تعرضهما لنفس أشعة الشمس!</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الحرارة النوعية للرمل</h4>
+                    <div class="calculation">c = 0.84 جول/جرام.°C (منخفضة)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحرارة النوعية للماء</h4>
+                    <div class="calculation">c = 4.18 جول/جرام.°C (عالية)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الاستنتاج</h4>
+                    <p>الماء يحتاج طاقة أكبر بـ 5 مرات لتسخينه بنفس مقدار الرمل!</p>
+                </div>
+
+                <div class="solution">✅ الرمل يسخن أسرع لأن حرارته النوعية أقل</div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: حساب الحرارة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> ثالثاً: حساب الحرارة المنقولة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الصيغة:</strong> Q = m × c × ΔT
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: تسخين الماء</h4>
+                <p><strong>المسألة:</strong> كم حرارة نحتاج لتسخين 200 جرام من الماء من 20°C إلى 80°C؟ (الحرارة النوعية للماء = 4.18 جول/جرام.°C)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 200 جرام</div>
+                    <div class="calculation">c = 4.18 جول/جرام.°C</div>
+                    <div class="calculation">ΔT = 80 - 20 = 60°C</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">Q = m × c × ΔT</div>
+                    <div class="calculation">Q = 200 × 4.18 × 60</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الناتج</h4>
+                    <div class="calculation">Q = 50,160 جول = 50.16 كيلوجول</div>
+                </div>
+
+                <div class="math-box">
+                    الحرارة المطلوبة = 50,160 جول
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: تبريد الحديد</h4>
+                <p><strong>المسألة:</strong> قطعة حديد كتلتها 500 جرام، بردت من 200°C إلى 50°C. كم حرارة فقدتها؟ (الحرارة النوعية للحديد = 0.45 جول/جرام.°C)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 500 جرام</div>
+                    <div class="calculation">c = 0.45 جول/جرام.°C</div>
+                    <div class="calculation">ΔT = 200 - 50 = 150°C</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">Q = 500 × 0.45 × 150</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الناتج</h4>
+                    <div class="calculation">Q = 33,750 جول = 33.75 كيلوجول</div>
+                </div>
+
+                <div class="math-box">
+                    الحرارة المفقودة = 33,750 جول
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: إيجاد الحرارة النوعية</h4>
+                <p><strong>المسألة:</strong> إذا احتاج 100 جرام من مادة مجهولة إلى 2,090 جول لرفع حرارتها من 20°C إلى 70°C، فما حرارتها النوعية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 100 جرام</div>
+                    <div class="calculation">Q = 2,090 جول</div>
+                    <div class="calculation">ΔT = 70 - 20 = 50°C</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أعد ترتيب الصيغة</h4>
+                    <div class="calculation">c = Q ÷ (m × ΔT)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب</h4>
+                    <div class="calculation">c = 2,090 ÷ (100 × 50)</div>
+                    <div class="calculation">c = 2,090 ÷ 5,000 = 0.418 جول/جرام.°C</div>
+                </div>
+
+                <div class="math-box">
+                    الحرارة النوعية = 0.418 جول/جرام.°C (تشبه الحديد!)
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> رابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-car"></i> مثال 4: نظام تبريد السيارة</h4>
+                <p><strong>المسألة:</strong> لماذا يستخدم الماء في تبريد محركات السيارات؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الحرارة النوعية العالية للماء</h4>
+                    <p>الماء له حرارة نوعية عالية (4.18 جول/جرام.°C)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> القدرة على امتصاص الحرارة</h4>
+                    <p>يمتص الماء كمية كبيرة من الحرارة دون أن ترتفع درجة حرارته كثيراً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>يحمي المحرك من السخونة الزائدة بكفاءة عالية</p>
+                </div>
+
+                <div class="solution">✅ الماء مثالي للتبريد بسبب حرارته النوعية العالية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-home"></i> مثال 5: المناخ الساحلي</h4>
+                <p><strong>المسألة:</strong> لماذا تكون المناطق الساحلية معتدلة الحرارة صيفاً وشتاءً؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> دور البحر</h4>
+                    <p>الماء في البحر يمتص الحرارة ببطء في الصيف</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> إطلاق الحرارة</h4>
+                    <p>يطلق الماء الحرارة ببطء في الشتاء</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التأثير على المناخ</h4>
+                    <p>يعمل كمنظم طبيعي لدرجة الحرارة</p>
+                </div>
+
+                <div class="solution">✅ البحر يعمل كمكيف طبيعي للمناطق الساحلية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-utensils"></i> مثال 6: أواني الطبخ</h4>
+                <p><strong>المسألة:</strong> لماذا تصنع أواني الطبخ من المعادن مثل النحاس والألمنيوم؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الحرارة النوعية المنخفضة</h4>
+                    <p>المعادن لها حرارة نوعية منخفضة (0.39-0.90 جول/جرام.°C)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> التوصيل السريع</h4>
+                    <p>تسخن بسرعة وتنقل الحرارة للطعام بكفاءة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> توفير الطاقة</h4>
+                    <p>تحتاج طاقة أقل للتسخين مقارنة بمواد أخرى</p>
+                </div>
+
+                <div class="solution">✅ المعادن مثالية للطبخ بسبب حرارتها النوعية المنخفضة</div>
+            </div>
+        </div>
+
+        <!-- خامساً: تجربة عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flask"></i> خامساً: تجربة عملية مقترحة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-vial"></i> تجربة: مقارنة تسخين الماء والزيت</h4>
+                <p><strong>الهدف:</strong> إثبات أن المواد المختلفة لها حرارة نوعية مختلفة</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الأدوات المطلوبة</h4>
+                    <ul style="padding-right: 20px;">
+                        <li>كأسان متطابقان</li>
+                        <li>100 مل ماء</li>
+                        <li>100 مل زيت</li>
+                        <li>ميزان حرارة</li>
+                        <li>مصدر حراري (موقد)</li>
+                        <li>ساعة إيقاف</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خطوات التجربة</h4>
+                    <ol style="padding-right: 20px; line-height: 2;">
+                        <li>ضع 100 مل ماء في الكأس الأول</li>
+                        <li>ضع 100 مل زيت في الكأس الثاني</li>
+                        <li>قس درجة الحرارة الابتدائية لكل منهما</li>
+                        <li>سخنهما بنفس المصدر الحراري لنفس المدة</li>
+                        <li>قس درجة الحرارة النهائية لكل منهما</li>
+                    </ol>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتائج المتوقعة</h4>
+                    <p>الزيت ستزداد درجة حرارته أكثر من الماء بنفس كمية الحرارة</p>
+                </div>
+
+                <div class="solution">✅ الزيت حرارته النوعية أقل من الماء، لذا يسخن أسرع</div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين الحرارة ودرجة الحرارة</h4>
+                <p>الحرارة طاقة (جول)، درجة الحرارة مقياس (°C). جسم كبير بدرجة حرارة منخفضة قد يحتوي على حرارة أكثر من جسم صغير بدرجة حرارة عالية!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان تحويل الوحدات</h4>
+                <p>تأكد من:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>الكتلة بالجرام (ليس كيلوجرام)</li>
+                    <li>الحرارة بالجول (ليس كيلوجول)</li>
+                    <li>درجة الحرارة بالسيليزي (°C)</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: حساب ΔT بشكل خاطئ</h4>
+                <p>ΔT = درجة الحرارة النهائية - درجة الحرارة الابتدائية (وليس العكس!)</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: #27ae60;">ΔT = 80 - 20 = 60°C</span></p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: #dc3545;">ΔT = 20 - 80 = -60°C</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الاعتقاد أن الحرارة النوعية تتغير</h4>
+                <p>الحرارة النوعية <strong>خاصية مميزة</strong> لكل مادة، لا تتغير بتغير الكتلة أو درجة الحرارة.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #e67e22;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الحرارة:</strong> طاقة تنتقل من الجسم الأعلى للأقل درجة حرارة (وحدة: جول).</li>
+                <li><strong>درجة الحرارة:</strong> مقياس لمتوسط الطاقة الحركية للجزيئات (وحدة: °C).</li>
+                <li><strong>الفرق:</strong> الحرارة تعتمد على الكتلة، درجة الحرارة لا تعتمد عليها.</li>
+                <li><strong>الحرارة النوعية:</strong> الحرارة اللازمة لرفع 1 جرام من المادة بمقدار 1°C.</li>
+                <li><strong>الصيغة:</strong> Q = m × c × ΔT</li>
+                <li><strong>الماء:</strong> له حرارة نوعية عالية (4.18 جول/جرام.°C).</li>
+                <li><strong>المعادن:</strong> لها حرارة نوعية منخفضة (تسخن وتبرد بسرعة).</li>
+                <li><strong>التطبيقات:</strong> تبريد المحركات، المناخ الساحلي، أواني الطبخ.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #e67e22; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #e67e22; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #e67e22; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما وحدة قياس الحرارة؟",
+                options: ["السيليزي (°C)", "الجول (J)", "الكلفن (K)", "الكيلوجرام (kg)"],
+                correct: 1,
+                explanation: "الحرارة هي طاقة وتقاس بوحدة الجول (J)."
+            },
+            {
+                sentence: "أي مادة لها حرارة نوعية أعلى؟",
+                options: ["الحديد", "النحاس", "الماء", "الألمنيوم"],
+                correct: 2,
+                explanation: "الماء له حرارة نوعية عالية (4.18 جول/جرام.°C) مقارنة بالمعادن."
+            },
+            {
+                sentence: "إذا كانت كتلة جسم 200 جرام وحرارته النوعية 0.5 جول/جرام.°C وارتفعت حرارته 30°C، فما الحرارة المنقولة؟",
+                options: ["3,000 جول", "30,000 جول", "300 جول", "15,000 جول"],
+                correct: 0,
+                explanation: "Q = m × c × ΔT = 200 × 0.5 × 30 = 3,000 جول."
+            },
+            {
+                sentence: "لماذا تستخدم المعادن في صناعة أواني الطبخ؟",
+                options: ["لأنها رخيصة", "لأن حرارتها النوعية منخفضة", "لأنها خفيفة", "لأنها جميلة"],
+                correct: 1,
+                explanation: "المعادن لها حرارة نوعية منخفضة، لذا تسخن بسرعة وتنقل الحرارة للطعام بكفاءة."
+            },
+            {
+                sentence: "ما الفرق بين الحرارة ودرجة الحرارة؟",
+                options: [
+                    "لا فرق بينهما",
+                    "الحرارة طاقة ودرجة الحرارة مقياس",
+                    "الحرارة مقياس ودرجة الحرارة طاقة",
+                    "كلاهما يقاس بالجول"
+                ],
+                correct: 1,
+                explanation: "الحرارة هي طاقة (تقاس بالجول)، بينما درجة الحرارة مقياس لمتوسط الطاقة الحركية (تقاس بالسيليزي)."
+            },
+            {
+                sentence: "لماذا تكون المناطق الساحلية معتدلة المناخ؟",
+                options: [
+                    "بسبب الرياح",
+                    "بسبب ارتفاع الحرارة النوعية للماء",
+                    "بسبب قربها من خط الاستواء",
+                    "بسبب الأمطار"
+                ],
+                correct: 1,
+                explanation: "الماء له حرارة نوعية عالية، مما يجعله يمتص ويطلق الحرارة ببطء، مما ينظم مناخ المناطق الساحلية."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

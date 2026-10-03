@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الخريطة الطبوغرافية - مفهومها وخطوط الكنتور وقراءة التضاريس - مادة الدراسات الاجتماعية">
+    <title>الخريطة الطبوغرافية | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        :root{--geo-blue:#1e88e5;--geo-green:#43a047;--geo-brown:#8d6e63;--geo-orange:#fb8c00;--geo-dark:#0d47a1;--geo-light:#e3f2fd;--geo-red:#c62828}
+        .lesson-hero{background:linear-gradient(135deg,#1e88e5,#0d47a1);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#1e88e5;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #43a047;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(30,136,229,.08);border-right:4px solid #1e88e5;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#0d47a1}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #fb8c00;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #43a047;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#1e88e5}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #1e88e5;margin:15px 0}
+        .step-box h4{color:#1e88e5;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#1e88e5;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .step-box .calculation{font-family:'Fira Code',monospace;background:var(--card-bg);padding:10px 15px;border-radius:8px;margin:10px 0;direction:ltr;text-align:center;font-size:1.1rem;font-weight:600;color:#43a047}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#1e88e5;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #ffc107;padding:20px;border-radius:10px;margin:20px 0}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#1e88e5;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #43a047;margin-bottom:15px}
+        .example-card h4{color:#1e88e5;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #43a047;font-weight:600;color:#1e88e5;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #43a047;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#1e88e5;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#1e88e5}
+        .interactive-activity{background:linear-gradient(135deg,rgba(30,136,229,.05),rgba(67,160,71,.05));border:2px dashed #1e88e5;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#1e88e5;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#1e88e5;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#43a047;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #43a047}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#1e88e5;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#1e88e5;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #1e88e5;color:#1e88e5}
+        .map-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #1e88e5;text-align:center;transition:transform .3s}
+        .map-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .map-card h4{margin-bottom:10px;color:#1e88e5;font-family:'Amiri',serif}
+        .map-card .icon{font-size:2.5rem;margin-bottom:10px;color:#1e88e5}
+        .map-card.contour{border-top-color:#8d6e63}
+        .map-card.contour h4,.map-card.contour .icon{color:#8d6e63}
+        .map-card.scale{border-top-color:#fb8c00}
+        .map-card.scale h4,.map-card.scale .icon{color:#fb8c00}
+        .map-card.symbol{border-top-color:#c62828}
+        .map-card.symbol h4,.map-card.symbol .icon{color:#c62828}
+        .topo-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .topo-visual svg{max-width:100%;height:auto}
+        .lesson-intro{background:linear-gradient(135deg,rgba(30,136,229,.05),rgba(67,160,71,.05));border:2px solid #1e88e5;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#1e88e5;font-family:'Amiri',serif;margin-bottom:15px}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-map"></i> الخريطة الطبوغرافية</h1>
+            <p>مفهوم الخريطة الطبوغرافية، خطوط الكنتور، وكيفية قراءة التضاريس</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف نُمثّل الجبال والوديان والسهول على ورقة مسطّحة؟</strong>
+                <p style="margin-top:10px">الخريطة الطبوغرافية هي <strong>أداة جغرافية دقيقة</strong> تمثّل سطح الأرض بتضاريسه المختلفة (جبال، وديان، سهول، هضاب) على ورقة ثنائية الأبعاد، باستخدام <strong>خطوط الكنتور</strong> التي تُظهر الارتفاعات والانخفاضات. في هذا الدرس، سنتعلم <strong>مفهوم الخريطة الطبوغرافية</strong>، و<strong>خطوط الكنتور</strong>، و<strong>كيفية قراءة التضاريس</strong> منها.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-map-marked-alt"></i> عن الخريطة الطبوغرافية</h3>
+                <p><strong>التعريف:</strong> خريطة تفصيلية تُظهر التضاريس والارتفاعات</p>
+                <p><strong>الأداة الأساسية:</strong> خطوط الكنتور (Contour Lines)</p>
+                <p><strong>الاستخدامات:</strong> التخطيط العمراني، الهندسة، الملاحة، الجيولوجيا</p>
+                <p><strong>المقياس:</strong> كبير (1:25,000 أو 1:50,000)</p>
+            </div>
+
+            <div class="topo-visual">
+                <h4 style="color:#1e88e5;margin-bottom:15px"><i class="fas fa-mountain"></i> من الواقع ثلاثي الأبعاد إلى الخريطة ثنائية الأبعاد</h4>
+                <svg width="700" height="300" viewBox="0 0 700 300">
+                    <!-- الجانب الأيسر: جبل ثلاثي الأبعاد -->
+                    <g transform="translate(50,50)">
+                        <text x="100" y="0" font-family="Tajawal" font-size="14" fill="#1e88e5" text-anchor="middle" font-weight="700">الجبل (ثلاثي الأبعاد)</text>
+                        
+                        <!-- الجبل -->
+                        <path d="M 50 180 Q 100 50 150 180" fill="rgba(141,110,99,.3)" stroke="#8d6e63" stroke-width="2"/>
+                        <path d="M 70 180 Q 100 80 130 180" fill="rgba(141,110,99,.5)" stroke="#8d6e63" stroke-width="2"/>
+                        <path d="M 90 180 Q 100 110 110 180" fill="rgba(141,110,99,.7)" stroke="#8d6e63" stroke-width="2"/>
+                        
+                        <!-- القمة -->
+                        <circle cx="100" cy="70" r="5" fill="#c62828"/>
+                        <text x="100" y="60" font-family="Tajawal" font-size="10" fill="#c62828" text-anchor="middle">قمة</text>
+                    </g>
+                    
+                    <!-- السهم -->
+                    <g transform="translate(300,120)">
+                        <line x1="0" y1="0" x2="50" y2="0" stroke="#1e88e5" stroke-width="3" marker-end="url(#arrow2)"/>
+                        <text x="25" y="-10" font-family="Tajawal" font-size="11" fill="#1e88e5" text-anchor="middle">إسقاط</text>
+                    </g>
+                    
+                    <!-- الجانب الأيمن: خريطة طبوغرافية -->
+                    <g transform="translate(400,50)">
+                        <text x="120" y="0" font-family="Tajawal" font-size="14" fill="#1e88e5" text-anchor="middle" font-weight="700">الخريطة الطبوغرافية (ثنائية الأبعاد)</text>
+                        
+                        <!-- خطوط الكنتور -->
+                        <ellipse cx="120" cy="120" rx="100" ry="60" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="120" cy="120" rx="80" ry="45" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="120" cy="120" rx="60" ry="30" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="120" cy="120" rx="40" ry="15" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        
+                        <!-- القمة -->
+                        <circle cx="120" cy="120" r="5" fill="#c62828"/>
+                        <text x="120" y="110" font-family="Tajawal" font-size="10" fill="#c62828" text-anchor="middle">قمة</text>
+                        
+                        <!-- أرقام الارتفاع -->
+                        <text x="230" y="125" font-family="Fira Code" font-size="10" fill="#8d6e63">100م</text>
+                        <text x="210" y="140" font-family="Fira Code" font-size="10" fill="#8d6e63">200م</text>
+                        <text x="190" y="155" font-family="Fira Code" font-size="10" fill="#8d6e63">300م</text>
+                        <text x="170" y="170" font-family="Fira Code" font-size="10" fill="#8d6e63">400م</text>
+                    </g>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#1e88e5"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: مفهوم الخريطة الطبوغرافية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: مفهوم الخريطة الطبوغرافية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الخريطة الطبوغرافية:</strong> خريطة تفصيلية كبيرة المقياس تُظهر التضاريس الطبيعية والصناعية على سطح الأرض، باستخدام خطوط الكنتور لتمثيل الارتفاعات.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #1e88e5">
+                    <h3 style="color:#1e88e5"><i class="fas fa-compass"></i> التعريف</h3>
+                    <p>كلمة <strong>"طوبوغرافية"</strong> (Topographic) أصلها يوناني، وتعني <strong>"وصف المكان"</strong>.</p>
+                    <p style="margin-top:10px"><strong>الهدف:</strong> تمثيل سطح الأرض بتضاريسه بدقة على ورقة مسطحة.</p>
+                </div>
+                <div class="column-card" style="border-top:5px solid #43a047">
+                    <h3 style="color:#43a047"><i class="fas fa-check-circle"></i> الخصائص</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>مقياس كبير (تفصيلي)</li>
+                        <li>تُظهر التضاريس بوضوح</li>
+                        <li>تستخدم خطوط الكنتور</li>
+                        <li>تُظهر المعالم الطبيعية والصناعية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="four-columns">
+                <div class="map-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>التضاريس</h4>
+                    <p>جبال، وديان، سهول</p>
+                </div>
+                <div class="map-card contour">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>المسطحات المائية</h4>
+                    <p>أنهار، بحيرات، بحار</p>
+                </div>
+                <div class="map-card scale">
+                    <div class="icon"><i class="fas fa-road"></i></div>
+                    <h4>الطرق</h4>
+                    <p>سيارات، سكك حديدية</p>
+                </div>
+                <div class="map-card symbol">
+                    <div class="icon"><i class="fas fa-city"></i></div>
+                    <h4>المعالم</h4>
+                    <p>مدن، قرى، مباني</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الفرق بين الخريطة الطبوغرافية وغيرها</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الخريطة الطبوغرافية</h4>
+                    <p><strong>المقياس:</strong> كبير (1:25,000 - 1:50,000)</p>
+                    <p><strong>التفاصيل:</strong> عالية جداً</p>
+                    <p><strong>التضاريس:</strong> مُمثّلة بخطوط الكنتور</p>
+                    <p><strong>الاستخدام:</strong> الهندسة، التخطيط، الملاحة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الخريطة الجغرافية العامة</h4>
+                    <p><strong>المقياس:</strong> صغير (1:1,000,000 فأقل)</p>
+                    <p><strong>التفاصيل:</strong> محدودة</p>
+                    <p><strong>التضاريس:</strong> بالألوان والظلال</p>
+                    <p><strong>الاستخدام:</strong> التعليم العام، الأطلس</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الخريطة السياسية</h4>
+                    <p><strong>المقياس:</strong> متوسط</p>
+                    <p><strong>التفاصيل:</strong> الحدود والمدن</p>
+                    <p><strong>التضاريس:</strong> غير مهمة</p>
+                    <p><strong>الاستخدام:</strong> دراسة الدول</p>
+                </div>
+
+                <div class="solution">✅ الخريطة الطبوغرافية هي الأكثر تفصيلاً ودقة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> استخدامات الخريطة الطبوغرافية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>التخطيط العمراني:</strong> تحديد مواقع المدن والطرق</li>
+                    <li><strong>الهندسة:</strong> تصميم الجسور والأنفاق والسدود</li>
+                    <li><strong>الجيولوجيا:</strong> دراسة الصخور والمعادن</li>
+                    <li><strong>الملاحة:</strong> تحديد المواقع في البر والبحر</li>
+                    <li><strong>الزراعة:</strong> تخطيط الري والصرف</li>
+                    <li><strong>الدفاع:</strong> التخطيط العسكري</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: خطوط الكنتور -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-circle-notch"></i> ثانياً: خطوط الكنتور (Contour Lines)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>خطوط الكنتور:</strong> خطوط وهمية متساوية الارتفاع، تصل بين النقاط التي تتساوى في الارتفاع عن سطح البحر.
+            </div>
+
+            <div class="math-box" style="font-family:'Amiri',serif;font-size:1.3rem">
+                خط الكنتور = خط يصل بين نقاط متساوية الارتفاع
+            </div>
+
+            <div class="topo-visual">
+                <h4 style="color:#1e88e5;margin-bottom:15px"><i class="fas fa-circle-notch"></i> كيف تتشكل خطوط الكنتور؟</h4>
+                <svg width="700" height="280" viewBox="0 0 700 280">
+                    <!-- جبل مقطوع أفقياً -->
+                    <g transform="translate(50,20)">
+                        <text x="100" y="0" font-family="Tajawal" font-size="13" fill="#1e88e5" text-anchor="middle" font-weight="700">الجبل (منظر جانبي)</text>
+                        
+                        <!-- الجبل -->
+                        <path d="M 20 220 L 100 40 L 180 220" fill="rgba(141,110,99,.3)" stroke="#8d6e63" stroke-width="2"/>
+                        
+                        <!-- خطوط القطع -->
+                        <line x1="0" y1="220" x2="200" y2="220" stroke="#1e88e5" stroke-width="2" stroke-dasharray="5,5"/>
+                        <text x="210" y="225" font-family="Fira Code" font-size="10" fill="#1e88e5">100م</text>
+                        
+                        <line x1="20" y1="180" x2="180" y2="180" stroke="#1e88e5" stroke-width="2" stroke-dasharray="5,5"/>
+                        <text x="210" y="185" font-family="Fira Code" font-size="10" fill="#1e88e5">200م</text>
+                        
+                        <line x1="40" y1="140" x2="160" y2="140" stroke="#1e88e5" stroke-width="2" stroke-dasharray="5,5"/>
+                        <text x="210" y="145" font-family="Fira Code" font-size="10" fill="#1e88e5">300م</text>
+                        
+                        <line x1="60" y1="100" x2="140" y2="100" stroke="#1e88e5" stroke-width="2" stroke-dasharray="5,5"/>
+                        <text x="210" y="105" font-family="Fira Code" font-size="10" fill="#1e88e5">400م</text>
+                        
+                        <line x1="80" y1="60" x2="120" y2="60" stroke="#1e88e5" stroke-width="2" stroke-dasharray="5,5"/>
+                        <text x="210" y="65" font-family="Fira Code" font-size="10" fill="#1e88e5">500م</text>
+                    </g>
+                    
+                    <!-- السهم -->
+                    <g transform="translate(300,140)">
+                        <line x1="0" y1="0" x2="50" y2="0" stroke="#1e88e5" stroke-width="3" marker-end="url(#arrow3)"/>
+                        <text x="25" y="-10" font-family="Tajawal" font-size="11" fill="#1e88e5" text-anchor="middle">إسقاط</text>
+                    </g>
+                    
+                    <!-- خطوط الكنتور -->
+                    <g transform="translate(400,20)">
+                        <text x="120" y="0" font-family="Tajawal" font-size="13" fill="#1e88e5" text-anchor="middle" font-weight="700">خطوط الكنتور (منظر علوي)</text>
+                        
+                        <ellipse cx="120" cy="140" rx="100" ry="80" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="230" y="145" font-family="Fira Code" font-size="10" fill="#8d6e63">100م</text>
+                        
+                        <ellipse cx="120" cy="140" rx="80" ry="60" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="210" y="105" font-family="Fira Code" font-size="10" fill="#8d6e63">200م</text>
+                        
+                        <ellipse cx="120" cy="140" rx="60" ry="40" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="190" y="105" font-family="Fira Code" font-size="10" fill="#8d6e63">300م</text>
+                        
+                        <ellipse cx="120" cy="140" rx="40" ry="20" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="170" y="125" font-family="Fira Code" font-size="10" fill="#8d6e63">400م</text>
+                        
+                        <ellipse cx="120" cy="140" rx="20" ry="10"
+                        <text x="150" y="145" font-family="Fira Code" font-size="10" fill="#8d6e63">500م</text>
+                        
+                        <!-- القمة -->
+                        <circle cx="120" cy="140" r="5" fill="#c62828"/>
+                        <text x="120" y="160" font-family="Tajawal" font-size="10" fill="#c62828" text-anchor="middle">قمة</text>
+                    </g>
+                    
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#1e88e5"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> خصائص خطوط الكنتور</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> خطوط مغلقة</h4>
+                    <p>كل خط كنتور يُشكّل حلقة مغلقة (قد تكون داخل الخريطة أو خارجها)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> لا تتقاطع</h4>
+                    <p>خطوط الكنتور لا تتقاطع أبداً (لأن كل نقطة لها ارتفاع واحد فقط)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> متساوية الارتفاع</h4>
+                    <p>جميع النقاط على نفس الخط لها نفس الارتفاع</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الفرق الثابت (الفاصل الكنتوري)</h4>
+                    <p>الفرق في الارتفاع بين كل خط والذي يليه ثابت (مثلاً 10م أو 20م أو 50م)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> التقارب والتباعد</h4>
+                    <p>الخطوط المتقاربة = منحدر حاد (جبل شديد الانحدار)</p>
+                    <p>الوتقاربة = منحدر حاد (جبل شديد الانحدار)</p>
+                    <p>الخطوط المتباعدة = منحدر خفيف (سهل أو هضبة)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> تعبر المجاري المائية عمودياً</h4>
+                    <p>عند وادٍ أو نهر، تنحني خطوط الكنتور بشكل حرف V يشير إلى أعلى (باتجاه المنبع)</p>
+                </div>
+
+                <div class="solution">✅ خطوط الكنتور هي اللغة التي تتحدث بها الخريطة الطبوغرافية</div>
+            </div>
+
+            <div class="three-columns">
+                <div class="map-card contour">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>جبل (قمة)</h4>
+                    <p>حلقات مغلقة متداخلة</p>
+                    <p style="margin-top:10px;font-size:.9rem">الأصغر في الداخل = الأعلى</p>
+                </div>
+                <div class="map-card contour">
+                    <div class="icon"><i class="fas fa-circle-notch"></i></div>
+                    <h4>منخفض (حوض)</h4>
+                    <p>حلقات مغلقة متداخلة</p>
+                    <p style="margin-top:10px;font-size:.9rem">الأصغر في الداخل = الأقل</p>
+                </div>
+                <div class="map-card contour">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>وادي</h4>
+                    <p>خطوط على شكل V</p>
+                    <p style="margin-top:10px;font-size:.9rem">يشير V إلى أعلى (المنبع)</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الفاصل الكنتوري (Contour Interval):</h4>
+                <p>هو <strong>الfrq في الارتفاع</strong> بين كل خط كنتور والذي يليه. يُحدد حسب طبيعة المنطقة:</p>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>المناطق السهلية:</strong> فاصل صغير (5-10م) لإظهار التفاصيل</li>
+                    <li><strong>المناطق الجبلية:</strong> فاصل كبير (50-100م) لتجنب التزاحم</li>
+                    <li><strong>المناطق المتوسطة:</strong> فاصل متوسط (20-25م)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: قراءة التضاريس من الخريطة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-eye"></i> ثالثاً: كيفية قراءة التضاريس من الخريطة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>قراءة التضاريس:</strong> مهارة مهمة لفهم شكل سطح الأرض من خلال خطوط الكنتور والألوان والرموز.
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> قواعد قراءة التضاريس</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> تحديد الارتفاع</h4>
+                    <p>كل خط كنتور مكتوب عليه رقم الارتفاع (بالمتر فوق سطح البحر). يمكن حساب ارتفاع أي نقطة بين خطين بالتقدير.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تحديد نوع التضاريس</h4>
+                    <p><strong>الجبل:</strong> حلقات مغلقة متداخلة، الأصغر في الداخل هو القمة.</p>
+                    <p><strong>الوادي:</strong> خطوط على شكل V يشير إلى أعلى (باتجاه المنبع).</p>
+                    <p><strong>السهل:</strong> خطوط متباعدة جداً أو معدومة.</p>
+                    <p><strong>الهضبة:</strong> خطوط متباعدة في منطقة مرتفعة.</p>
+                    <p><strong>المنحدر الحاد:</strong> خطوط متقاربة جداً.</p>
+                    <p><strong>المنحدر الخفيف:</strong> خطوط متباعدة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> حساب الانحدار (الميل)</h4>
+                    <p>الانحدار = الفرق في الارتفاع ÷ المسافة الأفقية × 100%</p>
+                    <div class="calculation">Slope = (ΔH ÷ D) × 100%</div>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تحديد اتجاه الانحدار</h4>
+                    <p>الماء يجري من الأعلى إلى الأسفل، عمودياً على خطوط الكنتور.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> قراءة الألوان</h4>
+                    <p><strong>البني:</strong> التضاريس (خطوط الكنتور).</p>
+                    <p><strong>الأزرق:</strong> المسطحات المائية.</p>
+                    <p><strong>الأخضر:</strong> الغطاء النباتي.</p>
+                    <p><strong>الأسود/الأحمر:</strong> المعالم الصناعية (طرق، مباني).</p>
+                </div>
+
+                <div class="solution">✅ قراءة الخريطة الطبوغرافية مهارة تحتاج إلى تدريب</div>
+            </div>
+
+            <div class="topo-visual">
+                <h4 style="color:#1e88e5;margin-bottom:15px"><i class="fas fa-mountain"></i> أشكال التضاريس على الخريطة الطبوغرافية</h4>
+                <svg width="700" height="350" viewBox="0 0 700 350">
+                    <!-- الجبل -->
+                    <g transform="translate(50,20)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">جبل (قمة)</text>
+                        <ellipse cx="60" cy="80" rx="50" ry="40" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="40" ry="30" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="30" ry="20" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="20" ry="10" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <circle cx="60" cy="80" r="3" fill="#c62828"/>
+                        <text x="60" y="140" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">حلقات متداخلة</text>
+                    </g>
+                    
+                    <!-- المنخفض -->
+                    <g transform="translate(200,20)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">منخفض (حوض)</text>
+                        <ellipse cx="60" cy="80" rx="50" ry="40" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="40" ry="30" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="30" ry="20" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="60" cy="80" rx="20" ry="10" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="60" y="85" font-family="Fira Code" font-size="10" fill="#c62828" text-anchor="middle">▼</text>
+                        <text x="60" y="140" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">مع سهم للأسفل</text>
+                    </g>
+                    
+                    <!-- السهل -->
+                    <g transform="translate(350,20)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">سهل</text>
+                        <line x1="10" y1="60" x2="110" y2="60" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="80" x2="110" y2="80" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="100" x2="110" y2="100" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="60" y="140" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">خطوط متباعدة</text>
+                    </g>
+                    
+                    <!-- المنحدر الحاد -->
+                    <g transform="translate(500,20)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">منحدر حاد</text>
+                        <line x1="10" y1="60" x2="110" y2="60" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="15" y1="65" x2="105" y2="65" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="20" y1="70" x2="100" y2="70" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="25" y1="75" x2="95" y2="75" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="30" y1="80" x2="90" y2="80" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="35" y1="85" x2="85" y2="85" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="40" y1="90" x2="80" y2="90" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="60" y="140" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">خطوط متقاربة جداً</text>
+                    </g>
+                    
+                    <!-- الوادي -->
+                    <g transform="translate(50,180)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">وادي</text>
+                        <path d="M 10 60 L 60 40 L 110 60" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <path d="M 10 80 L 60 60 L 110 80" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <path d="M 10 100 L 60 80 L 110 100" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <path d="M 10 120 L 60 100 L 110 120" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="60" y1="40" x2="60" y2="130" stroke="#1e88e5" stroke-width="2" stroke-dasharray="3,3"/>
+                        <text x="60" y="150" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">V يشير لأعلى</text>
+                    </g>
+                    
+                    <!-- السرج -->
+                    <g transform="translate(200,180)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">سرج (بین قمتين)</text>
+                        <ellipse cx="30" cy="80" rx="20" ry="40" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <ellipse cx="90" cy="80" rx="20" ry="40" fill="none" stroke="#8d6e63" stroke-width="2"/>
+                        <circle cx="30" cy="80" r="3" fill="#c62828"/>
+                        <circle cx="90" cy="80" r="3" fill="#c62828"/>
+                        <text x="60" y="60" font-family="Fira Code" font-size="10" fill="#8d6e63" text-anchor="middle">⋂</text>
+                        <text x="60" y="150" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">نقطتان منخفضتان بين قمتين</text>
+                    </g>
+                    
+                    <!-- الهضبة -->
+                    <g transform="translate(350,180)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">هضبة</text>
+                        <line x1="10" y1="60" x2="110" y2="60" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="70" x2="110" y2="70" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="80" x2="110" y2="80" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="90" x2="110" y2="90" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="100" x2="110" y2="100" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="110" x2="110" y2="110" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="60" y="150" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">خطوط متباعدة متوازية</text>
+                    </g>
+                    
+                    <!-- الحافة -->
+                    <g transform="translate(500,180)">
+                        <text x="60" y="0" font-family="Tajawal" font-size="12" fill="#1e88e5" text-anchor="middle" font-weight="700">حافة (جرف)</text>
+                        <line x1="10" y1="60" x2="110" y2="60" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="65" x2="110" y2="65" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="70" x2="110" y2="70" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="75" x2="110" y2="75" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="80" x2="110" y2="80" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="120" x2="110" y2="120" stroke="#8d6e63" stroke-width="2"/>
+                        <line x1="10" y1="130" x2="110" y2="130" stroke="#8d6e63" stroke-width="2"/>
+                        <text x="60" y="150" font-family="Tajawal" font-size="10" fill="#8d6e63" text-anchor="middle">خطوط متقاربة ثم فجأة متباعدة</text>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال عملي: قراءة خريطة</h4>
+                <p><strong>المسألة:</strong> أمامك خريطة طبوغرافية، كيف تقرأها؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> اقرأ مفتاح الخريطة</h4>
+                    <p>تعرف على الرموز والألوان والفاصل الكنتوري</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> حدد اتجاه الشمال</h4>
+                    <p>عادةً يكون في الزاوية العلوية (سهم الشمال)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> اقرأ مقياس الرسم</h4>
+                    <p>مثلاً 1:50,000 يعني أن 1 سم في الخريطة = 50,000 سم (500م) في الواقع</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> حدد أعلى نقطة وأدنى نقطة</h4>
+                    <p>القمة = أعلى خط كنتور مغلق، والمنخفض = أقل خط كنتور</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> حدد نوع التضاريس</h4>
+                    <p>من شكل خطوط الكنتور: جبل، وادي، سهل، منحدر...</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> احسب الانحدار إن لزم</h4>
+                    <p>باستخدام الفرق في الارتفاع والمسافة الأفقية</p>
+                </div>
+
+                <div class="solution">✅ قراءة الخريطة مهارة تحتاج إلى تدريب مستمر</div>
+            </div>
+        </div>
+
+        <!-- رابعاً: مقياس الرسم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-ruler"></i> رابعاً: مقياس الرسم في الخريطة الطبوغرافية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>مقياس الرسم:</strong> النسبة بين المسافة على الخريطة والمسافة الحقيقية على سطح الأرض.
+            </div>
+
+            <div class="math-box" style="font-family:'Amiri',serif;font-size:1.3rem">
+                مقياس الرسم = المسافة على الخريطة ÷ المسافة على الأرض
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #1e88e5">
+                    <h3 style="color:#1e88e5"><i class="fas fa-fraction"></i> المقياس الكسري</h3>
+                    <p>يُعبَّر عنه على شكل كسر:</p>
+                    <div class="math-box" style="font-size:1rem;margin-top:10px">1 : 50,000</div>
+                    <p style="margin-top:10px;font-size:.9rem">يعني: 1 سم في الخريطة = 50,000 سم (500م) في الواقع</p>
+                </div>
+                <div class="column-card" style="border-top:5px solid #43a047">
+                    <h3 style="color:#43a047"><i class="fas fa-ruler-horizontal"></i> المقياس الخطي</h3>
+                    <p>يُعبَّر عنه بخط مقسّم:</p>
+                    <div style="margin:10px 0;text-align:center">
+                        <div style="display:inline-block;border:2px solid #43a047;padding:5px 10px">|----|----|----|----|</div>
+                    </div>
+                    <p style="margin-top:10px;font-size:.9rem">0     1     2     3     4 كم</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على حساب المسافات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> مثال 1</h4>
+                    <p><strong>المسألة:</strong> مقياس الخريطة 1:50,000، المسافة بين نقطتين على الخريطة = 4 سم. ما المسافة الحقيقية؟</p>
+                    <div class="calculation">المسافة الحقيقية = 4 × 50,000 = 200,000 سم = 2 كم</div>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> مثال 2</h4>
+                    <p><strong>المسألة:</strong> مقياس الخريطة 1:25,000، المسافة الحقيقية = 1 كم. ما المسافة على الخريطة؟</p>
+                    <div class="calculation">1 كم = 100,000 سم<br>المسافة على الخريطة = 100,000 ÷ 25,000 = 4 سم</div>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> مثال 3</h4>
+                    <p><strong>المسألة:</strong> المسافة على الخريطة = 6 سم، المسافة الحقيقية = 3 كم. ما مقياس الرسم؟</p>
+                    <div class="calculation">3 كم = 300,000 سم<br>المقياس = 6 ÷ 300,000 = 1 : 50,000</div>
+                </div>
+
+                <div class="solution">✅ مقياس الرسم هو العلاقة بين الخريطة والواقع</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>المقياس</th>
+                            <th>1 سم في الخريطة =</th>
+                            <th>نوع الخريطة</th>
+                            <th>الاستخدام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1:5,000</strong></td>
+                            <td>50 م</td>
+                            <td>كبير جداً</td>
+                            <td>التخطيط العمراني</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1:25,000</strong></td>
+                            <td>250 م</td>
+                            <td>كبير</td>
+                            <td>الخرائط التفصيلية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1:50,000</strong></td>
+                            <td>500 م</td>
+                            <td>متوسط</td>
+                            <td>الخرائط الطبوغرافية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1:100,000</strong></td>
+                            <td>1 كم</td>
+                            <td>صغير</td>
+                            <td>خرائط المناطق</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1:1,000,000</strong></td>
+                            <td>10 كم</td>
+                            <td>صغير جداً</td>
+                            <td>خرائط الدول</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة مهمة:</h4>
+                <p>كلما كان المقياس <strong>أكبر</strong> (مثل 1:5,000)، كانت الخريطة <strong>أكثر تفصيلاً</strong> وتُظهر منطقة <strong>أصغر</strong>. وكلما كان المقياس <strong>أصغر</strong> (مثل 1:1,000,000)، كانت الخريطة <strong>أقل تفصيلاً</strong> وتُظهر منطقة <strong>أكبر</strong>.</p>
+            </div>
+        </div>
+
+        <!-- خامساً: الرموز والألوان -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-palette"></i> خامساً: الرموز والألوان في الخريطة الطبوغرافية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الرموز والألوان:</strong> لغة الخريطة التي تُسهّل قراءة المعلومات المختلفة.
+            </div>
+
+            <div class="four-columns">
+                <div class="map-card" style="border-top-color:#8d6e63">
+                    <div class="icon" style="color:#8d6e63"><i class="fas fa-mountain"></i></div>
+                    <h4 style="color:#8d6e63">البني</h4>
+                    <p>التضاريس</p>
+                    <p style="margin-top:10px;font-size:.9rem">خطوط الكنتور</p>
+                </div>
+                <div class="map-card" style="border-top-color:#1e88e5">
+                    <div class="icon" style="color:#1e88e5"><i class="fas fa-water"></i></div>
+                    <h4 style="color:#1e88e5">الأزرق</h4>
+                    <p>المسطحات المائية</p>
+                    <p style="margin-top:10px;font-size:.9rem">أنهار، بحيرات، بحار</p>
+                </div>
+                <div class="map-card" style="border-top-color:#43a047">
+                    <div class="icon" style="color:#43a047"><i class="fas fa-tree"></i></div>
+                    <h4 style="color:#43a047">الأخضر</h4>
+                    <p>الغطاء النباتي</p>
+                    <p style="margin-top:10px;font-size:.9rem">غابات، مزروعات</p>
+                </div>
+                <div class="map-card" style="border-top-color:#c62828">
+                    <div class="icon" style="color:#c62828"><i class="fas fa-road"></i></div>
+                    <h4 style="color:#c62828">الأحمر/الأسود</h4>
+                    <p>المعالم الصناعية</p>
+                    <p style="margin-top:10px;font-size:.9rem">طرق، مباني، حدود</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الرموز الشائعة في الخريطة الطبوغرافية</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> رموز التضاريس</h4>
+                    <p><strong>خطوط الكنتور:</strong> خطوط بنية متداخلة.</p>
+                    <p><strong>النقطة المثلثية:</strong> مثلث صغير + رقم = قمة جبل بارتفاع محدد.</p>
+                    <p><strong>المنحدرات:</strong> خطوط متقاربة = منحدر حاد.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> رموز المسطحات المائية</h4>
+                    <p><strong>الأنهار:</strong> خطوط زرقاء متعرجة.</p>
+                    <p><strong>البحيرات:</strong> مساحات زرقاء مغلقة.</p>
+                    <p><strong>البحار:</strong> مساحات زرقاء كبيرة على الحافة.</p>
+                    <p><strong>الآبار:</strong> دائرة زرقاء صغيرة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> رموز الطرق</h4>
+                    <p><strong>الطرق السريعة:</strong> خطان أحمران متوازيان.</p>
+                    <p><strong>الطرق الرئيسية:</strong> خطان أسودان متوازيان.</p>
+                    <p><strong>الطرق الثانوية:</strong> خط أسود واحد.</p>
+                    <p><strong>المسارات:</strong> خط متقطع.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> رموز المباني والمعالم</h4>
+                    <p><strong>المباني:</strong> مربعات سوداء صغيرة.</p>
+                    <p><strong>المساجد:</strong> مربع + هلال.</p>
+                    <p><strong>المطارات:</strong> دائرة + خط.</p>
+                    <p><strong>السكك الحديدية:</strong> خط + شرطات عمودية.</p>
+                </div>
+
+                <div class="solution">✅ الرموز لغة عالمية موحّدة في جميع الخرائط</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الرمز</th>
+                            <th>الدلالة</th>
+                            <th>اللون</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-mountain" style="color:#8d6e63"></i></td>
+                            <td>خطوط الكنتور (التضاريس)</td>
+                            <td>بني</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-water" style="color:#1e88e5"></i></td>
+                            <td>الأنهار والبحيرات</td>
+                            <td>أزرق</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-tree" style="color:#43a047"></i></td>
+                            <td>الغابات والنباتات</td>
+                            <td>أخضر</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-road" style="color:#c62828"></i></td>
+                            <td>الطرق السريعة</td>
+                            <td>أحمر</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-home" style="color:#212121"></i></td>
+                            <td>المباني</td>
+                            <td>أسود</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin" style="color:#c62828"></i></td>
+                            <td>القمة (نقطة مثلثية)</td>
+                            <td>أسود + رقم</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tools"></i> سادساً: تطبيقات عملية على الخريطة الطبوغرافية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التطبيقات:</strong> الخرائط الطبوغرافية تُستخدم في مجالات كثيرة في المملكة العربية السعودية.
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: قراءة خريطة منطقة عسير</h4>
+                <p><strong>المسألة:</strong> أمامك خريطة طبوغرافية لمنطقة عسير، صف التضاريس.</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> المقياس</h4>
+                    <p>عادةً 1:50,000</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> التضاريس</h4>
+                    <p>خطوط كنتور متقاربة جداً في الغرب = <strong>جبال السروات</strong> شديدة الانحدار.</p>
+                    <p>خطوط متباعدة في الشرق = <strong>سهول تهامة</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الارتفاعات</h4>
+                    <p>قمة جبل السودة: حوالي 3,000م (أعلى قمة في المنطقة).</p>
+                    <p>سهول تهامة: أقل من 200م.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> المجاري المائية</h4>
+                    <p>خطوط V تشير إلى الغرب = أودية تنحدر من الجبال إلى البحر الأحمر.</p>
+                </div>
+
+                <div class="solution">✅ منطقة عسير جبلية شديدة الانحدار في الغرب، سهلية في الغرب</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: تخطيط طريق</h4>
+                <p><strong>المسألة:</strong> تريد تخطيط طريق بين قريتين في منطقة جبلية. كيف تستخدم الخريطة؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> حدد القريتين</h4>
+                    <p>من الرموز (مربعات سوداء)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> اقرأ الارتفاعات</h4>
+                    <p>من خطوط الكنتور</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> اختر المسار الأقل انحداراً</h4>
+                    <p>حيث خطوط الكنتور متباعدة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تجنّب المناطق شديدة الانحدار</h4>
+                    <p>حيث خطوط الكنتور متقاربة جداً</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> احسب المسافة الحقيقية</h4>
+                    <p>باستخدام مقياس الرسم</p>
+                </div>
+
+                <div class="solution">✅ الخريطة الطبوغرافية أداة أساسية في التخطيط الهندسي</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: دراسة جيولوجية</h4>
+                <p><strong>المسألة:</strong> كيف تستخدم الخريطة الطبوغرافية في دراسة جيولوجية؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="
+                    <h4><span class="step-number">1</span> تحديد أنواع الصخور</h4>
+                    <p>من شكل التضاريس (الجبال = صخور صلبة، السهول = صخور رسوبية)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> دراسة الانحدارات</h4>
+                    <p>من تقارب وتباعد خطوط الكنتور</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تتبع المجاري المائية</h4>
+                    <p>لفهم نظام الصرف الطبيعي</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تحديد مواقع الحفر</h4>
+                    <p>في المناطق المناسبة جيولوجياً</p>
+                </div>
+
+                <div class="solution">✅ الخريطة الطبوغرافية أداة أساسية في الجيولوجيا</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الخرائط الطبوغرافية في المملكة:</h4>
+                <p>تُصدر <strong>هيئة المساحة الجيولوجية السعودية</strong> خرائط طبوغرافية دقيقة لجميع مناطق المملكة بمقاييس مختلفة (1:50,000 و 1:250,000 و 1:500,000). وهي متاحة للاستخدام في التخطيط والتنمية.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين الخريطة الطبوغرافية والجغرافية</h4>
+                <p>الخريطة الطبوغرافية <strong>تفصيلية</strong> وتُظهر التضاريس بخطوط الكنتور، بينما الخريطة الجغرافية <strong>عامة</strong> وتُظهر المساحات الكبيرة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الاعتقاد أن خطوط الكنتور تتقاطع</h4>
+                <p>خطوط الكنتور <strong>لا تتقاطع أبداً</strong>، لأن كل نقطة على سطح الأرض لها ارتفاع واحد فقط.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: نسيان قراءة مفتاح الخريطة</h4>
+                <p>مفتاح الخريطة (Legend) يشرح <strong>جميع الرموز والألوان</strong>. بدونه لا يمكن فهم الخريطة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الخلط بين المنحدر الحاد والخفيف</h4>
+                <p><strong>المنحدر الحاد:</strong> خطوط كنتور متقاربة.</p>
+                <p><strong>المنحدر الخفيف:</strong> خطوط كنتور متباعدة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: تجاهل مقياس الرسم</h4>
+                <p>مقياس الرسم <strong>ضروري</strong> لحساب المسافات الحقيقية. بدونه لا يمكن الاستفادة من الخريطة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: الاعتقاد أن الخريطة الطبوغرافية تُظهر كل شيء</h4>
+                <p>الخريطة الطبوغرافية تُظهر <strong>التضاريس والمعالم الرئيسية</strong> فقط، ولا تُظهر التفاصيل الصغيرة (مثل الأشجار الفردية).</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #1e88e5">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الخريطة الطبوغرافية:</strong> خريطة تفصيلية تُظهر التضاريس باستخدام خطوط الكنتور.</li>
+                <li><strong>خطوط الكنتور:</strong> خطوط وهمية تصل بين نقاط متساوية الارتفاع.</li>
+                <li><strong>خصائص خطوط الكنتور:</strong> مغلقة، لا تتقاطع، متساوية الارتفاع، الفرق بينها ثابت.</li>
+                <li><strong>قراءة التضاريس:</strong> من شكل خطوط الكنتور (متقاربة = منحدر حاد، متباعدة = منحدر خفيف).</li>
+                <li><strong>مقياس الرسم:</strong> النسبة بين المسافة على الخريطة والمسافة الحقيقية.</li>
+                <li><strong>الرموز والألوان:</strong> لغة الخريطة (بني = تضاريس، أزرق = ماء، أخضر = نبات، أحمر = طرق).</li>
+                <li><strong>الفاصل الكنتوري:</strong> الفرق في الارتفاع بين كل خط كنتور والذي يليه.</li>
+                <li><strong>التطبيقات:</strong> التخطيط العمراني، الهندسة، الجيولوجيا، الملاحة.</li>
+                <li><strong>تنبيه:</strong> خطوط الكنتور لا تتقاطع أبداً.</li>
+                <li><strong>تنبيه:</strong> قراءة مفتاح الخريطة ضرورية لفهمها.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#1e88e5;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#43a047"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#1e88e5;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#1e88e5;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما هي الخريطة الطبوغرافية؟",
+                options: [
+                    "خريطة سياسية للدول",
+                    "خريطة تُظهر التضاريس باستخدام خطوط الكنتور",
+                    "خريطة للمناخ فقط",
+                    "خريطة للطرق فقط"
+                ],
+                correct: 1,
+                explanation: "الخريطة الطبوغرافية خريطة تفصيلية تُظهر التضاريس (جبال، وديان، سهول) باستخدام خطوط الكنتور."
+            },
+            {
+                sentence: "ما هي خطوط الكنتور؟",
+                options: [
+                    "خطوط تصل بين نقاط مختلفة الارتفاع",
+                    "خطوط تصل بين نقاط متساوية الارتفاع",
+                    "خطوط عشوائية على الخريطة",
+                    "حدود الدول"
+                ],
+                correct: 1,
+                explanation: "خطوط الكنتور هي خطوط وهمية تصل بين النقاط التي تتساوى في الارتفاع عن سطح البحر."
+            },
+            {
+                sentence: "ماذا تعني خطوط الكنتور المتقاربة جداً؟",
+                options: [
+                    "سهل منبسط",
+                    "منحدر حاد (جبل شديد الانحدار)",
+                    "منحدر خفيف",
+                    "وادي واسع"
+                ],
+                correct: 1,
+                explanation: "خطوط الكنتور المتقاربة جداً تدل على منحدر حاد (تغير سريع في الارتفاع)، بينما المتباعدة تدل على منحدر خفيف."
+            },
+            {
+                sentence: "إذا كان مقياس الخريطة 1:50,000، فما المسافة الحقيقية لـ 4 سم على الخريطة؟",
+                options: ["2 كم", "20 كم", "200 كم", "2000 كم"],
+                correct: 0,
+                explanation: "المسافة الحقيقية = 4 × 50,000 = 200,000 سم = 2 كم."
+            },
+            {
+                sentence: "ما اللون الذي يُستخدم لتمثيل المسطحات المائية في الخريطة الطبوغرافية؟",
+                options: ["البني", "الأخضر", "الأزرق", "الأحمر"],
+                correct: 2,
+                explanation: "اللون الأزرق يُستخدم لتمثيل المسطحات المائية (أنهار، بحيرات، بحار) في الخريطة الطبوغرافية."
+            },
+            {
+                sentence: "أيّ من هذه الخصائص ليست من خصائص خطوط الكنتور؟",
+                options: [
+                    "خطوط مغلقة",
+                    "لا تتقاطع",
+                    "تتقاطع عند القمم",
+                    "الفرق في الارتفاع بينها ثابت"
+                ],
+                correct: 2,
+                explanation: "خطوط الكنتور لا تتقاطع أبداً، لأن كل نقطة على سطح الأرض لها ارتفاع واحد فقط."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

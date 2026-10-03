@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المخاليط والمحاليل والتركيز - مادة العلوم - الصف الثاني المتوسط">
+    <title>المخاليط والمحاليل والتركيز | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #27ae60; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(39, 174, 96, 0.08); border-right: 4px solid #27ae60; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #27ae60; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #2ecc71; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #27ae60; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #27ae60; margin: 15px 0; }
+        .step-box h4 { color: #27ae60; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #27ae60; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: #2ecc71; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #27ae60; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(39, 174, 96, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #2ecc71; margin-bottom: 15px; }
+        .example-card h4 { color: #27ae60; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #2ecc71; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #27ae60; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #27ae60; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(39, 174, 96, 0.05), rgba(46, 204, 113, 0.05)); border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #27ae60; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #27ae60; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #27ae60; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #27ae60; color: #27ae60; }
+        .mixture-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .mixture-visual svg { max-width: 100%; height: auto; }
+        .formula-card { background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.1)); border: 2px solid #27ae60; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .formula-card .main-formula { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 800; color: #27ae60; margin: 15px 0; direction: ltr; }
+        .factor-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; transition: transform 0.3s; }
+        .factor-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .factor-card h4 { margin-bottom: 10px; color: #27ae60; }
+        .factor-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #27ae60; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-flask"></i> المخاليط، المحاليل، والتركيز</h1>
+            <p>الفرق بين المخلوط والمحاليل، عوامل الذوبان، وحساب التركيز</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل كل ما نراه حولنا مادة نقية؟</strong>
+                <p style="margin-top: 10px;">معظم المواد من حولنا هي <strong>مخاليط</strong>! الهواء الذي نتنفسه، ماء البحر، العصير، وحتى التربة... كلها مخاليط. في هذا الدرس، سنتعلم الفرق بين المخاليط والمحاليل، وكيف نذوب المواد، وكيف نحسب تركيز المحاليل!</p>
+            </div>
+
+            <div class="mixture-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> أمثلة على المخاليط في حياتنا</h4>
+                <svg width="600" height="200" viewBox="0 0 600 200">
+                    <!-- الهواء -->
+                    <circle cx="100" cy="100" r="60" fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="2"/>
+                    <text x="100" y="95" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الهواء</text>
+                    <text x="100" y="115" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">(N₂ + O₂ + ...)</text>
+                    
+                    <!-- ماء البحر -->
+                    <circle cx="300" cy="100" r="60" fill="rgba(39, 174, 96, 0.2)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="300" y="95" font-family="Tajawal" font-size="14" fill="#27ae60" text-anchor="middle" font-weight="700">ماء البحر</text>
+                    <text x="300" y="115" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle">(ماء + أملاح)</text>
+                    
+                    <!-- العصير -->
+                    <circle cx="500" cy="100" r="60" fill="rgba(230, 126, 34, 0.2)" stroke="#e67e22" stroke-width="2"/>
+                    <text x="500" y="95" font-family="Tajawal" font-size="14" fill="#e67e22" text-anchor="middle" font-weight="700">العصير</text>
+                    <text x="500" y="115" font-family="Tajawal" font-size="11" fill="#e67e22" text-anchor="middle">(ماء + سكر + ...)</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو المخلوط؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو المخلوط؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> المخلوط هو مادة تتكون من مزج مادتين أو أكثر معاً، حيث تحتفظ كل مادة بخصائصها الأصلية.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                <strong>خصائص المخلوط:</strong>
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> يمكن فصل مكوناته</h3>
+                    <p>بطرق فيزيائية مثل: الترشيح، التبخير، المغناطيس</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> فصل الرمل عن الماء بالترشيح</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-palette"></i> تحتفظ المكونات بخصائصها</h3>
+                    <p>كل مادة تحافظ على لونها، رائحتها، طعمها</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> السكر في الشاي يبقى حلواً</p>
+                </div>
+            </div>
+
+            <h3 style="color: #27ae60; margin: 25px 0 15px;">📌 أنواع المخاليط:</h3>
+            
+            <div class="three-columns">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <h4>مخلوط متجانس</h4>
+                    <p>لا يمكن تمييز مكوناته بالعين</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">مثال: ماء + سكر</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <h4>مخلوط غير متجانس</h4>
+                    <p>يمكن تمييز مكوناته بالعين</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">مثال: سلطة، رمل + ماء</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-cloud"></i></div>
+                    <h4>معلق (نوع خاص)</h4>
+                    <p>جسيمات صلبة في سائل، تترسب مع الوقت</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">مثال: عصير برتقال طبيعي</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> كيف تفرق بينهما؟</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>متجانس:</strong> يبدو كـ"مادة واحدة" (لا ترى المكونات)</li>
+                    <li><strong>غير متجانس:</strong> ترى المكونات منفصلة (مثل السلطة)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: ما هو المحلول؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tint"></i> ثانياً: ما هو المحلول؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> المحلول هو مخلوط متجانس يتكون من <strong>مذاب</strong> و<strong>مذيب</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-cube"></i> المذاب (Solute)</h3>
+                    <p><strong>التعريف:</strong> المادة التي تذوب في المذيب</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> السكر في الشاي، الملح في الماء</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>كميته:</strong> عادة أقل من المذيب</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-tint"></i> المذيب (Solvent)</h3>
+                    <p><strong>التعريف:</strong> المادة التي تذيب المذاب</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> الماء في الشاي، الماء في محلول الملح</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>كميته:</strong> عادة أكثر من المذاب</p>
+                </div>
+            </div>
+
+            <div class="formula-card">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">المعادلة الأساسية:</p>
+                <div class="main-formula">
+                    المحلول = المذاب + المذيب
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    مثال: محلول السكر = سكر (مذاب) + ماء (مذيب)
+                </p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على المحاليل</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>المحلول</th>
+                                <th>المذاب</th>
+                                <th>المذيب</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ماء مالح</td>
+                                <td>ملح (صلب)</td>
+                                <td>ماء (سائل)</td>
+                                <td>سائل</td>
+                            </tr>
+                            <tr>
+                                <td>هواء</td>
+                                <td>أكسجين (غاز)</td>
+                                <td>نيتروجين (غاز)</td>
+                                <td>غاز</td>
+                            </tr>
+                            <tr>
+                                <td>مشروب غازي</td>
+                                <td>CO₂ (غاز)</td>
+                                <td>ماء (سائل)</td>
+                                <td>سائل</td>
+                            </tr>
+                            <tr>
+                                <td>سبيكة ذهب</td>
+                                <td>نحاس (صلب)</td>
+                                <td>ذهب (صلب)</td>
+                                <td>صلب</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الماء: المذيب العالمي</h4>
+                <p>يُسمى الماء <strong>"المذيب العالمي"</strong> لأنه يذيب مواد كثيرة أكثر من أي سائل آخر! هذا بسبب تركيبه الجزيئي الفريد.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: عوامل الذوبان -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> ثالثاً: عوامل تؤثر في سرعة الذوبان</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الذوبان:</strong> عملية توزع جسيمات المذاب بشكل متساوٍ بين جسيمات المذيب.
+            </div>
+
+            <div class="three-columns">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+                    <h4>1. درجة الحرارة</h4>
+                    <p>رفع الحرارة يزيد سرعة الذوبان</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;"><strong>السبب:</strong> تزداد حركة الجزيئات</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">مثال: السكر يذوب أسرع في الشاي الساخن</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>2. التحريك</h4>
+                    <p>التحريك يزيد سرعة الذوبان</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;"><strong>السبب:</strong> يوزع المذاب ويمنع تشبع المنطقة</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">مثال: تحريك الشاي بالملعقة</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h4>3. حجم الجسيمات</h4>
+                    <p>تصغير الحجم يزيد سرعة الذوبان</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;"><strong>السبب:</strong> زيادة سطح التلامس</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">مثال: السكر البودرة يذوب أسرع من المكعبات</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-flask"></i> تجربة توضيحية</h4>
+                <p><strong>المسألة:</strong> إذا أردت إذابة مكعب سكر في ماء بأسرع وقت، ماذا تفعل؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> استخدم ماء ساخن</h4>
+                    <p>بدلاً من ماء بارد (عامل الحرارة)</p>
+                </div>
+                
+                <div class="step-box"tyle="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل المكعب إلى بودرة</h4>
+                    <p>اسحقه لزيادة سطح التلامس (عامل الحجم)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حرك المحلول</h4>
+                    <p>بملعقة لتوزيع السكر (عامل التحريك)</p>
+                </div>
+
+                <div class="solution">✅ بتطبيق العوامل الثلاثة، يذوب السكر بسرعة كبيرة!</div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>هذه العوامل تؤثر في <strong>سرعة الذوبان</strong> فقط، وليس في <strong>كمية المادة التي تذوب</strong> (الذوبانية).</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: التركيز -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> رابعاً: التركيز</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> التركيز هو كمية المذاب الموجودة في كمية معينة من المحلول أو المذيب.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-plus-circle"></i> محلول مركز</h3>
+                    <p>يحتوي على كمية <strong>كبيرة</strong> من المذاب</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> شاي ثقيل (كثير السكر)</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        نسبة المذاب عالية
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-minus-circle"></i> محلول مخفف</h3>
+                    <p>يحتوي على كمية <strong>قليلة</strong> من المذاب</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> شاي خفيف (قليل السكر)</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        نسبة المذاب منخفضة
+                    </div>
+                </div>
+            </div>
+
+            <div class="formula-card">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">صيغ حساب التركيز:</p>
+                <div class="main-formula">
+                    التركيز = كتلة المذاب  حجم المحلول
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 10px;">
+                    الوحدة: جرام/لتر (g/L) أو جرام/مل (g/mL)
+                </p>
+                <div class="main-formula" style="font-size: 1.2rem; margin-top: 15px;">
+                    التركيز % = (كتلة المذاب  كتلة المحلول) × 100
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: حساب التركيز بالجرام/لتر</h4>
+                <p><strong>المسألة:</strong> أذيب 20 جرام من الملح في 500 مل من الماء. ما تركيز المحلول؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">كتلة المذاب = 20 جرام</div>
+                    <div class="calculation">حجم المحلول = 500 مل = 0.5 لتر</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">التركيز = كتلة المذاب ÷ حجم المحلول</div>
+                    <div class="calculation">= 20 ÷ 0.5</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الناتج</h4>
+                    <div class="calculation">= 40 جرام/لتر</div>
+                </div>
+
+                <div class="math-box">
+                    التركيز = 40 جرام/لتر
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: حساب التركيز بالنسبة المئوية</h4>
+                <p><strong>المسألة:</strong> محلول كتلته 200 جرام، يحتوي على 30 جرام من السكر. ما التركيز بالنسبة المئوية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">كتلة المذاب (السكر) = 30 جرام</div>
+                    <div class="calculation">كتلة المحلول = 200 جرام</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">التركيز % = (30 ÷ 200) × 100</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الناتج</h4>
+                    <div class="calculation">= 0.15 × 100 = 15%</div>
+                </div>
+
+                <div class="math-box">
+                    التركيز = 15%
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: حساب كتلة المذاب</h4>
+                <p><strong>المسألة:</strong> محلول تركيزه 25 جرام/لتر، وحجمه 2 لتر. ما كتلة المذاب؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أعد ترتيب الصيغة</h4>
+                    <div class="calculation">كتلة المذاب = التركيز × حجم المحلول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عوض واحسب</h4>
+                    <div class="calculation">= 25 × 2 = 50 جرام</div>
+                </div>
+
+                <div class="math-box">
+                    كتلة المذاب = 50 جرام
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: الذوبانية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> خامساً: الذوبانية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الذوبانية هي أقصى كمية من المذاب يمكن إذابتها في كمية معينة من المذيب عند درجة حرارة محددة.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> محلول غير مشبع</h3>
+                    <p>يمكنه إذابة المزيد من المذاب</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> ماء يمكنه إذابة المزيد من السكر</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-balance-scale"></i> محلول مشبع</h3>
+                    <p>وصل إلى أقصى ذوبانية، لا يمكنه إذابة المزيد</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> ماء لا يمكنه إذابة سكر إضافي</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: حساب الذوبانية</h4>
+                <p><strong>المسألة:</strong> إذا كانت ذوبانية الملح في الماء عند 20°C هي 36 جرام/100 مل ماء، فكم جرام من الملح يمكن إذابته في 250 مل ماء؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب التناسب</h4>
+                    <div class="calculation">36 جرام / 100 مل = س / 250 مل</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الضرب التبادلي</h4>
+                    <div class="calculation">100 × س = 36 × 250</div>
+                    <div class="calculation">100س = 9000</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب س</h4>
+                    <div class="calculation">س = 9000 ÷ 100 = 90 جرام</div>
+                </div>
+
+                <div class="math-box">
+                    يمكن إذابة 90 جرام من الملح في 250 مل ماء
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تأثير الحرارة على الذوبانية:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>للمواد الصلبة:</strong> تزداد الذوبانية بزيادة الحرارة (مثل السكر في الماء)</li>
+                    <li><strong>للغازات:</strong> تقل الذوبانية بزيادة الحرارة (مثل الغاز في المشروبات)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-tint"></i> مثال 5: تحلية مياه البحر</h4>
+                <p><strong>المسألة:</strong> تحتوي مياه البحر على حوالي 35 جرام من الأملاح في كل لتر. ما تركيز الأملاح بالنسبة المئوية إذا كانت كثافة الماء 1 كجم/لتر؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">كتلة الأملاح = 35 جرام</div>
+                    <div class="calculation">كتلة المحلول = 1000 جرام (1 لتر ماء)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب التركيز %</h4>
+                    <div class="calculation">= (35 ÷ 1000) × 100 = 3.5%</div>
+                </div>
+
+                <div class="math-box">
+                    تركيز الأملاح في البحر = 3.5%
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-medkit"></i> مثال 6: المحاليل الطبية</h4>
+                <p><strong>المسألة:</strong> محلول ملحي طبي تركيزه 0.9%. كم جرام من الملح في 500 مل من هذا المحلول؟ (افترض أن كثافة المحلول ≈ 1 جرام/مل)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب كتلة المحلول</h4>
+                    <div class="calculation">500 مل ≈ 500 جرام</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم نسبة التركيز</h4>
+                    <div class="calculation">0.9% = (كتلة الملح ÷ 500) × 100</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب كتلة الملح</h4>
+                    <div class="calculation">كتلة الملح = (0.9 × 500) ÷ 100 = 4.5 جرام</div>
+                </div>
+
+                <div class="math-box">
+                    كتلة الملح = 4.5 جرام
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-glass-whiskey"></i> مثال 7: المشروبات الغازية</h4>
+                <p><strong>المسألة:</strong> لماذا تخرج فقاعات الغاز عند فتح علبة المشروب الغازي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> داخل العلبة المغلقة</h4>
+                    <p>ضغط عالٍ ➔ ذوبانية CO₂ عالية  الغاز مذاب في السائل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عند فتح العلبة</h4>
+                    <p>ينخفض الضغط ➔ تقل ذوبانية الغاز ➔ يخرج CO₂ على شكل فقاعات</p>
+                </div>
+
+                <div class="solution">✅ انخفاض الضغط يقلل ذوبانية الغازات في السوائل</div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين المخلوط والمركب</h4>
+                <p><strong>المخلوط:</strong> يمكن فصل مكوناته بطرق فيزيائية، تحتفظ المكونات بخصائصها.</p>
+                <p><strong>المركب:</strong> لا يمكن فصله إلا بطرق كيميائية، له خصائص جديدة مختلفة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ مخلوط:</strong> ماء + رمل (يمكن فصلهما بالترشيح)</p>
+                    <p style="margin-top: 8px;"><strong>✅ مركب:</strong> ماء H₂O (لا يمكن فصله إلا بالتحليل الكهربائي)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان تحويل الوحدات</h4>
+                <p>تأكد من:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>تحويل المل إلى لتر (÷ 1000) عند حساب التركيز بالجرام/لتر</li>
+                    <li>استخدام نفس الوحدات في البسط والمقام</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن كل المخاليط محاليل</h4>
+                <p>المحلول هو نوع خاص من المخاليط (متجانس فقط). المخاليط غير المتجانسة (مثل السلطة) ليست محاليل.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الخلط بين الذوبان والذوبانية</h4>
+                <p><strong>الذوبان:</strong> عملية حدوث الإذابة.</p>
+                <p><strong>الذوبانية:</strong> أقصى كمية يمكن إذابتها (قيمة محددة).</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #27ae60;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المخلوط:</strong> مزج مادتين أو أكثر مع الاحتفاظ بخصائصهما.</li>
+                <li><strong>أنواع المخاليط:</strong> متجانسة (لا تُرى المكونات) وغير متجانسة (تُرى المكونات).</li>
+                <li><strong>المحلول:</strong> مخلوط متجانس من مذاب + مذيب.</li>
+                <li><strong>المذاب:</strong> المادة التي تذوب (كميته أقل عادة).</li>
+                <li><strong>المذيب:</strong> المادة التي تذيب (كميته أكثر عادة، الماء هو المذيب العالمي).</li>
+                <li><strong>عوامل سرعة الذوبان:</strong> الحرارة، التحريك، حجم الجسيمات.</li>
+                <li><strong>التركيز:</strong> كمية المذاب في المحلول (جرام/لتر أو %).</li>
+                <li><strong>الذوبانية:</strong> أقصى كمية تذوب عند درجة حرارة معينة.</li>
+                <li><strong>المحلول المشبع:</strong> وصل لأقصى ذوبانية، لا يذيب المزيد.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+ <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما الفرق الرئيسي بين المخلوط والمركب؟",
+                options: [
+                    "المخلوط يمكن فصله فيزيائياً، المركب كيميائياً",
+                    "المخلوط له خصائص جديدة، المركب لا",
+                    "لا فرق بينهما",
+                    "المركب يمكن فصله فيزيائياً"
+                ],
+                correct: 0,
+                explanation: "المخلوط يمكن فصل مكوناته بطرق فيزيائية (مثل الترشيح)، بينما المركب يحتاج لطرق كيميائية (مثل التحليل الكهربائي)."
+            },
+            {
+                sentence: "في محلول السكر والماء، ما هو المذاب؟",
+                options: ["الماء", "السكر", "المحلول", "كلاهما"],
+                correct: 1,
+                explanation: "السكر هو المذاب لأنه المادة التي تذوب، والماء هو المذيب لأنه المادة التي تذيب."
+            },
+            {
+                sentence: "أي عامل لا يؤثر في سرعة الذوبان؟",
+                options: ["درجة الحرارة", "التحريك", "حجم الجسيمات", "لون المادة"],
+                correct: 3,
+                explanation: "لون المادة لا يؤثر في سرعة الذوبان. العوامل المؤثرة هي: الحرارة، التحريك، وحجم الجسيمات."
+            },
+            {
+                sentence: "أذيب 15 جرام من الملح في 500 مل ماء. ما التركيز بالجرام/لتر؟",
+                options: ["15 جرام/لتر", "30 جرام/لتر", "7.5 جرام/لتر", "50 جرام/لتر"],
+                correct: 1,
+                explanation: "التركيز = 15 ÷ 0.5 = 30 جرام/لتر."
+            },
+            {
+                sentence: "محلول مشبع يعني:",
+                options: [
+                    "يمكنه إذابة المزيد من المذاب",
+                    "وصل لأقصى ذوبانية ولا يذيب المزيد",
+                    "لا يحتوي على أي مذاب",
+                    "مخفف جداً"
+                ],
+                correct: 1,
+                explanation: "المحلول المشبع هو الذي وصل إلى أقصى ذوبانية ولا يمكنه إذابة المزيد من المذاب عند نفس درجة الحرارة."
+            },
+            {
+                sentence: "لماذا تخرج فقاعات من المشروب الغازي عند فتحه؟",
+                options: [
+                    "لأن الحرارة ارتفعت",
+                    "لأن الضغط انخفض فقلت ذوبانية الغاز",
+                    "لأن الماء تبخر",
+                    "لأن السكر ترسب"
+                ],
+                correct: 1,
+                explanation: "عند فتح العلبة ينخفض الضغط، مما يقلل ذوبانية غاز CO₂ في السائل، فيخرج على شكل فقاعات."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

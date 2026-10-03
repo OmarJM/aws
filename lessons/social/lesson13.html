@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الغلاف الصخري - تركيبه ونظرية الصفائح التكتونية وتكوين القارات - مادة الدراسات الاجتماعية">
+    <title>الغلاف الصخري | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        :root{--rock-brown:#8d6e63;--rock-dark:#5d4037;--rock-light:#d7ccc8;--rock-orange:#fb8c00;--rock-red:#c62828;--rock-yellow:#f9a825;--rock-blue:#1565c0}
+        .lesson-hero{background:linear-gradient(135deg,#8d6e63,#5d4037);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#8d6e63;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #fb8c00;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(141,110,99,.08);border-right:4px solid #8d6e63;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#5d4037}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #f9a825;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #8d6e63;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#5d4037}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #8d6e63;margin:15px 0}
+        .step-box h4{color:#8d6e63;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#8d6e63;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .step-box .calculation{font-family:'Fira Code',monospace;background:var(--card-bg);padding:10px 15px;border-radius:8px;margin:10px 0;direction:ltr;text-align:center;font-size:1.1rem;font-weight:600;color:#fb8c00}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#8d6e63;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .custom-table tr:hover{background-color:rgba(141,110,99,.05)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #f9a825;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .golden-tip{background:linear-gradient(135deg,#3d3200,#4a3d00)}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .warning-box{background:linear-gradient(135deg,#3d1015,#4a1520)}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#8d6e63;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #fb8c00;margin-bottom:15px}
+        .example-card h4{color:#8d6e63;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #27ae60;font-weight:600;color:#5d4037;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #fb8c00;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#8d6e63;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#8d6e63}
+        .interactive-activity{background:linear-gradient(135deg,rgba(141,110,99,.05),rgba(251,140,0,.05));border:2px dashed #8d6e63;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#8d6e63;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#8d6e63;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#27ae60;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #27ae60}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#8d6e63;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#8d6e63;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #8d6e63;color:#8d6e63}
+        .layer-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;transition:transform .3s}
+        .layer-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .layer-card h4{margin-bottom:10px;font-family:'Amiri',serif}
+        .layer-card .icon{font-size:2.5rem;margin-bottom:10px}
+        .layer-card.crust{border-top:5px solid #8d6e63}
+        .layer-card.crust h4,.layer-card.crust .icon{color:#8d6e63}
+        .layer-card.mantle{border-top:5px solid #fb8c00}
+        .layer-card.mantle h4,.layer-card.mantle .icon{color:#fb8c00}
+        .layer-card.outer-core{border-top:5px solid #c62828}
+        .layer-card.outer-core h4,.layer-card.outer-core .icon{color:#c62828}
+        .layer-card.inner-core{border-top:5px solid #f9a825}
+        .layer-card.inner-core h4,.layer-card.inner-core .icon{color:#f9a825}
+        .rock-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;border-top:5px solid #8d6e63}
+        .rock-card h4{margin-bottom:10px;font-family:'Amiri',serif;color:#8d6e63}
+        .rock-card .icon{font-size:2rem;margin-bottom:10px;color:#8d6e63}
+        .plate-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;border-top:5px solid #1565c0;transition:transform .3s}
+        .plate-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .plate-card h4{margin-bottom:10px;color:#1565c0;font-family:'Amiri',serif}
+        .plate-card .icon{font-size:2.5rem;margin-bottom:10px;color:#1565c0}
+        .earth-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .earth-visual svg{max-width:100%;height:auto}
+        .lesson-intro{background:linear-gradient(135deg,rgba(141,110,99,.05),rgba(251,140,0,.05));border:2px solid #8d6e63;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#8d6e63;font-family:'Amiri',serif;margin-bottom:15px}
+        .bismillah{text-align:center;font-family:'Amiri',serif;font-size:2rem;color:#8d6e63;margin:20px 0}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-mountain"></i> الغلاف الصخري</h1>
+            <p>تركيب الغلاف الصخري، نظرية الصفائح التكتونية، وتكوين القارات</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل تعلم أن القارات تتحرك؟ وأن جبال الهيمالايا نتجت عن اصطدام قارتين؟</strong>
+                <p style="margin-top:10px">الأرض التي نعيش عليها ليست ثابتة، بل تتكون من <strong>صفائح صخرية ضخمة</strong> تتحرك ببطء فوق طبقة لزجة. هذه الحركة تسبب الزلازل والبراكين وتُشكّل الجبال والمحيطات. في هذا الدرس، سنتعرف على <strong>تركيب الغلاف الصخري</strong>، و<strong>نظرية الصفائح التكتونية</strong>، و<strong>كيف تكوّنت القارات</strong>.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-globe"></i> عن الغلاف الصخري</h3>
+                <p><strong>التعريف:</strong> الطبقة الصلبة الخارجية للأرض</p>
+                <p><strong>السماكة:</strong> 5-100 كم (تحت المحيطات والجبال)</p>
+                <p><strong>التركيب:</strong> القشرة + الجزء العلوي من الوشاح</p>
+                <p><strong>الصفائح:</strong> 15 صفيحة رئيسية تتحرك باستمرار</p>
+            </div>
+
+            <div class="earth-visual">
+                <h4 style="color:#8d6e63;margin-bottom:15px"><i class="fas fa-circle-notch"></i> التركيب الداخلي للأرض</h4>
+                <svg width="500" height="400" viewBox="0 0 500 400">
+                    <!-- الأرض من الخارج -->
+                    <circle cx="250" cy="200" r="180" fill="#8d6e63" stroke="#5d4037" stroke-width="3"/>
+                    <circle cx="250" cy="200" r="140" fill="#fb8c00" stroke="#e65100" stroke-width="2"/>
+                    <circle cx="250" cy="200" r="100" fill="#c62828" stroke="#8b0000" stroke-width="2"/>
+                    <circle cx="250" cy="200" r="60" fill="#f9a825" stroke="#f57f17" stroke-width="2"/>
+                    
+                    <!-- التسميات -->
+                    <text x="250" y="40" font-family="Tajawal" font-size="14" fill="#5d4037" text-anchor="middle" font-weight="700">القشرة (5-70 كم)</text>
+                    <text x="250" y="110" font-family="Tajawal" font-size="14" fill="#e65100" text-anchor="middle" font-weight="700">الوشاح (2900 كم)</text>
+                    <text x="250" y="180" font-family="Tajawal" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">اللب الخارجي (2200 كم)</text>
+                    <text x="250" y="210" font-family="Tajawal" font-size="14" fill="#5d4037" text-anchor="middle" font-weight="700">اللب الداخلي (1200 كم)</text>
+                    
+                    <!-- خطوط توضيحية -->
+                    <line x1="430" y1="40" x2="390" y2="80" stroke="#5d4037" stroke-width="1.5"/>
+                    <line x1="430" y1="110" x2="390" y2="130" stroke="#e65100" stroke-width="1.5"/>
+                    <line x1="430" y1="180" x2="310" y2="180" stroke="#c62828" stroke-width="1.5"/>
+                    <line x1="430" y1="210" x2="310" y2="210" stroke="#f9a825" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: تركيب الغلاف الصخري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> أولاً: تركيب الغلاف الصخري</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الغلاف الصخري (Lithosphere):</strong> الطبقة الصلبة الخارجية للأرض، تتكون من القشرة الأرضية والجزء العلوي من الوشاح.
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ وَالْأَرْضَ بَعْدَ ذَٰلِكَ دَحَاهَا ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة النازعات: 30]</p>
+            </div>
+
+            <div class="four-columns">
+                <div class="layer-card crust">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>1. القشرة الأرضية</h4>
+                    <p>أرفع الطبقات</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>السماكة:</strong> 5-70 كم</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>النوعان:</strong> قارية ومحيطية</p>
+                </div>
+                <div class="layer-card mantle">
+                    <div class="icon"><i class="fas fa-fire"></i></div>
+                    <h4>2. الوشاح</h4>
+                    <p>أسمك الطبقات</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>السماكة:</strong> 2900 كم</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الحالة:</strong> صلب لزج (بلاستيك)</p>
+                </div>
+                <div class="layer-card outer-core">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>3. اللب الخارجي</h4>
+                    <p>سائل حار</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>السماكة:</strong> 2200 كم</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>التركيب:</strong> حديد ونيكل سائل</p>
+                </div>
+                <div class="layer-card inner-core">
+                    <div class="icon"><i class="fas fa-circle"></i></div>
+                    <h4>4. اللب الداخلي</h4>
+                    <p>صلب شديد الحرارة</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>السماكة:</strong> 1200 كم</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الحرارة:</strong> 5000°م</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل الطبقات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> القشرة الأرضية (Crust)</h4>
+                    <p><strong>القشرة القارية:</strong> سميكة (30-70 كم)، خفيفة، تتكون من الجرانيت. تحت القارات.</p>
+                    <p><strong>القشرة المحيطية:</strong> رقيقة (5-10 كم)، كثيفة، تتكون من البازلت. تحت المحيطات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الوشاح (Mantle)</h4>
+                    <p>يصل عمقه إلى 2900 كم. يتكون من صخور حارة شبه منصهرة. في أعماقه تحدث <strong>تيارات الحمل</strong> التي تُحرّك الصفائح.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> اللب الخارجي (Outer Core)</h4>
+                    <p>سائل من الحديد والنيكل المنصهر. حركته تُسبب <strong>المجال المغناطيسي</strong> للأرض.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> اللب الداخلي (Inner Core)</h4>
+                    <p>كرة صلبة من الحديد والنيكل، درجة حرارتها تعادل سطح الشمس (5000°م). ضغط هائل يمنع الانصهار.</p>
+                </div>
+
+                <div class="solution">✅ الأرض تتكون من 4 طبقات رئيسية لكل منها خصائصها</div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #8d6e63">
+                    <h3 style="color:#8d6e63"><i class="fas fa-mountain"></i> القشرة القارية</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>السماكة:</strong> 30-70 كم</li>
+                        <li><strong>الكثافة:</strong> خفيفة (2.7 جم/سم³)</li>
+                        <li><strong>التكوين:</strong> جرانيت</li>
+                        <li><strong>الموقع:</strong> تحت القارات</li>
+                        <li><strong>العمر:</strong> قديم (مليارات السنين)</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #1565c0">
+                    <h3 style="color:#1565c0"><i class="fas fa-water"></i> القشرة المحيطية</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>السماكة:</strong> 5-10 كم</li>
+                        <li><strong>الكثافة:</strong> عالية (3.0 جم/سم³)</li>
+                        <li><strong>التكوين:</strong> بازلت</li>
+                        <li><strong>الموقع:</strong> تحت المحيطات</li>
+                        <li><strong>العمر:</strong> حديث (أقل من 200 مليون سنة)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا القشرة المحيطية أرق؟</h4>
+                <p>لأنها تتكون باستمرار من <strong>الحمم البركانية</strong> الخارجة من وسط المحيطات، وتُستهلك في مناطق الطرح (Subduction Zones). لذلك عمرها أقل من القشرة القارية.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: أنواع الصخور -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gem"></i> ثانياً: أنواع الصخور في القشرة الأرضية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الصخور:</strong> تتكون القشرة الأرضية من ثلاثة أنواع رئيسية من الصخور، تتحول من نوع إلى آخر في <strong>دورة الصخور</strong>.
+            </div>
+
+            <div class="three-columns">
+                <div class="rock-card" style="border-top-color:#c62828">
+                    <div class="icon" style="color:#c62828"><i class="fas fa-fire"></i></div>
+                    <h4 style="color:#c62828">1. الصخور النارية</h4>
+                    <p>تتكون من تبريد الماغما (الصهارة)</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>أنواعها:</strong></p>
+                    <ul style="padding-right:15px;font-size:.9rem;line-height:1.8;text-align:right">
+                        <li>جوفية (تبرد ببطء)</li>
+                        <li>سطحية (تبرد بسرعة)</li>
+                    </ul>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>أمثلة:</strong> الجرانيت، البازلت</p>
+                </div>
+                <div class="rock-card" style="border-top-color:#fb8c00">
+                    <div class="icon" style="color:#fb8c00"><i class="fas fa-layer-group"></i></div>
+                    <h4 style="color:#fb8c00">2. الصخور الرسوبية</h4>
+                    <p>تتكون من ترسب الفتات والصخور</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>أنواعها:</strong></p>
+                    <ul style="padding-right:15px;font-size:.9rem;line-height:1.8;text-align:right">
+                        <li>فتاتية (حجر رملي)</li>
+                        <li>كيميائية (ملح صخري)</li>
+                        <li>عضوية (حجر جيري)</li>
+                    </ul>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>أمثلة:</strong> الحجر الرملي، الطيني</p>
+                </div>
+                <div class="rock-card" style="border-top-color:#1565c0">
+                    <div class="icon" style="color:#1565c0"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h4 style="color:#1565c0">3. الصخور المتحولة</h4>
+                    <p>تتكون من تحول الصخور بالحرارة والضغط</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>العوامل:</strong></p>
+                    <ul style="padding-right:15px;font-size:.9rem;line-height:1.8;text-align:right">
+                        <li>الحرارة العالية</li>
+                        <li>الضغط الشديد</li>
+                        <li>المحاليل الكيميائية</li>
+                    </ul>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>أمثلة:</strong> الرخام، الأردواز</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> دورة الصخور</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> التبريد والتصلب</h4>
+                    <p>الماغما تبرد ➔ <strong>صخور نارية</strong> (مثل الجرانيت)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> التجوية والتعرية</h4>
+                    <p>الصخور النارية تتفتت ➔ <strong>رواسب</strong> (رمل، طين)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الترسيب والتصلب</h4>
+                    <p>الرواسب تتراكم وتتماسك ➔ <strong>صخور رسوبية</strong> (مثل الحجر الرملي)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الحرارة والضغط</h4>
+                    <p>الصخور الرسوبية تتعرض لحرارة وضغط عاليين ➔ <strong>صخور متحولة</strong> (مثل الرخام)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> الانصهار</h4>
+                    <p>الصخور المتحولة تنصهر ➔ <strong>ماغما</strong> ➔ تعود للدورة من البداية</p>
+
+                <div class="solution">✅ الصخور تتحول من نوع إلى آخر في دورة مستمرة</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>نوع الصخر</th>
+                            <th>طريقة التكوين</th>
+                            <th>الأمثلة</th>
+                            <th>الاستخدامات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color:#c62828">النارية</strong></td>
+                            <td>تبريد الماغما</td>
+                            <td>الجرانيت، البازلت</td>
+                            <td>البناء، الزينة</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#fb8c00">الرسوبية</strong></td>
+                            <td>ترسب الفتات</td>
+                            <td>الحجر الرملي، الطيني</td>
+                            <td>البناء، النفط</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#1565c0">المتحولة</strong></td>
+                            <td>الحرارة والضغط</td>
+                            <td>الرخام، الأردواز</td>
+                            <td>الزينة، البناء</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الصخور في المملكة العربية السعودية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>الدرع العربي:</strong> صخور نارية قديمة (جرانيت) في غرب المملكة</li>
+                    <li><strong>المناطق الرسوبية:</strong> في الشرق (المنطقة النفطية)</li>
+                    <li><strong>جبال السروات:</strong> صخور نارية وبركانية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: نظرية الصفائح التكتونية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-puzzle-piece"></i> ثالثاً: نظرية الصفائح التكتونية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>نظرية الصفائح التكتونية:</strong> تفسر حركة القشرة الأرضية، والزلازل، والبراكين، وتكوين الجبال.
+            </div>
+
+            <div class="earth-visual">
+                <h4 style="color:#8d6e63;margin-bottom:15px"><i class="fas fa-puzzle-piece"></i> الصفائح التكتونية الرئيسية</h4>
+                <svg width="700" height="350" viewBox="0 0 700 350">
+                    <!-- خريطة العالم المبسطة -->
+                    <rect x="50" y="50" width="600" height="250" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="10"/>
+                    
+                    <!-- الصفائح -->
+                    <!-- صفيحة أمريكا الشمالية -->
+                    <path d="M 100 80 L 200 80 L 220 150 L 180 200 L 100 180 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="160" y="140" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">أمريكا الشمالية</text>
+                    
+                    <!-- صفيحة أمريكا الجنوبية -->
+                    <path d="M 150 210 L 200 210 L 210 280 L 170 290 L 140 260 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="175" y="250" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">أمريكا الجنوبية</text>
+                    
+                    <!-- صفيحة أوراسيا -->
+                    <path d="M 250 80 L 450 80 L 460 150 L 250 150 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="350" y="120" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">أوراسيا</text>
+                    
+                    <!-- صفيحة أفريقيا -->
+                    <path d="M 280 160 L 380 160 L 390 260 L 300 270 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="335" y="220" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">أفريقيا</text>
+                    
+                    <!-- صفيحة الهند-أستراليا -->
+                    <path d="M 420 180 L 520 180 L 530 260 L 430 270 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="475" y="225" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">الهند-أستراليا</text>
+                    
+                    <!-- صفيحة المحيط الهادئ -->
+                    <path d="M 500 80 L 620 80 L 630 280 L 550 290 L 510 200 Z" fill="rgba(21,101,192,.3)" stroke="#1565c0" stroke-width="2"/>
+                    <text x="565" y="180" font-family="Tajawal" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">المحيط الهادئ</text>
+                    
+                    <!-- الأسهم -->
+                    <line x1="200" y1="150" x2="240" y2="150" stroke="#c62828" stroke-width="2" marker-end="url(#arrow5)"/>
+                    <line x1="380" y1="200" x2="420" y2="200" stroke="#c62828" stroke-width="2" marker-end="url(#arrow5)"/>
+                    <line x1="460" y1="150" x2="500" y2="150" stroke="#c62828" stroke-width="2" marker-end="url(#arrow5)"/>
+                    
+                    <!-- موقع السعودية -->
+                    <circle cx="360" cy="180" r="6" fill="#fb8c00" stroke="#fff" stroke-width="2"/>
+                    <text x="380" y="185" font-family="Tajawal" font-size="9" fill="#fb8c00" font-weight="700">السعودية</text>
+                    
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#c62828"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مكونات النظرية</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الصفائح التكتونية</h4>
+                    <p>الغلاف الصخري مقسم إلى <strong>15 صفيحة رئيسية</strong> وعدة صفائح صغيرة. كل صفيحة تحمل قارة أو جزءاً من محيط.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> حركة الصفائح</h4>
+                    <p>تتحرك الصفائح ببطء (1-10 سم/سنة) فوق <strong>الغلاف المائع (الأثينوسفير)</strong> في الوشاح العلوي.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تيارات الحمل</h4>
+                    <p>الحرارة في باطن الأرض تُسبب <strong>تيارات حمل</strong> في الوشاح، تدفع الصفائح للحركة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> حدود الصفائح</h4>
+                    <p>عند حدود الصفائح تحدث <strong>الزلازل والبراكين</strong> وتتشكل <strong>الجبال والخنادق</strong>.</p>
+                </div>
+
+                <div class="solution">✅ الصفائح التكتونية تفسر معظم الظواهر الجيولوجية</div>
+            </div>
+
+            <div class="three-columns">
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-arrows-alt-h"></i></div>
+                    <h4>حدود تباعدية</h4>
+                    <p>صفيحتان تبتعدان</p>
+                    <p style="margin-top:10px;font-size:.9rem">تكوين قشرة جديدة</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>مثال:</strong> وسط المحيط الأطلسي</p>
+                </div>
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h4>حدود تقاربية</h4>
+                    <p>صفيحتان تقتربان</p>
+                    <p style="margin-top:10px;font-size:.9rem">تكوين جبال أو خنادق</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>مثال:</strong> جبال الهيمالايا</p>
+                </div>
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h4>حدود تحويلية</h4>
+                    <p>صفيحتان تنزلقان</p>
+                    <p style="margin-top:10px;font-size:.9rem">زلازل قوية</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>مثال:</strong> صدع سان أندرياس</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أنواع حدود الصفائح</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الحدود التباعدية (Divergent)</h4>
+                    <p>صفيحتان تبتعدان عن بعضهما ➔ تخرج الماغما ➔ تتكون <strong>قشرة محيطية جديدة</strong>.</p>
+                    <p><strong>مثال:</strong> الأخاديد وسط المحيطات (Mid-Ocean Ridges).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الحدود التقاربية (Convergent)</h4>
+                    <p>صفيحتان تقتربان ➔ إحداهما تغوص تحت الأخرى ➔ <strong>جبال أو براكين أو خنادق</strong>.</p>
+                    <p><strong>مثال:</strong> اصطدام الهند بآسيا ➔ جبال الهيمالايا.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الحدود التحويلية (Transform)</h4>
+                    <p>صفيحتان تنزلقان بجانب بعضهما ➔ <strong>زلازل قوية</strong> دون تكوين أو تدمير قشرة.</p>
+                    <p><strong>مثال:</strong> صدع سان أندرياس في كاليفورنيا.</p>
+                </div>
+
+                <div class="solution">✅ كل نوع من الحدود ينتج ظواهر جيولوجية مختلفة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> حلقة النار في المحيط الهادئ:</h4>
+                <p>حزام من البراكين والزلازل يحيط بالمحيط الهادئ، طوله 40,000 كم. فيه <strong>75% من براكين العالم</strong> و<strong>90% من زلازله</strong>. يقع على حدود صفيحة المحيط الهادئ.</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: تكوين القارات وانجرافها -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-globe-americas"></i> رابعاً: تكوين القارات وانجرافها</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>نظرية الانجراف القاري:</strong> اقترحها <strong>ألفريد فيغنر</strong> سنة 1912م، وتفسر كيف تكوّنت القارات وتحركت عبر الزمن.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #8d6e63">
+                    <h3 style="color:#8d6e63"><i class="fas fa-user"></i> ألفريد فيغنر</h3>
+                    <p><strong>عالِم ألماني</strong> (1880-1930م)</p>
+                    <p style="margin-top:10px;font-size:.9rem">اقترح نظرية الانجراف القاري</p>
+                    <p style="margin-top:10px;font-size:.9rem">استند إلى تطابق سواحل القارات</p>
+                </div>
+                <div class="column-card" style="border-top:5px solid #fb8c00">
+                    <h3 style="color:#fb8c00"><i class="fas fa-globe"></i> بانجيا (Pangaea)</h3>
+                    <p><strong>القارة العظمى</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">قبل 250 مليون سنة</p>
+                    <p style="margin-top:10px;font-size:.9rem">كانت كل القارات متصلة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مراحل تكوين القارات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> بانجيا (قبل 250 مليون سنة)</h4>
+                    <p>كل اليابسة في <strong>قارة واحدة عملاقة</strong> تحيط بها محيط واحد (بانthalassa).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> Laurasia و Gondwana (قبل 200 مليون سنة)</h4>
+                    <p>انقسمت بانجيا إلى <strong>قارتين</strong>:</p>
+                    <p><strong>لوراسيا:</strong> في الشمال (أمريكا الشمالية، أوروبا، آسيا).</p>
+                    <p><strong>جندوانا:</strong> في الجنوب (أمريكا الجنوبية، أفريقيا، الهند، أستراليا، أنتاركتيكا).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> بداية الانفصال (قبل 150 مليون سنة)</h4>
+                    <p>بدأت جندوانا بالتفكك، وابتعدت <strong>أمريكا الجنوبية</strong> و<strong>أفريقيا</strong> عن بعضها.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تكوين المحيط الأطلسي (قبل 100 مليون سنة)</h4>
+                    <p>اتسعت الفجوة بين أفريقيا وأمريكا الجنوبية ➔ تكون <strong>المحيط الأطلسي</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> اصطدام الهند بآسيا (قبل 50 مليون سنة)</h4>
+                    <p>تحركت الهند شمالاً ➔ اصطدمت بآسيا ➔ تكونت <strong>جبال الهيمالايا</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> القارات الحالية (اليوم)</h4>
+                    <p>وصلت القارات إلى مواقعها الحالية، ولا تزال تتحرك ببطء (1-10 سم/سنة).</p>
+                </div>
+
+                <div class="solution">✅ القارات تتحرك باستمرار وتشكلت عبر ملايين السنين</div>
+            </div>
+
+            <div class="three-columns">
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h4>تطابق السواحل</h4>
+                    <p>سواحل أفريقيا وأمريكا الجنوبية تتطابق كقطع البازل</p>
+                </div>
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
+                    <h4>الأحفوريات</h4>
+                    <p>نفس الأحفوريات في قارات متباعدة</p>
+                </div>
+                <div class="plate-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>السلاسل الجبلية</h4>
+                    <p>استمرار سلاسل جبلية عبر قارات مختلفة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الأدلة على الانجراف القاري</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> تطابق السواحل</h4>
+                    <p>ساحل أفريقيا الغربي يطابق ساحل أمريكا الجنوبية الشرقي تماماً.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الأحفوريات المتشابهة</h4>
+                    <p>نفس أنواع الديناصورات والنباتات الأحفورية في أفريقيا وأمريكا الجنوبية والهند.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> السلاسل الجبلية المتصلة</h4>
+                    <p>جبال الأطلس في المغرب تستمر في جبال الأبلاش في أمريكا الشمالية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الأدلة المناخية القديمة</h4>
+                    <p>وجود آثار جليدية في مناطق استوائية اليوم (مثل الهند) يدل على أنها كانت قرب القطب.</p>
+                </div>
+
+                <div class="solution">✅ الأدلة المتعددة تؤكد نظرية الانجراف القاري</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> مستقبل القارات:</h4>
+                <p>بعد <strong>250 مليون سنة</strong> من الآن، ستجتمع القارات مرة أخرى في <strong>قارة عظمى جديدة</strong> اسمها "بانجيا التالية" (Pangaea Proxima). المحيط الأطلسي سيتسع، والهادئ سيتقلص.</p>
+            </div>
+        </div>
+
+        <!-- خامساً: المملكة العربية السعودية والصفائح التكتونية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flag"></i> خامساً: المملكة العربية السعودية والصفائح التكتونية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الموقع التكتوني:</strong> تقع المملكة على <strong>اللوحة العربية</strong> التي تتحرك شمالاً نحو اللوحة الأوراسية.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #8d6e63">
+                    <h3 style="color:#8d6e63"><i class="fas fa-map-marker-alt"></i> اللوحة العربية</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>الحركة:</strong> شمالاً (1-2 سم/سنة)</li>
+                        <li><strong>النتيجة:</strong> تكوين البحر الأحمر</li>
+                        <li><strong>الحدود:</strong> تباعدية مع أفريقيا</li>
+                        <li><strong>الحدود:</strong> تقاربية مع أوراسيا</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #1565c0">
+                    <h3 style="color:#1565c0"><i class="fas fa-water"></i> البحر الأحمر</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li><strong>النوع:</strong> بحر فتى</li>
+                        <li><strong>العمر:</strong> 30 مليون سنة</li>
+                        <li><strong>المستقبل:</strong> سيتسع ليصبح محيطاً</li>
+                        <li><strong>السبب:</strong> تباعد الصفيحتين</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الظواهر الجيولوجية في المملكة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الدرْع العربي</h4>
+                    <p>في غرب المملكة، صخور نارية قديمة (جرانيت) عمرها مليارات السنين. من أقدم الصخور في شبه الجزيرة العربية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> حرات الشام</h4>
+                    <p>حقول بركانية في شمال غرب المملكة (حرة رهاط، حرة كشب). أحدث نشاط بركاني قبل 1500 سنة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الصدوع</h4>
+                    <p>شبكة من الصدوع في غرب المملكة، بسبب تمدد القشرة الأرضية مع توسع البحر الأحمر.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الزلازل</h4>
+                    <p>زلازل خفيفة إلى متوسطة في مناطق البحر الأحمر وغرب المملكة، بسبب النشاط التكتوني.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> النفط</h4>
+                    <p>تكون في الصخور الرسوبية في شرق المملكة (المنطقة الشرقية)، نتيجة ترسب الكائنات البحرية القديمة.</p>
+                </div>
+
+                <div class="solution">✅ المملكة منطقة جيولوجية نشطة ومهمة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا يوجد النفط في الشرقية والجبال في الغربية؟</h4>
+                <p><strong>الشرقية:</strong> كانت قاع بحر قديم (تثنية)، ترسبت فيها الكائنات البحرية وتحولت إلى نفط.</p>
+                <p><strong>الغربية:</strong> صخور قارية قديمة (الدرع العربي) تعرضت للرفع والتكسر مع حركة الصفائح.</p>
+            </div>
+        </div>
+
+        <!-- سادساً: الزلازل والبراكين -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-house-damage"></i> سادساً: الزلازل والبراكين</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>النتائج الطبيعية:</strong> حركة الصفائح التكتونية تسبب الزلازل والبراكين، وهي من أعظم الظواهر الطبيعية.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #c62828">
+                    <h3 style="color:#c62828"><i class="fas fa-house-damage"></i> الزلازل</h3>
+                    <p><strong>التعريف:</strong> اهتزاز مفاجئ للأرض.</p>
+                    <p style="margin-top:10px"><strong>السبب:</strong> حركة الصفائح وتحرر الطاقة.</p>
+                    <p style="margin-top:10px"><strong>القياس:</strong> مقياس ريختر (1-10).</p>
+                    <p style="margin-top:10px"><strong>المركز:</strong> البؤرة (تحت الأرض) والمركز السطحي.</p>
+                </div>
+                <div class="column-card" style="border-top:5px solid #fb8c00">
+                    <h3 style="color:#fb8c00"><i class="fas fa-fire"></i> البراكين</h3>
+                    <p><strong>التعريف:</strong> خروج الماغما والغازات من باطن الأرض.</p>
+                    <p style="margin-top:10px"><strong>السبب:</strong> حركة الصفائح والماغما.</p>
+                    <p style="margin-top:10px"><strong>الأنواع:</strong> نشطة، خامدة، منقرضة.</p>
+                    <p style="margin-top:10px"><strong>النواتج:</strong> حمم، رماد، غازات.</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> العلاقة بين الزلازل والبراكين والصفائح</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> عند الحدود التباعدية</h4>
+                    <p>زلازل خفيفة + براكين (خروج الماغما من الشقوق).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> عند الحدود التقاربية</h4>
+                    <p>زلازل قوية + براكين عنيفة (غوص صفيحة تحت أخرى).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> عند الحدود التحويلية</h4>
+                    <p>زلازل قوية فقط (بدون براكين).</p>
+                </div>
+
+                <div class="solution">✅ معظم الزلازل والبراكين تحدث عند حدود الصفائح</div>
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ وَجَعَلْنَا الْجِبَالَ أَوْتَادًا ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة النبأ: 7]</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تحذير:</h4>
+                <p>المملكة العربية السعودية تقع في <strong>منطقة مستقرة نسبياً</strong> مقارنة بدول مثل اليابان وإندونيسيا. لكن يجب الاستعداد لأي طارئ.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-hard-hat"></i> مثال 1: الهندسة والبناء</h4>
+                <p><strong>المسألة:</strong> كيف نستخدم معرفة الغلاف الصخري في البناء؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دراسة التربة</h4>
+                    <p>قبل البناء، ندرس نوع الصخور والتربة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تجنب الصدوع</h4>
+                    <p>لا نبني على الصدوع النشطة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> مقاومة الزلازل</h4>
+                    <p>في المناطق النشطة، نبني بمقاومة زلزالية</p>
+                </div>
+
+                <div class="solution">✅ المعرفة الجيولوجية ضرورية للبناء الآمن</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-oil-can"></i> مثال 2: استكشاف النفط</h4>
+                <p><strong>المسألة:</strong> كيف نجد النفط؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دراسة الصخور الرسوبية</h4>
+                    <p>النفط يتكون في الصخور الرسوبية البحرية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> البحث عن المصائد</h4>
+                    <p>تكوينات صخرية تحبس النفط</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الحفر الاستكشافي</h4>
+                    <p>حفر آبار للتأكد من وجود النفط</p>
+                </div>
+
+                <div class="solution">✅ معرفة الجيولوجيا ضرورية لاستكشاف النفط</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-mountain"></i> مثال 3: السياحة الجيولوجية</h4>
+                <p><strong>المسألة:</strong> كيف نستفيد من التنوع الجيولوجي في السياحة؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> زيارة الحرات</h4>
+                    <p>حقول بركانية في حرة كيشب والعويرض</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> استكشاف الكهوف</h4>
+                    <p>كهوف تكونت في الصخور الجيرية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> مشاهدة الأحافير</h4>
+                    <p>مواقع تحوي أحافير قديمة</p>
+                </div>
+
+                <div class="solution">✅ الجيولوجيا جاذبة للسياح والمهتمين</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 4: التعليم والبحث</h4>
+                <p><strong>المسألة:</strong> كيف نطور البحث في الجيولوجيا؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دراسة المناهج</h4>
+                    <p>تعلم أساسيات الجيولوجيا في المدارس</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> التخصص الجامعي</h4>
+                    <p>دراسة الجيولوجيا في الجامعات</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> البحث العلمي</h4>
+                    <p>المشاركة في أبحاث المساحة الجيولوجية</p>
+                </div>
+
+                <div class="solution">✅ الجيولوجيا مجال واعد في المملكة</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن الأرض ثابتة</h4>
+                <p>الأرض <strong>ديناميكية</strong>، صفائحها تتحرك باستمرار (1-10 سم/سنة). القارات تتباعد وتقترب منذ مليارات السنين.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين الغلاف الصخري والقشرة</h4>
+                <p><strong>الغلاف الصخري:</strong> القشرة + الجزء العلوي من الوشاح. <strong>القشرة:</strong> الطبقة الخارجية فقط.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن جميع الزلازل مدمرة</h4>
+                <p>معظم الزلازل <strong>خفيفة</strong> ولا نشعر بها. فقط الكبيرة منها مدمرة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: التنبؤ الدقيق بالزلازل</h4>
+                <p>لا يمكن <strong>التنبؤ الدقيق</strong> بموعد الزلازل، لكن يمكن تحديد المناطق المعرضة لها.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الاعتقاد أن السعودية منطقة زلزالية</h4>
+                <p>المملكة تقع في <strong>منطقة مستقرة نسبياً</strong> داخل الصفيحة العربية، وليست على حدود نشطة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: الخلط بين أنواع الصخور</h4>
+                <p><strong>النارية:</strong> من الماغما. <strong>الرسوبية:</strong> من الترسيب. <strong>المتحولة:</strong> من الحرارة والضغط.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #8d6e63">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الغلاف الصخري:</strong> الطبقة الصلبة الخارجية للأرض (القشرة + الوشاح العلوي).</li>
+                <li><strong>طبقات الأرض:</strong> القشرة، الوشاح، اللب الخارجي، اللب الداخلي.</li>
+                <li><strong>القشرة:</strong> نوعان - قارية (سميكة، جرانيت) ومحيطية (رقيقة، بازلت).</li>
+                <li><strong>الوشاح:</strong> أسمك الطبقات، صخور حارة شبه منصهرة.</li>
+                <li><strong>اللب:</strong> خارجي سائل (حديد ونيكل)، داخلي صلب.</li>
+                <li><strong>أنواع الصخور:</strong> نارية، رسوبية، متحولة.</li>
+                <li><strong>دورة الصخور:</strong> تتحول من نوع إلى آخر باستمرار.</li>
+                <li><strong>نظرية الصفائح التكتونية:</strong> 15 صفيحة تتحرك فوق الوشاح.</li>
+                <li><strong>حدود الصفائح:</strong> تباعدية، تقاربية، تحويلية.</li>
+                <li><strong>نظرية الانجراف القاري:</strong> القارات كانت متصلة (بانجيا) ثم انفصلت.</li>
+                <li><strong>الأدلة:</strong> تطابق السواحل، الأحفوريات، السلاسل الجبلية.</li>
+                <li><strong>المملكة:</strong> على الصفيحة العربية، تتحرك شمالاً، البحر الأحمر يتوسع.</li>
+                <li><strong>الزلازل والبراكين:</strong> تحدث عند حدود الصفائح.</li>
+                <li><strong>التطبيقات:</strong> البناء، النفط، السياحة، التعليم.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#8d6e63;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#27ae60"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#8d6e63;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#8d6e63;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما هي طبقات الأرض من الخارج إلى الداخل؟",
+                options: [
+                    "اللب، الوشاح، القشرة",
+                    "القشرة، الوشاح، اللب",
+                    "الوشاح، القشرة، اللب",
+                    "القشرة، اللب، الوشاح"
+                ],
+                correct: 1,
+                explanation: "طبقات الأرض من الخارج إلى الداخل: القشرة (أرفع)، الوشاح (أسمك)، اللب (مركز الأرض)."
+            },
+            {
+                sentence: "ما نوع الصخور التي تتكون من تبريد الماغما؟",
+                options: ["الرسوبية", "المتحولة", "النارية", "الجيرية"],
+                correct: 2,
+                explanation: "الصخور النارية تتكون من تبريد الماغما (الصهارة). أمثلتها: الجرانيت والبازلت."
+            },
+            {
+                sentence: "من هو العالم الذي اقترح نظرية الانجراف القاري؟",
+                options: ["إسحاق نيوتن", "ألفريد فيغنر", "تشارلز داروين", "ألبرت أينشتاين"],
+                correct: 1,
+                explanation: "ألفريد فيغنر هو العالم الألماني الذي اقترح نظرية الانجراف القاري سنة 1912م."
+            },
+            {
+                sentence: "ما اسم القارة العظمى التي كانت موجودة قبل 250 مليون سنة؟",
+                options: ["أوراسيا", "جندوانا", "بانجيا", "أطلنطس"],
+                correct: 2,
+                explanation: "بانجيا (Pangaea) هي القارة العظمى التي كانت تجمع كل اليابسة قبل 250 مليون سنة."
+            },
+            {
+                sentence: "على أي صفيحة تكتونية تقع المملكة العربية السعودية؟",
+                options: ["الصفيحة الأفريقية", "الصفيحة الأوراسية", "الصفيحة العربية", "الصفيحة الهندية"],
+                correct: 2,
+                explanation: "المملكة تقع على الصفيحة العربية التي تتحرك شمالاً بمعدل 1-2 سم/سنة."
+            },
+            {
+                sentence: "ماذا يحدث عند الحدود التباعدية للصفائح؟",
+                options: [
+                    "تصطدم صفيحتان",
+                    "تنزلق صفيحتان",
+                    "تبتعد صفيحتان وتتكون قشرة جديدة",
+                    "تغوص صفيحة تحت أخرى"
+                ],
+                correct: 2,
+                explanation: "عند الحدود التباعدية، تبتعد صفيحتان عن بعضهما، وتخرج الماغما لتكوين قشرة جديدة (مثل وسط المحيط الأطلسي)."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

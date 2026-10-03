@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأعداد النسبية - تعريفها وعملياتها وتطبيقاتها - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>الأعداد النسبية | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .conversion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .conversion-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-primary); }
+        .conversion-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-divide"></i> الأعداد النسبية</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف يمكن تحويل الكسر إلى عدد عشري والعكس؟</strong>
+                <p style="margin-top: 10px;">هذا الدرس يُعلّمك كيفية التنقل بين صيغتي الأعداد النسبية: الكسور والأعداد العشرية، بالإضافة إلى النسب المئوية.</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما المقصود بالعدد النسبي؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما المقصود بالعدد النسبي؟</h2>
+            <p style="margin-bottom: 15px;">العدد النسبي هو كل عدد يمكن كتابته على صورة:</p>
+            <div class="math-box">
+                a / b
+            </div>
+            <p style="text-align: center; margin-bottom: 15px;">بحيث: <strong>a</strong> عدد صحيح، و <strong>b</strong> عدد صحيح ولكن <strong>b ≠ 0</strong>.</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle"></i> أمثلة على الأعداد النسبية:</h4>
+                <div class="problem">3/4, &nbsp; -2/5, &nbsp; 7/1, &nbsp; -6</div>
+                <div class="solution">
+                    ✅ لاحظ أن العدد الصحيح نفسه يمكن كتابته على صورة كسر: <strong>5 = 5/1</strong>. لذلك، <strong>كل عدد صحيح هو عدد نسبي</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: الأعداد الموجبة والسالبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-arrows-alt-h"></i> ثانياً: الأعداد الموجبة والسالبة</h2>
+            <p style="margin-bottom: 15px;">تخيل خط الأعداد:</p>
+            <div class="math-box">
+                السالب ←——— 0 ———→ الموجب
+            </div>
+            <p style="text-align: center; margin-bottom: 15px;">مثلاً: <span style="font-family: 'Fira Code', monospace; font-weight: 700;">-3, -2, -1, 0, 1, 2, 3</span></p>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-arrow-right"></i> الأعداد الموجبة</h3>
+                    <p>الأعداد الموجودة يمين الصفر على خط الأعداد.</p>
+                    <div class="math-box" style="font-size: 1.1rem; color: #27ae60;">+8° (8 درجات فوق الصفر)</div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-arrow-left"></i> الأعداد السالبة</h3>
+                    <p>الأعداد الموجودة يسار الصفر على خط الأعداد.</p>
+                    <div class="math-box" style="font-size: 1.1rem; color: #e74c3c;">-8° (8 درجات تحت الصفر)</div>
+                </div>
+            </div>
+            
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تذكّر دائماً:</h4>
+                <p>الصفر <strong>ليس موجباً ولا سالباً</strong>. وهو نقطة الأصل على خط الأعداد.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الكسور والأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-shapes"></i> ثالثاً: الكسور والأعداد النسبية</h2>
+            <p style="margin-bottom: 15px;">ليست كل الأعداد النسبية أعداداً صحيحة. مثلاً:</p>
+            <div class="math-box">
+                1/2 ← عدد نسبي، لكنه ليس عدداً صحيحاً
+            </div>
+            <p style="margin-bottom: 15px;">وكذلك: <span style="font-family: 'Fira Code', monospace; font-weight: 700;">-3/4</span> عدد نسبي سالب.</p>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الخلاصة:</strong> يمكن أن يكون العدد النسبي: عددًا صحيحًا أو كسرًا أو عددًا عشريًا منتهيًا أو دوريًا.
+            </div>
+        </div>
+
+        <!-- رابعاً: تحويل العدد الصحيح إلى عدد نسبي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> رابعاً: تحويل العدد الصحيح إلى عدد نسبي</h2>
+            <p style="margin-bottom: 15px;">إذا أردت تحويل <span style="font-family: 'Fira Code', monospace; font-weight: 700;">7</span> إلى كسر، نضع العدد فوق 1:</p>
+            <div class="math-box">
+                7 = 7/1
+            </div>
+            <p style="margin-bottom: 15px;">مثال: <span style="font-family: 'Fira Code', monospace; font-weight: 700;">-9 = -9/1</span></p>
+            <p style="margin-bottom: 15px;">لماذا؟ لأن قسمة أي عدد على 1 لا تغير قيمته: <span style="font-family: 'Fira Code', monospace; font-weight: 700;">9 ÷ 1 = 9</span></p>
+        </div>
+
+        <!-- خامساً: تحويل الكسر إلى عدد عشري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> خامساً: تحويل الكسر إلى عدد عشري</h2>
+            <p style="margin-bottom: 15px;">نستخدم القسمة (البسط ÷ المقام).</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: حوّل 3/4 إلى عدد عشري</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اقسم البسط على المقام</h4>
+                    <div class="calculation">3 ÷ 4 = 0.75</div>
+                </div>
+                <div class="solution">✅ 3/4 = 0.75</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: حوّل 1/2 إلى عدد عشري</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اقسم البسط على المقام</h4>
+                    <div class="calculation">1 ÷ 2 = 0.5</div>
+                </div>
+                <div class="solution">✅ 1/2 = 0.5</div>
+            </div>
+        </div>
+
+        <!-- سادساً: تحويل العدد العشري إلى كسر -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-undo"></i> سادساً: تحويل العدد العشري إلى كسر</h2>
+            <p style="margin-bottom: 15px;">نستخدم القيمة المكانية لتحديد المقام (10، 100، 1000...).</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: حوّل 0.6 إلى كسر</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> رقم واحد بعد الفاصلة ➔ المقام 10</h4>
+                    <div class="calculation">0.6 = 6/10</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بسّط الكسر</h4>
+                    <div class="calculation">6/10 = 3/5</div>
+                </div>
+                <div class="solution">✅ 0.6 = 3/5</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: حوّل 0.25 إلى كسر</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> رقمان بعد الفاصلة ➔ المقام 100</h4>
+                    <div class="calculation">0.25 = 25/100</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بسّط الكسر</h4>
+                    <div class="calculation">25/100 = 1/4</div>
+                </div>
+                <div class="solution">✅ 0.25 = 1/4</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-star"></i> قاعدة مهمة جداً للحفظ:</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead><tr><th>عدد الأرقام بعد الفاصلة</th><th>المقام</th></tr></thead>
+                        <tbody>
+                            <tr><td>رقم واحد (مثل 0.6)</td><td>10</td></tr>
+                            <tr><td>رقمان (مثل 0.25)</td><td>100</td></tr>
+                            <tr><td>ثلاثة أرقام (مثل 0.125)</td><td>1000</td></tr>
+                            <tr><td>أربعة أرقام (مثل 0.0625)</td><td>10000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تحويل الكسر إلى نسبة مئوية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-percentage"></i> سابعاً: تحويل الكسر إلى نسبة مئوية</h2>
+            <p style="margin-bottom: 15px;">النسبة المئوية تعني "من 100".</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: حوّل 3/4 إلى نسبة مئوية</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الكسر إلى عدد عشري</h4>
+                    <div class="calculation">3/4 = 0.75</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب في 100</h4>
+                    <div class="calculation">0.75 × 100 = 75</div>
+                </div>
+                <div class="solution">✅ 3/4 = 75%</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال آخر: حوّل 1/5 إلى نسبة مئوية</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل إلى عشري</h4>
+                    <div class="calculation">1/5 = 0.2</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب في 100</h4>
+                    <div class="calculation">0.2 × 100 = 20</div>
+                </div>
+                <div class="solution">✅ 1/5 = 20%</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تحويل النسبة المئوية إلى عدد عشري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-percentage"></i> ثامناً: تحويل النسبة المئوية إلى عدد عشري</h2>
+            <p style="margin-bottom: 15px;">نقسم على 100 (أو نحرك الفاصلة منزلتين لليسار).</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: حوّل 35% إلى عدد عشري</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اقسم على 100</h4>
+                    <div class="calculation">35 ÷ 100 = 0.35</div>
+                </div>
+                <div class="solution">✅ 35% = 0.35</div>
+            </div>
+        </div>
+
+        <!-- تاسعاً: التحويل بين الصور الثلاث -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync-alt"></i> تاسعاً: التحويل بين الصور الثلاث</h2>
+            <p style="margin-bottom: 15px;">من المهم أن تعرف أن العدد النسبي يمكن أن يظهر بأكثر من صورة:</p>
+            
+            <div class="conversion-grid">
+                <div class="conversion-card" style="border-top-color: #3498db;">
+                    <h4 style="color: #3498db;"><i class="fas fa-info-circle"></i> أمثلة شائعة</h4>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li><strong>1/2</strong> = 0.5 = 50%</li>
+                        <li><strong>3/4</strong> = 0.75 = 75%</li>
+                        <li><strong>1/5</strong> = 0.2 = 20%</li>
+                        <li><strong>1/4</strong> = 0.25 = 25%</li>
+                        <li><strong>1/10</strong> = 0.1 = 10%</li>
+                    </ul>
+                </div>
+                <div class="conversion-card" style="border-top-color: #e67e22;">
+                    <h4 style="color: #e67e22;"><i class="fas fa-lightbulb"></i> ملاحظة مهمة</h4>
+                    <p>القيمة واحدة، لكن طريقة الكتابة مختلفة. اختر الصيغة الأنسب حسب السياق!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- عاشراً: مقارنة الأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> عاشراً: مقارنة الأعداد النسبية</h2>
+            <p style="margin-bottom: 15px;">كيف نعرف أي العددين أكبر؟ مثلاً: <span style="font-family: 'Fira Code', monospace; font-weight: 700;">3/4</span> و <span style="font-family: 'Fira Code', monospace; font-weight: 700;">1/2</span></p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: قارن بين 3/4 و 1/2</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل إلى أعداد عشرية</h4>
+                    <div class="calculation">3/4 = 0.75 &nbsp;&nbsp; و &nbsp;&nbsp; 1/2 = 0.5</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن</h4>
+                    <div class="calculation">0.75 > 0.5</div>
+                </div>
+                <div class="solution">✅ 3/4 > 1/2</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تذكّر:</h4>
+                <p>على خط الأعداد، العدد الموجود إلى <strong>اليمين</strong> هو الأكبر. مثلاً: <strong>-2 > -5</strong> لأن -2 يقع يمين -5.</p>
+            </div>
+        </div>
+
+        <!-- حادي عشر: جمع الأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-plus"></i> حادي عشر: جمع الأعداد النسبية</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check"></i> الحالة الأولى: الإشارتان متشابهتان</h3>
+                    <p>نجمع القيم ونحتفظ بالإشارة.</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                        (+3) + (+5) = +8<br>
+                        (-3) + (-5) = -8
+                    </div>
+                    <div class="example-card" style="margin-top: 15px;">
+                        <p><strong>مثال:</strong> -2/5 + (-1/5)</p>
+                        <div class="solution">نجمع البسطين: <strong>-3/5</strong></div>
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-exchange-alt"></i> الحالة الثانية: الإشارتان مختلفتان</h3>
+                    <p>نطرح القيم ونأخذ إشارة العدد الأكبر في القيمة المطلقة.</p>
+                    <div class="example-card" style="margin-top: 15px;">
+                        <p><strong>مثال 1:</strong> 7 + (-3)</p>
+                        <p>نطرح: 7 - 3 = 4، ونأخذ إشارة 7 (موجبة)</p>
+                        <div class="solution"><strong>7 + (-3) = 4</strong></div>
+                    </div>
+                    <div class="example-card" style="margin-top: 15px;">
+                        <p><strong>مثال 2:</strong> -8 + 3</p>
+                        <p>نحسب: 8 - 3 = 5، ونأخذ إشارة -8 (سالبة)</p>
+                        <div class="solution"><strong>-8 + 3 = -5</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثاني عشر: طرح الأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-minus"></i> ثاني عشر: طرح الأعداد النسبية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الذهبية:</strong> حوّل الطرح إلى جمع، ثم غيّر إشارة العدد الثاني.
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: احسب 5 - (-2)</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الطرح إلى جمع وغيّر الإشارة</h4>
+                    <div class="calculation">5 - (-2) = 5 + 2</div>
+                </div>
+                <div class="solution">✅ 5 + 2 = 7</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: احسب -3 - 4</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الطرح إلى جمع وغيّر الإشارة</h4>
+                    <div class="calculation">-3 - 4 = -3 + (-4)</div>
+                </div>
+                <div class="solution">✅ -3 + (-4) = -7</div>
+            </div>
+        </div>
+
+        <!-- ثالث عشر: ضرب الأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-times"></i> ثالث عشر: ضرب الأعداد النسبية</h2>
+            <p style="margin-bottom: 15px;">قاعدة الإشارات في الضرب:</p>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr><th>العملية</th><th>الناتج</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>موجب × موجب</td><td style="color: #27ae60; font-weight: 700;">موجب</td></tr>
+                        <tr><td>سالب × سالب</td><td style="color: #27ae60; font-weight: 700;">موجب</td></tr>
+                        <tr><td>موجب × سالب</td><td style="color: #e74c3c; font-weight: 700;">سالب</td></tr>
+                        <tr><td>سالب × موجب</td><td style="color: #e74c3c; font-weight: 700;">سالب</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة سهلة للحفظ:</h4>
+                <p><strong>نفس الإشارة ➔ موجب</strong> | <strong>إشارتان مختلفتان ➔ سالب</strong></p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة:</h4>
+                <div class="math-box" style="font-size: 1.1rem;">
+                    (-3) × (-4) = +12<br>
+                    (-3) × (4) = -12
+                </div>
+            </div>
+        </div>
+
+        <!-- رابع عشر: قسمة الأعداد النسبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-divide"></i> رابع عشر: قسمة الأعداد النسبية</h2>
+            <p style="margin-bottom: 15px;">نستخدم نفس قاعدة الإشارات في الضرب.</p>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: احسب (-12) ÷ (-3)</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإشارتان متشابهتان ➔ الناتج موجب</h4>
+                    <div class="calculation">(-12) ÷ (-3) = 4</div>
+                </div>
+                <div class="solution">✅ الناتج: 4</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: احسب 12 ÷ (-3)</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإشارتان مختلفتان ➔ الناتج سالب</h4>
+                    <div class="calculation">12 ÷ (-3) = -4</div>
+                </div>
+                <div class="solution">✅ الناتج: -4</div>
+            </div>
+        </div>
+
+        <!-- خامس عشر: تطبيقات من الحياة اليومية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامس عشر: تطبيقات من الحياة اليومية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-thermometer-half"></i> التطبيق الأول: درجة الحرارة ️</h4>
+                <p><strong>المسألة:</strong> كانت درجة الحرارة صباحاً: -3°، ثم ارتفعت بمقدار: 7°</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المعادلة</h4>
+                    <div class="calculation">-3 + 7 = ?</div>
+                </div>
+                <div class="solution">✅ درجة الحرارة الجديدة = 4°</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-wallet"></i> التطبيق الثاني: المصروف والديون 💰</h4>
+                <p><strong>المسألة:</strong> لدى خالد: 50 ريالاً، ثم دفع: 18 ريالاً.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المعادلة</h4>
+                    <div class="calculation">50 + (-18) = ?</div>
+                </div>
+                <div class="solution">✅ بقي معه: 32 ريالاً</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-mountain"></i> التطبيق الثالث: الارتفاع والانخفاض ️</h4>
+                <p><strong>المسألة:</strong> كان غواص على عمق: -8 أمتار، ثم صعد: 3 أمتار.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب المعادلة</h4>
+                    <div class="calculation">-8 + 3 = ?</div>
+                </div>
+                <div class="solution">✅ أصبح على عمق: -5 أمتار (لا يزال تحت سطح الماء)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-shopping-cart"></i> التطبيق الرابع: الخصم في متجر 🛒</h4>
+                <p><strong>المسألة:</strong> سعر منتج: 200 ريال، وعليه خصم: 25%</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل النسبة لعشري</h4>
+                    <div class="calculation">25% = 0.25</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب قيمة الخصم</h4>
+                    <div class="calculation">200 × 0.25 = 50 ريال</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اطرح من السعر الأصلي</h4>
+                    <div class="calculation">200 - 50 = 150 ريال</div>
+                </div>
+                <div class="solution">✅ السعر بعد الخصم: 150 ريالاً</div>
+            </div>
+        </div>
+
+        <!-- سادس عشر: تدريب شامل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> سادس عشر: تدريب شامل</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال 1: حوّل 0.75 إلى كسر في أبسط صورة</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب على صورة كسر</h4>
+                    <div class="calculation">0.75 = 75/100</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بسّط بالقسمة على 25</h4>
+                    <div class="calculation">75/100 = 3/4</div>
+                </div>
+                <div class="solution">✅ الإجابة: 3/4</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال 2: حوّل 2/5 إلى عدد عشري</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اقسم البسط على المقام</h4>
+                    <div class="calculation">2 ÷ 5 = 0.4</div>
+                </div>
+                <div class="solution">✅ الإجابة: 0.4</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال 3: احسب -7 + 12</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإشارتان مختلفتان ➔ نطرح</h4>
+                    <div class="calculation">12 - 7 = 5</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> نأخذ إشارة العدد الأكبر (12) وهي موجبة</h4>
+                    <div class="calculation">النتيجة: +5</div>
+                </div>
+                <div class="solution">✅ الإجابة: 5</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال 4: احسب -4 - (-6)</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الطرح إلى جمع وغيّر الإشارة</h4>
+                    <div class="calculation">-4 - (-6) = -4 + 6</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الإشارتان مختلفتان ➔ نطرح</h4>
+                    <div class="calculation">6 - 4 = 2</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> نأخذ إشارة العدد الأكبر (6) وهي موجبة</h4>
+                    <div class="calculation">النتيجة: +2</div>
+                </div>
+                <div class="solution">✅ الإجابة: 2</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-question-circle"></i> السؤال 5: احسب (-2/3) × (9/4)</h4>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اضرب البسطين والمقامين</h4>
+                    <div class="calculation">-(2 × 9) / (3 × 4) = -18/12</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بسّط بالقسمة على 6</h4>
+                    <div class="calculation">-18/12 = -3/2</div>
+                </div>
+                <div class="solution">✅ الإجابة: -3/2 أو -1.5</div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> الخلاصة التي يجب أن يحفظها الطالب</h2>
+            <ul class="tree-list">
+                <li>العدد النسبي يمكن كتابته على صورة <strong>a/b</strong>، حيث <strong>b ≠ 0</strong>.</li>
+                <li>العدد الصحيح يمكن تحويله إلى كسر بوضعه على 1.</li>
+                <li>العشري إلى كسر: استخدم 10 أو 100 أو 1000 بحسب عدد الأرقام بعد الفاصلة، ثم بسّط.</li>
+                <li>في الجمع والطرح: انتبه جيداً إلى <strong>الإشارات</strong>.</li>
+                <li>في الضرب والقسمة: نفس الإشارة = موجب، إشارتان مختلفتان = سالب.</li>
+                <li><strong>فكرة ذكية للحفظ:</strong> تخيل الأعداد الموجبة والسالبة كأنها حركة على خط الأعداد: الموجب يتجه يميناً، والسالب يتجه يساراً. بهذه الطريقة تصبح الإشارات منطقية وليست مجرد قواعد للحفظ.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                <div id="quizContainer"></div>
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="feedback-box" id="feedbackBox"></div>
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "حوّل 0.75 إلى كسر في أبسط صورة.",
+                options: ["75/100", "3/4", "7/5", "1/4"],
+                correct: 1,
+                explanation: "0.75 = 75/100، وبالبسطة بالقسمة على 25 يصبح 3/4."
+            },
+            {
+                sentence: "حوّل 2/5 إلى عدد عشري.",
+                options: ["0.2", "0.4", "0.5", "2.5"],
+                correct: 1,
+                explanation: "2 ÷ 5 = 0.4"
+            },
+            {
+                sentence: "احسب: -7 + 12",
+                options: ["-19", "-5", "5", "19"],
+                correct: 2,
+                explanation: "الإشارتان مختلفتان، لذلك نطرح: 12 - 7 = 5، والإشارة للعدد الأكبر وهي موجبة."
+            },
+            {
+                sentence: "احسب: -4 - (-6)",
+                options: ["-10", "-2", "2", "10"],
+                correct: 2,
+                explanation: "نحوّل الطرح إلى جمع: -4 + 6 = 2"
+            },
+            {
+                sentence: "احسب: (-2/3) × (9/4)",
+                options: ["-3/2", "3/2", "-18/12", "1/2"],
+                correct: 0,
+                explanation: "نضرب البسطين والمقامين: -(2 × 9) / (3 × 4) = -18/12، وبالبسطة بالقسمة على 6 يصبح -3/2 (أو -1.5)."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

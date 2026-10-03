@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة الرياضيات - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ - المنهج السعودي">
+    <title>الرياضيات | ثاني متوسط | فصل أول 1448هـ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- الملفات المركزية -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    منصتي التعليمية
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="تبديل الوضع الليلي">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-square-root-alt"></i> مادة الرياضيات</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- شبكة الدروس (تُملأ ديناميكياً) -->
+        <div class="lessons-grid" id="lessonsContainer">
+            <!-- سيتم ملؤها بواسطة JavaScript -->
+        </div>
+
+        <!-- قسم الاختبار المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/math-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+    <script src="../js/quiz.js"></script>
+
+    <!-- سكربت خاص بالمادة -->
+    <script>
+        'use strict';
+
+        const SUBJECT = 'math';
+
+        // صورة SVG بديلة (تعمل دائماً بدون إنترنت)
+        const PLACEHOLDER_IMG = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">' +
+            '<rect fill="#2980b9" width="400" height="180"/>' +
+            '<text x="200" y="95" fill="white" font-size="22" font-family="sans-serif" text-anchor="middle">Math Lesson</text>' +
+            '</svg>'
+        );
+
+        // بيانات الدروس (32 درساً)
+        const LESSONS_DATA = [
+            { title: 'الأعداد النسبية (1)', desc: 'مفهوم الأعداد النسبية وتمثيلها على خط الأعداد.', videoId: 'qXDqiHSBE4I', image: 'lesson1.jpg', pdf: 'lesson1.pdf' },
+            { title: 'الأعداد النسبية (2)', desc: 'تطبيقات على الأعداد النسبية وتحويلها.', videoId: '6HPkEsNoPbg', image: 'lesson2.jpg', pdf: 'lesson2.pdf' },
+            { title: 'مقارنة الأعداد النسبية وترتيبها (1)', desc: 'كيفية مقارنة الأعداد النسبية وترتيبها تصاعدياً وتنازلياً.', videoId: 'I9Fs4Pbwj04', image: 'lesson3.jpg', pdf: 'lesson3.pdf' },
+            { title: 'مقارنة الأعداد النسبية وترتيبها (2)', desc: 'تطبيقات متقدمة على مقارنة وترتيب الأعداد النسبية.', videoId: 'qTurvHpA8eE', image: 'lesson4.jpg', pdf: 'lesson4.pdf' },
+            { title: 'ضرب الأعداد النسبية (1)', desc: 'قواعد ضرب الأعداد النسبية وتبسيط النواتج.', videoId: 'tilaJWMINCA', image: 'lesson5.jpg', pdf: 'lesson5.pdf' },
+            { title: 'ضرب الأعداد النسبية (2)', desc: 'تطبيقات على ضرب الأعداد النسبية وحل المسائل.', videoId: 'gVFIIPxbpmk', image: 'lesson6.jpg', pdf: 'lesson6.pdf' },
+            { title: 'قسمة الأعداد النسبية (1)', desc: 'قاعدة قسمة الأعداد النسبية والضرب في المقلوب.', videoId: 'TzhlwvVw19s', image: 'lesson7.jpg', pdf: 'lesson7.pdf' },
+            { title: 'قسمة الأعداد النسبية (2)', desc: 'تطبيقات على قسمة الأعداد النسبية.', videoId: 'DIoszY4ir20', image: 'lesson8.jpg', pdf: 'lesson8.pdf' },
+            { title: 'جمع الأعداد النسبية ذات المقامات المتشابهة وطرحها (1)', desc: 'قواعد جمع وطرح الكسور ذات المقامات المتشابهة.', videoId: 'Lw3crdtQPIs', image: 'lesson9.jpg', pdf: 'lesson9.pdf' },
+            { title: 'جمع الأعداد النسبية ذات المقامات المتشابهة وطرحها (2)', desc: 'تطبيقات على جمع وطرح الكسور ذات المقامات المتشابهة.', videoId: 'p8GZwyOnafc', image: 'lesson10.jpg', pdf: 'lesson10.pdf' },
+            { title: 'جمع الأعداد النسبية ذات المقامات المختلفة وطرحها (1)', desc: 'توحيد المقامات وجمع وطرح الكسور ذات المقامات المختلفة.', videoId: 'VT0RZcWoAL4', image: 'lesson11.jpg', pdf: 'lesson11.pdf' },
+            { title: 'جمع الأعداد النسبية ذات المقامات المختلفة وطرحها (2)', desc: 'تطبيقات متقدمة على جمع وطرح الكسور ذات المقامات المختلفة.', videoId: 'kZIXRNCu1JE', image: 'lesson12.jpg', pdf: 'lesson12.pdf' },
+            { title: 'استراتيجية حل المسألة (البحث عن نمط)', desc: 'كيفية استخدام استراتيجية البحث عن نمط لحل المسائل الرياضية.', videoId: 'vPaUeR5oiSY', image: 'lesson13.jpg', pdf: 'lesson13.pdf' },
+            { title: 'القوى والأسس', desc: 'مفهوم الأسس، خصائص ضرب وقسمة الأسس، والأسس السالبة.', videoId: 'l_VK30-c-4Q', image: 'lesson14.jpg', pdf: 'lesson14.pdf' },
+            { title: 'الصيغة العلمية', desc: 'كتابة الأعداد الكبيرة والصغيرة جداً بالصيغة العلمية.', videoId: 'pYkS3-xMhz8', image: 'lesson15.jpg', pdf: 'lesson15.pdf' },
+            { title: 'الجذور التربيعية', desc: 'مفهوم الجذر التربيعي وإيجاد الجذر التربيعي للمربعات الكاملة.', videoId: 'ba2O4KuiXfM', image: 'lesson16.jpg', pdf: 'lesson16.pdf' },
+            { title: 'تقدير الجذور التربيعية', desc: 'كيفية تقدير قيمة الجذر التربيعي للأعداد غير المربعات الكاملة.', videoId: 'HpykaUuMqxk', image: 'lesson17.jpg', pdf: 'lesson17.pdf' },
+            { title: 'استراتيجية حل المسألة (أشكال فن)', desc: 'استخدام مخططات فن لحل مسائل المجموعات والمنطق.', videoId: '2aTsBjVwKLY', image: 'lesson18.jpg', pdf: 'lesson18.pdf' },
+            { title: 'الأعداد الحقيقية', desc: 'مفهوم الأعداد الحقيقية وتصنيفها (نسبية وغير نسبية).', videoId: 'aHFRKP06OJA', image: 'lesson19.jpg', pdf: 'lesson19.pdf' },
+            { title: 'نظرية فيثاغورس', desc: 'فهم نظرية فيثاغورس وإثباتها في المثلث القائم الزاوية.', videoId: '5BtqWgIaBn8', image: 'lesson20.jpg', pdf: 'lesson20.pdf' },
+            { title: 'تطبيقات على نظرية فيثاغورس', desc: 'حل مسائل حياتية وهندسية باستخدام نظرية فيثاغورس.', videoId: 'Nv_3lS3w228', image: 'lesson21.jpg', pdf: 'lesson21.pdf' },
+            { title: 'الأبعاد في المستوى الإحداثي (1)', desc: 'تحديد الإحداثيات ورسم النقاط في المستوى الإحداثي.', videoId: 'MBmTLfqFW-0', image: 'lesson22.jpg', pdf: 'lesson22.pdf' },
+            { title: 'الأبعاد في المستوى الإحداثي (2)', desc: 'حساب المسافة بين نقطتين وإيجاد منتصف القطعة المستقيمة.', videoId: 'jc1OgV8tUqg', image: 'lesson23.jpg', pdf: 'lesson23.pdf' },
+            { title: 'العلاقات المتناسبة وغير المتناسبة', desc: 'تمييز العلاقات المتناسبة من غير المتناسبة جبرياً وبيانياً.', videoId: 'kMzOzdaBGW0', image: 'lesson24.jpg', pdf: 'lesson24.pdf' },
+            { title: 'معدل التغير', desc: 'حساب معدل التغير من الجداول والرسوم البيانية.', videoId: '6lvwP2xzx6A', image: 'lesson25.jpg', pdf: 'lesson25.pdf' },
+            { title: 'المعدل الثابت للتغير', desc: 'فهم مفهوم الميل كمعدل ثابت للتغير في العلاقات الخطية.', videoId: 'Ux0GBHRuSzs', image: 'lesson26.jpg', pdf: 'lesson26.pdf' },
+            { title: 'حل التناسب', desc: 'استخدام الضرب التبادلي لحل مسائل التناسب.', videoId: 'Qi4AJT0DLgA', image: 'lesson27.jpg', pdf: 'lesson27.pdf' },
+            { title: 'استراتيجية حل المسألة (الرسم)', desc: 'كيفية استخدام الرسم كاستراتيجية فعالة لحل المسائل الرياضية.', videoId: 'tnyGUHbQAQA', image: 'lesson28.jpg', pdf: 'lesson28.pdf' },
+            { title: 'تشابه المضلعات (1)', desc: 'مفهوم تشابه المضلعات وشروط التشابه.', videoId: '66rd3Ujk78k', image: 'lesson29.jpg', pdf: 'lesson29.pdf' },
+            { title: 'تشابه المضلعات (2)', desc: 'تطبيقات على تشابه المضلعات وإيجاد الأطوال المجهولة.', videoId: 'GfrZvTUq5X8', image: 'lesson30.jpg', pdf: 'lesson30.pdf' },
+            { title: 'التكبير والتصغير', desc: 'مفهوم عامل القياس وتأثيره على أطوال أضلاع ومساحات الأشكال.', videoId: 'PaGSISCtqDI', image: 'lesson31.jpg', pdf: 'lesson31.pdf' },
+            { title: 'القياس غير المباشر', desc: 'استخدام تشابه المثلثات لقياس الأطوال غير المباشرة.', videoId: 'pXV_JOnREGg', image: 'lesson32.jpg', pdf: 'lesson32.pdf' }
+        ];
+
+        // بناء بطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+
+            // استخدام DocumentFragment لتحسين الأداء
+            const fragment = document.createDocumentFragment();
+
+            LESSONS_DATA.forEach((lesson, index) => {
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+
+                // استخدام template literal مع تنظيف آمن (لا يوجد HTML من المستخدم)
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}"
+                         alt="${lesson.title}"
+                         class="lesson-image"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='${PLACEHOLDER_IMG}'">
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}"
+                                    title="${lesson.title}"
+                                    loading="lazy"
+                                    allowfullscreen
+                                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+
+                fragment.appendChild(card);
+            });
+
+            container.appendChild(fragment);
+        }
+
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const area = document.getElementById('miniQuizArea');
+            if (!area) return;
+
+            // Guard: التأكد من تحميل بنك الأسئلة
+            if (typeof QuestionBank === 'undefined') {
+                area.innerHTML = '<p style="text-align:center;color:var(--text-muted);">تعذر تحميل بنك الأسئلة. يرجى تحديث الصفحة.</p>';
+                return;
+            }
+
+            let questions;
+            try {
+                questions = QuestionBank.getRandom(SUBJECT, 3);
+            } catch (e) {
+                console.error('[Math] Failed to load questions:', e);
+                area.innerHTML = '<p style="text-align:center;color:var(--text-muted);">حدث خطأ أثناء تحميل الأسئلة.</p>';
+                return;
+            }
+
+            if (!questions || questions.length === 0) {
+                area.innerHTML = '<p style="text-align:center;color:var(--text-muted);">لا توجد أسئلة متاحة حالياً.</p>';
+                return;
+            }
+
+            let html = '<form id="miniQuizForm" onsubmit="return false;">';
+
+            questions.forEach((q, i) => {
+                html += `
+                    <div class="quiz-question">
+                        <h3>${i + 1}. ${q.question}</h3>
+                        <div class="quiz-options">
+                `;
+
+                q.options.forEach((opt, optIdx) => {
+                    html += `
+                        <label>
+                            <input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}">
+                            ${opt}
+                        </label>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                <button type="button" class="btn btn-lesson" id="miniQuizSubmitBtn" onclick="checkMiniQuiz()"
+                        style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result" role="status" aria-live="polite"></div>
+            `;
+
+            area.innerHTML = html;
+        }
+
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            if (!form) return;
+
+            const questions = form.querySelectorAll('.quiz-question');
+            if (questions.length === 0) return;
+
+            let score = 0;
+
+            questions.forEach((q) => {
+                const firstRadio = q.querySelector('input[type="radio"]');
+                if (!firstRadio) return;
+
+                const correct = firstRadio.dataset.correct;
+                const selected = q.querySelector('input[type="radio"]:checked');
+
+                if (selected && selected.value === correct) {
+                    score++;
+                }
+            });
+
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+
+            const total = questions.length;
+            const percentage = Math.round((score / total) * 100);
+
+            if (percentage >= 90) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> ممتاز! نتيجتك: ${score} من ${total} (${percentage}%).`;
+            } else if (percentage >= 50) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> جيد! نتيجتك: ${score} من ${total} (${percentage}%).`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${total} (${percentage}%). يُنصح بمراجعة الدروس.`;
+            }
+
+            // منع إعادة التسليم (تحسين UX)
+            const submitBtn = document.getElementById('miniQuizSubmitBtn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.6';
+                submitBtn.style.cursor = 'not-allowed';
+            }
+        }
+
+        // ✅ تنفيذ فوري (وليس داخل DOMContentLoaded)
+        // لأن السكربت موجود في نهاية <body>، فكل العناصر جاهزة
+        // كما أن هذا يضمن أن بطاقات الدروس موجودة قبل تشغيل search.js
+        buildLessons();
+        buildMiniQuiz();
+    </script>
+</body>
+</html>

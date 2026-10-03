@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="القلب والأوعية الدموية والدم - مادة العلوم - الصف الثاني المتوسط">
+    <title>القلب، الأوعية الدموية، والدم | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #c0392b; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(192, 57, 43, 0.08); border-right: 4px solid #c0392b; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #c0392b; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #e74c3c; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.2rem; font-weight: 700; color: #c0392b; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #c0392b; margin: 15px 0; }
+        .step-box h4 { color: #c0392b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #c0392b; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #c0392b; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(192, 57, 43, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .four-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #c0392b; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #e74c3c; margin-bottom: 15px; }
+        .example-card h4 { color: #c0392b; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #c0392b; font-weight: 600; color: #c0392b; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #e74c3c; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #c0392b; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #c0392b; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(192, 57, 43, 0.05), rgba(231, 76, 60, 0.05)); border: 2px dashed #c0392b; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #c0392b; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #c0392b; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #c0392b; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #c0392b; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #c0392b; color: #c0392b; }
+        .blood-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .blood-visual svg { max-width: 100%; height: auto; }
+        .component-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #c0392b; text-align: center; transition: transform 0.3s; }
+        .component-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .component-card h4 { margin-bottom: 10px; color: #c0392b; }
+        .component-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .component-card.rbc { border-top-color: #e74c3c; }
+        .component-card.rbc h4, .component-card.rbc .icon { color: #e74c3c; }
+        .component-card.wbc { border-top-color: #ecf0f1; }
+        .component-card.wbc h4, .component-card.wbc .icon { color: #3498db; }
+        .component-card.platelet { border-top-color: #f39c12; }
+        .component-card.platelet h4, .component-card.platelet .icon { color: #f39c12; }
+        .component-card.plasma { border-top-color: #f1c40f; }
+        .component-card.plasma h4, .component-card.plasma .icon { color: #f1c40f; }
+        .vessel-card { background: var(--bg-color); padding: 20px; border-radius: 12px; text-align: center; }
+        .vessel-card.artery { border-top: 5px solid #e74c3c; }
+        .vessel-card.artery h4 { color: #e74c3c; }
+        .vessel-card.vein { border-top: 5px solid #3498db; }
+        .vessel-card.vein h4 { color: #3498db; }
+        .vessel-card.capillary { border-top: 5px solid #9b59b6; }
+        .vessel-card.capillary h4 { color: #9b59b6; }
+        .blood-type-card { background: var(--bg-color); padding: 20px; border-radius: 12px; text-align: center; border-top: 5px solid #c0392b; }
+        .blood-type-card .type { font-size: 2rem; font-weight: 800; color: #c0392b; margin: 10px 0; }
+        .chamber-card { background: var(--bg-color); padding: 20px; border-radius: 12px; text-align: center; }
+        .chamber-card.right { border-top: 5px solid #3498db; }
+        .chamber-card.right h4 { color: #3498db; }
+        .chamber-card.left { border-top: 5px solid #e74c3c; }
+        .chamber-card.left h4 { color: #e74c3c; }
+        .circulation-diagram { background: linear-gradient(135deg, rgba(192, 57, 43, 0.1), rgba(231, 76, 60, 0.1)); border: 2px solid #c0392b; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .circulation-diagram .main-formula { font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 800; color: #c0392b; margin: 15px 0; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns, .four-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-heartbeat"></i> القلب، الأوعية الدموية، والدم</h1>
+            <p>مكونات الدم، فصائل الدم، تجلط الدم، ودورات الدم</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف يصل الأكسجين والغذاء إلى كل خلية في جسمك؟</strong>
+                <p style="margin-top: 10px;">جسمك يحتوي على <strong>60,000 كم</strong> من الأوعية الدموية! يضخ القلب حوالي <strong>5 لترات</strong> من الدم في الدقيقة الواحدة. في هذا الدرس، سنتعرف على <strong>مكونات الدم</strong>، و<strong>فصائله</strong>، و<strong>تركيب القلب</strong>، و<strong>دورات الدم</strong> في جسمك!</p>
+            </div>
+
+            <div class="blood-visual">
+                <h4 style="color: #c0392b; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مكونات الدم</h4>
+                <svg width="600" height="250" viewBox="0 0 600 250">
+                    <!-- البلازما -->
+                    <ellipse cx="300" cy="125" rx="250" ry="100" fill="rgba(241, 196, 15, 0.2)" stroke="#f1c40f" stroke-width="2"/>
+                    <text x="300" y="50" font-family="Tajawal" font-size="14" fill="#f1c40f" text-anchor="middle" font-weight="700">البلازما (55%)</text>
+                    
+                    <!-- كريات حمراء -->
+                    <circle cx="150" cy="110" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="200" cy="150" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="250" cy="120" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="350" cy="140" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="420" cy="110" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="180" cy="180" r="25" fill="#e74c3c" opacity="0.8"/>
+                    <circle cx="380" cy="170" r="25" fill="#e74c3c" opacity="0.8"/>
+                    
+                    <!-- كريات بيضاء -->
+                    <circle cx="300" cy="100" r="20" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="450" cy="150" r="20" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+                    
+                    <!-- صفائح -->
+                    <circle cx="120" cy="160" r="8" fill="#f39c12"/>
+                    <circle cx="280" cy="170" r="8" fill="#f39c12"/>
+                    <circle cx="400" cy="130" r="8" fill="#f39c12"/>
+                    <circle cx="480" cy="180" r="8" fill="#f39c12"/>
+                    
+                    <!-- تسميات -->
+                    <text x="100" y="230" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">كريات حمراء</text>
+                    <text x="300" y="230" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">كريات بيضاء</text>
+                    <text x="500" y="230" font-family="Tajawal" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="700">صفائح دموية</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: مكونات الدم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tint"></i> أولاً: مكونات الدم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الدم:</strong> نسيج سائل يتكون من 4 مكونات رئيسية، يعمل على نقل المواد الحيوية في جميع أنحاء الجسم.
+            </div>
+
+            <div class="four-columns">
+                <div class="component-card plasma">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>1. البلازما</h4>
+                    <p>السائل الأصفر الذي يحمل الخلايا والمواد الذائبة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>النسبة:</strong> 55%</p>
+                </div>
+                <div class="component-card rbc">
+                    <div class="icon"><i class="fas fa-circle"></i></div>
+                    <h4>2. كريات الدم الحمراء</h4>
+                    <p>تنقل الأكسجين من الرئتين إلى الخلايا</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>النسبة:</strong> 44%</p>
+                </div>
+                <div class="component-card wbc">
+                    <div class="icon"><i class="fas fa-shield-virus"></i></div>
+                    <h4>3. كريات الدم البيضاء</h4>
+                    <p>تدافع عن الجسم ضد الميكروبات</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>النسبة:</strong> أقل من 1%</p>
+                </div>
+                <div class="component-card platelet">
+                    <div class="icon"><i class="fas fa-band-aid"></i></div>
+                    <h4>4. الصفائح الدموية</h4>
+                    <p>مسؤولة عن تجلط الدم وإيقاف النزيف</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>النسبة:</strong> أقل من 1%</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> جدول تفصيلي لمكونات الدم</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>المكون</th>
+                                <th>الشكل</th>
+                                <th>الوظيفة الرئيسية</th>
+                                <th>عدد تقريبي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color: #e74c3c; font-weight: 700;">كريات حمراء</td>
+                                <td>قرصية مقعرة، عديمة النواة</td>
+                                <td>نقل O₂ و CO₂ (بواسطة الهيموجلوبين)</td>
+                                <td>5 مليون/مم³</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #3498db; font-weight: 700;">كريات بيضاء</td>
+                                <td>كروية، لها نواة</td>
+                                <td>الدفاع عن الجسم (مناعة)</td>
+                                <td>7,000/مم³</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #f39c12; font-weight: 700;">صفائح دموية</td>
+                                <td>أجسام صغيرة غير منتظمة</td>
+                                <td>تجلط الدم وإيقاف النزيف</td>
+                                <td>250,000/مم³</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #f1c40f; font-weight: 700;">البلازما</td>
+                                <td>سائل أصفر</td>
+                                <td>نقل الغذاء، الهرمونات، الفضلات</td>
+                                <td>55% من الدم</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> هل تعلم؟</h4>
+                <p>الهيموجلوبين هو البروتين الذي يعطي الكريات الحمراء لونها الأحمر، ويرتبط بالأكسجين في الرئتين ليحمله إلى جميع خلايا الجسم!</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: فصائل الدم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-vials"></i> ثانياً: فصائل الدم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>فصائل الدم:</strong> تُصنف حسب وجود أو غياب بروتينات معينة (مستضدات) على سطح الكريات الحمراء.
+            </div>
+
+            <div class="four-columns">
+                <div class="blood-type-card">
+                    <div class="type">A</div>
+                    <p><strong>المستضد:</strong> A على سطح الكرية</p>
+                    <p><strong>الأجسام المضادة:</strong> ضد B</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>نسبتها:</strong> 40%</p>
+                </div>
+                <div class="blood-type-card">
+                    <div class="type">B</div>
+                    <p><strong>المستضد:</strong> B على سطح الكرية</p>
+                    <p><strong>الأجسام المضادة:</strong> ضد A</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>نسبتها:</strong> 10%</p>
+                </div>
+                <div class="blood-type-card">
+                    <div class="type">AB</div>
+                    <p><strong>المستضدات:</strong> A و B معاً</p>
+                    <p><strong>الأجسام المضادة:</strong> لا يوجد</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>نسبتها:</strong> 4%</p>
+                </div>
+                <div class="blood-type-card">
+                    <div class="type">O</div>
+                    <p><strong>المستضدات:</strong> لا يوجد</p>
+                    <p><strong>الأجسام المضادة:</strong> ضد A و B</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>نسبتها:</strong> 46%</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-hand-holding-heart"></i> المتبرع العام: O</h3>
+                    <p>يمكنه التبرع لجميع الفصائل</p>
+                    <p style="margin-top: 10px;"><strong>السبب:</strong> لا يحتوي على مستضدات A أو B</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        O → A, B, AB, O
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-user-check"></i> المتلقي العام: AB</h3>
+                    <p>يمكنه استقبال جميع الفصائل</p>
+                    <p style="margin-top: 10px;"><strong>السبب:</strong> لا يحتوي على أجسام مضادة</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        A, B, AB, O → AB
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> جدول التبرع والاستقبال</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الفصيلة</th>
+                                <th>يمكنها التبرع لـ</th>
+                                <th>يمكنها الاستقبال من</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 700; color: #c0392b;">A</td>
+                                <td>A, AB</td>
+                                <td>A, O</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700; color: #c0392b;">B</td>
+                                <td>B, AB</td>
+                                <td>B, O</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700; color: #c0392b;">AB</td>
+                                <td>AB فقط</td>
+                                <td>A, B, AB, O (الجميع)</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700; color: #c0392b;">O</td>
+                                <td>A, B, AB, O (الجميع)</td>
+                                <td>O فقط</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>إذا دخلت فصيلة دم غير متوافقة إلى جسم المريض، فإن الأجسام المضادة ستهاجم الكريات الحمراء وتسبب <strong>تجلطها</strong>، مما قد يؤدي إلى <strong>وفاة المريض</strong>!</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: تجلط الدم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-band-aid"></i> ثالثاً: تجلط الدم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> تجلط الدم هو عملية حيوية تحول الدم من الحالة السائلة إلى الحالة الهلامية لإيقاف النزيف.
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list-ol"></i> مراحل تجلط الدم</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدوث الجرح</h4>
+                    <p>تتضرر الأوعية الدموية وتتعرض لل الهواء</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تنشيط الصفائح الدموية</h4>
+                    <p>تتجمع الصفائح في مكان الجرح وتلتصق ببعضها</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تحويل الفبرينوجين إلى فبرين</h4>
+                    <p>بمساعدة فيتامين K والكالسيوم، يتحول البروتين الذائب (فبرينوجين) في البلازما إلى خيوط (فبرين)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> تكوين الخثرة</h4>
+                    <p>خيوط الفبرين تحبس الكريات الحمراء والصفائح، فتتكون الجلطة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> التئام الجرح</h4>
+                    <p>تجف الجلطة وتتحول إلى قشرة (جَلَبَة) تحمي الجرح حتى يلتئم</p>
+                </div>
+
+                <div class="math-box">
+                    فبرينوجين (ذائب) → فبرين (خيوط) → جلطة دموية
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> دور فيتامين K والكالسيوم:</h4>
+                <p>بدون فيتامين K والكالسيوم، لا يتحول الفبرينوجين إلى فبرين، مما يسبب <strong>سيولة الدم</strong> وعدم توقف النزيف!</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> فوائد التجلط</h3>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>إيقاف النزيف</li>
+                        <li>حماية الجرح من الميكروبات</li>
+                        <li>بدء عملية الالتئام</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-times-circle"></i> أضرار التجلط الزائد</h3>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>انسداد الأوعية الدموية</li>
+                        <li>النوبات القلبية</li>
+                        <li>السكتات الدماغية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: تركيب القلب -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-heart"></i> رابعاً: تركيب القلب</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القلب:</strong> عضو عضلي مجوف بحجم قبضة اليد، يقع في الصدر بين الرئتين، وهو المضخة التي تدفع الدم إلى جميع أنحاء الجسم.
+            </div>
+
+            <div class="blood-visual">
+                <h4 style="color: #c0392b; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> حجرات القلب الأربع</h4>
+                <svg width="500" height="400" viewBox="0 0 500 400">
+                    <!-- شكل القلب -->
+                    <path d="M 250 350 Q 100 250 100 150 Q 100 50 175 50 Q 225 50 250 100 Q 275 50 325 50 Q 400 50 400 150 Q 400 250 250 350 Z" fill="rgba(192, 57, 43, 0.1)" stroke="#c0392b" stroke-width="3"/>
+                    
+                    <!-- خط فاصل عمودي -->
+                    <line x1="250" y1="80" x2="250" y2="320" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,5"/>
+                    
+                    <!-- خط فاصل أفقي -->
+                    <line x1="120" y1="200" x2="380" y2="200" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,5"/>
+                    
+                    <!-- الأذين الأيمن -->
+                    <text x="180" y="140" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الأذين</text>
+                    <text x="180" y="160" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الأيمن</text>
+                    
+                    <!-- الأذين الأيسر -->
+                    <text x="320" y="140" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">الأذين</text>
+                    <text x="320" y="160" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">الأيسر</text>
+                    
+                    <!-- البطين الأيمن -->
+                    <text x="180" y="260" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">البطين</text>
+                    <text x="180" y="280" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الأيمن</text>
+                    
+                    <!-- البطين الأيسر -->
+                    <text x="320" y="260" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">البطين</text>
+                    <text x="320" y="280" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">الأيسر</text>
+                    
+                    <!-- تسميات -->
+                    <text x="250" y="385" font-family="Tajawal" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">الدم المؤكسج (أحمر) | الدم غير المؤكسج (أزرق)</text>
+                </svg>
+            </div>
+
+            <div class="two-columns">
+                <div class="chamber-card right">
+                    <h4><i class="fas fa-arrow-down"></i> الجهة اليمنى</h4>
+                    <p><strong>الأذين الأيمن:</strong> يستقبل الدم غير المؤكسج من الجسم عبر الوريد الأجوف</p>
+                    <p style="margin-top: 10px;"><strong>البطين الأيمن:</strong> يضخ الدم إلى الرئتين عبر الشريان الرئوي</p>
+                </div>
+                <div class="chamber-card left">
+                    <h4><i class="fas fa-arrow-up"></i> الجهة اليسرى</h4>
+                    <p><strong>الأذين الأيسر:</strong> يستقبل الدم المؤكسج من الرئتين عبر الأوردة الرئوية</p>
+                    <p style="margin-top: 10px;"><strong>البطين الأيسر:</strong> يضخ الدم إلى جميع أنحاء الجسم عبر الشريان الأبهر (الأورطي)</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-cogs"></i> صمامات القلب</h4>
+                <p>تمنع رجوع الدم إلى الخلف، وتنفتح في اتجاه واحد فقط.</p>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الصمام</th>
+                                <th>الموقع</th>
+                                <th>الوظيفة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 700;">التاجي (المترالي)</td>
+                                <td>بين الأذين الأيسر والبطين الأيسر</td>
+                                <td>يمنع رجوع الدم من البطين إلى الأذين</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700;">الثلاثي الشرف</td>
+                                <td>بين الأذين الأيمن والبطين الأيمن</td>
+                                <td>يمنع رجوع الدم من البطين إلى الأذين</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700;">الأبهر</td>
+                                <td>بين البطين الأيسر والشريان الأبهر</td>
+                                <td>يمنع رجوع الدم من الشريان إلى البطين</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 700;">الرئوي</td>
+                                <td>بين البطين الأيمن والشريان الرئوي</td>
+                                <td>يمنع رجوع الدم من الشريان إلى البطين</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> هل تعلم؟</h4>
+                <p>ينبض القلب حوالي <strong>100,000 مرة</strong> في اليوم، ويضخ حوالي <strong>7,500 لتر</strong> من الدم! البطين الأيسر أقوى من الأيمن لأنه يضخ الدم إلى جميع أنحاء الجسم.</p>
+            </div>
+        </div>
+
+        <!-- خامساً: الأوعية الدموية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> خامساً: الأوعية الدموية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الأوعية الدموية:</strong> شبكة من الأنابيب تنقل الدم من القلب إلى جميع أنحاء الجسم والعكس.
+            </div>
+
+            <div class="three-columns">
+                <div class="vessel-card artery">
+                    <h4><i class="fas fa-arrow-up"></i> الشرايين</h4>
+                    <p><strong>الاتجاه:</strong> من القلب إلى الجسم</p>
+                    <p style="margin-top: 10px;"><strong>الدم:</strong> مؤكسج (إلا الشريان الرئوي)</p>
+                    <p style="margin-top: 10px;"><strong>السمك:</strong> جدران سميكة ومرنة</p>
+                    <p style="margin-top: 10px;"><strong>الضغط:</strong> عالٍ</p>
+                    <p style="margin-top: 10px;"><strong>النبض:</strong> محسوس</p>
+                </div>
+                <div class="vessel-card vein">
+                    <h4><i class="fas fa-arrow-down"></i> الأوردة</h4>
+                    <p><strong>الاتجاه:</strong> من الجسم إلى القلب</p>
+                    <p style="margin-top: 10px;"><strong>الدم:</strong> غير مؤكسج (إلا الوريد الرئوي)</p>
+                    <p style="margin-top: 10px;"><strong>السمك:</strong> جدران رقيقة</p>
+                    <p style="margin-top: 10px;"><strong>الضغط:</strong> منخفض</p>
+                    <p style="margin-top: 10px;"><strong>الصمامات:</strong> تمنع رجوع الدم</p>
+                </div>
+                <div class="vessel-card capillary">
+                    <h4><i class="fas fa-code-branch"></i> الشعيرات الدموية</h4>
+                    <p><strong>الاتجاه:</strong> تربط الشرايين بالأوردة</p>
+                    <p style="margin-top: 10px;"><strong>السمك:</strong> جدار رقيق جداً (خلية واحدة)</p>
+                    <p style="margin-top: 10px;"><strong>الوظيفة:</strong> تبادل المواد (O₂، CO₂، الغذاء)</p>
+                    <p style="margin-top: 10px;"><strong>الحجم:</strong> دقيقة جداً</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> جدول مقارنة بين الأوعية الدموية</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الخاصية</th>
+                                <th style="color: #fff;">الشرايين</th>
+                                <th style="color: #fff;">الأوردة</th>
+                                <th style="color: #fff;">الشعيرات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>اتجاه الدم</strong></td>
+                                <td>من القلب</td>
+                                <td>إلى القلب</td>
+                                <td>بينهما</td>
+                            </tr>
+                            <tr>
+                                <td><strong>سمك الجدار</strong></td>
+                                <td>سميك ومرن</td>
+                                <td>رقيق</td>
+                                <td>رقيق جداً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الضغط</strong></td>
+                                <td>عالٍ</td>
+                                <td>منخفض</td>
+                                <td>متوسط</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الصمامات</strong></td>
+                                <td>لا يوجد</td>
+                                <td>يوجد</td>
+                                <td>لا يوجد</td>
+                            </tr>
+                            <tr>
+                                <td><strong>النبض</strong></td>
+                                <td>محسوس</td>
+                                <td>غير محسوس</td>
+                                <td>غير محسوس</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: دورات الدم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync"></i> سادساً: دورات الدم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الدورة الدموية:</strong> مسار الدم في الجسم، وتتكون من دورتين متكاملتين: صغرى (رئوية) وكبرى (جهازية).
+            </div>
+
+            <div class="circulation-diagram">
+                <h4 style="color: #c0392b; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> الدورة الدموية الكاملة</h4>
+                <svg width="700" height="400" viewBox="0 0 700 400">
+                    <!-- القلب -->
+                    <rect x="300" y="150" width="100" height="100" rx="10" fill="rgba(192, 57, 43, 0.2)" stroke="#c0392b" stroke-width="3"/>
+                    <text x="350" y="200" font-family="Tajawal" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">القلب</text>
+                    
+                    <!-- الرئتين -->
+                    <ellipse cx="350" cy="50" rx="80" ry="30" fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="2"/>
+                    <text x="350" y="55" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الرئتين</text>
+                    
+                    <!-- الجسم -->
+                    <ellipse cx="350" cy="350" rx="100" ry="30" fill="rgba(39, 174, 96, 0.2)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="350" y="355" font-family="Tajawal" font-size="14" fill="#27ae60" text-anchor="middle" font-weight="700">الجسم (الخلايا)</text>
+                    
+                    <!-- الدورة الصغرى -->
+                    <path d="M 320 150 Q 250 100 300 60" stroke="#3498db" stroke-width="3" fill="none" marker-end="url(#arrow1)"/>
+                    <path d="M 400 60 Q 450 100 380 150" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrow1)"/>
+                    <text x="220" y="100" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">دورة صغرى</text>
+                    <text x="220" y="115" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">(غير مؤكسج)</text>
+                    <text x="480" y="100" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">دورة صغرى</text>
+                    <text x="480" y="115" font-family="Tajawal" font-size="10" fill="#e74c3c" text-anchor="middle">(مؤكسج)</text>
+                    
+                    <!-- الدورة الكبرى -->
+                    <path d="M 320 250 Q 200 300 280 340" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrow1)"/>
+                    <path d="M 420 340 Q 500 300 380 250" stroke="#3498db" stroke-width="3" fill="none" marker-end="url(#arrow1)"/>
+                    <text x="180" y="300" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">دورة كبرى</text>
+                    <text x="180" y="315" font-family="Tajawal" font-size="10" fill="#e74c3c" text-anchor="middle">(مؤكسج)</text>
+                    <text x="520" y="300" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">دورة كبرى</text>
+                    <text x="520" y="315" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">(غير مؤكسج)</text>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#c0392b"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-lungs"></i> الدورة الدموية الصغرى (الرئوية)</h3>
+                    <p><strong>المسار:</strong> القلب → الرئتين → القلب</p>
+                    <p style="margin-top: 10px;"><strong>التفاصيل:</strong></p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>البطين الأيمن يضخ الدم غير المؤكسج عبر الشريان الرئوي إلى الرئتين</li>
+                        <li>يتم تبادل الغازات (يأخذ O₂ ويطرح CO₂)</li>
+                        <li>يعود الدم المؤكسج عبر الأوردة الرئوية إلى الأذين الأيسر</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        يهدف إلى: <strong>تنقية الدم</strong>
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-running"></i> الدورة الدموية الكبرى (الجهازية)</h3>
+                    <p><strong>المسار:</strong> القلب → الجسم → القلب</p>
+                    <p style="margin-top: 10px;"><strong>التفاصيل:</strong></p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>البطين الأيسر يضخ الدم المؤكسج عبر الشريان الأبهر إلى جميع أنحاء الجسم</li>
+                        <li>يتم تبادل المواد في الشعيرات الدموية</li>
+                        <li>يعود الدم غير المؤكسج عبر الأوردة الأجوفة إلى الأذين الأيمن</li>
+                    </ul>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        يهدف إلى: <strong>تغذية الخلايا</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-route"></i> رحلة قطرة دم كاملة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الأذين الأيمن</h4>
+                    <p>يستقبل الدم غير المؤكسج من الجسم</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> البطين الأيمن</h4>
+                    <p>يضخ الدم إلى الرئتين (دورة صغرى)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الرئتين</h4>
+                    <p>يأخذ O₂ ويطرح CO₂</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الأذين الأيسر</h4>
+                    <p>يستقبل الدم المؤكسج من الرئتين</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> البطين الأيسر</h4>
+                    <p>يضخ الدم إلى جميع أنحاء الجسم (دورة كبرى)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">6</span> خلايا الجسم</h4>
+                    <p>يوزع O₂ والغذاء، ويأخذ CO₂ والفضلات</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">7</span> العودة للأذين الأيمن</h4>
+                    <p>عبر الأوردة الأجوفة، وتبدأ الرحلة من جديد!</p>
+                </div>
+
+                <div class="solution">✅ الدورة الكاملة تتم في حوالي 20-30 ثانية!</div>
+            </div>
+        </div>
+
+        <!-- سابعاً: أمراض الجهاز الدوري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-heartbeat"></i> سابعاً: أمراض الجهاز الدوري</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-exclamation-triangle"></i> ارتفاع ضغط الدم</h3>
+                    <p><strong>السبب:</strong> تضيق الأوعية الدموية</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> صداع، دوار</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> تقليل الملح، الرياضة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #c0392b;">
+                    <h3 style="color: #c0392b;"><i class="fas fa-exclamation-triangle"></i> تصلب الشرايين</h3>
+                    <p><strong>السبب:</strong> تراكم الدهون في جدران الشرايين</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> ألم في الصدر</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> غذاء صحي، عدم التدخين</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-exclamation-triangle"></i> فقر الدم (الأنيميا)</h3>
+                    <p><strong>السبب:</strong> نقص الحديد أو كريات الدم الحمراء</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> إرهاق، شحوب</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> تناول الأطعمة الغنية بالحديد</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-exclamation-triangle"></i> اللوكيميا (سرطان الدم)</h3>
+                    <p><strong>السبب:</strong> تكاثر غير طبيعي للكريات البيضاء</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> ضعف المناعة، نزيف</p>
+                    <p style="margin-top: 10px;"><strong>العلاج:</strong> كيماوي، زراعة نخاع</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثامناً: نصائح لصحة الجهاز الدوري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-heart"></i> ثامناً: نصائح لصحة الجهاز الدوري</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle"></i> عادات صحية يجب اتباعها</h4>
+                <ol style="padding-right: 20px; line-height: 2.2; font-size: 1.05rem;">
+                    <li><strong>🏃 مارس الرياضة بانتظام:</strong> تقوي القلب وتحسن الدورة الدموية</li>
+                    <li><strong>🥗 تناول غذاء صحي:</strong> قليل الدهون والملح، غني بالفواكه والخضروات</li>
+                    <li><strong>🚫 تجنب التدخين:</strong> يضر الرئتين والقلب والأوعية الدموية</li>
+                    <li><strong>💤 احصل على نوم كافٍ:</strong> 8 ساعات يومياً على الأقل</li>
+                    <li><strong>💧 اشرب الماء بكثرة:</strong> يحافظ على سيولة الدم</li>
+                    <li><strong>😌 تجنب التوتر:</strong> يرفع ضغط الدم ويؤذي القلب</li>
+                    <li><strong>🩺 افحص ضغط الدم دورياً:</strong> للكشف المبكر عن أي مشاكل</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- تاسعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> تاسعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن جميع الشرايين تحمل دماً مؤكسجاً</h4>
+                <p><strong>الاستثناء:</strong> الشريان الرئوي يحمل دماً غير مؤكسج من القلب إلى الرئتين!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الاعتقاد أن جميع الأوردة تحمل دماً غير مؤكسج</h4>
+                <p><strong>الاستثناء:</strong> الأوردة الرئوية تحمل دماً مؤكسجاً من الرئتين إلى القلب!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الخلط بين البطين الأيمن والأيسر</h4>
+                <p><strong>القاعدة:</strong> البطين الأيسر أقوى لأنه يضخ الدم إلى جميع أنحاء الجسم (دورة كبرى)، بينما الأيمن يضخ إلى الرئتين فقط.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الاعتقاد أن فصيلة O نادرة</h4>
+                <p>فصيلة O هي <strong>الأكثر شيوعاً</strong> (46%)، لكنها <strong>الأندر استقبالاً</strong> (تستقبل من O فقط).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: تجاهل أهمية فيتامين K</h4>
+                <p>بدون فيتامين K، لا يتجلط الدم بشكل صحيح! يوجد في الخضروات الورقية الخضراء.</p>
+            </div>
+        </div>
+
+        <!-- عاشراً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #c0392b;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الدم:</strong> نسيج سائل يتكون من البلازما، كريات حمراء، بيضاء، وصفائح.</li>
+                <li><strong>الكريات الحمراء:</strong> تنقل O₂ و CO₂ (بواسطة الهيموجلوبين).</li>
+                <li><strong>الكريات البيضاء:</strong> تدافع عن الجسم ضد الميكروبات.</li>
+                <li><strong>الصفائح الدموية:</strong> مسؤولة عن تجلط الدم.</li>
+                <li><strong>البلازما:</strong> تنقل الغذاء والهرمونات والفضلات.</li>
+                <li><strong>فصائل الدم:</strong> A, B, AB, O.</li>
+                <li><strong>المتبرع العام:</strong> O | <strong>المتلقي العام:</strong> AB.</li>
+                <li><strong>تجلط الدم:</strong> فبرينوجين → فبرين → جلطة (بمساعدة فيتامين K والكالسيوم).</li>
+                <li><strong>القلب:</strong> 4 حجرات (أذينان، بطينان) و4 صمامات.</li>
+                <li><strong>الشرايين:</strong> من القلب للجسم | <strong>الأوردة:</strong> من الجسم للقلب.</li>
+                <li><strong>الدورة الصغرى:</strong> القلب → الرئتين → القلب.</li>
+                <li><strong>الدورة الكبرى:</strong> القلب → الجسم → القلب.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #c0392b; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #c0392b;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #c0392b; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #c0392b; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما المكون المسؤول عن نقل الأكسجين في الدم؟",
+                options: ["البلازما", "الكريات الحمراء", "الكريات البيضاء", "الصفائح الدموية"],
+                correct: 1,
+                explanation: "الكريات الحمراء تحتوي على الهيموجلوبين الذي يرتبط بالأكسجين وينقله من الرئتين إلى خلايا الجسم."
+            },
+            {
+                sentence: "أي فصيلة دم تُعتبر المتبرع العام؟",
+                options: ["A", "B", "AB", "O"],
+                correct: 3,
+                explanation: "فصيلة O هي المتبرع العام لأنها لا تحتوي على مستضدات A أو B، فيمكن التبرع لجميع الفصائل."
+            },
+            {
+                sentence: "ما الفيتامين الضروري لتجلط الدم؟",
+                options: ["فيتامين A", "فيتامين C", "فيتامين K", "فيتامين D"],
+                correct: 2,
+                explanation: "فيتامين K ضروري لتحويل الفبرينوجين إلى فبرين، وبدونه لا يتجلط الدم بشكل صحيح."
+            },
+            {
+                sentence: "ما البطين الذي يضخ الدم إلى جميع أنحاء الجسم؟",
+                options: ["البطين الأيمن", "البطين الأيسر", "الأذين الأيمن", "الأذين الأيسر"],
+                correct: 1,
+                explanation: "البطين الأيسر هو الأقوى لأنه يضخ الدم المؤكسج عبر الشريان الأبهر إلى جميع أنحاء الجسم (الدورة الكبرى)."
+            },
+            {
+                sentence: "ما الوعاء الدموي الذي ينقل الدم من القلب إلى الرئتين؟",
+                options: ["الشريان الأبهر", "الشريان الرئوي", "الوريد الرئوي", "الوريد الأجوف"],
+                correct: 1,
+                explanation: "الشريان الرئوي هو الاستثناء الوحيد، فهو شريان لكنه يحمل دماً غير مؤكسج من البطين الأيمن إلى الرئتين."
+            },
+            {
+                sentence: "أين يتم تبادل المواد الغذائية والأكسجين مع الخلايا؟",
+                options: ["الشرايين", "الأوردة", "الشعيرات الدموية", "القلب"],
+                correct: 2,
+                explanation: "الشعيرات الدموية جدرانها رقيقة جداً (خلية واحدة) مما يسمح بتبادل المواد بين الدم والخلايا."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

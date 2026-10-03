@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="جمع وطرح الأعداد النسبية ذات المقامات المختلفة - توحيد المقامات - مادة الرياضيات">
+    <title>جمع وطرح الأعداد النسبية ذات المقامات المختلفة | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .fraction-visual { display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; flex-wrap: wrap; direction: ltr; }
+        .fraction-box { background: var(--bg-color); padding: 15px; border-radius: 10px; border: 2px solid var(--subject-primary); text-align: center; min-width: 100px; }
+        .fraction-box .fraction { font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); }
+        .fraction-box .arrow { font-size: 1.5rem; color: var(--subject-secondary); margin: 0 10px; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-plus-circle"></i> جمع وطرح الأعداد النسبية ذات المقامات المختلفة</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا لا يمكننا جمع أو طرح كسور ذات مقامات مختلفة مباشرة؟</strong>
+                <p style="margin-top: 10px;">لأن المقام يحدد "نوع" الجزء (أرباع، أثلاث، أخماس...). لا يمكننا جمع أنواع مختلفة من الأجزاء دون توحيدها أولاً، تماماً كما لا يمكننا جمع التفاح والبرتقال مباشرة!</p>
+            </div>
+
+            <div class="fraction-visual">
+                <div class="fraction-box">
+                    <div class="fraction">1/2</div>
+                    <div style="font-size: 0.8rem; margin-top: 5px;">نصف</div>
+                </div>
+                <div style="font-size: 2rem; color: var(--subject-primary);">+</div>
+                <div class="fraction-box">
+                    <div class="fraction">1/3</div>
+                    <div style="font-size: 0.8rem; margin-top: 5px;">ثلث</div>
+                </div>
+                <div style="font-size: 2rem; color: var(--subject-primary);">=</div>
+                <div class="fraction-box" style="border-color: var(--success-color);">
+                    <div class="fraction" style="color: var(--success-color);">?</div>
+                    <div style="font-size: 0.8rem; margin-top: 5px;">نحتاج توحيد المقامات!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- أولاً: لماذا نوحّد المقامات؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> أولاً: لماذا نوحّد المقامات؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>المبدأ الأساسي:</strong> المقام يحدد حجم الجزء. لا يمكننا جمع أو طرح أجزاء ذات أحجام مختلفة مباشرة.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> مثال من الحياة</h3>
+                    <p>تخيل أن لديك:</p>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li><strong>نصف</strong> بيتزا (1/2)</li>
+                        <li><strong>ثلث</strong> بيتزا (1/3)</li>
+                    </ul>
+                    <p style="margin-top: 10px;">لا يمكنك قول "لديك 2/5 بيتزا" لأن الأجزاء مختلفة الحجم!</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-lightbulb"></i> الحل</h3>
+                    <p>نحوّل الكسور إلى مقام مشترك (نفس حجم الأجزاء):</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                        1/2 = 3/6<br>
+                        1/3 = 2/6
+                    </div>
+                    <p style="text-align: center;">الآن يمكن الجمع: 3/6 + 2/6 = 5/6</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: المضاعف المشترك الأصغر (أ.م.م) -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-search"></i> ثانياً: المضاعف المشترك الأصغر (أ.م.م)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> المضاعف المشترك الأصغر (أ.م.م) هو أصغر عدد يقبل القسمة على كلا المقامين بدون باقٍ.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 طرق إيجاد أ.م.م:</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الطريقة 1: سرد المضاعفات</h4>
+                <p><strong>مثال:</strong> أوجد أ.م.م لـ 4 و 6</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> اكتب مضاعفات كل عدد</h4>
+                    <div class="calculation">مضاعفات 4: 4, 8, 12, 16, 20, 24...</div>
+                    <div class="calculation">مضاعفات 6: 6, 12, 18, 24, 30...</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أوجد أول مضاعف مشترك</h4>
+                    <div class="calculation">أ.م.م(4, 6) = 12</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الطريقة 2: التحليل إلى عوامل أولية</h4>
+                <p><strong>مثال:</strong> أوجد أ.م.م لـ 6 و 8</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حلّل كل عدد إلى عوامله الأولية</h4>
+                    <div class="calculation">6 = 2 × 3</div>
+                    <div class="calculation">8 = 2 × 2 × 2 = 2³</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خذ كل عامل أولي بأعلى أس</h4>
+                    <div class="calculation">أ.م.م = 2³ × 3 = 8 × 3 = 24</div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة سريعة:</h4>
+                <p>إذا كان أحد المقامين يقبل القسمة على الآخر، فالأ.م.م هو المقام الأكبر.</p>
+                <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                    أ.م.م(3, 9) = 9 (لأن 9 ÷ 3 = 3)
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: خطوات الجمع والطرح -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-list-ol"></i> ثالثاً: خطوات الجمع والطرح</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 20px;"> الخطوات الأربع:</h3>
+            
+            <ol class="steps-list">
+                <li><strong>أوجد أ.م.م</strong> للمقامات.</li>
+                <li><strong>حوّل كل كسر</strong> إلى كسر مكافئ بالمقام الجديد (أ.م.م).</li>
+                <li><strong>اجمع أو اطرح</strong> البسوط فقط (المقام يبقى كما هو).</li>
+                <li><strong>بسّط الناتج</strong> إذا أمكن.</li>
+            </ol>
+
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة الرياضية:</strong>
+                <div class="math-box" style="font-size: 1.1rem; margin-top: 10px;">
+                    a/b + c/d = (a×d + c×b) / (b×d)
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: أمثلة محلولة على الجمع -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-plus"></i> رابعاً: أمثلة محلولة على الجمع</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: جمع كسرين بمقامات مختلفة</h4>
+                <div class="problem">1/4 + 1/6 = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أوجد أ.م.م لـ 4 و 6</h4>
+                    <div class="calculation">مضاعفات 4: 4, 8, 12, 16...</div>
+                    <div class="calculation">مضاعفات 6: 6, 12, 18...</div>
+                    <div class="calculation">أ.م.م(4, 6) = 12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل الكسور إلى مقام 12</h4>
+                    <div class="calculation">1/4 = (1×3)/(4×3) = 3/12</div>
+                    <div class="calculation">1/6 = (1×2)/(6×2) = 2/12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اجمع البسوط</h4>
+                    <div class="calculation">3/12 + 2/12 = 5/12</div>
+                </div>
+
+                <div class="math-box">
+                    1/4 + 1/6 = 5/12
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: جمع كسور مع أعداد صحيحة</h4>
+                <div class="problem">2 1/3 + 1 1/4 = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الأعداد الكسرية إلى كسور غير كسرية</h4>
+                    <div class="calculation">2 1/3 = 7/3</div>
+                    <div class="calculation">1 1/4 = 5/4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أوجد أ.م.م لـ 3 و 4</h4>
+                    <div class="calculation">أ.م.م(3, 4) = 12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حوّل الكسور</h4>
+                    <div class="calculation">7/3 = 28/12</div>
+                    <div class="calculation">5/4 = 15/12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> اجمع وبسّط</h4>
+                    <div class="calculation">28/12 + 15/12 = 43/12 = 3 7/12</div>
+                </div>
+
+                <div class="math-box">
+                    2 1/3 + 1 1/4 = 3 7/12
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: جمع كسور بإشارات مختلفة</h4>
+                <div class="problem">3/5 + (−1/2) = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أوجد أ.م.م لـ 5 و 2</h4>
+                    <div class="calculation">أ.م.م(5, 2) = 10</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل الكسور</h4>
+                    <div class="calculation">3/5 = 6/10</div>
+                    <div class="calculation">−1/2 = −5/10</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اجمع (إشارات مختلفة)</h4>
+                    <div class="calculation">6/10 + (−5/10) = 1/10</div>
+                </div>
+
+                <div class="math-box">
+                    3/5 + (−1/2) = 1/10
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: أمثلة محلولة على الطرح -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-minus"></i> خامساً: أمثلة محلولة على الطرح</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: طرح كسرين بمقامات مختلفة</h4>
+                <div class="problem">3/4 − 1/6 = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أوجد أ.م.م لـ 4 و 6</h4>
+                    <div class="calculation">أ.م.م(4, 6) = 12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل الكسور</h4>
+                    <div class="calculation">3/4 = 9/12</div>
+                    <div class="calculation">1/6 = 2/12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اطرح البسوط</h4>
+                    <div class="calculation">9/12 − 2/12 = 7/12</div>
+                </div>
+
+                <div class="math-box">
+                    3/4 − 1/6 = 7/12
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: طرح أعداد كسرية</h4>
+                <div class="problem">5 1/2 − 2 3/4 = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل إلى كسور غير كسرية</h4>
+                    <div class="calculation">5 1/2 = 11/2</div>
+                    <div class="calculation">2 3/4 = 11/4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أوجد أ.م.م</h4>
+                    <div class="calculation">أ.م.م(2, 4) = 4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حوّل واطرح</h4>
+                    <div class="calculation">11/2 = 22/4</div>
+                    <div class="calculation">22/4 − 11/4 = 11/4 = 2 3/4</div>
+                </div>
+
+                <div class="math-box">
+                    5 1/2 − 2 3/4 = 2 3/4
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: طرح بإشارات سالبة</h4>
+                <div class="problem">−2/3 − 1/4 = ?</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل الطرح إلى جمع</h4>
+                    <div class="calculation">−2/3 − 1/4 = −2/3 + (−1/4)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أوجد أ.م.م وحوّل</h4>
+                    <div class="calculation">أ.م.م(3, 4) = 12</div>
+                    <div class="calculation">−2/3 = −8/12</div>
+                    <div class="calculation">−1/4 = −3/12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اجمع (كلاهما سالب)</h4>
+                    <div class="calculation">−8/12 + (−3/12) = −11/12</div>
+                </div>
+
+                <div class="math-box">
+                    −2/3 − 1/4 = −11/12
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-utensils"></i> مثال 7: وصفة الطبخ</h4>
+                <p><strong>المسألة:</strong> تحتاج وصفة إلى <span style="font-family: 'Fira Code', monospace;">1/2</span> كوب سكر و <span style="font-family: 'Fira Code', monospace;">1/3</span> كوب دقيق. ما إجمالي كمية المكونات الجافة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أوجد أ.م.م لـ 2 و 3</h4>
+                    <div class="calculation">أ.م.م(2, 3) = 6</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل واجمع</h4>
+                    <div class="calculation">1/2 = 3/6</div>
+                    <div class="calculation">1/3 = 2/6</div>
+                    <div class="calculation">3/6 + 2/6 = 5/6 كوب</div>
+                </div>
+
+                <div class="math-box">
+                    الإجمالي = 5/6 كوب
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-ruler-combined"></i> مثال 8: قياس الأطوال</h4>
+                <p><strong>المسألة:</strong> لوح خشب طوله <span style="font-family: 'Fira Code', monospace;">3 3/4</span> م، قُطع منه <span style="font-family: 'Fira Code', monospace;">1 1/2</span> م. ما الطول المتبقي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حوّل إلى كسور غير كسرية</h4>
+                    <div class="calculation">3 3/4 = 15/4</div>
+                    <div class="calculation">1 1/2 = 3/2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أوجد أ.م.م واطرح</h4>
+                    <div class="calculation">أ.م.م(4, 2) = 4</div>
+                    <div class="calculation">3/2 = 6/4</div>
+                    <div class="calculation">15/4 − 6/4 = 9/4 = 2 1/4 م</div>
+                </div>
+
+                <div class="math-box">
+                    الطول المتبقي = 2 1/4 م
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-clock"></i> مثال 9: حساب الوقت</h4>
+                <p><strong>المسألة:</strong> درس الرياضيات يستغرق <span style="font-family: 'Fira Code', monospace;">3/4</span> ساعة، ودرس العلوم يستغرق <span style="font-family: 'Fira Code', monospace;">2/3</span> ساعة. ما إجمالي الوقت؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أوجد أ.م.م لـ 4 و 3</h4>
+                    <div class="calculation">أ.م.م(4, 3) = 12</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حوّل واجمع</h4>
+                    <div class="calculation">3/4 = 9/12</div>
+                    <div class="calculation">2/3 = 8/12</div>
+                    <div class="calculation">9/12 + 8/12 = 17/12 = 1 5/12 ساعة</div>
+                </div>
+
+                <div class="math-box">
+                    الإجمالي = 1 5/12 ساعة (أو 1 ساعة و 25 دقيقة)
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: جمع المقامات مع البسوط</h4>
+                <p>لا تجمع المقامات! المقام يبقى كما هو بعد التوحيد.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">1/4 + 1/6 = 2/10</span></p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">1/4 + 1/6 = 3/12 + 2/12 = 5/12</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان توحيد المقامات</h4>
+                <p>لا تجمع أو تطرح قبل توحيد المقامات!</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">2/3 + 1/4 = 3/7</span></p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">2/3 + 1/4 = 8/12 + 3/12 = 11/12</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: نسيان تبسيط الناتج</h4>
+                <p>بعد الجمع أو الطرح، بسّط الكسر إذا أمكن.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> 4/8 يجب تبسيطه إلى <span style="color: var(--success-color); font-weight: 700;">1/2</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الخلط بين أ.م.م وحاصل الضرب</h4>
+                <p>أ.م.م ليس دائماً حاصل ضرب المقامين! استخدم أصغر مضاعف مشترك.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> أ.م.م(4, 6) = 12 (وليس 24)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>لا يمكن جمع/طرح كسور بمقامات مختلفة مباشرة.</strong></li>
+                <li><strong>أ.م.م:</strong> أصغر عدد يقبل القسمة على كلا المقامين.</li>
+                <li><strong>الخطوات:</strong> أ.م.م ➔ حوّل الكسور  اجمع/اطرح البسوط ➔ بسّط.</li>
+                <li><strong>المقام لا يتغير</strong> بعد التوحيد (فقط البسوط تُجمع أو تُطرح).</li>
+                <li><strong>الأعداد الكسرية:</strong> حوّلها إلى كسور غير كسرية أولاً.</li>
+                <li><strong>الإشارات:</strong> اتبع قواعد جمع/طرح الأعداد الصحيحة.</li>
+                <li><strong>التبسيط:</strong> بسّط الناتج دائماً إذا أمكن.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "احسب: 1/3 + 1/4",
+                options: ["2/7", "7/12", "1/7", "4/12"],
+                correct: 1,
+                explanation: "أ.م.م(3,4)=12. 1/3=4/12 و 1/4=3/12. المجموع: 4/12+3/12=7/12."
+            },
+            {
+                sentence: "احسب: 2/5 − 1/3",
+                options: ["1/2", "1/15", "11/15", "1/8"],
+                correct: 1,
+                explanation: "أ.م.م(5,3)=15. 2/5=6/15 و 1/3=5/15. الفرق: 6/15−5/15=1/15."
+            },
+            {
+                sentence: "احسب: 1 1/2 + 2 1/3",
+                options: ["3 5/6", "3 2/5", "4 1/6", "3 1/6"],
+                correct: 0,
+                explanation: "1 1/2=3/2 و 2 1/3=7/3. أ.م.م(2,3)=6. 3/2=9/6 و 7/3=14/6. المجموع: 23/6=3 5/6."
+            },
+            {
+                sentence: "ما أ.م.م لـ 6 و 8؟",
+                options: ["48", "24", "12", "2"],
+                correct: 1,
+                explanation: "مضاعفات 6: 6,12,18,24... ومضاعفات 8: 8,16,24... أ.م.م=24."
+            },
+            {
+                sentence: "احسب: −3/4 + 1/2",
+                options: ["−1/4", "−2/4", "−1/2", "1/4"],
+                correct: 0,
+                explanation: "أ.م.م(4,2)=4. −3/4+1/2=−3/4+2/4=−1/4."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

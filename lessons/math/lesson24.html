@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="العلاقات المتناسبة وغير المتناسبة - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>العلاقات المتناسبة وغير المتناسبة | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .column-card.proportional { border-top: 4px solid #27ae60; }
+        .column-card.non-proportional { border-top: 4px solid #e74c3c; }
+        .column-card.proportional h3 { color: #27ae60; }
+        .column-card.non-proportional h3 { color: #e74c3c; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .graph-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .graph-visual svg { max-width: 100%; height: auto; }
+        .ratio-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .ratio-table th, .ratio-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; font-family: 'Fira Code', monospace; }
+        .ratio-table th { background: var(--subject-secondary); color: white; }
+        .ratio-table tr:nth-child(even) { background: var(--bg-color); }
+        .constant-ratio { background: #d4edda; color: #155724; font-weight: 700; }
+        .variable-ratio { background: #f8d7da; color: #721c24; font-weight: 700; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-balance-scale"></i> العلاقات المتناسبة وغير المتناسبة</h1>
+            <p>تمييز العلاقات المتناسبة من غير المتناسبة جبرياً وبيانياً</p>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل كل علاقة بين كميتين هي علاقة متناسبة؟</strong>
+                <p style="margin-top: 10px;">في حياتنا اليومية، نرى علاقات كثيرة بين الكميات: سعر المنتجات وكميتها، المسافة والزمن، الطول والوزن... لكن ليست كل هذه العلاقات متناسبة! هذا الدرس يعلمك كيف تميز العلاقات المتناسبة من غير المتناسبة.</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هي العلاقة المتناسبة؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هي العلاقة المتناسبة؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> العلاقة المتناسبة هي علاقة بين كميتين بحيث تكون النسبة بينهما <strong>ثابتة دائماً</strong>.
+            </div>
+
+            <div class="math-box">
+                y/x = k (ثابت)
+            </div>
+            <p style="text-align: center; margin: 15px 0;">
+                حيث <strong>y</strong> و <strong>x</strong> هما الكميتان، و <strong>k</strong> هو ثابت التناسب
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card proportional">
+                    <h3><i class="fas fa-check-circle"></i> علاقة متناسبة</h3>
+                    <p>النسبة بين الكميتين <strong>ثابتة</strong></p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        2/1 = 4/2 = 6/3 = 2
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">النسبة ثابتة = 2</p>
+                </div>
+                <div class="column-card non-proportional">
+                    <h3><i class="fas fa-times-circle"></i> علاقة غير متناسبة</h3>
+                    <p>النسبة بين الكميتين <strong>متغيرة</strong></p>
+                    <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                        3/1 ≠ 5/2 ≠ 8/3
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">النسبة غير ثابتة</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> القاعدة الذهبية:</h4>
+                <p>في العلاقة المتناسبة، إذا <strong>ضاعفت</strong> إحدى الكميتين، <strong>تضاعف</strong> الأخرى بنفس النسبة.</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>إذا كان سعر تفاحة واحدة = 2 ريال</li>
+                    <li>فإن سعر تفاحتين = 4 ريال (تضاعف)</li>
+                    <li>وسعر 3 تفاحات = 6 ريال (تضاعف)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: التمييز جبرياً (باستخدام الجداول) -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> ثانياً: التمييز جبرياً (باستخدام الجداول)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الطريقة:</strong> احسب النسبة y/x لكل زوج من القيم. إذا كانت جميع النسب متساوية، فالعلاقة متناسبة.
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle" style="color: #27ae60;"></i> مثال 1: علاقة متناسبة</h4>
+                <p><strong>المسألة:</strong> الجدول التالي يوضح العلاقة بين عدد التفاحات وسعرها:</p>
+                
+                <div class="table-responsive">
+                    <table class="ratio-table">
+                        <thead>
+                            <tr>
+                                <th>عدد التفاحات (x)</th>
+                                <th>السعر بالريال (y)</th>
+                                <th>النسبة y/x</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="constant-ratio">2/1 = 2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>4</td>
+                                <td class="constant-ratio">4/2 = 2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>6</td>
+                                <td class="constant-ratio">6/3 = 2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>8</td>
+                                <td class="constant-ratio">8/4 = 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب النسبة y/x لكل صف</h4>
+                    <div class="calculation">2/1 = 2, 4/2 = 2, 6/3 = 2, 8/4 = 2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن النسب</h4>
+                    <p style="text-align: center;">جميع النسب = 2 (ثابتة)</p>
+                </div>
+
+                <div class="solution">✅ العلاقة <strong>متناسبة</strong> لأن النسبة ثابتة (k = 2)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-times-circle" style="color: #e74c3c;"></i> مثال 2: علاقة غير متناسبة</h4>
+                <p><strong>المسألة:</strong> الجدول التالي يوضح العلاقة بين عمر الطفل ووزنه:</p>
+                
+                <div class="table-responsive">
+                    <table class="ratio-table">
+                        <thead>
+                            <tr>
+                                <th>العمر بالسنوات (x)</th>
+                                <th>الوزن بالكيلوغرام (y)</th>
+                                <th>النسبة y/x</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>10</td>
+                                <td class="variable-ratio">10/1 = 10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>12</td>
+                                <td class="variable-ratio">12/2 = 6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>14</td>
+                                <td class="variable-ratio">14/3 ≈ 4.67</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>16</td>
+                                <td class="variable-ratio">16/4 = 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب النسبة y/x لكل صف</h4>
+                    <div class="calculation">10/1 = 10, 12/2 = 6, 14/3 ≈ 4.67, 16/4 = 4</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن النسب</h4>
+                    <p style="text-align: center;">النسب مختلفة: 10 ≠ 6 ≠ 4.67 ≠ 4</p>
+                </div>
+
+                <div class="solution" style="border-right-color: #e74c3c; color: #721c24;">❌ العلاقة <strong>غير متناسبة</strong> لأن النسبة غير ثابتة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> طريقة سريعة للتحقق:</h4>
+                <p>اضرب <strong>طرفي</strong> النسبة في <strong>وسطيها</strong>. إذا كانت النتائج متساوية، فالعلاقة متناسبة.</p>
+                <div class="math-box" style="font-size: 1rem; margin: 10px 0;">
+                    إذا كان a/b = c/d، فإن a × d = b × c
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: التمييز بيانياً -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> ثالثاً: التمييز بيانياً</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> العلاقة المتناسبة تمثل بيانياً بـ <strong>خط مستقيم يمر بنقطة الأصل (0, 0)</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card proportional">
+                    <h3><i class="fas fa-check-circle"></i> علاقة متناسبة</h3>
+                    <p>خط مستقيم يمر بنقطة الأصل</p>
+                    <div class="graph-visual" style="padding: 15px;">
+                        <svg width="250" height="250" viewBox="0 0 250 250">
+                            <!-- المحاور -->
+                            <line x1="30" y1="220" x2="230" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                            <line x1="30" y1="20" x2="30" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                            
+                            <!-- النقاط -->
+                            <circle cx="50" cy="200" r="4" fill="#27ae60"/>
+                            <circle cx="90" cy="160" r="4" fill="#27ae60"/>
+                            <circle cx="130" cy="120" r="4" fill="#27ae60"/>
+                            <circle cx="170" cy="80" r="4" fill="#27ae60"/>
+                            <circle cx="210" cy="40" r="4" fill="#27ae60"/>
+                            
+                            <!-- الخط -->
+                            <line x1="30" y1="220" x2="210" y2="40" stroke="#27ae60" stroke-width="2"/>
+                            
+                            <!-- نقطة الأصل -->
+                            <circle cx="30" cy="220" r="5" fill="#e74c3c"/>
+                            <text x="15" y="235" font-family="Fira Code" font-size="10" fill="#e74c3c">(0,0)</text>
+                            
+                            <!-- تسميات -->
+                            <text x="235" y="225" font-family="Tajawal" font-size="12" fill="#2c3e50">x</text>
+                            <text x="20" y="15" font-family="Tajawal" font-size="12" fill="#2c3e50">y</text>
+                        </svg>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem; color: #27ae60; font-weight: 700;">خط مستقيم يمر بالأصل ✓</p>
+                </div>
+                <div class="column-card non-proportional">
+                    <h3><i class="fas fa-times-circle"></i> علاقة غير متناسبة</h3>
+                    <p>خط مستقيم لا يمر بنقطة الأصل، أو منحنى</p>
+                    <div class="graph-visual" style="padding: 15px;">
+                        <svg width="250" height="250" viewBox="0 0 250 250">
+                            <!-- المحاور -->
+                            <line x1="30" y1="220" x2="230" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                            <line x1="30" y1="20" x2="30" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                            
+                            <!-- النقاط -->
+                            <circle cx="50" cy="180" r="4" fill="#e74c3c"/>
+                            <circle cx="90" cy="150" r="4" fill="#e74c3c"/>
+                            <circle cx="130" cy="130" r="4" fill="#e74c3c"/>
+                            <circle cx="170" cy="120" r="4" fill="#e74c3c"/>
+                            <circle cx="210" cy="115" r="4" fill="#e74c3c"/>
+                            
+                            <!-- المنحنى -->
+                            <path d="M 50 180 Q 130 130 210 115" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                            
+                            <!-- نقطة الأصل -->
+                            <circle cx="30" cy="220" r="5" fill="#2c3e50"/>
+                            <text x="15" y="235" font-family="Fira Code" font-size="10" fill="#2c3e50">(0,0)</text>
+                            
+                            <!-- تسميات -->
+                            <text x="235" y="225" font-family="Tajawal" font-size="12" fill="#2c3e50">x</text>
+                            <text x="20" y="15" font-family="Tajawal" font-size="12" fill="#2c3e50">y</text>
+                        </svg>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem; color: #e74c3c; font-weight: 700;">منحنى لا يمر بالأصل ✗</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>ليس كل خط مستقيم يمثل علاقة متناسبة! يجب أن <strong>يمر بنقطة الأصل (0, 0)</strong>.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> y = 2x + 3 هو خط مستقيم، لكنه <strong>لا يمر بنقطة الأصل</strong> (عندما x=0, y=3)، لذا فهو <strong>غير متناسب</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: معادلة العلاقة المتناسبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> رابعاً: معادلة العلاقة المتناسبة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الصيغة العامة:</strong> y = kx
+            </div>
+
+            <p style="margin-bottom: 20px;">حيث:</p>
+            <ul style="padding-right: 20px; line-height: 2;">
+                <li><strong>y</strong>: الكمية التابعة (النتيجة)</li>
+                <li><strong>x</strong>: الكمية المستقلة (المدخل)</li>
+                <li><strong>k</strong>: ثابت التناسب (النسبة الثابتة)</li>
+            </ul>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: إيجاد معادلة العلاقة المتناسبة</h4>
+                <p><strong>المسألة:</strong> إذا كان سعر 3 كتب = 45 ريالاً، أوجد معادلة العلاقة بين عدد الكتب والسعر.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب ثابت التناسب k</h4>
+                    <div class="calculation">k = y/x = 45/3 = 15</div>
+                    <p style="text-align: center;">ثابت التناسب = 15 ريال/كتاب</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اكتب المعادلة</h4>
+                    <div class="calculation">y = 15x</div>
+                </div>
+
+                <div class="math-box">
+                    معادلة العلاقة: y = 15x
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: استخدام المعادلة للتنبؤ</h4>
+                <p><strong>المسألة:</strong> باستخدام المعادلة y = 15x، ما سعر 7 كتب؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> عوض عن x بـ 7</h4>
+                    <div class="calculation">y = 15 × 7</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب</h4>
+                    <div class="calculation">y = 105</div>
+                </div>
+
+                <div class="math-box">
+                    سعر 7 كتب = 105 ريال
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: أمثلة تطبيقية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> خامساً: أمثلة تطبيقية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: تحديد نوع العلاقة من جدول</h4>
+                <p><strong>المسألة:</strong> هل العلاقة في الجدول التالي متناسبة؟</p>
+                
+                <div class="table-responsive">
+                    <table class="ratio-table">
+                        <thead>
+                            <tr>
+                                <th>الزمن (ساعات)</th>
+                                <th>المسافة (كم)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>60</td></tr>
+                            <tr><td>2</td><td>120</td></tr>
+                            <tr><td>3</td><td>180</td></tr>
+                            <tr><td>4</td><td>240</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب النسبة لكل صف</h4>
+                    <div class="calculation">60/1 = 60, 120/2 = 60, 180/3 = 60, 240/4 = 60</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قارن</h4>
+                    <p style="text-align: center;">جميع النسب = 60 (ثابتة)</p>
+                </div>
+
+                <div class="solution">✅ العلاقة <strong>متناسبة</strong> (ثابت التناسب = 60 كم/ساعة)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: تحديد نوع العلاقة من رسم بياني</h4>
+                <p><strong>المسألة:</strong> الرسم البياني التالي يوضح علاقة بين كميتين. هل هي متناسبة؟</p>
+                
+                <div class="graph-visual">
+                    <svg width="300" height="250" viewBox="0 0 300 250">
+                        <!-- المحاور -->
+                        <line x1="30" y1="220" x2="280" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                        <line x1="30" y1="20" x2="30" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                        
+                        <!-- النقاط -->
+                        <circle cx="60" cy="190" r="4" fill="#2980b9"/>
+                        <circle cx="110" cy="160" r="4" fill="#2980b9"/>
+                        <circle cx="160" cy="130" r="4" fill="#2980b9"/>
+                        <circle cx="210" cy="100" r="4" fill="#2980b9"/>
+                        <circle cx="260" cy="70" r="4" fill="#2980b9"/>
+                        
+                        <!-- الخط -->
+                        <line x1="60" y1="190" x2="260" y2="70" stroke="#2980b9" stroke-width="2"/>
+                        
+                        <!-- نقطة الأصل -->
+                        <circle cx="30" cy="220" r="5" fill="#e74c3c"/>
+                        <text x="10" y="235" font-family="Fira Code" font-size="10" fill="#e74c3c">(0,0)</text>
+                        
+                        <!-- تسميات -->
+                        <text x="285" y="225" font-family="Tajawal" font-size="12" fill="#2c3e50">x</text>
+                        <text x="15" y="15" font-family="Tajawal" font-size="12" fill="#2c3e50">y</text>
+                    </svg>
+                </div>
+
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> افحص الرسم</h4>
+                    <p>هل هو خط مستقيم؟ <strong>نعم ✓</strong></p>
+                    <p>هل يمر بنقطة الأصل (0, 0)؟ <strong>لا ✗</strong> (يبدأ من نقطة أخرى)</p>
+                </div>
+
+                <div class="solution" style="border-right-color: #e74c3c; color: #721c24;">❌ العلاقة <strong>غير متناسبة</strong> لأن الخط لا يمر بنقطة الأصل</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 7: مسألة حياتية</h4>
+                <p><strong>المسألة:</strong> يقطع عداء مسافة 5 كم في 30 دقيقة. هل العلاقة بين المسافة والزمن متناسبة؟ كم دقيقة يحتاج لقطع 15 كم؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب ثابت التناسب</h4>
+                    <div class="calculation">k = الزمن/المسافة = 30/5 = 6 دقائق/كم</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اكتب المعادلة</h4>
+                    <div class="calculation">y = 6x</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> عوض عن x بـ 15</h4>
+                    <div class="calculation">y = 6 × 15 = 90 دقيقة</div>
+                </div>
+
+                <div class="math-box">
+                    يحتاج إلى 90 دقيقة (ساعة ونصف)
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن كل خط مستقيم هو علاقة متناسبة</h4>
+                <p>يجب أن يمر الخط <strong>بنقطة الأصل (0, 0)</strong> ليكون متناسباً.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong> خاطئ:</strong> y = 2x + 5 (خط مستقيم لكن لا يمر بالأصل)</p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> y = 2x (خط مستقيم يمر بالأصل)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: حساب النسبة بشكل خاطئ</h4>
+                <p>تأكد من حساب <strong>y/x</strong> وليس <strong>x/y</strong>.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> إذا y = السعر و x = الكمية، احسب السعر/الكمية</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: عدم التحقق من جميع النقاط</h4>
+                <p>يجب أن تكون <strong>جميع</strong> النسب متساوية، وليس بعضها فقط.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الخلط بين التناسب والعلاقات الخطية</h4>
+                <p>كل علاقة متناسبة هي خطية، لكن <strong>ليس كل علاقة خطية متناسبة</strong>.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>العلاقة المتناسبة:</strong> النسبة بين الكميتين ثابتة دائماً (y/x = k).</li>
+                <li><strong>التمييز جبرياً:</strong> احسب y/x لكل زوج من القيم. إذا تساوت جميع النسب، فالعلاقة متناسبة.</li>
+                <li><strong>التمييز بيانياً:</strong> العلاقة المتناسبة تمثل بخط مستقيم يمر بنقطة الأصل (0, 0).</li>
+                <li><strong>معادلة التناسب:</strong> y = kx، حيث k هو ثابت التناسب.</li>
+                <li><strong>ثابت التناسب:</strong> k = y/x (النسبة الثابتة بين الكميتين).</li>
+                <li><strong>التنبؤ:</strong> استخدم المعادلة y = kx لحساب قيم مجهولة.</li>
+                <li><strong>تنبيه:</strong> ليس كل خط مستقيم علاقة متناسبة (يجب أن يمر بالأصل).</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "أي من العلاقات التالية متناسبة؟",
+                options: ["y = 3x + 2", "y = 5x", "y = x²", "y = 2/x"],
+                correct: 1,
+                explanation: "y = 5x هي علاقة متناسبة لأنها على الصورة y = kx (حيث k=5) وتمر بنقطة الأصل."
+            },
+            {
+                sentence: "إذا كان سعر 4 أقلام = 12 ريالاً، فما ثابت التناسب؟",
+                options: ["2", "3", "4", "12"],
+                correct: 1,
+                explanation: "ثابت التناسب k = y/x = 12/4 = 3 ريال/قلم."
+            },
+            {
+                sentence: "أي جدول يمثل علاقة متناسبة؟",
+                options: [
+                    "x: 1,2,3 | y: 2,4,7",
+                    "x: 1,2,3 | y: 3,6,9",
+                    "x: 1,2,3 | y: 1,4,9",
+                    "x: 1,2,3 | y: 2,3,4"
+                ],
+                correct: 1,
+                explanation: "في الجدول الثاني: 3/1=3, 6/2=3, 9/3=3. جميع النسب متساوية (=3)، لذا العلاقة متناسبة."
+            },
+            {
+                sentence: "الرسم البياني للعلاقة المتناسبة يكون:",
+                options: [
+                    "منحنى",
+                    "خط مستقيم لا يمر بالأصل",
+                    "خط مستقيم يمر بنقطة الأصل",
+                    "نقاط متفرقة"
+                ],
+                correct: 2,
+                explanation: "العلاقة المتناسبة تمثل بيانياً بخط مستقيم يمر بنقطة الأصل (0, 0)."
+            },
+            {
+                sentence: "إذا كانت y = 4x، فما قيمة y عندما x = 5؟",
+                options: ["9", "20", "25", "1"],
+                correct: 1,
+                explanation: "y = 4x = 4 × 5 = 20"
+            },
+            {
+                sentence: "سيارة تقطع 100 كم في ساعتين. كم كم تقطع في 5 ساعات (بعلاقة متناسبة)؟",
+                options: ["200 كم", "250 كم", "300 كم", "500 كم"],
+                correct: 1,
+                explanation: "ثابت التناسب = 100/2 = 50 كم/ساعة. في 5 ساعات: 50 × 5 = 250 كم."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

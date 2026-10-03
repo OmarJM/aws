@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أعضاء ووظائف الجهاز الهضمي والتغذية - مادة العلوم - الصف الثاني المتوسط">
+    <title>الجهاز الهضمي والتغذية | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #27ae60; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(39, 174, 96, 0.08); border-right: 4px solid #27ae60; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #27ae60; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #2ecc71; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #27ae60; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #27ae60; margin: 15px 0; }
+        .step-box h4 { color: #27ae60; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #27ae60; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: #2ecc71; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #27ae60; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(39, 174, 96, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .four-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #2ecc71; margin-bottom: 15px; }
+        .example-card h4 { color: #27ae60; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #2ecc71; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #27ae60; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #27ae60; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(39, 174, 96, 0.05), rgba(46, 204, 113, 0.05)); border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #27ae60; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #27ae60; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #27ae60; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #27ae60; color: #27ae60; }
+        .digestive-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .digestive-visual svg { max-width: 100%; height: auto; }
+        .organ-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; transition: transform 0.3s; }
+        .organ-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .organ-card h4 { margin-bottom: 10px; color: #27ae60; }
+        .organ-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #27ae60; }
+        .food-group-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; }
+        .food-group-card h4 { margin-bottom: 10px; color: #27ae60; }
+        .food-group-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .food-group-card.carbs { border-top-color: #f39c12; }
+        .food-group-card.carbs h4, .food-group-card.carbs .icon { color: #f39c12; }
+        .food-group-card.protein { border-top-color: #e74c3c; }
+        .food-group-card.protein h4, .food-group-card.protein .icon { color: #e74c3c; }
+        .food-group-card.fats { border-top-color: #9b59b6; }
+        .food-group-card.fats h4, .food-group-card.fats .icon { color: #9b59b6; }
+        .food-group-card.vitamins { border-top-color: #27ae60; }
+        .food-group-card.vitamins h4, .food-group-card.vitamins .icon { color: #27ae60; }
+        .food-group-card.minerals { border-top-color: #3498db; }
+        .food-group-card.minerals h4, .food-group-card.minerals .icon { color: #3498db; }
+        .food-group-card.water { border-top-color: #1abc9c; }
+        .food-group-card.water h4, .food-group-card.water .icon { color: #1abc9c; }
+        .enzyme-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 5px solid #27ae60; margin: 15px 0; }
+        .enzyme-card h4 { color: #27ae60; margin-bottom: 10px; }
+        .enzyme-card .enzyme-name { font-family: 'Fira Code', monospace; font-weight: 700; color: #e74c3c; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns, .four-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-utensils"></i> الجهاز الهضمي والتغذية</h1>
+            <p>رحلة الغذاء، وظائف الأنزيمات، والمجموعات الغذائية الصحية</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ماذا يحدث للطعام بعد أن تبتلعه؟</strong>
+                <p style="margin-top: 10px;">رحلة الطعام في جسمك رحلة مذهلة! تبدأ من الفم وتنتهي في الأمعاء، حيث يتم تحويل الطعام إلى طاقة ومواد بناء للخلايا. في هذا الدرس، سنتعرف على <strong>أعضاء الجهاز الهضمي</strong> و<strong>وظائف الأنزيمات</strong> و<strong>المجموعات الغذائية</strong> التي يحتاجها جسمك!</p>
+            </div>
+
+            <div class="digestive-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> رحلة الغذاء في الجهاز الهضمي</h4>
+                <svg width="700" height="200" viewBox="0 0 700 200">
+                    <!-- الفم -->
+                    <circle cx="70" cy="100" r="35" fill="rgba(231, 76, 60, 0.2)" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="70" y="95" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">الفم</text>
+                    <text x="70" y="115" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle">المضغ</text>
+                    
+                    <!-- سهم -->
+                    <line x1="110" y1="100" x2="150" y2="100" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow5)"/>
+                    
+                    <!-- المريء -->
+                    <rect x="155" y="70" width="50" height="60" rx="5" fill="rgba(243, 156, 18, 0.2)" stroke="#f39c12" stroke-width="2"/>
+                    <text x="180" y="95" font-family="Tajawal" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="700">المريء</text>
+                    <text x="180" y="115" font-family="Tajawal" font-size="10" fill="#f39c12" text-anchor="middle">النقل</text>
+                    
+                    <!-- سهم -->
+                    <line x1="210" y1="100" x2="250" y2="100" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow5)"/>
+                    
+                    <!-- المعدة -->
+                    <ellipse cx="300" cy="100" rx="50" ry="40" fill="rgba(155, 89, 182, 0.2)" stroke="#9b59b6" stroke-width="2"/>
+                    <text x="300" y="95" font-family="Tajawal" font-size="14" fill="#9b59b6" text-anchor="middle" font-weight="700">المعدة</text>
+                    <text x="300" y="115" font-family="Tajawal" font-size="11" fill="#9b59b6" text-anchor="middle">الهضم الكيميائي</text>
+                    
+                    <!-- سهم -->
+                    <line x1="355" y1="100" x2="395" y2="100" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow5)"/>
+                    
+                    <!-- الأمعاء الدقيقة -->
+                    <rect x="400" y="70" width="100" height="60" rx="5" fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="2"/>
+                    <text x="450" y="95" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">الأمعاء الدقيقة</text>
+                    <text x="450" y="115" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">الامتصاص</text>
+                    
+                    <!-- سهم -->
+                    <line x1="505" y1="100" x2="545" y2="100" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow5)"/>
+                    
+                    <!-- الأمعاء الغليظة -->
+                    <rect x="550" y="70" width="100" height="60" rx="5" fill="rgba(39, 174, 96, 0.2)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="600" y="95" font-family="Tajawal" font-size="12" fill="#27ae60" text-anchor="middle" font-weight="700">الأمعاء الغليظة</text>
+                    <text x="600" y="115" font-family="Tajawal" font-size="10" fill="#27ae60" text-anchor="middle">امتصاص الماء</text>
+                    
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو الجهاز الهضمي؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو الجهاز الهضمي؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الجهاز الهضمي هو مجموعة من الأعضاء تعمل معاً لتحويل الطعام إلى مواد بسيطة يمكن للجسم امتصاصها واستخدامها للطاقة والنمو.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                <strong>وظائف الجهاز الهضمي الرئيسية:</strong>
+            </p>
+
+            <div class="four-columns">
+                <div class="organ-card">
+                    <div class="icon"><i class="fas fa-cut"></i></div>
+                    <h4>1. الهضم الميكانيكي</h4>
+                    <p>تفتيت الطعام إلى قطع صغيرة (المضغ)</p>
+                </div>
+                <div class="organ-card">
+                    <div class="icon"><i class="fas fa-flask"></i></div>
+                    <h4>2. الهضم الكيميائي</h4>
+                    <p>تحليل الطعام بأنزيمات خاصة</p>
+                </div>
+                <div class="organ-card">
+                    <div class="icon"><i class="fas fa-arrow-down"></i></div>
+                    <h4>3. الامتصاص</h4>
+                    <p>نقل المواد الغذائية إلى الدم</p>
+                </div>
+                <div class="organ-card">
+                    <div class="icon"><i class="fas fa-trash-alt"></i></div>
+                    <h4>4. الإخراج</h4>
+                    <p>التخلص من الفضلات</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> هل تعلم؟</h4>
+                <p>يبلغ طول الجهاز الهضمي في الإنسان البالغ حوالي <strong>9 أمتار</strong>! يبدأ من الفم وينتهي عند فتحة الشرج.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: أعضاء الجهاز الهضمي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-organ"></i> ثانياً: أعضاء الجهاز الهضمي ووظائفها</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-smile"></i> 1. الفم (تجويف الفم)</h4>
+                <p><strong>الوظيفة:</strong> بداية رحلة الهضم</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>الأسنان:</strong> تقطع الطعام وتمضغه (هضم ميكانيكي)</li>
+                    <li><strong>اللسان:</strong> يخلط الطعام باللعاب ويبلعه</li>
+                    <li><strong>الغدد اللعابية:</strong> تفرز اللعاب الذي يحتوي على أنزيم <span style="font-family: 'Fira Code', monospace; color: #e74c3c;">الأميليز</span> (يبدأ هضم النشويات)</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-long-arrow-alt-down"></i> 2. المريء</h4>
+                <p><strong>الوظيفة:</strong> أنبوب عضلي ينقل الطعام من الفم إلى المعدة</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>يستخدم <strong>الحركة الدودية</strong> (تقلصات عضلية) لدفع الطعام</li>
+                    <li>لا يحدث فيه هضم كيميائي</li>
+                    <li>الطول: حوالي 25 سم</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-circle"></i> 3. المعدة</h4>
+                <p><strong>الوظيفة:</strong> تخزين الطعام وهضمه جزئياً</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>تفرز <strong>عصارة معدية</strong> تحتوي على:</li>
+                    <li style="padding-right: 20px;">• <span style="font-family: 'Fira Code', monospace; color: #e74c3c;">حمض الهيدروكلوريك (HCl)</span>: يقتل البكتيريا ويفعّل الأنزيمات</li>
+                    <li style="padding-right: 20px;">• <span style="font-family: 'Fira Code', monospace; color: #e74c3c;">أنزيم الببسين</span>: يبدأ هضم البروتينات</li>
+                    <li>تخلط الطعام بحركات عضلية قوية</li>
+                    <li>تحوّل الطعام إلى سائل كثيف يسمى <strong>الكيموس</strong></li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-wave-square"></i> 4. الأمعاء الدقيقة</h4>
+                <p><strong>الوظيفة:</strong> المكان الرئيسي للهضم والامتصاص</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>الطول: حوالي 6-7 أمتار</li>
+                    <li>تستقبل عصارات من:</li>
+                    <li style="padding-right: 20px;">• <strong>البنكرياس:</strong> يفرز أنزيمات لهضم الكربوهيدرات والبروتينات والدهون</li>
+                    <li style="padding-right: 20px;">• <strong>الكبد:</strong> ينتج <strong>العصارة الصفراوية</strong> التي تفتت الدهون</li>
+                    <li>جدرانها تحتوي على <strong>زغابات معوية</strong> تزيد مساحة الامتصاص</li>
+                    <li>تمتص: الجلوكوز، الأحماض الأمينية، الأحماض الدهنية، الفيتامينات، المعادن</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-circle-notch"></i> 5. الأمعاء الغليظة</h4>
+                <p><strong>الوظيفة:</strong> امتصاص الماء والأملاح</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>الطول: حوالي 1.5 متر</li>
+                    <li>تمتص الماء والأملاح من الفضلات</li>
+                    <li>تحتوي على بكتيريا نافعة تنتج فيتامين K</li>
+                    <li>تكوّن البراز وتخزنه حتى إخراجه</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-liver"></i> 6. الكبد والبنكرياس (أعضاء ملحقة)</h4>
+                <p><strong>الكبد:</strong></p>
+                <ul style="padding-right: 20px; margin-top: 5px; line-height: 2;">
+                    <li>ينتج العصارة الصفراوية (تفتيت الدهون)</li>
+                    <li>ينظف الدم من السموم</li>
+                    <li>يخزن الجليكوجين (طاقة احتياطية)</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>البنكرياس:</strong></p>
+                <ul style="padding-right: 20px; margin-top: 5px; line-height: 2;">
+                    <li>يفرز أنزيمات هاضمة في الأمعاء الدقيقة</li>
+                    <li>ينتج هرمون الأنسولين (ينظم السكر في الدم)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الأنزيمات الهاضمة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-dna"></i> ثالثاً: الأنزيمات الهاضمة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الأنزيمات هي بروتينات خاصة تسرّع التفاعلات الكيميائية في الجسم دون أن تُستهلك.
+            </div>
+
+            <div class="math-box" style="font-size: 1.1rem;">
+                الأنزيم + المادة الغذائية → نواتج بسيطة
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> أهم الأنزيمات الهاضمة</h4>
+                
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>الأنزيم</th>
+                                <th>مكان الإفراز</th>
+                                <th>وظيفته</th>
+                                <th>المادة التي يهضمها</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-family: 'Fira Code', monospace; color: #e74c3c; font-weight: 700;">الأميليز اللعابي</td>
+                                <td>الغدد اللعابية (الفم)</td>
+                                <td>يبدأ هضم النشويات</td>
+                                <td>النشويات → سكريات بسيطة</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: 'Fira Code', monospace; color: #e74c3c; font-weight: 700;">الببسين</td>
+                                <td>المعدة</td>
+                                <td>يهضم البروتينات</td>
+                                <td>البروتينات → أحماض أمينية</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: 'Fira Code', monospace; color: #e74c3c; font-weight: 700;">الليباز</td>
+                                <td>البنكرياس</td>
+                                <td>يهضم الدهون</td>
+                                <td>الدهون → أحماض دهنية + جليسرول</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: 'Fira Code', monospace; color: #e74c3c; font-weight: 700;">التربسين</td>
+                                <td>البنكرياس</td>
+                                <td>يكمل هضم البروتينات</td>
+                                <td>البروتينات → أحماض أمينية</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: 'Fira Code', monospace; color: #e74c3c; font-weight: 700;">المالتاز</td>
+                                <td>الأمعاء الدقيقة</td>
+                                <td>يهضم سكر المالتوز</td>
+                                <td>المالتوز → جلوكوز</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="enzyme-card">
+                <h4><i class="fas fa-magic"></i> خصائص الأنزيمات</h4>
+                <ul style="padding-right: 20px; line-height: 2;">
+                    <li><strong>التخصص:</strong> كل أنزيم يعمل على مادة معينة فقط (مثل المفتاح والقفل)</li>
+                    <li><strong>السرعة:</strong> تسرّع التفاعلات ملايين المرات</li>
+                    <li><strong>عدم الاستهلاك:</strong> لا تُستهلك في التفاعل، يمكن إعادة استخدامها</li>
+                    <li><strong>الحساسية للحرارة:</strong> تتأثر بدرجة الحرارة و pH (تتلف في الحرارة العالية)</li>
+                </ul>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تشبيه بسيط:</h4>
+                <p>تخيل الأنزيم كـ<strong>مقص</strong> يقطع الطعام إلى قطع صغيرة، والمادة الغذائية كـ<strong>ورقة</strong> طويلة. المقص (الأنزيم) لا يتغير، لكن الورقة (الطعام) تُقطع إلى أجزاء صغيرة!</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: المجموعات الغذائية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-apple-alt"></i> رابعاً: المجموعات الغذائية الصحية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التغذية المتوازنة:</strong> تناول طعام يحتوي على جميع العناصر الغذائية بنسب مناسبة.
+            </div>
+
+            <div class="three-columns">
+                <div class="food-group-card carbs">
+                    <div class="icon"><i class="fas fa-bread-slice"></i></div>
+                    <h4>1. الكربوهيدرات</h4>
+                    <p><strong>الوظيفة:</strong> مصدر الطاقة الرئيسي</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمثلة:</strong> الأرز، الخبز، المعكرونة، البطاطس، السكر</p>
+                    <div class="math-box" style="font-size: 0.9rem; margin-top: 10px;">
+                        كربوهيدرات → جلوكوز → طاقة
+                    </div>
+                </div>
+                <div class="food-group-card protein">
+                    <div class="icon"><i class="fas fa-drumstick-bite"></i></div>
+                    <h4>2. البروتينات</h4>
+                    <p><strong>الوظيفة:</strong> بناء وإصلاح الأنسجة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمثلة:</strong> اللحم، السمك، البيض، الحليب، البقوليات</p>
+                    <div class="math-box" style="font-size: 0.9rem; margin-top: 10px;">
+                        بروتينات → أحماض أمينية → بناء خلايا
+                    </div>
+                </div>
+                <div class="food-group-card fats">
+                    <div class="icon"><i class="fas fa-cheese"></i></div>
+                    <h4>3. الدهون</h4>
+                    <p><strong>الوظيفة:</strong> تخزين طاقة وحماية الأعضاء</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمثلة:</strong> الزيت، الزبدة، المكسرات، الأفوكادو</p>
+                    <div class="math-box" style="font-size: 0.9rem; margin-top: 10px;">
+                        دهون → أحماض دهنية → طاقة مخزنة
+                    </div>
+                </div>
+            </div>
+
+            <div class="three-columns">
+                <div class="food-group-card vitamins">
+                    <div class="icon"><i class="fas fa-carrot"></i></div>
+                    <h4>4. الفيتامينات</h4>
+                    <p><strong>الوظيفة:</strong> تنظيم وظائف الجسم</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمثلة:</strong> الفواكه، الخضروات</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">A, B, C, D, E, K</p>
+                </div>
+                <div class="food-group-card minerals">
+                    <div class="icon"><i class="fas fa-gem"></i></div>
+                    <h4>5. المعادن</h4>
+                    <p><strong>الوظيفة:</strong> بناء العظام والأسنان</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمثلة:</strong> الحليب (كالسيوم)، اللحم (حديد)</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Ca, Fe, Zn, Mg</p>
+                </div>
+                <div class="food-group-card water">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <h4>6. الماء</h4>
+                    <p><strong>الوظيفة:</strong> نقل المواد وتنظيم الحرارة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>الكمية:</strong> 8 أكواب يومياً</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">60-70% من جسم الإنسان</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: وجبة متوازنة</h4>
+                <p><strong>المسألة:</strong> صمّم وجبة غداء متوازنة تحتوي على جميع المجموعات الغذائية.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الكربوهيدرات</h4>
+                    <p>أرز أو خبز (مصدر الطاقة)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> البروتينات</h4>
+                    <p>دجاج أو سمك أو بيض (للبناء)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الفيتامينات والمعادن</h4>
+                    <p>سلطة خضراء وفواكه (للصحة)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الدهون الصحية</h4>
+                    <p>زيت زيتون أو مكسرات (بكميات قليلة)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> الماء</h4>
+                    <p>كوب ماء أو عصير طبيعي</p>
+                </div>
+
+                <div class="solution">✅ وجبة متوازنة = أرز + دجاج + سلطة + زيت زيتون + ماء</div>
+            </div>
+        </div>
+
+        <!-- خامساً: هرم الغذاء -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> خامساً: هرم الغذاء الصحي</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>هرم الغذاء:</strong> دليل يوضح الكميات المناسبة من كل مجموعة غذائية يومياً.
+            </div>
+
+            <div class="digestive-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> هرم الغذاء الصحي</h4>
+                <svg width="400" height="400" viewBox="0 0 400 400">
+                    <!-- القاعدة: الكربوهيدرات -->
+                    <polygon points="50,350 350,350 320,290 80,290" fill="rgba(243, 156, 18, 0.3)" stroke="#f39c12" stroke-width="2"/>
+                    <text x="200" y="325" font-family="Tajawal" font-size="14" fill="#f39c12" text-anchor="middle" font-weight="700">الكربوهيدرات (6-11 حصة)</text>
+                    
+                    <!-- الطبقة الثانية: الخضروات والفواكه -->
+                    <polygon points="80,290 320,290 290,230 110,230" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="200" y="265" font-family="Tajawal" font-size="14" fill="#27ae60" text-anchor="middle" font-weight="700">الخضروات والفواكه (5-9 حصص)</text>
+                    
+                    <!-- الطبقة الثالثة: البروتينات والألبان -->
+                    <polygon points="110,230 290,230 260,170 140,170" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="200" y="205" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">البروتينات والألبان (2-3 حصص)</text>
+                    
+                    <!-- القمة: الدهون والسكريات -->
+                    <polygon points="140,170 260,170 200,110" fill="rgba(155, 89, 182, 0.3)" stroke="#9b59b6" stroke-width="2"/>
+                    <text x="200" y="145" font-family="Tajawal" font-size="12" fill="#9b59b6" text-anchor="middle" font-weight="700">الدهون والسكريات</text>
+                    <text x="200" y="160" font-family="Tajawal" font-size="10" fill="#9b59b6" text-anchor="middle">(بكميات قليلة)</text>
+                    
+                    <!-- الماء -->
+                    <text x="200" y="390" font-family="Tajawal" font-size="14" fill="#1abc9c" text-anchor="middle" font-weight="700"> الماء: 8 أكواب يومياً</text>
+                </svg>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة الهرم:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>القاعدة العريضة:</strong> نأكل منها كثيراً (الكربوهيدرات)</li>
+                    <li><strong>الوسط:</strong> نأكل منها باعتدال (الخضروات، الفواكه، البروتينات)</li>
+                    <li><strong>القمة الضيقة:</strong> نأكل منها قليلاً (الدهون، السكريات)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: أمراض الجهاز الهضمي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-heartbeat"></i> سادساً: أمراض شائعة في الجهاز الهضمي</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-exclamation-triangle"></i> قرحة المعدة</h3>
+                    <p><strong>السبب:</strong> تآكل جدار المعدة بسبب حمض Zائد أو بكتيريا</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> ألم في البطن، غثيان</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> تجنب الأطعمة الحارة، عدم التدخين</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-exclamation-triangle"></i> الإمساك</h3>
+                    <p><strong>السبب:</strong> قلة الألياف والماء في الغذاء</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> صعوبة في التبرز</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> تناول الخضروات والفواكه، شرب الماء</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-exclamation-triangle"></i> السمنة</h3>
+                    <p><strong>السبب:</strong> تناول سعرات حرارية أكثر من حاجة الجسم</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> زيادة الوزن، صعوبة التنفس</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> غذاء متوازن + رياضة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-exclamation-triangle"></i> سوء التغذية</h3>
+                    <p><strong>السبب:</strong> نقص في عناصر غذائية معينة</p>
+                    <p style="margin-top: 10px;"><strong>الأعراض:</strong> ضعف، فقر دم، تأخر نمو</p>
+                    <p style="margin-top: 10px;"><strong>الوقاية:</strong> غذاء متنوع ومتوازن</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: نصائح لصحة الجهاز الهضمي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-heart"></i> سابعاً: نصائح لصحة الجهاز الهضمي</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-check-circle"></i> عادات صحية يجب اتباعها</h4>
+                <ol class="steps-list" style="list-style: none; padding: 0;">
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid #27ae60;">
+                        <strong>🍽️ امضغ الطعام جيداً:</strong> يساعد في الهضم ويقلل العبء على المعدة
+                    </li>
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid #27ae60;">
+                        <strong> اشرب كمية كافية من الماء:</strong> 8 أكواب يومياً على الأقل
+                    </li>
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid #27ae60;">
+                        <strong>🥗 تناول الألياف:</strong> خضروات، فواكه، حبوب كاملة (تمنع الإمساك)
+                    </li>
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid #27ae60;">
+                        <strong>⏰ تناول وجبات منتظمة:</strong> لا تفوّت وجبة الإفطار
+                    </li>
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid #27ae60;">
+                        <strong>🏃 مارس الرياضة:</strong> تحسّن حركة الأمعاء
+                    </li>
+                    <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; border-right: 4px solid #27ae60;">
+                        <strong> تجنب الأطعمة الضارة:</strong> قلل من الدهون المشبعة، السكريات، والأطعمة المصنعة
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن الهضم يحدث في المعدة فقط</h4>
+                <p>الهضم يبدأ في <strong>الفم</strong> (بأنزيم الأميليز) ويكتمل في <strong>الأمعاء الدقيقة</strong>!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: شرب الماء بكثرة أثناء الأكل</h4>
+                <p>يخفف العصارات الهضمية ويؤثر على الهضم. اشرب الماء <strong>قبل أو بعد</strong> الأكل بـ 30 دقيقة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: تجاهل وجبة الإفطار</h4>
+                <p>الإفطار أهم وجبة! يمنح الجسم الطاقة لبدء اليوم ويحسّن التركيز.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الاعتقاد أن جميع الدهون ضارة</h4>
+                <p>الدهون <strong>ضرورية</strong> لامتصاص الفيتامينات (A, D, E, K). المهم هو اختيار الدهون الصحية (زيت الزيتون، المكسرات).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الأكل بسرعة</h4>
+                <p>الأكل السريع يسبب عسر هضم وانتفاخ. امضغ الطعام <strong>20-30 مرة</strong> قبل البلع.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #27ae60;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الجهاز الهضمي:</strong> يحول الطعام إلى مواد بسيطة يمتصها الجسم.</li>
+                <li><strong>رحلة الغذاء:</strong> الفم → المريء → المعدة → الأمعاء الدقيقة → الأمعاء الغليظة.</li>
+                <li><strong>الهضم الميكانيكي:</strong> تفتيت الطعام (المضغ في الفم، الخلط في المعدة).</li>
+                <li><strong>الهضم الكيميائي:</strong> تحليل الطعام بالأنزيمات.</li>
+                <li><strong>الأنزيمات الرئيسية:</strong> الأميليز (نشويات)، الببسين (بروتينات)، الليباز (دهون).</li>
+                <li><strong>الامتصاص:</strong> يحدث في الأمعاء الدقيقة عبر الزغابات المعوية.</li>
+                <li><strong>المجموعات الغذائية:</strong> كربوهيدرات، بروتينات، دهون، فيتامينات، معادن، ماء.</li>
+                <li><strong>هرم الغذاء:</strong> دليل للكميات المناسبة من كل مجموعة.</li>
+                <li><strong>التغذية المتوازنة:</strong> تناول جميع المجموعات بنسب مناسبة.</li>
+                <li><strong>صحة الجهاز الهضمي:</strong> مضغ جيد، ماء كافٍ، ألياف، وجبات منتظمة، رياضة.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "أين يبدأ الهضم الكيميائي للكربوهيدرات؟",
+                options: ["المعدة", "الفم", "الأمعاء الدقيقة", "المريء"],
+                correct: 1,
+                explanation: "يبدأ هضم الكربوهيدرات في الفم بواسطة أنزيم الأميليز اللعابي الذي يفرز من الغدد اللعابية."
+            },
+            {
+                sentence: "ما وظيفة أنزيم الببسين؟",
+                options: ["هضم الكربوهيدرات", "هضم الدهون", "هضم البروتينات", "امتصاص الماء"],
+                correct: 2,
+                explanation: "الببسين أنزيم تفرزه المعدة ووظيفته هضم البروتينات وتحويلها إلى أحماض أمينية."
+            },
+            {
+                sentence: "أين يحدث الامتصاص الرئيسي للمواد الغذائية؟",
+                options: ["المعدة", "الأمعاء الغليظة", "الأمعاء الدقيقة", "المريء"],
+                correct: 2,
+                explanation: "الأمعاء الدقيقة هي المكان الرئيسي للامتصاص، حيث تحتوي على زغابات معوية تزيد مساحة السطح."
+            },
+            {
+                sentence: "أي مجموعة غذائية تعد المصدر الرئيسي للطاقة؟",
+                options: ["البروتينات", "الدهون", "الكربوهيدرات", "الفيتامينات"],
+                correct: 2,
+                explanation: "الكربوهيدرات (مثل الأرز، الخبز، السكر) هي المصدر الرئيسي والسريع للطاقة في الجسم."
+            },
+            {
+                sentence: "ما وظيفة العصارة الصفراوية التي ينتجها الكبد؟",
+                options: ["هضم البروتينات", "تفتيت الدهون", "امتصاص الماء", "قتل البكتيريا"],
+                correct: 1,
+                explanation: "العصارة الصفراوية تفرز من الكبد وتخزن في المرارة، ووظيفتها تفتيت الدهون إلى قطرات صغيرة ليسهل هضمها."
+            },
+            {
+                sentence: "أي من هذه العادات ضارة بالجهاز الهضمي؟",
+                options: ["مضغ الطعام جيداً", "شرب الماء الكافي", "الأكل بسرعة", "تناول الألياف"],
+                correct: 2,
+                explanation: "الأكل بسرعة يسبب عسر هضم وانتفاخ. يجب مضغ الطعام 20-30 مرة قبل البلع."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

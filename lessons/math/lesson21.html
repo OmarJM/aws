@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تطبيقات على نظرية فيثاغورس - مسائل حياتية وهندسية - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>تطبيقات على نظرية فيثاغورس | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .triples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 15px 0; }
+        .triple-card { background: var(--bg-color); padding: 12px; border-radius: 8px; text-align: center; font-family: 'Fira Code', monospace; font-weight: 700; color: var(--subject-primary); border: 2px solid var(--subject-secondary); }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .two-columns { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-drafting-compass"></i> تطبيقات على نظرية فيثاغورس</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: مراجعة سريعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync-alt"></i> أولاً: مراجعة سريعة لنظرية فيثاغورس</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>نظرية فيثاغورس:</strong> في المثلث القائم الزاوية، مربع طول الوتر يساوي مجموع مربعي طولي الضلعين القائمين.
+            </div>
+            <div class="math-box">
+                a² + b² = c²
+            </div>
+            <p style="text-align: center; font-size: 1.1rem;">
+                حيث <strong style="color: #e74c3c;">c</strong> هو الوتر (أطول ضلع)، و <strong style="color: #27ae60;">a</strong> و <strong style="color: #27ae60;">b</strong> هما الضلعان القائمان.
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-search-plus"></i> إيجاد الوتر (c)</h3>
+                    <div class="math-box" style="font-size: 1.1rem;">c = √(a² + b²)</div>
+                    <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted);">اجمع مربعي الضلعين ثم خذ الجذر</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-search-minus"></i> إيجاد ضلع قائم (a)</h3>
+                    <div class="math-box" style="font-size: 1.1rem;">a = √(c² - b²)</div>
+                    <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted);">اطرح مربع الضلع من مربع الوتر ثم خذ الجذر</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: الثلاثيات الفيثاغورية الشهيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-star"></i> ثانياً: الثلاثيات الفيثاغورية الشهيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-lightbulb"></i>
+                <strong>نصيحة ذهبية:</strong> احفظ هذه الثلاثيات لتوفر وقتاً هائلاً في الاختبارات!
+            </div>
+            <div class="triples-grid">
+                <div class="triple-card">(3, 4, 5)</div>
+                <div class="triple-card">(5, 12, 13)</div>
+                <div class="triple-card">(8, 15, 17)</div>
+                <div class="triple-card">(7, 24, 25)</div>
+                <div class="triple-card">(6, 8, 10) = 2×(3,4,5)</div>
+                <div class="triple-card">(9, 12, 15) = 3×(3,4,5)</div>
+            </div>
+            <div class="golden-tip">
+                <h4><i class="fas fa-magic"></i> حيلة ذكية:</h4>
+                <p>إذا ضربت أو قسمت ثلاثية فيثاغورية في عدد ثابت، تحصل على ثلاثية جديدة! مثال: (3,4,5) × 2 = (6,8,10).</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: مسائل حياتية وهندسية محلولة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> ثالثاً: مسائل حياتية وهندسية محلولة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المسألة 1: إيجاد الوتر</h4>
+                <p><strong>المسألة:</strong> مثلث قائم الزاوية طولا ضلعيه القائمين 6 سم و 8 سم. أوجد طول الوتر.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> طبّق النظرية</h4>
+                    <div class="calculation">c² = 6² + 8² = 36 + 64 = 100</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خذ الجذر التربيعي</h4>
+                    <div class="calculation">c = √100 = 10 سم</div>
+                </div>
+                <div class="solution">✅ الحل: الوتر = 10 سم (وهي ثلاثية فيثاغورية شهيرة: 6, 8, 10)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المسألة 2: إيجاد ضلع قائم</h4>
+                <p><strong>المسألة:</strong> مثلث قائم الزاوية طول وتره 15 سم وأحد ضلعيه القائمين 9 سم. أوجد الضلع الآخر.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> طبّق النظرية</h4>
+                    <div class="calculation">a² = 15² - 9² = 225 - 81 = 144</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خذ الجذر التربيعي</h4>
+                    <div class="calculation">a = √144 = 12 سم</div>
+                </div>
+                <div class="solution">✅ الحل: الضلع المجهول = 12 سم (ثلاثية: 9, 12, 15)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-ladder"></i> المسألة 3: مسألة السلم والجدار</h4>
+                <p><strong>المسألة:</strong> سلم طوله 10 م يستند على جدار، وقاعدة السلم تبعد 6 م عن الجدار. ما ارتفاع نقطة التلامس؟</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <p>الوتر (السلم) = 10 م، الضلع القائم (القاعدة) = 6 م، المطلوب = الارتفاع (a).</p>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق النظرية</h4>
+                    <div class="calculation">a² = 10² - 6² = 100 - 36 = 64</div>
+                    <div class="calculation">a = √64 = 8 م</div>
+                </div>
+                <div class="solution">✅ الحل: الارتفاع = 8 م</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-check-double"></i> المسألة 4: التحقق من كون المثلث قائم الزاوية</h4>
+                <p><strong>المسألة:</strong> أثبت أن المثلث الذي أطوال أضلاعه 5، 12، 13 هو مثلث قائم الزاوية.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد أطول ضلع (الوتر المفترض)</h4>
+                    <div class="calculation">c = 13</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تحقّق من النظرية العكسية</h4>
+                    <div class="calculation">5² + 12² = 25 + 144 = 169</div>
+                    <div class="calculation">13² = 169</div>
+                </div>
+                <div class="solution">✅ الحل: بما أن 5² + 12² = 13²، إذن المثلث <strong>قائم الزاوية</strong>.</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-square"></i> المسألة 5: قطر المربع</h4>
+                <p><strong>المسألة:</strong> أوجد طول قطر مربع طول ضلعه 7 م.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم القطر</h4>
+                    <p>القطر يقسم المربع إلى مثلثين قائمي الزاوية، كل منهما ضلعاه القائمان = 7 م.</p>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق النظرية</h4>
+                    <div class="calculation">c² = 7² + 7² = 49 + 49 = 98</div>
+                    <div class="calculation">c = √98 = 7√2 ≈ 9.9 م</div>
+                </div>
+                <div class="solution">✅ الحل: القطر ≈ 9.9 م</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-rectangle-list"></i> المسألة 6: قطر المستطيل</h4>
+                <p><strong>المسألة:</strong> مستطيل طوله 12 م وعرضه 5 م. أوجد طول قطره.</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> طبّق النظرية</h4>
+                    <div class="calculation">c² = 12² + 5² = 144 + 25 = 169</div>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خذ الجذر</h4>
+                    <div class="calculation">c = √169 = 13 م</div>
+                </div>
+                <div class="solution">✅ الحل: القطر = 13 م (ثلاثية: 5, 12, 13)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-ship"></i> المسألة 7: المسافة المباشرة (الملاحة)</h4>
+                <p><strong>المسألة:</strong> أبحر قارب 9 كم شرقاً ثم 12 كم شمالاً. ما المسافة المباشرة بين نقطة البداية ونقطة النهاية؟</p>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم الموقف</h4>
+                    <p>المسار يشكل مثلثاً قائم الزاوية، الضلعان القائمان 9 و 12، والمطلوب هو الوتر.</p>
+                </div>
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق النظرية</h4>
+                    <div class="calculation">c² = 9² + 12² = 81 + 144 = 225</div>
+                    <div class="calculation">c = √225 = 15 كم</div>
+                </div>
+                <div class="solution">✅ الحل: المسافة المباشرة = 15 كم (ثلاثية: 9, 12, 15)</div>
+            </div>
+        </div>
+
+        <!-- رابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>نظرية فيثاغورس:</strong> تعمل فقط في المثلث القائم الزاوية.</li>
+                <li><strong>الوتر:</strong> دائماً أطول ضلع، ويقابل الزاوية القائمة.</li>
+                <li><strong>لإيجاد الوتر:</strong> اجمع مربعي الضلعين القائمين ثم خذ الجذر.</li>
+                <li><strong>لإيجاد ضلع قائم:</strong> اطرح مربع الضلع المعروف من مربع الوتر ثم خذ الجذر.</li>
+                <li><strong>النظرية العكسية:</strong> إذا تحققت a² + b² = c²، فالمثلث قائم الزاوية.</li>
+                <li><strong>الثلاثيات الشهيرة:</strong> (3,4,5), (5,12,13), (8,15,17), (7,24,25).</li>
+                <li><strong>لا تنسَ:</strong> أخذ الجذر التربيعي في النهاية!</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                <div id="quizContainer"></div>
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="feedback-box" id="feedbackBox"></div>
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            { sentence: "مثلث قائم الزاوية طولا ضلعيه القائمين 6 و 8. ما طول الوتر؟", options: ["10", "12", "14", "100"], correct: 0, explanation: "c² = 6² + 8² = 36 + 64 = 100، إذن c = 10." },
+            { sentence: "وتر مثلث قائم الزاوية 13 وأحد ضلعيه 5. ما طول الضلع الآخر؟", options: ["8", "12", "18", "144"], correct: 1, explanation: "a² = 13² - 5² = 169 - 25 = 144، إذن a = 12." },
+            { sentence: "أيّ من الثلاثيات التالية تمثل مثلثاً قائم الزاوية؟", options: ["(2, 3, 4)", "(5, 12, 13)", "(4, 5, 6)", "(1, 2, 3)"], correct: 1, explanation: "5² + 12² = 25 + 144 = 169 = 13² ✓" },
+            { sentence: "سلم طوله 10 م وقاعدته تبعد 6 م عن الجدار. ما ارتفاع نقطة التلامس؟", options: ["4 م", "6 م", "8 م", "16 م"], correct: 2, explanation: "a² = 10² - 6² = 64، إذن a = 8 م." },
+            { sentence: "مستطيل طوله 12 م وعرضه 5 م. ما طول قطره؟", options: ["13 م", "17 م", "7 م", "60 م"], correct: 0, explanation: "c² = 12² + 5² = 169، إذن c = 13 م." }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

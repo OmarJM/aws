@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الإخلاص لله وما يضاده - شروط قبول العبادة - مادة الدراسات الإسلامية - الصف الثاني المتوسط">
+    <title>الإخلاص لله وشروط قبول العبادة | الدراسات الإسلامية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #1e8449, #27ae60); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-family: 'Amiri', serif; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.95; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #1e8449; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #27ae60; padding-bottom: 10px; font-family: 'Amiri', serif; }
+        .highlight-box { background-color: rgba(30, 132, 73, 0.08); border-right: 4px solid #1e8449; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #1e8449; }
+        .quran-box { background: linear-gradient(135deg, #fef9e7, #fdebd0); border: 2px solid #f39c12; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.4rem; color: #7d6608; line-height: 2; }
+        .hadith-box { background: linear-gradient(135deg, #eafaf1, #d5f5e3); border: 2px solid #27ae60; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.2rem; color: #1e8449; line-height: 1.8; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #27ae60; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; font-weight: 700; color: #1e8449; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #1e8449; margin: 15px 0; }
+        .step-box h4 { color: #1e8449; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e8449; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #1e8449; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(30, 132, 73, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-family: 'Amiri', serif; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #f39c12; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #1e8449; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #27ae60; margin-bottom: 15px; }
+        .example-card h4 { color: #1e8449; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #1e8449; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #27ae60; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #1e8449; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #1e8449; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(30, 132, 73, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed #1e8449; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #1e8449; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-family: 'Amiri', serif; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Amiri', serif; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Amiri', serif; }
+        .quiz-option:hover { border-color: #1e8449; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #1e8449; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #1e8449; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #1e8449; color: #1e8449; }
+        .condition-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #1e8449; text-align: center; transition: transform 0.3s; }
+        .condition-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .condition-card h4 { margin-bottom: 10px; color: #1e8449; font-family: 'Amiri', serif; }
+        .condition-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #1e8449; }
+        .condition-card.ikhlas { border-top-color: #27ae60; }
+        .condition-card.ikhlas h4, .condition-card.ikhlas .icon { color: #27ae60; }
+        .condition-card.mutabaah { border-top-color: #3498db; }
+        .condition-card.mutabaah h4, .condition-card.mutabaah .icon { color: #3498db; }
+        .riyaa-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #e74c3c; text-align: center; }
+        .riyaa-card h4 { margin-bottom: 10px; color: #e74c3c; font-family: 'Amiri', serif; }
+        .riyaa-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #e74c3c; }
+        .bismillah { text-align: center; font-family: 'Amiri', serif; font-size: 2rem; color: #1e8449; margin: 20px 0; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .quran-box { font-size: 1.1rem; } }
+    </style>
+</head>
+<body class="subject-islamic">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-book-quran"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/islamic.html" class="active">الدراسات الإسلامية</a></li>
+                    <li><a href="../../quizzes/islamic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/islamic.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الإسلامية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-heart"></i> الإخلاص لله وما يضاده</h1>
+            <p>شروط قبول العبادة: الإخلاص ومتابعة رسول الله ﷺ</p>
+            <p>مادة الدراسات الإسلامية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا لا تُقبل العبادة بدون إخلاص؟ وما الشروط التي يجب توفرها لقبول العمل؟</strong>
+                <p style="margin-top: 10px;">الإخلاص هو <strong>روح العبادة</strong> ولبها، وهو السر الذي يرفع العمل من الأرض إلى السماء. في هذا الدرس، سنتعلم <strong>معنى الإخلاص</strong>، و<strong>ما يضاده</strong> من الرياء والسمعة، و<strong>شرطي قبول العبادة</strong> اللذان لا بد منهما.</p>
+            </div>
+
+            <div class="quran-box">
+                ﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة البينة: 5]</p>
+            </div>
+        </div>
+
+        <!-- أولاً: معنى الإخلاص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: معنى الإخلاص</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الإخلاص لغة:</strong> من خَلَصَ الشيءُ، أي صفا وزال عنه شوبه. فالإخلاص: التصفية والتنقية.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-book"></i> الإخلاص اصطلاحاً</h3>
+                    <p>توجيه العبادة لله وحده، وقصد وجه الله تعالى بها، دون رياء أو سمعة أو طلب مدح الناس.</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin-top: 10px;">
+                        الإخلاص = تصفية العمل من كل شائبة
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-heart"></i> الإخلاص في القلب</h3>
+                    <p>أن يكون الباعث على العمل هو محبة الله ورجاء ثوابه، لا حب الجاه أو المال أو المدح.</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin-top: 10px;">
+                        النية الخالصة = أساس القبول
+                    </div>
+                </div>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله ﷺ:</p>
+                <p style="font-weight: 700; margin: 10px 0;">"إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى"</p>
+                <p style="font-size: 0.9rem; color: #666;">[متفق عليه]</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على الإخلاص</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> في الصلاة</h4>
+                    <p>أن تصلي لله وحده، لا لترى الناس أنك تصلي</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> في الصدقة</h4>
+                    <p>أن تتصدق ابتغاء وجه الله، لا ليقال عنك كريم</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> في العلم</h4>
+                    <p>أن تتعلم وتعلّم لرفع الجهل، لا للجاه والشهرة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> في الجهاد</h4>
+                    <p>أن تقاتل لتكون كلمة الله هي العليا، لا للحمية أو الغنيمة</p>
+                </div>
+
+                <div class="solution">✅ الإخلاص يجعل العمل الصغير كبيراً عند الله</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> علامات الإخلاص:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>العمل في السر كالعمل في العلن</li>
+                    <li>عدم الفرح بمدح الناس</li>
+                    <li>عدم الحزن على ذمهم</li>
+                    <li>استواء الحال أمام الناس وخلوة مع الله</li>
+                    <li>الحرص على إخفاء العمل الصالح</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: ما يضاد الإخلاص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> ثانياً: ما يضاد الإخلاص</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>مضادات الإخلاص:</strong> أمراض قلبية تفسد العمل وتحبطه، يجب على المسلم أن يحذر منها.
+            </div>
+
+            <div class="three-columns">
+                <div class="riyaa-card">
+                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <h4>1. الرياء</h4>
+                    <p>أن يعمل العمل ليراه الناس ويمدحوه</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> يطيل الصلاة إذا رآه الناس</p>
+                </div>
+                <div class="riyaa-card">
+                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>2. السمعة</h4>
+                    <p>أن يعمل العمل ليسمع به الناس</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> يتحدث عن صدقته ليمدح</p>
+                </div>
+                <div class="riyaa-card">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <h4>3. العجب</h4>
+                    <p>أن يعجب المرء بعمله ويراه كبيراً</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> يفتخر بعبادته</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الفرق بين الرياء والسمعة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الرياء</h4>
+                    <p>أن يعمل العمل <strong>ليراه الناس</strong> بأعينهم (بالمشاهدة)</p>
+                    <p style="margin-top: 5px;"><strong>مثال:</strong> يتصدق أمام الناس ليمدحوه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> السمعة</h4>
+                    <p>أن يعمل العمل <strong>ليسمع به الناس</strong> (بالأخبار)</p>
+                    <p style="margin-top: 5px;"><strong>مثال:</strong> يخبر الناس عن صيامه ليمدحوه</p>
+                </div>
+
+                <div class="solution">✅ كلاهما من الشرك الأصغر الذي يحبط العمل</div>
+            </div>
+
+            <div class="quran-box">
+                ﴿ فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الكهف: 110]</p>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله :</p>
+                <p style="font-weight: 700; margin: 10px 0;">"إن أخوف ما أخاف عليكم الشرك الأصغر"</p>
+                <p>قالوا: وما الشرك الأصغر يا رسول الله؟</p>
+                <p style="font-weight: 700; margin: 10px 0;">قال: "الرياء"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه أحمد]</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> خطر الرياء:</h4>
+                <p>الرياء من <strong>الشرك الأصغر</strong>، وهو أخفى من دبيب النمل على الصخرة السوداء في الليلة الظلماء. قد يحبط العمل كله!</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: شرطا قبول العبادة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-check-double"></i> ثالثاً: شرطا قبول العبادة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>لا تُقبل العبادة إلا بشرطين أساسيين:</strong>
+            </div>
+
+            <div class="two-columns">
+                <div class="condition-card ikhlas">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h4>الشرط الأول: الإخلاص لله</h4>
+                    <p>أن يكون العمل خالصاً لوجه الله تعالى</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>بدون:</strong> رياء، سمعة، عجب</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        النية + الإخلاص = القبول
+                    </div>
+                </div>
+                <div class="condition-card mutabaah">
+                    <div class="icon"><i class="fas fa-book-open"></i></div>
+                    <h4>الشرط الثاني: المتابعة</h4>
+                    <p>أن يكون العمل موافقاً لسنة النبي ﷺ</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>بدون:</strong> بدع، محدثات</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        العمل + السنة = القبول
+                    </div>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif; font-size: 1.4rem;">
+                العبادة المقبولة = الإخلاص لله + متابعة الرسول ﷺ
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله :</p>
+                <p style="font-weight: 700; margin: 10px 0;">"من عمل عملاً ليس عليه أمرنا فهو رد"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه مسلم]</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال توضيحي: الصلاة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإخلاص</h4>
+                    <p>أن تصلي لله وحده، لا للناس</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المتابعة</h4>
+                    <p>أن تصلي كما صلى النبي ﷺ (عدد الركعات، الأركان، الأذكار)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>إذا تحقق الشرطان ➔ الصلاة مقبولة ✓</p>
+                    <p>إذا فُقد أحدهما ➔ الصلاة مردودة ✗</p>
+                </div>
+
+                <div class="solution">✅ الصلاة المقبولة = إخلاص + متابعة للسنة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة مهمة:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>من أخلص ولم يتبع:</strong> عمله مردود (مثل المبتدع)</li>
+                    <li><strong>من اتبع ولم يخلص:</strong> عمله مردود (مثل المرائي)</li>
+                    <li><strong>من أخلص واتبع:</strong> عمله مقبول (مثل المؤمن الصادق)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: متابعة رسول الله ﷺ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> رابعاً: متابعة رسول الله ﷺ</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>المتابعة:</strong> أن يكون العمل موافقاً لما جاء به النبي ﷺ في كيفيته وكميته وهيئته.
+            </div>
+
+            <div class="quran-box">
+                ﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ ۗ وَاللَّهُ غَفُورٌ رَّحِيمٌ 
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة آل عمران: 31]</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-check-circle"></i> صور المتابعة</h3>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li><strong>في السبب:</strong> ألا يتعبد إلا بما شرع الله</li>
+                        <li><strong>في الجنس:</strong> أن يكون العمل من جنس ما شرع</li>
+                        <li><strong>في القدر:</strong> ألا يزيد على ما شرع</li>
+                        <li><strong>في الكيفية:</strong> أن يؤديه كما أدى النبي ﷺ</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-times-circle"></i> صور المخالفة</h3>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li><strong>البدع:</strong> عبادات لم يشرعها الله</li>
+                        <li><strong>الغلو:</strong> الزيادة في العبادة</li>
+                        <li><strong>التقصير:</strong> النقص في العبادة</li>
+                        <li><strong>التغيير:</strong> تغيير كيفية العبادة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة على المتابعة والمخالفة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">✓</span> متابعة صحيحة</h4>
+                    <p>صلاة الظهر 4 ركعات كما صلى النبي ﷺ</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">✗</span> مخالفة (بدعة)</h4>
+                    <p>صلاة الظهر 6 ركعات (زيادة لم يشرعها النبي ﷺ)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">✓</span> متابعة صحيحة</h4>
+                    <p>الصيام من الفجر إلى المغرب</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">✗</span> مخالفة (بدعة)</h4>
+                    <p>صيام يوم معين لم يرد في السنة (بدون سبب شرعي)</p>
+                </div>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله :</p>
+                <p style="font-weight: 700; margin: 10px 0;">"صلوا كما رأيتموني أصلي"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه البخاري]</p>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا المتابعة مهمة؟</h4>
+                <p>لأن الله تعالى بعث النبي ﷺ <strong>مبشراً ونذيراً</strong>، وأمرنا باتباعه. فمن خالف سنته فقد خالف أمر الله. والعبادة توقيفية: لا نعبده إلا بما شرع.</p>
+            </div>
+        </div>
+
+        <!-- خامساً: درجات الإخلاص -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> خامساً: درجات الإخلاص</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الإخلاص درجات:</strong> ليس كل مخلص سواء، بل هناك مراتب يتفاضل فيها الناس.
+            </div>
+
+            <div class="three-columns">
+                <div class="condition-card">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <h4>الدرجة الأولى</h4>
+                    <p>إخلاص العامة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">أن يعمل لله ويترك الرياء</p>
+                </div>
+                <div class="condition-card">
+                    <div class="icon"><i class="fas fa-star-half-alt"></i></div>
+                    <h4>الدرجة الثانية</h4>
+                    <p>إخلاص الخاصة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">أن يعمل لله ويترك العجب</p>
+                </div>
+                <div class="condition-card">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <h4>الدرجة الثالثة</h4>
+                    <p>إخلاص خاصة الخاصة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">أن يعمل لله وينسى نفسه</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> كيف نصل إلى الإخلاص؟</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> معرفة الله</h4>
+                    <p>كلما عرفت الله بأسمائه وصفاته، زاد إخلاصك له</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> محبة الله</h4>
+                    <p>إذا أحببت الله، أحببت أن ترضيه بإخلاص العمل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الخوف من الرياء</h4>
+                    <p>استعذ بالله من الشرك الأصغر</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> إخفاء العمل</h4>
+                    <p>اجتهد في إخفاء أعمالك الصالحة ما استطعت</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> الدعاء</h4>
+                    <p>اسأل الله الإخلاص في كل عمل</p>
+                </div>
+
+                <div class="solution">✅ الإخلاص توفيق من الله، فاسأله دائماً</div>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سادساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-mosque"></i> مثال 1: في الصلاة</h4>
+                <p><strong>المسألة:</strong> كيف نجمع بين الإخلاص والمتابعة في الصلاة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الإخلاص</h4>
+                    <p>أن تصلي لله وحده، لا لترى الناس أنك تصلي</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المتابعة</h4>
+                    <p>أن تصلي كما صلى النبي ﷺ (عدد الركعات، الأركان، الأذكار)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الخشوع</h4>
+                    <p>أن تحضر قلبك وتتدبر ما تقول في الصلاة</p>
+                </div>
+
+                <div class="solution">✅ الصلاة المقبولة = إخلاص + متابعة + خشوع</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-hand-holding-heart"></i> مثال 2: في الصدقة</h4>
+                <p><strong>المسألة:</strong> كيف نجعل الصدقة مقبولة عند الله؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> إخلاص النية لله</h4>
+                    <p>لا نريد بها مدحاً من الناس ولا ثناءً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اتباع السنة</h4>
+                    <p>نتصدق بالطيب من أموالنا، ونُخفي الصدقة إن أمكن</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> عدم المن والأذى</h4>
+                    <p>لا نمنّ على من تصدقنا عليه ولا نؤذيه</p>
+                </div>
+
+                <div class="quran-box" style="font-size: 1rem;">
+                    ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُبْطِلُوا صَدَقَاتِكُم بِالْمَنِّ وَالْأَذَىٰ 
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة البقرة: 264]</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-user-friends"></i> مثال 3: في التعامل مع الآخرين</h4>
+                <p><strong>المسألة:</strong> كيف نعبد الله في تعاملنا اليومي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> صدق الحديث</h4>
+                    <p>الصدق عبادة، والكذب معصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أداء الأمانة</h4>
+                    <p>الأمانة عبادة، والخيانة معصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> بر الوالدين</h4>
+                    <p>بر الوالدين من أعظم العبادات بعد الصلاة</p>
+                </div>
+
+                <div class="solution">✅ كل عمل صالح نعمله ابتغاء وجه الله فهو عبادة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 4: في طلب العلم</h4>
+                <p><strong>المسألة:</strong> كيف نجعل طلب العلم عبادة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> النية الصالحة</h4>
+                    <p>نطلب العلم لرفع الجهل عن أنفسنا وعن غيرنا</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> العمل بما تعلمنا</h4>
+                    <p>العلم بدون عمل لا ينفع صاحبه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تعليم الآخرين</h4>
+                    <p>نشر العلم صدقة جارية</p>
+                </div>
+
+                <div class="hadith-box" style="margin-top: 10px;">
+                    <p style="font-size: 1rem;">قال ﷺ: "من سلك طريقاً يلتمس فيه علماً سهّل الله له به طريقاً إلى الجنة"</p>
+                    <p style="font-size: 0.85rem; color: #666;">[رواه مسلم]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن التلفظ بالشهادة يكفي</h4>
+                <p>لا بد مع التلفظ من <strong>العمل بمقتضاها</strong> (الإخلاص لله وترك الشرك).</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> قولها + العمل بها + الاعتقاد الجازم</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> التلفظ بها دون عمل أو اعتقاد</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: حصر العبادة في الشعائر فقط</h4>
+                <p>العبادة <strong>أوسع</strong> من الصلاة والصيام! كل عمل صالح ابتغاء وجه الله فهو عبادة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>أمثلة على العبادات غير الشعائرية:</strong> بر الوالدين، الصدقة، الابتسامة، إماطة الأذى عن الطريق، طلب العلم.</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الرياء في العبادة</h4>
+                <p>من يعمل العبادة ليراه الناس فقد <strong>أشرك</strong> في عبادة الله.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> إخفاء العبادة ما أمكن</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> التباهي بالعبادة أمام الناس</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الابتداع في العبادة</h4>
+                <p>من أحدث عبادة <strong>لم يشرعها الله</strong> ولا رسوله ﷺ فقد ضل.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> العبادة وفق السنة</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> اختراع عبادات جديدة</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الغلو في الصالحين</h4>
+                <p>دعاء الأموات والاستغاثة بهم <strong>شرك أكبر</strong> يُخرج من الملة.</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #1e8449;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الإخلاص:</strong> تصفية العمل من كل شائبة، وتوجيهه لله وحده.</li>
+                <li><strong>الرياء:</strong> أن يعمل العمل ليراه الناس ويمدحوه (شرك أصغر).</li>
+                <li><strong>السمعة:</strong> أن يعمل العمل ليسمع به الناس.</li>
+                <li><strong>العجب:</strong> أن يعجب المرء بعمله ويراه كبيراً.</li>
+                <li><strong>شرط القبول الأول:</strong> الإخلاص لله تعالى.</li>
+                <li><strong>شرط القبول الثاني:</strong> متابعة رسول الله ﷺ.</li>
+                <li><strong>المتابعة:</strong> أن يكون العمل موافقاً للسنة في كيفيته وكميته.</li>
+                <li><strong>البدعة:</strong> كل عبادة لم يشرعها الله ولا رسوله ﷺ.</li>
+                <li><strong>العبادة:</strong> اسم جامع لكل ما يحبه الله ويرضاه.</li>
+                <li><strong>تنبيه:</strong> لا تقبل عبادة بدون إخلاص ومتابعة.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #1e8449; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما معنى الإخلاص لغة؟",
+                options: ["الصدق", "التصفية والتنقية", "العمل الكثير", "العبادة"],
+                correct: 1,
+                explanation: "الإخلاص لغة من خَلَصَ الشيء، أي صفا وزال عنه شوبه. فالإخلاص: التصفية والتنقية."
+            },
+            {
+                sentence: "ما هو الشرك الأصغر الذي أخاف منه النبي ﷺ أمته؟",
+                options: ["السحر", "الرياء", "الكهانة", "الطيرة"],
+                correct: 1,
+                explanation: "الرياء هو الشرك الأصغر، قال ﷺ: 'إن أخوف ما أخاف عليكم الشرك الأصغر' قالوا: وما هو؟ قال: 'الرياء'."
+            },
+            {
+                sentence: "ما شرطا قبول العبادة؟",
+                options: [
+                    "الكمية والكيفية",
+                    "الإخلاص لله ومتابعة النبي ﷺ",
+                    "السرعة والإتقان",
+                    "الجاه والمال"
+                ],
+                correct: 1,
+                explanation: "لا تُقبل العبادة إلا بالإخلاص لله تعالى والمتابعة للنبي ﷺ."
+            },
+            {
+                sentence: "ما معنى المتابعة في العبادة؟",
+                options: [
+                    "الاستمرار في العمل",
+                    "أن يكون العمل موافقاً للسنة",
+                    "كثرة العمل",
+                    "العمل في جماعة"
+                ],
+                correct: 1,
+                explanation: "المتابعة: أن يكون العمل موافقاً لما جاء به النبي  في كيفيته وكميته وهيئته."
+            },
+            {
+                sentence: "أي من هذه الأعمال يُعد بدعة؟",
+                options: [
+                    "صلاة الفجر ركعتان",
+                    "صلاة الظهر 6 ركعات",
+                    "صلاة المغرب 3 ركعات",
+                    "صلاة العشاء 4 ركعات"
+                ],
+                correct: 1,
+                explanation: "صلاة الظهر 6 ركعات بدعة، لأن النبي  صلاها 4 ركعات. الزيادة في العبادة بدون دليل بدعة."
+            },
+            {
+                sentence: "ما الفرق بين الرياء والسمعة؟",
+                options: [
+                    "لا فرق بينهما",
+                    "الرياء ليراه الناس، والسمعة ليسمعوا به",
+                    "الرياء في القول، والسمعة في الفعل",
+                    "الرياء في العبادة، والسمعة في المعاملة"
+                ],
+                correct: 1,
+                explanation: "الرياء: أن يعمل العمل ليراه الناس بأعينهم. السمعة: أن يعمل العمل ليسمع به الناس (بالأخبار)."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

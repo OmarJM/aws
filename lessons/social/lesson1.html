@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بداية الدولة الأموية - تأسيس الدولة ونقل العاصمة إلى دمشق - مادة الدراسات الاجتماعية">
+    <title>بداية الدولة الأموية | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-family: 'Amiri', serif; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.95; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #8B4513; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #D2691E; padding-bottom: 10px; font-family: 'Amiri', serif; }
+        .highlight-box { background-color: rgba(139, 69, 19, 0.08); border-right: 4px solid #8B4513; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #8B4513; }
+        .quran-box { background: linear-gradient(135deg, #fef9e7, #fdebd0); border: 2px solid #f39c12; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; color: #7d6608; line-height: 2; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #D2691E; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; font-weight: 700; color: #8B4513; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #8B4513; margin: 15px 0; }
+        .step-box h4 { color: #8B4513; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #8B4513; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #8B4513; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(139, 69, 19, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .four-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-family: 'Amiri', serif; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #8B4513; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #D2691E; margin-bottom: 15px; }
+        .example-card h4 { color: #8B4513; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #8B4513; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #D2691E; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #8B4513; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #8B4513; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(210, 105, 30, 0.05)); border: 2px dashed #8B4513; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #8B4513; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-family: 'Amiri', serif; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Amiri', serif; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Amiri', serif; }
+        .quiz-option:hover { border-color: #8B4513; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #8B4513; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #8B4513; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #8B4513; color: #8B4513; }
+        .leader-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #8B4513; text-align: center; transition: transform 0.3s; }
+        .leader-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .leader-card h4 { margin-bottom: 10px; color: #8B4513; font-family: 'Amiri', serif; }
+        .leader-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #8B4513; }
+        .achievement-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; }
+        .achievement-card h4 { margin-bottom: 10px; color: #27ae60; font-family: 'Amiri', serif; }
+        .achievement-card .icon { font-size: 2rem; margin-bottom: 10px; color: #27ae60; }
+        .timeline-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .timeline-visual svg { max-width: 100%; height: auto; }
+        .bismillah { text-align: center; font-family: 'Amiri', serif; font-size: 2rem; color: #8B4513; margin: 20px 0; }
+        .lesson-intro { background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(210, 105, 30, 0.05)); border: 2px solid #8B4513; border-radius: 15px; padding: 25px; margin: 20px 0; text-align: center; }
+        .lesson-intro h3 { color: #8B4513; font-family: 'Amiri', serif; margin-bottom: 15px; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns, .four-columns { grid-template-columns: 1fr; } .quran-box, .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-mosque"></i> بداية الدولة الأموية</h1>
+            <p>تأسيس الدولة الأموية على يد معاوية بن أبي سفيان، ونقل العاصمة إلى دمشق</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>بعد الخلافة الراشدة، بدأت الدولة الأموية التي أصبحت من أعظم الدول الإسلامية!</strong>
+                <p style="margin-top: 10px;">تأسست الدولة الأموية على يد <strong>معاوية بن أبي سفيان</strong> رضي الله عنه عام 41هـ، ونقل العاصمة من المدينة المنورة إلى <strong>دمشق</strong>. في هذا الدرس، سنتعرف على <strong>شخصية معاوية</strong>، و<strong>ظروف تأسيس الدولة</strong>، و<strong>أسباب نقل العاصمة</strong>، و<strong>إنجازات الدولة في بداية عهدها</strong>.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-landmark"></i> عن الدولة الأموية</h3>
+                <p><strong>مدة الدولة:</strong> من 41هـ إلى 132هـ (91 سنة)</p>
+                <p><strong>عدد الخلفاء:</strong> 14 خليفة</p>
+                <p><strong>أول خليفة:</strong> معاوية بن أبي سفيان</p>
+                <p><strong>العاصمة:</strong> دمشق (سوريا)</p>
+                <p><strong>اللقب:</strong> "الدولة الأموية" نسبة إلى أمية بن عبد شمس</p>
+            </div>
+
+            <div class="timeline-visual">
+                <h4 style="color: #8B4513; margin-bottom: 15px;"><i class="fas fa-clock"></i> خط زمني لبداية الدولة الأموية</h4>
+                <svg width="700" height="150" viewBox="0 0 700 150">
+                    <!-- الخط الزمني -->
+                    <line x1="50" y1="75" x2="650" y2="75" stroke="#8B4513" stroke-width="3"/>
+                    
+                    <!-- الأحداث -->
+                    <circle cx="100" cy="75" r="15" fill="#3498db"/>
+                    <text x="100" y="40" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle" font-weight="700">40هـ</text>
+                    <text x="100" y="110" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">عام الجماعة</text>
+                    
+                    <circle cx="250" cy="75" r="15" fill="#27ae60"/>
+                    <text x="250" y="40" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle" font-weight="700">41هـ</text>
+                    <text x="250" y="110" font-family="Tajawal" font-size="10" fill="#27ae60" text-anchor="middle">بيعة معاوية</text>
+                    
+                    <circle cx="400" cy="75" r="15" fill="#e67e22"/>
+                    <text x="400" y="40" font-family="Tajawal" font-size="11" fill="#e67e22" text-anchor="middle" font-weight="700">50هـ</text>
+                    <text x="400" y="110" font-family="Tajawal" font-size="10" fill="#e67e22" text-anchor="middle">نقل العاصمة</text>
+                    
+                    <circle cx="550" cy="75" r="15" fill="#9b59b6"/>
+                    <text x="550" y="40" font-family="Tajawal" font-size="11" fill="#9b59b6" text-anchor="middle" font-weight="700">60هـ</text>
+                    <text x="550" y="110" font-family="Tajawal" font-size="10" fill="#9b59b6" text-anchor="middle">وفاة معاوية</text>
+                    
+                    <!-- الأسهم -->
+                    <polygon points="115,75 125,70 125,80" fill="#3498db"/>
+                    <polygon points="265,75 275,70 275,80" fill="#27ae60"/>
+                    <polygon points="415,75 425,70 425,80" fill="#e67e22"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: شخصية معاوية بن أبي سفيان -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> أولاً: شخصية معاوية بن أبي سفيان</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>معاوية بن أبي سفيان:</strong> مؤسس الدولة الأموية، وأول خلفائها، وأحد كتّاب الوحي رضي الله عنهم.
+            </div>
+
+            <div class="two-columns">
+                <div class="leader-card">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h4>نسبه</h4>
+                    <p>معاوية بن أبي سفيان صخر بن حرب بن أمية بن عبد شمس</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>أمه:</strong> هند بنت عتبة</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>كنيته:</strong> أبو عبد الرحمن</p>
+                </div>
+                <div class="leader-card">
+                    <div class="icon"><i class="fas fa-calendar"></i></div>
+                    <h4>ميلاده ووفاته</h4>
+                    <p><strong>ميلاده:</strong> قبل البعثة النبوية بقليل (15 قبل الهجرة تقريباً)</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>إسلامه:</strong> عام الفتح (8هـ)</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>وفاته:</strong> 60هـ عن عمر 78 سنة</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top: 20px;">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-pen"></i></div>
+                    <h4>كاتب الوحي</h4>
+                    <p>أحد كتّاب الوحي لرسول الله ﷺ</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>أمير الشام</h4>
+                    <p>ولّاه عمر ثم عثمان على الشام</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <h4>مؤسس الدولة</h4>
+                    <p>أسس الدولة الأموية وحكم 20 سنة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> صفات معاوية السياسية</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الدهاء السياسي</h4>
+                    <p>كان معاوية سياسياً ماهراً، يعرف كيف يتعامل مع المواقف المختلفة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحلم والأناة</h4>
+                    <p>كان حليماً صبوراً، لا يعاجل بالأمر، بل يدرسه جيداً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> كسب القلوب</h4>
+                    <p>كان يعرف كيف يكسب ولاء الناس بالمعاملة الحسنة والعطاء</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> التنظيم الإداري</h4>
+                    <p>نظم الدولة وأنشأ الدواوين (البريد، الخاتم، الشرطة)</p>
+                </div>
+
+                <div class="solution">✅ معاوية كان من أعظم السياسيين في التاريخ الإسلامي</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قول الإمام أحمد في معاوية:</h4>
+                <p>قال الإمام أحمد بن حنبل: "هل يُذكَّر أحد بمناقب معاوية؟!" تعظيماً لشأنه. وكان من أبرز مناقبه: كونه كاتب الوحي، وصحابي جليل، ومؤسس دولة عظيمة.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: ظروف تأسيس الدولة الأموية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flag"></i> ثانياً: ظروف تأسيس الدولة الأموية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>عام الجماعة (40هـ):</strong> العام الذي تنازل فيه الحسن بن علي رضي الله عنهما عن الخلافة لمعاوية، فاجتمعت الأمة على خليفة واحد.
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif; font-size: 1.4rem;">
+                40هـ = عام الجماعة | 41هـ = بداية الدولة الأموية
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أحداث ما قبل التأسيس</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> مقتل عثمان رضي الله عنه (35هـ)</h4>
+                    <p>دخلت الأمة في فتنة كبيرة، وظهرت الفتن والانشقاقات</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> خلافة علي رضي الله عنه (35-40هـ)</h4>
+                    <p>حاول علي توحيد الصف، لكنه واجه تحديات كبيرة (موقعة الجمل، صفين، الخوارج)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اغتيال علي رضي الله عنه (40هـ)</h4>
+                    <p>استشهد علي على يد عبد الرحمن بن ملجم الخارجي</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> خلافة الحسن بن علي (40هـ)</h4>
+                    <p>بايع الناس الحسن، لكنه تنازل لمعاوية حقناً لدماء المسلمين</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> عام الجماعة (40هـ)</h4>
+                    <p>اجتمعت الأمة على معاوية، وانتهت الفتنة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">6</span> بداية الدولة الأموية (41هـ)</h4>
+                    <p>بُويع معاوية خليفة للمسلمين، وبدأت الدولة الأموية</p>
+                </div>
+
+                <div class="solution">✅ تنازل الحسن كان رحمة بالأمة، وبداية لعصر جديد</div>
+            </div>
+
+            <div class="quran-box" style="font-size: 1.1rem;">
+                ﴿ وَإِن طَائِفَتَانِ مِنَ الْمُؤْمِنِينَ اقْتَتَلُوا فَأَصْلِحُوا بَيْنَهُمَا ۖ ﴾
+                <p style="font-size: 0.85rem; margin-top: 5px;">[سورة الحجرات: 9]</p>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا تنازل الحسن لمعاوية؟</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>حقناً لدماء المسلمين</li>
+                    <li>توحيد الصف الإسلامي</li>
+                    <li>الاستعداد لمواجهة الروم في الشمال</li>
+                    <li>تحقيقاً لقول النبي ﷺ: "ابني هذا سيد، ولعل الله أن يصلح به بين فئتين عظيمتين من المسلمين"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: نقل العاصمة إلى دمشق -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-city"></i> ثالثاً: نقل العاصمة إلى دمشق</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>نقل العاصمة:</strong> نقل معاوية عاصمة الدولة الإسلامية من المدينة المنورة إلى دمشق في الشام.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #8B4513;">
+                    <h3 style="color: #8B4513;"><i class="fas fa-mosque"></i> العاصمة الأولى: المدينة</h3>
+                    <p><strong>الفترة:</strong> من عهد النبي ﷺ إلى نهاية الخلافة الراشدة</p>
+                    <p style="margin-top: 10px;"><strong>المدة:</strong> حوالي 30 سنة</p>
+                    <p style="margin-top: 10px;"><strong>الخلفاء:</strong> أبو بكر، عمر، عثمان، علي</p>
+                    <p style="margin-top: 10px;"><strong>طبيعة الحكم:</strong> خلافة راشدة على منهاج النبوة</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-landmark"></i> العاصمة الثانية: دمشق</h3>
+                    <p><strong>الفترة:</strong> من بداية الدولة الأموية</p>
+                    <p style="margin-top: 10px;"><strong>المدة:</strong> 91 سنة (41-132هـ)</p>
+                    <p style="margin-top: 10px;"><strong>الخلفاء:</strong> 14 خليفة أموياً</p>
+                    <p style="margin-top: 10px;"><strong>طبيعة الحكم:</strong> ملك عضوض (نظام وراثي)</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أسباب نقل العاصمة إلى دمشق</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الموقع الاستراتيجي</h4>
+                    <p>دمشق تقع في وسط الدولة، قريبة من حدود الروم (التهديد الشمالي)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> قاعدة معاوية</h4>
+                    <p>معاوية كان والياً على الشام 20 سنة، فدمشق قاعدته ومركز قوته</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الجند الشام</h4>
+                    <p>أهل الشام كانوا جنوداً أقوياء موالين لمعاوية، وهم عماد الدولة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> البعد عن الفتن</h4>
+                    <p>المدينة كانت مسرحاً للفتن (مقتل عثمان، موقعة الجمل، صفين)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> التوسع والفتوحات</h4>
+                    <p>دمشق أقرب إلى جبهات القتال في آسيا الصغرى وشمال أفريقيا</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">6</span> الاستقرار الإداري</h4>
+                    <p>دمشق كانت مدينة حضارية عريقة، فيها دواوين ومنظمات إدارية</p>
+                </div>
+
+                <div class="solution">✅ نقل العاصمة قرار سياسي استراتيجي لخدمة الدولة</div>
+            </div>
+
+            <div class="three-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h4>الموقع الاستراتيجي</h4>
+                    <p>وسط الدولة، قريب من الحدود</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h4>قاعدة القوة</h4>
+                    <p>موالون لمعاوية وجند أقوياء</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>البعد عن الفتن</h4>
+                    <p>استقرار سياسي وأمني</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>نقل العاصمة لم يكن بدافع الهوى، بل كان <strong>قراراً سياسياً</strong> لخدمة المصالح العليا للدولة الإسلامية. وقد أثبتت الأيام نجاح هذا القرار، فدمشق أصبحت من أعظم عواصم العالم في ذلك الوقت.</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: إنجازات معاوية في بداية عهده -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> رابعاً: إنجازات معاوية في بداية عهده</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>عهد معاوية (41-60هـ):</strong> امتد 20 سنة، حقق فيها إنجازات عظيمة للدولة الإسلامية.
+            </div>
+
+            <div class="four-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-building"></i></div>
+                    <h4>1. تنظيم الدولة</h4>
+                    <p>أنشأ الدواوين ونظم الإدارة</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <h4>2. البريد</h4>
+                    <p>أنشأ نظام البريد السريع</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-stamp"></i></div>
+                    <h4>3. الدواوين</h4>
+                    <p>أنشأ ديوان الخاتم والشرطة</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-anchor"></i></div>
+                    <h4>4. الأسطول البحري</h4>
+                    <p>أسس أول أسطول بحري إسلامي</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفاصيل الإنجازات</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> تنظيم الدولة (الإداري)</h4>
+                    <p>قسّم الدولة إلى ولايات، وولّى على كل ولاية والياً. وأنشأ الدواوين لتنظيم الشؤون المالية والإدارية.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ديوان البريد</h4>
+                    <p>أنشأ نظام بريد متطور لنقل الأخبار والرسائل بين العاصمة والأقاليم بسرعة.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> ديوان الخاتم</h4>
+                    <p>أنشأ ديواناً لختم الوثائق الرسمية لمنع التزوير.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الشرطة</h4>
+                    <p>أنشأ جهاز الشرطة لحفظ الأمن والنظام في الدولة.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> الأسطول البحري</h4>
+                    <p>أسس أول أسطول بحري إسلامي، وفتح جزر قبرص ورودس، وهاجم القسطنطينية.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">6</span> الفتوحات</h4>
+                    <p>واصل الفتوحات في خراسان (شرقاً)، وشمال أفريقيا (غرباً)، وآسيا الصغرى (شمالاً).</p>
+                </div>
+
+                <div class="solution">✅ معاوية كان بانياً للدولة، لا حاكماً فحسب</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الفتوحات في عهد معاوية</h4>
+                
+                <div class="two-columns">
+                    <div class="column-card" style="border-top: 4px solid #27ae60;">
+                        <h4 style="color: #27ae60;"><i class="fas fa-arrow-up"></i> في الشرق</h4>
+                        <ul style="padding-right: 20px; line-height: 2;">
+                            <li>فتح خراسان (أفغانستان وإيران)</li>
+                            <li>وصل إلى ما وراء النهر</li>
+                            <li>نشر الإسلام في آسيا الوسطى</li>
+                        </ul>
+                    </div>
+                    <div class="column-card" style="border-top: 4px solid #3498db;">
+                        <h4 style="color: #3498db;"><i class="fas fa-arrow-down"></i> في الغرب</h4>
+                        <ul style="padding-right: 20px; line-height: 2;">
+                            <li>فتح برقة وطرابلس (ليبيا)</li>
+                            <li>وصل إلى تونس</li>
+                            <li>نشر الإسلام في شمال أفريقيا</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-columns" style="margin-top: 15px;">
+                    <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                        <h4 style="color: #e74c3c;"><i class="fas fa-arrow-right"></i> في الشمال</h4>
+                        <ul style="padding-right: 20px; line-height: 2;">
+                            <li>غزا الروم في آسيا الصغرى</li>
+                            <li>فتح جزر البحر المتوسط</li>
+                            <li>هاجم القسطنطينية</li>
+                        </ul>
+                    </div>
+                    <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                        <h4 style="color: #9b59b6;"><i class="fas fa-ship"></i> في البحر</h4>
+                        <ul style="padding-right: 20px; line-height: 2;">
+                            <li>أسس الأسطول البحري</li>
+                            <li>انتصر في معركة ذات الصواري</li>
+                            <li>فتح قبرص ورودس</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> حكمة معاوية:</h4>
+                <p>كان معاوية يقول: "لو بيني وبين الناس شعرة ما انقطعت". ومعناها: أنه كان يتسامح مع الناس ولا يقطع حبل الود معهم، فيكسب ولاءهم.</p>
+            </div>
+        </div>
+
+        <!-- خامساً: نظام الحكم في الدولة الأموية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> خامساً: نظام الحكم في الدولة الأموية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التحول:</strong> تحول نظام الحكم من الخلافة الراشدة (شورى) إلى الملك العضوض (وراثي).
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-users"></i> الخلافة الراشدة</h3>
+                    <p><strong>النظام:</strong> شوروي (اختيار)</p>
+                    <p style="margin-top: 10px;"><strong>البيعة:</strong> من أهل الحل والعقد</p>
+                    <p style="margin-top: 10px;"><strong>الخلافة:</strong> ليست وراثية</p>
+                    <p style="margin-top: 10px;"><strong>القدوة:</strong> النبي ﷺ</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #8B4513;">
+                    <h3 style="color: #8B4513;"><i class="fas fa-crown"></i> الدولة الأموية</h3>
+                    <p><strong>النظام:</strong> ملك وراثي</p>
+                    <p style="margin-top: 10px;"><strong>الولاية:</strong> للأبناء من بعد الآباء</p>
+                    <p style="margin-top: 10px;"><strong>العاصمة:</strong> دمشق</p>
+                    <p style="margin-top: 10px;"><strong>اللقب:</strong> خليفة الله في أرضه</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> بداية النظام الوراثي</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> بيعة يزيد</h4>
+                    <p>استخلف معاوية ابنه يزيد بن معاوية، وبايعه الناس له من بعده</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ردود الفعل</h4>
+                    <p>رفض بعض الصحابة والتابعين هذا الأمر (الحسين بن علي، عبد الله بن الزبير)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المبررات</h4>
+                    <p>رأى معاوية أن هذا يحقق الاستقرار ويمنع الفتن بعد تجربته مع الفتنة الكبرى</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> النتيجة</h4>
+                    <p>أصبح النظام الوراثي سمة الدولة الأموية ومن جاء بعدها من الدول</p>
+                </div>
+
+                <div class="solution">✅ التحول من الشورى إلى الوراثة كان نقطة تحول في التاريخ الإسلامي</div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>رغم التحول إلى النظام الوراثي، فقد بقيت الدولة الأموية <strong>دولة إسلامية</strong> تطبق الشريعة في معظم شؤونها. والخلفاء الأمويون كانوا يدعون أنفسهم "خلفاء رسول الله" ويعتبرون أنفسهم حُماة الإسلام.</p>
+            </div>
+        </div>
+
+        <!-- سادساً: الدروس المستفادة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> سادساً: الدروس المستفادة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> دروس من بداية الدولة الأموية</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> أهمية الوحدة</h4>
+                    <p>تنازل الحسن حقن دماء المسلمين وحقق الوحدة، فالوحدة نعمة عظيمة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حكمة السياسة</h4>
+                    <p>نقل العاصمة كان قراراً سياسياً حكيماً لخدمة المصالح العليا</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التنظيم الإداري</h4>
+                    <p>إنشاء الدواوين والأنظمة ضروري لاستقرار الدولة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الاستمرار في الفتوحات</h4>
+                    <p>الدولة الإسلامية دولة دعوة، والفتوحات لنشر الإسلام</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> قوة الأسطول</h4>
+                    <p>الأهمية الاستراتيجية للبحر في حماية الدولة وتوسيعها</p>
+                </div>
+
+                <div class="solution">✅ من التاريخ نستلهم الدروس لبناء المستقبل</div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-landmark"></i> مثال 1: زيارة دمشق</h4>
+                <p><strong>المسألة:</strong> إذا زرت دمشق، ما الذي يجب أن تعرفه؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> تاريخ دمشق</h4>
+                    <p>من أقدم عواصم العالم، وعاصمة الدولة الأموية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المسجد الأموي</h4>
+                    <p>بناه الوليد بن عبد الملك، من أعظم المساجد في العالم</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> آثار الدولة الأموية</h4>
+                    <p>في دمشق آثار كثيرة من العصر الأموي</p>
+                </div>
+
+                <div class="solution">✅ دمشق مدينة تاريخية عريقة، عاصمة الدولة الأموية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-book"></i> مثال 2: دراسة التاريخ</h4>
+                <p><strong>المسألة:</strong> كيف نستفيد من دراسة التاريخ الأموي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> استخلاص العبر</h4>
+                    <p>نتعلم من نجاحات الدولة وإخفاقاتها</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> فهم الواقع</h4>
+                    <p>الكثير من الواقع الحالي له جذور في التاريخ الأموي</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الاقتداء بالصالحين</h4>
+                    <p>نتعلم من سيرة معاوية وغيره من الخلفاء</p>
+                </div>
+
+                <div class="solution">✅ التاريخ مرآة الحاضر ودليل المستقبل</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-flag"></i> مثال 3: الوحدة الإسلامية</h4>
+                <p><strong>المسألة:</strong> ما الدرس المستفاد من تنازل الحسن لمعاوية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حقن الدماء</h4>
+                    <p>الوحدة أهم من المناصب الشخصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المصلحة العامة</h4>
+                    <p>مصلحة الأمة مقدمة على المصالح الفردية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التطبيق اليوم</h4>
+                    <p>يجب أن نسعى لوحدة المسلمين اليوم كما فعل الحسن</p>
+                </div>
+
+                <div class="solution">✅ الوحدة الإسلامية واجب شرعي وضرورة تاريخية</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين الدولة الأموية والخلافة الراشدة</h4>
+                <p>الخلافة الراشدة كانت على منهاج النبوة، أما الدولة الأموية فكانت ملكاً وراثياً. كلاهما إسلامي لكنهما مختلفان.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الطعن في معاوية</h4>
+                <p>معاوية صحابي جليل وكاتب وحي، والطعن في الصحابة محرم. يجب أن نتعامل مع شخصياته بالعدل والإنصاف.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن الدولة الأموية كانت ظالمة بالكامل</h4>
+                <p>كان فيها ظلم في بعض الفترات (مثل حادثة الحرة)، لكن فيها أيضاً إنجازات عظيمة (الفتوحات، التنظيم، الحضارة).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: تجاهل دور الحسن في حقن الدماء</h4>
+                <p>تنازل الحسن كان موقفاً بطولياً حقن دماء المسلمين، ويجب أن يُذكر بالخير والإجلال.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الخلط بين الفتوحات والغزو</h4>
+                <p>الفتوحات الإسلامية كانت لنشر الدعوة، لا للاستعمار. والفرق بين النيتين عظيم.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: نسيان أن دمشق كانت عاصمة</h4>
+                <p>دمشق كانت عاصمة الدولة الأموية، وهي من أعظم العواصم الإسلامية تاريخياً وحضارياً.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #8B4513;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الدولة الأموية:</strong> تأسست عام 41هـ على يد معاوية بن أبي سفيان.</li>
+                <li><strong>مدة الدولة:</strong> 91 سنة (41-132هـ)، حكمها 14 خليفة.</li>
+                <li><strong>معاوية:</strong> صحابي، كاتب الوحي، أمير الشام، مؤسس الدولة.</li>
+                <li><strong>عام الجماعة (40هـ):</strong> تنازل الحسن لمعاوية حقناً لدماء المسلمين.</li>
+                <li><strong>العاصمة:</strong> نُقلت من المدينة إلى دمشق.</li>
+                <li><strong>أسباب نقل العاصمة:</strong> الموقع الاستراتيجي، قاعدة القوة، البعد عن الفتن، التوسع.</li>
+                <li><strong>إنجازات معاوية:</strong> تنظيم الدولة، إنشاء الدواوين، الأسطول البحري، الفتوحات.</li>
+                <li><strong>نظام الحكم:</strong> تحول من الشورى إلى الملك الوراثي.</li>
+                <li><strong>الفتوحات:</strong> في الشرق (خراسان)، الغرب (شمال أفريقيا)، الشمال (الروم)، البحر.</li>
+                <li><strong>الدروس:</strong> الوحدة، حكمة السياسة، التنظيم، الاستمرار في الدعوة.</li>
+                <li><strong>تنبيه:</strong> لا نطعن في الصحابة، ونتعامل مع التاريخ بالعدل.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #8B4513; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #8B4513; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #8B4513; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "من هو مؤسس الدولة الأموية؟",
+                options: ["أبو بكر الصديق", "عمر بن الخطاب", "معاوية بن أبي سفيان", "يزيد بن معاوية"],
+                correct: 2,
+                explanation: "مؤسس الدولة الأموية هو معاوية بن أبي سفيان رضي الله عنه، الذي بويع خليفة عام 41هـ."
+            },
+            {
+                sentence: "ما هي عاصمة الدولة الأموية؟",
+                options: ["المدينة المنورة", "مكة المكرمة", "دمشق", "بغداد"],
+                correct: 2,
+                explanation: "نقل معاوية عاصمة الدولة الإسلامية من المدينة المنورة إلى دمشق في الشام."
+            },
+            {
+                sentence: "ما هو 'عام الجماعة'؟",
+                options: [
+                    "عام وفاة النبي ﷺ",
+                    "عام تنازل الحسن لمعاوية واجتماع الأمة على خليفة واحد",
+                    "عام فتح مكة",
+                    "عام الهجرة"
+                ],
+                correct: 1,
+                explanation: "عام الجماعة (40هـ) هو العام الذي تنازل فيه الحسن بن علي لمعاوية، فاجتمعت الأمة على خليفة واحد بعد فتنة."
+            },
+            {
+                sentence: "ما هو أهم إنجاز إداري لمعاوية؟",
+                options: [
+                    "بناء المساجد",
+                    "إنشاء الدواوين (البريد، الخاتم، الشرطة)",
+                    "تأليف الكتب",
+                    "كتابة الشعر"
+                ],
+                correct: 1,
+                explanation: "أنشأ معاوية الدواوين لتنظيم شؤون الدولة، منها ديوان البريد، وديوان الخاتم، والشرطة."
+            },
+            {
+                sentence: "لماذا نُقلت العاصمة إلى دمشق؟",
+                options: [
+                    "لأن المدينة صغيرة",
+                    "للموقع الاستراتيجي وقاعدة القوة والبعد عن الفتن",
+                    "لأن دمشق أجمل",
+                    "لا سبب واضح"
+                ],
+                correct: 1,
+                explanation: "نُقلت العاصمة إلى دمشق لأسباب استراتيجية: موقعها الوسطي، كونها قاعدة معاوية، والبعد عن الفتن في المدينة."
+            },
+            {
+                sentence: "كم سنة حكمت الدولة الأموية؟",
+                options: ["50 سنة", "91 سنة", "100 سنة", "150 سنة"],
+                correct: 1,
+                explanation: "حكمت الدولة الأموية من 41هـ إلى 132هـ، أي 91 سنة، تعاقب خلالها 14 خليفة."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

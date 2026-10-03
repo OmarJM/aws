@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="امتداد الدولة العباسية - الفتوحات والإنجازات العلمية والحضارية - مادة الدراسات الاجتماعية">
+    <title>امتداد الدولة العباسية | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero{background:linear-gradient(135deg,#8B4513,#D2691E);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#8B4513;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #D2691E;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(139,69,19,.08);border-right:4px solid #8B4513;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#8B4513}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #f39c12;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #D2691E;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#8B4513}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #8B4513;margin:15px 0}
+        .step-box h4{color:#8B4513;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#8B4513;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#8B4513;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #ffc107;padding:20px;border-radius:10px;margin:20px 0}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#8B4513;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #D2691E;margin-bottom:15px}
+        .example-card h4{color:#8B4513;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #27ae60;font-weight:600;color:#8B4513;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #D2691E;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#8B4513;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#8B4513}
+        .interactive-activity{background:linear-gradient(135deg,rgba(139,69,19,.05),rgba(210,105,30,.05));border:2px dashed #8B4513;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#8B4513;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#8B4513;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#27ae60;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #27ae60}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#8B4513;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#8B4513;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #8B4513;color:#8B4513}
+        .achievement-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #27ae60;text-align:center;transition:transform .3s}
+        .achievement-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .achievement-card h4{margin-bottom:10px;color:#27ae60;font-family:'Amiri',serif}
+        .achievement-card .icon{font-size:2.5rem;margin-bottom:10px;color:#27ae60}
+        .scholar-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #f39c12;text-align:center}
+        .scholar-card h4{margin-bottom:10px;color:#f39c12;font-family:'Amiri',serif}
+        .scholar-card .icon{font-size:2rem;margin-bottom:10px;color:#f39c12}
+        .lesson-intro{background:linear-gradient(135deg,rgba(139,69,19,.05),rgba(210,105,30,.05));border:2px solid #8B4513;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#8B4513;font-family:'Amiri',serif;margin-bottom:15px}
+        .map-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .map-visual svg{max-width:100%;height:auto}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-globe"></i> امتداد الدولة العباسية</h1>
+            <p>الفتوحات والإنجازات العلمية والحضارية في عهد الدولة العباسية</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا يُعتبر العصر العباسي العصر الذهبي للحضارة الإسلامية؟</strong>
+                <p style="margin-top:10px">امتدت الدولة العباسية من <strong>الصين شرقاً</strong> إلى <strong>الأندلس غرباً</strong>، وشهدت <strong>نهضة علمية وحضارية</strong> لم يشهدها العالم من قبل. في هذا الدرس، سنتعرف على <strong>الفتوحات</strong>، و<strong>الإنجازات العلمية</strong>، و<strong>الحضارية</strong> التي جعلت من العصر العباسي منارة للعالم.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-star"></i> العصر العباسي في سطور</h3>
+                <p><strong>بداية الدولة:</strong> 132هـ</p>
+                <p><strong>نهاية الدولة:</strong> 656هـ</p>
+                <p><strong>العاصمة:</strong> بغداد</p>
+                <p><strong>أوج الحضارة:</strong> في عهد هارون الرشيد والمأمون</p>
+                <p><strong>أبرز الإنجازات:</strong> بيت الحكمة، حركة الترجمة، العلوم، الفنون</p>
+            </div>
+
+            <div class="map-visual">
+                <h4 style="color:#8B4513;margin-bottom:15px"><i class="fas fa-map-marked-alt"></i> امتداد الدولة العباسية</h4>
+                <svg width="700" height="300" viewBox="0 0 700 300">
+                    <!-- الخريطة المبسطة -->
+                    <rect x="50" y="50" width="600" height="200" fill="rgba(139,69,19,.05)" stroke="#8B4513" stroke-width="2" rx="10"/>
+                    
+                    <!-- المناطق -->
+                    <circle cx="120" cy="150" r="30" fill="rgba(39,174,96,.3)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="120" y="145" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle" font-weight="700">الأندلس</text>
+                    <text x="120" y="160" font-family="Tajawal" font-size="9" fill="#27ae60" text-anchor="middle">غرباً</text>
+                    
+                    <circle cx="250" cy="150" r="30" fill="rgba(52,152,219,.3)" stroke="#3498db" stroke-width="2"/>
+                    <text x="250" y="145" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle" font-weight="700">المغرب</text>
+                    <text x="250" y="160" font-family="Tajawal" font-size="9" fill="#3498db" text-anchor="middle">شمال أفريقيا</text>
+                    
+                    <circle cx="380" cy="150" r="35" fill="rgba(243,156,18,.3)" stroke="#f39c12" stroke-width="3"/>
+                    <text x="380" y="145" font-family="Tajawal" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="700">بغداد</text>
+                    <text x="380" y="160" font-family="Tajawal" font-size="9" fill="#f39c12" text-anchor="middle">العاصمة</text>
+                    
+                    <circle cx="510" cy="150" r="30" fill="rgba(231,76,60,.3)" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="510" y="145" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle" font-weight="700">خراسان</text>
+                    <text x="510" y="160" font-family="Tajawal" font-size="9" fill="#e74c3c" text-anchor="middle">المشرق</text>
+                    
+                    <circle cx="620" cy="150" r="30" fill="rgba(155,89,182,.3)" stroke="#9b59b6" stroke-width="2"/>
+                    <text x="620" y="145" font-family="Tajawal" font-size="11" fill="#9b59b6" text-anchor="middle" font-weight="700">الصين</text>
+                    <text x="620" y="160" font-family="Tajawal" font-size="9" fill="#9b59b6" text-anchor="middle">شرقاً</text>
+                    
+                    <!-- الأسهم -->
+                    <line x1="150" y1="150" x2="220" y2="150" stroke="#8B4513" stroke-width="2" marker-end="url(#arrow1)"/>
+                    <line x1="280" y1="150" x2="345" y2="150" stroke="#8B4513" stroke-width="2" marker-end="url(#arrow1)"/>
+                    <line x1="415" y1="150" x2="480" y2="150" stroke="#8B4513" stroke-width="2" marker-end="url(#arrow1)"/>
+                    <line x1="540" y1="150" x2="590" y2="150" stroke="#8B4513" stroke-width="2" marker-end="url(#arrow1)"/>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#8B4513"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <p style="margin-top:15px;font-size:1rem">امتدت الدولة العباسية من الأندلس غرباً إلى الصين شرقاً</p>
+            </div>
+        </div>
+
+        <!-- أولاً: الفتوحات في عهد الدولة العباسية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flag"></i> أولاً: الفتوحات في عهد الدولة العباسية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الفتوحات العباسية:</strong> واصلت الدولة العباسية الفتوحات في جميع الاتجاهات، فوصلت إلى أقصى اتساع لها.
+            </div>
+
+            <div class="four-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>1. المشرق</h4>
+                    <p>خراسان وما وراء النهر</p>
+                    <p style="margin-top:10px;font-size:.9rem">وصلت إلى حدود الصين</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>2. السند</h4>
+                    <p>شبه القارة الهندية</p>
+                    <p style="margin-top:10px;font-size:.9rem">انتشر الإسلام فيها</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-globe-africa"></i></div>
+                    <h4>3. المغرب</h4>
+                    <p>شمال أفريقيا</p>
+                    <p style="margin-top:10px;font-size:.9rem">وصلت إلى المحيط الأطلسي</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-flag"></i></div>
+                    <h4>4. الأندلس</h4>
+                    <p>إسبانيا والبرتغال</p>
+                    <p style="margin-top:10px;font-size:.9rem">حكم إسلامي 8 قرون</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفاصيل الفتوحات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> فتوحات المشرق</h4>
+                    <p>واصل القادة المسلمون الفتوحات في <strong>خراسان</strong> و<strong>ما وراء النهر</strong>، ووصلوا إلى حدود <strong>الصين</strong>. ودخل الإسلام إلى آسيا الوسطى.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> فتوحات السند والهند</h4>
+                    <p>فتح المسلمون <strong>السند</strong> (باكستان حالياً)، ووصلوا إلى أجزاء من <strong>الهند</strong>. وانتشر الإسلام في هذه المناطق.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> فتوحات شمال أفريقيا</h4>
+                    <p>امتدت الفتوحات إلى <strong>المغرب الأقصى</strong>، ووصلت إلى <strong>المحيط الأطلسي</strong>. ثم عبر المسلمون إلى <strong>الأندلس</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> فتوحات الأندلس</h4>
+                    <p>فتح <strong>طارق بن زياد</strong> الأندلس سنة 92هـ، وأكمل <strong>موسى بن نصير</strong> الفتح. وأقام المسلمون في الأندلس 8 قرون.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> الحملات على بيزنطة</h4>
+                    <p>شنّ العباسيون حملات متكررة على <strong>الإمبراطورية البيزنطية</strong> في آسيا الصغرى، وفتحوا مدنًا مثل <strong>عمورية</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> الفتوحات البحرية</h4>
+                    <p>أسس العباسيون <strong>أسطولاً بحرياً</strong> قوياً، وفتحوا جزر <strong>صقلية</strong> و<strong>قبرص</strong> و<strong>كريت</strong> في البحر المتوسط.</p>
+                </div>
+
+                <div class="solution">✅ الفتوحات العباسية وصلت إلى أقصى اتساع للدولة الإسلامية</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الفرق بين الفتوحات الأموية والعباسية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>الأموية:</strong> ركّزت على التوسع العسكري</li>
+                    <li><strong>العباسية:</strong> ركّزت على <strong>نشر الإسلام والثقافة</strong>، وبناء الحضارة</li>
+                    <li><strong>النتيجة:</strong> أصبحت الدولة العباسية <strong>إمبراطورية حضارية</strong> لا عسكرية فقط</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: بيت الحكمة وحركة الترجمة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book"></i> ثانياً: بيت الحكمة وحركة الترجمة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>بيت الحكمة:</strong> أعظم مركز علمي في العالم آنذاك، أسسه هارون الرشيد وطوّره المأمون.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #27ae60">
+                    <h3 style="color:#27ae60"><i class="fas fa-landmark"></i> بيت الحكمة</h3>
+                    <p><strong>المؤسس:</strong> هارون الرشيد</p>
+                    <p><strong>المطوّر:</strong> المأمون</p>
+                    <p><strong>الموقع:</strong> بغداد</p>
+                    <p style="margin-top:10px"><strong>الوظائف:</strong></p>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>مكتبة عظيمة</li>
+                        <li>مركز للترجمة</li>
+                        <li>مرصد فلكي</li>
+                        <li>مختبر علمي</li>
+                        <li>جامعة للبحث</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #f39c12">
+                    <h3 style="color:#f39c12"><i class="fas fa-language"></i> حركة الترجمة</h3>
+                    <p><strong>الهدف:</strong> نقل علوم الأمم إلى العربية</p>
+                    <p style="margin-top:10px"><strong>اللغات المترجم منها:</strong></p>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>اليونانية</li>
+                        <li>الفارسية</li>
+                        <li>الهندية</li>
+                        <li>السريانية</li>
+                        <li>القبطية</li>
+                    </ul>
+                    <p style="margin-top:10px"><strong>أبرز المترجمين:</strong> حنين بن إسحاق، ثابت بن قرة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أهمية بيت الحكمة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> حفظ التراث الإنساني</h4>
+                    <p>حُفظت فيه كتب اليونان والفرس والهند التي كانت ستضيع لولا الترجمة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تطوير العلوم</h4>
+                    <p>لم يقتصر على الترجمة، بل أضاف العلماء المسلمون إبداعاتهم</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> نقل العلم إلى أوروبا</h4>
+                    <p>عبر الأندلس وصقلية، انتقلت العلوم العربية إلى أوروبا، وأثّرت في عصر النهضة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> تأسيس منهج علمي</h4>
+                    <p>اعتمد العلماء على <strong>التجربة والملاحظة</strong>، وهو أساس العلم الحديث</p>
+                </div>
+
+                <div class="solution">✅ بيت الحكمة كان جامعة عالمية بكل معنى الكلمة</div>
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة الزمر: 9]</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: أبرز العلماء وإنجازاتهم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> ثالثاً: أبرز العلماء وإنجازاتهم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>العصر العباسي:</strong> شهد ظهور علماء غيّروا مسار التاريخ الإنساني، وأسسوا علوم العصر الحديث.
+            </div>
+
+            <div class="three-columns">
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-calculator"></i></div>
+                    <h4>الخوارزمي</h4>
+                    <p><strong>أبو الجبر</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">أسس علم الجبر</p>
+                    <p style="margin-top:10px;font-size:.9rem">ألّف "الجبر والمقابلة"</p>
+                </div>
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-stethoscope"></i></div>
+                    <h4>ابن سينا</h4>
+                    <p><strong>شيخ الأطباء</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">ألّف "القانون في الطب"</p>
+                    <p style="margin-top:10px;font-size:.9rem">مرجع في أوروبا 6 قرون</p>
+                </div>
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-user-md"></i></div>
+                    <h4>الرازي</h4>
+                    <p><strong>أعظم أطباء العصر</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">اكتشف الجدري والحصبة</p>
+                    <p style="margin-top:10px;font-size:.9rem">ألّف "الحاوي في الطب"</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top:15px">
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-flask"></i></div>
+                    <h4>جابر بن حيان</h4>
+                    <p><strong>أبو الكيمياء</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">أسس علم الكيمياء الحديث</p>
+                    <p style="margin-top:10px;font-size:.9rem">اكتشف أحماضاً كثيرة</p>
+                </div>
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h4>البيروني</h4>
+                    <p><strong>عالم الفلك</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">قاس محيط الأرض بدقة</p>
+                    <p style="margin-top:10px;font-size:.9rem">ألّف "التفهيم"</p>
+                </div>
+                <div class="scholar-card">
+                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <h4>ابن الهيثم</h4>
+                    <p><strong>أبو البصريات</strong></p>
+                    <p style="margin-top:10px;font-size:.9rem">أسس علم البصريات</p>
+                    <p style="margin-top:10px;font-size:.9rem">ألّف "المناظر"</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> إنجازات العلماء بالتفصيل</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الخوارزمي (780-850م)</h4>
+                    <p>محمد بن موسى الخوارزمي، أسس <strong>علم الجبر</strong>، ووضع <strong>الخوارزميات</strong> (Algorithms) التي هي أساس الحاسوب الحديث. كلمة <strong>Algebra</strong> مأخوذة من كتابه "الجبر والمقابلة".</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> ابن سينا (980-1037م)</h4>
+                    <p>أعظم أطباء العصر، ألّف <strong>"القانون في الطب"</strong> الذي ظل مرجعاً في جامعات أوروبا حتى القرن السابع عشر. كما كان فيلسوفاً وعالماً في الفلك والرياضيات.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الرازي (865-925م)</h4>
+                    <p>أبو بكر الرازي، أول من ميّز بين <strong>الجدري والحصبة</strong>. ألّف <strong>"الحاوي في الطب"</strong>، وكان رائداً في الطب التجريبي.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> جابر بن حيان (721-815م)</h4>
+                    <p>أبو الكيمياء، أسس <strong>علم الكيمياء التجريبية</strong>. اكتشف أحماضاً مثل: <strong>حمض النيتريك، الكبريتيك، الهيدروكلوريك</strong>. واخترع الإنبيق.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> البيروني (973-1048م)</h4>
+                    <p>عالم موسوعي، <strong>قاس محيط الأرض</strong> بدقة مذهلة (النتيجة قريبة جداً من القياس الحديث). ألّف أكثر من 150 كتاباً.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> ابن الهيثم (965-1040م)</h4>
+                    <p>أبو البصريات الحديثة، ألّف <strong>"المناظر"</strong> الذي أثّر في <strong>نيوتن</strong> و<strong>ديكارت</strong>. أسس <strong>المنهج التجريبي</strong> في العلوم.</p>
+                </div>
+
+                <div class="solution">✅ العلماء المسلمون أسسوا علوم العصر الحديث</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> المصطلحات العلمية العربية في اللغات الأوروبية:</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>Algebra</strong> (الجبر) ← من كتاب الخوارزمي</li>
+                    <li><strong>Algorithm</strong> (الخوارزمية) ← من اسم الخوارزمي</li>
+                    <li><strong>Alcohol</strong> (الكحول) ← من العربية</li>
+                    <li><strong>Alchemy</strong> (الكيمياء) ← من "الخيمياء" العربية</li>
+                    <li><strong>Alkali</strong> (القلوي) ← من "القلي" العربية</li>
+                    <li><strong>Cipher</strong> (الشيفرة) ← من "الصفر" العربية</li>
+                    <li><strong>Zero</strong> (الصفر) ← من "صفر" العربية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: الإنجازات الحضارية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-city"></i> رابعاً: الإنجازات الحضارية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الحضارة العباسية:</strong> لم تقتصر على العلوم فقط، بل شملت العمارة والفنون والأدب والاقتصاد.
+            </div>
+
+            <div class="four-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-mosque"></i></div>
+                    <h4>1. العمارة</h4>
+                    <p>المساجد، القصور، الجسور</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-palette"></i></div>
+                    <h4>2. الفنون</h4>
+                    <p>الزخرفة، الخط، الخزف</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h4>3. الأدب</h4>
+                    <p>الشعر، النثر، القصص</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-coins"></i></div>
+                    <h4>4. الاقتصاد</h4>
+                    <p>التجارة، الصناعة، الزراعة</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفاصيل الإنجازات الحضارية</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> العمارة الإسلامية</h4>
+                    <p>بنى العباسيون <strong>مدينة بغداد المدورة</strong>، و<strong>قصر الخليفة</strong>، و<strong>المساجد العظيمة</strong> مثل الجامع الكبير في سامراء بمنارته الملوية الشهيرة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الفنون والزخرفة</h4>
+                    <p>ازدهرت <strong>الزخرفة الإسلامية</strong> (الأرابيسك)، و<strong>فن الخط العربي</strong> (الخط الكوفي، النسخ، الثلث)، و<strong>صناعة الخزف</strong> والسيراميك.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الأدب والشعر</h4>
+                    <p>ظهر شعراء كبار مثل: <strong>أبو نواس</strong>، <strong>أبو تمام</strong>، <strong>البحتري</strong>، <strong>المتنبي</strong>، <strong>أبو العلاء المعري</strong>. وأُلّفت <strong>"ألف ليلة وليلة"</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> التجارة والاقتصاد</h4>
+                    <p>امتدت <strong>طرق التجارة</strong> من الصين إلى الأندلس. واستُعملت <strong>السفتجة</strong> (الشيكات). وأصبحت بغداد <strong>أكبر مدينة في العالم</strong>.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> صناعة الورق</h4>
+                    <p>نقلت من الصين إلى بغداد، فانتشرت <strong>المكتبات</strong> و<strong>الكتب</strong>، وسُهّل نشر العلم.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> نظام البريد</h4>
+                    <p>طوّر العباسيون <strong>نظام البريد</strong> (البريد) الذي ينقل الأخبار بين العاصمة والأقاليم بسرعة.</p>
+                </div>
+
+                <div class="solution">✅ الحضارة العباسية شملت جميع مناحي الحياة</div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top:5px solid #27ae60">
+                    <h3 style="color:#27ae60"><i class="fas fa-mosque"></i> أبرز المعالم المعمارية</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>مدينة بغداد المدورة</li>
+                        <li>قصر الخليفة (القصر الذهبي)</li>
+                        <li>جامع سامراء ومنارته الملوية</li>
+                        <li>جامع أبي دلف</li>
+                        <li>قصر الأخيضر</li>
+                        <li>جسور بغداد على دجلة</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top:5px solid #f39c12">
+                    <h3 style="color:#f39c12"><i class="fas fa-palette"></i> أبرز الفنون</h3>
+                    <ul style="padding-right:20px;line-height:2">
+                        <li>الزخرفة الإسلامية (الأرابيسك)</li>
+                        <li>الخط العربي بأنواعه</li>
+                        <li>صناعة الخزف والسيراميك</li>
+                        <li>النقش على الخشب والمعادن</li>
+                        <li>صناعة السجاد</li>
+                        <li>التذهيب في المخطوطات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تأثير الحضارة العباسية على العالم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-globe"></i> خامساً: تأثير الحضارة العباسية على العالم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التأثير العالمي:</strong> انتقلت الحضارة الإسلامية إلى أوروبا، وأسهمت في نهضتها العلمية.
+            </div>
+
+            <div class="three-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-route"></i></div>
+                    <h4>1. عبر الأندلس</h4>
+                    <p>نقلت العلوم إلى أوروبا</p>
+                    <p style="margin-top:10px;font-size:.9rem">عبر طليطلة وقرطبة</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h4>2. عبر صقلية</h4>
+                    <p>نقلت الحضارة إلى إيطاليا</p>
+                    <p style="margin-top:10px;font-size:.9rem">أسس لعصر النهضة</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-crosshairs"></i></div>
+                    <h4>3. عبر الحروب</h4>
+                    <p>الحملات الصليبية</p>
+                    <p style="margin-top:10px;font-size:.9rem">عرف الأوروبيون حضارتنا</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مجالات التأثير</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> في الطب</h4>
+                    <p>ظلت كتب <strong>ابن سينا</strong> و<strong>الرازي</strong> مراجع في جامعات أوروبا حتى القرن السابع عشر. وتأسست كليات الطب على مناهجهم.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> في الرياضيات</h4>
+                    <p>نقل الأوروبيون <strong>الأرقام العربية</strong> (بدلاً من الرومانية)، و<strong>علم الجبر</strong> من الخوارزمي، و<strong>الصفر</strong> الذي أحدث ثورة في الحساب.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> في الفلك</h4>
+                    <p>كثير من <strong>أسماء النجوم</strong> عربية (القطب، النسر، الدبران). واستُعملت <strong>الأسطرلاب</strong> العربية في الملاحة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> في الفلسفة</h4>
+                    <p>نقلت كتب <strong>ابن رشد</strong> إلى أوروبا، وأثّرت في فلاسفة مثل <strong>توما الأكويني</strong>. وأحدثت <strong>الرشدية اللاتينية</strong> نهضة فكرية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> في الصناعة</h4>
+                    <p>نقل الأوروبيون <strong>صناعة الورق</strong>، و<strong>الحرير</strong>، و<strong>السكر</strong>، و<strong>العطور</strong> من العالم الإسلامي.</p>
+                </div>
+
+                <div class="solution">✅ الحضارة الإسلامية أسهمت في بناء الحضارة الحديثة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> اعتراف الغرب بفضل الحضارة الإسلامية:</h4>
+                <p>قال المؤرخ الغربي <strong>جوستاف لوبون</strong>: "إن العرب هم الذين علّموا أوروبا العلوم، وهم الذين أيقظوا عقلها من سباته". وقال <strong>ويل ديورانت</strong>: "كانت الحضارة الإسلامية في عصرها الذهبي أرقى حضارات العالم".</p>
+            </div>
+        </div>
+
+        <!-- سادساً: أسباب ازدهار الحضارة العباسية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> سادساً: أسباب ازدهار الحضارة العباسية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>لماذا ازدهرت الحضارة في العصر العباسي؟</strong> تضافرت عوامل كثيرة جعلت العصر العباسي العصر الذهبي للحضارة الإسلامية.
+            </div>
+
+            <div class="three-columns">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>1. الاستقرار السياسي</h4>
+                    <p>قوة الدولة في عهدها الأول</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-coins"></i></div>
+                    <h4>2. الرخاء الاقتصادي</h4>
+                    <p>ازدهار التجارة والزراعة</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-book-reader"></i></div>
+                    <h4>3. تشجيع العلم</h4>
+                    <p>رعاية الخلفاء للعلماء</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top:15px">
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h4>4. الانفتاح الثقافي</h4>
+                    <p>الاحتكاك بحضارات الأمم</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-language"></i></div>
+                    <h4>5. حركة الترجمة</h4>
+                    <p>نقل علوم الأمم الأخرى</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon"><i class="fas fa-mosque"></i></div>
+                    <h4>6. روح الإسلام</h4>
+                    <p>الحث على العلم والتفكر</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل الأسباب</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الاستقرار السياسي</h4>
+                    <p>في العصر الأول للدولة، كانت الدولة قوية موحدة، مما وفر بيئة آمنة للعلم والعلماء.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الرخاء الاقتصادي</h4>
+                    <p>ازدهرت التجارة بين الصين والهند وأوروبا، فوفرت أموالاً طائلة لرعاية العلم.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> تشجيع الخلفاء</h4>
+                    <p>خلفاء مثل <strong>المنصور</strong> و<strong>الرشيد</strong> و<strong>المأمون</strong> أنفقوا أموالاً طائلة على العلماء والمترجمين.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الانفتاح على الثقافات</h4>
+                    <p>اتساع الدولة جعل المسلمين يحتكون ب<strong>الفارسية واليونانية والهندية</strong>، فاستفادوا من علومها.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> روح الإسلام</h4>
+                    <p>الإسلام يحث على <strong>العلم والتفكر</strong>: ﴿ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ﴾.</p>
+                </div>
+
+                <div class="solution">✅ تضافرت هذه العوامل لصنع حضارة عظيمة</div>
+            </div>
+
+            <div class="quran-box" style="font-size:1.1rem">
+                ﴿ إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ ﴾
+                <p style="font-size:.85rem;margin-top:5px">[سورة فاطر: 28]</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-landmark"></i> مثال 1: زيارة بغداد</h4>
+                <p><strong>المسألة:</strong> إذا زرت بغداد، ما الذي يجب أن تعرفه عن العصر العباسي؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> موقع المدينة المدورة</h4>
+                    <p>آثار بغداد المدورة في وسط بغداد الحالية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> المتحف العراقي</h4>
+                    <p>يحتوي على آثار من العصر العباسي</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> سامراء</h4>
+                    <p>مدينة قريبة، فيها جامع سامراء ومنارته الملوية</p>
+                </div>
+
+                <div class="solution">✅ بغداد كانت عاصمة الحضارة الإسلامية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 2: في حياتنا اليومية</h4>
+                <p><strong>المسألة:</strong> أين نرى آثار الحضارة العباسية اليوم؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> في الحاسوب</h4>
+                    <p>الخوارزميات (Algorithms) من الخوارزمي</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> في الطب</h4>
+                    <p>كثير من المصطلحات الطبية من علماء المسلمين</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> في الرياضيات</h4>
+                    <p>الجبر والأرقام العربية من إرث الحضارة الإسلامية</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> في الفلك</h4>
+                    <p>أسماء النجوم العربية مستخدمة عالمياً</p>
+                </div>
+
+                <div class="solution">✅ الحضارة العباسية حاضرة في حياتنا اليومية</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-book"></i> مثال 3: الاقتداء بالعلماء</h4>
+                <p><strong>المسألة:</strong> كيف نقتدي بعلماء العصر العباسي؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الهمة العالية</h4>
+                    <p>كان العلماء يرحلون في طلب العلم</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الجمع بين العلوم</h4>
+                    <p>كان العالم يجمع بين الطب والرياضيات والفلك</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الإخلاص لله</h4>
+                    <p>كانوا يطلبون العلم لوجه الله</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> خدمة البشرية</h4>
+                    <p>كانوا يؤلفون الكتب لينفعوا الناس</p>
+                </div>
+
+                <div class="solution">✅ الاقتداء بالعلماء المسلمين واجب على كل طالب علم</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن المسلمين أخذوا العلوم من غيرهم فقط</h4>
+                <p>المسلمون <strong>ترجموا</strong> علوم الأمم، لكنهم <strong>أضافوا</strong> و<strong>أبدعوا</strong> و<strong>صححوا</strong> كثيراً من النظريات. الحضارة الإسلامية حضارة <strong>مبدعة</strong> لا ناقلة فقط.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين العصر الأموي والعباسي</h4>
+                <p><strong>الأموي:</strong> عصر الفتوحات العسكرية. <strong>العباسي:</strong> عصر الحضارة والعلم. كلاهما إسلامي لكنهما مختلفان.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: نسيان أن الحضارة العباسية حضارة عالمية</h4>
+                <p>شارك فيها <strong>العرب والفرس والهنود واليونان</strong> تحت راية الإسلام. فهي حضارة إنسانية وليست عرقية.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الاعتقاد أن أوروبا بنيت حضارتها من الصفر</h4>
+                <p>عصر النهضة الأوروبية بُني على <strong>العلوم العربية</strong> التي نُقلت عبر الأندلس وصقلية. واعترف بذلك كثير من المؤرخين الغربيين.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: تجاهل دور الدين في الحضارة</h4>
+                <p>الإسلام حثّ على العلم، و<strong>آيات القرآن</strong> و<strong>الأحاديث</strong> تحث على التفكر. فالحضارة العباسية ثمرة <strong>روح الإسلام</strong>.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: حصر إنجازات العصر في العلم فقط</h4>
+                <p>العصر العباسي شهد إنجازات في <strong>العمارة والفنون والأدب والاقتصاد</strong> أيضاً، لا في العلم فقط.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #8B4513">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>امتداد الدولة:</strong> من الصين شرقاً إلى الأندلس غرباً.</li>
+                <li><strong>الفتوحات في المشرق:</strong> خراسان، ما وراء النهر، السند.</li>
+                <li><strong>الفتوحات في المغرب:</strong> شمال أفريقيا، والأندلس.</li>
+                <li><strong>الحملات على بيزنطة:</strong> في آسيا الصغرى.</li>
+                <li><strong>بيت الحكمة:</strong> أسسه هارون الرشيد، وطوّره المأمون.</li>
+                <li><strong>حركة الترجمة:</strong> نقل علوم اليونان والفرس والهند.</li>
+                <li><strong>الخوارزمي:</strong> أبو الجبر، أسس علم الخوارزميات.</li>
+                <li><strong>ابن سينا:</strong> شيخ الأطباء، صاحب "القانون في الطب".</li>
+                <li><strong>الرازي:</strong> مكتشف الجدري والحصبة.</li>
+                <li><strong>جابر بن حيان:</strong> أبو الكيمياء.</li>
+                <li><strong>البيروني:</strong> قاس محيط الأرض.</li>
+                <li><strong>ابن الهيثم:</strong> أبو البصريات.</li>
+                <li><strong>العمارة:</strong> بغداد المدورة، جامع سامراء.</li>
+                <li><strong>الأدب:</strong> أبو نواس، المتنبي، ألف ليلة وليلة.</li>
+                <li><strong>التأثير على أوروبا:</strong> عبر الأندلس وصقلية.</li>
+                <li><strong>أسباب الازدهار:</strong> الاستقرار، الرخاء، تشجيع العلم، روح الإسلام.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#8B4513;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#27ae60"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#8B4513;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#8B4513;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما هو بيت الحكمة؟",
+                options: ["قصر الخليفة", "مركز علمي للترجمة والبحث", "مسجد كبير", "سوق تجاري"],
+                correct: 1,
+                explanation: "بيت الحكمة مركز علمي عظيم أسسه هارون الرشيد وطوّره المأمون، كان مكتبة ومرصداً ومختبراً وجامعة."
+            },
+            {
+                sentence: "من هو مؤسس علم الجبر؟",
+                options: ["ابن سينا", "الرازي", "الخوارزمي", "جابر بن حيان"],
+                correct: 2,
+                explanation: "الخوارزمي هو أبو الجبر، ألّف كتاب 'الجبر والمقابلة' الذي تُرجم إلى اللاتينية وأصبح أساس الرياضيات الحديثة."
+            },
+            {
+                sentence: "أيّ عالم قاس محيط الأرض بدقة مذهلة؟",
+                options: ["ابن الهيثم", "البيروني", "ابن سينا", "الرازي"],
+                correct: 1,
+                explanation: "البيروني قاس محيط الأرض في سهل سنجار، وكانت نتيجته قريبة جداً من القياس الحديث."
+            },
+            {
+                sentence: "كيف انتقلت الحضارة الإسلامية إلى أوروبا؟",
+                options: ["عبر الحروب فقط", "عبر الأندلس وصقلية", "لم تنتقل أبداً", "عبر البحر الأحمر"],
+                correct: 1,
+                explanation: "انتقلت الحضارة الإسلامية إلى أوروبا عبر الأندلس (إسبانيا) وصقلية (إيطاليا)، وأثرت في عصر النهضة."
+            },
+            {
+                sentence: "ما هو أبرز إنجاز للرازي؟",
+                options: ["تأسيس علم الجبر", "اكتشاف الجدري والحصبة", "قياس محيط الأرض", "تأسيس علم البصريات"],
+                correct: 1,
+                explanation: "الرازي أول من ميّز بين الجدري والحصبة، وألّف 'الحاوي في الطب'."
+            },
+            {
+                sentence: "لماذا يُعتبر العصر العباسي العصر الذهبي للحضارة الإسلامية؟",
+                options: [
+                    "لأنه كان الأقوى عسكرياً",
+                    "لأنه شهد ازدهاراً علمياً وحضارياً غير مسبوق",
+                    "لأنه كان الأطول عمراً",
+                    "لأنه كان الأكبر مساحة"
+                ],
+                correct: 1,
+                explanation: "شهد العصر العباسي ازدهاراً علمياً وحضارياً غير مسبوق، مع بيت الحكمة وحركة الترجمة وظهور علماء غيّروا مسار التاريخ."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

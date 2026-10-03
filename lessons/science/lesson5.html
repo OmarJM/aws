@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="حالات المادة - الصلبة والسائلة والغازية - مادة العلوم - الصف الثاني المتوسط">
+    <title>حالات المادة | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #27ae60; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(39, 174, 96, 0.08); border-right: 4px solid #27ae60; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #27ae60; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #2ecc71; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #27ae60; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #27ae60; margin: 15px 0; }
+        .step-box h4 { color: #27ae60; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #27ae60; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: #2ecc71; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #27ae60; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(39, 174, 96, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #2ecc71; margin-bottom: 15px; }
+        .example-card h4 { color: #27ae60; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #2ecc71; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #27ae60; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #27ae60; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(39, 174, 96, 0.05), rgba(46, 204, 113, 0.05)); border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #27ae60; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #27ae60; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #27ae60; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #27ae60; color: #27ae60; }
+        .state-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .state-visual svg { max-width: 100%; height: auto; }
+        .transformation-diagram { background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.1)); border: 2px solid #27ae60; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .transformation-diagram .main-formula { font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 800; color: #27ae60; margin: 15px 0; }
+        .state-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; transition: transform 0.3s; }
+        .state-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .state-card.solid { border-top-color: #3498db; }
+        .state-card.liquid { border-top-color: #27ae60; }
+        .state-card.gas { border-top-color: #e74c3c; }
+        .state-card h4 { margin-bottom: 10px; }
+        .state-card.solid h4 { color: #3498db; }
+        .state-card.liquid h4 { color: #27ae60; }
+        .state-card.gas h4 { color: #e74c3c; }
+        .state-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .state-card.solid .icon { color: #3498db; }
+        .state-card.liquid .icon { color: #27ae60; }
+        .state-card.gas .icon { color: #e74c3c; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-cubes"></i> حالات المادة (الصلبة، السائلة، الغازية)</h1>
+            <p>خصائص حالات المادة الثلاث، والتغيرات الفيزيائية بينها</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا يتحول الماء من سائل إلى بخار عند الغليان، ومن سائل إلى جليد عند التجمد؟</strong>
+                <p style="margin-top: 10px;">كل المواد من حولنا توجد في إحدى <strong>حالات المادة الثلاث</strong>: الصلبة، السائلة، أو الغازية. هذه الحالات تعتمد على <strong>حركة الجزيئات</strong> و<strong>قوى التجاذب</strong> بينها. في هذا الدرس، سنتعلم خصائص كل حالة وكيف تتحول من حالة إلى أخرى!</p>
+            </div>
+
+            <div class="state-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> حالات المادة الثلاث</h4>
+                <svg width="600" height="200" viewBox="0 0 600 200">
+                    <!-- الحالة الصلبة -->
+                    <rect x="20" y="30" width="160" height="140" rx="10" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="2"/>
+                    <text x="100" y="20" font-family="Tajawal" font-size="14" fill="#3498db" text-anchor="middle" font-weight="700">الحالة الصلبة</text>
+                    <g fill="#3498db">
+                        <circle cx="50" cy="60" r="8"/><circle cx="80" cy="60" r="8"/><circle cx="110" cy="60" r="8"/><circle cx="140" cy="60" r="8"/>
+                        <circle cx="50" cy="90" r="8"/><circle cx="80" cy="90" r="8"/><circle cx="110" cy="90" r="8"/><circle cx="140" cy="90" r="8"/>
+                        <circle cx="50" cy="120" r="8"/><circle cx="80" cy="120" r="8"/><circle cx="110" cy="120" r="8"/><circle cx="140" cy="120" r="8"/>
+                        <circle cx="50" cy="150" r="8"/><circle cx="80" cy="150" r="8"/><circle cx="110" cy="150" r="8"/><circle cx="140" cy="150" r="8"/>
+                    </g>
+                    <text x="100" y="185" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">جزيئات متراصة</text>
+                    
+                    <!-- الحالة السائلة -->
+                    <rect x="220" y="30" width="160" height="140" rx="10" fill="rgba(39, 174, 96, 0.1)" stroke="#27ae60" stroke-width="2"/>
+                    <text x="300" y="20" font-family="Tajawal" font-size="14" fill="#27ae60" text-anchor="middle" font-weight="700">الحالة السائلة</text>
+                    <g fill="#27ae60">
+                        <circle cx="240" cy="70" r="8"/><circle cx="270" cy="60" r="8"/><circle cx="300" cy="75" r="8"/><circle cx="330" cy="65" r="8"/><circle cx="360" cy="80" r="8"/>
+                        <circle cx="245" cy="100" r="8"/><circle cx="275" cy="95" r="8"/><circle cx="305" cy="105" r="8"/><circle cx="335" cy="95" r="8"/><circle cx="365" cy="110" r="8"/>
+                        <circle cx="240" cy="130" r="8"/><circle cx="270" cy="125" r="8"/><circle cx="300" cy="135" r="8"/><circle cx="330" cy="125" r="8"/><circle cx="360" cy="140" r="8"/>
+                        <circle cx="245" cy="160" r="8"/><circle cx="275" cy="155" r="8"/><circle cx="305" cy="165" r="8"/><circle cx="335" cy="155" r="8"/><circle cx="365" cy="170" r="8"/>
+                    </g>
+                    <text x="300" y="185" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle">جزيئات متقاربة</text>
+                    
+                    <!-- الحالة الغازية -->
+                    <rect x="420" y="30" width="160" height="140" rx="10" fill="rgba(231, 76, 60, 0.1)" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="500" y="20" font-family="Tajawal" font-size="14" fill="#e74c3c" text-anchor="middle" font-weight="700">الحالة الغازية</text>
+                    <g fill="#e74c3c">
+                        <circle cx="440" cy="60" r="8"/><circle cx="480" cy="90" r="8"/><circle cx="520" cy="50" r="8"/><circle cx="560" cy="80" r="8"/>
+                        <circle cx="450" cy="130" r="8"/><circle cx="500" cy="150" r="8"/><circle cx="540" cy="120" r="8"/>
+                        <circle cx="470" cy="170" r="8"/><circle cx="530" cy="170" r="8"/>
+                    </g>
+                    <text x="500" y="185" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle">جزيئات متباعدة</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: المادة وجزيئاتها -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-atom"></i> أولاً: المادة وجزيئاتها</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>المادة:</strong> كل شيء له كتلة ويشغل حيزاً من الفراغ.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                تتكون جميع المواد من <strong>جزيئات صغيرة جداً</strong> لا تُرى بالعين المجردة. هذه الجزيئات في حركة مستمرة، وطبيعة حركتها وترتيبها تحدد حالة المادة.
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-compress-arrows-alt"></i> قوى التجاذب</h3>
+                    <p>قوى تربط الجزيئات ببعضها البعض</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>قوية في المواد الصلبة</li>
+                        <li>متوسطة في المواد السائلة</li>
+                        <li>ضعيفة جداً في الغازات</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-running"></i> الطاقة الحركية</h3>
+                    <p>طاقة حركة الجزيئات</p>
+                    <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                        <li>ضعيفة في المواد الصلبة</li>
+                        <li>متوسطة في المواد السائلة</li>
+                        <li>عالية جداً في الغازات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> القاعدة الذهبية:</h4>
+                <p>عند <strong>تسخين</strong> المادة: تزداد الطاقة الحركية للجزيئات  تتغلب على قوى التجاذب  تتحول المادة إلى حالة أقل تماسكاً.</p>
+                <p style="margin-top: 10px;">عند <strong>تبريد</strong> المادة: تقل الطاقة الحركية ➔ تقوى قوى التجاذب ➔ تتحول المادة إلى حالة أكثر تماسكاً.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: الحالة الصلبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-cube"></i> ثانياً: الحالة الصلبة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الحالة الصلبة:</strong> حالة من حالات المادة تتميز بشكل وحجم ثابتين.
+            </div>
+
+            <div class="three-columns">
+                <div class="state-card solid">
+                    <div class="icon"><i class="fas fa-th"></i></div>
+                    <h4>ترتيب الجزيئات</h4>
+                    <p>متراصة ومنتظمة في شبكة بلورية</p>
+                </div>
+                <div class="state-card solid">
+                    <div class="icon"><i class="fas fa-compress"></i></div>
+                    <h4>قوى التجاذب</h4>
+                    <p>قوية جداً</p>
+                </div>
+                <div class="state-card solid">
+                    <div class="icon"><i class="fas fa-wave-square"></i></div>
+                    <h4>حركة الجزيئات</h4>
+                    <p>اهتزاز في مكانها فقط</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> خصائص الحالة الصلبة</h4>
+                <ul style="padding-right: 20px; line-height: 2;">
+                    <li><strong>شكل ثابت:</strong> تحافظ على شكلها (لا تأخذ شكل الإناء)</li>
+                    <li><strong>حجم ثابت:</strong> لا تنضغط بسهولة</li>
+                    <li><strong>كثافة عالية:</strong> الجزيئات متقاربة جداً</li>
+                    <li><strong>لا تتدفق:</strong> الجزيئات لا تنتقل من مكان لآخر</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-lightbulb"></i> أمثلة من الحياة</h4>
+                <div class="two-columns">
+                    <div>
+                        <p><strong>🧊 الجليد:</strong> ماء في حالته الصلبة</p>
+                        <p><strong>🪨 الصخور:</strong> مواد صلبة طبيعية</p>
+                        <p><strong>🔩 المعادن:</strong> حديد، نحاس، ألمنيوم</p>
+                    </div>
+                    <div>
+                        <p><strong> الخشب:</strong> مادة صلبة طبيعية</p>
+                        <p><strong>🧂 الملح:</strong> بلورات صلبة منتظمة</p>
+                        <p><strong> السكر:</strong> حبيبات صلبة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الحالة السائلة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tint"></i> ثالثاً: الحالة السائلة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الحالة السائلة:</strong> حالة من حالات المادة لها حجم ثابت لكن شكلها يتغير حسب الإناء.
+            </div>
+
+            <div class="three-columns">
+                <div class="state-card liquid">
+                    <div class="icon"><i class="fas fa-random"></i></div>
+                    <h4>ترتيب الجزيئات</h4>
+                    <p>متقاربة لكن غير منتظمة</p>
+                </div>
+                <div class="state-card liquid">
+                    <div class="icon"><i class="fas fa-compress-alt"></i></div>
+                    <h4>قوى التجاذب</h4>
+                    <p>متوسطة</p>
+                </div>
+                <div class="state-card liquid">
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h4>حركة الجزيئات</h4>
+                    <p>تنزلق وتتدحرج فوق بعضها</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> خصائص الحالة السائلة</h4>
+                <ul style="padding-right: 20px; line-height: 2;">
+                    <li><strong>شكل متغير:</strong> تأخذ شكل الإناء الذي توضع فيه</li>
+                    <li><strong>حجم ثابت:</strong> لا تنضغط بسهولة</li>
+                    <li><strong>كثافة متوسطة:</strong> أقل من الصلبة وأعلى من الغازية</li>
+                    <li><strong>تتدفق:</strong> الجزيئات تتحرك وتنزلق</li>
+                    <li><strong>سطح مستوٍ:</strong> تحت تأثير الجاذبية</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-lightbulb"></i> أمثلة من الحياة</h4>
+                <div class="two-columns">
+                    <div>
+                        <p><strong>💧 الماء:</strong> أشهر سائل في الحياة</p>
+                        <p><strong>🥛 الحليب:</strong> سائل غذائي</p>
+                        <p><strong>🛢️ الزيت:</strong> سائل لزج</p>
+                    </div>
+                    <div>
+                        <p><strong> العسل:</strong> سائل عالي اللزوجة</p>
+                        <p><strong>🩸 الدم:</strong> سائل حيوي</p>
+                        <p><strong>🧴 العصير:</strong> سائل منعش</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> اللزوجة:</h4>
+                <p>هي مقياس لمقاومة السائل للتدفق. <strong>العسل</strong> أكثر لزوجة من <strong>الماء</strong> لأن جزيئاته تتجاذب بقوة أكبر.</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: الحالة الغازية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-wind"></i> رابعاً: الحالة الغازية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الحالة الغازية:</strong> حالة من حالات المادة ليس لها شكل ولا حجم ثابت.
+            </div>
+
+            <div class="three-columns">
+                <div class="state-card gas">
+                    <div class="icon"><i class="fas fa-expand"></i></div>
+                    <h4>ترتيب الجزيئات</h4>
+                    <p>متباعدة جداً وعشوائية</p>
+                </div>
+                <div class="state-card gas">
+                    <div class="icon"><i class="fas fa-unlink"></i></div>
+                    <h4>قوى التجاذب</h4>
+                    <p>ضعيفة جداً (شبه معدومة)</p>
+                </div>
+                <div class="state-card gas">
+                    <div class="icon"><i class="fas fa-bolt"></i></div>
+                    <h4>حركة الجزيئات</h4>
+                    <p>سريعة جداً وفي كل الاتجاهات</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-list"></i> خصائص الحالة الغازية</h4>
+                <ul style="padding-right: 20px; line-height: 2;">
+                    <li><strong>شكل متغير:</strong> تملأ أي إناء توضع فيه</li>
+                    <li><strong>حجم متغير:</strong> تتمدد وتنضغط بسهولة</li>
+                    <li><strong>كثافة منخفضة:</strong> الجزيئات متباعدة جداً</li>
+                    <li><strong>تنتشر بسرعة:</strong> تملأ الفراغ المتاح</li>
+                    <li><strong>قابلة للانضغاط:</strong> يمكن ضغطها في حيز صغير</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-lightbulb"></i> أمثلة من الحياة</h4>
+                <div class="two-columns">
+                    <div>
+                        <p><strong> الهواء:</strong> خليط من الغازات</p>
+                        <p><strong> الهيليوم:</strong> غاز خفيف للبالونات</p>
+                        <p><strong>🔥 الأكسجين:</strong> ضروري للتنفس</p>
+                    </div>
+                    <div>
+                        <p><strong>🌫️ بخار الماء:</strong> ماء في حالته الغازية</p>
+                        <p><strong>🍳 غاز الطبخ:</strong> للطهي والتدفئة</p>
+                        <p><strong>🫧 ثاني أكسيد الكربون:</strong> في المشروبات الغازية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: مقارنة شاملة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> خامساً: مقارنة شاملة بين الحالات الثلاث</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الخاصية</th>
+                            <th style="background: #3498db;">الصلبة</th>
+                            <th style="background: #27ae60;">السائلة</th>
+                            <th style="background: #e74c3c;">الغازية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الشكل</strong></td>
+                            <td>ثابت</td>
+                            <td>يتغير حسب الإناء</td>
+                            <td>يتغير حسب الإناء</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الحجم</strong></td>
+                            <td>ثابت</td>
+                            <td>ثابت</td>
+                            <td>متغير</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ترتيب الجزيئات</strong></td>
+                            <td>متراصة ومنتظمة</td>
+                            <td>متقاربة وعشوائية</td>
+                            <td>متباعدة جداً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>قوى التجاذب</strong></td>
+                            <td>قوية جداً</td>
+                            <td>متوسطة</td>
+                            <td>ضعيفة جداً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حركة الجزيئات</strong></td>
+                            <td>اهتزاز فقط</td>
+                            <td>انزلاق وتدحرج</td>
+                            <td>حركة سريعة حرة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الكثافة</strong></td>
+                            <td>عالية</td>
+                            <td>متوسطة</td>
+                            <td>منخفضة جداً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الانضغاط</strong></td>
+                            <td>صعبة جداً</td>
+                            <td>صعبة</td>
+                            <td>سهلة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التدفق</strong></td>
+                            <td>لا تتدفق</td>
+                            <td>تتدفق</td>
+                            <td>تنتشر بسرعة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سادساً: التحولات الفيزيائية بين الحالات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync-alt"></i> سادساً: التحولات الفيزيائية بين الحالات</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التغير الفيزيائي:</strong> تغير في حالة المادة دون تغير في تركيبها الكيميائي. يمكن عكسه.
+            </div>
+
+            <div class="transformation-diagram">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> مخطط التحولات بين حالات المادة</h4>
+                <svg width="700" height="400" viewBox="0 0 700 400">
+                    <!-- الحالة الصلبة -->
+                    <rect x="50" y="150" width="150" height="100" rx="10" fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="3"/>
+                    <text x="125" y="195" font-family="Tajawal" font-size="18" fill="#3498db" text-anchor="middle" font-weight="700">الصلبة</text>
+                    <text x="125" y="220" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle">🧊 جليد</text>
+                    
+                    <!-- الحالة السائلة -->
+                    <rect x="275" y="150" width="150" height="100" rx="10" fill="rgba(39, 174, 96, 0.2)" stroke="#27ae60" stroke-width="3"/>
+                    <text x="350" y="195" font-family="Tajawal" font-size="18" fill="#27ae60" text-anchor="middle" font-weight="700">السائلة</text>
+                    <text x="350" y="220" font-family="Tajawal" font-size="12" fill="#27ae60" text-anchor="middle">💧 ماء</text>
+                    
+                    <!-- الحالة الغازية -->
+                    <rect x="500" y="150" width="150" height="100" rx="10" fill="rgba(231, 76, 60, 0.2)" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="575" y="195" font-family="Tajawal" font-size="18" fill="#e74c3c" text-anchor="middle" font-weight="700">الغازية</text>
+                    <text x="575" y="220" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle">💨 بخار</text>
+                    
+                    <!-- الانصهار (صلبة ← سائلة) -->
+                    <line x1="200" y1="180" x2="275" y2="180" stroke="#e67e22" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="237" y="170" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle" font-weight="700">انصهار</text>
+                    <text x="237" y="200" font-family="Tajawal" font-size="10" fill="#e67e22" text-anchor="middle">+ حرارة</text>
+                    
+                    <!-- التجمد (سائلة ← صلبة) -->
+                    <line x1="275" y1="220" x2="200" y2="220" stroke="#3498db" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="237" y="240" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">تجمد</text>
+                    <text x="237" y="255" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">- حرارة</text>
+                    
+                    <!-- التبخر (سائلة ← غازية) -->
+                    <line x1="425" y1="180" x2="500" y2="180" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="462" y="170" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">تبخر</text>
+                    <text x="462" y="200" font-family="Tajawal" font-size="10" fill="#e74c3c" text-anchor="middle">+ حرارة</text>
+                    
+                    <!-- التكاثف (غازية ← سائلة) -->
+                    <line x1="500" y1="220" x2="425" y2="220" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="462" y="240" font-family="Tajawal" font-size="12" fill="#27ae60" text-anchor="middle" font-weight="700">تكاثف</text>
+                    <text x="462" y="255" font-family="Tajawal" font-size="10" fill="#27ae60" text-anchor="middle">- حرارة</text>
+                    
+                    <!-- التسامي (صلبة ← غازية) -->
+                    <path d="M 125 150 Q 125 50 350 50 Q 575 50 575 150" fill="none" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow4)"/>
+                    <text x="350" y="40" font-family="Tajawal" font-size="12" fill="#9b59b6" text-anchor="middle" font-weight="700">تسامي (+ حرارة)</text>
+                    
+                    <!-- الترسيب (غازية ← صلبة) -->
+                    <path d="M 575 250 Q 575 350 350 350 Q 125 350 125 250" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow4)"/>
+                    <text x="350" y="370" font-family="Tajawal" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="700">ترسيب (- حرارة)</text>
+                    
+                    <defs>
+                        <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-fire"></i> 1. الانصهار</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة الصلبة إلى السائلة بامتصاص حرارة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> ذوبان الجليد  ماء</p>
+                    <p><strong>درجة الانصهار:</strong> درجة الحرارة التي تنصهر عندها المادة (للماء = 0°C)</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-snowflake"></i> 2. التجمد</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة السائلة إلى الصلبة بفقدان حرارة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> تجمد الماء ➔ جليد</p>
+                    <p><strong>درجة التجمد:</strong> نفس درجة الانصهار للمادة نفسها</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-cloud-sun"></i> 3. التبخر</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة السائلة إلى الغازية بامتصاص حرارة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> غليان الماء ➔ بخار</p>
+                    <p><strong>درجة الغليان:</strong> للماء = 100°C</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-cloud-rain"></i> 4. التكاثف</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة الغازية إلى السائلة بفقدان حرارة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> تكاثف بخار الماء ➔ قطرات ماء (الندى، السحب)</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-magic"></i> 5. التسامي</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة الصلبة إلى الغازية مباشرة دون المرور بالحالة السائلة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> الثلج الجاف (CO₂ الصلب)، اليود، النفثالين (كرات العث)</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-snowflake"></i> 6. الترسيب</h3>
+                    <p><strong>التعريف:</strong> تحول المادة من الحالة الغازية إلى الصلبة مباشرة.</p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> تكون الصقيع على الأسطح الباردة، تكون بلورات الثلج في السحب</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة مهمة للحفظ:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>التحولات الماصة للحرارة (+):</strong> الانصهار، التبخر، التسامي</li>
+                    <li><strong>التحولات الطاردة للحرارة (-):</strong> التجمد، التكاثف، الترسيب</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سابعاً: منحنى التسخين والتبريد -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> سابعاً: منحنى التسخين والتبريد</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>منحنى التسخين:</strong> رسم بياني يوضح تغير درجة حرارة المادة مع الزمن عند تسخينها.
+            </div>
+
+            <div class="state-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> منحنى تسخين الماء</h4>
+                <svg width="700" height="350" viewBox="0 0 700 350">
+                    <!-- المحاور -->
+                    <line x1="80" y1="300" x2="650" y2="300" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="80" y1="300" x2="80" y2="50" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- تسميات المحاور -->
+                    <text x="365" y="335" font-family="Tajawal" font-size="14" fill="#2c3e50" text-anchor="middle" font-weight="700">الزمن</text>
+                    <text x="30" y="175" font-family="Tajawal" font-size="14" fill="#2c3e50" text-anchor="middle" font-weight="700" transform="rotate(-90, 30, 175)">درجة الحرارة (°C)</text>
+                    
+                    <!-- درجات الحرارة -->
+                    <text x="70" y="305" font-family="Fira Code" font-size="11" fill="#2c3e50" text-anchor="end">0</text>
+                    <text x="70" y="255" font-family="Fira Code" font-size="11" fill="#2c3e50" text-anchor="end">50</text>
+                    <text x="70" y="205" font-family="Fira Code" font-size="11" fill="#2c3e50" text-anchor="end">100</text>
+                    <text x="70" y="155" font-family="Fira Code" font-size="11" fill="#2c3e50" text-anchor="end">150</text>
+                    
+                    <!-- خطوطreference -->
+                    <line x1="80" y1="205" x2="650" y2="205" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="655" y="210" font-family="Tajawal" font-size="11" fill="#e74c3c">100°C (غليان)</text>
+                    
+                    <line x1="80" y1="300" x2="650" y2="300" stroke="#3498db" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="655" y="305" font-family="Tajawal" font-size="11" fill="#3498db">0°C (تجمد)</text>
+                    
+                    <!-- المنحنى -->
+                    <path d="M 80 300 L 200 205 L 350 205 L 450 100 L 600 100 L 650 50" fill="none" stroke="#27ae60" stroke-width="3"/>
+                    
+                    <!-- نقاط التحول -->
+                    <circle cx="200" cy="205" r="5" fill="#e67e22"/>
+                    <circle cx="350" cy="205" r="5" fill="#e67e22"/>
+                    <circle cx="450" cy="100" r="5" fill="#e74c3c"/>
+                    <circle cx="600" cy="100" r="5" fill="#e74c3c"/>
+                    
+                    <!-- تسميات المراحل -->
+                    <text x="140" y="260" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">جليد</text>
+                    <text x="140" y="275" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">(-20°C إلى 0°C)</text>
+                    
+                    <text x="275" y="180" font-family="Tajawal" font-size="12" fill="#e67e22" text-anchor="middle" font-weight="700">انصهار</text>
+                    <text x="275" y="195" font-family="Tajawal" font-size="11" fill="#e67e22" text-anchor="middle">(0°C ثابتة)</text>
+                    
+                    <text x="400" y="160" font-family="Tajawal" font-size="12" fill="#27ae60" text-anchor="middle" font-weight="700">ماء</text>
+                    <text x="400" y="175" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle">(0°C إلى 100°C)</text>
+                    
+                    <text x="525" y="75" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">تبخر</text>
+                    <text x="525" y="90" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle">(100°C ثابتة)</text>
+                    
+                    <text x="625" y="75" font-family="Tajawal" font-size="12" fill="#9b59b6" text-anchor="middle" font-weight="700">بخار</text>
+                    <text x="625" y="90" font-family="Tajawal" font-size="11" fill="#9b59b6" text-anchor="middle">(أعلى من 100°C)</text>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفسير منحنى تسخين الماء</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المرحلة الأولى: تسخين الجليد</h4>
+                    <p>ترتفع درجة الحرارة من -20°C إلى 0°C. الجليد يبقى صلباً.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المرحلة الثانية: الانصهار</h4>
+                    <p>عند 0°C، تتوقف درجة الحرارة عن الارتفاع رغم استمرار التسخين! الطاقة تُستخدم لكسر روابط الجزيئات (تحول صلب ➔ سائل).</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المرحلة الثالثة: تسخين الماء</h4>
+                    <p>ترتفع درجة الحرارة من 0°C إلى 100°C. الماء سائل.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> المرحلة الرابعة: التبخر (الغليان)</h4>
+                    <p>عند 100°C، تتوقف درجة الحرارة مرة أخرى! الطاقة تُستخدم لتحويل الماء إلى بخار.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> المرحلة الخامسة: تسخين البخار</h4>
+                    <p>ترتفع درجة حرارة البخار فوق 100°C.</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> ملاحظة مهمة:</h4>
+                <p>أثناء التحول من حالة إلى أخرى (الانصهار أو التبخر)، <strong>تبقى درجة الحرارة ثابتة</strong> رغم استمرار إضافة الحرارة! لأن الطاقة تُستخدم في كسر الروابط بين الجزيئات وليس في رفع درجة الحرارة.</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> ثامناً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-snowflake"></i> مثال 1: دورة الماء في الطبيعة</h4>
+                <p><strong>المسألة:</strong> كيف تحدث دورة الماء في الطبيعة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> التبخر</h4>
+                    <p>تسخن الشمس مياه البحار والمحيطات ➔ تتحول إلى بخار ماء (سائل ➔ غاز)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> التكاثف</h4>
+                    <p>يرتفع البخار ويبرد في الأعلى ➔ يتكاثف مكوناً السحب (غاز  سائل)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الهطول</h4>
+                    <p>تتكاثف قطرات الماء أكثر ➔ تسقط كأمطار أو ثلج (سائل ➔ صلب في حالة الثلج)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الجريان</h4>
+                    <p>تجري المياه في الأنهار وتعود إلى البحار ➔ تتكرر الدورة</p>
+                </div>
+
+                <div class="solution">✅ دورة الماء مثال حي على التحولات الفيزيائية بين حالات المادة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-utensils"></i> مثال 2: الطبخ والتبريد</h4>
+                <p><strong>المسألة:</strong> لماذا نضع الطعام في الثلاجة؟ ولماذا نطبخ الطعام على النار؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الثلاجة (التبريد)</h4>
+                    <p>تقلل الطاقة الحركية للجزيئات  تبطئ نمو البكتيريا ➔ يحفظ الطعام لفترة أطول</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الطبخ (التسخين)</h4>
+                    <p>تزيد الطاقة الحركية للجزيئات ➔ تكسر الروابط في الطعام ➔ ينضج ويصبح طرياً</p>
+                </div>
+
+                <div class="solution">✅ التغير في درجة الحرارة يغير حالة المادة وخصائصها</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-tint"></i> مثال 3: لماذا يطفو الجليد على الماء؟</h4>
+                <p><strong>المسألة:</strong> لماذا يطفو الجليد على سطح الماء بدلاً من الغرق؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> عند تجمد الماء</h4>
+                    <p>تترتب جزيئات الماء في شكل بلوري منتظم ➔ تبتعد عن بعضها قليلاً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> النتيجة</h4>
+                    <p>كثافة الجليد أقل من كثافة الماء السائل ➔ يطفو على السطح</p>
+                </div>
+
+                <div class="solution">✅ الماء من المواد القليلة التي تتمدد عند التجمد (شذوذ الماء)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-wind"></i> مثال 4: ضغط الإطارات في الصيف والشتاء</h4>
+                <p><strong>المسألة:</strong> لماذا ينخفض ضغط إطارات السيارة في الشتاء؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> في الصيف (حرارة عالية)</h4>
+                    <p>جزيئات الهواء داخل الإطار تتحرك بسرعة ➔ تصطدم بالجدران بقوة ➔ ضغط مرتفع</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> في الشتاء (برودة)</h4>
+                    <p>جزيئات الهواء تتحرك ببطء  تصطدم بالجدران بقوة أقل  ضغط منخفض</p>
+                </div>
+
+                <div class="solution">✅ الغازات تتمدد بالحرارة وتنكمش بالبرودة</div>
+            </div>
+        </div>
+
+        <!-- تاسعاً: تجارب عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flask"></i> تاسعاً: تجارب عملية بسيطة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-vial"></i> تجربة 1: ذوبان الشمعة</h4>
+                <p><strong>الهدف:</strong> ملاحظة التحول من الحالة الصلبة إلى السائلة</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الأدوات</h4>
+                    <p>شمعة، ولاعة، طبق آمن</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الخطوات</h4>
+                    <p>أشعل الشمعة ولاحظ تحول الشمع الصلب إلى سائل عند القاعدة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الملاحظة</h4>
+                    <p>الشمع الصلب ➔ شمع سائل (انصهار) ➔ عند إطفاء الشمعة يتجمد مرة أخرى</p>
+                </div>
+
+                <div class="solution">✅ تحول فيزيائي عكسي (يمكن إرجاعه)</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-vial"></i> تجربة 2: تكاثف البخار</h4>
+                <p><strong>الهدف:</strong> ملاحظة التحول من الحالة الغازية إلى السائلة</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الأدوات</h4>
+                    <p>كوب زجاجي، ماء ساخن، صحن بارد</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الخطوات</h4>
+                    <p>ضع الماء الساخن في الكوب، ثم غطه بالصحن البارد</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الملاحظة</h4>
+                    <p>يتصاعد البخار من الماء الساخن ➔ يتكاثف على الصحن البارد ➔ قطرات ماء</p>
+                </div>
+
+                <div class="solution">✅ بخار ماء (غاز) ➔ ماء سائل (تكاثف)</div>
+            </div>
+        </div>
+
+        <!-- عاشراً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> عاشراً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن المادة تختفي عند التبخر</h4>
+                <p>المادة لا تختفي! بل تتحول إلى حالة غازية غير مرئية. جزيئات الماء لا تزال موجودة في الهواء.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين التبخر والغليان</h4>
+                <p><strong>التبخر:</strong> يحدث عند أي درجة حرارة وعلى السطح فقط.</p>
+                <p><strong>الغليان:</strong> يحدث عند درجة حرارة محددة (درجة الغليان) وفي كل أجزاء السائل.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن درجة الحرارة ترتفع أثناء التحول</h4>
+                <p>أثناء الانصهار أو الغليان، <strong>تبقى درجة الحرارة ثابتة</strong> رغم استمرار التسخين!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان أن التحول الفيزيائي عكسي</h4>
+                <p>التحولات بين حالات المادة <strong>تغيرات فيزيائية</strong> يمكن عكسها (الماء يمكن تجميده ثم إذابته مرة أخرى).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الاعتقاد أن الغازات ليس لها كتلة</h4>
+                <p>الغازات لها كتلة وحجم! balloon المملوء بالهواء أثقل من balloon الفارغ.</p>
+            </div>
+        </div>
+
+        <!-- حادي عشر: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #27ae60;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المادة:</strong> كل شيء له كتلة ويشغل حيزاً من الفراغ.</li>
+                <li><strong>الحالة الصلبة:</strong> شكل وحجم ثابتان، جزيئات متراصة، قوى تجاذب قوية.</li>
+                <li><strong>الحالة السائلة:</strong> حجم ثابت وشكل متغير، جزيئات متقاربة، تتدفق.</li>
+                <li><strong>الحالة الغازية:</strong> شكل وحجم متغيران، جزيئات متباعدة، تنتشر بسرعة.</li>
+                <li><strong>الانصهار:</strong> صلب ➔ سائل (+ حرارة).</li>
+                <li><strong>التجمد:</strong> سائل ➔ صلب (- حرارة).</li>
+                <li><strong>التبخر:</strong> سائل ➔ غاز (+ حرارة).</li>
+                <li><strong>التكاثف:</strong> غاز  سائل (- حرارة).</li>
+                <li><strong>التسامي:</strong> صلب ➔ غاز مباشرة (+ حرارة).</li>
+                <li><strong>الترسيب:</strong> غاز ➔ صلب مباشرة (- حرارة).</li>
+                <li><strong>أثناء التحول:</strong> درجة الحرارة تبقى ثابتة.</li>
+                <li><strong>التحول الفيزيائي:</strong> عكسي، لا يتغير التركيب الكيميائي.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "أي من الخصائص التالية تنطبق على الحالة الصلبة؟",
+                options: ["شكل متغير وحجم ثابت", "شكل ثابت وحجم ثابت", "شكل متغير وحجم متغير", "تتدفق بسهولة"],
+                correct: 1,
+                explanation: "المواد الصلبة لها شكل وحجم ثابتان لأن جزيئاتها متراصة وقوى التجاذب بينها قوية."
+            },
+            {
+                sentence: "ما اسم التحول من الحالة السائلة إلى الغازية؟",
+                options: ["الانصهار", "التجمد", "التبخر", "التكاثف"],
+                correct: 2,
+                explanation: "التبخر هو تحول المادة من الحالة السائلة إلى الغازية بامتصاص حرارة."
+            },
+            {
+                sentence: "عند تسخين الجليد، ماذا يحدث لدرجة الحرارة أثناء الانصهار؟",
+                options: ["ترتفع بسرعة", "تنخفض", "تبقى ثابتة", "تتذبذب"],
+                correct: 2,
+                explanation: "أثناء التحول من حالة إلى أخرى (الانصهار أو الغليان)، تبقى درجة الحرارة ثابتة لأن الطاقة تُستخدم في كسر الروابط."
+            },
+            {
+                sentence: "أي من المواد التالية يحدث لها تسامي؟",
+                options: ["الماء", "الحديد", "اليود", "الزئبق"],
+                correct: 2,
+                explanation: "اليود من المواد التي تتسامى، أي تتحول من الحالة الصلبة إلى الغازية مباشرة دون المرور بالحالة السائلة."
+            },
+            {
+                sentence: "لماذا يطفو الجليد على سطح الماء؟",
+                options: ["لأنه أخف وزناً", "لأن كثافته أقل من الماء السائل", "لأنه أكبر حجماً", "لأنه يحتوي على هواء"],
+                correct: 1,
+                explanation: "عند تجمد الماء، تترتب جزيئاته في شكل بلوري يجعل كثافته أقل من الماء السائل، لذلك يطفو."
+            },
+            {
+                sentence: "ما التحول الذي يحدث عند تكون الندى على الأوراق في الصباح الباكر؟",
+                options: ["التبخر", "التكاثف", "الانصهار", "التسامي"],
+                correct: 1,
+                explanation: "الندى يتكون عندما يتكاثف بخار الماء الموجود في الهواء على الأسطح الباردة، فيتحول من غاز إلى سائل."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

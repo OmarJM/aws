@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="استراتيجية حل المسألة: البحث عن نمط - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>استراتيجية حل المسألة: البحث عن نمط | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .pattern-visual { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+        .pattern-item { background: var(--bg-color); padding: 15px; border-radius: 10px; border: 2px solid var(--subject-primary); text-align: center; min-width: 80px; font-family: 'Fira Code', monospace; font-weight: 700; color: var(--subject-primary); }
+        .pattern-arrow { font-size: 1.5rem; color: var(--subject-secondary); }
+        .pattern-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .pattern-table th, .pattern-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; font-family: 'Fira Code', monospace; }
+        .pattern-table th { background: var(--subject-secondary); color: white; }
+        .pattern-table tr:nth-child(even) { background: var(--bg-color); }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } .pattern-visual { gap: 5px; } .pattern-item { min-width: 60px; padding: 10px; font-size: 0.9rem; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-puzzle-piece"></i> استراتيجية حل المسألة: البحث عن نمط</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا نبحث عن الأنماط في الرياضيات؟</strong>
+                <p style="margin-top: 10px;">الرياضيات مليئة بالأنماط! عندما نكتشف نمطاً في مسألة، يمكننا التنبؤ بالنتائج المستقبلية وحل مسائل معقدة بطريقة سهلة ومنظمة. هذه الاستراتيجية من أقوى أدوات حل المسائل الرياضية.</p>
+            </div>
+
+            <div class="pattern-visual">
+                <div class="pattern-item">2</div>
+                <div class="pattern-arrow"><i class="fas fa-arrow-left"></i></div>
+                <div class="pattern-item">4</div>
+                <div class="pattern-arrow"><i class="fas fa-arrow-left"></i></div>
+                <div class="pattern-item">6</div>
+                <div class="pattern-arrow"><i class="fas fa-arrow-left"></i></div>
+                <div class="pattern-item">8</div>
+                <div class="pattern-arrow"><i class="fas fa-arrow-left"></i></div>
+                <div class="pattern-item" style="border-color: var(--success-color); color: var(--success-color);">?</div>
+            </div>
+            <p style="text-align: center; font-size: 1.1rem;"><strong>ما العدد التالي؟</strong> (الإجابة: 10 - لأن النمط هو إضافة 2 في كل مرة)</p>
+        </div>
+
+        <!-- أولاً: ما هو النمط؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو النمط؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> النمط هو ترتيب منتظم للأعداد أو الأشكال أو الرموز يتكرر وفق قاعدة محددة.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                النمط موجود في كل مكان حولنا: في الطبيعة (أوراق الشجر، قوقعة الحلزون)، في الفن (الزخارف الإسلامية)، في الموسيقى (الإيقاع)، وفي الرياضيات (المتتاليات العددية).
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-hashtag"></i> أنماط عددية</h3>
+                    <p>تتكون من أعداد تتبع قاعدة معينة</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                        3, 6, 9, 12, 15, ...
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">القاعدة: إضافة 3 في كل مرة</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-shapes"></i> أنماط هندسية</h3>
+                    <p>تتكون من أشكال تتكرر أو تنمو وفق قاعدة</p>
+                    <div style="text-align: center; margin: 15px 0; font-size: 2rem;">
+                        🔺 → 🔺 → 🔺🔺🔺 → 🔺🔺🔺🔺
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">القاعدة: إضافة مثلث في كل مرة</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-redo"></i> أنماط متكررة</h3>
+                    <p>نفس العناصر تتكرر بنفس الترتيب</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                        أ، ب، ج، أ، ب، ج، أ، ب، ...
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-chart-line"></i> أنماط متنامية</h3>
+                    <p>العناصر تزداد أو تنقص بمعدل ثابت</p>
+                    <div class="math-box" style="font-size: 1.1rem; margin: 10px 0;">
+                        2, 4, 8, 16, 32, ...
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">القاعدة: الضرب في 2</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: خطوات البحث عن نمط -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-list-ol"></i> ثانياً: خطوات البحث عن نمط</h2>
+            
+            <p style="margin-bottom: 20px;">عند مواجهة مسألة رياضية، اتبع هذه الخطوات الأربع لاكتشاف النمط:</p>
+
+            <ol class="steps-list">
+                <li><strong>اقرأ المسألة بعناية</strong> وحدد المعطيات والمطلوب.</li>
+                <li><strong>ابحث عن العلاقة</strong> بين الأعداد أو الأشكال المعطاة (هل هي جمع؟ طرح؟ ضرب؟ قسمة؟).</li>
+                <li><strong>اختبر القاعدة</strong> التي اكتشفتها على جميع العناصر المعطاة للتأكد من صحتها.</li>
+                <li><strong>طبّق القاعدة</strong> لإيجاد العنصر المجهول أو التنبؤ بالعناصر التالية.</li>
+            </ol>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> نصيحة ذهبية:</h4>
+                <p>استخدم <strong>جدولاً</strong> لتنظيم البيانات! الجدول يساعدك على رؤية النمط بوضوح أكبر.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: أمثلة محلولة - أنماط عددية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-plus-circle"></i> ثالثاً: أمثلة محلولة - أنماط عددية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: نمط جمعي</h4>
+                <div class="problem">أوجد الحد التالي في المتتالية: 5, 9, 13, 17, ...</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن العلاقة بين الأعداد</h4>
+                    <div class="calculation">9 - 5 = 4</div>
+                    <div class="calculation">13 - 9 = 4</div>
+                    <div class="calculation">17 - 13 = 4</div>
+                    <p style="text-align: center;"><strong>القاعدة: إضافة 4 في كل مرة</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق القاعدة</h4>
+                    <div class="calculation">17 + 4 = 21</div>
+                </div>
+
+                <div class="math-box">
+                    الحد التالي = 21
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: نمط طرحي</h4>
+                <div class="problem">أوجد الحد التالي: 100, 90, 80, 70, ...</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن العلاقة</h4>
+                    <div class="calculation">100 - 90 = 10</div>
+                    <div class="calculation">90 - 80 = 10</div>
+                    <p style="text-align: center;"><strong>القاعدة: طرح 10 في كل مرة</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق القاعدة</h4>
+                    <div class="calculation">70 - 10 = 60</div>
+                </div>
+
+                <div class="math-box">
+                    الحد التالي = 60
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: نمط ضربي</h4>
+                <div class="problem">أوجد الحد التالي: 2, 6, 18, 54, ...</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن العلاقة</h4>
+                    <div class="calculation">6 ÷ 2 = 3</div>
+                    <div class="calculation">18 ÷ 6 = 3</div>
+                    <div class="calculation">54 ÷ 18 = 3</div>
+                    <p style="text-align: center;"><strong>القاعدة: الضرب في 3</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق القاعدة</h4>
+                    <div class="calculation">54 × 3 = 162</div>
+                </div>
+
+                <div class="math-box">
+                    الحد التالي = 162
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: نمط مربعات الأعداد</h4>
+                <div class="problem">أوجد الحد التالي: 1, 4, 9, 16, 25, ...</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن العلاقة</h4>
+                    <div class="calculation">1 = 1²</div>
+                    <div class="calculation">4 = 2²</div>
+                    <div class="calculation">9 = 3²</div>
+                    <div class="calculation">16 = 4²</div>
+                    <div class="calculation">25 = 5²</div>
+                    <p style="text-align: center;"><strong>القاعدة: مربع العدد الترتيبي</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق القاعدة</h4>
+                    <div class="calculation">6² = 36</div>
+                </div>
+
+                <div class="math-box">
+                    الحد التالي = 36
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: نمط فيبوناتشي</h4>
+                <div class="problem">أوجد الحد التالي: 1, 1, 2, 3, 5, 8, 13, ...</div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن العلاقة</h4>
+                    <div class="calculation">1 + 1 = 2</div>
+                    <div class="calculation">1 + 2 = 3</div>
+                    <div class="calculation">2 + 3 = 5</div>
+                    <div class="calculation">3 + 5 = 8</div>
+                    <div class="calculation">5 + 8 = 13</div>
+                    <p style="text-align: center;"><strong>القاعدة: كل حد = مجموع الحدين السابقين</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق القاعدة</h4>
+                    <div class="calculation">8 + 13 = 21</div>
+                </div>
+
+                <div class="math-box">
+                    الحد التالي = 21
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: أمثلة محلولة - أنماط هندسية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-shapes"></i> رابعاً: أمثلة محلولة - أنماط هندسية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: نمط المربعات</h4>
+                <p><strong>المسألة:</strong> في الشكل الأول مربع واحد، في الشكل الثاني 4 مربعات، في الشكل الثالث 9 مربعات. كم مربعاً في الشكل الخامس؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نظّم البيانات في جدول</h4>
+                    <div class="table-responsive">
+                        <table class="pattern-table">
+                            <tr><th>رقم الشكل</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+                            <tr><th>عدد المربعات</th><td>1</td><td>4</td><td>9</td><td>?</td><td>?</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ابحث عن النمط</h4>
+                    <div class="calculation">1 = 1²</div>
+                    <div class="calculation">4 = 2²</div>
+                    <div class="calculation">9 = 3²</div>
+                    <p style="text-align: center;"><strong>القاعدة: عدد المربعات = (رقم الشكل)²</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> طبّق القاعدة</h4>
+                    <div class="calculation">الشكل الرابع: 4² = 16</div>
+                    <div class="calculation">الشكل الخامس: 5² = 25</div>
+                </div>
+
+                <div class="math-box">
+                    الشكل الخامس يحتوي على 25 مربعاً
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 7: نمط العيدان (الكبريت)</h4>
+                <p><strong>المسألة:</strong> لبناء مربع واحد نحتاج 4 أعواد، لمربعين متصلين 7 أعواد، لثلاثة مربعات 10 أعواد. كم عوداً نحتاج لبناء 6 مربعات متصلة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نظّم البيانات</h4>
+                    <div class="table-responsive">
+                        <table class="pattern-table">
+                            <tr><th>عدد المربعات</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+                            <tr><th>عدد الأعواد</th><td>4</td><td>7</td><td>10</td><td>?</td><td>?</td><td>?</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ابحث عن النمط</h4>
+                    <div class="calculation">7 - 4 = 3</div>
+                    <div class="calculation">10 - 7 = 3</div>
+                    <p style="text-align: center;"><strong>القاعدة: إضافة 3 أعواد لكل مربع جديد</strong></p>
+                    <p style="text-align: center; font-size: 0.9rem;">الصيغة: عدد الأعواد = 3ن + 1 (حيث ن = عدد المربعات)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> طبّق القاعدة</h4>
+                    <div class="calculation">4 مربعات: 10 + 3 = 13</div>
+                    <div class="calculation">5 مربعات: 13 + 3 = 16</div>
+                    <div class="calculation">6 مربعات: 16 + 3 = 19</div>
+                </div>
+
+                <div class="math-box">
+                    نحتاج 19 عوداً لبناء 6 مربعات
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 8: نمط المثلثات</h4>
+                <p><strong>المسألة:</strong> مثلث واحد له 3 أضلاع. مثلثان متشاركان في ضلع واحد لهما 5 أضلاع. ثلاثة مثلثات متشاركة لها 7 أضلاع. كم ضلعاً لـ 8 مثلثات متشاركة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نظّم البيانات</h4>
+                    <div class="table-responsive">
+                        <table class="pattern-table">
+                            <tr><th>عدد المثلثات</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                            <tr><th>عدد الأضلاع</th><td>3</td><td>5</td><td>7</td><td>?</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ابحث عن النمط</h4>
+                    <div class="calculation">5 - 3 = 2</div>
+                    <div class="calculation">7 - 5 = 2</div>
+                    <p style="text-align: center;"><strong>القاعدة: إضافة 2 ضلعين لكل مثلث جديد</strong></p>
+                    <p style="text-align: center; font-size: 0.9rem;">الصيغة: عدد الأضلاع = 2ن + 1</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> طبّق القاعدة لـ 8 مثلثات</h4>
+                    <div class="calculation">2 × 8 + 1 = 16 + 1 = 17</div>
+                </div>
+
+                <div class="math-box">
+                    8 مثلثات متشاركة لها 17 ضلعاً
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-piggy-bank"></i> مثال 9: الادخار</h4>
+                <p><strong>المسألة:</strong> ادخر أحمد 10 ريالات في الأسبوع الأول، 15 ريالاً في الأسبوع الثاني، 20 ريالاً في الأسبوع الثالث. كم ريالاً سيدخر في الأسبوع العاشر؟ وما إجمالي ادخاره في 10 أسابيع؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن النمط</h4>
+                    <div class="calculation">15 - 10 = 5</div>
+                    <div class="calculation">20 - 15 = 5</div>
+                    <p style="text-align: center;"><strong>القاعدة: زيادة 5 ريالات كل أسبوع</strong></p>
+                    <p style="text-align: center; font-size: 0.9rem;">الصيغة: الادخار في الأسبوع ن = 5ن + 5</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب ادخار الأسبوع العاشر</h4>
+                    <div class="calculation">5 × 10 + 5 = 55 ريالاً</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الإجمالي (مجموع المتتالية)</h4>
+                    <p>المجموع = (العدد الأول + العدد الأخير) × عدد الحدود ÷ 2</p>
+                    <div class="calculation">(10 + 55) × 10  2 = 65 × 5 = 325 ريالاً</div>
+                </div>
+
+                <div class="math-box">
+                    الأسبوع العاشر: 55 ريالاً | الإجمالي: 325 ريالاً
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-building"></i> مثال 10: بناء برج</h4>
+                <p><strong>المسألة:</strong> بُني برج من المكعبات: الطابق الأول يحتوي على مكعب واحد، الثاني على 4 مكعبات، الثالث على 9 مكعبات. كم مكعباً في الطابق العاشر؟ وكم إجمالي المكعبات في البرج؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابحث عن النمط</h4>
+                    <div class="calculation">1 = 1²</div>
+                    <div class="calculation">4 = 2²</div>
+                    <div class="calculation">9 = 3²</div>
+                    <p style="text-align: center;"><strong>القاعدة: عدد المكعبات = (رقم الطابق)²</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب مكعبات الطابق العاشر</h4>
+                    <div class="calculation">10² = 100 مكعب</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الإجمالي</h4>
+                    <div class="calculation">1² + 2² + 3² + ... + 10²</div>
+                    <div class="calculation">= 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 = 385</div>
+                </div>
+
+                <div class="math-box">
+                    الطابق العاشر: 100 مكعب | الإجمالي: 385 مكعباً
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-users"></i> مثال 11: جلوس الطلاب</h4>
+                <p><strong>المسألة:</strong> طاولة واحدة تتسع لـ 4 طلاب. عند ضم طاولتين تتسعان لـ 6 طلاب. ثلاث طاولات تتسع لـ 8 طلاب. كم طالباً تتسع له 7 طاولات مضمومة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> نظّم البيانات</h4>
+                    <div class="table-responsive">
+                        <table class="pattern-table">
+                            <tr><th>عدد الطاولات</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+                            <tr><th>عدد الطلاب</th><td>4</td><td>6</td><td>8</td><td>?</td><td>?</td><td>?</td><td>?</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ابحث عن النمط</h4>
+                    <div class="calculation">6 - 4 = 2</div>
+                    <div class="calculation">8 - 6 = 2</div>
+                    <p style="text-align: center;"><strong>القاعدة: إضافة طالبين لكل طاولة جديدة</strong></p>
+                    <p style="text-align: center; font-size: 0.9rem;">الصيغة: عدد الطلاب = 2ن + 2</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> طبّق القاعدة</h4>
+                    <div class="calculation">2 × 7 + 2 = 14 + 2 = 16</div>
+                </div>
+
+                <div class="math-box">
+                    7 طاولات تتسع لـ 16 طالباً
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: افتراض النمط من عنصرين فقط</h4>
+                <p>يجب أن يتحقق النمط من <strong>ثلاثة عناصر على الأقل</strong> قبل الاعتماد عليه.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong> خاطئ:</strong> 2, 4, ... ➔ النمط هو الضرب في 2 (قد يكون أيضاً إضافة 2!)</p>
+                    <p style="margin-top: 8px;"><strong>✅ صحيح:</strong> 2, 4, 8, 16 ➔ النمط واضح: الضرب في 2</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: عدم اختبار القاعدة على جميع العناصر</h4>
+                <p>بعد اكتشاف النمط، <strong>اختبره على كل العناصر المعطاة</strong> للتأكد من صحته.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الخلط بين رقم العنصر وقيمته</h4>
+                <p>في الصيغ مثل (2ن + 1)، <strong>ن</strong> هو رقم العنصر (1, 2, 3...) وليس قيمته.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> في المتتالية 3, 5, 7, 9... العنصر الرابع = 2(4) + 1 = 9 ✓</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: تجاهل استخدام الجدول</h4>
+                <p>الجدول أداة قوية جداً! <strong>لا تحل المسألة ذهنياً فقط</strong>، بل نظّم البيانات في جدول.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>النمط:</strong> ترتيب منتظم يتكرر وفق قاعدة محددة.</li>
+                <li><strong>أنواع الأنماط:</strong> عددية، هندسية، متكررة، متنامية.</li>
+                <li><strong>خطوات الحل:</strong> اقرأ ➔ ابحث عن العلاقة ➔ اختبر ➔ طبّق.</li>
+                <li><strong>استخدم الجدول</strong> لتنظيم البيانات ورؤية النمط بوضوح.</li>
+                <li><strong>تحقق من النمط</strong> على ثلاثة عناصر على الأقل.</li>
+                <li><strong>الصيغة العامة:</strong> تساعدك على إيجاد أي عنصر مباشرة (مثل: 2ن + 1).</li>
+                <li><strong>التطبيقات الحياتية:</strong> الادخار، البناء، التخطيط، البرمجة.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "أوجد الحد التالي في المتتالية: 3, 7, 11, 15, ...",
+                options: ["18", "19", "20", "21"],
+                correct: 1,
+                explanation: "النمط: إضافة 4. إذن 15 + 4 = 19."
+            },
+            {
+                sentence: "أوجد الحد التالي: 1, 4, 9, 16, 25, ...",
+                options: ["30", "35", "36", "49"],
+                correct: 2,
+                explanation: "النمط: مربعات الأعداد (1², 2², 3², 4², 5²). الحد التالي = 6² = 36."
+            },
+            {
+                sentence: "في نمط الأعواد: مربع واحد = 4 أعواد، مربعان = 7 أعواد. كم عوداً لـ 5 مربعات؟",
+                options: ["13", "15", "16", "20"],
+                correct: 2,
+                explanation: "النمط: 3ن + 1. لـ 5 مربعات: 3×5 + 1 = 16 عوداً."
+            },
+            {
+                sentence: "أحمد يدخر: 5, 10, 20, 40, ... ريالاً. كم ريالاً في الأسبوع الخامس؟",
+                options: ["60", "70", "80", "100"],
+                correct: 2,
+                explanation: "النمط: الضرب في 2. إذن 40 × 2 = 80 ريالاً."
+            },
+            {
+                sentence: "ما الصيغة العامة للمتتالية: 2, 5, 8, 11, 14, ...؟",
+                options: ["2ن", "3ن - 1", "3ن + 1", "2ن + 1"],
+                correct: 1,
+                explanation: "النمط: إضافة 3. عند ن=1: 3(1)-1=2 ✓ عند ن=2: 3(2)-1=5 ✓ الصيغة: 3ن - 1."
+            },
+            {
+                sentence: "طاولة واحدة تتسع لـ 6 طلاب، طاولتان لـ 10 طلاب، ثلاث طاولات لـ 14 طالباً. كم طالباً لـ 4 طاولات؟",
+                options: ["16", "18", "20", "24"],
+                correct: 1,
+                explanation: "النمط: إضافة 4 طلاب لكل طاولة. الصيغة: 4ن + 2. لـ 4 طاولات: 4×4+2 = 18 طالباً."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

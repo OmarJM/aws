@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة الدراسات الاجتماعية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>الدراسات الاجتماعية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة جداً بمادة الدراسات الاجتماعية فقط */
+        .page-title .subtitle-deco {
+            font-size: 1rem;
+            color: var(--subject-secondary);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body class="subject-social">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-landmark"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="social.html" class="active">الاجتماعيات</a></li>
+                    <li><a href="../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="ابحث عن درس..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <div class="subtitle-deco">✦ التاريخ والجغرافيا ✦</div>
+            <h1><i class="fas fa-globe-americas"></i> مادة الدراسات الاجتماعية</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- سيتم بناء الأقسام والدروس هنا ديناميكياً بواسطة JavaScript -->
+        <div id="lessonsContainer"></div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/social-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة الدراسات الاجتماعية فقط  -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'social';
+        
+        // بيانات دروس الدراسات الاجتماعية مقسمة حسب الأقسام
+        const LESSONS_DATA = [
+            // القسم الأول: التاريخ
+            { section: 'section1', title: 'بداية الدولة الأموية', desc: 'تأسيس الدولة الأموية على يد معاوية بن أبي سفيان، ونقل العاصمة إلى دمشق.', videoId: 'BMind8PHQWE', image: 'lesson1.jpg', pdf: 'lesson1.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'امتداد الدولة الأموية وجهودها في نشر الإسلام', desc: 'الفتوحات الإسلامية في عهد الدولة الأموية في المشرق والمغرب والأندلس.', videoId: 'HeAFMz0FC_Y', image: 'lesson2.jpg', pdf: 'lesson2.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'نهاية الدولة الأموية', desc: 'أسباب سقوط الدولة الأموية، وظهور الدولة العباسية.', videoId: '9rflGnhHkE4', image: 'lesson3.jpg', pdf: 'lesson3.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'الدولة العباسية وابرز خلفائها', desc: 'تأسيس الدولة العباسية، عصرها الذهبي، وأبرز خلفائها مثل هارون الرشيد والمأمون.', videoId: 'TsYKwtd_Mas', image: 'lesson4.jpg', pdf: 'lesson4.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'امتداد الدولة العباسية', desc: 'الفتوحات والإنجازات العلمية والحضارية في عهد الدولة العباسية.', videoId: '31TQIriRzyc', image: 'lesson5.jpg', pdf: 'lesson5.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'نهاية الدولة العباسية', desc: 'أسباب سقوط الدولة العباسية على يد المغول عام 656 هـ / 1258 م.', videoId: 'G3ql4m3Ipf8', image: 'lesson6.jpg', pdf: 'lesson6.pdf', badge: 'تاريخ' },
+            { section: 'section1', title: 'الدولة العثمانية', desc: 'تأسيس الدولة العثمانية، فتح القسطنطينية، وأهم مراحلها التاريخية.', videoId: 'jq0SggTYuCc', image: 'lesson7.jpg', pdf: 'lesson7.pdf', badge: 'تاريخ' },
+            
+            // القسم الثاني: الجغرافيا
+            { section: 'section2', title: 'الأقاليم الجغرافية', desc: 'مفهوم الأقاليم الجغرافية، أنواعها، وخصائص كل إقليم.', videoId: '-4dpVu_HTUI', image: 'lesson8.jpg', pdf: 'lesson8.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الخريطة الطبوغرافية', desc: 'مفهوم الخريطة الطبوغرافية، خطوط الكنتور، وكيفية قراءة التضاريس.', videoId: 'Wu001Fnc4Yo', image: 'lesson9.jpg', pdf: 'lesson9.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الغلاف الجوي', desc: 'تركيب الغلاف الجوي، طبقاته، وأهميته للحياة على الأرض.', videoId: 'W9xya92zicM', image: 'lesson10.jpg', pdf: 'lesson10.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الطقس والمناخ', desc: 'الفرق بين الطقس والمناخ، العوامل المؤثرة فيهما، وأنواع المناخ.', videoId: 'G6CZaMRYOKE', image: 'lesson11.jpg', pdf: 'lesson11.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'عناصر الطقس والمناخ', desc: 'درجة الحرارة، الرطوبة، الرياح، الضغط الجوي، والتساقط.', videoId: '5iskDiw134o', image: 'lesson12.jpg', pdf: 'lesson12.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الغلاف الصخري', desc: 'تركيب الغلاف الصخري، نظرية الصفائح التكتونية، وتكوين القارات.', videoId: '-vRS_V1ow68', image: 'lesson13.jpg', pdf: 'lesson13.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'العوامل الداخلية والخارجية لتشكيل سطح الأرض', desc: 'الزلازل، البراكين، التجوية، التعرية، وتأثيرها على سطح الأرض.', videoId: 'Hb9v6lLMTlM', image: 'lesson14.jpg', pdf: 'lesson14.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الغلاف الحيوي', desc: 'مفهوم الغلاف الحيوي، مكوناته، وتفاعله مع الغلافات الأخرى.', videoId: 'HMTdOXWx4uM', image: 'lesson15.jpg', pdf: 'lesson15.pdf', badge: 'جغرافيا' },
+            { section: 'section2', title: 'الأقاليم الحيوية', desc: 'الصحراء، الغابة الاستوائية، التندرا، السافانا، وأبرز خصائصها.', videoId: 'y6AXSD0tA-k', image: 'lesson16.jpg', pdf: 'lesson16.pdf', badge: 'جغرافيا' }
+        ];
+        
+        // بناء الأقسام وبطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            const sections = [
+                { id: 'section1', title: 'القسم الأول: التاريخ - الدول الإسلامية', icon: 'fas fa-landmark' },
+                { id: 'section2', title: 'القسم الثاني: الجغرافيا', icon: 'fas fa-globe' }
+            ];
+            
+            sections.forEach(sec => {
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerHTML = `<i class="${sec.icon}"></i><span>${sec.title}</span>`;
+                container.appendChild(sectionTitle);
+                
+                const grid = document.createElement('div');
+                grid.className = 'lessons-grid';
+                grid.id = sec.id;
+                container.appendChild(grid);
+            });
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const grid = document.getElementById(lesson.section);
+                if (!grid) return;
+                
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/6d4c41/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <span class="section-badge">${lesson.badge}</span>
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> مؤرخ وجغرافي متميز! نتيجتك: ${score} من ${questions.length}.`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> جيد جداً! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

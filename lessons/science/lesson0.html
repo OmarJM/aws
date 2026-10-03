@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجهاز البولي وأمراضه | العلوم - ثاني متوسط</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #27ae60;
+            --secondary-color: #2c3e50;
+            --accent-color: #2ecc71;
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+            --bg-color: #ffffff;
+            --card-bg: #f8f9fa;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            direction: rtl;
+            text-align: right;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .lesson-header h1 { color: var(--primary-color); font-size: 2rem; margin-bottom: 10px; }
+        .lesson-header p { color: var(--secondary-color); font-size: 1.1rem; font-weight: 600; }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-right: 5px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(39, 174, 96, 0.08);
+            border-right: 4px solid var(--primary-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .math-box {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-color);
+            margin: 15px 0;
+            text-align: center;
+            font-family: 'Fira Code', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .step-box {
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-right: 3px solid var(--primary-color);
+        }
+        .step-box h4 { color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 26px; height: 26px;
+            background: var(--primary-color); color: white;
+            border-radius: 50%; font-weight: 700; font-size: 0.85rem;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .three-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .column-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+        }
+        .column-card h3 { margin-bottom: 10px; font-size: 1.1rem; }
+
+        .example-card {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-color);
+            margin-bottom: 15px;
+        }
+        .example-card h4 { color: var(--primary-color); margin-bottom: 10px; }
+        .example-card .solution {
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: #155724;
+            margin-top: 10px;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border-right: 5px solid var(--error-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .warning-box h4 { color: #721c24; margin-bottom: 8px; }
+
+        .golden-tip {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .golden-tip h4 { color: #856404; margin-bottom: 8px; }
+
+        .organ-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 5px solid var(--primary-color);
+            text-align: center;
+        }
+        .organ-card h4 { margin-bottom: 10px; color: var(--primary-color); }
+        .organ-card .icon { font-size: 2rem; margin-bottom: 10px; color: var(--primary-color); }
+
+        .process-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 5px solid #3498db;
+            text-align: center;
+        }
+        .process-card h4 { margin-bottom: 10px; color: #3498db; }
+        .process-card .icon { font-size: 2rem; margin-bottom: 10px; color: #3498db; }
+
+        .disease-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 5px solid #e74c3c;
+        }
+        .disease-card h4 { color: #e74c3c; margin-bottom: 10px; }
+        .disease-card .icon { font-size: 2rem; color: #e74c3c; margin-bottom: 10px; }
+
+        .organ-visual {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .organ-visual svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .custom-table th, .custom-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .custom-table th { background: var(--primary-color); color: white; }
+        .custom-table tr:nth-child(even) { background: #f8f9fa; }
+
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li {
+            position: relative;
+            padding: 8px 0 8px 25px;
+            margin-bottom: 5px;
+        }
+        .tree-list li::before {
+            content: '•';
+            position: absolute;
+            right: 0;
+            top: 8px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .tree-list li strong { color: var(--primary-color); }
+
+        .page-break { page-break-before: always; break-before: page; }
+
+        @media print {
+            body {
+                background: white;
+                padding: 10mm;
+                max-width: 100%;
+                font-size: 11pt;
+            }
+            .content-card, .example-card, .warning-box, .column-card, .step-box, .organ-card, .process-card, .disease-card, .organ-visual {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            .highlight-box, .warning-box, .golden-tip, .organ-card, .process-card, .disease-card, .custom-table th {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .lesson-header { page-break-after: avoid; }
+            .section-title { page-break-after: avoid; }
+            a { text-decoration: none; color: black; }
+            .no-print { display: none !important; }
+        }
+
+        @media (max-width: 768px) {
+            .two-columns, .three-columns { grid-template-columns: 1fr; }
+            .lesson-header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lesson-header">
+        <h1><i class="fas fa-kidneys"></i> الجهاز البولي وأمراضه</h1>
+        <p>وظائف الكلى في تنقية الدم، تكوين البول، وأمراض الجهاز البولي</p>
+        <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; color: #666;">مخصص للطالب: أوس عبد الجبار الأحمدي</p>
+    </div>
+
+    <!-- الفكرة الكبيرة -->
+    <div class="content-card">
+        <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+        <div class="highlight-box">
+            <strong>كيف يتخلص جسمك من الفضلات السامة ويحافظ على توازن السوائل؟</strong>
+            <p style="margin-top: 10px; font-weight: 400;">جسمك ينتج يومياً حوالي <strong>1.5 لتر</strong> من البول! الجهاز البولي هو نظام التصريف الذكي الذي ينقي الدم من الفضلات ويحافظ على توازن الماء والأملاح. في هذا الدرس، سنتعرف على <strong>أعضاء الجهاز البولي</strong> و<strong>كيف تعمل الكلى</strong> و<strong>أمراضه الشائعة</strong>!</p>
+        </div>
+    </div>
+
+    <!-- أولاً: أعضاء الجهاز البولي -->
+    <div class="content-card">
+        <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: أعضاء الجهاز البولي ووظائفها</h2>
+        
+        <div class="highlight-box">
+            <strong>الجهاز البولي:</strong> مجموعة من الأعضاء تعمل معاً لإنتاج البول وتخزينه وإخراجه من الجسم.
+        </div>
+
+        <div class="three-columns">
+            <div class="organ-card">
+                <div class="icon"><i class="fas fa-kidney"></i></div>
+                <h4>1. الكليتان</h4>
+                <p>عضوان على شكل حبة الفول</p>
+                <ul style="padding-right: 15px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                    <li>تنقيان الدم من الفضلات</li>
+                    <li>تتحكمان في توازن الماء والأملاح</li>
+                    <li>تنتجان البول</li>
+                </ul>
+            </div>
+            <div class="organ-card">
+                <div class="icon"><i class="fas fa-route"></i></div>
+                <h4>2. الحالبان</h4>
+                <p>أنبوبان عضليان</p>
+                <ul style="padding-right: 15px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                    <li>ينقلان البول من الكلى إلى المثانة</li>
+                    <li>طول كل حالب ~25 سم</li>
+                </ul>
+            </div>
+            <div class="organ-card">
+                <div class="icon"><i class="fas fa-flask"></i></div>
+                <h4>3. المثانة</h4>
+                <p>كيس عضلي مرن</p>
+                <ul style="padding-right: 15px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                    <li>تخزن البول مؤقتاً</li>
+                    <li>سعتها ~500 مل</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="organ-card" style="margin-top: 15px;">
+            <div class="icon"><i class="fas fa-arrow-down"></i></div>
+            <h4>4. الإحليل (مجرى البول)</h4>
+            <p>أنبوب ينقل البول من المثانة إلى خارج الجسم</p>
+            <ul style="padding-right: 15px; margin-top: 10px; font-size: 0.9rem; line-height: 1.8; text-align: right;">
+                <li>في الذكور: ~20 سم | في الإناث: ~4 سم</li>
+            </ul>
+        </div>
+
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> هل تعلم؟</h4>
+            <p>الكليتان تقومان بتصفية <strong>180 لتر</strong> من الدم يومياً، لكنهما تنتجان فقط <strong>1.5 لتر</strong> من البول! معظم الماء يُعاد امتصاصه.</p>
+        </div>
+    </div>
+
+    <!-- ثانياً: التركيب الداخلي للكلى -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-microscope"></i> ثانياً: التركيب الداخلي للكلى</h2>
+        
+        <div class="highlight-box">
+            <strong>الوحدة الوظيفية:</strong> النيفرون (Nephron) - الوحدة الأساسية في الكلى التي تقوم بتصفية الدم.
+        </div>
+
+        <div class="two-columns">
+            <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                <h3 style="color: #e74c3c;"><i class="fas fa-filter"></i> الكبيبة (Glomerulus)</h3>
+                <p>شبكة من الشعيرات الدموية</p>
+                <p style="margin-top: 10px;"><strong>الوظيفة:</strong> ترشيح الدم تحت ضغط عالٍ</p>
+            </div>
+            <div class="column-card" style="border-top: 5px solid #3498db;">
+                <h3 style="color: #3498db;"><i class="fas fa-circle-notch"></i> محفظة بومان</h3>
+                <p>كأس يحيط بالكبيبة</p>
+                <p style="margin-top: 10px;"><strong>الوظيفة:</strong> تجميع السائل المرشح</p>
+            </div>
+        </div>
+
+        <div class="two-columns">
+            <div class="column-card" style="border-top: 5px solid #27ae60;">
+                <h3 style="color: #27ae60;"><i class="fas fa-wave-square"></i> الأنابيب الكلوية</h3>
+                <p>أنابيب طويلة ملتفة</p>
+                <p style="margin-top: 10px;"><strong>الوظيفة:</strong> إعادة امتصاص الماء والمواد المفيدة</p>
+            </div>
+            <div class="column-card" style="border-top: 5px solid #9b59b6;">
+                <h3 style="color: #9b59b6;"><i class="fas fa-stream"></i> قناة التجميع</h3>
+                <p>تجمع البول من عدة نيفرونات</p>
+                <p style="margin-top: 10px;"><strong>الوظيفة:</strong> نقل البول إلى الحوض الكلوي</p>
+            </div>
+        </div>
+
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> عدد النيفرونات:</h4>
+            <p>تحتوي كل كلية على حوالي <strong>مليون نيفرون</strong>! هذا العدد الهائل يضمن كفاءة عالية في تنقية الدم.</p>
+        </div>
+    </div>
+
+    <!-- ثالثاً: وظائف الكلى -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-cogs"></i> ثالثاً: وظائف الكلى الرئيسية</h2>
+        
+        <div class="highlight-box">
+            <strong>الكلى:</strong> عضوان حيويان يقومان بوظائف متعددة للحفاظ على توازن الجسم.
+        </div>
+
+        <div class="three-columns">
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-filter"></i></div>
+                <h4>1. تنقية الدم</h4>
+                <p>إزالة الفضلات النيتروجينية (اليوريا، حمض البوليك)</p>
+            </div>
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-balance-scale"></i></div>
+                <h4>2. توازن الماء والأملاح</h4>
+                <p>تنظيم الصوديوم، البوتاسيوم، الكالسيوم</p>
+            </div>
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-vial"></i></div>
+                <h4>3. توازن الحموضة (pH)</h4>
+                <p>الحفاظ على pH الدم بين 7.35 و 7.45</p>
+            </div>
+        </div>
+
+        <div class="two-columns" style="margin-top: 15px;">
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <h4>4. تنظيم ضغط الدم</h4>
+                <p>إفراز إنزيم الرينين</p>
+            </div>
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-bone"></i></div>
+                <h4>5. إنتاج فيتامين D النشط</h4>
+                <p>يساعد في امتصاص الكالسيوم</p>
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> مثال 1: كيف تنقي الكلى الدم؟</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> دخول الدم إلى الكلى</h4>
+                <p>يدخل الدم عبر الشريان الكلوي محملاً بالفضلات</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> الترشيح في الكبيبة</h4>
+                <p>يتم ترشيح الدم تحت ضغط عالٍ</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> إعادة الامتصاص في الأنابيب</h4>
+                <p>يُعاد امتصاص 99% من الماء والمواد المفيدة</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">4</span> إفراز الفضلات</h4>
+                <p>تُفرز الفضلات المتبقية في البول</p>
+            </div>
+
+            <div class="solution">✅ الدم النظيف يعود إلى الجسم، والبول يتجه إلى المثانة</div>
+        </div>
+    </div>
+
+    <!-- رابعاً: تكوين البول -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-flask"></i> رابعاً: تكوين البول</h2>
+        
+        <div class="highlight-box">
+            <strong>البول:</strong> سائل أصفر يحتوي على الماء والفضلات النيتروجينية والأملاح الزائدة.
+        </div>
+
+        <div class="math-box">
+            مكونات البول: ماء (95%) + يوريا (2%) + أملاح + فضلات أخرى (3%)
+        </div>
+
+        <div class="three-columns">
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-filter"></i></div>
+                <h4>المرحلة 1: الترشيح</h4>
+                <p>في الكبيبة</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">ترشيح ~180 لتر/يوم</p>
+            </div>
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-recycle"></i></div>
+                <h4>المرحلة 2: إعادة الامتصاص</h4>
+                <p>في الأنابيب الكلوية</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">إعادة 99% من الماء</p>
+            </div>
+            <div class="process-card">
+                <div class="icon"><i class="fas fa-share-square"></i></div>
+                <h4>المرحلة 3: الإفراز</h4>
+                <p>في الأنابيب الكلوية</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">إفراز فضلات إضافية</p>
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> مثال 2: لماذا لون البول أصفر؟</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> مصدر اللون</h4>
+                <p>اليوروبيلين (Urobilin) - صبغة ناتجة عن تكسر الهيموجلوبين</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> العوامل المؤثرة</h4>
+                <p>كلما زاد تركيز البول (قلة شرب الماء)، أصبح اللون أغمق</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الدلالة الصحية</h4>
+                <p>البول الفاتح = ترطيب جيد | البول الداكن = حاجة للماء</p>
+            </div>
+
+            <div class="solution">✅ اللون الأصفر طبيعي ويدل على صحة الكلى</div>
+        </div>
+
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> عوامل تؤثر في كمية البول:</h4>
+            <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                <li><strong>كمية الماء المشروب:</strong> كلما زادت، زاد البول</li>
+                <li><strong>درجة الحرارة:</strong> في الحر، يقل البول (يزيد العرق)</li>
+                <li><strong>النشاط البدني:</strong> الرياضة تقلل البول مؤقتاً</li>
+                <li><strong>بعض الأطعمة:</strong> الكافيين (قهوة، شاي) يزيد البول</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- خامساً: أمراض الجهاز البولي -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-heartbeat"></i> خامساً: أمراض الجهاز البولي</h2>
+        
+        <div class="highlight-box">
+            <strong>أهمية الوقاية:</strong> الجهاز البولي حساس للعديد من الأمراض، والوقاية خير من العلاج!
+        </div>
+
+        <div class="two-columns">
+            <div class="disease-card">
+                <div class="icon"><i class="fas fa-gem"></i></div>
+                <h4>1. حصوات الكلى</h4>
+                <p><strong>السبب:</strong> ترسب الأملاح (كالسيوم، أوكسالات)</p>
+                <p style="margin-top: 10px;"><strong>الأعراض:</strong> ألم شديد في الظهر، دم في البول</p>
+                <p style="margin-top: 10px;"><strong>الوقاية:</strong> شرب الماء بكثرة، تقليل الملح</p>
+            </div>
+            <div class="disease-card">
+                <div class="icon"><i class="fas fa-bacterium"></i></div>
+                <h4>2. التهاب المسالك البولية</h4>
+                <p><strong>السبب:</strong> عدوى بكتيرية (غالباً E. coli)</p>
+                <p style="margin-top: 10px;"><strong>الأعراض:</strong> حرقان عند التبول، تكرار التبول</p>
+                <p style="margin-top: 10px;"><strong>الوقاية:</strong> النظافة الشخصية، شرب الماء</p>
+            </div>
+        </div>
+
+        <div class="two-columns" style="margin-top: 15px;">
+            <div class="disease-card">
+                <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <h4>3. الفشل الكلوي</h4>
+                <p><strong>السبب:</strong> تلف الكلى (سكري، ضغط مرتفع)</p>
+                <p style="margin-top: 10px;"><strong>الأعراض:</strong> تورم، إرهاق، غثيان</p>
+                <p style="margin-top: 10px;"><strong>العلاج:</strong> غسيل الكلى، أو زراعة كلية</p>
+            </div>
+            <div class="disease-card">
+                <div class="icon"><i class="fas fa-procedures"></i></div>
+                <h4>4. التهاب المثانة</h4>
+                <p><strong>السبب:</strong> عدوى بكتيرية في المثانة</p>
+                <p style="margin-top: 10px;"><strong>الأعراض:</strong> ألم في أسفل البطن، تبول مؤلم</p>
+                <p style="margin-top: 10px;"><strong>الوقاية:</strong> عدم حبس البول، شرب الماء</p>
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> مثال 3: كيف تتكون حصوات الكلى؟</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> زيادة تركيز الأملاح</h4>
+                <p>عند قلة شرب الماء، تزداد نسبة الأملاح في البول</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> التبلور</h4>
+                <p>تترسب الأملاح وتكون بلورات صغيرة</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> النمو</h4>
+                <p>تلتصق البلورات ببعضها وتنمو لتصبح حصوة</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">4</span> الانسداد</h4>
+                <p>إذا كبرت الحصوة، تسد الحالب وتسبب ألماً شديداً</p>
+            </div>
+
+            <div class="solution">✅ شرب 2-3 لتر ماء يومياً يمنع تكوين الحصوات!</div>
+        </div>
+    </div>
+
+    <!-- سادساً: نصائح للحفاظ على صحة الجهاز البولي -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-heart"></i> سادساً: نصائح للحفاظ على صحة الجهاز البولي</h2>
+        
+        <div class="example-card">
+            <h4><i class="fas fa-check-circle"></i> عادات صحية يجب اتباعها</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> شرب الماء بكثرة</h4>
+                <p>2-3 لتر يومياً (8 أكواب على الأقل)</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> عدم حبس البول</h4>
+                <p>التبول عند الحاجة، حبس البول يزيد خطر العدوى</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> النظافة الشخصية</h4>
+                <p>غسل المنطقة البولية بالماء والصابون</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">4</span> تقليل الملح والبروتين الزائد</h4>
+                <p>الإفراط فيهما يرهق الكلى</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">5</span> تجنب التدخين</h4>
+                <p>التدخين يزيد خطر سرطان المثانة</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">6</span> الفحص الدوري</h4>
+                <p>تحليل البول وفحص وظائف الكلى سنوياً</p>
+            </div>
+
+            <div class="solution">✅ الوقاية خير من العلاج!</div>
+        </div>
+
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> علامات تدل على مشكلة في الجهاز البولي:</h4>
+            <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                <li>تغير لون البول (أحمر، بني داكن)</li>
+                <li>ألم أو حرقان عند التبول</li>
+                <li>تكرار التبول بشكل غير طبيعي</li>
+                <li>تورم في الوجه أو الأطراف</li>
+                <li>ألم في الظهر أو الجانب</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>️ إذا لاحظت أي من هذه الأعراض، راجع الطبيب فوراً!</strong></p>
+        </div>
+    </div>
+
+    <!-- سابعاً: تطبيقات حياتية -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+        
+        <div class="example-card">
+            <h4><i class="fas fa-tint"></i> مثال 4: لماذا نشعر بالعطش بعد الأكل المالح؟</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> زيادة الصوديوم في الدم</h4>
+                <p>الملح (NaCl) يرفع تركيز الصوديوم في الدم</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> استجابة الكلى</h4>
+                <p>الكلى تحتفظ بالماء لتخفيف الصوديوم</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الشعور بالعطش</h4>
+                <p>الدماغ يرسل إشارة العطش لشرب المزيد من الماء</p>
+            </div>
+
+            <div class="solution">✅ الجسم يحاول الحفاظ على توازن الأملاح والماء</div>
+        </div>
+
+        <div class="example-card">
+            <h4><i class="fas fa-running"></i> مثال 5: لماذا يقل البول بعد الرياضة؟</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> فقدان الماء بالعرق</h4>
+                <p>الجسم يفقد الماء والأملاح عبر التعرق</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> استجابة الكلى</h4>
+                <p>الكلى تعيد امتصاص المزيد من الماء لتعويض النقص</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> قلة البول</h4>
+                <p>يقل إنتاج البول للحفاظ على الماء في الجسم</p>
+            </div>
+
+            <div class="solution">✅ الكلى ذكية! تحافظ على توازن الماء في الجسم</div>
+        </div>
+
+        <div class="example-card">
+            <h4><i class="fas fa-pills"></i> مثال 6: غسيل الكلى (Dialysis)</h4>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> الفشل الكلوي</h4>
+                <p>الكلى تتوقف عن تنقية الدم</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> تراكم الفضلات</h4>
+                <p>اليوريا والسموم تتراكم في الدم</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الحل: غسيل الكلى</h4>
+                <p>جهاز خارجي ينقي الدم بدلاً من الكلى</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">4</span> الحل النهائي: زراعة كلية</h4>
+                <p>نقل كلية سليمة من متبرع</p>
+            </div>
+
+            <div class="solution">✅ غسيل الكلى ينقذ حياة الملايين حول العالم</div>
+        </div>
+    </div>
+
+    <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+        
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 1: الاعتقاد أن حبس البول غير ضار</h4>
+            <p>حبس البول لفترات طويلة يزيد خطر <strong>التهاب المثانة</strong> و<strong>تكون الحصوات</strong>!</p>
+        </div>
+
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 2: شرب الماء فقط عند العطش</h4>
+            <p>العطش علامة متأخرة للجفاف! اشرب الماء <strong>بانتظام</strong> طوال اليوم.</p>
+        </div>
+
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 3: تجاهل تغير لون البول</h4>
+            <p>البول الأحمر أو البني الداكن قد يدل على <strong>دم في البول</strong> - راجع الطبيب فوراً!</p>
+        </div>
+
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 4: الإفراط في المسكنات</h4>
+            <p>بعض المسكنات (مثل الإيبوبروفين) تضر الكلى عند الاستخدام المزمن!</p>
+        </div>
+
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 5: الاعتقاد أن الكلى يمكنها التعويض الكامل</h4>
+            <p>إذا تلفت كلية واحدة، تعمل الأخرى بجهد أكبر، لكن <strong>ليست قادرة على التعويض الكامل</strong> على المدى الطويل.</p>
+        </div>
+    </div>
+
+    <!-- تاسعاً: ملخص الدرس -->
+    <div class="content-card">
+        <h2 class="section-title" style="border: none;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+        <ul class="tree-list">
+            <li><strong>أعضاء الجهاز البولي:</strong> الكليتان، الحالبان، المثانة، الإحليل.</li>
+            <li><strong>وظائف الكلى:</strong> تنقية الدم، توازن الماء والأملاح، تنظيم pH، إنتاج فيتامين D.</li>
+            <li><strong>النيفرون:</strong> الوحدة الوظيفية للكلى (~مليون في كل كلية).</li>
+            <li><strong>مراحل تكوين البول:</strong> الترشيح ➔ إعادة الامتصاص ➔ الإفراز.</li>
+            <li><strong>مكونات البول:</strong> ماء (95%) + يوريا + أملاح + فضلات.</li>
+            <li><strong>أمراض شائعة:</strong> حصوات الكلى، التهاب المسالك، الفشل الكلوي.</li>
+            <li><strong>الوقاية:</strong> شرب الماء، النظافة، عدم حبس البول، الفحص الدوري.</li>
+            <li><strong>تنبيه:</strong> البول الداكن أو المؤلم يستدعي مراجعة الطبيب.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المنصة التعليمية الشاملة للصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ - المنهج السعودي">
+    <meta name="keywords" content="المنهج السعودي, ثاني متوسط, 1448هـ, تعليم, اختبارات">
+    <title>منصتي التعليمية | الصف الثاني المتوسط | 1448هـ</title>
+
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ملفات الأنماط الرئيسية (بالترتيب الصحيح) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subjects-specific.css">
+
+    <!-- أنماط خاصة بالصفحة الرئيسية -->
+    <style>
+        /* ============ الشريط العلوي المخصص للطالب ============ */
+        .student-dedication {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .student-dedication::before {
+            content: '🎓';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+        }
+
+        .student-dedication::after {
+            content: '📚';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+        }
+
+        /* ============ القسم الترحيبي (Hero) ============ */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60px;
+            background: var(--bg-color);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 60%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-size: 1.05rem;
+            border: 2px solid white;
+        }
+
+        .hero-btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero-btn-outline {
+            background: transparent;
+            color: white;
+        }
+
+        .hero-btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* ============ قسم الإحصائيات ============ */
+        .stats-section {
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stats-section .stat-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stats-section .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .stats-section .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        /* ============ قسم المميزات ============ */
+        .features-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* ============ قسم المواد الدراسية ============ */
+        .subjects-section {
+            padding: 60px 0;
+            background: var(--bg-color);
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .subject-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .subject-card.hidden-by-search {
+            display: none !important;
+        }
+
+        .subject-header {
+            padding: 30px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .subject-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subject-desc {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .subject-stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .subject-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .subject-stat i {
+            color: var(--primary-color);
+        }
+
+        .subject-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .subject-btn {
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .subject-btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .subject-btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .subject-btn-secondary {
+            background: var(--bg-color);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .subject-btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ألوان المواد (للصفحة الرئيسية فقط) */
+        .subject-arabic .subject-header  { background: linear-gradient(135deg, #1a5f7a, #159895); }
+        .subject-math .subject-header    { background: linear-gradient(135deg, #2980b9, #27ae60); }
+        .subject-science .subject-header { background: linear-gradient(135deg, #16a085, #1abc9c); }
+        .subject-islamic .subject-header { background: linear-gradient(135deg, #1b5e20, #c9a227); }
+        .subject-social .subject-header  { background: linear-gradient(135deg, #6d4c41, #d4a017); }
+        .subject-english .subject-header { background: linear-gradient(135deg, #1e3a8a, #dc2626); }
+        .subject-chinese .subject-header { background: linear-gradient(135deg, #c0392b, #f39c12); }
+        .subject-digital .subject-header { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+        .subject-life .subject-header    { background: linear-gradient(135deg, #e91e63, #ff9800); }
+        .subject-art .subject-header     { background: linear-gradient(135deg, #e74c3c, #e67e22, #f1c40f, #2ecc71, #3498db, #9b59b6); }
+        .subject-pe .subject-header      { background: linear-gradient(135deg, #27ae60, #e74c3c); }
+
+        /* ============ قسم الدعوة للعمل ============ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--primary-color);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-size: 1.05rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ============ التذييل ============ */
+        footer {
+            background-color: var(--header-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-color);
+            opacity: 0.8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            opacity: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: all 0.3s;
+            margin: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* ============ زر العودة للأعلى ============ */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            border: none;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ============ التجاوب ============ */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .section-title h2 { font-size: 1.6rem; }
+
+            .student-dedication::before,
+            .student-dedication::after {
+                display: none;
+            }
+
+            .footer-content { text-align: center; }
+        }
+
+        /* ============ تأثيرات الظهور ============ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    منصتي التعليمية
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="#subjects">المواد</a></li>
+                    <li><a href="#features">المميزات</a></li>
+                    <li><a href="#contact">تواصل</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="mainSearch" placeholder="ابحث عن مادة أو درس..." onkeyup="searchSubjects()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="تبديل الوضع الليلي">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ القسم الترحيبي ============ -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> العام الدراسي 1448هـ - الفصل الدراسي الأول
+                </div>
+                <h1 class="hero-title">منصتك التعليمية الشاملة</h1>
+                <p class="hero-subtitle">
+                    رحلة تعليمية متكاملة للصف الثاني المتوسط، تشمل جميع المواد الدراسية مع شروحات مفصلة، فيديوهات تعليمية، واختبارات تفاعلية بتصحيح تلقائي
+                </p>
+                <div class="hero-buttons">
+                    <a href="#subjects" class="hero-btn hero-btn-primary">
+                        <i class="fas fa-book-open"></i> استعرض المواد الدراسية
+                    </a>
+                    <a href="#features" class="hero-btn hero-btn-outline">
+                        <i class="fas fa-info-circle"></i> تعرف على المميزات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ قسم الإحصائيات ============ -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                    <div class="stat-number" data-target="11">0</div>
+                    <div class="stat-label">مادة دراسية</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-question-circle"></i></div>
+                    <div class="stat-number" data-target="266">0</div>
+                    <div class="stat-label">سؤال تفاعلي</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-video"></i></div>
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label">فيديو تعليمي+</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="stat-number">1448</div>
+                    <div class="stat-label">الهجري</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ قسم المميزات ============ -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-star"></i> مميزات المنصة التعليمية</h2>
+                <p>نقدم لك تجربة تعليمية متكاملة بأحدث التقنيات وأفضل المحتويات</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-book-reader"></i></div>
+                    <h3>شروحات مفصلة</h3>
+                    <p>شروحات واضحة ومبسطة لجميع دروس المنهج السعودي مع أمثلة تطبيقية</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-video"></i></div>
+                    <h3>فيديوهات تعليمية</h3>
+                    <p>مكتبة ضخمة من الفيديوهات التعليمية من أفضل المعلمين على يوتيوب</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>اختبارات تفاعلية</h3>
+                    <p>بنك أسئلة شامل مع تصحيح تلقائي فوري وتتبع لتقدمك الدراسي</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <h3>بحث ذكي</h3>
+                    <p>نظام بحث متقدم للعثور على أي درس أو موضوع بسرعة وسهولة</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-moon"></i></div>
+                    <h3>الوضع الليلي</h3>
+                    <p>وضع ليلي مريح للعين يحفظ تفضيلاتك تلقائياً للاستخدام المريح</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>تصميم متجاوب</h3>
+                    <p>يعمل بشكل مثالي على جميع الأجهزة: الكمبيوتر، التابلت، والجوال</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ قسم المواد الدراسية ============ -->
+    <section class="subjects-section" id="subjects">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-graduation-cap"></i> المواد الدراسية</h2>
+                <p>اختر المادة التي تريد دراستها وابدأ رحلتك التعليمية</p>
+            </div>
+
+            <div class="subjects-grid" id="subjectsGrid">
+
+                <!-- لغتي الخالدة -->
+                <div class="subject-card subject-arabic fade-in" data-name="لغتي الخالدة اللغة العربية">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-language"></i></div>
+                        <div class="subject-name">لغتي الخالدة</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">تعلم قواعد اللغة العربية، النحو، الصرف، والبلاغة مع شروحات مفصلة</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 10 دروس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 21 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/arabic.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/arabic-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الرياضيات -->
+                <div class="subject-card subject-math fade-in" data-name="الرياضيات Math">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-square-root-alt"></i></div>
+                        <div class="subject-name">الرياضيات</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">الأعداد النسبية، القوى، نظرية فيثاغورس، النسب المئوية، والمزيد</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 32 درساً</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 24 سؤالاً</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/math.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/math-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العلوم -->
+                <div class="subject-card subject-science fade-in" data-name="العلوم Science">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-flask"></i></div>
+                        <div class="subject-name">العلوم</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">الفيزياء، الكيمياء، الأحياء، وأجهزة جسم الإنسان المختلفة</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 13 درس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 26 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/science.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/science-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الدراسات الإسلامية -->
+                <div class="subject-card subject-islamic fade-in" data-name="الدراسات الإسلامية القرآن الحديث">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-mosque"></i></div>
+                        <div class="subject-name">الدراسات الإسلامية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">التوحيد، تفسير القرآن الكريم، الحديث الشريف، والعبادات</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 15 درس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 30 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/islamic.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/islamic-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الدراسات الاجتماعية -->
+                <div class="subject-card subject-social fade-in" data-name="الدراسات الاجتماعية التاريخ الجغرافيا">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-globe-americas"></i></div>
+                        <div class="subject-name">الدراسات الاجتماعية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">تاريخ الدول الإسلامية، الجغرافيا، الغلافات، والمناخ</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 15 درس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 30 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/social.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/social-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اللغة الإنجليزية -->
+                <div class="subject-card subject-english fade-in" data-name="اللغة الإنجليزية English">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-language"></i></div>
+                        <div class="subject-name">اللغة الإنجليزية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">المفردات، القواعد، المحادثات، و6 وحدات دراسية شاملة</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 6 وحدات</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 24 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/english.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/english-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اللغة الصينية -->
+                <div class="subject-card subject-chinese fade-in" data-name="اللغة الصينية Chinese">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-yin-yang"></i></div>
+                        <div class="subject-name">اللغة الصينية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">تعلم الحروف، الأرقام، المفردات الأساسية، والثقافة الصينية</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 8 وحدات</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 24 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/chinese.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/chinese-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المهارات الرقمية -->
+                <div class="subject-card subject-digital fade-in" data-name="المهارات الرقمية البايثون قواعد البيانات">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="subject-name">المهارات الرقمية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">مخططات المعلومات، لغة البايثون البرمجية، وقواعد البيانات</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 9 دروس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 27 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/digital.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/digital-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المهارات الحياتية -->
+                <div class="subject-card subject-life fade-in" data-name="المهارات الحياتية والأسرية التغذية">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-heart"></i></div>
+                        <div class="subject-name">المهارات الحياتية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">التوعية الصحية، التغذية السليمة، النخلة الغذائية، والمهارات الاجتماعية</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 4 دروس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 20 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/life.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/life-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- التربية الفنية -->
+                <div class="subject-card subject-art fade-in" data-name="التربية الفنية الرسم الألوان">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-palette"></i></div>
+                        <div class="subject-name">التربية الفنية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">نظرية الألوان، الرسم، الخطوط، وعناصر العمل الفني</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 2 دروس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 20 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/art.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/art-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- التربية البدنية -->
+                <div class="subject-card subject-pe fade-in" data-name="التربية البدنية والدفاع عن النفس الرياضة">
+                    <div class="subject-header">
+                        <div class="subject-icon"><i class="fas fa-running"></i></div>
+                        <div class="subject-name">التربية البدنية</div>
+                    </div>
+                    <div class="subject-body">
+                        <p class="subject-desc">اللياقة البدنية، التايكوندو، الكرة الطائرة، وتنس الطاولة</p>
+                        <div class="subject-stats">
+                            <div class="subject-stat"><i class="fas fa-book"></i> 7 دروس</div>
+                            <div class="subject-stat"><i class="fas fa-question"></i> 20 سؤال</div>
+                        </div>
+                        <div class="subject-actions">
+                            <a href="subjects/pe.html" class="subject-btn subject-btn-primary">
+                                <i class="fas fa-book-open"></i> ابدأ الدراسة
+                            </a>
+                            <a href="quizzes/pe-quiz.html" class="subject-btn subject-btn-secondary">
+                                <i class="fas fa-clipboard-check"></i> اختبر نفسك
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ قسم الدعوة للعمل ============ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2><i class="fas fa-rocket"></i> ابدأ رحلتك التعليمية الآن!</h2>
+                <p>انضم إلى آلاف الطلاب الذين يتعلمون بطريقة ممتعة وفعالة. اختر مادتك المفضلة وابدأ التعلم اليوم</p>
+                <a href="#subjects" class="cta-btn">
+                    <i class="fas fa-play-circle"></i> ابدأ التعلم الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ التذييل ============ -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> عن المنصة</h3>
+                    <p>منصة تعليمية شاملة للصف الثاني المتوسط تغطي جميع مواد المنهج السعودي للفصل الدراسي الأول 1448هـ</p>
+                    <div class="social-links">
+                        <a href="#" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> روابط سريعة</h3>
+                    <a href="#subjects">المواد الدراسية</a>
+                    <a href="#features">مميزات المنصة</a>
+                    <a href="quizzes/arabic-quiz.html">بنوك الأسئلة</a>
+                    <a href="#subjects">الدروس المفصلة</a>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-info-circle"></i> معلومات</h3>
+                    <p><i class="fas fa-user-graduate"></i> مخصص لـ: أوس عبد الجبار الأحمدي</p>
+                    <p><i class="fas fa-calendar"></i> العام الدراسي: 1448هـ</p>
+                    <p><i class="fas fa-book"></i> الفصل الدراسي: الأول</p>
+                    <p><i class="fas fa-school"></i> الصف: الثاني المتوسط</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1448هـ - منصتي التعليمية | جميع الحقوق محفوظة | تم التطوير بـ ❤️ لخدمة الطلاب</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============ السكربتات ============ -->
+    <!-- نظام الوضع الليلي الموحد (يوفّر toggleDarkMode عالمياً) -->
+    <script src="js/darkmode.js"></script>
+
+    <script>
+        'use strict';
+
+        /* ============ نظام البحث في المواد ============ */
+        function searchSubjects() {
+            const input = document.getElementById('mainSearch').value.trim().toLowerCase();
+            const cards = document.querySelectorAll('.subject-card');
+
+            cards.forEach(card => {
+                const name = (card.getAttribute('data-name') || '').toLowerCase();
+                const descEl = card.querySelector('.subject-desc');
+                const desc = descEl ? descEl.textContent.toLowerCase() : '';
+
+                if (input === '' || name.includes(input) || desc.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        /* ============ عداد الإحصائيات المتحرك ============ */
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            const duration = 1500; // مدة الأنيميشن بالمللي ثانية
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const startTime = performance.now();
+
+                const update = (now) => {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // تسهيل Ease-Out
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.ceil(eased * target);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        /* ============ تأثيرات الظهور عند التمرير ============ */
+        function initFadeIn() {
+            if (!('IntersectionObserver' in window)) {
+                // Fallback: أظهر كل العناصر
+                document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        /* ============ زر العودة للأعلى ============ */
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* ============ التمرير السلس للروابط الداخلية ============ */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId.length < 2) return;
+
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        /* ============ التهيئة عند تحميل الصفحة ============ */
+        window.addEventListener('DOMContentLoaded', function () {
+            // تشغيل عداد الإحصائيات
+            animateCounters();
+
+            // تفعيل تأثيرات الظهور
+            initFadeIn();
+
+            // ملاحظة: الوضع الليلي يُدار بالكامل عبر js/darkmode.js
+        });
+    </script>
+</body>
+</html>

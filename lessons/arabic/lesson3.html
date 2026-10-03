@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المفعول لأجله - تعريفه وشروطه وعلامات إعرابه - مادة لغتي الخالدة - الصف الثاني المتوسط">
+    <title>المفعول لأجله | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .quran-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--subject-primary);
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid var(--subject-secondary);
+            margin: 15px 0;
+            line-height: 1.8;
+            direction: rtl;
+        }
+        [data-theme="dark"] .quran-text {
+            color: var(--subject-secondary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong {
+            color: var(--subject-primary);
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 {
+            color: #f0909a;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .analysis {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 8px 0;
+        }
+        .example-card .grammar {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--subject-primary);
+            font-weight: 600;
+            color: var(--subject-primary);
+            margin-top: 10px;
+        }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 15px 15px 15px 60px;
+            margin-bottom: 10px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border-right: 3px solid var(--subject-secondary);
+        }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--subject-primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .condition-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .condition-item {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-primary);
+            text-align: center;
+        }
+        .condition-item i {
+            font-size: 2rem;
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+        }
+        .condition-item h4 {
+            color: var(--subject-primary);
+            margin-bottom: 8px;
+        }
+        .condition-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .condition-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-pen-fancy"></i> المفعول لأجله</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: تعريف المفعول لأجله -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: تعريف المفعول لأجله</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> المفعول لأجله هو: اسم (مصدر قلبي) يُذكر في الجملة الفعلية لبيان سبب وقوع الفعل أو العلّة التي من أجلها حدث الفعل.
+            </div>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">
+                <strong>بمعنى أبسط:</strong> هو الكلمة التي تجيب عن سؤال: <span style="color: var(--subject-primary); font-weight: 700;">"لماذا؟"</span> أو <span style="color: var(--subject-primary); font-weight: 700;">"من أجل ماذا؟"</span> حدث الفعل.
+            </p>
+
+            <div class="example-card">
+                <h4><i class="fas fa-lightbulb"></i> مثال توضيحي:</h4>
+                <p style="font-size: 1.2rem; font-weight: 600; text-align: center; margin: 15px 0;">
+                    "أدرسُ <span style="color: var(--subject-primary); background: rgba(26, 95, 122, 0.1); padding: 3px 8px; border-radius: 5px;">رغبةً</span> في النجاحِ".
+                </p>
+                <div class="analysis">
+                    <strong>إذا سألنا:</strong> لماذا تدرس؟<br>
+                    <strong>الإجابة:</strong> رغبةً في النجاح.<br>
+                    <strong>إذن:</strong> "رغبةً" هي المفعول لأجله.
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: شروط نصب المفعول لأجله -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-check-double"></i> ثانياً: شروط نصب المفعول لأجله</h2>
+            <p style="margin-bottom: 20px;">لكي يُعرب الاسم "مفعولاً لأجله" ويُبنى على النصب، يجب أن تتوافر فيه <strong>ثلاثة شروط مجتمعة</strong>:</p>
+            
+            <div class="condition-card">
+                <div class="condition-item">
+                    <i class="fas fa-file-word"></i>
+                    <h4>الشرط الأول</h4>
+                    <p>أن يكون <strong>مصدراً</strong>: أي ليس اسماً جامداً (مثل: كتاب، رجل)، بل مشتقاً من فعل يدل على حدث.</p>
+                </div>
+                <div class="condition-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>الشرط الثاني</h4>
+                    <p>أن يكون مصدراً <strong>"قلبياً"</strong>: أي معبراً عن شعور أو حالة نفسية داخل القلب، مثل: (خوف، رغبة، رهبة، طمع، تعظيم، حب، كراهية، احترام، ابتغاء).</p>
+                </div>
+                <div class="condition-item">
+                    <i class="fas fa-users"></i>
+                    <h4>الشرط الثالث</h4>
+                    <p>أن <strong>يتحد مع الفعل الأصلي</strong> في الزمان والفاعل: أي يحدث المصدر في نفس وقت حدوث الفعل، ويكون فاعل المصدر هو نفسه فاعل الفعل الأصلي.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> ملاحظة منهجية هامة:</h4>
+                <p>إذا اختل شرط <strong>"المصدر القلبي"</strong>، يعرب الاسم إعراباً آخر مثل المفعول المطلق أو المفعول به، ولا يعرب مفعولاً لأجله.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: علامات إعراب المفعول لأجله -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-signature"></i> ثالثاً: علامات إعراب المفعول لأجله</h2>
+            <p style="margin-bottom: 20px;">يكون المفعول لأجله <strong>منصوباً دائماً</strong>، وعلامات نصبه هي:</p>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">علامة النصب</th>
+                            <th style="width: 35%;">الحالة</th>
+                            <th style="width: 35%;">أمثلة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الفتحة الظاهرة</strong></td>
+                            <td>إذا كان مفرداً</td>
+                            <td>رغبةً، خوفاً، تعظيماً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الفتحة المقدرة</strong></td>
+                            <td>إذا كان مقصوراً أو منتهياً بتاء مربوطة</td>
+                            <td>هوىً، رحمةً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الياء (ي)</strong></td>
+                            <td>إذا كان مثنى أو جمع مذكر سالم</td>
+                            <td>احترامَينِ، طمعِينَ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- رابعاً: أمثلة تطبيقية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-quran"></i> رابعاً: أمثلة تطبيقية</h2>
+            
+            <h3 style="color: var(--subject-primary); margin: 20px 0 15px;">1. أمثلة من القرآن الكريم</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-star-and-crescent"></i> المثال الأول:</h4>
+                <div class="quran-text">
+                    ﴿وَلَا تَقْتُلُوا أَوْلَادَكُمْ <strong>خَشْيَةَ</strong> إِمْلَاقٍ﴾ [الإسراء: 31]
+                </div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> لماذا لا نقتل الأولاد؟ <strong>الخشية</strong> (الخوف).
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> خَشْيَةَ: مفعول لأجله منصوب، وعلامة نصبه الفتحة الظاهرة على آخره.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-star-and-crescent"></i> المثال الثاني:</h4>
+                <div class="quran-text">
+                    ﴿الَّذِينَ يُنفِقُونَ أَمْوَالَهُمُ <strong>ابْتِغَاءَ</strong> مَرْضَاتِ اللَّهِ﴾ [البقرة: 265]
+                </div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> لماذا ينفقون؟ <strong>ابتغاءً</strong> (طلباً).
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> ابْتِغَاءَ: مفعول لأجله منصوب، وعلامة نصبه الفتحة الظاهرة.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-star-and-crescent"></i> المثال الثالث:</h4>
+                <div class="quran-text">
+                    ﴿وَمَا أَمْوَالُكُمْ وَلَا أَوْلَادُكُم بِالَّتِي تُقَرِّبُكُمْ عِندَنَا <strong>زُلْفَىٰ</strong>﴾ [سبأ: 37]
+                </div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> زلفى: مصدر قلبي بمعنى القربى، يعرب مفعولاً لأجله.
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> زُلْفَى: مفعول لأجله منصوب، وعلامة نصبه الفتحة المقدرة على الألف منع من ظهورها التعذر.
+                </div>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 15px;">2. أمثلة من النصوص اللغوية والحياة اليومية</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال الأول:</h4>
+                <p style="font-size: 1.1rem; text-align: center; margin: 15px 0;">
+                    "نحترمُ الوالدينَ <span style="color: var(--subject-primary); font-weight: 700;">تَعْظِيماً</span> لـهما".
+                </p>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> تَعْظِيماً: مفعول لأجله منصوب، وعلامة نصبه الفتحة الظاهرة.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال الثاني:</h4>
+                <p style="font-size: 1.1rem; text-align: center; margin: 15px 0;">
+                    "يسافرُ المريضُ <span style="color: var(--subject-primary); font-weight: 700;">رَجَاءَ</span> الشفاءِ".
+                </p>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> رَجَاءَ: مفعول لأجله منصوب، وعلامة نصبه الفتحة الظاهرة.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال الثالث:</h4>
+                <p style="font-size: 1.1rem; text-align: center; margin: 15px 0;">
+                    "أصلي الفجرَ <span style="color: var(--subject-primary); font-weight: 700;">ابْتِغَاءَ</span> مرضاةِ ربي".
+                </p>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> ابْتِغَاءَ: مفعول لأجله منصوب، وعلامة نصبه الفتحة الظاهرة.
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: مهارة تطبيقية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> خامساً: مهارة تطبيقية</h2>
+            <h3 style="color: var(--subject-primary); margin-bottom: 20px;">🎯 كيف أستخرج المفعول لأجله في الاختبار؟</h3>
+            <p style="margin-bottom: 20px;">اتبع هذه الخطوات البسيطة التي يدرب عليها المنهج الطالب:</p>
+            
+            <ol class="steps-list">
+                <li><strong>حدد الفعل</strong> في الجملة.</li>
+                <li>اسأل عن الفعل بسؤال: <strong>"لماذا؟"</strong> أو <strong>"من أجل ماذا؟"</strong>.</li>
+                <li>انظر إلى الإجابة: <strong>هل هي مصدر؟</strong> وهل <strong>تدل على شعور قلبي؟</strong></li>
+                <li>إذا كانت الإجابة <strong>"نعم"</strong>، فهذا هو المفعول لأجله، وعلامته النصب.</li>
+            </ol>
+
+            <div class="golden-tip">
+                <h4 style="margin-bottom: 10px;"><i class="fas fa-lightbulb"></i> نصيحة ذهبية:</h4>
+                <p>تذكر دائماً أن المفعول لأجله يجيب عن سؤال <strong>"لماذا؟"</strong>، وهو دائماً <strong>مصدر قلبي منصوب</strong> يدل على شعور داخلي.</p>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات هامة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات هامة</h2>
+            <h3 style="color: #721c24; margin-bottom: 15px;">⚠️ أخطاء شائعة يقع فيها الطلاب</h3>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 1:</h4>
+                <p>ليس كل كلمة تجيب عن "لماذا" تعرب مفعولاً لأجله، فلو كانت <strong>اسماً جامداً</strong> تعرب مفعولاً به أو ظرفاً.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> "جئتُ من أجلِ <span style="color: #dc3545; font-weight: 700;">محمدٍ</span>"</p>
+                    <p class="analysis">"محمد" اسم جامد، لذا "من أجل" جار ومجرور، و"محمد" مضاف إليه، وليست مفعولاً لأجله.</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 2:</h4>
+                <p>الخلط بين <strong>المفعول لأجله</strong> و<strong>المفعول المطلق</strong>.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>المفعول المطلق:</strong> يؤكد الفعل أو يبين نوعه أو عدده (مثل: "اجتهدتُ <span style="color: var(--subject-primary); font-weight: 700;">اجتهاداً</span>").</p>
+                    <p style="margin-top: 10px;"><strong>المفعول لأجله:</strong> يبين السبب وهو دائماً مصدر قلبي (مثل: "اجتهدتُ <span style="color: var(--subject-primary); font-weight: 700;">رغبةً</span> في النجاح").</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المفعول لأجله:</strong> مصدر قلبي منصوب يبين سبب وقوع الفعل.</li>
+                <li><strong>شروطه:</strong> أن يكون مصدراً قلبياً، ويتحد مع الفعل في الزمان والفاعل.</li>
+                <li><strong>علامات نصبه:</strong> الفتحة الظاهرة (مفرد)، الفتحة المقدرة (مقصور/منقوص)، الياء (مثنى/جمع مذكر سالم).</li>
+                <li><strong>السؤال المفتاحي:</strong> "لماذا؟" أو "من أجل ماذا؟"</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة المهارات الرقمية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>المهارات الرقمية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية وبرمجية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+</head>
+<body class="subject-digital">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="digital.html" class="active">المهارات الرقمية</a></li>
+                    <li><a href="../quizzes/digital-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="ابحث عن درس..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <div class="code-title">&lt;digital_skills /&gt;</div>
+            <h1><i class="fas fa-microchip"></i> مادة المهارات الرقمية</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- سيتم بناء الأقسام والدروس هنا ديناميكياً بواسطة JavaScript -->
+        <div id="lessonsContainer"></div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/digital-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة المهارات الرقمية فقط       -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'digital';
+        
+        // بيانات دروس المهارات الرقمية مقسمة حسب الأقسام
+        const LESSONS_DATA = [
+            // القسم الأول
+            { section: 'section1', title: 'مقدمة إلى مخطط المعلومات البياني', desc: 'مفهوم الإنفوجرافيك، أهميته، عناصره الأساسية، وكيفية تصميمه.', videoId: 'eEXY4tBcicw', image: 'lesson1.jpg', pdf: 'lesson1.pdf', badge: 'مخططات المعلومات' },
+            { section: 'section1', title: 'تخصيص التصميم', desc: 'تعديل الألوان، الخطوط، التخطيط، وإضافة العناصر المرئية.', videoId: 'VcUq87kcG1E', image: 'lesson2.jpg', pdf: 'lesson2.pdf', badge: 'مخططات المعلومات' },
+            { section: 'section1', title: 'الوسائط المتعددة', desc: 'أنواع الوسائط المتعددة وكيفية دمجها في التصميم الرقمي.', videoId: 'qyp5ofdVubI', image: 'lesson3.jpg', pdf: 'lesson3.pdf', badge: 'مخططات المعلومات' },
+            
+            // القسم الثاني
+            { section: 'section2', title: 'المعاملات الشرطية والمنطقية', desc: 'فهم المعاملات (>, <, ==, !=) والعوامل المنطقية (and, or, not).', videoId: 'nZBpaRlu7T0', image: 'lesson4.jpg', pdf: 'lesson4.pdf', badge: 'البايثون' },
+            { section: 'section2', title: 'الجمل الشرطية', desc: 'استخدام if, elif, else للتحكم في تدفق البرنامج.', videoId: 'nDuMi8YB4Co', image: 'lesson5.jpg', pdf: 'lesson5.pdf', badge: 'البايثون' },
+            { section: 'section2', title: 'اتخاذ القرارات', desc: 'كيفية بناء برامج تتخذ قرارات ذكية بناءً على المدخلات.', videoId: '4GSBLqHtaDQ', image: 'lesson6.jpg', pdf: 'lesson6.pdf', badge: 'البايثون' },
+            { section: 'section2', title: 'الشروط المتداخلة', desc: 'استخدام الجمل الشرطية داخل جمل شرطية أخرى.', videoId: 'qPbnog9UKH8', image: 'lesson7.jpg', pdf: 'lesson7.pdf', badge: 'البايثون' },
+            
+            // القسم الثالث
+            { section: 'section3', title: 'قواعد البيانات والنماذج', desc: 'مفهوم قواعد البيانات، أنواعها، وكيفية إنشاء النماذج.', videoId: 'UuFRqzjYCFA', image: 'lesson8.jpg', pdf: 'lesson8.pdf', badge: 'قواعد البيانات' },
+            { section: 'section3', title: 'إنشاء قاعدة بيانات والتعامل معها', desc: 'خطوات إنشاء قاعدة بيانات، إضافة الجداول، والاستعلام.', videoId: '7QHsVTwY5iw', image: 'lesson9.jpg', pdf: 'lesson9.pdf', badge: 'قواعد البيانات' },
+            
+            // القسم الرابع
+            { section: 'section4', title: 'اختبر نفسك - الجزء الأول', desc: 'اختبار شامل على مخططات المعلومات وأساسيات البايثون.', videoId: 'Bm_9FNH262g', image: 'lesson10.jpg', pdf: 'lesson10.pdf', badge: 'مراجعة' },
+            { section: 'section4', title: 'اختبر نفسك - الجزء الثاني', desc: 'اختبار شامل على قواعد البيانات والشروط المتداخلة.', videoId: '5S8k0_54Nv0', image: 'lesson11.jpg', pdf: 'lesson11.pdf', badge: 'مراجعة' }
+        ];
+        
+        // بناء الأقسام وبطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            // تعريف هيكل الأقسام
+            const sections = [
+                { id: 'section1', title: 'القسم الأول: مخططات المعلومات البيانية', icon: 'fas fa-chart-bar' },
+                { id: 'section2', title: 'القسم الثاني: لغة البايثون (Python)', icon: 'fab fa-python' },
+                { id: 'section3', title: 'القسم الثالث: قواعد البيانات', icon: 'fas fa-database' },
+                { id: 'section4', title: 'القسم الرابع: اختبر نفسك', icon: 'fas fa-tasks' }
+            ];
+            
+            sections.forEach(sec => {
+                // 1. إضافة عنوان القسم
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerHTML = `<i class="${sec.icon}"></i><span>${sec.title}</span>`;
+                container.appendChild(sectionTitle);
+                
+                // 2. إضافة شبكة الدروس للقسم
+                const grid = document.createElement('div');
+                grid.className = 'lessons-grid';
+                grid.id = sec.id;
+                container.appendChild(grid);
+            });
+            
+            // 3. ملء الشبكات بالدروس
+            LESSONS_DATA.forEach((lesson, index) => {
+                const grid = document.getElementById(lesson.section);
+                if (!grid) return;
+                
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/8e44ad/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <span class="section-badge">${lesson.badge}</span>
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> مبرمج رقمي محترف! نتيجتك: ${score} من ${questions.length}.`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> جيد جداً! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="طاقة الوضع وطاقة الحركة - العوامل المؤثرة والحساب - مادة العلوم">
+    <title>طاقة الوضع وطاقة الحركة | العلوم</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #27ae60; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(39, 174, 96, 0.08); border-right: 4px solid #27ae60; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #27ae60; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #2ecc71; margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: #27ae60; direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #27ae60; margin: 15px 0; }
+        .step-box h4 { color: #27ae60; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #27ae60; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #27ae60; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(39, 174, 96, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #2ecc71; margin-bottom: 15px; }
+        .example-card h4 { color: #27ae60; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #27ae60; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #2ecc71; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #27ae60; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #27ae60; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(39, 174, 96, 0.05), rgba(46, 204, 113, 0.05)); border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #27ae60; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .quiz-option:hover { border-color: #27ae60; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #27ae60; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #27ae60; color: #27ae60; }
+        .energy-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .energy-visual svg { max-width: 100%; height: auto; }
+        .formula-card { background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.1)); border: 2px solid #27ae60; border-radius: 15px; padding: 25px; text-align: center; margin: 20px 0; }
+        .formula-card .main-formula { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 800; color: #27ae60; margin: 15px 0; direction: ltr; }
+        .factor-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #27ae60; text-align: center; transition: transform 0.3s; }
+        .factor-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .factor-card h4 { margin-bottom: 10px; color: #27ae60; }
+        .factor-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #27ae60; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } }
+    </style>
+</head>
+<body class="subject-science">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-flask"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/science.html" class="active">العلوم</a></li>
+                    <li><a href="../../quizzes/science-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/science.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة العلوم</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-bolt"></i> طاقة الوضع وطاقة الحركة</h1>
+            <p>العوامل المؤثرة فيهما وكيفية حسابهما</p>
+            <p>مادة العلوم – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا تسقط الكرة بسرعة أكبر من ارتفاع أعلى؟ ولماذا تؤذي السيارة السريعة أكثر من البطيئة؟</strong>
+                <p style="margin-top: 10px;">الإجابة تكمن في نوعين من الطاقة: <strong>طاقة الوضع</strong> (المخزنة بسبب الارتفاع) و<strong>طاقة الحركة</strong> (الموجودة بسبب السرعة). في هذا الدرس، سنتعلم كيف نحسب هاتين الطاقتين وما العوامل المؤثرة فيهما!</p>
+            </div>
+
+            <div class="energy-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> تحول الطاقة في الحياة اليومية</h4>
+                <svg width="600" height="250" viewBox="0 0 600 250">
+                    <!-- الكرة على الجبل -->
+                    <path d="M 50 200 L 150 100 L 250 200" fill="rgba(39, 174, 96, 0.2)" stroke="#27ae60" stroke-width="2"/>
+                    <circle cx="150" cy="90" r="15" fill="#e74c3c"/>
+                    <text x="150" y="70" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">طاقة وضع عالية</text>
+                    
+                    <!-- سهم -->
+                    <line x1="270" y1="150" x2="330" y2="150" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow)"/>
+                    <text x="300" y="140" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle">تتحول إلى</text>
+                    
+                    <!-- الكرة تتدحرج -->
+                    <path d="M 350 200 L 550 200" fill="none" stroke="#27ae60" stroke-width="2"/>
+                    <circle cx="450" cy="185" r="15" fill="#3498db"/>
+                    <text x="450" y="170" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">طاقة حركة عالية</text>
+                    
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هي الطاقة؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هي الطاقة؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الطاقة هي القدرة على إنجاز شغل أو إحداث تغيير.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                الطاقة موجودة في كل مكان حولنا، وتأخذ أشكالاً متعددة. في هذا الدرس، سنركز على نوعين أساسيين من الطاقة الميكانيكية:
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-mountain"></i> طاقة الوضع (Potential Energy)</h3>
+                    <p><strong>التعريف:</strong> الطاقة المخزنة في الجسم بسبب <strong>موضعه</strong> أو حالته.</p>
+                    <p style="margin-top: 10px;"><strong>أمثلة:</strong></p>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li>كتاب على رف عالٍ</li>
+                        <li>ماء خلف سد</li>
+                        <li>زنبرك مضغوط</li>
+                        <li>قوس مشدود</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-running"></i> طاقة الحركة (Kinetic Energy)</h3>
+                    <p><strong>التعريف:</strong> الطاقة التي يمتلكها الجسم بسبب <strong>حركته</strong>.</p>
+                    <p style="margin-top: 10px;"><strong>أمثلة:</strong></p>
+                    <ul style="padding-right: 20px; line-height: 2;">
+                        <li>سيارة متحركة</li>
+                        <li>كرة متدحرجة</li>
+                        <li>طائر يحلق</li>
+                        <li>ماء flowing في النهر</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> وحدة قياس الطاقة:</h4>
+                <p>تُقاس كل من طاقة الوضع وطاقة الحركة بوحدة <strong>الجول (Joule - J)</strong>.</p>
+                <div class="math-box" style="font-size: 1.1rem; margin-top: 10px;">
+                    1 جول = الطاقة اللازمة لرفع جسم وزنه 1 نيوتن مسافة 1 متر
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: طاقة الوضع -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-mountain"></i> ثانياً: طاقة الوضع (طاقة الارتفاع)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>طاقة الوضع الجاذبية:</strong> هي الطاقة المخزنة في الجسم بسبب ارتفاعه عن سطح الأرض.
+            </div>
+
+            <div class="formula-card">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">صيغة طاقة الوضع:</p>
+                <div class="main-formula">
+                    PE = m × g × h
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    حيث: m = الكتلة (كجم)، g = تسارع الجاذبية (9.8 م/ث²)، h = الارتفاع (م)
+                </p>
+            </div>
+
+            <h3 style="color: #27ae60; margin: 25px 0 15px;">📌 العوامل المؤثرة في طاقة الوضع:</h3>
+            
+            <div class="three-columns">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-weight-hanging"></i></div>
+                    <h4>الكتلة (m)</h4>
+                    <p>كلما زادت كتلة الجسم، زادت طاقة وضعه</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        PE ∝ m
+                    </div>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-arrow-up"></i></div>
+                    <h4>الارتفاع (h)</h4>
+                    <p>كلما زاد ارتفاع الجسم، زادت طاقة وضعه</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        PE ∝ h
+                    </div>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h4>تسارع الجاذبية (g)</h4>
+                    <p>ثابت على سطح الأرض = 9.8 م/ث²</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        g = 9.8 m/s²
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: حساب طاقة وضع</h4>
+                <p><strong>المسألة:</strong> صندوق كتلته 5 كجم موضوع على رف ارتفاعه 2 م. احسب طاقة وضعه. (g = 10 م/ث² للتبسيط)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 5 كجم</div>
+                    <div class="calculation">h = 2 م</div>
+                    <div class="calculation">g = 10 م/ث²</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">PE = m × g × h</div>
+                    <div class="calculation">PE = 5 × 10 × 2</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب الناتج</h4>
+                    <div class="calculation">PE = 100 جول</div>
+                </div>
+
+                <div class="math-box">
+                    طاقة الوضع = 100 جول
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: تأثير مضاعفة الارتفاع</h4>
+                <p><strong>المسألة:</strong> إذا كانت طاقة وضع جسم على ارتفاع 3 م تساوي 60 جول، فما طاقة وضعه على ارتفاع 6 م؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> لاحظ العلاقة</h4>
+                    <p>طاقة الوضع تتناسب طردياً مع الارتفاع</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب نسبة الزيادة</h4>
+                    <div class="calculation">6 ÷ 3 = 2 (الارتفاع تضاعف)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب طاقة الوضع الجديدة</h4>
+                    <div class="calculation">PE الجديدة = 60 × 2 = 120 جول</div>
+                </div>
+
+                <div class="math-box">
+                    طاقة الوضع الجديدة = 120 جول
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>طاقة الوضع تعتمد على <strong>مستوى الإسناد</strong> (النقطة المرجعية). نفس الجسم له طاقة وضع مختلفة إذا قِسنا من الأرض أو من سطح طاولة!</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: طاقة الحركة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-running"></i> ثالثاً: طاقة الحركة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>طاقة الحركة:</strong> هي الطاقة التي يمتلكها الجسم بسبب حركته.
+            </div>
+
+            <div class="formula-card">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">صيغة طاقة الحركة:</p>
+                <div class="main-formula">
+                    KE = ½ × m × v²
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    حيث: m = الكتلة (كجم)، v = السرعة (م/ث)
+                </p>
+            </div>
+
+            <h3 style="color: #27ae60; margin: 25px 0 15px;">📌 العوامل المؤثرة في طاقة الحركة:</h3>
+            
+            <div class="two-columns">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-weight-hanging"></i></div>
+                    <h4>الكتلة (m)</h4>
+                    <p>كلما زادت كتلة الجسم، زادت طاقة حركته</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        KE ∝ m
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">علاقة طردية خطية</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h4>السرعة (v)</h4>
+                    <p>كلما زادت سرعة الجسم، زادت طاقة حركته <strong>بمقدار مربع السرعة</strong></p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        KE ∝ v²
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">علاقة طردية تربيعية (أقوى تأثير!)</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا السرعة أهم من الكتلة؟</h4>
+                <p>لأن طاقة الحركة تتناسب مع <strong>مربع السرعة</strong>! إذا تضاعفت السرعة، تتضاعف طاقة الحركة <strong>4 مرات</strong> (2² = 4).</p>
+                <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                    إذا v → 2v، فإن KE → 4KE
+                </div>
+                <p style="margin-top: 10px;">هذا يفسر لماذا الحوادث بسرعات عالية أكثر خطورة!</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: حساب طاقة حركة</h4>
+                <p><strong>المسألة:</strong> سيارة كتلتها 1000 كجم تسير بسرعة 10 م/ث. احسب طاقة حركتها.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد المعطيات</h4>
+                    <div class="calculation">m = 1000 كجم</div>
+                    <div class="calculation">v = 10 م/ث</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> طبّق الصيغة</h4>
+                    <div class="calculation">KE = ½ × m × v²</div>
+                    <div class="calculation">KE = ½ × 1000 × (10)²</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب</h4>
+                    <div class="calculation">KE = ½ × 1000 × 100</div>
+                    <div class="calculation">KE = 50,000 جول</div>
+                </div>
+
+                <div class="math-box">
+                    طاقة الحركة = 50,000 جول (50 كيلوجول)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: تأثير مضاعفة السرعة</h4>
+                <p><strong>المسألة:</strong> إذا كانت طاقة حركة دراجة 100 جول عند سرعة 5 م/ث، فما طاقتها عند سرعة 10 م/ث؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب نسبة زيادة السرعة</h4>
+                    <div class="calculation">10 ÷ 5 = 2 (السرعة تضاعفت)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب تأثير ذلك على طاقة الحركة</h4>
+                    <div class="calculation">KE تتناسب مع v²</div>
+                    <div class="calculation">2² = 4 (طاقة الحركة تتضاعف 4 مرات)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> احسب طاقة الحركة الجديدة</h4>
+                    <div class="calculation">KE الجديدة = 100 × 4 = 400 جول</div>
+                </div>
+
+                <div class="math-box">
+                    طاقة الحركة الجديدة = 400 جول
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: مقارنة بين جسمين</h4>
+                <p><strong>المسألة:</strong> أيهما له طاقة حركة أكبر: كرة كتلتها 2 كجم وسرعتها 3 م/ث، أم كرة كتلتها 1 كجم وسرعتها 5 م/ث؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب طاقة الحركة للكرة الأولى</h4>
+                    <div class="calculation">KE₁ = ½ × 2 × (3)² = ½ × 2 × 9 = 9 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب طاقة الحركة للكرة الثانية</h4>
+                    <div class="calculation">KE₂ = ½ × 1 × (5)² = ½ × 1 × 25 = 12.5 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> قارن</h4>
+                    <div class="calculation">12.5 > 9 ➔ الكرة الثانية لها طاقة حركة أكبر</div>
+                </div>
+
+                <div class="math-box">
+                    الكرة الثانية (1 كجم، 5 م/ث) لها طاقة حركة أكبر = 12.5 جول
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: التحول بين طاقة الوضع وطاقة الحركة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sync-alt"></i> رابعاً: التحول بين طاقة الوضع وطاقة الحركة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>قانون حفظ الطاقة الميكانيكية:</strong> الطاقة لا تُفنى ولا تُستحدث، بل تتحول من شكل إلى آخر.
+            </div>
+
+            <div class="math-box" style="font-size: 1.2rem;">
+                الطاقة الميكانيكية الكلية = PE + KE = ثابت
+            </div>
+
+            <div class="energy-visual">
+                <h4 style="color: #27ae60; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> تحول الطاقة عند سقوط جسم</h4>
+                <svg width="600" height="300" viewBox="0 0 600 300">
+                    <!-- المستوى العلوي -->
+                    <line x1="50" y1="50" x2="200" y2="50" stroke="#2c3e50" stroke-width="3"/>
+                    <circle cx="125" cy="50" r="20" fill="#e74c3c"/>
+                    <text x="125" y="30" font-family="Tajawal" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="700">أعلى نقطة</text>
+                    <text x="125" y="90" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle">PE = عالية</text>
+                    <text x="125" y="105" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">KE = صفر</text>
+                    
+                    <!-- سهم -->
+                    <line x1="125" y1="110" x2="125" y2="150" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow3)"/>
+                    <text x="140" y="135" font-family="Tajawal" font-size="11" fill="#27ae60">يسقط</text>
+                    
+                    <!-- المستوى الأوسط -->
+                    <circle cx="125" cy="180" r="20" fill="#f39c12"/>
+                    <text x="125" y="165" font-family="Tajawal" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="700">منتصف الطريق</text>
+                    <text x="125" y="220" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle">PE = متوسطة</text>
+                    <text x="125" y="235" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">KE = متوسطة</text>
+                    
+                    <!-- سهم -->
+                    <line x1="125" y1="240" x2="125" y2="270" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow3)"/>
+                    
+                    <!-- المستوى السفلي -->
+                    <line x1="50" y1="290" x2="200" y2="290" stroke="#2c3e50" stroke-width="3"/>
+                    <circle cx="125" cy="290" r="20" fill="#3498db"/>
+                    <text x="125" y="275" font-family="Tajawal" font-size="12" fill="#3498db" text-anchor="middle" font-weight="700">أسفل نقطة</text>
+                    
+                    <!-- الجانب الأيمن - القيم -->
+                    <text x="350" y="60" font-family="Fira Code" font-size="13" fill="#e74c3c" font-weight="700">أعلى: PE = mgh, KE = 0</text>
+                    <text x="350" y="100" font-family="Fira Code" font-size="13" fill="#f39c12" font-weight="700">وسط: PE + KE = ثابت</text>
+                    <text x="350" y="140" font-family="Fira Code" font-size="13" fill="#3498db" font-weight="700">أسفل: PE = 0, KE = ½mv²</text>
+                    
+                    <text x="350" y="200" font-family="Tajawal" font-size="14" fill="#27ae60" font-weight="700">المجموع الكلي ثابت دائماً!</text>
+                    <text x="350" y="230" font-family="Fira Code" font-size="13" fill="#27ae60">PE + KE = mgh (ثابت)</text>
+                    
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 6: تحول الطاقة في سقوط حر</h4>
+                <p><strong>المسألة:</strong> كرة كتلتها 2 كجم تسقط من ارتفاع 5 م. احسب طاقتها عند أعلى نقطة وعند أسفل نقطة. (g = 10 م/ث²)</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> عند أعلى نقطة (قبل السقوط)</h4>
+                    <div class="calculation">السرعة = 0 ➔ KE = 0</div>
+                    <div class="calculation">PE = m × g × h = 2 × 10 × 5 = 100 جول</div>
+                    <div class="calculation">الطاقة الكلية = 100 + 0 = 100 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عند أسفل نقطة (قبل الاصطدام)</h4>
+                    <div class="calculation">الارتفاع = 0 ➔ PE = 0</div>
+                    <div class="calculation">الطاقة الكلية محفوظة = 100 جول</div>
+                    <div class="calculation">KE = 100 - 0 = 100 جول</div>
+                </div>
+
+                <div class="math-box">
+                    الطاقة الكلية = 100 جول (ثابتة في كل النقاط)
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 7: الأرجوحة (البندول)</h4>
+                <p><strong>المسألة:</strong> طفل على أرجوحة. عند أعلى نقطة، طاقة وضعه 200 جول وطاقة حركته 0. ما طاقة حركته عند أسفل نقطة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> عند أعلى نقطة</h4>
+                    <div class="calculation">PE = 200 جول، KE = 0</div>
+                    <div class="calculation">الطاقة الكلية = 200 + 0 = 200 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عند أسفل نقطة</h4>
+                    <div class="calculation">PE = 0 (أقل ارتفاع)</div>
+                    <div class="calculation">KE = الطاقة الكلية - PE = 200 - 0 = 200 جول</div>
+                </div>
+
+                <div class="math-box">
+                    طاقة الحركة عند أسفل نقطة = 200 جول
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-car"></i> مثال 8: السلامة المرورية</h4>
+                <p><strong>المسألة:</strong> لماذا الحوادث بسرعات عالية أكثر خطورة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> احسب طاقة حركة سيارة بسرعة 20 م/ث (72 كم/ساعة)</h4>
+                    <div class="calculation">KE = ½ × 1000 × (20)² = ½ × 1000 × 400 = 200,000 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب طاقة حركة نفس السيارة بسرعة 40 م/ث (144 كم/ساعة)</h4>
+                    <div class="calculation">KE = ½ × 1000 × (40)² = ½ × 1000 × 1600 = 800,000 جول</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> قارن</h4>
+                    <div class="calculation">800,000 ÷ 200,000 = 4 مرات أكثر!</div>
+                </div>
+
+                <div class="math-box">
+                    مضاعفة السرعة  4 أضعاف طاقة الحركة ➔ 4 أضعاف الخطورة!
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-bolt"></i> مثال 9: السدود المائية</h4>
+                <p><strong>المسألة:</strong> كيف تولد السدود الكهرباء من طاقة الوضع؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الماء المخزن خلف السد</h4>
+                    <p>يمتلك طاقة وضع عالية بسبب ارتفاعه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عند فتح المنافذ</h4>
+                    <p>طاقة الوضع تتحول إلى طاقة حركة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تدوير التوربينات</h4>
+                    <p>طاقة الحركة تتحول إلى طاقة كهربائية</p>
+                </div>
+
+                <div class="math-box">
+                    PE ➔ KE ➔ طاقة كهربائية
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-rocket"></i> مثال 10: الألعاب الترفيهية</h4>
+                <p><strong>المسألة:</strong> كيف تعمل الأفعوانية (Roller Coaster)؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> صعود العربة لأعلى نقطة</h4>
+                    <div class="calculation">PE تزداد، KE تقل</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> عند أعلى نقطة</h4>
+                    <div class="calculation">PE = أقصى قيمة، KE = 0 (لحظة)</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الهبوط السريع</h4>
+                    <div class="calculation">PE تتحول إلى KE ➔ السرعة تزداد</div>
+                </div>
+
+                <div class="math-box">
+                    PE + KE = ثابت (طوال الرحلة)
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: جدول مقارنة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> سادساً: جدول مقارنة شامل</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>وجه المقارنة</th>
+                            <th style="background: #e74c3c;">طاقة الوضع (PE)</th>
+                            <th style="background: #3498db;">طاقة الحركة (KE)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>التعريف</strong></td>
+                            <td>طاقة مخزنة بسبب الموضع</td>
+                            <td>طاقة بسبب الحركة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الصيغة</strong></td>
+                            <td style="font-family: 'Fira Code', monospace;">PE = mgh</td>
+                            <td style="font-family: 'Fira Code', monospace;">KE = ½mv²</td>
+                        </tr>
+                        <tr>
+                            <td><strong>العوامل المؤثرة</strong></td>
+                            <td>الكتلة، الارتفاع، الجاذبية</td>
+                            <td>الكتلة، السرعة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>تكون صفر عندما</strong></td>
+                            <td>الجسم على سطح الأرض (h=0)</td>
+                            <td>الجسم ساكن (v=0)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>تكون أقصى عندما</strong></td>
+                            <td>الجسم في أعلى ارتفاع</td>
+                            <td>الجسم في أعلى سرعة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الوحدة</strong></td>
+                            <td>الجول (J)</td>
+                            <td>الجول (J)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مثال</strong></td>
+                            <td>كتاب على رف</td>
+                            <td>سيارة متحركة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: نسيان تربيع السرعة في طاقة الحركة</h4>
+                <p>السرعة تُربّع أولاً ثم تُضرب! وليس العكس.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: #27ae60;">KE = ½ × m × (v)²</span></p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: #dc3545;">KE = ½ × m × v)²</span></p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: استخدام وحدات خاطئة</h4>
+                <p>تأكد من:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>الكتلة بالـ <strong>كيلوجرام (كجم)</strong> وليس الجرام</li>
+                    <li>السرعة بالـ <strong>متر/ثانية</strong> وليس كم/ساعة</li>
+                    <li>الارتفاع بالـ <strong>متر</strong> وليس السنتيمتر</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن طاقة الوضع تعتمد على السرعة</h4>
+                <p>طاقة الوضع تعتمد فقط على <strong>الارتفاع</strong>، وليس على سرعة الجسم.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان أن الطاقة الكلية محفوظة</h4>
+                <p>في النظام المثالي (بدون احتكاك)، مجموع PE + KE يبقى <strong>ثابتاً</strong> دائماً.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الخلط بين الوزن والكتلة</h4>
+                <p>الوزن = الكتلة × الجاذبية (W = mg). في صيغة PE، نستخدم الكتلة (m) وليس الوزن.</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #27ae60;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>طاقة الوضع (PE):</strong> طاقة مخزنة بسبب الارتفاع. PE = mgh</li>
+                <li><strong>طاقة الحركة (KE):</strong> طاقة بسبب الحركة. KE = ½mv²</li>
+                <li><strong>عوامل PE:</strong> الكتلة، الارتفاع، تسارع الجاذبية (9.8 م/ث²).</li>
+                <li><strong>عوامل KE:</strong> الكتلة، السرعة (تأثيرها تربيعي!).</li>
+                <li><strong>وحدة القياس:</strong> الجول (J) للطاقتين.</li>
+                <li><strong>قانون حفظ الطاقة:</strong> PE + KE = ثابت (في النظام المثالي).</li>
+                <li><strong>التحول:</strong> طاقة الوضع تتحول إلى حركة عند السقوط، والعكس عند الصعود.</li>
+                <li><strong>تأثير السرعة:</strong> مضاعفة السرعة ➔ 4 أضعاف طاقة الحركة!</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #27ae60; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما صيغة طاقة الوضع الجاذبية؟",
+                options: ["KE = ½mv²", "PE = mgh", "F = ma", "E = mc²"],
+                correct: 1,
+                explanation: "طاقة الوضع = الكتلة × تسارع الجاذبية × الارتفاع (PE = mgh)."
+            },
+            {
+                sentence: "صندوق كتلته 4 كجم على ارتفاع 5 م. ما طاقة وضعه؟ (g = 10 م/ث²)",
+                options: ["20 جول", "100 جول", "200 جول", "500 جول"],
+                correct: 2,
+                explanation: "PE = mgh = 4 × 10 × 5 = 200 جول."
+            },
+            {
+                sentence: "إذا تضاعفت سرعة جسم، فإن طاقة حركته:",
+                options: ["تتضاعف مرتين", "تتضاعف 3 مرات", "تتضاعف 4 مرات", "تبقى كما هي"],
+                correct: 2,
+                explanation: "KE تتناسب مع v². إذا تضاعفت السرعة (2v)، فإن KE تتضاعف 2² = 4 مرات."
+            },
+            {
+                sentence: "كرة تسقط من ارتفاع. عند منتصف الطريق:",
+                options: ["PE = 0, KE = أقصى", "PE = KE", "PE = أقصى, KE = 0", "PE + KE = 0"],
+                correct: 1,
+                explanation: "عند منتصف الطريق، نصف طاقة الوضع تحولت إلى طاقة حركة، إذن PE = KE."
+            },
+            {
+                sentence: "سيارة كتلتها 1000 كجم تسير بسرعة 20 م/ث. ما طاقة حركتها؟",
+                options: ["20,000 جول", "200,000 جول", "400,000 جول", "10,000 جول"],
+                correct: 1,
+                explanation: "KE = ½mv² = ½ × 1000 × (20)² = 500 × 400 = 200,000 جول."
+            },
+            {
+                sentence: "أي من العوامل التالية لا تؤثر في طاقة الوضع؟",
+                options: ["الكتلة", "الارتفاع", "السرعة", "تسارع الجاذبية"],
+                correct: 2,
+                explanation: "طاقة الوضع تعتمد على الكتلة والارتفاع والجاذبية (PE = mgh). السرعة تؤثر في طاقة الحركة فقط."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

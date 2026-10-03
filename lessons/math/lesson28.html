@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="استراتيجية حل المسألة: الرسم - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>استراتيجية حل المسألة: الرسم | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .steps-list { counter-reset: step-counter; list-style: none; padding: 0; }
+        .steps-list li { counter-increment: step-counter; position: relative; padding: 15px 15px 15px 60px; margin-bottom: 10px; background: var(--bg-color); border-radius: 10px; border-right: 3px solid var(--subject-secondary); }
+        .steps-list li::before { content: counter(step-counter); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: var(--subject-primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .drawing-visual { background: var(--bg-color); padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .drawing-visual svg { max-width: 100%; height: auto; }
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .strategy-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-primary); text-align: center; }
+        .strategy-card i { font-size: 2.5rem; color: var(--subject-primary); margin-bottom: 10px; }
+        .strategy-card h4 { color: var(--subject-primary); margin-bottom: 8px; }
+        .strategy-card p { font-size: 0.95rem; color: var(--text-muted); }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } .strategy-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-pen-fancy"></i> استراتيجية حل المسألة: الرسم</h1>
+            <p>كيفية استخدام الرسم كاستراتيجية فعالة لحل المسائل الرياضية</p>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>لماذا نستخدم الرسم في حل المسائل الرياضية؟</strong>
+                <p style="margin-top: 10px;">الرسم يساعدنا على <strong>تحويل الكلمات إلى صورة مرئية</strong>، مما يجعل المسألة أسهل للفهم والحل. عندما ترسم المسألة، ترى العلاقات بين الأجزاء بوضوح، وتكتشف الحل بسرعة أكبر!</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هي استراتيجية الرسم؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هي استراتيجية الرسم؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> استراتيجية الرسم هي تمثيل المسألة الرياضية بصرياً باستخدام الأشكال، الخطوط، الجداول، أو الرسوم التوضيحية لفهم المعطيات وإيجاد الحل.
+            </div>
+
+            <p style="margin-bottom: 20px; line-height: 1.8;">
+                الرسم ليس مجرد "تخربيش" على الورق، بل هو <strong>أداة تفكير قوية</strong> تساعدك على:
+            </p>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>رؤية المسألة</h4>
+                    <p>تحويل النص إلى صورة واضحة</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4>فهم العلاقات</h4>
+                    <p>رؤية كيف ترتبط الأجزاء ببعضها</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-search"></i>
+                    <h4>اكتشاف الحل</h4>
+                    <p>رؤية المسار نحو الإجابة</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-check-double"></i>
+                    <h4>التحقق من الإجابة</h4>
+                    <p>مراجعة الحل بصرياً</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> متى نستخدم استراتيجية الرسم؟</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>عندما تكون المسألة <strong>معقدة</strong> ويصعب فهمها من النص فقط</li>
+                    <li>عندما تتضمن المسألة <strong>أشكالاً هندسية</strong> (مربعات، مستطيلات، مثلثات)</li>
+                    <li>عندما نحتاج لترتيب <strong>أشياء في صفوف وأعمدة</strong></li>
+                    <li>عندما نحتاج لتتبع <strong>حركة أو مسار</strong></li>
+                    <li>عندما نحتاج لمقارنة <strong>أحجام أو كميات</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثانياً: خطوات استراتيجية الرسم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-list-ol"></i> ثانياً: خطوات استراتيجية الرسم</h2>
+            
+            <p style="margin-bottom: 20px;">اتبع هذه الخطوات الخمس لحل أي مسألة باستخدام الرسم:</p>
+
+            <ol class="steps-list">
+                <li><strong>اقرأ المسألة بعناية</strong> وحدد المعطيات والمطلوب.</li>
+                <li><strong>ارسم تمثيلاً بصرياً</strong> للمسألة (شكل، جدول، خط أعداد...).</li>
+                <li><strong>اكتب المعطيات</strong> على الرسم (الأرقام، الأسماء، العلاقات).</li>
+                <li><strong>استخدم الرسم</strong> لإيجاد الحل (عد، قارن، احسب).</li>
+                <li><strong>تحقق من الإجابة</strong> بالعودة إلى نص المسألة.</li>
+            </ol>
+
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>أنواع الرسوم المستخدمة:</strong>
+                <ul style="margin-top: 10px; padding-right: 20px;">
+                    <li>الرسوم الهندسية (مربعات، مستطيلات، دوائر)</li>
+                    <li>خط الأعداد</li>
+                    <li>الجداول</li>
+                    <li>الرسوم التخطيطية (مخططات)</li>
+                    <li>الرموز والأشكال البسيطة (○ □ △)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: أمثلة محلولة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> ثالثاً: أمثلة محلولة خطوة بخطوة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: ترتيب الكراسي</h4>
+                <p><strong>المسألة:</strong> في قاعة، رُتبت الكراسي في 5 صفوف، كل صف يحتوي على 6 كراسي. كم عدد الكراسي الكلي؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم تمثيلاً بصرياً</h4>
+                    <div class="drawing-visual">
+                        <svg width="400" height="200" viewBox="0 0 400 200">
+                            <!-- رسم الكراسي في صفوف -->
+                            <g fill="#3498db" stroke="#2980b9" stroke-width="1">
+                                <!-- الصف الأول -->
+                                <rect x="30" y="20" width="50" height="30" rx="5"/>
+                                <rect x="90" y="20" width="50" height="30" rx="5"/>
+                                <rect x="150" y="20" width="50" height="30" rx="5"/>
+                                <rect x="210" y="20" width="50" height="30" rx="5"/>
+                                <rect x="270" y="20" width="50" height="30" rx="5"/>
+                                <rect x="330" y="20" width="50" height="30" rx="5"/>
+                                
+                                <!-- الصف الثاني -->
+                                <rect x="30" y="60" width="50" height="30" rx="5"/>
+                                <rect x="90" y="60" width="50" height="30" rx="5"/>
+                                <rect x="150" y="60" width="50" height="30" rx="5"/>
+                                <rect x="210" y="60" width="50" height="30" rx="5"/>
+                                <rect x="270" y="60" width="50" height="30" rx="5"/>
+                                <rect x="330" y="60" width="50" height="30" rx="5"/>
+                                
+                                <!-- الصف الثالث -->
+                                <rect x="30" y="100" width="50" height="30" rx="5"/>
+                                <rect x="90" y="100" width="50" height="30" rx="5"/>
+                                <rect x="150" y="100" width="50" height="30" rx="5"/>
+                                <rect x="210" y="100" width="50" height="30" rx="5"/>
+                                <rect x="270" y="100" width="50" height="30" rx="5"/>
+                                <rect x="330" y="100" width="50" height="30" rx="5"/>
+                            </g>
+                            
+                            <!-- تسميات -->
+                            <text x="10" y="40" font-family="Tajawal" font-size="12" fill="#e74c3c" font-weight="700">صف 1</text>
+                            <text x="10" y="80" font-family="Tajawal" font-size="12" fill="#e74c3c" font-weight="700">صف 2</text>
+                            <text x="10" y="120" font-family="Tajawal" font-size="12" fill="#e74c3c" font-weight="700">صف 3</text>
+                            <text x="200" y="180" font-family="Tajawal" font-size="14" fill="#2980b9" font-weight="700" text-anchor="middle">6 كراسي في كل صف</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اكتب المعطيات على الرسم</h4>
+                    <p>عدد الصفوف = 5، عدد الكراسي في كل صف = 6</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">5 × 6 = 30</div>
+                </div>
+
+                <div class="math-box">
+                    عدد الكراسي الكلي = 30 كرسي
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: المسافة على خط الأعداد</h4>
+                <p><strong>المسألة:</strong> يقف أحمد عند النقطة 3 على خط الأعداد، ثم يمشي 5 وحدات إلى اليمين. عند أي نقطة يقف الآن؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم خط الأعداد</h4>
+                    <div class="drawing-visual">
+                        <svg width="500" height="100" viewBox="0 0 500 100">
+                            <!-- خط الأعداد -->
+                            <line x1="30" y1="50" x2="470" y2="50" stroke="#2c3e50" stroke-width="2"/>
+                            <polygon points="470,50 460,45 460,55" fill="#2c3e50"/>
+                            
+                            <!-- علامات الأرقام -->
+                            <g font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">
+                                <text x="50" y="75">0</text>
+                                <text x="100" y="75">1</text>
+                                <text x="150" y="75">2</text>
+                                <text x="200" y="75" font-weight="700" fill="#e74c3c">3</text>
+                                <text x="250" y="75">4</text>
+                                <text x="300" y="75">5</text>
+                                <text x="350" y="75">6</text>
+                                <text x="400" y="75">7</text>
+                                <text x="450" y="75" font-weight="700" fill="#27ae60">8</text>
+                            </g>
+                            
+                            <!-- نقطة البداية -->
+                            <circle cx="200" cy="50" r="8" fill="#e74c3c"/>
+                            <text x="200" y="30" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle" font-weight="700">البداية: 3</text>
+                            
+                            <!-- نقطة النهاية -->
+                            <circle cx="450" cy="50" r="8" fill="#27ae60"/>
+                            <text x="450" y="30" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle" font-weight="700">النهاية: 8</text>
+                            
+                            <!-- سهم الحركة -->
+                            <line x1="210" y1="20" x2="440" y2="20" stroke="#3498db" stroke-width="2" marker-end="url(#arrow)"/>
+                            <text x="325" y="15" font-family="Tajawal" font-size="11" fill="#3498db" text-anchor="middle">5 وحدات يميناً</text>
+                            
+                            <defs>
+                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                    <polygon points="0 0, 10 3, 0 6" fill="#3498db"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">3 + 5 = 8</div>
+                </div>
+
+                <div class="math-box">
+                    يقف أحمد الآن عند النقطة 8
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: تقسيم كعكة</h4>
+                <p><strong>المسألة:</strong> كعكة مقسمة إلى 8 أجزاء متساوية. أكل أحمد 3 أجزاء، وأكلت سارة جزءين. ما الكسر المتبقي من الكعكة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم الكعكة مقسمة</h4>
+                    <div class="drawing-visual">
+                        <svg width="250" height="250" viewBox="0 0 250 250">
+                            <!-- الكعكة الدائرية -->
+                            <circle cx="125" cy="125" r="100" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                            
+                            <!-- الأقسام المأكولة بواسطة أحمد (3 أجزاء) -->
+                            <path d="M 125 125 L 125 25 A 100 100 0 0 1 211.6 75 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+                            <path d="M 125 125 L 211.6 75 A 100 100 0 0 1 225 125 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+                            <path d="M 125 125 L 225 125 A 100 100 0 0 1 211.6 175 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+                            
+                            <!-- الأقسام المأكولة بواسطة سارة (جزءان) -->
+                            <path d="M 125 125 L 211.6 175 A 100 100 0 0 1 125 225 Z" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
+                            <path d="M 125 125 L 125 225 A 100 100 0 0 1 38.4 175 Z" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
+                            
+                            <!-- الأقسام المتبقية (3 أجزاء) -->
+                            <path d="M 125 125 L 38.4 175 A 100 100 0 0 1 25 125 Z" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+                            <path d="M 125 125 L 25 125 A 100 100 0 0 1 38.4 75 Z" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+                            <path d="M 125 125 L 38.4 75 A 100 100 0 0 1 125 25 Z" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+                            
+                            <!-- التسميات -->
+                            <text x="170" y="80" font-family="Tajawal" font-size="11" fill="white" font-weight="700">أحمد (3/8)</text>
+                            <text x="130" y="200" font-family="Tajawal" font-size="11" fill="white" font-weight="700">سارة (2/8)</text>
+                            <text x="60" y="130" font-family="Tajawal" font-size="11" fill="white" font-weight="700">المتبقي (3/8)</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">المجموع المأكول = 3 + 2 = 5 أجزاء</div>
+                    <div class="calculation">المتبقي = 8 - 5 = 3 أجزاء</div>
+                    <div class="calculation">الكسر المتبقي = 3/8</div>
+                </div>
+
+                <div class="math-box">
+                    الكسر المتبقي = 3/8
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: مسألة العمر</h4>
+                <p><strong>المسألة:</strong> عمر الأب 40 سنة، وعمر الابن ربع عمر الأب. ما الفرق بين عمريهما؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم تمثيلاً بالأشرطة</h4>
+                    <div class="drawing-visual">
+                        <svg width="500" height="150" viewBox="0 0 500 150">
+                            <!-- شريط عمر الأب -->
+                            <rect x="20" y="20" width="460" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                            <text x="250" y="45" font-family="Tajawal" font-size="16" fill="white" text-anchor="middle" font-weight="700">عمر الأب = 40 سنة</text>
+                            
+                            <!-- تقسيم الشريط إلى 4 أجزاء -->
+                            <line x1="135" y1="20" x2="135" y2="60" stroke="white" stroke-width="2"/>
+                            <line x1="250" y1="20" x2="250" y2="60" stroke="white" stroke-width="2"/>
+                            <line x1="365" y1="20" x2="365" y2="60" stroke="white" stroke-width="2"/>
+                            
+                            <!-- شريط عمر الابن -->
+                            <rect x="20" y="80" width="115" height="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                            <text x="77" y="105" font-family="Tajawal" font-size="14" fill="white" text-anchor="middle" font-weight="700">عمر الابن = 10</text>
+                            
+                            <!-- الفرق -->
+                            <rect x="145" y="80" width="335" height="40" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5" stroke-dasharray="5,5"/>
+                            <text x="312" y="105" font-family="Tajawal" font-size="14" fill="white" text-anchor="middle" font-weight="700">الفرق = 30 سنة</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">عمر الابن = 40 ÷ 4 = 10 سنوات</div>
+                    <div class="calculation">الفرق = 40 - 10 = 30 سنة</div>
+                </div>
+
+                <div class="math-box">
+                    الفرق بين العمرين = 30 سنة
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: مسألة هندسية (المحيط)</h4>
+                <p><strong>المسألة:</strong> حديقة مستطيلة الشكل، طولها 12 م وعرضها 8 م. ما محيط الحديقة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم المستطيل</h4>
+                    <div class="drawing-visual">
+                        <svg width="400" height="250" viewBox="0 0 400 250">
+                            <!-- المستطيل -->
+                            <rect x="50" y="50" width="300" height="150" fill="rgba(46, 204, 113, 0.2)" stroke="#27ae60" stroke-width="3" rx="5"/>
+                            
+                            <!-- تسميات الأضلاع -->
+                            <text x="200" y="40" font-family="Fira Code" font-size="16" fill="#27ae60" text-anchor="middle" font-weight="700">الطول = 12 م</text>
+                            <text x="200" y="230" font-family="Fira Code" font-size="16" fill="#27ae60" text-anchor="middle" font-weight="700">الطول = 12 م</text>
+                            <text x="20" y="130" font-family="Fira Code" font-size="16" fill="#27ae60" text-anchor="middle" font-weight="700" transform="rotate(-90, 20, 130)">العرض = 8 م</text>
+                            <text x="380" y="130" font-family="Fira Code" font-size="16" fill="#27ae60" text-anchor="middle" font-weight="700" transform="rotate(90, 380, 130)">العرض = 8 م</text>
+                            
+                            <!-- الأسهم للمحيط -->
+                            <text x="200" y="130" font-family="Tajawal" font-size="18" fill="#e74c3c" text-anchor="middle" font-weight="700">المحيط = ؟</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">المحيط = 2 × (الطول + العرض)</div>
+                    <div class="calculation">= 2 × (12 + 8) = 2 × 20 = 40 م</div>
+                </div>
+
+                <div class="math-box">
+                    محيط الحديقة = 40 م
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: أنواع الرسوم المستخدمة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-shapes"></i> رابعاً: أنواع الرسوم المستخدمة</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-draw-polygon"></i> 1. الأشكال الهندسية</h3>
+                    <p>مربعات، مستطيلات، مثلثات، دوائر</p>
+                    <p style="margin-top: 10px;"><strong>تستخدم في:</strong> مسائل المساحة، المحيط، الأشكال</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-ruler-horizontal"></i> 2. خط الأعداد</h3>
+                    <p>خط مستقيم عليه أرقام</p>
+                    <p style="margin-top: 10px;"><strong>تستخدم في:</strong> مسائل الجمع، الطرح، المسافات</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-table"></i> 3. الجداول</h3>
+                    <p>تنظيم البيانات في صفوف وأعمدة</p>
+                    <p style="margin-top: 10px;"><strong>تستخدم في:</strong> مسائل الأنماط، المقارنات</p>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-project-diagram"></i> 4. المخططات</h3>
+                    <p>رسوم تخطيطية توضح العلاقات</p>
+                    <p style="margin-top: 10px;"><strong>تستخدم في:</strong> مسائل التقسيم، التوزيع</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-store"></i> مثال 6: تسوق من المتجر</h4>
+                <p><strong>المسألة:</strong> اشترى محمد 3 كتب بسعر 15 ريالاً للكتاب، و 4 أقلام بسعر 2 ريال للقلم. كم دفع محمد إجمالاً؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم تمثيلاً بالمجموعات</h4>
+                    <p>📚  📚 (3 كتب × 15 ريال) + ✏️ ️ ✏️ ✏️ (4 أقلام × 2 ريال)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> احسب كل مجموعة</h4>
+                    <div class="calculation">الكتب: 3 × 15 = 45 ريال</div>
+                    <div class="calculation">الأقلام: 4 × 2 = 8 ريال</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اجمع المجموعتين</h4>
+                    <div class="calculation">45 + 8 = 53 ريال</div>
+                </div>
+
+                <div class="math-box">
+                    المبلغ الإجمالي = 53 ريال
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-users"></i> مثال 7: توزيع الطلاب</h4>
+                <p><strong>المسألة:</strong> في فصل 24 طالباً، يريد المعلم تقسيمهم إلى مجموعات متساوية. إذا كان كل مجموعة تحتوي على 4 طلاب، فكم مجموعة ستتكون؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم تمثيلاً بالرموز</h4>
+                    <p>👦👦👦👦 | 👦👦👦 | 👦👦👦 | ...</p>
+                    <p>كل مجموعة = 4 طلاب</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <div class="calculation">24 ÷ 4 = 6 مجموعات</div>
+                </div>
+
+                <div class="math-box">
+                    عدد المجموعات = 6 مجموعات
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-route"></i> مثال 8: مسار الرحلة</h4>
+                <p><strong>المسألة:</strong> سار شخص 5 كم شرقاً، ثم 3 كم شمالاً، ثم 5 كم غرباً. ما بعده عن نقطة البداية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ارسم المسار</h4>
+                    <div class="drawing-visual">
+                        <svg width="300" height="250" viewBox="0 0 300 250">
+                            <!-- الشبكة -->
+                            <g stroke="#ecf0f1" stroke-width="1">
+                                <line x1="50" y1="50" x2="50" y2="200"/>
+                                <line x1="100" y1="50" x2="100" y2="200"/>
+                                <line x1="150" y1="50" x2="150" y2="200"/>
+                                <line x1="200" y1="50" x2="200" y2="200"/>
+                                <line x1="250" y1="50" x2="250" y2="200"/>
+                                <line x1="50" y1="50" x2="250" y2="50"/>
+                                <line x1="50" y1="100" x2="250" y2="100"/>
+                                <line x1="50" y1="150" x2="250" y2="150"/>
+                                <line x1="50" y1="200" x2="250" y2="200"/>
+                            </g>
+                            
+                            <!-- المسار -->
+                            <path d="M 50 200 L 200 200 L 200 100 L 50 100" fill="none" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrow2)"/>
+                            
+                            <!-- نقاط المسار -->
+                            <circle cx="50" cy="200" r="6" fill="#27ae60"/>
+                            <circle cx="200" cy="200" r="6" fill="#3498db"/>
+                            <circle cx="200" cy="100" r="6" fill="#3498db"/>
+                            <circle cx="50" cy="100" r="6" fill="#e74c3c"/>
+                            
+                            <!-- التسميات -->
+                            <text x="50" y="225" font-family="Tajawal" font-size="11" fill="#27ae60" text-anchor="middle" font-weight="700">البداية</text>
+                            <text x="125" y="225" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">5 كم شرقاً</text>
+                            <text x="230" y="150" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">3 كم شمالاً</text>
+                            <text x="125" y="85" font-family="Tajawal" font-size="10" fill="#3498db" text-anchor="middle">5 كم غرباً</text>
+                            <text x="50" y="85" font-family="Tajawal" font-size="11" fill="#e74c3c" text-anchor="middle" font-weight="700">النهاية</text>
+                            
+                            <!-- خط البعد -->
+                            <line x1="50" y1="200" x2="50" y2="100" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5"/>
+                            <text x="25" y="150" font-family="Tajawal" font-size="11" fill="#9b59b6" text-anchor="middle" font-weight="700">3 كم</text>
+                            
+                            <defs>
+                                <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                    <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> استخدم الرسم للحل</h4>
+                    <p>من الرسم نرى أن الشخص عاد إلى نفس الموقع شرق-غرب، لكنه تحرك 3 كم شمالاً</p>
+                </div>
+
+                <div class="math-box">
+                    البعد عن نقطة البداية = 3 كم
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الرسم غير الدقيق</h4>
+                <p>يجب أن يكون الرسم <strong>متناسباً</strong> مع المعطيات. لا ترسم مربعاً وتسميه مستطيلاً!</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> ارسم مستطيلاً طوله أكبر من عرضه إذا كان الطول > العرض</p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> ارسم مربعاً ثم اكتب أن الطول 12 والعرض 8</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان كتابة المعطيات على الرسم</h4>
+                <p>بعد الرسم، <strong>اكتب الأرقام والمعلومات</strong> عليه مباشرة لتسهيل الحل.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتماد على الرسم فقط دون حساب</h4>
+                <p>الرسم يساعد على الفهم، لكن يجب <strong>إجراء الحسابات</strong> للتأكد من الإجابة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الرسم المعقد جداً</h4>
+                <p>اجعل الرسم <strong>بسيطاً وواضحاً</strong>. لا حاجة للتفاصيل الزائدة التي تشتت الانتباه.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>استراتيجية الرسم:</strong> تمثيل المسألة بصرياً لفهمها وحلها.</li>
+                <li><strong>متى نستخدمها:</strong> في المسائل المعقدة، الهندسية، أو التي تتضمن ترتيباً.</li>
+                <li><strong>الخطوات:</strong> اقرأ ➔ ارسم ➔ اكتب المعطيات  استخدم الرسم ➔ تحقق.</li>
+                <li><strong>أنواع الرسوم:</strong> أشكال هندسية، خط أعداد، جداول، مخططات.</li>
+                <li><strong>الرسم الدقيق:</strong> يجب أن يكون متناسباً مع المعطيات.</li>
+                <li><strong>لا تعتمد على الرسم فقط:</strong> أجرِ الحسابات للتحقق.</li>
+                <li><strong>البساطة:</strong> اجعل الرسم واضحاً وبسيطاً.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما هي الخطوة الأولى في استراتيجية الرسم؟",
+                options: ["ارسم الشكل", "اقرأ المسألة بعناية", "اكتب المعطيات", "احسب الناتج"],
+                correct: 1,
+                explanation: "الخطوة الأولى هي قراءة المسألة بعناية وفهم المعطيات والمطلوب قبل الرسم."
+            },
+            {
+                sentence: "في مسألة: 'مستطيل طوله 10 م وعرضه 6 م، ما مساحته؟' ما أفضل رسم تستخدمه؟",
+                options: ["خط أعداد", "دائرة", "مستطيل مع كتابة الأبعاد", "جدول"],
+                correct: 2,
+                explanation: "المستطيل مع كتابة الأبعاد هو الأنسب لأنه يمثل الشكل المذكور في المسألة."
+            },
+            {
+                sentence: "أحمد يقف عند النقطة 4 على خط الأعداد، ثم يمشي 3 وحدات لليسار. عند أي نقطة يقف؟",
+                options: ["7", "1", "4", "3"],
+                correct: 1,
+                explanation: "4 - 3 = 1. عند التحرك لليسار على خط الأعداد نطرح."
+            },
+            {
+                sentence: "كعكة مقسمة إلى 6 أجزاء. أكلت سارة جزءين. ما الكسر المتبقي؟",
+                options: ["2/6", "4/6", "6/6", "1/6"],
+                correct: 1,
+                explanation: "المتبقي = 6 - 2 = 4 أجزاء، إذن الكسر المتبقي = 4/6."
+            },
+            {
+                sentence: "ما فائدة كتابة المعطيات على الرسم؟",
+                options: ["تجميل الرسم", "تسهيل الحل وتجنب النسيان", "إطالة وقت الحل", "لا فائدة منها"],
+                correct: 1,
+                explanation: "كتابة المعطيات على الرسم تسهل الحل وتساعد على عدم نسيان أي معلومة مهمة."
+            },
+            {
+                sentence: "أي من المسائل التالية最适合 استخدام الرسم لحلها؟",
+                options: ["5 + 3 = ?", "مستطيل طوله 8 وعرضه 5، ما محيطه؟", "ما هو 10 ÷ 2؟", "كم يساوي 7 × 3؟"],
+                correct: 1,
+                explanation: "مسائل الأشكال الهندسية (مثل المستطيل)最适合 استخدام الرسم لأنها تتضمن أبعاداً وأشكالاً."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أفعال المدح والذم (نعم وبئس) - إعرابها وحالات فاعلها ومخصوصها - مادة لغتي الخالدة">
+    <title>المدح والذم (نعم وبئس) | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .quran-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--subject-primary);
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid var(--subject-secondary);
+            margin: 15px 0;
+            line-height: 1.8;
+            direction: rtl;
+        }
+        [data-theme="dark"] .quran-text {
+            color: var(--subject-secondary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .column-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .column-card.praise { border-top: 4px solid var(--success-color); }
+        .column-card.blame { border-top: 4px solid var(--error-color); }
+        .column-card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column-card.praise h3 { color: var(--success-color); }
+        .column-card.blame h3 { color: var(--error-color); }
+
+        .grammar-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .grammar-box h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .grammar-box .sentence {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+        .grammar-box .analysis {
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        .grammar-box .analysis strong {
+            color: var(--subject-primary);
+        }
+
+        .word-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0 3px;
+        }
+        .tag-verb { background: #3498db; color: white; }
+        .tag-subject { background: #27ae60; color: white; }
+        .tag-special { background: #e67e22; color: white; }
+        .tag-object { background: #9b59b6; color: white; }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 {
+            color: #f1c40f;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 {
+            color: #f0909a;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .sentence {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+        .example-card .answer {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .flowchart {
+            background: var(--bg-color);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid var(--subject-secondary);
+        }
+        .flowchart-step {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-right: 4px solid var(--subject-primary);
+        }
+        .flowchart-step h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .flowchart-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--subject-secondary);
+            margin: 10px 0;
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong {
+            color: var(--subject-primary);
+        }
+
+        /* نشاط تفاعلي */
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(21, 152, 149, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-thumbs-up"></i> أفعال المدح والذم <span style="font-size: 1.5rem;">(نعم وبئس)</span></h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: التعريف -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: تعريف أفعال المدح والذم</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> أفعال المدح والذم هي أفعال جامدة لا تُصرَّف (ليس لها مضارع ولا أمر)، يُستخدم فيها:
+                <ul style="margin-top: 10px; padding-right: 20px;">
+                    <li><strong>نعمَ</strong> و<strong>حبّذا</strong>: للمدح</li>
+                    <li><strong>بئسَ</strong> و<strong>لا حبّذا</strong>: للذم</li>
+                </ul>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">🎯 الأفعال المستخدمة:</h3>
+            
+            <div class="two-columns">
+                <div class="column-card praise">
+                    <h3><i class="fas fa-thumbs-up"></i> أفعال المدح</h3>
+                    <div style="text-align: center; font-size: 2rem; font-weight: 700; margin: 15px 0; color: var(--success-color);">
+                        نِعْمَ - حَبَّذَا
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted);">تُستخدم لذكر المحاسن والصفات الحسنة</p>
+                </div>
+                <div class="column-card blame">
+                    <h3><i class="fas fa-thumbs-down"></i> أفعال الذم</h3>
+                    <div style="text-align: center; font-size: 2rem; font-weight: 700; margin: 15px 0; color: var(--error-color);">
+                        بِئْسَ - لَا حَبَّذَا
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted);">تُستخدم لذكر المساوئ والصفات السيئة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: إعراب نعم وبئس -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sitemap"></i> ثانياً: إعراب "نعم" و"بئس" وتفاصيلهما</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-info-circle"></i>
+                <strong>ملاحظة مهمة:</strong> "نعم" و"بئس" تُعربان إعراباً متشابهاً، وتتركبان من ثلاثة أجزاء رئيسية:
+                <br><span class="word-tag tag-verb">الفعل</span> + <span class="word-tag tag-subject">الفاعل</span> + <span class="word-tag tag-special">المخصوص</span>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📚 أقسام الجملة مع "نعم" و"بئس":</h3>
+            
+            <div class="grammar-box">
+                <h4><i class="fas fa-list-ol"></i> التركيب الأساسي:</h4>
+                <div class="sentence">
+                    <span class="word-tag tag-verb">نعم / بئس</span> + 
+                    <span class="word-tag tag-subject">الفاعل</span> + 
+                    <span class="word-tag tag-special">المخصوص بالمدح أو الذم</span>
+                </div>
+                <div class="analysis">
+                    <strong>مثال:</strong> <span style="color: var(--success-color);">نِعْمَ</span> <span style="color: #3498db;">الرَّجُلُ</span> <span style="color: #e67e22;">زَيْدٌ</span>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">الجزء</th>
+                            <th style="width: 25%;">الكلمة</th>
+                            <th style="width: 50%;">الإعراب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="word-tag tag-verb">فعل madح/ذم</span></td>
+                            <td><strong>نِعْمَ / بِئْسَ</strong></td>
+                            <td>فعل ماضٍ جامد مبني على الفتح</td>
+                        </tr>
+                        <tr>
+                            <td><span class="word-tag tag-subject">الفاعل</span></td>
+                            <td><strong>الرَّجُلُ</strong></td>
+                            <td>فاعل مرفوع وعلامة رفعه الضمة الظاهرة</td>
+                        </tr>
+                        <tr>
+                            <td><span class="word-tag tag-special">المخصوص</span></td>
+                            <td><strong>زَيْدٌ</strong></td>
+                            <td>مبتدأ مؤخر مرفوع وعلامة رفعه الضمة الظاهرة (والجملة من المبتدأ والخبر في محل رفع خبر لـ "نعم")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ثالثاً: حالات إعراب الفاعل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-user"></i> ثالثاً: حالات إعراب الفاعل مع "نعم" و"بئس"</h2>
+            
+            <p style="margin-bottom: 20px;">يأتي الفعل "نعم" و"بئس" بأربع حالات إعرابية مختلفة للفاعل:</p>
+
+            <!-- الحالة الأولى -->
+            <div class="grammar-box">
+                <h4><i class="fas fa-star"></i> الحالة الأولى: الفاعل ضمير مستتر (جوازاً)</h4>
+                <div class="sentence">
+                    <span class="word-tag tag-verb">نِعْمَ</span> <span class="word-tag tag-special">المُتَعَلِّمُ</span> <span class="word-tag tag-subject">خَالِدٌ</span>
+                </div>
+                <div class="analysis">
+                    <strong>الإعراب:</strong><br>
+                    • <strong>نِعْمَ:</strong> فعل ماضٍ جامد مبني على الفتح، والفاعل ضمير مستتر جوازاً تقديره "هو".<br>
+                    • <strong>المُتَعَلِّمُ:</strong> صفة مرفوعة (أو بدل) لضمير الفاعل المستتر.<br>
+                    • <strong>خَالِدٌ:</strong> مبتدأ مؤخر مرفوع، والجملة من المبتدأ والخبر في محل رفع خبر لـ "نعم".
+                </div>
+            </div>
+
+            <!-- الحالة الثانية -->
+            <div class="grammar-box">
+                <h4><i class="fas fa-star"></i> الحالة الثانية: الفاعل ضمير مستتر (وجوباً) - يعود على مضاف إليه</h4>
+                <div class="sentence">
+                    <span class="word-tag tag-verb">نِعْمَ</span> <span class="word-tag tag-special">طَالِبٌ</span> <span class="word-tag tag-object">العِلْمَ</span>
+                </div>
+                <div class="analysis">
+                    <strong>الإعراب:</strong><br>
+                    • <strong>نِعْمَ:</strong> فعل ماضٍ جامد مبني على الفتح.<br>
+                    • <strong>طَالِبٌ:</strong> فاعل مرفوع.<br>
+                    • <strong>العِلْمَ:</strong> مضاف إليه مجرور بالكسرة (الفاعل ضمير مستتر وجوباً يعود على "طالب").
+                </div>
+            </div>
+
+            <!-- الحالة الثالثة -->
+            <div class="grammar-box">
+                <h4><i class="fas fa-star"></i> الحالة الثالثة: الفاعل اسم ظاهر (كلمة "ما" أو "مَّا")</h4>
+                <div class="sentence">
+                    <span class="word-tag tag-verb">نِعْمَ</span> <span class="word-tag tag-subject">مَا</span> <span class="word-tag tag-special">يَفْعَلُهُ</span> <span style="color: var(--subject-primary);">الرجلُ الكريمُ</span>
+                </div>
+                <div class="analysis">
+                    <strong>الإعراب:</strong><br>
+                    • <strong>نِعْمَ:</strong> فعل ماضٍ جامد مبني على الفتح.<br>
+                    • <strong>مَا:</strong> اسم إشارة مبني في محل رفع فاعل (للكثرة والاستغراق).<br>
+                    • <strong>يَفْعَلُهُ:</strong> فعل مضارع مرفوع، والهاء مفعول به.<br>
+                    • <strong>الرجلُ الكريمُ:</strong> مبتدأ وخبر (المخصوص بالمدح).
+                </div>
+            </div>
+
+            <!-- الحالة الرابعة -->
+            <div class="grammar-box">
+                <h4><i class="fas fa-star"></i> الحالة الرابعة: الفاعل ضمير مستتر يعود على المخصوص</h4>
+                <div class="sentence">
+                    <span class="word-tag tag-verb">نِعْمَ</span> <span class="word-tag tag-special">الطَّالِبُ</span> <span class="word-tag tag-subject">خَالِدٌ</span>
+                </div>
+                <div class="analysis">
+                    <strong>الإعراب:</strong><br>
+                    • <strong>نِعْمَ:</strong> فعل ماضٍ جامد مبني على الفتح.<br>
+                    • <strong>الطَّالِبُ:</strong> مبتدأ مؤخر مرفوع (المخصوص بالمدح).<br>
+                    • <strong>خَالِدٌ:</strong> فاعل مرفوع بالضمير المستتر وجوباً (يعود على "خالد" نفسه).
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: جدول إعراب شامل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> رابعاً: جدول إعراب شامل</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">الكلمة</th>
+                            <th style="width: 70%;">الإعراب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>نِعْمَ / بِئْسَ</strong></td>
+                            <td>فعل ماضٍ جامد مبني على الفتح</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الخُلُقُ / الطَّالِبُ</strong></td>
+                            <td>فاعل مرفوع وعلامة رفعه الضمة الظاهرة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الصِّدْقُ / زَيْدٌ</strong></td>
+                            <td>مبتدأ مؤخر مرفوع (المخصوص بالمدح أو الذم)، والجملة منه ومن خبره في محل رفع خبر لـ "نعم" أو "بئس"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-lightbulb"></i>
+                <strong>قاعدة ذهبية:</strong> المخصوص بالمدح أو الذم دائماً يكون <strong>مبتدأ مؤخر</strong>، وجملة المبتدأ والخبر في محل رفع خبر للفعل "نعم" أو "بئس".
+            </div>
+        </div>
+
+        <!-- خامساً: حبذا ولا حبذا -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> خامساً: "حبّذا" و"لا حبّذا"</h2>
+            
+            <div class="two-columns">
+                <div class="column-card praise">
+                    <h3><i class="fas fa-check-circle"></i> حبّذا (للمدح)</h3>
+                    <div class="sentence" style="font-size: 1.3rem;">حَبَّذَا الصَّدَقَةُ</div>
+                    <div class="analysis">
+                        <strong>التحليل:</strong><br>
+                        • <strong>حَبَّ:</strong> فعل ماضٍ جامد.<br>
+                        • <strong>ذَا:</strong> اسم إشارة مبني في محل رفع فاعل.<br>
+                        • <strong>الصَّدَقَةُ:</strong> مبتدأ مؤخر (المخصوص بالمدح).
+                    </div>
+                </div>
+                <div class="column-card blame">
+                    <h3><i class="fas fa-times-circle"></i> لا حبّذا (للذم)</h3>
+                    <div class="sentence" style="font-size: 1.3rem;">لَا حَبَّذَا الكَذِبُ</div>
+                    <div class="analysis">
+                        <strong>التحليل:</strong><br>
+                        • <strong>لَا:</strong> نافية لا عمل لها.<br>
+                        • <strong>حَبَّ:</strong> فعل ماضٍ جامد.<br>
+                        • <strong>ذَا:</strong> اسم إشارة فاعل.<br>
+                        • <strong>الكَذِبُ:</strong> المخصوص بالذم.
+                    </div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> ملاحظة هامة:</h4>
+                <p>"حبّذا" مركبة من كلمتين: <strong>"حَبَّ"</strong> (فعل) + <strong>"ذَا"</strong> (اسم إشارة)، وتُكتب متصلة في الغالب.</p>
+            </div>
+        </div>
+
+        <!-- سادساً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> سادساً: تطبيقات عملية محلولة</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال 1:</h4>
+                <div class="sentence">"نِعْمَ الرَّجُلُ المُؤْمِنُ"</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong><br>
+                    • نِعْمَ: فعل ماضٍ جامد مبني على الفتح.<br>
+                    • الرَّجُلُ: فاعل مرفوع بالضمة.<br>
+                    • المُؤْمِنُ: مبتدأ مؤخر مرفوع (المخصوص بالمدح).
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال 2:</h4>
+                <div class="sentence">"بِئْسَ الصَّفْتُ الْكَاذِبُ"</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong><br>
+                    • بِئْسَ: فعل ماضٍ جامد مبني على الفتح.<br>
+                    • الصَّفْتُ: فاعل مرفوع بالضمة.<br>
+                    • الْكَاذِبُ: مبتدأ مؤخر مرفوع (المخصوص بالذم).
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المثال 3:</h4>
+                <div class="sentence">"نِعْمَ مَا يَصْنَعُ الفِكْرُ التَّفْكِيرُ"</div>
+                <div class="answer">
+                    <strong>الإعراب:</strong><br>
+                    • نِعْمَ: فعل ماضٍ جامد مبني على الفتح.<br>
+                    • مَا: اسم إشارة مبني في محل رفع فاعل.<br>
+                    • يَصْنَعُ: فعل مضارع مرفوع.<br>
+                    • الفِكْرُ: فاعل مرفوع.<br>
+                    • التَّفْكِيرُ: مبتدأ مؤخر (المخصوص بالمدح).
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: شهادة قرآنية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-quran"></i> سابعاً: شهادة قرآنية</h2>
+            
+            <div class="quran-text" style="text-align: center;">
+                ﴿فَبِئْسَ مَولَىٰكم وَبِئْسَ النَّصِيرُ﴾ [الأنفال: 40]
+            </div>
+            
+            <div class="grammar-box">
+                <h4><i class="fas fa-search"></i> التحليل الإعرابي:</h4>
+                <div class="analysis">
+                    • <strong>فَبِئْسَ:</strong> الفاء استئنافية، بِئْسَ فعل ماضٍ جامد مبني على الفتح.<br>
+                    • <strong>مَولَىٰكم:</strong> فاعل مرفوع بالألف (لأنه ملحق بجمع المؤنث السالم) والكاف في محل جر مضاف إليه.<br>
+                    • <strong>وَبِئْسَ:</strong> الواو عاطفة، بِئْسَ فعل ماضٍ جامد.<br>
+                    • <strong>النَّصِيرُ:</strong> فاعل مرفوع بالضمة.
+                </div>
+            </div>
+
+            <div class="quran-text" style="text-align: center;">
+                ﴿وَلَبِئْسَ الْمِهَادُ﴾ [البقرة: 22]
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> ملاحظة قرآنية:</h4>
+                <p>استخدام "بئس" في القرآن الكريم يدل على الذم الشديد، ويُستخدم لبيان سوء المصير أو الخاتمة للكافرين.</p>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات حول أخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات حول أخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 1: الخلط بين الفاعل والمخصوص</h4>
+                <p>يجب التمييز بين:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>الفاعل:</strong> هو الذي يُمدح أو يُذم بشكل عام (كلمة عامة).</li>
+                    <li><strong>المخصوص:</strong> هو الشخص أو الشيء المعين بالمدح أو الذم.</li>
+                </ul>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> "نِعْمَ <span style="color: #3498db;">الطَّالِبُ</span> <span style="color: #e67e22;">خَالِدٌ</span>"</p>
+                    <p class="analysis">"الطالب" = فاعل (عام)، "خالد" = مخصوص (معين).</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 2: إعراب "ما" في "نعم ما"</h4>
+                <p>"ما" في تركيب "نعم ما" هي <strong>اسم إشارة</strong> وليست نافية أو استفهامية، وتعرب <strong>فاعلاً</strong>.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ شائع رقم 3: نسيان أن الفعل جامد</h4>
+                <p>"نعم" و"بئس" أفعال <strong>جامدة</strong> لا تُصرَّف، فلا يُقال "ينعم" أو "يبأس" في المضارع.</p>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> حدد الإعراب الصحيح</h3>
+                
+                <div id="quizContainer">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة النشاط
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>أفعال المدح:</strong> نعم، حبّذا.</li>
+                <li><strong>أفعال الذم:</strong> بئس، لا حبّذا.</li>
+                <li><strong>طبيعتها:</strong> أفعال جامدة لا تُصرَّف، مبنية على الفتح.</li>
+                <li><strong>مكونات الجملة:</strong> الفعل + الفاعل + المخصوص بالمدح أو الذم.</li>
+                <li><strong>الفاعل:</strong> يأتي على 4 حالات (ضمير مستتر جوازاً، وجوباً، اسم ظاهر "ما"، ضمير يعود على المخصوص).</li>
+                <li><strong>المخصوص:</strong> مبتدأ مؤخر مرفوع، وجملة المبتدأ والخبر في محل رفع خبر لـ "نعم" أو "بئس".</li>
+                <li><strong>"حبّذا":</strong> مركبة من "حَبَّ" (فعل) + "ذَا" (اسم إشارة فاعل).</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <!-- سكربت النشاط التفاعلي -->
+    <script>
+        // بيانات الأسئلة
+        const quizQuestions = [
+            {
+                sentence: "استخرج فاعل 'نعم' في الجملة: 'نِعْمَ الرَّجُلُ المُؤْمِنُ'",
+                options: ["المؤمنُ", "الرجلُ", "نِعْمَ"],
+                correct: 1,
+                explanation: "'الرجلُ' هو الفاعل المرفوع، و'المؤمنُ' هو المخصوص بالمدح (مبتدأ مؤخر)."
+            },
+            {
+                sentence: "ما إعراب كلمة 'نعم' في الجملة: 'نِعْمَ الخُلُقُ الصِّدْقُ'؟",
+                options: ["فعل مضارع مرفوع", "فعل ماضٍ جامد مبني على الفتح", "اسم إشارة"],
+                correct: 1,
+                explanation: "'نعم' فعل ماضٍ جامد لا يُصرَّف، مبني على الفتح."
+            },
+            {
+                sentence: "في جملة 'بِئْسَ الصَّفْتُ الكَذِبُ'، ما المخصوص بالذم؟",
+                options: ["بئس", "الصفحة", "الكذب"],
+                correct: 2,
+                explanation: "'الكذبُ' هو المخصوص بالذم (مبتدأ مؤخر مرفوع)."
+            },
+            {
+                sentence: "ما إعراب 'ما' في جملة: 'نِعْمَ مَا يَفْعَلُ الرَّجُلُ'؟",
+                options: ["نافية", "استفهامية", "اسم إشارة في محل رفع فاعل"],
+                correct: 2,
+                explanation: "'ما' هنا اسم إشارة مبني في محل رفع فاعل لـ 'نعم'."
+            },
+            {
+                sentence: "في 'حَبَّذَا الصَّدَقَةُ'، ما إعراب 'ذا'؟",
+                options: ["اسم إشارة في محل رفع فاعل", "حرف جر", "مفعول به"],
+                correct: 0,
+                explanation: "'ذا' في 'حبّذا' اسم إشارة مبني في محل رفع فاعل للفعل 'حَبَّ'."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            
+            let html = `
+                <div class="quiz-question">
+                    ${question.sentence}
+                </div>
+                <div class="quiz-options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${index})">${option}</div>`;
+            });
+            
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (answered[currentQuestion]) return;
+            
+            const question = quizQuestions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            answered[currentQuestion] = true;
+            
+            if (selectedIndex === question.correct) {
+                options[selectedIndex].classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${question.explanation}`;
+                score++;
+            } else {
+                options[selectedIndex].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${question.explanation}`;
+            }
+            
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            
+            const finalScore = document.getElementById('finalScore');
+            finalScore.style.display = 'block';
+            
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${percentage}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            
+            loadQuestion();
+        }
+
+        // تحميل السؤال الأول عند بدء الصفحة
+        loadQuestion();
+    </script>
+</body>
+</html>

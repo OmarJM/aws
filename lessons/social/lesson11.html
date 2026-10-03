@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الطقس والمناخ - الفرق بينهما والعوامل المؤثرة وأنواع المناخ - مادة الدراسات الاجتماعية">
+    <title>الطقس والمناخ | الدراسات الاجتماعية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        :root{--sky-blue:#42a5f5;--sky-dark:#0d47a1;--sky-light:#e3f2fd;--weather-green:#43a047;--weather-brown:#8d6e63;--weather-orange:#fb8c00;--weather-red:#c62828;--weather-purple:#8e24aa}
+        .lesson-hero{background:linear-gradient(135deg,#42a5f5,#0d47a1);color:#fff;padding:40px 20px;text-align:center;border-radius:0 0 30px 30px;margin-bottom:40px}
+        .lesson-hero h1{font-size:2.2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-hero p{font-size:1.1rem;opacity:.95}
+        .content-card{background:var(--card-bg);border-radius:15px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,.05);border:1px solid var(--border-color)}
+        .section-title{color:#42a5f5;font-size:1.5rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #43a047;padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(66,165,245,.08);border-right:4px solid #42a5f5;padding:15px;border-radius:8px;margin:15px 0;font-weight:600;color:#0d47a1}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #fb8c00;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:var(--bg-color);padding:20px;border-radius:12px;border:2px solid #42a5f5;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:#0d47a1}
+        .step-box{background:var(--bg-color);padding:20px;border-radius:12px;border-right:4px solid #42a5f5;margin:15px 0}
+        .step-box h4{color:#42a5f5;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#42a5f5;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem}
+        .step-box .calculation{font-family:'Fira Code',monospace;background:var(--card-bg);padding:10px 15px;border-radius:8px;margin:10px 0;direction:ltr;text-align:center;font-size:1.1rem;font-weight:600;color:#43a047}
+        .custom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+        .custom-table th,.custom-table td{padding:12px 15px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background-color:#42a5f5;color:#fff;font-weight:700}
+        .custom-table tr:nth-child(even){background-color:var(--bg-color)}
+        .custom-table tr:hover{background-color:rgba(66,165,245,.05)}
+        .two-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:20px 0}
+        .three-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0}
+        .four-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0}
+        .column-card{background:var(--bg-color);padding:20px;border-radius:12px}
+        .column-card h3{margin-bottom:15px;display:flex;align-items:center;gap:8px;font-family:'Amiri',serif}
+        .golden-tip{background:linear-gradient(135deg,#fff3cd,#ffe69c);border-right:5px solid #ffc107;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .golden-tip{background:linear-gradient(135deg,#3d3200,#4a3d00)}
+        .golden-tip h4{margin-bottom:10px;color:#856404;display:flex;align-items:center;gap:8px}
+        .warning-box{background:linear-gradient(135deg,#f8d7da,#f5c6cb);border-right:5px solid #dc3545;padding:20px;border-radius:10px;margin:20px 0}
+        [data-theme="dark"] .warning-box{background:linear-gradient(135deg,#3d1015,#4a1520)}
+        .warning-box h4{color:#721c24;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;background:#42a5f5;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;margin-bottom:20px}
+        .example-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:4px solid #43a047;margin-bottom:15px}
+        .example-card h4{color:#42a5f5;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .example-card .solution{background:var(--card-bg);padding:10px 15px;border-radius:8px;border-right:3px solid #43a047;font-weight:600;color:#0d47a1;margin-top:10px}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:10px 0 10px 30px;border-right:2px solid #43a047;margin-right:10px}
+        .tree-list li::before{content:'\f054';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-8px;top:12px;color:#42a5f5;font-size:.8rem;background:var(--card-bg);padding:2px}
+        .tree-list li strong{color:#42a5f5}
+        .interactive-activity{background:linear-gradient(135deg,rgba(66,165,245,.05),rgba(67,160,71,.05));border:2px dashed #42a5f5;padding:25px;border-radius:15px;margin-top:20px}
+        .interactive-activity h3{color:#42a5f5;margin-bottom:15px;display:flex;align-items:center;gap:10px;font-family:'Amiri',serif}
+        .quiz-question{font-size:1.1rem;font-weight:600;margin:15px 0;padding:15px;background:var(--card-bg);border-radius:10px;text-align:center;font-family:'Amiri',serif}
+        .quiz-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:15px 0}
+        .quiz-option{padding:12px;background:var(--card-bg);border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;font-weight:600;transition:all .2s;font-family:'Amiri',serif}
+        .quiz-option:hover{border-color:#42a5f5;transform:translateY(-2px)}
+        .quiz-option.correct{background:#d4edda;border-color:#43a047;color:#155724}
+        .quiz-option.wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}
+        .feedback-box{margin-top:15px;padding:15px;border-radius:10px;display:none;font-weight:600}
+        .feedback-box.show{display:block;animation:slideIn .3s ease}
+        .feedback-box.success{background:#d4edda;color:#155724;border-right:4px solid #43a047}
+        .feedback-box.error{background:#f8d7da;color:#721c24;border-right:4px solid #dc3545}
+        @keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px dashed var(--border-color)}
+        .quiz-counter{background:#42a5f5;color:#fff;padding:5px 15px;border-radius:15px;font-weight:700;font-size:.9rem}
+        .btn{padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:.95rem}
+        .btn-primary{background:#42a5f5;color:#fff}
+        .btn-outline{background:transparent;border:2px solid #42a5f5;color:#42a5f5}
+        .weather-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #42a5f5;text-align:center;transition:transform .3s}
+        .weather-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .weather-card h4{margin-bottom:10px;color:#42a5f5;font-family:'Amiri',serif}
+        .weather-card .icon{font-size:2.5rem;margin-bottom:10px;color:#42a5f5}
+        .weather-card.weather{border-top-color:#fb8c00}
+        .weather-card.weather h4,.weather-card.weather .icon{color:#fb8c00}
+        .weather-card.climate{border-top-color:#43a047}
+        .weather-card.climate h4,.weather-card.climate .icon{color:#43a047}
+        .climate-card{background:var(--bg-color);padding:20px;border-radius:12px;text-align:center;transition:transform .3s}
+        .climate-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+        .climate-card h4{margin-bottom:10px;font-family:'Amiri',serif}
+        .climate-card .icon{font-size:2.5rem;margin-bottom:10px}
+        .climate-card.hot{border-top:5px solid #c62828}
+        .climate-card.hot h4,.climate-card.hot .icon{color:#c62828}
+        .climate-card.temperate{border-top:5px solid #43a047}
+        .climate-card.temperate h4,.climate-card.temperate .icon{color:#43a047}
+        .climate-card.cold{border-top:5px solid #1e88e5}
+        .climate-card.cold h4,.climate-card.cold .icon{color:#1e88e5}
+        .climate-card.arid{border-top:5px solid #fb8c00}
+        .climate-card.arid h4,.climate-card.arid .icon{color:#fb8c00}
+        .climate-card.med{border-top:5px solid #8e24aa}
+        .climate-card.med h4,.climate-card.med .icon{color:#8e24aa}
+        .factor-card{background:var(--bg-color);padding:20px;border-radius:12px;border-top:5px solid #42a5f5}
+        .factor-card h4{margin-bottom:10px;color:#42a5f5;font-family:'Amiri',serif}
+        .factor-card .icon{font-size:2rem;margin-bottom:10px;color:#42a5f5}
+        .lesson-intro{background:linear-gradient(135deg,rgba(66,165,245,.05),rgba(67,160,71,.05));border:2px solid #42a5f5;border-radius:15px;padding:25px;margin:20px 0;text-align:center}
+        .lesson-intro h3{color:#42a5f5;font-family:'Amiri',serif;margin-bottom:15px}
+        .bismillah{text-align:center;font-family:'Amiri',serif;font-size:2rem;color:#42a5f5;margin:20px 0}
+        .weather-visual{background:var(--bg-color);padding:25px;border-radius:15px;margin:20px 0;text-align:center}
+        .weather-visual svg{max-width:100%;height:auto}
+        @media(max-width:768px){.lesson-hero h1{font-size:1.6rem}.custom-table{display:block;overflow-x:auto}.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.math-box{font-size:1rem}}
+    </style>
+</head>
+<body class="subject-social">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-landmark"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/social.html" class="active">الدراسات الاجتماعية</a></li>
+                    <li><a href="../../quizzes/social-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/social.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الاجتماعية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-cloud-sun-rain"></i> الطقس والمناخ</h1>
+            <p>الفرق بين الطقس والمناخ، العوامل المؤثرة فيهما، وأنواع المناخ</p>
+            <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ما الفرق بين الطقس والمناخ؟ ولماذا يختلف المناخ من منطقة إلى أخرى؟</strong>
+                <p style="margin-top:10px">كثير من الناس يخلطون بين <strong>الطقس</strong> و<strong>المناخ</strong>، لكنهما مفهومان مختلفان! الطقس هو حالة الجو في <strong>مكان محدد وزمن قصير</strong>، بينما المناخ هو <strong>متوسط حالة الطقس</strong> على مدى 30 سنة. في هذا الدرس، سنتعلم الفرق بينهما، و<strong>العوامل المؤثرة</strong> فيهما، و<strong>أنواع المناخ</strong> الرئيسية.</p>
+            </div>
+
+            <div class="lesson-intro">
+                <h3><i class="fas fa-thermometer-half"></i> عن الطقس والمناخ</h3>
+                <p><strong>الطقس:</strong> حالة الجو في مكان محدد وزمن قصير</p>
+                <p><strong>المناخ:</strong> متوسط حالة الطقس على مدى 30 سنة</p>
+                <p><strong>العناصر:</strong> الحرارة، الضغط، الرياح، الرطوبة، الأمطار</p>
+                <p><strong>العوامل:</strong> خط العرض، الارتفاع، القرب من البحر، التيارات البحرية</p>
+            </div>
+
+            <div class="weather-visual">
+                <h4 style="color:#42a5f5;margin-bottom:15px"><i class="fas fa-chart-line"></i> الفرق بين الطقس والمناخ</h4>
+                <svg width="700" height="200" viewBox="0 0 700 200">
+                    <!-- الطقس -->
+                    <rect x="50" y="30" width="280" height="140" rx="10" fill="rgba(251,140,0,.1)" stroke="#fb8c00" stroke-width="2"/>
+                    <text x="190" y="60" font-family="Tajawal" font-size="16" fill="#fb8c00" text-anchor="middle" font-weight="700">الطقس (Weather)</text>
+                    <text x="190" y="90" font-family="Tajawal" font-size="12" fill="#fb8c00" text-anchor="middle">حالة الجو في مكان محدد</text>
+                    <text x="190" y="110" font-family="Tajawal" font-size="12" fill="#fb8c00" text-anchor="middle">وزمن قصير (يوم أو أيام)</text>
+                    <text x="190" y="135" font-family="Tajawal" font-size="11" fill="#fb8c00" text-anchor="middle">مثال: "الجو اليوم ممطر"</text>
+                    <text x="190" y="155" font-family="Tajawal" font-size="11" fill="#fb8c00" text-anchor="middle">"غداً ستكون الحرارة 35°م"</text>
+                    
+                    <!-- السهم -->
+                    <line x1="340" y1="100" x2="380" y2="100" stroke="#42a5f5" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="360" y="90" font-family="Tajawal" font-size="10" fill="#42a5f5" text-anchor="middle">متوسط</text>
+                    
+                    <!-- المناخ -->
+                    <rect x="390" y="30" width="280" height="140" rx="10" fill="rgba(67,160,71,.1)" stroke="#43a047" stroke-width="2"/>
+                    <text x="530" y="60" font-family="Tajawal" font-size="16" fill="#43a047" text-anchor="middle" font-weight="700">المناخ (Climate)</text>
+                    <text x="530" y="90" font-family="Tajawal" font-size="12" fill="#43a047" text-anchor="middle">متوسط حالة الطقس</text>
+                    <text x="530" y="110" font-family="Tajawal" font-size="12" fill="#43a047" text-anchor="middle">على مدى 30 سنة</text>
+                    <text x="530" y="135" font-family="Tajawal" font-size="11" fill="#43a047" text-anchor="middle">مثال: "مناخ السعودية حار جاف"</text>
+                    <text x="530" y="155" font-family="Tajawal" font-size="11" fill="#43a047" text-anchor="middle">"مناخ بريطانيا معتدل ممطر"</text>
+                    
+                    <defs>
+                        <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#42a5f5"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- أولاً: الفرق بين الطقس والمناخ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: الفرق بين الطقس والمناخ</h2>
+            
+            <div class="two-columns">
+                <div class="weather-card weather">
+                    <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h4>الطقس (Weather)</h4>
+                    <p><strong>التعريف:</strong> حالة الجو في مكان محدد وزمن قصير (ساعة، يوم، أسبوع)</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الخصائص:</strong></p>
+                    <ul style="padding-right:15px;margin-top:5px;font-size:.9rem;line-height:1.8;text-align:right">
+                        <li>متغير باستمرار</li>
+                        <li>يمكن التنبؤ به ليوم أو يومين</li>
+                        <li>يُقاس بالأدوات اليومية</li>
+                        <li>محلي في نطاق جغرافي ضيق</li>
+                    </ul>
+                </div>
+                <div class="weather-card climate">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h4>المناخ (Climate)</h4>
+                    <p><strong>التعريف:</strong> متوسط حالة الطقس في منطقة معينة على مدى 30 سنة</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الخصائص:</strong></p>
+                    <ul style="padding-right:15px;margin-top:5px;font-size:.9rem;line-height:1.8;text-align:right">
+                        <li>ثابت نسبياً</li>
+                        <li>يحتاج لبيانات طويلة الأمد</li>
+                        <li>يُحسب بالإحصاءات الطويلة</li>
+                        <li>إقليمي في نطاق جغرافي واسع</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> جدول مقارنة بين الطقس والمناخ</h4>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>وجه المقارنة</th>
+                                <th style="background:#fb8c00">الطقس</th>
+                                <th style="background:#43a047">المناخ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>التعريف</strong></td>
+                                <td>حالة الجو في زمن قصير</td>
+                                <td>متوسط حالة الجو على مدى طويل</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المدة</strong></td>
+                                <td>ساعة، يوم، أسبوع</td>
+                                <td>30 سنة فأكثر</td>
+                            </tr>
+                            <tr>
+                                <td><strong>النطاق</strong></td>
+                                <td>محلي (مدينة، قرية)</td>
+                                <td>إقليمي (دولة، قارة)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>التغير</strong></td>
+                                <td>سريع ومتقلب</td>
+                                <td>ثابت نسبياً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>التنبؤ</strong></td>
+                                <td>سهل (ليوم أو يومين)</td>
+                                <td>صعب (يتطلب إحصاءات)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>العلم</strong></td>
+                                <td>علم الأرصاد الجوية</td>
+                                <td>علم المناخ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>مثال</strong></td>
+                                <td>"الطقس اليوم في الرياض: 40°م"</td>
+                                <td>"مناخ الرياض: حار جاف صيفاً"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family:'Amiri',serif;font-size:1.3rem">
+                المناخ = متوسط الطقس على مدى 30 سنة
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة للحفظ:</h4>
+                <p><strong>الطقس:</strong> ما تلبسه اليوم (حسب حالة الجو اليومية).</p>
+                <p><strong>المناخ:</strong> ما في خزانتك من ملابس (حسب الفصل والمنطقة).</p>
+                <p style="margin-top:10px">فالطقس <strong>لحظي</strong>، والمناخ <strong>طويل الأمد</strong>.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: عناصر الطقس والمناخ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-compass"></i> ثانياً: عناصر الطقس والمناخ</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>العناصر المناخية:</strong> هي الظواهر الجوية التي تُقاس وتُراقب لتحديد حالة الطقس والمناخ.
+            </div>
+
+            <div class="four-columns">
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-temperature-high"></i></div>
+                    <h4>1. درجة الحرارة</h4>
+                    <p>مقدار سخونة الجو</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الأداة:</strong> الترمومتر</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الوحدة:</strong> درجة مئوية (°م)</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h4>2. الضغط الجوي</h4>
+                    <p>وزن عمود الهواء</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الأداة:</strong> البارومتر</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الوحدة:</strong> مليبار (mb)</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h4>3. الرياح</h4>
+                    <p>حركة الهواء الأفقية</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الأداة:</strong> الأنيمومتر</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الوحدة:</strong> كم/ساعة</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <h4>4. الرطوبة</h4>
+                    <p>كمية بخار الماء</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الأداة:</strong> الهيجرومتر</p>
+                    <p style="margin-top:10px;font-size:.9rem"><strong>الوحدة:</strong> %</p>
+                </div>
+            </div>
+
+            <div class="weather-card" style="margin-top:15px;border-top-color:#1e88e5">
+                <div class="icon" style="color:#1e88e5"><i class="fas fa-cloud-rain"></i></div>
+                <h4 style="color:#1e88e5">5. التساقطات (الأمطار)</h4>
+                <p>كمية الأمطار والثلوج والبرد</p>
+                <p style="margin-top:10px;font-size:.9rem"><strong>الأداة:</strong> مقياس المطر (Rain Gauge)</p>
+                <p style="margin-top:10px;font-size:.9rem"><strong>الوحدة:</strong> ملم/سنة</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل العناصر المناخية</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> درجة الحرارة</h4>
+                    <p>تتأثر بـ<strong>خط العرض</strong> (تقل كلما ابتعدنا عن خط الاستواء)، و<strong>الارتفاع</strong> (تقل كلما ارتفعنا)، و<strong>القرب من البحر</strong> (يُعدل الحرارة).</p>
+                    <div class="calculation">تنخفض الحرارة 6.5°م لكل 1000م ارتفاعاً</div>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الضغط الجوي</h4>
+                    <p>ينخفض مع الارتفاع. مناطق <strong>الضغط المرتفع</strong> تكون فيها الرياح هابطة (جافة)، ومناطق <strong>الضغط المنخفض</strong> تكون فيها الرياح صاعدة (ممطرة).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الرياح</h4>
+                    <p>تنتقل من مناطق الضغط المرتفع إلى المنخفض. تنقسم إلى: <strong>رياح دائمة</strong> (كالتجارية)، <strong>موسمية</strong> (كموسم الهند)، <strong>يومية</strong> (ك رياح البحر والبر).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الرطوبة</h4>
+                    <p>كمية بخار الماء في الهواء. ترتفع قرب البحار والمحيطات، وتنخفض في الصحاري. الرطوبة النسبية = (كمية البخار الفعلية ÷ السعة القصوى) × 100%.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> التساقطات</h4>
+                    <p>تتكون من تكاثف بخار الماء في الجو. أنواعها: <strong>المطر</strong>، <strong>الثلج</strong>، <strong>البرد</strong>، <strong>الندى</strong>، <strong>الصقيع</strong>. تتأثر بالرياح والتضاريس.</p>
+                </div>
+
+                <div class="solution">✅ هذه العناصر مجتمعة تُحدد حالة الطقس والمناخ</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>العنصر</th>
+                            <th>الأداة</th>
+                            <th>الوحدة</th>
+                            <th>العوامل المؤثرة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>درجة الحرارة</strong></td>
+                            <td>الترمومتر</td>
+                            <td>°م</td>
+                            <td>خط العرض، الارتفاع، القرب من البحر</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الضغط الجوي</strong></td>
+                            <td>البارومتر</td>
+                            <td>مليبار</td>
+                            <td>الارتفاع، الحرارة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الرياح</strong></td>
+                            <td>الأنيمومتر</td>
+                            <td>كم/ساعة</td>
+                            <td>الضغط، التضاريس</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الرطوبة</strong></td>
+                            <td>الهيجرومتر</td>
+                            <td>%</td>
+                            <td>القرب من الماء، الحرارة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التساقطات</strong></td>
+                            <td>مقياس المطر</td>
+                            <td>مم/سنة</td>
+                            <td>الرياح، التضاريس، الرطوبة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ثالثاً: العوامل المؤثرة في المناخ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sliders-h"></i> ثالثاً: العوامل المؤثرة في المناخ</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>العوامل المناخية:</strong> أسباب تؤثر في خصائص المناخ وتُحدد اختلافه من منطقة إلى أخرى.
+            </div>
+
+            <div class="three-columns">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-globe-americas"></i></div>
+                    <h4>1. خط العرض</h4>
+                    <p>الموقع شمال أو جنوب خط الاستواء</p>
+                    <p style="margin-top:10px;font-size:.9rem">يُحدد كمية الإشعاع الشمسي</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>2. الارتفاع عن سطح البحر</h4>
+                    <p>كلما ارتفعنا، انخفضت الحرارة</p>
+                    <p style="margin-top:10px;font-size:.9rem">6.5°م لكل 1000م</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>3. القرب من البحر</h4>
+                    <p>البحر يُعدل الحرارة</p>
+                    <p style="margin-top:10px;font-size:.9rem">مناخ معتدل رطب</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top:15px">
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>4. التيارات البحرية</h4>
+                    <p>دافئة أو باردة</p>
+                    <p style="margin-top:10px;font-size:.9rem">تؤثر في المناخ الساحلي</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h4>5. الكتل الهوائية</h4>
+                    <p>رياح محملة بخصائص معينة</p>
+                    <p style="margin-top:10px;font-size:.9rem">حارة، باردة، رطبة، جافة</p>
+                </div>
+                <div class="factor-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>6. التضاريس</h4>
+                    <p>الجبال تحجز الرياح</p>
+                    <p style="margin-top:10px;font-size:.9rem">تسبب الأمطار على المنحدرات</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل العوامل المؤثرة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> خط العرض</h4>
+                    <p><strong>المناطق الاستوائية</strong> (قرب خط الاستواء): حرارة عالية طوال السنة، أمطار غزيرة.</p>
+                    <p><strong>المناطق المعتدلة</strong> (بين 30° و 60°): فصول أربعة، أمطار متوسطة.</p>
+                    <p><strong>المناطق القطبية</strong> (فوق 66.5°): برد قارس، جليد دائم.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> الارتفاع عن سطح البحر</h4>
+                    <p>كلما ارتفعنا 1000م، انخفضت الحرارة حوالي <strong>6.5°م</strong>. لذلك تكون الجبال أبرد من السهول.</p>
+                    <p><strong>مثال:</strong> مدينة أبها (2200م) أبرد من الرياض (600م) رغم أنهما في نفس الدولة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> القرب من البحر</h4>
+                    <p>الماء يمتص الحرارة ببطء ويطلقها ببطء، فيُعدل المناخ الساحلي:</p>
+                    <p><strong>صيفاً:</strong> البحر أبرد من اليابسة ➔ رياح من البحر.</p>
+                    <p><strong>شتاءً:</strong> البحر أدفأ من اليابسة ➔ رياح من اليابسة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> التيارات البحرية</h4>
+                    <p><strong>التيارات الدافئة:</strong> ترفع حرارة السواحل (مثل تيار الخليج).</p>
+                    <p><strong>التيارات الباردة:</strong> تخفض حرارة السواحل (مثل تيار بيرو).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> الكتل الهوائية</h4>
+                    <p>كتل كبيرة من الهواء تتحرك وتحمل خصائص المنطقة التي نشأت فيها:</p>
+                    <p><strong>كتل استوائية:</strong> حارة رطبة.</p>
+                    <p><strong>كتل قطبية:</strong> باردة جافة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">6</span> التضاريس</h4>
+                    <p>الجبال تحجز الرياح الرطبة، فتسقط الأمطار على <strong>المنحدر المواجه للرياح</strong>، بينما يكون <strong>المنحدر الخلفي</strong> جافاً (ظل المطر).</p>
+                </div>
+
+                <div class="solution">✅ هذه العوامل مجتمعة تُشكّل المناخ في كل منطقة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> مثال تطبيقي: مناخ المملكة العربية السعودية</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>خط العرض:</strong> تقع بين 16° و 32° شمالاً ➔ مناخ حار</li>
+                    <li><strong>البعد عن البحر:</strong> معظمها يابسة ➔ مناخ قاري جاف</li>
+                    <li><strong>المرتفعات الجنوبية:</strong> جبال السروات ➔ مناخ معتدل</li>
+                    <li><strong>السواحل:</strong> رطوبة عالية ➔ مناخ حار رطب</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- رابعاً: أنواع المناخ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-globe"></i> رابعاً: أنواع المناخ الرئيسية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>تصنيف المناخ:</strong> يقسم العلماء العالم إلى عدة أقاليم مناخية رئيسية حسب الحرارة والأمطار.
+            </div>
+
+            <div class="five-columns">
+                <div class="climate-card hot">
+                    <div class="icon"><i class="fas fa-sun"></i></div>
+                    <h4>1. الحار</h4>
+                    <p>قرب خط الاستواء</p>
+                    <p style="margin-top:10px;font-size:.85rem">حرارة عالية، أمطار غزيرة</p>
+                </div>
+                <div class="climate-card arid">
+                    <div class="icon"><i class="fas fa-sun"></i></div>
+                    <h4>2. الصحراوي</h4>
+                    <p>بين 15° و 35°</p>
+                    <p style="margin-top:10px;font-size:.85rem">جاف حار</p>
+                </div>
+                <div class="climate-card med">
+                    <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h4>3. المتوسطي</h4>
+                    <p>30° - 45°</p>
+                    <p style="margin-top:10px;font-size:.85rem">صيف جاف، شتاء ممطر</p>
+                </div>
+                <div class="climate-card temperate">
+                    <div class="icon"><i class="fas fa-cloud"></i></div>
+                    <h4>4. المعتدل</h4>
+                    <p>40° - 60°</p>
+                    <p style="margin-top:10px;font-size:.85rem">فصول أربعة</p>
+                </div>
+                <div class="climate-card cold">
+                    <div class="icon"><i class="fas fa-snowflake"></i></div>
+                    <h4>5. القطبي</h4>
+                    <p>فوق 66.5°</p>
+                    <p style="margin-top:10px;font-size:.85rem">بارد جداً، جليد</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل أنواع المناخ</h4>
+                
+                <div class="step-box" style="margin:15px 0;border-right-color:#c62828">
+                    <h4 style="color:#c62828"><span class="step-number" style="background:#c62828">1</span> المناخ الحار (الاستوائي)</h4>
+                    <p><strong>الموقع:</strong> قرب خط الاستواء (0° - 10° شمالاً وجنوباً).</p>
+                    <p><strong>الحرارة:</strong> عالية طوال السنة (25-30°م).</p>
+                    <p><strong>الأمطار:</strong> غزيرة (أكثر من 2000 مم سنوياً).</p>
+                    <p><strong>النبات:</strong> غابات استوائية كثيفة.</p>
+                    <p><strong>أمثلة:</strong> حوض الكونغو، الأمازون، إندونيسيا، شمال البرازيل.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0;border-right-color:#fb8c00">
+                    <h4 style="color:#fb8c00"><span class="step-number" style="background:#fb8c00">2</span> المناخ الصحراوي (الجاف)</h4>
+                    <p><strong>الموقع:</strong> بين 15° و 35° شمالاً وجنوباً.</p>
+                    <p><strong>الحرارة:</strong> عالية نهاراً، منخفضة ليلاً.</p>
+                    <p><strong>الأمطار:</strong> نادرة (أقل من 250 مم سنوياً).</p>
+                    <p><strong>النبات:</strong> نباتات شوكية متفرقة.</p>
+                    <p><strong>أمثلة:</strong> الصحراء الكبرى، الربع الخالي، صحراء جوبي، صحراء أتاكاما.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0;border-right-color:#8e24aa">
+                    <h4 style="color:#8e24aa"><span class="step-number" style="background:#8e24aa">3</span> المناخ المتوسطي</h4>
+                    <p><strong>الموقع:</strong> بين 30° و 45° على السواحل الغربية.</p>
+                    <p><strong>الحرارة:</strong> صيف حار، شتاء معتدل.</p>
+                    <p><strong>الأمطار:</strong> شتوية (400-800 مم).</p>
+                    <p><strong>النبات:</strong> أشجار الزيتون، الفلين، الصنوبر.</p>
+                    <p><strong>أمثلة:</strong> حوض البحر المتوسط، كاليفورنيا، وسط تشيلي، جنوب أفريقيا، جنوب غرب أستراليا.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0;border-right-color:#43a047">
+                    <h4 style="color:#43a047"><span class="step-number" style="background:#43a047">4</span> المناخ المعتدل</h4>
+                    <p><strong>الموقع:</strong> بين 40° و 60° شمالاً وجنوباً.</p>
+                    <p><strong>الحرارة:</strong> فصول أربعة واضحة.</p>
+                    <p><strong>الأمطار:</strong> متوسطة طوال السنة.</p>
+                    <p><strong>النبات:</strong> غابات نفضية (تسقط أوراقها شتاءً).</p>
+                    <p><strong>أمثلة:</strong> أوروبا الغربية، شرق أمريكا الشمالية، شرق آسيا (الصين، اليابان).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0;border-right-color:#1e88e5">
+                    <h4 style="color:#1e88e5"><span class="step-number" style="background:#1e88e5">5</span> المناخ القطبي (البارد)</h4>
+                    <p><strong>الموقع:</strong> فوق 66.5° شمالاً وجنوباً.</p>
+                    <p><strong>الحرارة:</strong> باردة جداً طوال السنة (تحت الصفر).</p>
+                    <p><strong>الأمطار:</strong> قليلة (ثلوج).</p>
+                    <p><strong>النبات:</strong> تندرا (طحالب وأشنة) أو جليد دائم.</p>
+                    <p><strong>أمثلة:</strong> القطب الشمالي (جرينلاند)، القطب الجنوبي (أنتاركتيكا)، شمال سيبيريا.</p>
+                </div>
+
+                <div class="solution">✅ كل إقليم مناخي يتميز بخصائص فريدة من نوعها</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الإقليم</th>
+                            <th>الموقع</th>
+                            <th>الحرارة</th>
+                            <th>الأمطار</th>
+                            <th>النبات</th>
+                            <th>أمثلة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color:#c62828">الحار</strong></td>
+                            <td>0°-10°</td>
+                            <td>عالية</td>
+                            <td>غزيرة</td>
+                            <td>غابات</td>
+                            <td>亚马逊</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#fb8c00">الصحراوي</strong></td>
+                            <td>15°-35°</td>
+                            <td>مرتفعة نهاراً</td>
+                            <td>نادرة</td>
+                            <td>شوكية</td>
+                            <td>الربع الخالي</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#8e24aa">المتوسطي</strong></td>
+                            <td>30°-45°</td>
+                            <td>صيف حار</td>
+                            <td>شتوية</td>
+                            <td>زيتون</td>
+                            <td>حوض المتوسط</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#43a047">المعتدل</strong></td>
+                            <td>40°-60°</td>
+                            <td>فصول 4</td>
+                            <td>متوسطة</td>
+                            <td>نفضية</td>
+                            <td>أوروبا</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#1e88e5">القطبي</strong></td>
+                            <td>66.5°+</td>
+                            <td>باردة جداً</td>
+                            <td>ثلوج</td>
+                            <td>تندرا</td>
+                            <td>أنتاركتيكا</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- خامساً: المناخ في المملكة العربية السعودية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flag"></i> خامساً: المناخ في المملكة العربية السعودية</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>المملكة:</strong> تقع في الإقليم الصحراوي الحار، لكن فيها تنوع مناخي بسبب التضاريس.
+            </div>
+
+            <div class="three-columns">
+                <div class="climate-card arid">
+                    <div class="icon"><i class="fas fa-sun"></i></div>
+                    <h4>المناخ الصحراوي</h4>
+                    <p>يسود معظم المملكة</p>
+                    <p style="margin-top:10px;font-size:.9rem">حار جاف صيفاً، معتدل شتاءً</p>
+                </div>
+                <div class="climate-card med">
+                    <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h4>المناخ شبه المتوسطي</h4>
+                    <p>في المرتفعات الجنوبية</p>
+                    <p style="margin-top:10px;font-size:.9rem">معتدل، أمطار أكثر</p>
+                </div>
+                <div class="climate-card hot">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h4>المناخ الساحلي</h4>
+                    <p>على السواحل</p>
+                    <p style="margin-top:10px;font-size:.9rem">حار رطب</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> التنوع المناخي في المملكة</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> إقليم نجد (الوسط)</h4>
+                    <p><strong>الموقع:</strong> هضبة نجد.</p>
+                    <p><strong>المناخ:</strong> صحراوي قاري، حار جاف صيفاً (45°م)، بارد جاف شتاءً (قد يصل إلى الصفر).</p>
+                    <p><strong>الأمطار:</strong> شتوية، قليلة (100-150 مم).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> إقليم جبال السروات (الجنوب الغربي)</h4>
+                    <p><strong>الموقع:</strong> عسير، الباحة، parts من مكة.</p>
+                    <p><strong>المناخ:</strong> شبه متوسطي، معتدل صيفاً، بارد شتاءً.</p>
+                    <p><strong>الأمطار:</strong> أكثر من resto المملكة (300-500 مم)، موسمية صيفية.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> إقليم السهل الساحلي الغربي (تهامة)</h4>
+                    <p><strong>الموقع:</strong> غرب المملكة على البحر الأحمر.</p>
+                    <p><strong>المناخ:</strong> حار رطب صيفاً، دافئ شتاءً.</p>
+                    <p><strong>الأمطار:</strong> قليلة، شتوية أحياناً.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> إقليم السهل الساحلي الشرقي</h4>
+                    <p><strong>الموقع:</strong> شرق المملكة على الخليج العربي.</p>
+                    <p><strong>المناخ:</strong> حار رطب صيفاً، معتدل شتاءً.</p>
+                    <p><strong>الأمطار:</strong> شتوية، قليلة.</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> إقليم الصحاري الكبرى</h4>
+                    <p><strong>الموقع:</strong> النفود الكبير (شمالاً)، الربع الخالي (جنوباً)، الدهناء (وسطاً).</p>
+                    <p><strong>المناخ:</strong> صحراوي جاف، حار جداً صيفاً، بارد شتاءً.</p>
+                    <p><strong>الأمطار:</strong> نادرة جداً.</p>
+                </div>
+
+                <div class="solution">✅ المملكة متنوعة مناخياً بسبب اتساع مساحتها وتضاريسها</div>
+            </div>
+
+            <div class="custom-table">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>المنطقة</th>
+                            <th>المناخ</th>
+                            <th>الصيف</th>
+                            <th>الشتاء</th>
+                            <th>الأمطار</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>نجد (الرياض)</strong></td>
+                            <td>صحراوي قاري</td>
+                            <td>حار جاف (45°م)</td>
+                            <td>بارد (10°م)</td>
+                            <td>100-150 مم</td>
+                        </tr>
+                        <tr>
+                            <td><strong>عسير (أبها)</strong></td>
+                            <td>شبه متوسطي</td>
+                            <td>معتدل (30°م)</td>
+                            <td>بارد (15°م)</td>
+                            <td>300-500 مم</td>
+                        </tr>
+                        <tr>
+                            <td><strong>تهامة (جدة)</strong></td>
+                            <td>ساحلي حار</td>
+                            <td>حار رطب (40°م)</td>
+                            <td>دافئ (25°م)</td>
+                            <td>50-100 مم</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الربع الخالي</strong></td>
+                            <td>صحراوي جاف</td>
+                            <td>حار جداً (50°م)</td>
+                            <td>معتدل (20°م)</td>
+                            <td>أقل من 50 مم</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> لماذا تختلف درجات الحرارة بين المناطق؟</h4>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>الارتفاع:</strong> أبها (2200م) أبرد من الرياض (600م)</li>
+                    <li><strong>القرب من البحر:</strong> جدة معتدلة نسبياً بسبب البحر</li>
+                    <li><strong>خط العرض:</strong> المناطق الشمالية أبرد من الجنوبية شتاءً</li>
+                    <li><strong>التضاريس:</strong> الجبال تحجز الرياح الرطبة</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- سادساً: أدوات قياس الطقس -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tools"></i> سادساً: أدوات قياس الطقس</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>محطات الأرصاد:</strong> محطات متخصصة تقيس عناصر الطقس بشكل دوري.
+            </div>
+
+            <div class="four-columns">
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-temperature-high"></i></div>
+                    <h4>الترمومتر</h4>
+                    <p>يقيس درجة الحرارة</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h4>البارومتر</h4>
+                    <p>يقيس الضغط الجوي</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h4>الأنيمومتر</h4>
+                    <p>يقيس سرعة الرياح</p>
+                </div>
+                <div class="weather-card">
+                    <div class="icon"><i class="fas fa-tint"></i></div>
+                    <h4>الهيجرومتر</h4>
+                    <p>يقيس الرطوبة</p>
+                </div>
+            </div>
+
+            <div class="weather-card" style="margin-top:15px;border-top-color:#1e88e5">
+                <div class="icon" style="color:#1e88e5"><i class="fas fa-cloud-rain"></i></div>
+                <h4 style="color:#1e88e5">مقياس المطر (Rain Gauge)</h4>
+                <p>يقيس كمية التساقطات</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفاصيل الأدوات</h4>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الترمومتر (Thermometer)</h4>
+                    <p><strong>الوظيفة:</strong> قياس درجة الحرارة.</p>
+                    <p><strong>الأنواع:</strong> زئبقي، رقمي، كحولي.</p>
+                    <p><strong>الوحدات:</strong> مئوية (°م) أو فهرنهايت (°ف).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> البارومتر (Barometer)</h4>
+                    <p><strong>الوظيفة:</strong> قياس الضغط الجوي.</p>
+                    <p><strong>الأنواع:</strong> زئبقي، معدني (أنرويد).</p>
+                    <p><strong>الوحدة:</strong> مليبار (mb) أو هيكتوباسكال (hPa).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> الأنيمومتر (Anemometer)</h4>
+                    <p><strong>الوظيفة:</strong> قياس سرعة الرياح.</p>
+                    <p><strong>الأنواع:</strong> ذو الكؤوس، مروحي.</p>
+                    <p><strong>الوحدة:</strong> كم/ساعة أو عقدة (knot).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">4</span> الهيجرومتر (Hygrometer)</h4>
+                    <p><strong>الوظيفة:</strong> قياس الرطوبة النسبية.</p>
+                    <p><strong>الأنواع:</strong> شعري، رقمي.</p>
+                    <p><strong>الوحدة:</strong> نسبة مئوية (%).</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">5</span> مقياس المطر (Rain Gauge)</h4>
+                    <p><strong>الوظيفة:</strong> قياس كمية الأمطار.</p>
+                    <p><strong>الأنواع:</strong> قياسي، تسجيل ذاتي.</p>
+                    <p><strong>الوحدة:</strong> ملم (mm).</p>
+                </div>
+
+                <div class="solution">✅ كل أداة متخصصة في قياس عنصر مناخي معين</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> محطات الأرصاد في المملكة:</h4>
+                <p>تشرف <strong>الهيئة العامة للأرصاد وحماية البيئة</strong> على شبكة من المحطات في جميع مناطق المملكة، تقيس العناصر المناخية بشكل مستمر، وتُصدر النشرات والتوقعات الجوية.</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-plane"></i> مثال 1: السفر والسياحة</h4>
+                <p><strong>المسألة:</strong> كيف نختار وقت السفر حسب المناخ؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> دراسة مناخ الوجهة</h4>
+                    <p>نعرف أفضل وقت للزيارة (مثلاً: أوروبا في الصيف، جنوب شرق آسيا في الشتاء)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تحضير الملابس المناسبة</h4>
+                    <p>حسب المناخ المتوقع (صيفي، شتوي، ممطر)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> متابعة النشرة الجوية</h4>
+                    <p>قبل السفر وأثنائه</p>
+                </div>
+
+                <div class="solution">✅ المعرفة المناخية تُحسّن تجربة السفر</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-seedling"></i> مثال 2: الزراعة</h4>
+                <p><strong>المسألة:</strong> كيف يؤثر المناخ على الزراعة؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> اختيار المحاصيل</h4>
+                    <p>كل محصول يناسب مناخاً معيناً (القمح للمعتدل، النخيل للحار)</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> تحديد مواعيد الزراعة</h4>
+                    <p>حسب الفصول والأمطار</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> إدارة الري</h4>
+                    <p>في المناطق الجافة، نحتاج للري الصناعي</p>
+                </div>
+
+                <div class="solution">✅ المناخ يحدد نوع الزراعة وإنتاجيتها</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-hard-hat"></i> مثال 3: البناء والتخطيط العمراني</h4>
+                <p><strong>المسألة:</strong> كيف نراعي المناخ في البناء؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> في المناطق الحارة</h4>
+                    <p>نوافذ صغيرة، جدران سميكة، ألوان فاتحة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> في المناطق الباردة</h4>
+                    <p>عزل حراري، نوافذ مزدوجة، تدفئة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> في المناطق الممطرة</h4>
+                    <p>أسقف مائلة، تصريف جيد للمياه</p>
+                </div>
+
+                <div class="solution">✅ العمارة تتكيف مع المناخ</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-tshirt"></i> مثال 4: اختيار الملابس</h4>
+                <p><strong>المسألة:</strong> كيف نختار ملابسنا حسب الطقس والمناخ؟</p>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">1</span> الطقس اليومي</h4>
+                    <p>نتابع النشرة الجوية لنعرف حالة اليوم</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">2</span> المناخ الموسمي</h4>
+                    <p>نُعدّ خزانتنا حسب فصول السنة</p>
+                </div>
+                
+                <div class="step-box" style="margin:15px 0">
+                    <h4><span class="step-number">3</span> المناخ الإقليمي</h4>
+                    <p>ملابس المناطق الحارة تختلف عن الباردة</p>
+                </div>
+
+                <div class="solution">✅ ملابسنا تتكيف مع الطقس والمناخ</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الخلط بين الطقس والمناخ</h4>
+                <p><strong>الطقس:</strong> حالة اليوم (مطر، مشمس). <strong>المناخ:</strong> متوسط 30 سنة. لا نقول "مناخ اليوم بارد"، بل "طقس اليوم بارد".</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الاعتقاد أن المناخ لا يتغير</h4>
+                <p>المناخ يتغير على مدى فترات طويلة (آلاف السنين)، كما حدث في العصور الجليدية. لكن التغير الحالي سريع بسبب النشاط البشري.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الخلط بين الاحتباس الحراري الطبيعي والمُضاف</h4>
+                <p><strong>الطبيعي:</strong> ضروري للحياة (بدونه ستكون الأرض -18°م). <strong>المُضاف:</strong> بسبب زيادة انبعاثات CO₂، وهو المشكلة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: نسيان أن الرطوبة تؤثر في الإحساس</temperature></h4>
+                <p>الرطوبة العالية تجعل الحرارة تبدو أشد (مثل جدة صيفاً)، والجفاف يجعل البرودة أشد (مثل الرياض شتاءً).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: الاعتقاد أن التنبؤ الجوي دقيق دائماً</h4>
+                <p>التنبؤات الجوية <strong>دقيقة ليوم أو يومين</strong>، لكن دقتها تقل بعد ذلك. المناخ (على المدى الطويل) أكثر ثباتاً.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top:20px">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: تجاهل تأثير التضاريس على المناخ</h4>
+                <p>الجبال تحجز الرياح الرطبة، فتسقط الأمطار على جانب وتظل الجهة الأخرى جافة (ظل المطر).</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right:5px solid #42a5f5">
+            <h2 class="section-title" style="border:none;margin-bottom:10px"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>الطقس:</strong> حالة الجو في مكان محدد وزمن قصير.</li>
+                <li><strong>المناخ:</strong> متوسط حالة الطقس على مدى 30 سنة.</li>
+                <li><strong>الفرق:</strong> الطقس لحظي، المناخ طويل الأمد.</li>
+                <li><strong>العناصر المناخية:</strong> الحرارة، الضغط، الرياح، الرطوبة، الأمطار.</li>
+                <li><strong>أدوات القياس:</strong> الترمومتر، البارومتر، الأنيمومتر، الهيجرومتر، مقياس المطر.</li>
+                <li><strong>العوامل المؤثرة:</strong> خط العرض، الارتفاع، القرب من البحر، التيارات البحرية، الكتل الهوائية، التضاريس.</li>
+                <li><strong>أنواع المناخ:</strong> الحار، الصحراوي، المتوسطي، المعتدل، القطبي.</li>
+                <li><strong>مناخ المملكة:</strong> صحراوي حار جاف، مع تنوع في المرتفعات والسواحل.</li>
+                <li><strong>التطبيقات:</strong> السفر، الزراعة، البناء، الملابس.</li>
+                <li><strong>تنبيه:</strong> لا نخلط بين الطقس والمناخ.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display:none;text-align:center;margin-top:20px;padding:20px;background:var(--bg-color);border-radius:15px">
+                    <h3 style="color:#42a5f5;margin-bottom:10px">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size:1.3rem;font-weight:700">نتيجتك: <span id="scoreDisplay" style="color:#43a047"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top:15px"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top:15px;font-size:1.5rem">
+                <a href="#" style="color:#42a5f5;margin:0 10px"><i class="fab fa-github"></i></a>
+                <a href="#" style="color:#42a5f5;margin:0 10px"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما الفرق بين الطقس والمناخ؟",
+                options: [
+                    "لا فرق بينهما",
+                    "الطقس لحظي، والمناخ متوسط على مدى 30 سنة",
+                    "المناخ لحظي، والطقس متوسط",
+                    "كلاهما يقيس درجة الحرارة فقط"
+                ],
+                correct: 1,
+                explanation: "الطقس: حالة الجو في مكان محدد وزمن قصير. المناخ: متوسط حالة الطقس على مدى 30 سنة."
+            },
+            {
+                sentence: "ما الأداة التي تقيس الضغط الجوي؟",
+                options: ["الترمومتر", "البارومتر", "الأنيمومتر", "الهيجرومتر"],
+                correct: 1,
+                explanation: "البارومتر (Barometer) هو الأداة التي تقيس الضغط الجوي بوحدة المليبار."
+            },
+            {
+                sentence: "أيّ عامل من العوامل التالية يُؤثر في المناخ؟",
+                options: [
+                    "لون المباني",
+                    "خط العرض",
+                    "عدد السكان",
+                    "حجم الدولة"
+                ],
+                correct: 1,
+                explanation: "خط العرض من أهم العوامل المؤثرة في المناخ، لأنه يحدد كمية الإشعاع الشمسي."
+            },
+            {
+                sentence: "ما نوع المناخ السائد في معظم المملكة العربية السعودية؟",
+                options: ["المعتدل", "الصحراوي الحار", "القطبي", "الاستوائي"],
+                correct: 1,
+                explanation: "يسود في معظم المملكة المناخ الصحراوي الحار، مع تنوع في المرتفعات والسواحل."
+            },
+            {
+                sentence: "كم تنخفض درجة الحرارة تقريباً لكل 1000م ارتفاعاً؟",
+                options: ["1°م", "3°م", "6.5°م", "10°م"],
+                correct: 2,
+                explanation: "تنخفض درجة الحرارة حوالي 6.5°م لكل 1000م ارتفاعاً عن سطح البحر."
+            },
+            {
+                sentence: "ما المناخ السائد في حوض البحر المتوسط؟",
+                options: [
+                    "الاستوائي",
+                    "الصحراوي",
+                    "المتوسطي",
+                    "القطبي"
+                ],
+                correct: 2,
+                explanation: "المناخ المتوسطي يتميز بصيف حار جاف وشتاء معتدل ممطر، ويسود في حوض البحر المتوسط."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

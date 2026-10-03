@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة المهارات الحياتية والأسرية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>المهارات الحياتية والأسرية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة جداً جداً بمادة المهارات الحياتية فقط */
+        .health-tips {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-right: 5px solid var(--subject-secondary);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        [data-theme="dark"] .health-tips {
+            background: linear-gradient(135deg, #3d2800, #4a3200);
+        }
+        .health-tips h3 {
+            color: var(--subject-secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .health-tips ul { list-style: none; padding: 0; }
+        .health-tips li {
+            padding: 8px 0;
+            padding-right: 25px;
+            position: relative;
+            color: var(--text-color);
+        }
+        .health-tips li::before {
+            content: "\f004";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--subject-primary);
+        }
+    </style>
+</head>
+<body class="subject-life">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-home"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="life.html" class="active">المهارات الحياتية</a></li>
+                    <li><a href="../quizzes/life-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="ابحث عن درس..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-heart"></i> مادة المهارات الحياتية والأسرية</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- شارة الوحدة (ثابتة لأنها مميزة للمادة) -->
+        <div class="unit-banner">
+            <h2><i class="fas fa-apple-alt"></i> وحدة التوعية الصحية</h2>
+            <p>تعرّف على أساسيات التغذية السليمة وأضرار الوجبات السريعة لبناء حياة صحية متوازنة</p>
+        </div>
+
+        <!-- نصائح صحية (ثابتة لأنها مميزة للمادة) -->
+        <div class="health-tips">
+            <h3><i class="fas fa-lightbulb"></i> نصائح صحية ذهبية</h3>
+            <ul>
+                <li>تناول وجبة الإفطار يومياً فهي أهم وجبة في اليوم.</li>
+                <li>اشرب 8 أكواب من الماء يومياً للحفاظ على ترطيب الجسم.</li>
+                <li>قلل من تناول السكريات والأطعمة المصنعة.</li>
+                <li>مارس الرياضة لمدة 30 دقيقة يومياً على الأقل.</li>
+                <li>احرص على تناول الخضروات والفواكه في كل وجبة.</li>
+            </ul>
+        </div>
+
+        <!-- شبكة الدروس (سيتم بناؤها ديناميكياً بواسطة JavaScript) -->
+        <div class="lessons-grid" id="lessonsContainer"></div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر (سيتم بناؤه ديناميكياً) -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/life-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة المهارات الحياتية فقط      -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'life';
+        
+        // بيانات دروس المهارات الحياتية
+        const LESSONS_DATA = [
+            { title: 'أضرار الوجبات السريعة', desc: 'التعرف على المخاطر الصحية للوجبات السريعة، تأثيرها على الجسم، والبدائل الصحية المتاحة.', videoId: 'QtQPG9RL5po', image: 'lesson1.jpg', pdf: 'lesson1.pdf' },
+            { title: 'الغذاء الكامل والمتوازن', desc: 'مفهوم الغذاء المتوازن، المجموعات الغذائية الأساسية، وكيفية بناء وجبة صحية متكاملة.', videoId: 'RhAyj0y0D74', image: 'lesson2.jpg', pdf: 'lesson2.pdf' },
+            { title: 'النخلة الغذائية الصحية', desc: 'شرح مكونات النخلة الغذائية السعودية، كيفية استخدامها لتخطيط الوجبات، وأهمية كل مجموعة.', videoId: 'VPkRP_oAuN4', image: 'lesson3.jpg', pdf: 'lesson3.pdf' },
+            { title: 'حل التطبيقات - التوعية الصحية والمهارات الاجتماعية', desc: 'تطبيقات عملية على دروس التوعية الصحية والمهارات الاجتماعية، مع حلول نموذجية.', videoId: 'brZtg4XbmGE', image: 'lesson4.jpg', pdf: 'lesson4.pdf' }
+        ];
+        
+        // بناء بطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/e91e63/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> ممتاز! نتيجتك: ${score} من ${questions.length}. أنت قدوة في الصحة!`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> جيد جداً! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

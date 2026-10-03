@@ -1,0 +1,356 @@
+/* ============================================================
+   أنماط خاصة بكل مادة دراسية
+   يتم تضمينها بعد style.css الرئيسي
+   ============================================================ */
+
+/* ============================================================
+   1. متغيرات المواد (Subject Variables)
+   ============================================================ */
+
+/* لغتي الخالدة */
+body.subject-arabic {
+    --subject-primary: #1a5f7a;
+    --subject-secondary: #159895;
+    --subject-accent: #0e4759;
+}
+
+/* الرياضيات */
+body.subject-math {
+    --subject-primary: #2980b9;
+    --subject-secondary: #27ae60;
+    --subject-accent: #1f618d;
+}
+
+/* العلوم */
+body.subject-science {
+    --subject-primary: #16a085;
+    --subject-secondary: #1abc9c;
+    --subject-accent: #0e6655;
+}
+
+/* الدراسات الإسلامية */
+body.subject-islamic {
+    --subject-primary: #1b5e20;
+    --subject-secondary: #c9a227;
+    --subject-accent: #0d3d11;
+}
+
+/* الدراسات الاجتماعية */
+body.subject-social {
+    --subject-primary: #6d4c41;
+    --subject-secondary: #d4a017;
+    --subject-accent: #4e342e;
+}
+
+/* اللغة الإنجليزية */
+body.subject-english {
+    --subject-primary: #1e3a8a;
+    --subject-secondary: #dc2626;
+    --subject-accent: #1e40af;
+}
+
+/* اللغة الصينية */
+body.subject-chinese {
+    --subject-primary: #c0392b;
+    --subject-secondary: #f39c12;
+    --subject-accent: #8e1b1b;
+}
+
+/* المهارات الرقمية */
+body.subject-digital {
+    --subject-primary: #8e44ad;
+    --subject-secondary: #9b59b6;
+    --subject-accent: #6c3483;
+}
+
+/* المهارات الحياتية */
+body.subject-life {
+    --subject-primary: #e91e63;
+    --subject-secondary: #ff9800;
+    --subject-accent: #c2185b;
+}
+
+/* التربية الفنية */
+body.subject-art {
+    --subject-primary: #e67e22;
+    --subject-secondary: #f39c12;
+    --subject-accent: #d35400;
+    --art-gradient: linear-gradient(135deg, #e74c3c, #e67e22, #f1c40f, #2ecc71, #3498db, #9b59b6);
+}
+
+/* التربية البدنية */
+body.subject-pe {
+    --subject-primary: #27ae60;
+    --subject-secondary: #e74c3c;
+    --subject-accent: #1e8449;
+}
+
+/* ============================================================
+   2. تطبيق المتغيرات على العناصر
+   ============================================================ */
+
+body[class^="subject-"] .student-dedication {
+    background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+}
+
+body[class^="subject-"] header {
+    border-bottom: 3px solid var(--subject-secondary);
+}
+
+body[class^="subject-"] .logo {
+    color: var(--subject-primary);
+}
+
+body[class^="subject-"] .nav-links a:hover,
+body[class^="subject-"] .nav-links a.active {
+    background-color: var(--subject-primary);
+}
+
+body[class^="subject-"] .search-box i,
+body[class^="subject-"] .theme-toggle {
+    color: var(--subject-primary);
+    border-color: var(--subject-primary);
+}
+
+body[class^="subject-"] .theme-toggle:hover {
+    background-color: var(--subject-primary);
+}
+
+body[class^="subject-"] .page-title h1 {
+    color: var(--subject-primary);
+}
+
+body[class^="subject-"] .section-title {
+    color: var(--subject-primary);
+    border-bottom-color: var(--subject-secondary);
+}
+
+body[class^="subject-"] .section-title i {
+    background-color: var(--subject-primary);
+}
+
+body[class^="subject-"] .lesson-title {
+    color: var(--subject-primary);
+}
+
+body[class^="subject-"] .section-badge {
+    background-color: var(--subject-secondary);
+}
+
+body[class^="subject-"] .btn-lesson {
+    background-color: var(--subject-primary);
+}
+
+body[class^="subject-"] .btn-lesson:hover {
+    background-color: var(--subject-accent);
+}
+
+body[class^="subject-"] .quiz-section h2 {
+    color: var(--subject-primary);
+}
+
+body[class^="subject-"] .lesson-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================
+   3. أنماط خاصة بكل مادة (Special Styles)
+   ============================================================ */
+
+/* ===== الدراسات الإسلامية ===== */
+body.subject-islamic .quran-text {
+    font-family: 'Amiri', serif;
+    color: var(--subject-primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+body.subject-islamic .page-title .basmala {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    color: var(--subject-secondary);
+    margin-bottom: 15px;
+}
+
+body.subject-islamic .student-dedication::before {
+    content: '﷽';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    opacity: 0.7;
+}
+
+/* ===== اللغة الإنجليزية ===== */
+body.subject-english .english-text,
+body.subject-english .lesson-english {
+    font-family: 'Poppins', sans-serif;
+    direction: ltr;
+    display: inline-block;
+    font-weight: 600;
+}
+
+body.subject-english .page-title .english-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--subject-primary);
+    margin-bottom: 5px;
+    direction: ltr;
+    letter-spacing: 1px;
+}
+
+body.subject-english .student-dedication {
+    background: linear-gradient(135deg, 
+        var(--subject-primary) 0%, 
+        var(--subject-primary) 45%, 
+        var(--subject-secondary) 45%, 
+        var(--subject-secondary) 55%, 
+        var(--subject-primary) 55%, 
+        var(--subject-primary) 100%);
+}
+
+/* ===== اللغة الصينية ===== */
+body.subject-chinese .chinese-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 1.3rem;
+    color: var(--subject-accent);
+    font-weight: 700;
+    direction: ltr;
+    display: inline-block;
+}
+
+body.subject-chinese .page-title .chinese-title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--subject-primary);
+    margin-bottom: 10px;
+    direction: ltr;
+}
+
+/* ===== المهارات الرقمية ===== */
+body.subject-digital .code-text {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    direction: ltr;
+    display: inline-block;
+    background: var(--bg-color);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--subject-accent);
+    border: 1px solid var(--border-color);
+}
+
+body.subject-digital .page-title .code-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: var(--subject-accent);
+    margin-bottom: 10px;
+    direction: ltr;
+    background: var(--bg-color);
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+}
+
+/* ===== التربية الفنية ===== */
+body.subject-art .student-dedication {
+    background: var(--art-gradient);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+body.subject-art .page-title .art-title {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: var(--art-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+body.subject-art .lesson-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--art-gradient);
+}
+
+/* ===== التربية البدنية ===== */
+body.subject-pe .student-dedication {
+    position: relative;
+    overflow: hidden;
+}
+
+body.subject-pe .student-dedication::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    to { left: 100%; }
+}
+
+/* ===== الدراسات الاجتماعية ===== */
+body.subject-social .student-dedication {
+    position: relative;
+    overflow: hidden;
+}
+
+body.subject-social .student-dedication::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+    );
+}
+
+body.subject-social .page-title .subtitle-deco {
+    font-size: 1rem;
+    color: var(--subject-secondary);
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ============================================================
+   4. التجاوب (Responsive)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    body.subject-islamic .student-dedication::before {
+        display: none;
+    }
+    
+    body.subject-english .page-title .english-title,
+    body.subject-chinese .page-title .chinese-title {
+        font-size: 1.8rem;
+    }
+    
+    body.subject-art .page-title .art-title {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المراجعة الشاملة للفصل الدراسي الأول - مادة لغتي الخالدة - الصف الثاني المتوسط 1448هـ">
+    <title>المراجعة الشاملة - الفصل الأول | لغتي الخالدة</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #1a5f7a, #0e4759, #159895);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .lesson-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; position: relative; z-index: 1; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; position: relative; z-index: 1; }
+        .lesson-hero .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .lesson-hero .hero-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .unit-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 15px;
+            border-top: 5px solid var(--subject-primary);
+            transition: transform 0.3s;
+        }
+        .unit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .unit-card.u1 { border-top-color: #3498db; }
+        .unit-card.u2 { border-top-color: #27ae60; }
+        .unit-card.u3 { border-top-color: #e67e22; }
+        .unit-card.u4 { border-top-color: #9b59b6; }
+        .unit-card h3 {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .unit-card.u1 h3 { color: #3498db; }
+        .unit-card.u2 h3 { color: #27ae60; }
+        .unit-card.u3 h3 { color: #e67e22; }
+        .unit-card.u4 h3 { color: #9b59b6; }
+        .unit-card .unit-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        .unit-card .unit-details strong {
+            color: var(--subject-primary);
+        }
+        .unit-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin: 2px;
+            color: white;
+        }
+        .tag-grammar { background: #3498db; }
+        .tag-rhetoric { background: #e67e22; }
+        .tag-topic { background: #27ae60; }
+
+        .strategy-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .strategy-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .strategy-card .example {
+            font-family: 'Amiri', serif;
+            font-size: 1.1rem;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .strategy-card .solution {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 12px 12px 12px 50px;
+            margin-bottom: 8px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border-right: 3px solid var(--subject-secondary);
+        }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--subject-primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 8px 0 8px 25px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 10px;
+            color: var(--subject-primary);
+            font-size: 0.7rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong { color: var(--subject-primary); }
+
+        .exam-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .exam-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+        }
+        .exam-card .q {
+            font-weight: 700;
+            margin: 10px 0 5px;
+        }
+        .exam-card .a {
+            background: var(--card-bg);
+            padding: 10px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(21, 152, 149, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .summary-item {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .summary-item i {
+            color: var(--success-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .units-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-star"></i> المراجعة الشاملة للفصل الدراسي الأول</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – 1448هـ</p>
+            <div class="badge-row">
+                <span class="hero-badge"><i class="fas fa-book"></i> 4 وحدات</span>
+                <span class="hero-badge"><i class="fas fa-pen"></i> قواعد النحو</span>
+                <span class="hero-badge"><i class="fas fa-feather-alt"></i> البلاغة</span>
+                <span class="hero-badge"><i class="fas fa-spell-check"></i> الإملاء</span>
+            </div>
+        </div>
+
+        <!-- تنبيه منهجي -->
+        <div class="content-card">
+            <div class="highlight-box">
+                <i class="fas fa-info-circle"></i>
+                <strong>ملاحظة منهجية مهمة:</strong> هذا الدليل يقدم لك الهيكل الكامل للوحدات + نماذج تمارين شاملة + شرح القواعد + أمثلة محلولة. يمكنك تطبيقه على أي تمرين في الكتاب. هذا الأسلوب أعمق وأنفع من مجرد نسخ "الحلول" لأنه يُعلّمك كيف تحل بنفسك.
+            </div>
+        </div>
+
+        <!-- أولاً: خريطة الوحدات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-map"></i> أولاً: خريطة الوحدات المتوقعة في الفصل الأول</h2>
+            <p style="margin-bottom: 15px;">يتكون الجزء الأول عادة من <strong>4 وحدات رئيسية</strong>، كل وحدة تحتوي على دروس متعددة:</p>
+
+            <div class="units-grid">
+                <div class="unit-card u1">
+                    <h3><i class="fas fa-mosque"></i> الوحدة الأولى</h3>
+                    <div class="unit-details">
+                        <strong>المحور:</strong> القيم الإسلامية / الأخلاق<br>
+                        <span class="unit-tag tag-grammar">النحو</span> الممدود والمنقوص<br>
+                        <span class="unit-tag tag-rhetoric">البلاغة</span> التشبيه وأنواعه
+                    </div>
+                </div>
+                <div class="unit-card u2">
+                    <h3><i class="fas fa-flag"></i> الوحدة الثانية</h3>
+                    <div class="unit-details">
+                        <strong>المحور:</strong> الوطن والانتماء<br>
+                        <span class="unit-tag tag-grammar">النحو</span> أفعال المدح والذم<br>
+                        <span class="unit-tag tag-rhetoric">البلاغة</span> الاستعارة
+                    </div>
+                </div>
+                <div class="unit-card u3">
+                    <h3><i class="fas fa-laptop"></i> الوحدة الثالثة</h3>
+                    <div class="unit-details">
+                        <strong>المحور:</strong> التواصل التقني<br>
+                        <span class="unit-tag tag-grammar">النحو</span> الترجي (عسى، حرى، اخلولق)<br>
+                        <span class="unit-tag tag-rhetoric">البلاغة</span> الكناية
+                    </div>
+                </div>
+                <div class="unit-card u4">
+                    <h3><i class="fas fa-feather-alt"></i> الوحدة الرابعة</h3>
+                    <div class="unit-details">
+                        <strong>المحور:</strong> الأدب والشعر<br>
+                        <span class="unit-tag tag-grammar">النحو</span> الاسم المقصور<br>
+                        <span class="unit-tag tag-rhetoric">البلاغة</span> المحسنات البديعية
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: منهجية حل التمارين -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> ثانياً: منهجية حل التمارين (نموذج لكل نوع)</h2>
+
+            <!-- النوع الأول: الفهم -->
+            <div class="strategy-card">
+                <h4><i class="fas fa-book-reader"></i> النوع الأول: أسئلة الفهم والاستيعاب (بعد النص القرائي)</h4>
+                <p><strong>السؤال:</strong> استخلص الفكرة العامة من النص.</p>
+                <p><strong>طريقة الحل:</strong> اقرأ النص كاملاً، ثم اكتب جملة واحدة تلخص الموضوع الرئيسي.</p>
+                <div class="example">مثال: نص عن "بر الوالدين" يتحدث عن الإحسان إليهما وبيان عظم ثواب ذلك عند الله.</div>
+                
+                <p style="margin-top: 15px;"><strong>السؤال:</strong> علل / فسر / اذكر سبباً.</p>
+                <p><strong>طريقة الحل:</strong> ابحث في النص عن الجملة التي تحتوي على السبب، وأعد صياغتها.</p>
+                <div class="example">مثال: علل "أهمية القراءة في بناء العقل".<br>الإجابة: لأن القراءة توسع المدارك وتنمي التفكير وتثري الحصيلة اللغوية.</div>
+            </div>
+
+            <!-- النوع الثاني: النحو -->
+            <div class="strategy-card">
+                <h4><i class="fas fa-pen-fancy"></i> النوع الثاني: التطبيقات النحوية (الأهم في الاختبارات)</h4>
+                
+                <p><strong>تمرين:</strong> استخرج الاسم الممدود وبيّن نوع همزته.</p>
+                <div class="example">
+                    1. خَلَقَ اللهُ السَّمَاءَ بلا عَمَدٍ.<br>
+                    2. الصَّحْرَاءُ مَكَانٌ قَاسٍ.<br>
+                    3. القِرَاءَةُ غِذَاءُ العَقْلِ.
+                </div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • السَّمَاء: همزتها <strong>منقلبة</strong> (أصلها: وَاو → سَمَاو)<br>
+                    • الصَّحْرَاء: همزتها <strong>زائدة للتأنيث</strong> (مذكرها: أَصْحَر)<br>
+                    • القِرَاءَة: همزتها <strong>أصلية</strong> (من الفعل: قَرَأَ)
+                </div>
+
+                <p style="margin-top: 20px;"><strong>تمرين:</strong> أعرب الاسم المقصور / المنقوص.</p>
+                <div class="example">
+                    1. جَاءَ القَاضِي إلى المَحْكَمَةِ.<br>
+                    2. رَأَيْتُ فَتًى شُجَاعًا.<br>
+                    3. سَلَّمْتُ على الأَمِيرِ.
+                </div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • القَاضِي: فاعل مرفوع وعلامة رفعه الضمة المقدرة على الياء المحذوفة للتخفيف (لأنه معرفة بـ "ال" في حالة الرفع).<br>
+                    • فَتًى: نعت منصوب وعلامة نصبه الفتحة المقدرة على الألف للتعذر.<br>
+                    • الأَمِيرِ: اسم مجرور وعلامة جره الكسرة المقدرة على الياء (لأنه معرفة بـ "ال").
+                </div>
+
+                <p style="margin-top: 20px;"><strong>تمرين:</strong> استخرج أفعال المدح والذم وأعربها.</p>
+                <div class="example">
+                    1. نِعْمَ الخُلُقُ الصِّدْقُ.<br>
+                    2. بِئْسَ الصِّفَةُ الكَذِبُ.<br>
+                    3. حَبَّذَا الأَمَانَةُ.
+                </div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • نِعْمَ: فعل ماضٍ جامد مبني على الفتح | الخُلُقُ: فاعل مرفوع | الصِّدْقُ: مخصوص بالمدح مبتدأ مؤخر مرفوع<br>
+                    • بِئْسَ: فعل ماضٍ جامد | الصِّفَةُ: فاعل مرفوع | الكَذِبُ: مخصوص بالذم مبتدأ مؤخر مرفوع<br>
+                    • حَبَّ: فعل ماضٍ جامد | ذَا: اسم إشارة فاعل | الأَمَانَةُ: مخصوص بالمدح مبتدأ مؤخر
+                </div>
+
+                <p style="margin-top: 20px;"><strong>تمرين:</strong> أعرب جملة الترجي.</p>
+                <div class="example">عَسَى اللهُ أَنْ يَرْحَمَنَا</div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • عَسَى: فعل ماضٍ ناقص مبني على الفتح المقدر على الألف للتعذر<br>
+                    • اللهُ: اسم عسى مرفوع بالضمة<br>
+                    • أَنْ: حرف مصدري ونصب<br>
+                    • يَرْحَمَ: فعل مضارع منصوب بـ "أن" وعلامة نصبه الفتحة<br>
+                    • نَا: ضمير متصل في محل نصب مفعول به<br>
+                    • والجملة الفعلية (أَنْ يَرْحَمَنَا) في محل رفع خبر "عَسَى"
+                </div>
+            </div>
+
+            <!-- النوع الثالث: البلاغة -->
+            <div class="strategy-card">
+                <h4><i class="fas fa-feather-alt"></i> النوع الثالث: التطبيقات البلاغية</h4>
+                <p><strong>تمرين:</strong> استخرج صورة بيانية وبيّن نوعها.</p>
+                <div class="example">
+                    1. العِلْمُ نُورٌ يَهْدِي إلى الطَّرِيقِ.<br>
+                    2. ابْتَسَمَ الثَّغْرُ عن اللُّؤْلُؤِ.<br>
+                    3. كَأَنَّ الشُّجَاعَ أَسَدٌ في المَعْرَكَةِ.
+                </div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • العِلْمُ نُورٌ: <strong>استعارة تصريحية</strong> (وجه الشبه: الهداية)<br>
+                    • ابْتَسَمَ الثَّغْرُ: <strong>استعارة مكنية</strong> (شبه الثغر بإنسان يبتسم)<br>
+                    • الشُّجَاعُ أَسَدٌ: <strong>تشبيه بليغ</strong> (وجه الشبه: الشجاعة والقوة)
+                </div>
+            </div>
+
+            <!-- النوع الرابع: الإملاء -->
+            <div class="strategy-card">
+                <h4><i class="fas fa-spell-check"></i> النوع الرابع: قواعد الإملاء الأساسية</h4>
+                <ul class="tree-list">
+                    <li><strong>همزة القطع وهمزة الوصل:</strong> القطع تُكتب في أول الفعل الماضي (أَكَلَ) والمصدر (إكرام) وأسماء الإشارة (هذا). الوصل تُكتب في (ال، ابن، امرؤ، ايم).</li>
+                    <li><strong>الهمزة المتوسطة:</strong> على ألف إذا كانت الفتحة غالبة (سَأَلَ)، على واو إذا كانت الضمة غالبة (رُؤُوس)، على ياء إذا كانت الكسرة غالبة (سَائِل)، على السطر إذا كانت ساكنة وما قبلها ساكن (جُزْء).</li>
+                </ul>
+            </div>
+
+            <!-- النوع الخامس: التعبير -->
+            <div class="strategy-card">
+                <h4><i class="fas fa-pen"></i> النوع الخامس: التعبير الكتابي</h4>
+                <p><strong>نموذج موضوع "بر الوالدين" (300 كلمة تقريباً):</strong></p>
+                <div class="example" style="text-align: right; font-size: 1rem; line-height: 2;">
+                    <strong>المقدمة:</strong> الوالدان هما سبب وجودنا في هذه الحياة، وهما نعمة الله علينا قبل أن نعرف معنى الشكر، فحقهما علينا عظيم وبرهما فريضة لا تسقط.<br><br>
+                    <strong>العرض:</strong> لقد قرن الله تعالى شكره بشكر الوالدين، فقال تعالى: ﴿أَنِ اشْكُرْ لِي وَلِوَالِدَيْكَ﴾. فبر الوالدين ليس مجرد إطعام وكساء، بل هو الإحسان بالقول والفعل وخفض الجناح لهما وطاعتهما في غير معصية الله. وقد روى البخاري أن رجلاً سأل النبي ﷺ: أي الناس أحق بحسن صحبتي؟ قال: "أمك، ثم أمك، ثم أمك، ثم أبوك".<br><br>
+                    <strong>الخاتمة:</strong> إن بر الوالدين طريق إلى الجنة، وعقوقهما من أكبر الكبائر، فلنحرص على رضاهما ما أحيانا الله، فالدنيا دار فناء والآخرة خير وأبقى.
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: جدول شامل -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> ثالثاً: جدول شامل لأنواع التمارين وحلولها النموذجية</h2>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">نوع التمرين</th>
+                            <th style="width: 35%;">طريقة الحل</th>
+                            <th style="width: 45%;">مثال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>استخراج قاعدة</strong></td>
+                            <td>ابحث عن الكلمة الدالة في الجملة</td>
+                            <td>استخرج اسماً ممدوداً → ابحث عن اسم آخره همزة قبلها ألف</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الإعراب</strong></td>
+                            <td>ابدأ بالفعل، ثم الفاعل، ثم المفعول، ثم باقي الجملة</td>
+                            <td>"جَاءَ الطَّالِبُ" → جَاءَ: فعل، الطَّالِبُ: فاعل</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التحويل (جمع/مثنى)</strong></td>
+                            <td>غيّر الضمائر والأفعال مع الاسم</td>
+                            <td>"جَاءَ الطَّالِبُ" → "جَاءَ الطَّالِبَانِ"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التعريف والتنكير</strong></td>
+                            <td>أضف "ال" أو "تنوين"</td>
+                            <td>"طَالِبٌ" → "الطَّالِبُ"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الجمع السالم</strong></td>
+                            <td>أضف واو ونون (مذكر) أو ألف وتاء (مؤنث)</td>
+                            <td>"مُعَلِّم" → "مُعَلِّمُون"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- رابعاً: استراتيجيات الحل السريع -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-bolt"></i> رابعاً: استراتيجيات الحل السريع (Life Hacks)</h2>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> استراتيجية "الخطوات الثلاث" للإعراب:</h4>
+                <ol class="steps-list">
+                    <li><strong>حدد نوع الجملة:</strong> فعلية أم اسمية؟</li>
+                    <li><strong>ابحث عن الأركان الأساسية:</strong> فعل + فاعل (أو مبتدأ + خبر).</li>
+                    <li><strong>أعرب الباقي:</strong> نعت، بدل، مفعول به، جار ومجرور...</li>
+                </ol>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-search"></i> استراتيجية البحث عن "الدليل" في البلاغة:</h4>
+                <ul class="tree-list">
+                    <li>إذا وجدت <strong>أداة تشبيه</strong> (كأنّ، مثل) → <strong>تشبيه</strong></li>
+                    <li>إذا وجدت كلمة <strong>مشبهة فقط</strong> بدون أداة → <strong>استعارة تصريحية</strong></li>
+                    <li>إذا وجدت <strong>وصفاً بشرياً لغير البشر</strong> → <strong>استعارة مكنية</strong></li>
+                    <li>إذا وجدت <strong>ذكر شيء وإرادة شيء آخر</strong> → <strong>كناية</strong></li>
+                </ul>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-check-double"></i> استراتيجية "المراجعة النهائية":</h4>
+                <ul class="tree-list">
+                    <li>هل الحركة الإعرابية مناسبة للحالة؟ (رفع/نصب/جر)</li>
+                    <li>هل العلامة ظاهرة أم مقدرة؟ ولماذا؟</li>
+                    <li>هل عيّنت بين المقصور والمنقوص والممدود بشكل صحيح؟</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: نموذج اختبار تجريبي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> خامساً: نموذج اختبار تجريبي (محاكاة لاختبار المدرسة)</h2>
+
+            <div class="exam-card">
+                <h4>السؤال الأول: استخرج من الجمل الآتية:</h4>
+                <p class="q">(أ) اسماً ممدوداً وبيّن نوع همزته.</p>
+                <p class="q">(ب) اسماً منقوصاً وأعربه.</p>
+                <p class="q">(ج) فعل رجاء وأعرب الجملة.</p>
+                <p style="margin-top: 10px;"><strong>الجمل:</strong></p>
+                <div class="example">
+                    1. البِنَاءُ الشَّامِخُ يَخْرُقُ السَّمَاءَ.<br>
+                    2. جَاءَ الدَّاعِي إلى المَسْجِدِ.<br>
+                    3. عَسَى اللهُ أَنْ يَغْفِرَ لَنَا.
+                </div>
+                <div class="a">
+                    <strong>الإجابة النموذجية:</strong><br>
+                    • (أ) البِنَاء: اسم ممدود همزته <strong>منقلبة</strong> (أصلها ياء: بِنَاي). السَّمَاء: اسم ممدود همزته <strong>منقلبة</strong> (أصلها واو: سَمَاو).<br>
+                    • (ب) الدَّاعِي: اسم منقوص، فاعل مرفوع وعلامة رفعه الضمة المقدرة على الياء المحذوفة للتخفيف (لأنه معرفة بـ "ال" في حالة الرفع).<br>
+                    • (ج) عَسَى: فعل ماضٍ ناقص مبني على الفتح المقدر. اللهُ: اسم عسى مرفوع. أَنْ يَغْفِرَ: مصدر مؤول في محل رفع خبر عسى.
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: نصائح ذهبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> سادساً: نصائح ذهبية للتفوق في الاختبار</h2>
+            
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>اقرأ السؤال مرتين</strong> قبل الإجابة، وحدد الكلمات المفتاحية (استخرج، أعرب، علل، استنتج).</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>ابدأ بالأسهل</strong> في ورقة الاختبار، ولا تضيع وقتك في سؤال صعب.</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>راجع إجابتك</strong> في الدقائق الأخيرة، خاصة الحركات الإعرابية.</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>احفظ الشواهد القرآنية</strong> المرتبطة بالقواعد، فهي تعطي انطباعاً ممتازاً للمصحح.</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>نظّف خطك</strong> في التعبير، واستخدم علامات الترقيم في أماكنها.</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>لا تخلط</strong> بين الممدود والمقصور والمنقوص، راجع الدروس 8 و 9 و 6.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص ما تعلمته -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص ما تعلمته في الفصل الأول</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>منهجية حل تمارين الفهم والاستيعاب</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>إعراب الاسم الممدود والمقصور والمنقوص</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>أفعال المدح والذم وأفعال الرجاء</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>الصور البيانية وتطبيقاتها</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>كتابة الموضوع التعبيري</div>
+                </div>
+                <div class="summary-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>استراتيجيات الحل السريع</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر معلوماتك الشاملة!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> أسئلة مراجعة سريعة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت المراجعة</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة المراجعة
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- الخاتمة -->
+        <div class="content-card" style="text-align: center; border: 2px solid var(--subject-primary);">
+            <h2 style="color: var(--subject-primary); margin-bottom: 15px;"><i class="fas fa-rocket"></i> خاتمة</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                يا عمر، هذا الدليل هو خريطة طريق شاملة لحل جميع تدريبات الجزء الأول من كتاب لغتي الخالدة. المفتاح الحقيقي للتفوق ليس في حفظ "الحلول"، بل في فهم المنهجية التي يمكنك تطبيقها على أي تمرين جديد.
+            </p>
+            <p style="font-size: 1.2rem; font-weight: 700; color: var(--subject-primary); margin-top: 15px;">
+                بالتوفيق والنجاح في دراستك! 🌟
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما نوع همزة 'السَّمَاء'؟",
+                options: ["أصلية", "زائدة للتأنيث", "منقلبة عن واو"],
+                correct: 2,
+                explanation: "همزة 'السَّمَاء' منقلبة عن واو، لأن أصلها (سَمَاو)."
+            },
+            {
+                sentence: "أعرب 'القَاضِي' في: 'جاءَ القَاضِي'",
+                options: ["مفعول به منصوب", "فاعل مرفوع بالضمة المقدرة", "مبتدأ مرفوع"],
+                correct: 1,
+                explanation: "القَاضِي: فاعل مرفوع وعلامة رفعه الضمة المقدرة على الياء المحذوفة للتخفيف."
+            },
+            {
+                sentence: "ما إعراب 'نِعْمَ' في: 'نِعْمَ الخُلُقُ الصِّدْقُ'؟",
+                options: ["فعل مضارع مرفوع", "فعل ماضٍ جامد مبني على الفتح", "اسم فاعل"],
+                correct: 1,
+                explanation: "نِعْمَ: فعل ماضٍ جامد مبني على الفتح، لا يُصرَّف."
+            },
+            {
+                sentence: "في 'عَسَى اللهُ أَنْ يَغْفِرَ'، ما إعراب 'أَنْ يَغْفِرَ'؟",
+                options: ["مفعول به منصوب", "فاعل مرفوع", "مصدر مؤول في محل رفع خبر عسى"],
+                correct: 2,
+                explanation: "أَنْ يَغْفِرَ: مصدر مؤول في محل رفع خبر عسى."
+            },
+            {
+                sentence: "ما نوع الصورة البيانية في: 'العِلْمُ نُورٌ'؟",
+                options: ["تشبيه بليغ", "استعارة تصريحية", "كناية"],
+                correct: 1,
+                explanation: "العِلْمُ نُورٌ: استعارة تصريحية، حيث شبه العلم بالنور وحذف المشبه به."
+            },
+            {
+                sentence: "الاسم المقصور يُعرب بـ:",
+                options: ["حركات ظاهرة دائماً", "حركات مقدرة على الألف للتعذر", "حركات مقدرة في الرفع فقط"],
+                correct: 1,
+                explanation: "الاسم المقصور يُعرب بحركات مقدرة على الألف منع من ظهورها التعذر في جميع حالاته."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`;
+            });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) { currentQuestion--; loadQuestion(); }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore');
+            fs.style.display = 'block';
+            const pct = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${pct}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

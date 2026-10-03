@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأقاليم الحيوية | الدراسات الاجتماعية - ثاني متوسط</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root{--primary-color:#2e7d32;--secondary-color:#1b5e20;--accent-color:#1b5e20;--success-color:#2e7d32;--error-color:#c62828;--bg-color:#ffffff;--card-bg:#f8f9fa;--text-color:#333333;--border-color:#dee2e6}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Tajawal',sans-serif;line-height:1.8;color:var(--text-color);background-color:var(--bg-color);direction:rtl;text-align:right;max-width:210mm;margin:0 auto;padding:20px}
+        .lesson-header{text-align:center;border-bottom:3px solid var(--primary-color);padding-bottom:20px;margin-bottom:30px}
+        .lesson-header h1{color:var(--primary-color);font-size:2rem;margin-bottom:10px;font-family:'Amiri',serif}
+        .lesson-header p{color:var(--secondary-color);font-size:1.1rem;font-weight:600}
+        .content-card{background-color:var(--card-bg);border-radius:10px;padding:25px;margin-bottom:25px;border-right:5px solid var(--primary-color);box-shadow:0 2px 5px rgba(0,0,0,.05);page-break-inside:avoid;break-inside:avoid}
+        .section-title{color:var(--primary-color);font-size:1.4rem;font-weight:800;margin-bottom:15px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--accent-color);padding-bottom:10px;font-family:'Amiri',serif}
+        .highlight-box{background-color:rgba(46,125,50,.08);border-right:4px solid var(--primary-color);padding:15px;border-radius:5px;margin:15px 0;font-weight:600}
+        .quran-box{background:linear-gradient(135deg,#fef9e7,#fdebd0);border:2px solid #f9a825;border-radius:12px;padding:20px;margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.3rem;color:#7d6608;line-height:2}
+        .math-box{background:#e9ecef;padding:15px;border-radius:8px;border:2px solid var(--primary-color);margin:15px 0;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:var(--primary-color)}
+        .step-box{background:#f1f3f5;padding:15px;border-radius:8px;margin:10px 0;border-right:3px solid var(--primary-color)}
+        .step-box h4{color:var(--primary-color);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+        .step-box .step-number{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--primary-color);color:#fff;border-radius:50%;font-weight:700;font-size:.85rem}
+        .two-columns{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0}
+        .three-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;margin:15px 0}
+        .four-columns{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:15px;margin:15px 0}
+        .column-card{background:#fff;padding:15px;border-radius:8px;border-top:4px solid var(--primary-color)}
+        .column-card h3{margin-bottom:10px;font-size:1.1rem;font-family:'Amiri',serif}
+        .example-card{background:#fff;padding:18px;border-radius:8px;border-top:4px solid var(--accent-color);margin-bottom:15px}
+        .example-card h4{color:var(--primary-color);margin-bottom:10px}
+        .example-card .solution{background:#d4edda;padding:10px;border-radius:5px;border-right:3px solid var(--success-color);font-weight:600;color:#155724;margin-top:10px}
+        .warning-box{background:#f8d7da;border-right:5px solid var(--error-color);padding:15px;border-radius:8px;margin:15px 0}
+        .warning-box h4{color:#721c24;margin-bottom:8px}
+        .golden-tip{background:#fff3cd;border-right:5px solid #ffc107;padding:15px;border-radius:8px;margin:15px 0}
+        .golden-tip h4{color:#856404;margin-bottom:8px}
+        .biome-card{background:#fff;padding:15px;border-radius:8px;text-align:center}
+        .biome-card h4{margin-bottom:10px;font-family:'Amiri',serif}
+        .biome-card .icon{font-size:2rem;margin-bottom:10px}
+        .biome-card.desert{border-top:5px solid #f9a825}
+        .biome-card.desert h4,.biome-card.desert .icon{color:#f57c00}
+        .biome-card.forest{border-top:5px solid #1b5e20}
+        .biome-card.forest h4,.biome-card.forest .icon{color:#1b5e20}
+        .biome-card.tundra{border-top:5px solid #0277bd}
+        .biome-card.tundra h4,.biome-card.tundra .icon{color:#0277bd}
+        .biome-card.savanna{border-top:5px solid #ff8f00}
+        .biome-card.savanna h4,.biome-card.savanna .icon{color:#ff8f00}
+        .feature-card{background:#fff;padding:15px;border-radius:8px;border-top:5px solid var(--primary-color)}
+        .feature-card h4{margin-bottom:10px;color:var(--primary-color);font-family:'Amiri',serif}
+        .feature-card .icon{font-size:2rem;margin-bottom:10px;color:var(--primary-color)}
+        .earth-visual{background:#fff;padding:20px;border-radius:10px;margin:15px 0;text-align:center}
+        .earth-visual svg{max-width:100%;height:auto}
+        .lesson-intro{background:linear-gradient(135deg,rgba(46,125,50,.05),rgba(27,94,32,.05));border:2px solid var(--primary-color);border-radius:10px;padding:20px;margin:15px 0;text-align:center}
+        .lesson-intro h3{color:var(--primary-color);font-family:'Amiri',serif;margin-bottom:15px}
+        .custom-table{width:100%;border-collapse:collapse;margin:15px 0;font-size:.9rem}
+        .custom-table th,.custom-table td{padding:10px;border:1px solid var(--border-color);text-align:center}
+        .custom-table th{background:var(--primary-color);color:#fff}
+        .custom-table tr:nth-child(even){background:#f8f9fa}
+        .tree-list{list-style:none;padding:0}
+        .tree-list li{position:relative;padding:8px 0 8px 25px;margin-bottom:5px}
+        .tree-list li::before{content:'•';position:absolute;right:0;top:8px;color:var(--primary-color);font-size:1.5rem;line-height:1}
+        .tree-list li strong{color:var(--primary-color)}
+        .page-break{page-break-before:always;break-before:page}
+        @media print{
+            body{background:#fff;padding:10mm;max-width:100%;font-size:11pt}
+            .content-card,.example-card,.warning-box,.column-card,.step-box,.biome-card,.feature-card,.lesson-intro,.earth-visual,.quran-box{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid;break-inside:avoid}
+            .highlight-box,.warning-box,.golden-tip,.biome-card,.feature-card,.lesson-intro,.earth-visual,.quran-box,.custom-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+            .lesson-header{page-break-after:avoid}
+            .section-title{page-break-after:avoid}
+            a{text-decoration:none;color:#000}
+            .no-print{display:none!important}
+        }
+        @media(max-width:768px){.two-columns,.three-columns,.four-columns{grid-template-columns:1fr}.lesson-header h1{font-size:1.5rem}}
+    </style>
+</head>
+<body>
+
+    <div class="lesson-header">
+        <h1><i class="fas fa-globe-africa"></i> الأقاليم الحيوية</h1>
+        <p>الصحراء، الغابة الاستوائية، التندرا، السافانا، وأبرز خصائصها</p>
+        <p>مادة الدراسات الاجتماعية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        <p style="font-size:.9rem;margin-top:10px;color:#666">مخصص للطالب: أوس عبد الجبار الأحمدي</p>
+    </div>
+
+    <div style="text-align:center;font-family:'Amiri',serif;font-size:2rem;color:var(--primary-color);margin:20px 0">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+    <!-- الفكرة الكبيرة -->
+    <div class="content-card">
+        <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+        <div class="highlight-box">
+            <strong>لماذا تختلف الحياة من منطقة إلى أخرى على سطح الأرض؟</strong>
+            <p style="margin-top:10px;font-weight:400">تتنوع البيئات على سطح الأرض بتنوع المناخ، فتتكون <strong>أقاليم حيوية</strong> مختلفة. سنتعرف على <strong>أربعة أقاليم رئيسية</strong>: الصحراء، الغابة الاستوائية، التندرا، والسافانا.</p>
+        </div>
+        <div class="lesson-intro">
+            <h3><i class="fas fa-leaf"></i> عن الأقاليم الحيوية</h3>
+            <p><strong>التعريف:</strong> مناطق جغرافية كبيرة تتميز بمناخ ونباتات وحيوانات معينة</p>
+            <p><strong>العامل المحدد:</strong> المناخ (الحرارة والأمطار)</p>
+            <p><strong>الأقاليم الرئيسية:</strong> الصحراء، الغابة الاستوائية، التندرا، السافانا</p>
+        </div>
+    </div>
+
+    <!-- أولاً: مفهوم الإقليم الحيوي -->
+    <div class="content-card">
+        <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: مفهوم الإقليم الحيوي</h2>
+        <div class="highlight-box">
+            <strong>الإقليم الحيوي:</strong> منطقة جغرافية كبيرة تتميز بمناخ معين، ونباتات وحيوانات متكيفة.
+        </div>
+        <div class="two-columns">
+            <div class="column-card" style="border-top-color:#2e7d32">
+                <h3 style="color:#2e7d32"><i class="fas fa-leaf"></i> التعريف</h3>
+                <p>وحدة بيئية كبيرة تضم:</p>
+                <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                    <li><strong>مناخاً مميزاً</strong></li>
+                    <li><strong>نباتات متكيفة</strong></li>
+                    <li><strong>حيوانات متخصصة</strong></li>
+                    <li><strong>تربة مميزة</strong></li>
+                </ul>
+            </div>
+            <div class="column-card" style="border-top-color:#1b5e20">
+                <h3 style="color:#1b5e20"><i class="fas fa-thermometer-half"></i> العوامل المحددة</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li><strong>درجة الحرارة:</strong> تحدد نوع النباتات</li>
+                    <li><strong>كمية الأمطار:</strong> تحدد كثافة الغطاء النباتي</li>
+                    <li><strong>خط العرض:</strong> يؤثر في المناخ</li>
+                    <li><strong>الارتفاع:</strong> يؤثر في الحرارة</li>
+                </ul>
+            </div>
+        </div>
+        <div class="math-box" style="font-family:'Amiri',serif">
+            الإقليم الحيوي = المناخ + النباتات + الحيوانات + التربة
+        </div>
+    </div>
+
+    <!-- ثانياً: الصحراء -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-sun"></i> ثانياً: الإقليم الصحراوي</h2>
+        <div class="highlight-box">
+            <strong>الصحراء:</strong> إقليم حيوي يتميز بالجفاف الشديد وندرة الأمطار.
+        </div>
+        <div class="biome-card desert" style="margin:20px 0">
+            <h4><i class="fas fa-sun"></i> الإقليم الصحراوي</h4>
+            <p>أرض الجفاف والحرارة</p>
+            <p style="margin-top:10px;font-size:.9rem">يشغل حوالي <strong>20%</strong> من سطح الأرض</p>
+        </div>
+        <div class="two-columns">
+            <div class="column-card" style="border-top-color:#f9a825">
+                <h3 style="color:#f57c00"><i class="fas fa-thermometer-high"></i> المناخ</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li><strong>الأمطار:</strong> أقل من 250 مم سنوياً</li>
+                    <li><strong>الحرارة:</strong> عالية نهاراً، منخفضة ليلاً</li>
+                    <li><strong>الرطوبة:</strong> منخفضة جداً</li>
+                </ul>
+            </div>
+            <div class="column-card" style="border-top-color:#f57c00">
+                <h3 style="color:#f57c00"><i class="fas fa-map-marker-alt"></i> الموقع</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li>بين خطي عرض <strong>15° و 35°</strong></li>
+                    <li><strong>أمثلة:</strong> الصحراء الكبرى، الربع الخالي، جوبي</li>
+                </ul>
+            </div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> خصائص الصحراء</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> النباتات</h4>
+                <p><strong>الخصائص:</strong> أشواك، جذور عميقة، سوق سميكة.</p>
+                <p><strong>أمثلة:</strong> النخيل، الطلح، السمر، الصبار.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> الحيوانات</h4>
+                <p><strong>التكيفات:</strong> النشاط الليلي، تخزين الماء، ألوان فاتحة.</p>
+                <p><strong>أمثلة:</strong> الإبل، الثعالب، العقارب، السحالي.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> التربة والتضاريس</h4>
+                <p>رملية أو صخرية، كثبان رملية، واحات.</p>
+            </div>
+            <div class="solution">✅ الصحراء قاسية، لكن الحياة فيها تتكيف</div>
+        </div>
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> الصحراء في المملكة:</h4>
+            <ul style="padding-right:20px;margin-top:10px;line-height:2">
+                <li><strong>الربع الخالي:</strong> أكبر صحراء رملية متصلة</li>
+                <li><strong>النفود الكبير:</strong> في الشمال</li>
+                <li><strong>الدهناء:</strong> في الوسط</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ثالثاً: الغابة الاستوائية -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-tree"></i> ثالثاً: الغابة الاستوائية</h2>
+        <div class="highlight-box">
+            <strong>الغابة الاستوائية:</strong> إقليم حيوي يتميز بكثافة الغطاء النباتي والأمطار الغزيرة.
+        </div>
+        <div class="biome-card forest" style="margin:20px 0">
+            <h4><i class="fas fa-tree"></i> الغابة الاستوائية</h4>
+            <p>رئة الأرض الخضراء</p>
+            <p style="margin-top:10px;font-size:.9rem">تنتج <strong>20%</strong> من أكسجين العالم</p>
+        </div>
+        <div class="two-columns">
+            <div class="column-card" style="border-top-color:#1b5e20">
+                <h3 style="color:#1b5e20"><i class="fas fa-cloud-rain"></i> المناخ</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li><strong>الأمطار:</strong> أكثر من 2000 مم سنوياً</li>
+                    <li><strong>الحرارة:</strong> 25-30°م طوال السنة</li>
+                    <li><strong>الرطوبة:</strong> أكثر من 80%</li>
+                </ul>
+            </div>
+            <div class="column-card" style="border-top-color:#2e7d32">
+                <h3 style="color:#2e7d32"><i class="fas fa-map-marker-alt"></i> الموقع</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li>قرب <strong>خط الاستواء</strong></li>
+                    <li><strong>أمثلة:</strong> الأمازون، الكونغو، جنوب شرق آسيا</li>
+                </ul>
+            </div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> خصائص الغابة الاستوائية</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> الطبقات النباتية</h4>
+                <p>5 طبقات: الأرضية، الشجيرات، المظلة السفلى، المظلة العليا، الناشئة.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> النباتات</h4>
+                <p>أشجار طويلة (60م)، أوراق عريضة، متسلقات، هوائيات.</p>
+                <p><strong>أمثلة:</strong> الماهوجني، المطاط، السرخس.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الحيوانات</h4>
+                <p>قرود، ببغاوات، فراشات، ثعابين، jaguars.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span> التنوع البيولوجي</h4>
+                <p>تحتوي على <strong>50%</strong> من أنواع الكائنات في العالم.</p>
+            </div>
+            <div class="solution">✅ أغنى أقاليم الأرض بالحياة</div>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-exclamation-triangle"></i> تهديدات الغابة الاستوائية:</h4>
+            <p>يتم فقدان <strong>مساحة تعادل ملعب كرة قدم كل ثانية</strong>!</p>
+        </div>
+    </div>
+
+    <!-- رابعاً: التندرا -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-snowflake"></i> رابعاً: إقليم التندرا</h2>
+        <div class="highlight-box">
+            <strong>التندرا:</strong> إقليم حيوي بارد جداً، بلا أشجار، تربة متجمدة.
+        </div>
+        <div class="biome-card tundra" style="margin:20px 0">
+            <h4><i class="fas fa-snowflake"></i> التندرا</h4>
+            <p>أرض البرد القارس</p>
+            <p style="margin-top:10px;font-size:.9rem">تغطي حوالي <strong>20%</strong> من اليابسة</p>
+        </div>
+        <div class="two-columns">
+            <div class="column-card" style="border-top-color:#0277bd">
+                <h3 style="color:#0277bd"><i class="fas fa-thermometer-full"></i> المناخ</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li><strong>الحرارة:</strong> شتاء -30°م، صيف 10°م</li>
+                    <li><strong>الأمطار:</strong> 150-250 مم</li>
+                    <li><strong>الرياح:</strong> قوية جداً</li>
+                </ul>
+            </div>
+            <div class="column-card" style="border-top-color:#01579b">
+                <h3 style="color:#01579b"><i class="fas fa-map-marker-alt"></i> الموقع</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li>أقصى <strong>الشمال</strong> (فوق 60°)</li>
+                    <li><strong>أمثلة:</strong> ألاسكا، كندا، سيبيريا</li>
+                </ul>
+            </div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> خصائص التندرا</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> التربة المتجمدة</h4>
+                <p>Permafrost: طبقة سفلية متجمدة دائماً.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> النباتات</h4>
+                <p>قصيرة، طحالب، أشنات، شجيرات.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الحيوانات</h4>
+                <p>دب قطبي، رنة، ثعلب قطبي، بومة ثلجية.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span> الصيف القصير</h4>
+                <p>شهران فقط، تذوب الطبقة السطحية.</p>
+            </div>
+            <div class="solution">✅ التندرا إقليم قاسٍ، لكن الحياة فيه تتكيف</div>
+        </div>
+    </div>
+
+    <!-- خامساً: السافانا -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-seedling"></i> خامساً: إقليم السافانا</h2>
+        <div class="highlight-box">
+            <strong>السافانا:</strong> إقليم حيوي بمراعي شاسعة وأشجار متفرقة، موسمان: جاف وممطر.
+        </div>
+        <div class="biome-card savanna" style="margin:20px 0">
+            <h4><i class="fas fa-seedling"></i> السافانا</h4>
+            <p>أرض الأعشاب والأسود</p>
+            <p style="margin-top:10px;font-size:.9rem">موطن <strong>أكبر الثدييات البرية</strong></p>
+        </div>
+        <div class="two-columns">
+            <div class="column-card" style="border-top-color:#ff8f00">
+                <h3 style="color:#ff8f00"><i class="fas fa-cloud-sun"></i> المناخ</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li><strong>الأمطار:</strong> 500-1500 مم</li>
+                    <li><strong>الحرارة:</strong> 20-30°م</li>
+                    <li><strong>الموسمان:</strong> ممطر وجاف</li>
+                </ul>
+            </div>
+            <div class="column-card" style="border-top-color:#f57c00">
+                <h3 style="color:#f57c00"><i class="fas fa-map-marker-alt"></i> الموقع</h3>
+                <ul style="padding-right:20px;line-height:2">
+                    <li>بين الصحاري والغابات الاستوائية</li>
+                    <li><strong>أمثلة:</strong> أفريقيا، أمريكا الجنوبية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> خصائص السافانا</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> النباتات</h4>
+                <p>أعشاب طويلة، أشجار متفرقة (أكاسيا، باوباب).</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> الحيوانات</h4>
+                <p>أسود، فيلة، زراف، حمر وحشية، غزلان.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> دورة الحياة</h4>
+                <p>موسم ممطر (خضرة) وموسم جاف (جفاف وحرائق).</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span> دور الحرائق</h4>
+                <p>طبيعية وضرورية: تُجدد الأعشاب.</p>
+            </div>
+            <div class="solution">✅ السافانا إقليم الحياة البرية</div>
+        </div>
+        <div class="golden-tip">
+            <h4><i class="fas fa-lightbulb"></i> الهجرة الكبرى:</h4>
+            <p>أكثر من <strong>مليون حمار وحشي</strong> و<strong>مليون غزلان</strong> تهاجر سنوياً في أفريقيا.</p>
+        </div>
+    </div>
+
+    <!-- سادساً: مقارنة -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-balance-scale"></i> سادساً: مقارنة بين الأقاليم</h2>
+        <div class="highlight-box">
+            <strong>المقارنة:</strong> كل إقليم له خصائصه الفريدة.
+        </div>
+        <div class="custom-table">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>الخاصية</th>
+                        <th style="background:#f57c00">الصحراء</th>
+                        <th style="background:#1b5e20">الغابة</th>
+                        <th style="background:#0277bd">التندرا</th>
+                        <th style="background:#ff8f00">السافانا</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>الموقع</strong></td><td>15°-35°</td><td>0°-10°</td><td>فوق 60°</td><td>10°-20°</td></tr>
+                    <tr><td><strong>الحرارة</strong></td><td>حارة</td><td>حارة</td><td>باردة جداً</td><td>دافئة</td></tr>
+                    <tr><td><strong>الأمطار</strong></td><td>أقل من 250</td><td>أكثر من 2000</td><td>150-250</td><td>500-1500</td></tr>
+                    <tr><td><strong>النباتات</strong></td><td>شوكية</td><td>كثيفة</td><td>طحالب</td><td>أعشاب</td></tr>
+                    <tr><td><strong>الحيوانات</strong></td><td>الإبل</td><td>القرود</td><td>الدب القطبي</td><td>الأسد</td></tr>
+                    <tr><td><strong>التنوع</strong></td><td>منخفض</td><td>عالي جداً</td><td>منخفض</td><td>متوسط</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- سابعاً: أمثلة من المملكة -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-flag"></i> سابعاً: أمثلة من المملكة</h2>
+        <div class="highlight-box">
+            <strong>المملكة:</strong> تقع بشكل رئيسي في الإقليم الصحراوي.
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> الأقاليم في المملكة</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> الصحراء (الغالب)</h4>
+                <p>ربع خالي، نفود، دهنة.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> شبه السافانا (جنوب غرب)</h4>
+                <p>عسير، الباحة.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الساحلي</h4>
+                <p>تهامة، سواحل البحر الأحمر.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span> البحري</h4>
+                <p>الشعاب المرجانية في البحر الأحمر.</p>
+            </div>
+            <div class="solution">✅ المملكة متنوعة بيئياً</div>
+        </div>
+    </div>
+
+    <!-- ثامناً: التهديدات -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-shield-alt"></i> ثامناً: التهديدات والحماية</h2>
+        <div class="highlight-box">
+            <strong>التحديات:</strong> الأقاليم الحيوية تواجه تهديدات كبيرة.
+        </div>
+        <div class="four-columns">
+            <div class="biome-card" style="border-top-color:#c62828">
+                <h4 style="color:#c62828"><i class="fas fa-smog"></i> التلوث</h4>
+            </div>
+            <div class="biome-card" style="border-top-color:#f57c00">
+                <h4 style="color:#f57c00"><i class="fas fa-tree"></i> إزالة الغابات</h4>
+            </div>
+            <div class="biome-card" style="border-top-color:#0277bd">
+                <h4 style="color:#0277bd"><i class="fas fa-temperature-high"></i> التغير المناخي</h4>
+            </div>
+            <div class="biome-card" style="border-top-color:#ff8f00">
+                <h4 style="color:#ff8f00"><i class="fas fa-paw"></i> الصيد الجائر</h4>
+            </div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-pen"></i> جهود الحماية</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> المحميات الطبيعية</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> التشريعات الدولية</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> إعادة التأهيل</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span> التشجير</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">5</span> التوعية</h4>
+            </div>
+            <div class="solution">✅ حماية الأقاليم مسؤولية الجميع</div>
+        </div>
+        <div class="quran-box" style="font-size:1.1rem">
+            ﴿ ظَهَرَ الْفَسَادُ فِي الْبَرِّ وَالْبَحْرِ بِمَا كَسَبَتْ أَيْدِي النَّاسِ ﴾
+            <p style="font-size:.85rem;margin-top:5px">[سورة الروم: 41]</p>
+        </div>
+    </div>
+
+    <!-- تاسعاً: تطبيقات -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-life-ring"></i> تاسعاً: تطبيقات حياتية</h2>
+        <div class="example-card">
+            <h4><i class="fas fa-plane"></i> مثال 1: السياحة البيئية</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> اختيار الوجهة</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> احترام البيئة</h4>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> دعم الاقتصاد المحلي</h4>
+            </div>
+            <div class="solution">✅ السياحة المستدامة تحمي الأقاليم</div>
+        </div>
+        <div class="example-card">
+            <h4><i class="fas fa-seedling"></i> مثال 2: الزراعة المستدامة</h4>
+            <div class="step-box">
+                <h4><span class="step-number">1</span> في الصحراء</h4>
+                <p>محاصيل مقاومة للجفاف.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span> في السافانا</h4>
+                <p>محاصيل الموسم الواحد.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span> في الغابات</h4>
+                <p>الزراعة المتدرجة.</p>
+            </div>
+            <div class="solution">✅ الزراعة تتكيف مع كل إقليم</div>
+        </div>
+    </div>
+
+    <!-- عاشراً: تنبيهات -->
+    <div class="content-card page-break">
+        <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> عاشراً: تنبيهات وأخطاء شائعة</h2>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 1: الصحراء خالية من الحياة</h4>
+            <p>الصحراء <strong>غنية بالحياة</strong> المتكيفة.</p>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 2: الخلط بين السافانا والصحراء</h4>
+            <p><strong>السافانا:</strong> أمطار متوسطة. <strong>الصحراء:</strong> أمطار قليلة.</p>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 3: التندرا مثل القطب الشمالي</h4>
+            <p><strong>التندرا:</strong> إقليم حيوي. <strong>القطب:</strong> منطقة جليدية.</p>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 4: الحرائق سيئة دائماً</h4>
+            <p>الحرائق الطبيعية <strong>ضرورية</strong> للسافانا.</p>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 5: غابات استوائية في السعودية</h4>
+            <p>المملكة في <strong>الإقليم الصحراوي</strong>.</p>
+        </div>
+        <div class="warning-box">
+            <h4><i class="fas fa-times-circle"></i> خطأ 6: الخلط بين الإقليم والمناخ</h4>
+            <p><strong>المناخ:</strong> حرارة وأمطار فقط. <strong>الإقليم:</strong> مناخ + نباتات + حيوانات.</p>
+        </div>
+    </div>
+
+    <!-- ملخص الدرس -->
+    <div class="content-card">
+        <h2 class="section-title" style="border:none"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+        <ul class="tree-list">
+            <li><strong>الإقليم الحيوي:</strong> منطقة جغرافية كبيرة بمناخ ونباتات وحيوانات معينة.</li>
+            <li><strong>العوامل المحددة:</strong> الحرارة والأمطار.</li>
+            <li><strong>الصحراء:</strong> جافة، حارة، نباتات شوكية، إبل وثعالب.</li>
+            <li><strong>الغابة الاستوائية:</strong> ممطرة، حارة، أشجار كثيفة، قرود وببغاوات.</li>
+            <li><strong>التندرا:</strong> باردة جداً، تربة متجمدة، طحالب، دب قطبي ورنة.</li>
+            <li><strong>السافانا:</strong> أمطار متوسطة، أعشاب وأشجار، أسد وفيل.</li>
+            <li><strong>المملكة:</strong> في الإقليم الصحراوي بشكل رئيسي.</li>
+            <li><strong>التهديدات:</strong> التلوث، إزالة الغابات، التغير المناخي.</li>
+            <li><strong>الحماية:</strong> المحميات، التشريعات، التشجير.</li>
+            <li><strong>تنبيه:</strong> لا نخلط بين الأقاليم المختلفة.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

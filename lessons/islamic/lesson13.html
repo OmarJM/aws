@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تفسير سورة المؤمنون - مادة الدراسات الإسلامية - الصف الثاني المتوسط">
+    <title>تفسير سورة المؤمنون | الدراسات الإسلامية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #1e8449, #27ae60); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-family: 'Amiri', serif; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.95; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #1e8449; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #27ae60; padding-bottom: 10px; font-family: 'Amiri', serif; }
+        .highlight-box { background-color: rgba(30, 132, 73, 0.08); border-right: 4px solid #1e8449; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #1e8449; }
+        .quran-box { background: linear-gradient(135deg, #fef9e7, #fdebd0); border: 2px solid #f39c12; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.4rem; color: #7d6608; line-height: 2; }
+        .ayah-number { display: inline-block; background: #f39c12; color: white; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; font-size: 0.9rem; margin: 0 5px; font-family: 'Fira Code', monospace; }
+        .hadith-box { background: linear-gradient(135deg, #eafaf1, #d5f5e3); border: 2px solid #27ae60; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.2rem; color: #1e8449; line-height: 1.8; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #27ae60; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; font-weight: 700; color: #1e8449; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #1e8449; margin: 15px 0; }
+        .step-box h4 { color: #1e8449; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e8449; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #1e8449; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .four-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-family: 'Amiri', serif; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #1e8449; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #27ae60; margin-bottom: 15px; }
+        .example-card h4 { color: #1e8449; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #1e8449; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #27ae60; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #1e8449; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #1e8449; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(30, 132, 73, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed #1e8449; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #1e8449; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-family: 'Amiri', serif; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Amiri', serif; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Amiri', serif; }
+        .quiz-option:hover { border-color: #1e8449; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #1e8449; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #1e8449; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #1e8449; color: #1e8449; }
+        .trait-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #1e8449; text-align: center; transition: transform 0.3s; }
+        .trait-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .trait-card h4 { margin-bottom: 10px; color: #1e8449; font-family: 'Amiri', serif; }
+        .trait-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #1e8449; }
+        .prophet-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #f39c12; text-align: center; }
+        .prophet-card h4 { margin-bottom: 10px; color: #f39c12; font-family: 'Amiri', serif; }
+        .prophet-card .icon { font-size: 2rem; color: #f39c12; margin-bottom: 10px; }
+        .bismillah { text-align: center; font-family: 'Amiri', serif; font-size: 2rem; color: #1e8449; margin: 20px 0; }
+        .surah-intro { background: linear-gradient(135deg, rgba(30, 132, 73, 0.05), rgba(39, 174, 96, 0.05)); border: 2px solid #1e8449; border-radius: 15px; padding: 25px; margin: 20px 0; text-align: center; }
+        .surah-intro h3 { color: #1e8449; font-family: 'Amiri', serif; margin-bottom: 15px; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns, .four-columns { grid-template-columns: 1fr; } .quran-box { font-size: 1.1rem; } }
+    </style>
+</head>
+<body class="subject-islamic">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-book-quran"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/islamic.html" class="active">الدراسات الإسلامية</a></li>
+                    <li><a href="../../quizzes/islamic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/islamic.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الإسلامية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-star-and-crescent"></i> تفسير سورة المؤمنون</h1>
+            <p>صفات المؤمنين المفلحين، قصص الأنبياء، وأهوال يوم القيامة</p>
+            <p>مادة الدراسات الإسلامية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>ما سرّ فلاح المؤمنين؟ وما الدروس المستفادة من قصص الأنبياء؟</strong>
+                <p style="margin-top: 10px;">سورة المؤمنون سورة عظيمة، افتتحت بـ<strong>بيان صفات المؤمنين المفلحين</strong>، ثم انتقلت إلى <strong>قصص الأنبياء</strong> الذين صبروا على دعوة أقوامهم، وختمت بـ<strong>أهوال يوم القيامة</strong> لتُهيّئ القلوب للقاء الله. في هذا الدرس، سنتدبر <strong>معاني الآيات</strong>، ونتعلم <strong>من قصص الأنبياء</strong>، ونستعد <strong>ليوم القيامة</strong>.</p>
+            </div>
+
+            <div class="surah-intro">
+                <h3><i class="fas fa-book-quran"></i> عن سورة المؤمنون</h3>
+                <p><strong>عدد آياتها:</strong> 118 آية</p>
+                <p><strong>مكية:</strong> نزلت في مكة المكرمة</p>
+                <p><strong>موضوعها:</strong> صفات المؤمنين، قصص الأنبياء، أهوال القيامة</p>
+                <p><strong>سبب تسميتها:</strong> لافتتاحها بصفات المؤمنين المفلحين</p>
+            </div>
+
+            <div class="quran-box">
+                قَدْ أَفْلَحَ الْمُؤْمِنُونَ
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة المؤمنون: 1]</p>
+            </div>
+        </div>
+
+        <!-- أولاً: صفات المؤمنين المفلحين -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-star"></i> أولاً: صفات المؤمنين المفلحين (الآيات 1-11)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الفلاح:</strong> الفوز بالجنة والنجاة من النار. وقد ذكر الله صفات المؤمنين الذين فازوا بهذا الفلاح.
+            </div>
+
+            <div class="quran-box">
+                قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ۝ وَالَّذِينَ هُمْ عَنِ اللَّغْوِ مُعْرِضُونَ ۝ وَالَّذِينَ هُمْ لِلزَّكَاةِ فَاعِلُونَ ۝ وَالَّذِينَ هُمْ لِفُرُوجِهِمْ حَافِظُونَ ۝ إِلَّا عَلَىٰ أَزْوَاجِهِمْ أوْ مَا مَلَكَتْ أَيْمَانُهُمْ فَإِنَّهُمْ غَيْرُ مَلُومِينَ ۝ فَمَنِ ابْتَغَىٰ وَرَاءَ ذَٰلِكَ فَأُولَٰئِكَ هُمُ الْعَادُونَ ۝ وَالَّذِينَ هُمْ لِأَمَانَاتِهِمْ وَعَهْدِهِمْ رَاعُونَ ۝ وَالَّذِينَ هُمْ عَلَىٰ صَلَوَاتِهِمْ يُحَافِظُونَ ۝ أُولَٰئِكَ هُمُ الْوَارِثُونَ ۝ الَّذِينَ يَرِثُونَ الْفِرْدَوْسَ هُمْ فِيهَا خَالِدُونَ
+                <p style="font-size: 0.85rem; margin-top: 10px;">[سورة المؤمنون: 1-11]</p>
+            </div>
+
+            <div class="four-columns">
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-praying-hands"></i></div>
+                    <h4>1. الخشوع في الصلاة</h4>
+                    <p>حضور القلب وتذلل لله</p>
+                </div>
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-ban"></i></div>
+                    <h4>2. الإعراض عن اللغو</h4>
+                    <p>ترك الكلام الباطل والفاحش</p>
+                </div>
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>3. إيتاء الزكاة</h4>
+                    <p>إخراج حق المال للمستحقين</p>
+                </div>
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <h4>4. حفظ الفروج</h4>
+                    <p>العفة والطهارة من الفواحش</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top: 15px;">
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h4>5. حفظ الأمانات</h4>
+                    <p>أداء الأمانات إلى أهلها</p>
+                </div>
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-file-signature"></i></div>
+                    <h4>6. الوفاء بالعهد</h4>
+                    <p>الالتزام بالعهود والمواثيق</p>
+                </div>
+                <div class="trait-card">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h4>7. المحافظة على الصلاة</h4>
+                    <p>المداومة عليها في وقتها</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> شرح الصفات بالتفصيل</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الخشوع في الصلاة</h4>
+                    <p>الخشوع: خضوع القلب وذله لله. وهو روح الصلاة وأصلها. من خشع في صلاته، خشعت جوارحه.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الإعراض عن اللغو</h4>
+                    <p>اللغو: كل قول أو فعل لا فائدة فيه، أو فيه إثم. المؤمن يعرض عن ذلك، ولا يضيع وقته فيما لا ينفع.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> إيتاء الزكاة</h4>
+                    <p>الزكاة: حق المال الذي أوجبه الله للفقراء والمساكين. وهي تطهير للمال وتزكية للنفس.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> حفظ الفروج</h4>
+                    <p>حفظ الفرج عن الحرام، والاكتفاء بالحلال (الزوجة). وهذه صفة العفة والطهارة.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> حفظ الأمانات والعهد</h4>
+                    <p>الأمانة: كل ما ائتمنك الله عليه أو ائتمنك الناس عليه. والوفاء بالعهد من صفات المؤمنين.</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">6</span> المحافظة على الصلاة</h4>
+                    <p>المحافظة: المداومة على الصلاة في أوقاتها، بأركانها وشروطها، بخشوعها وطمأنينتها.</p>
+                </div>
+
+                <div class="solution">✅ هذه الصفات مجتمعة هي طريق الفلاح في الدنيا والآخرة</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> جزاء المؤمنين المفلحين:</h4>
+                <p>﴿ أُولَٰئِكَ هُمُ الْوَارِثُونَ ۝ الَّذِينَ يَرِثُونَ الْفِرْدَوْسَ هُمْ فِيهَا خَالِدُونَ ﴾</p>
+                <p style="margin-top: 10px;">الفردوس: أعلى الجنة وأفضلها. نسأل الله أن يرزقنا إياها!</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: قصص الأنبياء -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> ثانياً: قصص الأنبياء في سورة المؤمنون</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>قصص الأنبياء:</strong> ذكر الله في سورة المؤمنون قصص عدد من الأنبياء، ليعتبر بها المؤمنون.
+            </div>
+
+            <div class="quran-box">
+                وَلَقَدْ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِ
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة المؤمنون: 23]</p>
+            </div>
+
+            <div class="three-columns">
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h4>1. نوح عليه السلام</h4>
+                    <p>أرسله الله إلى قومه، فكذّبوه</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فأنجاه الله ومن معه في الفلك</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">وأغرق الذين كذّبوا</p>
+                </div>
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-fire"></i></div>
+                    <h4>2. موسى وهارون</h4>
+                    <p>أرسلهما الله إلى فرعون وملئه</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فكذّبوه واستكبروا</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فأنقذ الله بني إسرائيل</p>
+                </div>
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <h4>3. إبراهيم عليه السلام</h4>
+                    <p>خليل الله، أبو الأنبياء</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">حطّم الأصنام، وألقي في النار</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فنجاه الله منها</p>
+                </div>
+            </div>
+
+            <div class="three-columns" style="margin-top: 15px;">
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-mountain"></i></div>
+                    <h4>4. داود وسليمان</h4>
+                    <p>نبيان وملك صالح</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">سخر الله لهما الجبال والطير</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">وعلّمهما لغة الحيوان</p>
+                </div>
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-heart-broken"></i></div>
+                    <h4>5. أيوب عليه السلام</h4>
+                    <p>ابتلاه الله في جسده وماله</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فصبر واحتسب</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">فكشف الله عنه البلاء</p>
+                </div>
+                <div class="prophet-card">
+                    <div class="icon"><i class="fas fa-baby"></i></div>
+                    <h4>6. زكريا ويحيى وعيسى</h4>
+                    <p>أنبياء من آل عمران</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">كلهم من الصالحين</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">ومعجزاتهم من الله</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الدروس المستفادة من قصص الأنبياء</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الصبر على الدعوة</h4>
+                    <p>الأنبياء صبروا على أذى أقوامهم سنين طويلة، فلنتأسى بهم في الصبر</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> التوكل على الله</h4>
+                    <p>نوح توكل على الله فركب الفلك، وإبراهيم توكل فأُلقي في النار فنجا</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> عاقبة المكذبين</h4>
+                    <p>كل قوم كذّبوا نبيهم، عاقبتهم الإهلاك والعذاب</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> النصر للمؤمنين</h4>
+                    <p>وعد الله عباده المؤمنين بالنصر، وهو الصادق في وعده</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> وحدة الرسالة</h4>
+                    <p>كل الأنبياء جاؤوا بكلمة واحدة: لا إله إلا الله</p>
+                </div>
+
+                <div class="solution">✅ قصص الأنبياء عبرة وعظة لكل مؤمن</div>
+            </div>
+
+            <div class="quran-box">
+                ﴿ إِنَّ فِي ذَٰلِكَ لَآيَةً وَمَا كَانَ أَكْثَرُهُم مُّؤْمِنِينَ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الشعراء: 174]</p>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الحكمة من ذكر القصص:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>التسلية للنبي ﷺ عما لقيه من أذى قومه</li>
+                    <li>العبرة للمؤمنين في الصبر والثبات</li>
+                    <li>الإنذار للمكذبين بعاقبة التكذيب</li>
+                    <li>بيان أن دعوة الأنبياء واحدة</li>
+                    <li>إثبات صدق محمد ﷺ فيما جاء به</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ثالثاً: أهوال يوم القيامة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-cloud-bolt"></i> ثالثاً: أهوال يوم القيامة في سورة المؤمنون</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>يوم القيامة:</strong> يوم عظيم، فيه أهوال شديدة، يُعرض فيه الناس على الله للحساب.
+            </div>
+
+            <div class="quran-box">
+                ﴿ حَتَّىٰ إِذَا فُتِحَتْ يَأْجُوجُ وَمَأْجُوجُ وَهُم مِّن كُلِّ حَدَبٍ يَنسِلُونَ ۝ وَاقْتَرَبَ الْوَعْدُ الْحَقُّ فَإِذَا هِيَ شَاخِصَةٌ أَبْصَارُ الَّذِينَ كَفَرُوا يَا وَيْلَنَا قَدْ كُنَّا فِي غَفْلَةٍ مِّنْ هَٰذَا بَلْ كُنَّا ظَالِمِينَ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الأنبياء: 96-97]</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مشاهد من أهوال يوم القيامة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> خروج يأجوج ومأجوج</h4>
+                    <p>يخرجون من كل حدب (مرتفع) ينسلون، وهم من أشراط الساعة الكبرى</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اقتراب الوعد الحق</h4>
+                    <p>وهو يوم القيامة، يُبعث الناس من القبور</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> شاخصة أبصار الكافرين</h4>
+                    <p>من شدة الهول والفزع، تنظر إلى ما لا يُطاق</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الندم والحسرة</h4>
+                    <p>﴿ يَا وَيْلَنَا قَدْ كُنَّا فِي غَفْلَةٍ مِّنْ هَٰذَا ﴾</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> الحساب والجزاء</h4>
+                    <p>كل نفس تُجزى بما كسبت، لا ظلم ولا بخس</p>
+                </div>
+
+                <div class="solution">✅ هذه الأهوال تذكير للمؤمنين للاستعداد ليوم المعاد</div>
+            </div>
+
+            <div class="quran-box">
+                ﴿ فَمَن ثَقُلَتْ مَوَازِينُهُ فَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ ۝ وَمَنْ خَفَّتْ مَوَازِينُهُ فَأُولَٰئِكَ الَّذِينَ خَسِرُوا أَنفُسَهُمْ فِي جَهَنَّمَ خَالِدُونَ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة المؤمنون: 102-103]</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-scale-balanced"></i> من ثقلت موازينه</h3>
+                    <p><strong>الحال:</strong> كثرت حسناته</p>
+                    <p style="margin-top: 10px;"><strong>الجزاء:</strong> الفلاح والنعيم</p>
+                    <p style="margin-top: 10px;"><strong>المصير:</strong> الجنة</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: #e74c3c;"><i class="fas fa-scale-unbalanced"></i> من خفت موازينه</h3>
+                    <p><strong>الحال:</strong> كثرت سيئاته</p>
+                    <p style="margin-top: 10px;"><strong>الجزاء:</strong> الخسران والعذاب</p>
+                    <p style="margin-top: 10px;"><strong>المصير:</strong> النار</p>
+                </div>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله ﷺ:</p>
+                <p style="font-weight: 700; margin: 10px 0;">"أكثروا من ذكر هاذم اللذات - يعني الموت"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه الترمذي]</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: العلاقة بين صفات المؤمنين وقصص الأنبياء -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-link"></i> رابعاً: العلاقة بين صفات المؤمنين وقصص الأنبياء</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الأنبياء هم قدوة المؤمنين:</strong> فهم أول من حقق صفات المؤمنين المفلحين.
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-praying-hands"></i> الخشوع في الصلاة</h3>
+                    <p>كان الأنبياء يقومون الليل خشوعاً لله، كما في قصة إبراهيم وموسى وغيرهما</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: #3498db;"><i class="fas fa-hand-holding-heart"></i> إيتاء الزكاة</h3>
+                    <p>كانوا ينفقون في سبيل الله، ويعينون المحتاجين</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 5px solid #f39c12;">
+                    <h3 style="color: #f39c12;"><i class="fas fa-lock"></i> حفظ الفروج</h3>
+                    <p>كانوا أطهاراً عفيفاً، كما في قصة يوسف عليه السلام</p>
+                </div>
+                <div class="column-card" style="border-top: 5px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;"><i class="fas fa-handshake"></i> حفظ الأمانات</h3>
+                    <p>كانوا أمناء في تبليغ الرسالة، كما قال تعالى عن نوح: ﴿ أَبْلَغْتُكُم رِسَالَاتِ رَبِّي ﴾</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> الأنبياء قدوة لنا</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> في الصبر</h4>
+                    <p>أيوب صبر على البلاء، فنجاه الله</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> في التوكل</h4>
+                    <p>إبراهيم توكل على الله، فنجا من النار</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> في الدعوة</h4>
+                    <p>نوح دعا قومه 950 سنة، فلم يزد إلا نفوراً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> في العفة</h4>
+                    <p>يوسف عَفّ، فرفعه الله في الدنيا والآخرة</p>
+                </div>
+
+                <div class="solution">✅ الأنبياء قدوة لنا في كل خصال المؤمنين المفلحين</div>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> خامساً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-mosque"></i> مثال 1: في الصلاة</h4>
+                <p><strong>المسألة:</strong> كيف نطبق صفة الخشوع في الصلاة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الاستعداد للصلاة</h4>
+                    <p>الوضوء، والتبكير إلى المسجد، وترك الدنيا قبل الصلاة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تدبر القراءة</h4>
+                    <p>قراءة القرآن بتدبر، وفهم معانيه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حضور القلب</h4>
+                    <p>التفكير في عظمة الله، وأنك بين يديه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الطمأنينة</h4>
+                    <p>عدم الاستعجال، وإتمام الركوع والسجود</p>
+                </div>
+
+                <div class="solution">✅ الخشوع روح الصلاة، وبدونه لا فائدة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-comments"></i> مثال 2: في الكلام</h4>
+                <p><strong>المسألة:</strong> كيف نطبق صفة الإعراض عن اللغو؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ترك الكلام الباطل</h4>
+                    <p>الغيبة، النميمة، السخرية، الكذب</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> ترك الجدال المذموم</h4>
+                    <p>الجدال في الله بغير علم، والجدال بالباطل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> الإعراض عن السفهاء</h4>
+                    <p>إذا خاطبهم الجاهلون قالوا سلاماً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الاشتغال بما ينفع</h4>
+                    <p>الذكر، القراءة، التعلم، نفع الناس</p>
+                </div>
+
+                <div class="solution">✅ اللسان مفتاح الخير أو الشر، فاحفظه</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-coins"></i> مثال 3: في المال</h4>
+                <p><strong>المسألة:</strong> كيف نطبق صفة إيتاء الزكاة؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> إخراج زكاة المال</h4>
+                    <p>2.5% من المال إذا بلغ النصاب وحال عليه الحول</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الصدقة تطوعاً</h4>
+                    <p>التصدق في كل وقت، ولو بالقليل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> إغاثة الملهوف</h4>
+                    <p>مساعدة المحتاجين، وإطعام الجائعين</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> عدم البخل</h4>
+                    <p>الكرم من صفات المؤمنين، والبخل من صفات المنافقين</p>
+                </div>
+
+                <div class="solution">✅ المال مال الله، ونحن مستخلفون فيه</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-heart"></i> مثال 4: مع النفس</h4>
+                <p><strong>المسألة:</strong> كيف نربي أنفسنا على صفات المؤمنين؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> محاسبة النفس</h4>
+                    <p>كل يوم، راجع أعمالك، واستغفر من تقصيرك</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الاقتداء بالأنبياء</h4>
+                    <p>اقرأ قصصهم، وتأسى بأخلاقهم</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> ذكر الموت والقيامة</h4>
+                    <p>أكثروا من ذكر هاذم اللذات</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> الدعاء</h4>
+                    <p>اسأل الله أن يجعلك من المؤمنين المفلحين</p>
+                </div>
+
+                <div class="solution">✅ التربية الذاتية مستمرة، لا تتوقف</div>
+            </div>
+        </div>
+
+        <!-- سادساً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سادساً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الصلاة بدون خشوع</h4>
+                <p>بعض الناس يصلي بسرعة، دون تدبر ولا حضور قلب. والخشوع هو أول صفات المؤمنين!</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> الصلاة بطمأنينة وتدبر</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> الصلاة بسرعة ونقر كالديك</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الانشغال باللغو</h4>
+                <p>بعض الناس يضيع وقته في الكلام الباطل، ومواقع التواصل الفارغة، والمجالس التي لا تُذكر فيها الله.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: البخل بالمال</h4>
+                <p>بعض الناس لا يُخرج زكاة ماله، ولا يتصدق، مع أن الزكاة من صفات المؤمنين!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الغفلة عن يوم القيامة</h4>
+                <p>بعض الناس يعيش في الدنيا كأنه خالد فيها، وينسى أنه سيقف بين يدي الله!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: عدم الاقتداء بالأنبياء</h4>
+                <p>بعض الناس يقرأ قصص الأنبياء، لكنه لا يتأسى بهم في الصبر والعفة والأمانة!</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: الإخلال بالأمانات</h4>
+                <p>بعض الناس يخون الأمانة، ولا يفي بالعهد، مع أن هذه من صفات المنافقين!</p>
+            </div>
+        </div>
+
+        <!-- سابعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #1e8449;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>سورة المؤمنون:</strong> 118 آية، مكية، تتحدث عن صفات المؤمنين وقصص الأنبياء وأهوال القيامة.</li>
+                <li><strong>صفات المؤمنين:</strong> الخشوع، الإعراض عن اللغو، الزكاة، حفظ الفروج، الأمانة، الوفاء بالعهد، المحافظة على الصلاة.</li>
+                <li><strong>جزاء المؤمنين:</strong> الفردوس الأعلى، الخلود فيها.</li>
+                <li><strong>قصص الأنبياء:</strong> نوح، موسى وهارون، إبراهيم، داود وسليمان، أيوب، زكريا ويحيى وعيسى.</li>
+                <li><strong>الدروس من القصص:</strong> الصبر، التوكل، عاقبة المكذبين، نصر المؤمنين.</li>
+                <li><strong>أهوال يوم القيامة:</strong> خروج يأجوج ومأجوج، اقتراب الوعد، شاخصة الأبصار، الحساب.</li>
+                <li><strong>الميزان:</strong> من ثقلت موازينه فُز بالفلاح، ومن خفت خسر.</li>
+                <li><strong>الأنبياء قدوة:</strong> في كل صفات المؤمنين المفلحين.</li>
+                <li><strong>التطبيقات:</strong> الخشوع في الصلاة، ترك اللغو، إيتاء الزكاة، محاسبة النفس.</li>
+                <li><strong>تنبيه:</strong> الغفلة عن القيامة من أعظم الذنوب.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #1e8449; margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما أول صفة من صفات المؤمنين المفلحين في سورة المؤمنون؟",
+                options: ["الزكاة", "الخشوع في الصلاة", "حفظ الفروج", "الأمانة"],
+                correct: 1,
+                explanation: "﴿ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾. الخشوع في الصلاة أول صفة ذُكرت للمؤمنين المفلحين."
+            },
+            {
+                sentence: "ما جزاء المؤمنين المفلحين كما في السورة؟",
+                options: ["المال الكثير", "يرثون الفردوس", "الشفاعة", "الرزق الواسع"],
+                correct: 1,
+                explanation: "﴿ أُولَٰئِكَ هُمُ الْوَارِثُونَ ۝ الَّذِينَ يَرِثُونَ الْفِرْدَوْسَ هُمْ فِيهَا خَالِدُونَ ﴾."
+            },
+            {
+                sentence: "أي نبي ابتلاه الله في جسده فصبر؟",
+                options: ["نوح", "إبراهيم", "أيوب", "موسى"],
+                correct: 2,
+                explanation: "أيوب عليه السلام ابتلاه الله في جسده وماله، فصبر واحتسب، فكشف الله عنه البلاء."
+            },
+            {
+                sentence: "ما معنى 'اللغو' الذي يُعرض عنه المؤمنون؟",
+                options: ["العمل الصالح", "الكلام الباطل", "الصلاة", "الزكاة"],
+                correct: 1,
+                explanation: "اللغو: كل قول أو فعل لا فائدة فيه، أو فيه إثم. والمؤمن يعرض عنه."
+            },
+            {
+                sentence: "ما عاقبة من خفت موازينه يوم القيامة؟",
+                options: ["الفلاح", "الخسران ودخول النار", "الشفاعة", "المغفرة"],
+                correct: 1,
+                explanation: "﴿ وَمَنْ خَفَّتْ مَوَازِينُهُ فَأُولَٰئِكَ الَّذِينَ خَسِرُوا أَنفُسَهُمْ فِي جَهَنَّمَ خَالِدُونَ ﴾."
+            },
+            {
+                sentence: "ما الحكمة من ذكر قصص الأنبياء في السورة؟",
+                options: [
+                    "للتسلية فقط",
+                    "للعبرة والاقتداء بهم",
+                    "لإثبات وجودهم",
+                    "لا حكمة"
+                ],
+                correct: 1,
+                explanation: "الحكمة: العبرة والاقتداء بالأنبياء في الصبر والتوكل والعفة، والاعتبار بعاقبة المكذبين."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

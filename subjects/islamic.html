@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مادة القرآن الكريم والدراسات الإسلامية - الصف الثاني المتوسط - الفصل الدراسي الأول 1448هـ">
+    <title>الدراسات الإسلامية | ثاني متوسط | فصل أول 1448هـ</title>
+    
+    <!-- خطوط عربية وأنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الملفات المركزية للأنماط -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/subjects-specific.css">
+</head>
+<body class="subject-islamic">
+
+    <!-- الشريط العلوي المخصص للطالب -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-mosque"></i>
+                    منصتي التعليمية
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="arabic.html">لغتي</a></li>
+                    <li><a href="math.html">الرياضيات</a></li>
+                    <li><a href="science.html">العلوم</a></li>
+                    <li><a href="islamic.html" class="active">الدراسات الإسلامية</a></li>
+                    <li><a href="../quizzes/islamic-quiz.html">الاختبارات</a></li>
+                </ul>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="lessonSearch" placeholder="ابحث عن درس..." onkeyup="searchLessons()">
+                    </div>
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <div class="page-title">
+            <div class="basmala">بسم الله الرحمن الرحيم</div>
+            <h1><i class="fas fa-book-quran"></i> القرآن الكريم والدراسات الإسلامية</h1>
+            <p>الصف الثاني المتوسط | الفصل الدراسي الأول | العام الدراسي 1448هـ</p>
+        </div>
+
+        <!-- سيتم بناء الأقسام والدروس هنا ديناميكياً بواسطة JavaScript -->
+        <div id="lessonsContainer"></div>
+
+        <!-- قسم الاختبار الإلكتروني المصغر -->
+        <div class="quiz-section">
+            <h2><i class="fas fa-clipboard-check"></i> اختبر معلوماتك (تصحيح تلقائي)</h2>
+            <div id="miniQuizArea"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../quizzes/islamic-quiz.html" class="btn btn-lesson" style="display: inline-flex; width: auto; padding: 12px 30px;">
+                    <i class="fas fa-file-alt"></i> الانتقال إلى بنك الأسئلة الشامل
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- الملفات المركزية (لا تعدل عليها هنا)       -->
+    <!-- ========================================== -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/questionbank.js"></script>
+
+    <!-- ========================================== -->
+    <!-- سكربت خاص بمادة الدراسات الإسلامية فقط    -->
+    <!-- ========================================== -->
+    <script>
+        const SUBJECT = 'islamic';
+        
+        // بيانات دروس الدراسات الإسلامية مقسمة حسب الأقسام
+        const LESSONS_DATA = [
+            // القسم الأول
+            { section: 'section1', title: 'استحقاق الله للعبادة وحده لا شريك له', desc: 'معنى لا إله إلا الله، أدلة استحقاق الله للعبادة، وأنواع العبادة.', videoId: 'lo0IlfU9G10', image: 'lesson1.jpg', pdf: 'lesson1.pdf', badge: 'التوحيد' },
+            { section: 'section1', title: 'مكانة الأنبياء والتحذير من الغلو فيهم', desc: 'مكانة نبينا محمد ﷺ، وعقيدة المسلمين في نبي الله عيسى والملائكة عليهم السلام.', videoId: 'r7C1E-k-7cA', image: 'lesson2.jpg', pdf: 'lesson2.pdf', badge: 'التوحيد' },
+            { section: 'section1', title: 'مكانة الأولياء والصالحين والتحذير من الغلو فيهم', desc: 'من هم الأولياء، شروط الولاية، والتحذير من الغلو في الصالحين.', videoId: 'P3MmOt721Ys', image: 'lesson3.jpg', pdf: 'lesson3.pdf', badge: 'التوحيد' },
+            { section: 'section1', title: 'الإخلاص لله وما يضاده - شروط قبول العبادة', desc: 'معنى الإخلاص، شرطا قبول العبادة، ومتابعة رسول الله ﷺ.', videoId: 'jp9dgdCL2vc', image: 'lesson4.jpg', pdf: 'lesson4.pdf', badge: 'الإخلاص' },
+            { section: 'section1', title: 'الرياء - من نواقض الإخلاص', desc: 'تعريف الرياء، حكمه، خطورته، وكيفية علاج هذا المرض القلبي.', videoId: 'v6XRuUJRczE', image: 'lesson5.jpg', pdf: 'lesson5.pdf', badge: 'الإخلاص' },
+            { section: 'section1', title: 'إرادة الدنيا بعمل الآخرة', desc: 'معنى إرادة الدنيا بعمل الآخرة، أمثلتها، وحكمها في الإسلام.', videoId: 'UWpuJ8cou18', image: 'lesson6.jpg', pdf: 'lesson6.pdf', badge: 'الإخلاص' },
+            
+            // القسم الثاني
+            { section: 'section2', title: 'الاستعانة والاستعاذة', desc: 'أنواع الاستعانة، الاستعاذة بالله ومن دون الله، والوقوع في الشرك بها.', videoId: 'CNMv_APb248', image: 'lesson7.jpg', pdf: 'lesson7.pdf', badge: 'الشرك' },
+            { section: 'section2', title: 'الذبح - عبادة وقع فيها الشرك', desc: 'حكم الذبح لغير الله، أنواعه، والشرك الأصغر والأكبر فيه.', videoId: 'PPL-Wyg_3h4', image: 'lesson8.jpg', pdf: 'lesson8.pdf', badge: 'الشرك' },
+            { section: 'section2', title: 'الطواف والعكوف', desc: 'الطواف حول القبور، العكوف عليها، وحكم ذلك في الشريعة الإسلامية.', videoId: 'leGqdY6EoDU', image: 'lesson9.jpg', pdf: 'lesson9.pdf', badge: 'الشرك' },
+            
+            // القسم الثالث
+            { section: 'section3', title: 'تفسير سورة الجمعة', desc: 'تفسير الآيات من سورة الجمعة، أحكام يوم الجمعة، وفضل الصلاة فيه.', videoId: 'y6rGxYoC-Ug', image: 'lesson10.jpg', pdf: 'lesson10.pdf', badge: 'تفسير' },
+            { section: 'section3', title: 'تفسير سورة المنافقون', desc: 'تفسير آيات سورة المنافقون، صفات المنافقين، وخطر النفاق على الأمة.', videoId: '42jSuAf-4pQ', image: 'lesson11.jpg', pdf: 'lesson11.pdf', badge: 'تفسير' },
+            { section: 'section3', title: 'تفسير سورة الحج', desc: 'تفسير آيات من سورة الحج، أهوال يوم القيامة، ومقاصد الحج العظيمة.', videoId: '1-OsTAA7NGo', image: 'lesson12.jpg', pdf: 'lesson12.pdf', badge: 'تفسير' },
+            { section: 'section3', title: 'تفسير سورة المؤمنون', desc: 'صفات المؤمنين المفلحين، قصص الأنبياء، وأهوال يوم القيامة.', videoId: 'Hkiz9jxDBHc', image: 'lesson13.jpg', pdf: 'lesson13.pdf', badge: 'تفسير' },
+            
+            // القسم الرابع
+            { section: 'section4', title: 'شعب الإيمان', desc: 'حديث "الإيمان بضع وسبعون شعبة"، أعلى الشعب وأدناها، وفضل إماطة الأذى.', videoId: '_cF2debq9ng', image: 'lesson14.jpg', pdf: 'lesson14.pdf', badge: 'حديث' },
+            { section: 'section4', title: 'فضل العلم', desc: 'حديث "من سلك طريقاً يلتمس فيه علماً"، وفضل العلماء وطلب العلم النافع.', videoId: 'JzTT8UBktjc', image: 'lesson15.jpg', pdf: 'lesson15.pdf', badge: 'حديث' },
+            { section: 'section4', title: 'الخوف والرجاء', desc: 'معنى الخوف والرجاء، كيفية الموازنة بينهما، وثمراتهما على العبد.', videoId: 'Pw1U2k5jdgk', image: 'lesson16.jpg', pdf: 'lesson16.pdf', badge: 'أعمال القلوب' },
+            { section: 'section4', title: 'التوكل على الله', desc: 'معنى التوكل، الفرق بين التوكل والتواكل، وثمرات التوكل على الله.', videoId: 'f5uMARqYMXs', image: 'lesson17.jpg', pdf: 'lesson17.pdf', badge: 'أعمال القلوب' },
+            { section: 'section4', title: 'الصلاة وقراءة القرآن', desc: 'فضل الصلاة، تعاهد القرآن، وفضل سورتي البقرة وآل عمران.', videoId: '0_ggPbhUdwM', image: 'lesson18.jpg', pdf: 'lesson18.pdf', badge: 'العبادات' },
+            { section: 'section4', title: 'الزكاة وأحكامها', desc: 'منزلة الزكاة، شروط وجوبها، الأموال الزكوية، ومصارف الزكاة الثمانية.', videoId: 'P1iRxIDsdUU', image: 'lesson19.jpg', pdf: 'lesson19.pdf', badge: 'العبادات' },
+            { section: 'section4', title: 'الصيام وأحكامه', desc: 'فضل الصوم، شروط وجوبه، مفسدات الصيام، ومن يباح لهم الفطر في رمضان.', videoId: 'o_T9V9URzgM', image: 'lesson20.jpg', pdf: 'lesson20.pdf', badge: 'العبادات' }
+        ];
+        
+        // بناء الأقسام وبطاقات الدروس ديناميكياً
+        function buildLessons() {
+            const container = document.getElementById('lessonsContainer');
+            if (!container) return;
+            
+            const sections = [
+                { id: 'section1', title: 'القسم الأول: التوحيد والإخلاص', icon: 'fas fa-mosque' },
+                { id: 'section2', title: 'القسم الثاني: عبادات وقع فيها الشرك', icon: 'fas fa-exclamation-triangle' },
+                { id: 'section3', title: 'القسم الثالث: القرآن الكريم والتفسير', icon: 'fas fa-book-quran' },
+                { id: 'section4', title: 'القسم الرابع: الحديث الشريف والعبادات', icon: 'fas fa-book-open' }
+            ];
+            
+            sections.forEach(sec => {
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerHTML = `<i class="${sec.icon}"></i><span>${sec.title}</span>`;
+                container.appendChild(sectionTitle);
+                
+                const grid = document.createElement('div');
+                grid.className = 'lessons-grid';
+                grid.id = sec.id;
+                container.appendChild(grid);
+            });
+            
+            LESSONS_DATA.forEach((lesson, index) => {
+                const grid = document.getElementById(lesson.section);
+                if (!grid) return;
+                
+                const card = document.createElement('div');
+                card.className = 'lesson-card';
+                card.setAttribute('data-title', lesson.title);
+                
+                card.innerHTML = `
+                    <img src="../images/${SUBJECT}/${lesson.image}" 
+                         alt="${lesson.title}" 
+                         class="lesson-image"
+                         onerror="this.src='https://via.placeholder.com/400x180/1b5e20/ffffff?text=${encodeURIComponent(lesson.title)}'">
+                    <div class="lesson-content">
+                        <span class="section-badge">${lesson.badge}</span>
+                        <h3 class="lesson-title">${lesson.title}</h3>
+                        <p class="lesson-desc">${lesson.desc}</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/${lesson.videoId}" 
+                                    title="${lesson.title}" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="lesson-actions">
+                            <a href="../pdf/${SUBJECT}/${lesson.pdf}" class="btn btn-pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> تحميل الملخص
+                            </a>
+                            <a href="../lessons/${SUBJECT}/lesson${index + 1}.html" class="btn btn-lesson">
+                                <i class="fas fa-book-reader"></i> شرح مفصل
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        // بناء اختبار مصغر
+        function buildMiniQuiz() {
+            const questions = QuestionBank.getRandom(SUBJECT, 3);
+            const area = document.getElementById('miniQuizArea');
+            if (!area || questions.length === 0) return;
+            
+            let html = '<form id="miniQuizForm">';
+            questions.forEach((q, i) => {
+                html += `<div class="quiz-question"><h3>${i + 1}. ${q.question}</h3><div class="quiz-options">`;
+                q.options.forEach((opt, optIdx) => {
+                    html += `<label><input type="radio" name="q${i}" value="${optIdx}" data-correct="${q.correct}"> ${opt}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            html += `
+                <button type="button" class="btn btn-lesson" onclick="checkMiniQuiz()" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </form>
+            <div id="miniQuizResult" class="quiz-result"></div>`;
+            
+            area.innerHTML = html;
+        }
+        
+        // تصحيح الاختبار المصغر
+        function checkMiniQuiz() {
+            const form = document.getElementById('miniQuizForm');
+            const questions = form.querySelectorAll('.quiz-question');
+            let score = 0;
+            
+            questions.forEach((q) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const correct = q.querySelector('input[type="radio"]').dataset.correct;
+                if (selected && selected.value === correct) score++;
+            });
+            
+            const resultDiv = document.getElementById('miniQuizResult');
+            resultDiv.className = 'quiz-result';
+            
+            if (score === questions.length) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-trophy"></i> ما شاء الله! نتيجتك: ${score} من ${questions.length}. إجاباتك صحيحة بالكامل.`;
+            } else if (score >= questions.length / 2) {
+                resultDiv.classList.add('success');
+                resultDiv.innerHTML = `<i class="fas fa-thumbs-up"></i> أحسنت! نتيجتك: ${score} من ${questions.length}.`;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.innerHTML = `<i class="fas fa-redo"></i> نتيجتك: ${score} من ${questions.length}. يُنصح بمراجعة الدروس.`;
+            }
+        }
+        
+        // تهيئة الصفحة عند اكتمال تحميل DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            buildLessons();
+            buildMiniQuiz();
+        });
+    </script>
+</body>
+</html>

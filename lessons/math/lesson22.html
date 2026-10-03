@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأبعاد في المستوى الإحداثي - مادة الرياضيات - الصف الثاني المتوسط">
+    <title>الأبعاد في المستوى الإحداثي | الرياضيات</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent)); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: var(--subject-primary); font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--subject-secondary); padding-bottom: 10px; }
+        .highlight-box { background-color: rgba(41, 128, 185, 0.08); border-right: 4px solid var(--subject-primary); padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: var(--subject-primary); }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid var(--subject-secondary); margin: 15px 0; text-align: center; font-family: 'Fira Code', monospace; font-size: 1.3rem; font-weight: 700; color: var(--subject-primary); direction: ltr; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid var(--subject-primary); margin: 15px 0; }
+        .step-box h4 { color: var(--subject-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--subject-primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .step-box .calculation { font-family: 'Fira Code', monospace; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; margin: 10px 0; direction: ltr; text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--subject-accent); }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: var(--subject-primary); color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(41, 128, 185, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #ffc107; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--subject-primary); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid var(--subject-secondary); margin-bottom: 15px; }
+        .example-card h4 { color: var(--subject-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .problem { font-family: 'Fira Code', monospace; font-size: 1.15rem; font-weight: 600; text-align: center; margin: 15px 0; padding: 10px; background: var(--card-bg); border-radius: 8px; direction: ltr; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid var(--success-color); font-weight: 600; color: var(--success-color); margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid var(--subject-secondary); margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: var(--subject-primary); font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: var(--subject-primary); }
+        .interactive-activity { background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed var(--subject-primary); padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: var(--subject-primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Fira Code', monospace; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Fira Code', monospace; }
+        .quiz-option:hover { border-color: var(--subject-primary); transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: var(--success-color); color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: var(--error-color); color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid var(--success-color); }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid var(--error-color); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: var(--subject-primary); color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+        .coordinate-plane { background: var(--bg-color); padding: 20px; border-radius: 15px; margin: 20px 0; text-align: center; }
+        .coordinate-plane svg { max-width: 100%; height: auto; }
+        .quadrant-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+        .quadrant-card { padding: 15px; border-radius: 10px; text-align: center; color: white; font-weight: 700; }
+        .quadrant-card.q1 { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .quadrant-card.q2 { background: linear-gradient(135deg, #3498db, #5dade2); }
+        .quadrant-card.q3 { background: linear-gradient(135deg, #9b59b6, #af7ac5); }
+        .quadrant-card.q4 { background: linear-gradient(135deg, #e67e22, #f39c12); }
+        .quadrant-card h4 { font-size: 1.3rem; margin-bottom: 5px; }
+        .quadrant-card p { font-size: 0.9rem; opacity: 0.95; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns { grid-template-columns: 1fr; } .math-box { font-size: 1rem; } .quadrant-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="subject-math">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-calculator"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/math.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-map-marked-alt"></i> الأبعاد في المستوى الإحداثي</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف نحدد موقع نقطة بدقة على خريطة أو مستوٍ؟</strong>
+                <p style="margin-top: 10px;">المستوى الإحداثي هو نظام دقيق يستخدم <strong>محورين متعامدين</strong> لتحديد موقع أي نقطة باستخدام زوج من الأعداد يسمى <strong>الزوج المرتب (س، ص)</strong>. هذا النظام يستخدم في الخرائط، الألعاب، الملاحة، والعديد من التطبيقات الحياتية!</p>
+            </div>
+        </div>
+
+        <!-- أولاً: ما هو المستوى الإحداثي؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو المستوى الإحداثي؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> المستوى الإحداثي هو سطح مستوٍ يتكون من <strong>محورين متعامدين</strong> يتقاطعان في نقطة تسمى <strong>نقطة الأصل (0, 0)</strong>.
+            </div>
+
+            <div class="coordinate-plane">
+                <svg width="500" height="500" viewBox="0 0 500 500">
+                    <!-- الخلفية -->
+                    <rect width="500" height="500" fill="#f8f9fa"/>
+                    
+                    <!-- الشبكة -->
+                    <g stroke="#dee2e6" stroke-width="1">
+                        <line x1="50" y1="50" x2="50" y2="450"/>
+                        <line x1="100" y1="50" x2="100" y2="450"/>
+                        <line x1="150" y1="50" x2="150" y2="450"/>
+                        <line x1="200" y1="50" x2="200" y2="450"/>
+                        <line x1="300" y1="50" x2="300" y2="450"/>
+                        <line x1="350" y1="50" x2="350" y2="450"/>
+                        <line x1="400" y1="50" x2="400" y2="450"/>
+                        <line x1="450" y1="50" x2="450" y2="450"/>
+                        
+                        <line x1="50" y1="50" x2="450" y2="50"/>
+                        <line x1="50" y1="100" x2="450" y2="100"/>
+                        <line x1="50" y1="150" x2="450" y2="150"/>
+                        <line x1="50" y1="200" x2="450" y2="200"/>
+                        <line x1="50" y1="300" x2="450" y2="300"/>
+                        <line x1="50" y1="350" x2="450" y2="350"/>
+                        <line x1="50" y1="400" x2="450" y2="400"/>
+                        <line x1="50" y1="450" x2="450" y2="450"/>
+                    </g>
+                    
+                    <!-- المحاور -->
+                    <line x1="50" y1="250" x2="450" y2="250" stroke="#2980b9" stroke-width="3"/>
+                    <line x1="250" y1="50" x2="250" y2="450" stroke="#2980b9" stroke-width="3"/>
+                    
+                    <!-- الأسهم -->
+                    <polygon points="450,250 440,245 440,255" fill="#2980b9"/>
+                    <polygon points="250,50 245,60 255,60" fill="#2980b9"/>
+                    
+                    <!-- تسميات الأرباع -->
+                    <text x="350" y="130" font-family="Tajawal" font-size="20" font-weight="700" fill="#27ae60" text-anchor="middle">الربع الأول</text>
+                    <text x="350" y="155" font-family="Fira Code" font-size="14" fill="#27ae60" text-anchor="middle">(+, +)</text>
+                    
+                    <text x="150" y="130" font-family="Tajawal" font-size="20" font-weight="700" fill="#3498db" text-anchor="middle">الربع الثاني</text>
+                    <text x="150" y="155" font-family="Fira Code" font-size="14" fill="#3498db" text-anchor="middle">(−, +)</text>
+                    
+                    <text x="150" y="360" font-family="Tajawal" font-size="20" font-weight="700" fill="#9b59b6" text-anchor="middle">الربع الثالث</text>
+                    <text x="150" y="385" font-family="Fira Code" font-size="14" fill="#9b59b6" text-anchor="middle">(−, −)</text>
+                    
+                    <text x="350" y="360" font-family="Tajawal" font-size="20" font-weight="700" fill="#e67e22" text-anchor="middle">الربع الرابع</text>
+                    <text x="350" y="385" font-family="Fira Code" font-size="14" fill="#e67e22" text-anchor="middle">(+, −)</text>
+                    
+                    <!-- تسميات المحاور -->
+                    <text x="460" y="245" font-family="Tajawal" font-size="18" font-weight="700" fill="#2980b9">س</text>
+                    <text x="260" y="45" font-family="Tajawal" font-size="18" font-weight="700" fill="#2980b9">ص</text>
+                    
+                    <!-- نقطة الأصل -->
+                    <circle cx="250" cy="250" r="5" fill="#e74c3c"/>
+                    <text x="260" y="270" font-family="Fira Code" font-size="14" font-weight="700" fill="#e74c3c">(0, 0)</text>
+                    
+                    <!-- الأرقام على المحور السيني -->
+                    <text x="300" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">1</text>
+                    <text x="350" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">2</text>
+                    <text x="400" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">3</text>
+                    <text x="200" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-1</text>
+                    <text x="150" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-2</text>
+                    <text x="100" y="270" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-3</text>
+                    
+                    <!-- الأرقام على المحور الصادي -->
+                    <text x="235" y="205" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">1</text>
+                    <text x="235" y="155" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">2</text>
+                    <text x="235" y="105" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">3</text>
+                    <text x="235" y="305" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-1</text>
+                    <text x="235" y="355" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-2</text>
+                    <text x="235" y="405" font-family="Fira Code" font-size="12" fill="#2c3e50" text-anchor="middle">-3</text>
+                    
+                    <!-- نقطة مثال -->
+                    <circle cx="350" cy="150" r="6" fill="#e74c3c" stroke="white" stroke-width="2"/>
+                    <text x="365" y="145" font-family="Fira Code" font-size="13" font-weight="700" fill="#e74c3c">A(2, 2)</text>
+                </svg>
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #2980b9;">
+                    <h3 style="color: #2980b9;"><i class="fas fa-arrows-alt-h"></i> المحور السيني (س)</h3>
+                    <p>المحور <strong>الأفقي</strong>، ويمثل القيم الأفقية للنقاط.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px;">
+                        <li>القيم <strong>الموجبة</strong> على يمين نقطة الأصل</li>
+                        <li>القيم <strong>السالبة</strong> على يسار نقطة الأصل</li>
+                    </ul>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-arrows-alt-v"></i> المحور الصادي (ص)</h3>
+                    <p>المحور <strong>العمودي</strong>، ويمثل القيم العمودية للنقاط.</p>
+                    <ul style="padding-right: 20px; margin-top: 10px;">
+                        <li>القيم <strong>الموجبة</strong> فوق نقطة الأصل</li>
+                        <li>القيم <strong>السالبة</strong> تحت نقطة الأصل</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> تذكر دائماً:</h4>
+                <p>نقطة الأصل هي نقطة تقاطع المحورين، وإحداثياتها هي <strong>(0, 0)</strong>.</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: الأزواج المرتبة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-code"></i> ثانياً: الأزواج المرتبة (س، ص)</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> الزوج المرتب هو زوج من الأعداد يُكتب على الصورة <strong>(س، ص)</strong> ويحدد موقع نقطة في المستوى الإحداثي.
+            </div>
+
+            <div class="math-box">
+                النقطة = (س، ص)
+            </div>
+
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #2980b9;">
+                    <h3 style="color: #2980b9;"><i class="fas fa-hashtag"></i> الإحداثي السيني (س)</h3>
+                    <p>العدد <strong>الأول</strong> في الزوج المرتب.</p>
+                    <p style="margin-top: 10px;">يمثل <strong>المسافة الأفقية</strong> من نقطة الأصل.</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">موجب ➔ يمين<br>سالب ➔ يسار</div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-hashtag"></i> الإحداثي الصادي (ص)</h3>
+                    <p>العدد <strong>الثاني</strong> في الزوج المرتب.</p>
+                    <p style="margin-top: 10px;">يمثل <strong>المسافة العمودية</strong> من نقطة الأصل.</p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">موجب ➔ فوق<br>سالب ➔ تحت</div>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة ذهبية للحفظ:</h4>
+                <p>تذكر كلمة <strong>"س ص"</strong> بالترتيب! الإحداثي السيني يأتي أولاً، ثم الصادي.</p>
+                <p style="margin-top: 10px;">💡 حيلة ذكية: تخيل أنك تمشي على الأرض (أفقي = س)، ثم تقفز (عمودي = ص).</p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم: الترتيب مهم!</h4>
+                <p>النقطة <strong>(3, 2)</strong> تختلف تماماً عن النقطة <strong>(2, 3)</strong>.</p>
+                <div class="math-box" style="font-size: 1rem;">
+                    (3, 2) ➔ 3 يمين، 2 فوق<br>
+                    (2, 3) ➔ 2 يمين، 3 فوق
+                </div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: الأرباع الأربعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-th-large"></i> ثالثاً: الأرباع الأربعة</h2>
+            
+            <p style="margin-bottom: 20px;">يقسم المحوران المستوى الإحداثي إلى <strong>أربعة أرباع</strong>، تُرقّم بعكس اتجاه عقارب الساعة بدءاً من اليمين الأعلى:</p>
+
+            <div class="quadrant-grid">
+                <div class="quadrant-card q2">
+                    <h4>الربع الثاني</h4>
+                    <p>(−، +)</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">يسار - فوق</p>
+                </div>
+                <div class="quadrant-card q1">
+                    <h4>الربع الأول</h4>
+                    <p>(+، +)</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">يمين - فوق</p>
+                </div>
+                <div class="quadrant-card q3">
+                    <h4>الربع الثالث</h4>
+                    <p>(−، −)</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">يسار - تحت</p>
+                </div>
+                <div class="quadrant-card q4">
+                    <h4>الربع الرابع</h4>
+                    <p>(+، −)</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">يمين - تحت</p>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الربع</th>
+                            <th>إشارة (س)</th>
+                            <th>إشارة (ص)</th>
+                            <th>الموقع</th>
+                            <th>مثال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color: #27ae60;">الأول</strong></td>
+                            <td>+</td>
+                            <td>+</td>
+                            <td>يمين - فوق</td>
+                            <td style="font-family: 'Fira Code', monospace;">(3, 4)</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #3498db;">الثاني</strong></td>
+                            <td>−</td>
+                            <td>+</td>
+                            <td>يسار - فوق</td>
+                            <td style="font-family: 'Fira Code', monospace;">(-3, 4)</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #9b59b6;">الثالث</strong></td>
+                            <td>−</td>
+                            <td>−</td>
+                            <td>يسار - تحت</td>
+                            <td style="font-family: 'Fira Code', monospace;">(-3, -4)</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #e67e22;">الرابع</strong></td>
+                            <td>+</td>
+                            <td>−</td>
+                            <td>يمين - تحت</td>
+                            <td style="font-family: 'Fira Code', monospace;">(3, -4)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> حيلة ذكية للحفظ:</h4>
+                <p>تخيل ساعة: الربع الأول في الساعة 12-3 (أعلى يمين)، ثم نكمل بعكس عقارب الساعة.</p>
+                <p style="margin-top: 10px;">أو تذكر: <strong>"كل شيء إيجابي في الربع الأول!"</strong> (+، +)</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: تحديد إحداثيات نقطة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-map-pin"></i> رابعاً: تحديد إحداثيات نقطة</h2>
+            
+            <p style="margin-bottom: 20px;">لقراءة إحداثيات أي نقطة، اتبع الخطوات التالية:</p>
+
+            <ol class="steps-list" style="list-style: none; padding: 0;">
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 1:</strong> انطلق من <strong>نقطة الأصل (0, 0)</strong>.
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 2:</strong> تحرك <strong>أفقياً</strong> (يمين أو يسار) لتحديد قيمة <strong>س</strong>.
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 3:</strong> من تلك النقطة، تحرك <strong>عمودياً</strong> (فوق أو تحت) لتحديد قيمة <strong>ص</strong>.
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 4:</strong> اكتب الزوج المرتب على الصورة <strong>(س، ص)</strong>.
+                </li>
+            </ol>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 1: تحديد إحداثيات نقطة</h4>
+                <p><strong>المسألة:</strong> النقطة A تقع على بعد 4 وحدات يمين نقطة الأصل، و 3 وحدات فوقها. ما إحداثياتها؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الإحداثي السيني (س)</h4>
+                    <p>4 وحدات يمين ➔ <strong>س = +4</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حدد الإحداثي الصادي (ص)</h4>
+                    <p>3 وحدات فوق ➔ <strong>ص = +3</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اكتب الزوج المرتب</h4>
+                    <div class="calculation">A = (4, 3)</div>
+                </div>
+
+                <div class="solution">✅ إحداثيات النقطة A هي (4, 3) - تقع في الربع الأول</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 2: نقطة في الربع الثاني</h4>
+                <p><strong>المسألة:</strong> النقطة B تقع على بعد 5 وحدات يسار نقطة الأصل، و 2 وحدات فوقها. ما إحداثياتها؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الإحداثي السيني (س)</h4>
+                    <p>5 وحدات يسار ➔ <strong>س = -5</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حدد الإحداثي الصادي (ص)</h4>
+                    <p>2 وحدات فوق ➔ <strong>ص = +2</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اكتب الزوج المرتب</h4>
+                    <div class="calculation">B = (-5, 2)</div>
+                </div>
+
+                <div class="solution">✅ إحداثيات النقطة B هي (-5, 2) - تقع في الربع الثاني</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 3: نقطة في الربع الثالث</h4>
+                <p><strong>المسألة:</strong> النقطة C تقع على بعد 3 وحدات يسار نقطة الأصل، و 4 وحدات تحتها. ما إحداثياتها؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حدد الإحداثي السيني (س)</h4>
+                    <p>3 وحدات يسار ➔ <strong>س = -3</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حدد الإحداثي الصادي (ص)</h4>
+                    <p>4 وحدات تحت ➔ <strong>ص = -4</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اكتب الزوج المرتب</h4>
+                    <div class="calculation">C = (-3, -4)</div>
+                </div>
+
+                <div class="solution">✅ إحداثيات النقطة C هي (-3, -4) - تقع في الربع الثالث</div>
+            </div>
+        </div>
+
+        <!-- خامساً: رسم النقاط في المستوى -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-pencil-alt"></i> خامساً: رسم النقاط في المستوى الإحداثي</h2>
+            
+            <p style="margin-bottom: 20px;">لرسم نقطة بمعلومية إحداثياتها، اتبع الخطوات التالية:</p>
+
+            <ol class="steps-list" style="list-style: none; padding: 0;">
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 1:</strong> ابدأ من <strong>نقطة الأصل (0, 0)</strong>.
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 2:</strong> تحرك <strong>أفقياً</strong> حسب قيمة <strong>س</strong> (يمين للموجب، يسار للسالب).
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; margin-bottom: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 3:</strong> من تلك النقطة، تحرك <strong>عمودياً</strong> حسب قيمة <strong>ص</strong> (فوق للموجب، تحت للسالب).
+                </li>
+                <li style="padding: 15px; background: var(--bg-color); border-radius: 10px; border-right: 4px solid var(--subject-primary);">
+                    <strong>الخطوة 4:</strong> ضع نقطة وسمّها باسمها.
+                </li>
+            </ol>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 4: رسم النقطة D(2, 5)</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابدأ من نقطة الأصل</h4>
+                    <p>قف عند النقطة (0, 0)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تحرك أفقياً</h4>
+                    <p>س = 2 (موجب) ➔ تحرك <strong>وحدتين يمين</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تحرك عمودياً</h4>
+                    <p>ص = 5 (موجب) ➔ تحرك <strong>5 وحدات فوق</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> ضع النقطة</h4>
+                    <p>ضع نقطة عند الموقع الناتج وسمّها <strong>D</strong></p>
+                </div>
+
+                <div class="solution">✅ النقطة D(2, 5) تقع في الربع الأول</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال 5: رسم النقطة E(-4, -3)</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> ابدأ من نقطة الأصل</h4>
+                    <p>قف عند النقطة (0, 0)</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تحرك أفقياً</h4>
+                    <p>س = -4 (سالب) ➔ تحرك <strong>4 وحدات يسار</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> تحرك عمودياً</h4>
+                    <p>ص = -3 (سالب) ➔ تحرك <strong>3 وحدات تحت</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> ضع النقطة</h4>
+                    <p>ضع نقطة عند الموقع الناتج وسمّها <strong>E</strong></p>
+                </div>
+
+                <div class="solution">✅ النقطة E(-4, -3) تقع في الربع الثالث</div>
+            </div>
+        </div>
+
+        <!-- سادساً: حالات خاصة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-star"></i> سادساً: حالات خاصة للنقاط</h2>
+            
+            <div class="two-columns">
+                <div class="column-card" style="border-top: 4px solid #2980b9;">
+                    <h3 style="color: #2980b9;"><i class="fas fa-arrows-alt-h"></i> النقاط على المحور السيني</h3>
+                    <p>إذا كانت النقطة على المحور السيني (س)، فإن إحداثيها الصادي = <strong>0</strong></p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        الصورة: (س، 0)<br>
+                        أمثلة: (3, 0), (-5, 0), (0, 0)
+                    </div>
+                </div>
+                <div class="column-card" style="border-top: 4px solid #e67e22;">
+                    <h3 style="color: #e67e22;"><i class="fas fa-arrows-alt-v"></i> النقاط على المحور الصادي</h3>
+                    <p>إذا كانت النقطة على المحور الصادي (ص)، فإن إحداثيها السيني = <strong>0</strong></p>
+                    <div class="math-box" style="font-size: 1rem; margin-top: 10px;">
+                        الصورة: (0، ص)<br>
+                        أمثلة: (0, 4), (0, -2), (0, 0)
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-info-circle"></i>
+                <strong>ملاحظة مهمة:</strong> النقاط التي تقع على المحاور <strong>لا تنتمي إلى أي ربع</strong> من الأرباع الأربعة.
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>موقع النقطة</th>
+                            <th>الصورة</th>
+                            <th>مثال</th>
+                            <th>الربع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>على المحور السيني</td>
+                            <td style="font-family: 'Fira Code', monospace;">(س، 0)</td>
+                            <td style="font-family: 'Fira Code', monospace;">(5, 0)</td>
+                            <td>لا تنتمي لأي ربع</td>
+                        </tr>
+                        <tr>
+                            <td>على المحور الصادي</td>
+                            <td style="font-family: 'Fira Code', monospace;">(0، ص)</td>
+                            <td style="font-family: 'Fira Code', monospace;">(0, -3)</td>
+                            <td>لا تنتمي لأي ربع</td>
+                        </tr>
+                        <tr>
+                            <td>نقطة الأصل</td>
+                            <td style="font-family: 'Fira Code', monospace;">(0، 0)</td>
+                            <td style="font-family: 'Fira Code', monospace;">(0, 0)</td>
+                            <td>لا تنتمي لأي ربع</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-map"></i> مثال 6: خريطة المدينة</h4>
+                <p><strong>المسألة:</strong> في خريطة مدينة، تقع المدرسة عند النقطة (3, 4)، والمكتبة عند النقطة (-2, 3)، والمستشفى عند النقطة (1, -2). صف مواقعها بالنسبة لنقطة الأصل.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> المدرسة (3, 4)</h4>
+                    <p>س = +3 (يمين)، ص = +4 (فوق) ➔ <strong>الربع الأول</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> المكتبة (-2, 3)</h4>
+                    <p>س = -2 (يسار)، ص = +3 (فوق) ➔ <strong>الربع الثاني</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المستشفى (1, -2)</h4>
+                    <p>س = +1 (يمين)، ص = -2 (تحت) ➔ <strong>الربع الرابع</strong></p>
+                </div>
+
+                <div class="solution">✅ المدرسة في الربع الأول، المكتبة في الربع الثاني، المستشفى في الربع الرابع</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-gamepad"></i> مثال 7: لعبة فيديو</h4>
+                <p><strong>المسألة:</strong> في لعبة فيديو، تقع كنز عند النقطة (-3, -5)، وعدو عند النقطة (4, -2). أيهما أقرب إلى نقطة الأصل؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> بعد الكنز عن نقطة الأصل</h4>
+                    <p>المسافة الأفقية = |-3| = 3</p>
+                    <p>المسافة العمودية = |-5| = 5</p>
+                    <p>المجموع = 3 + 5 = <strong>8 وحدات</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> بعد العدو عن نقطة الأصل</h4>
+                    <p>المسافة الأفقية = |4| = 4</p>
+                    <p>المسافة العمودية = |-2| = 2</p>
+                    <p>المجموع = 4 + 2 = <strong>6 وحدات</strong></p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المقارنة</h4>
+                    <div class="calculation">6 < 8</div>
+                </div>
+
+                <div class="solution">✅ العدو أقرب إلى نقطة الأصل (6 وحدات مقابل 8 وحدات)</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: عكس ترتيب الإحداثيات</h4>
+                <p>يجب دائماً كتابة <strong>الإحداثي السيني أولاً</strong>، ثم الصادي.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace;">(3, 2)</span> ➔ 3 يمين، 2 فوق</p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace;">(2, 3)</span> ➔ 2 يمين، 3 فوق (نقطة مختلفة!)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: نسيان الإشارة السالبة</h4>
+                <p>عندما تكون النقطة في الربع الثاني أو الثالث أو الرابع، يجب كتابة <strong>الإشارة السالبة</strong>.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace;">(-3, 4)</span> ➔ الربع الثاني</p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace;">(3, 4)</span> ➔ الربع الأول (نقطة مختلفة!)</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن النقاط على المحاور تنتمي لأرباع</h4>
+                <p>النقاط التي تقع <strong>على المحاور</strong> لا تنتمي إلى أي ربع من الأرباع الأربعة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: الخلط بين الاتجاهات</h4>
+                <p>تذكر دائماً:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>الموجب في س ➔ <strong>يمين</strong> (وليس يسار)</li>
+                    <li>الموجب في ص ➔ <strong>فوق</strong> (وليس تحت)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المستوى الإحداثي:</strong> سطح مستوٍ يتكون من محورين متعامدين (س، ص) يتقاطعان في نقطة الأصل (0, 0).</li>
+                <li><strong>المحور السيني (س):</strong> المحور الأفقي، موجب يمين، سالب يسار.</li>
+                <li><strong>المحور الصادي (ص):</strong> المحور العمودي، موجب فوق، سالب تحت.</li>
+                <li><strong>الزوج المرتب:</strong> (س، ص) يحدد موقع نقطة، والترتيب مهم!</li>
+                <li><strong>الأرباع الأربعة:</strong>
+                    <ul style="padding-right: 20px; margin-top: 5px;">
+                        <li>الأول: (+، +)</li>
+                        <li>الثاني: (−، +)</li>
+                        <li>الثالث: (−، −)</li>
+                        <li>الرابع: (+، −)</li>
+                    </ul>
+                </li>
+                <li><strong>تحديد الإحداثيات:</strong> ابدأ من نقطة الأصل ➔ تحرك أفقياً ➔ تحرك عمودياً ➔ اكتب (س، ص).</li>
+                <li><strong>رسم النقاط:</strong> ابدأ من نقطة الأصل ➔ تحرك أفقياً حسب س ➔ تحرك عمودياً حسب ص ➔ ضع النقطة.</li>
+                <li><strong>حالات خاصة:</strong> النقاط على المحاور لا تنتمي لأي ربع.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما إحداثيات نقطة الأصل؟",
+                options: ["(1, 1)", "(0, 0)", "(0, 1)", "(1, 0)"],
+                correct: 1,
+                explanation: "نقطة الأصل هي نقطة تقاطع المحورين، وإحداثياتها هي (0, 0)."
+            },
+            {
+                sentence: "النقطة (-3, 4) تقع في أي ربع؟",
+                options: ["الأول", "الثاني", "الثالث", "الرابع"],
+                correct: 1,
+                explanation: "س = -3 (سالب) ➔ يسار، ص = 4 (موجب) ➔ فوق. الربع الثاني إشاراته (−، +)."
+            },
+            {
+                sentence: "إذا كانت النقطة A على بعد 5 وحدات يمين و 2 وحدة تحت نقطة الأصل، فما إحداثياتها؟",
+                options: ["(5, 2)", "(-5, 2)", "(5, -2)", "(-5, -2)"],
+                correct: 2,
+                explanation: "5 يمين ➔ س = +5، 2 تحت ➔ ص = -2. إذن الإحداثيات هي (5, -2)."
+            },
+            {
+                sentence: "النقطة (0, -4) تقع على:",
+                options: ["المحور السيني", "المحور الصادي", "الربع الثالث", "الربع الرابع"],
+                correct: 1,
+                explanation: "الإحداثي السيني = 0، إذن النقطة تقع على المحور الصادي (ولا تنتمي لأي ربع)."
+            },
+            {
+                sentence: "ما الفرق بين النقطتين (3, 2) و (2, 3)؟",
+                options: ["لا يوجد فرق", "نفس النقطة", "نقطتان مختلفتان", "نفس الربع"],
+                correct: 2,
+                explanation: "الترتيب مهم! (3, 2) تعني 3 يمين و 2 فوق، بينما (2, 3) تعني 2 يمين و 3 فوق. هما نقطتان مختلفتان."
+            },
+            {
+                sentence: "إذا رسمت النقطة (-4, -3)، فكم وحدة تتحرك أفقياً وعمودياً من نقطة الأصل؟",
+                options: ["4 يمين، 3 فوق", "4 يسار، 3 تحت", "4 يمين، 3 تحت", "4 يسار، 3 فوق"],
+                correct: 1,
+                explanation: "س = -4 (سالب) ➔ 4 وحدات يسار. ص = -3 (سالب) ➔ 3 وحدات تحت."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

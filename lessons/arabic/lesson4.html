@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المفعول فيه (الظرف) - تعريفه وأقسامه وعلامات إعرابه - مادة لغتي الخالدة - الصف الثاني المتوسط">
+    <title>المفعول فيه (الظرف) | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(26, 95, 122, 0.05);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .column-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-primary);
+        }
+        .column-card.time { border-top-color: #3498db; }
+        .column-card.place { border-top-color: #27ae60; }
+        .column-card h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column-card.time h3 { color: #3498db; }
+        .column-card.place h3 { color: #27ae60; }
+        .column-card h4 {
+            font-size: 1rem;
+            margin: 15px 0 8px;
+            color: var(--text-color);
+        }
+        .column-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .column-card ul li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        .column-card ul li::before {
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            font-size: 0.5rem;
+            color: var(--subject-secondary);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .sentence {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+        .example-card .analysis {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 8px 0;
+        }
+        .example-card .grammar {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--subject-primary);
+            font-weight: 600;
+            color: var(--subject-primary);
+            margin-top: 10px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 {
+            color: #f0909a;
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 15px 15px 15px 60px;
+            margin-bottom: 10px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border-right: 3px solid var(--subject-secondary);
+        }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--subject-primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* نشاط تفاعلي */
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(21, 152, 149, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-map-marker-alt"></i> المفعول فيه (الظرف)</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: تعريف المفعول فيه -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: تعريف المفعول فيه</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>التعريف:</strong> المفعول فيه هو: اسم منصوب يُذكر في الجملة الفعلية لبيان <strong>زمان</strong> أو <strong>مكان</strong> وقوع الفعل، ويُسمى في النحو العربي بـ "الظرف".
+            </div>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">
+                <strong>بمعنى أبسط:</strong> هو الكلمة التي تجيب عن سؤال: 
+                <span style="color: var(--subject-primary); font-weight: 700;">"متى؟"</span> (للزمان) أو 
+                <span style="color: var(--subject-primary); font-weight: 700;">"أين؟"</span> (للمكان).
+            </p>
+
+            <div class="two-columns">
+                <div class="column-card time">
+                    <h3><i class="fas fa-clock"></i> ظرف الزمان</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">يجيب عن سؤال: <strong>"متى؟"</strong></p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> "سافرتُ <span style="color: #3498db; font-weight: 700;">صباحَ</span> الجمعةِ."</p>
+                </div>
+                <div class="column-card place">
+                    <h3><i class="fas fa-map-pin"></i> ظرف المكان</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">يجيب عن سؤال: <strong>"أين؟"</strong></p>
+                    <p style="margin-top: 10px;"><strong>مثال:</strong> "وقفتُ <span style="color: #27ae60; font-weight: 700;">أمامَ</span> البيتِ."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: أقسام المفعول فيه -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-sitemap"></i> ثانياً: أقسام المفعول فيه (الظرف)</h2>
+            <p style="margin-bottom: 20px;">ينقسم المفعول فيه إلى قسمين رئيسيين، وكل قسم يحتوي على أسماء <strong>مُعْرَبة</strong> وأخرى <strong>مبنية</strong>:</p>
+            
+            <div class="two-columns">
+                <!-- ظرف الزمان -->
+                <div class="column-card time">
+                    <h3><i class="fas fa-clock"></i> 1. ظرف الزمان</h3>
+                    <p style="font-size: 0.95rem;">هو الاسم الذي يدل على <strong>الوقت</strong> الذي حدث فيه الفعل.</p>
+                    
+                    <h4>✅ المُعْرَب منه:</h4>
+                    <ul>
+                        <li>يومَ، ليلةَ، صباحَ، مساءَ</li>
+                        <li>ساعةَ، أسبوعَ، شهرَ، سنةَ</li>
+                        <li>دهراً، أبداً، حينَ، وقتَ</li>
+                    </ul>
+
+                    <h4>🔒 المبني منه:</h4>
+                    <ul>
+                        <li>أمسِ، الآنَ</li>
+                        <li>قطُّ، عوضُ</li>
+                        <li>بينا، بينما</li>
+                    </ul>
+                </div>
+
+                <!-- ظرف المكان -->
+                <div class="column-card place">
+                    <h3><i class="fas fa-map-pin"></i> 2. ظرف المكان</h3>
+                    <p style="font-size: 0.95rem;">هو الاسم الذي يدل على <strong>المكان</strong> الذي حدث فيه الفعل.</p>
+                    
+                    <h4>✅ المُعْرَب منه:</h4>
+                    <ul>
+                        <li>فوقَ، تحتَ، أمامَ، خلفَ</li>
+                        <li>يمينَ، شمالَ، عندَ، لدىَ</li>
+                        <li>وسطَ، بينَ، تجاهَ، حذاءَ</li>
+                    </ul>
+
+                    <h4>🔒 المبني منه:</h4>
+                    <ul>
+                        <li>حيثُ، هنا، هناك</li>
+                        <li>ثمَّ، لدنْ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4 style="margin-bottom: 10px;"><i class="fas fa-lightbulb"></i> ملاحظة منهجية هامة:</h4>
+                <p>بعض الألفاظ تكون <strong>ظرف زمان ومكان معاً</strong> حسب سياق الجملة، مثل: <strong>"حيثُ"</strong>، <strong>"أمامَ"</strong>، <strong>"خلفَ"</strong>.</p>
+            </div>
+        </div>
+
+        <!-- ثالثاً: إعراب المفعول فيه -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-signature"></i> ثالثاً: إعراب المفعول فيه</h2>
+            <p style="margin-bottom: 20px;">القاعدة العامة أن المفعول فيه يكون <strong>منصوباً</strong>، وتختلف علامة النصب حسب نوع الاسم:</p>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">علامة النصب</th>
+                            <th style="width: 35%;">الحالة</th>
+                            <th style="width: 40%;">مثال وإعرابه</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الفتحة الظاهرة</strong></td>
+                            <td>إذا كان اسماً مفرداً صحيح الآخر أو منتهياً بألف مقصورة</td>
+                            <td>"أسافرُ <strong>صباحَ</strong> الجمعةِ." <br><small>صباحَ: مفعول فيه منصوب وعلامة نصبه الفتحة الظاهرة.</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>الفتحة المقدرة</strong></td>
+                            <td>إذا كان مقصوراً أو منتهياً بتاء مربوطة</td>
+                            <td>"استيقظتُ <strong>فجراً</strong>." <br><small>فجراً: مفعول فيه منصوب وعلامة نصبه الفتحة المقدرة على الألف منع من ظهورها التعذر.</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>الياء (ي)</strong></td>
+                            <td>إذا كان مثنى أو جمع مذكر سالم</td>
+                            <td>"درستُ <strong>ساعتَيْنِ</strong>." <br><small>ساعتَيْنِ: مفعول فيه منصوب وعلامة نصبه الياء لأنه مثنى.</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>في محل نصب</strong></td>
+                            <td>إذا كان مبنياً</td>
+                            <td>"جلستُ <strong>حيثُ</strong> جلستَ." <br><small>حيثُ: ظرف مكان مبني على الضم في محل نصب مفعول فيه.</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- رابعاً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> رابعاً: تطبيقات عملية</h2>
+            <h3 style="color: var(--subject-primary); margin-bottom: 20px;">🎯 كيف نحدد المفعول فيه في الجمل؟</h3>
+            <p style="margin-bottom: 20px;">نستخدم <strong>خطوة منهجية ثلاثية</strong>:</p>
+            
+            <ol class="steps-list">
+                <li><strong>حدد الفعل</strong> في الجملة.</li>
+                <li>اسأل عن الفعل: <strong>"متى؟"</strong> (للزمان) أو <strong>"أين؟"</strong> (للمكان).</li>
+                <li>تأكد أن الإجابة هي <strong>اسم</strong> (وليس جملة أو حرف جر).</li>
+            </ol>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 15px;">📝 أمثلة تطبيقية محلولة:</h3>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-clock"></i> المثال 1 (ظرف زمان معرب):</h4>
+                <div class="sentence">"يُصلي المسلمون <span style="color: var(--subject-primary);">ليلَ</span> الجمعةِ."</div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> متى يُصلون؟ <strong>ليلَ</strong>. (اسم يدل على الوقت).
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> ليلَ: مفعول فيه (ظرف زمان) منصوب، وعلامة نصبه الفتحة الظاهرة على آخره، وهو مضاف.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-map-pin"></i> المثال 2 (ظرف مكان معرب):</h4>
+                <div class="sentence">"وقفَ الحارسُ <span style="color: var(--subject-primary);">أمامَ</span> البوابةِ."</div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> أين وقف؟ <strong>أمامَ</strong>. (اسم يدل على المكان).
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> أمامَ: مفعول فيه (ظرف مكان) منصوب، وعلامة نصبه الفتحة الظاهرة على آخره، وهو مضاف.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-lock"></i> المثال 3 (ظرف مبني):</h4>
+                <div class="sentence">"سأنتظرك <span style="color: var(--subject-primary);">هنا</span>."</div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> أين سأنتظرك؟ <strong>هنا</strong>.
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> هنا: ظرف مكان مبني على السكون في محل نصب مفعول فيه.
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-clock"></i> المثال 4 (مثنى):</h4>
+                <div class="sentence">"غبتُ عن المدرسةِ <span style="color: var(--subject-primary);">يومَيْنِ</span>."</div>
+                <div class="analysis">
+                    <strong>التحليل:</strong> متى غبت؟ <strong>يومَيْنِ</strong>.
+                </div>
+                <div class="grammar">
+                    <strong>الإعراب:</strong> يومَيْنِ: مفعول فيه (ظرف زمان) منصوب، وعلامة نصبه الياء لأنه مثنى، والنون عوض عن التنوين في الاسم المفرد.
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: تنبيهات منهجية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> خامساً: تنبيهات منهجية</h2>
+            <h3 style="color: #721c24; margin-bottom: 15px;">⚠️ أخطاء شائعة في الاختبارات</h3>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 1: الفرق بين المفعول فيه والمفعول لأجله</h4>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li><strong>المفعول لأجله:</strong> يبين السبب وهو دائماً <strong>"مصدر قلبي"</strong> (مثل: رغبةً، خوفاً).</li>
+                    <li><strong>المفعول فيه:</strong> يبين الزمان أو المكان (مثل: صباحاً، أمامَ).</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 2: ظروف المكان غير المتصرفة</h4>
+                <p>بعض الظروف مثل (<strong>عندَ، لدىَ، لدنْ</strong>) تكون دائماً <strong>مضافة</strong> ولا تأتي إلا مضافة إلى اسم ظاهر أو ضمير، ولا تأتي نكرة.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال صحيح:</strong> "جلستُ <span style="color: #dc3545; font-weight: 700;">عندَ</span> أبي." ✅</p>
+                    <p><strong>مثال خاطئ:</strong> "جلستُ عنداً." ❌</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 3: حذف حرف الجر</h4>
+                <p>أحياناً يُحذف حرف الجر (في، إلى) وينصب الاسم على أنه مفعول فيه (ظرف).</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> "سافرتُ <span style="color: #dc3545; font-weight: 700;">شهرَ</span> رمضانَ."</p>
+                    <p class="analysis">التقدير: في شهرِ رمضانَ، ولكن "شهرَ" تعرب مفعولاً فيه منصوباً.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> سادساً: نشاط تفاعلي</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختبر فهمك!</h3>
+                <p>حدد <strong>المفعول فيه</strong> في الجملة التالية:</p>
+                
+                <div class="quiz-question">
+                    "زرعَ الفلاحُ الشجرَ <span style="color: var(--subject-primary);">خلفَ</span> المنزلِ".
+                </div>
+
+                <div class="quiz-options" id="quizOptions">
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">الفلاحُ</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">الشجرَ</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, true)">خلفَ</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">المنزلِ</div>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-outline" onclick="resetQuiz()" style="display: inline-flex;">
+                        <i class="fas fa-redo"></i> إعادة المحاولة
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>المفعول فيه (الظرف):</strong> اسم منصوب يبين زمان أو مكان وقوع الفعل.</li>
+                <li><strong>أقسامه:</strong> ظرف زمان (متى؟) وظرف مكان (أين؟).</li>
+                <li><strong>علامات نصبه:</strong> الفتحة الظاهرة (مفرد)، الفتحة المقدرة (مقصور)، الياء (مثنى/جمع مذكر سالم).</li>
+                <li><strong>كلماته الشائعة:</strong> (فوق، تحت، أمام، خلف، عند، صباح، مساء، يوم، ليلة...).</li>
+                <li><strong>السؤال المفتاحي:</strong> "متى؟" أو "أين؟"</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <!-- سكربت النشاط التفاعلي -->
+    <script>
+        function checkAnswer(element, isCorrect) {
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            // منع النقر المتكرر
+            if (document.querySelector('.quiz-option.correct') || document.querySelector('.quiz-option.wrong')) {
+                return;
+            }
+            
+            // تعطيل جميع الخيارات
+            options.forEach(opt => {
+                opt.style.pointerEvents = 'none';
+            });
+            
+            if (isCorrect) {
+                element.classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = '<i class="fas fa-check-circle"></i> أحسنت! "خلفَ" ظرف مكان منصوب يجيب عن سؤال: <strong>أين زرع الفلاح الشجر؟</strong>';
+            } else {
+                element.classList.add('wrong');
+                // إظهار الإجابة الصحيحة
+                options[2].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = '<i class="fas fa-times-circle"></i> حاول مرة أخرى! الإجابة الصحيحة هي <strong>"خلفَ"</strong>، لأنها ظرف مكان منصوب يجيب عن سؤال: أين زرع الفلاح الشجر؟';
+            }
+        }
+
+        function resetQuiz() {
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'wrong');
+                opt.style.pointerEvents = 'auto';
+            });
+            
+            feedbackBox.className = 'feedback-box';
+            feedbackBox.innerHTML = '';
+        }
+    </script>
+</body>
+</html>

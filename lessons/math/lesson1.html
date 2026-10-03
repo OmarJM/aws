@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأعداد النسبية - تعريفها وتحويلها بين الكسور والأعداد العشرية - مادة الرياضيات">
+    <title>الأعداد النسبية | الرياضيات</title>
+    
+    <!-- خطوط عربية وبرمجية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(41, 128, 185, 0.08);
+            border-right: 4px solid var(--subject-primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: var(--subject-primary);
+        }
+
+        /* صندوق المعادلة الرياضية */
+        .math-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--subject-secondary);
+            margin: 15px 0;
+            text-align: center;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--subject-primary);
+            direction: ltr;
+        }
+        .math-box .fraction {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .math-box .fraction .num {
+            display: block;
+            border-bottom: 2px solid var(--subject-primary);
+            padding: 0 10px 3px;
+        }
+        .math-box .fraction .den {
+            display: block;
+            padding: 3px 10px 0;
+        }
+
+        /* صندوق الخطوات */
+        .step-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--subject-primary);
+            margin: 15px 0;
+        }
+        .step-box h4 {
+            color: var(--subject-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .step-box .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--subject-primary);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .step-box .calculation {
+            font-family: 'Fira Code', monospace;
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            direction: ltr;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--subject-accent);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(41, 128, 185, 0.05);
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .column-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .column-card.terminating { border-top: 4px solid #27ae60; }
+        .column-card.repeating { border-top: 4px solid #e67e22; }
+        .column-card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column-card.terminating h3 { color: #27ae60; }
+        .column-card.repeating h3 { color: #e67e22; }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            border-right: 5px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .warning-box {
+            background: linear-gradient(135deg, #3d1015, #4a1520);
+        }
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+        .golden-tip h4 {
+            margin-bottom: 10px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        .example-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+            margin-bottom: 15px;
+        }
+        .example-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .example-card .problem {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            direction: ltr;
+        }
+        .example-card .solution {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--success-color);
+            font-weight: 600;
+            color: var(--success-color);
+            margin-top: 10px;
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong { color: var(--subject-primary); }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 15px 15px 15px 60px;
+            margin-bottom: 10px;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border-right: 3px solid var(--subject-secondary);
+        }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--subject-primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* نشاط تفاعلي */
+        .interactive-activity {
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.05), rgba(39, 174, 96, 0.05));
+            border: 2px dashed var(--subject-primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .interactive-activity h3 {
+            color: var(--subject-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Fira Code', monospace;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .quiz-option {
+            padding: 12px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-family: 'Fira Code', monospace;
+        }
+        .quiz-option:hover {
+            border-color: var(--subject-primary);
+            transform: translateY(-2px);
+        }
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success-color);
+            color: #155724;
+        }
+        .quiz-option.wrong {
+            background: #f8d7da;
+            border-color: var(--error-color);
+            color: #721c24;
+        }
+        .feedback-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+        }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success-color);
+        }
+        .feedback-box.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--error-color);
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .quiz-counter {
+            background: var(--subject-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--subject-primary); color: white; }
+        .btn-outline { background: transparent; border: 2px solid var(--subject-primary); color: var(--subject-primary); }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+            .math-box { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="subject-math">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-calculator"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/math.html" class="active">الرياضيات</a></li>
+                    <li><a href="../../quizzes/math-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/math.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة الرياضيات
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-square-root-alt"></i> الأعداد النسبية</h1>
+            <p>مادة الرياضيات – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>كيف يمكن تحويل الكسر إلى عدد عشري والعكس؟</strong>
+                <p style="margin-top: 10px;">هذا الدرس يُعلّمك كيفية التنقل بين صيغتي الأعداد النسبية: الكسور والأعداد العشرية.</p>
+            </div>
+        </div>
+
+        <!-- أولاً: تعريف العدد النسبي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: ما هو العدد النسبي؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> العدد النسبي هو أي عدد يمكن كتابته على صورة كسر <span style="font-family: 'Fira Code', monospace; direction: ltr; display: inline-block;">a/b</span>، حيث <span style="font-family: 'Fira Code', monospace;">a</span> و <span style="font-family: 'Fira Code', monospace;">b</span> عددان صحيحان، و <span style="font-family: 'Fira Code', monospace;">b ≠ 0</span>.
+            </div>
+
+            <div class="math-box">
+                العدد النسبي = 
+                <span class="fraction">
+                    <span class="num">a</span>
+                    <span class="den">b</span>
+                </span>
+                &nbsp; حيث b ≠ 0
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📌 لماذا الشرط <span style="font-family: 'Fira Code', monospace;">b ≠ 0</span>؟</h3>
+            <p style="line-height: 1.8;">لأن <strong>القسمة على صفر غير مُعرَّفة</strong> في الرياضيات. لا يمكن أن يكون المقام صفراً.</p>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 أمثلة على الأعداد النسبية:</h3>
+            <div class="two-columns">
+                <div class="column-card terminating">
+                    <h3><i class="fas fa-check-circle"></i> أعداد نسبية صحيحة</h3>
+                    <ul style="padding-right: 20px; line-height: 2; font-family: 'Fira Code', monospace;">
+                        <li><span style="direction: ltr; display: inline-block;">7 = 7/1</span></li>
+                        <li><span style="direction: ltr; display: inline-block;">−3 = −3/1</span></li>
+                        <li><span style="direction: ltr; display: inline-block;">0 = 0/1</span></li>
+                    </ul>
+                </div>
+                <div class="column-card repeating">
+                    <h3><i class="fas fa-check-circle"></i> كسور وأعداد عشرية</h3>
+                    <ul style="padding-right: 20px; line-height: 2; font-family: 'Fira Code', monospace;">
+                        <li><span style="direction: ltr; display: inline-block;">2/3</span></li>
+                        <li><span style="direction: ltr; display: inline-block;">0.6</span></li>
+                        <li><span style="direction: ltr; display: inline-block;">−1.5</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ثانياً: التحويل من كسر إلى عشري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> ثانياً: التحويل من كسر إلى عدد عشري</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>القاعدة:</strong> لتحويل كسر إلى عدد عشري، <strong>اقسم البسط على المقام</strong>.
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">📝 مثال 1: تحويل كسر إلى عدد عشري منتهٍ</h3>
+            <p style="margin-bottom: 15px;">اكتب <span style="font-family: 'Fira Code', monospace; direction: ltr; display: inline-block;">5/8</span> على صورة عدد عشري.</p>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> الخطوة الأولى: القسمة</h4>
+                <div class="calculation">5 ÷ 8 = 0.625</div>
+                <p style="margin-top: 10px;">لا يتبقى شيء بعد القسمة، فالعدد <strong>عشري منتهٍ</strong>.</p>
+            </div>
+
+            <div class="math-box">
+                <span class="fraction">
+                    <span class="num">5</span>
+                    <span class="den">8</span>
+                </span>
+                &nbsp; = &nbsp; 0.625
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 15px;">📝 مثال 2: تحويل عدد مختلط سالب</h3>
+            <p style="margin-bottom: 15px;">اكتب <span style="font-family: 'Fira Code', monospace; direction: ltr; display: inline-block;">−1⅔</span> على صورة عدد عشري.</p>
+            
+            <div class="step-box">
+                <h4><span class="step-number">1</span> الخطوة الأولى: حوّل الكسر إلى غير كسري</h4>
+                <div class="calculation">−1⅔ = −5/3</div>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">2</span> الخطوة الثانية: القسمة</h4>
+                <div class="calculation">5 ÷ 3 = 1.666...</div>
+                <p style="margin-top: 10px;">نلاحظ أن الرقم <strong>6 يتكرر إلى ما لا نهاية</strong>، فالعدد <strong>عشري دوري</strong>.</p>
+            </div>
+            
+            <div class="step-box">
+                <h4><span class="step-number">3</span> الخطوة الثالثة: التقريب (اختياري)</h4>
+                <div class="calculation">−1.666... ≈ −1.7</div>
+            </div>
+
+            <div class="math-box">
+                −1⅔ &nbsp; = &nbsp; −1.6̄ &nbsp; ≈ &nbsp; −1.7
+            </div>
+        </div>
+
+        <!-- ثالثاً: الفرق بين المنتهي والدوري -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> ثالثاً: الفرق بين العدد العشري المنتهي والدوري</h2>
+            
+            <div class="two-columns">
+                <div class="column-card terminating">
+                    <h3><i class="fas fa-check-circle"></i> العدد العشري المنتهي</h3>
+                    <p style="margin-bottom: 10px;">ينتهي بعد عدد محدود من المنازل العشرية.</p>
+                    <div class="math-box" style="font-size: 1.1rem;">0.625</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">ثلاثة أرقام فقط بعد الفاصلة، ثم يتوقف.</p>
+                </div>
+                <div class="column-card repeating">
+                    <h3><i class="fas fa-redo"></i> العدد العشري الدوري</h3>
+                    <p style="margin-bottom: 10px;">يتكرر فيه رقم أو مجموعة أرقام إلى ما لا نهاية.</p>
+                    <div class="math-box" style="font-size: 1.1rem;">0.3̄ = 0.333...</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">الرقم 3 يتكرر بلا نهاية.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> الخطأ الشائع في كتابة العدد الدوري!</h4>
+                <p><strong>الطريقة الصحيحة:</strong> ضع خطاً فوق الرقم المتكرر فقط.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ صحيح:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--success-color);">8.6̄3̄</span> (الخط فوق 63 فقط)</p>
+                    <p style="margin-top: 8px;"><strong>❌ خاطئ:</strong> <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">8.63̄</span> أو <span style="font-family: 'Fira Code', monospace; color: var(--error-color);">8.636</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- رابعاً: التحويل من عشري إلى كسر -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> رابعاً: التحويل من عدد عشري إلى كسر</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 15px;">🔹 (أ) الأعداد العشرية المنتهية</h3>
+            
+            <div class="step-box">
+                <h4><i class="fas fa-list-ol"></i> الطريقة:</h4>
+                <ol class="steps-list">
+                    <li>اكتب العدد بدون فاصلة في البسط.</li>
+                    <li>ضع في المقام: 10، 100، 1000... حسب عدد المنازل العشرية.</li>
+                    <li>بسّط الكسر إلى أبسط صورة.</li>
+                </ol>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: حوّل 0.45 إلى كسر</h4>
+                <div class="problem">0.45 = ?</div>
+                <div class="solution">
+                    <strong>الحل:</strong><br>
+                    • 0.45 = 45/100 (منزلتان عشريتان = 100 في المقام)<br>
+                    • بالتبسيط (القسمة على 5): <strong>9/20</strong>
+                </div>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 15px;">🔹 (ب) الأعداد العشرية الدورية (طريقة الجبر)</h3>
+            
+            <div class="step-box">
+                <h4><i class="fas fa-list-ol"></i> الطريقة (4 خطوات):</h4>
+                <ol class="steps-list">
+                    <li>افرض أن العدد = س (x).</li>
+                    <li>اضرب في 10، 100، 1000... حسب عدد الأرقام المتكررة.</li>
+                    <li>اطرح المعادلة الأولى من الثانية (للتخلص من الجزء المتكرر).</li>
+                    <li>اقسم على معامل س للحصول على الكسر.</li>
+                </ol>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> مثال: حوّل <span style="font-family: 'Fira Code', monospace;">0.5̄</span> (0.555...) إلى كسر</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> افرض أن العدد = س</h4>
+                    <div class="calculation">س = 0.555...</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> اضرب في 10 (لأن الرقم المتكرر واحد)</h4>
+                    <div class="calculation">10س = 5.555...</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> اطرح المعادلة الأولى من الثانية</h4>
+                    <div class="calculation">10س − س = 5.555... − 0.555...</div>
+                    <div class="calculation">9س = 5</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> اقسم على 9</h4>
+                    <div class="calculation">س = 5/9</div>
+                </div>
+
+                <div class="math-box">
+                    0.5̄ = 5/9
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة ذهبية للحفظ:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>إذا تكرر <strong>رقم واحد</strong> ➔ اضرب في <strong>10</strong></li>
+                    <li>إذا تكرر <strong>رقمان</strong> ➔ اضرب في <strong>100</strong></li>
+                    <li>إذا تكرر <strong>ثلاثة أرقام</strong> ➔ اضرب في <strong>1000</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: تطبيقات عملية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> خامساً: تطبيقات عملية</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 15px;">📝 مثال 3: حساب المتوسط التقريبي</h3>
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> المسألة:</h4>
+                <p>سجّل خالد 6 أهداف من 22 محاولة. قرّب متوسط أهدافه إلى أقرب جزء من ألف.</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> القسمة</h4>
+                    <div class="calculation">22 ÷ 6 = 0.272727...</div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> تحديد المنازل</h4>
+                    <p>نريد 3 منازل عشرية: <span style="font-family: 'Fira Code', monospace;">0.272|727...</span></p>
+                    <p>المنزلة الرابعة بعد الفاصلة هي <strong>7</strong> (أكبر من 5).</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التقريب</h4>
+                    <p>نقرّب المنزلة الثالثة (2) إلى (3) لأن ما بعدها ≥ 5.</p>
+                    <div class="calculation">0.272|727... ≈ 0.273</div>
+                </div>
+
+                <div class="math-box">
+                    النتيجة النهائية: 0.273
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: جدول تحويلات شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-table"></i> سادساً: جدول تحويلات شائعة للحفظ</h2>
+            
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الكسر</th>
+                            <th>العدد العشري</th>
+                            <th>النوع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/2</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.5</td>
+                            <td>منتهٍ</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/4</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.25</td>
+                            <td>منتهٍ</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/3</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.3̄</td>
+                            <td>دوري</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">2/3</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.6̄</td>
+                            <td>دوري</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/5</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.2</td>
+                            <td>منتهٍ</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/6</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.16̄</td>
+                            <td>دوري</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Fira Code', monospace;">1/8</td>
+                            <td style="font-family: 'Fira Code', monospace;">0.125</td>
+                            <td>منتهٍ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- سابعاً: تنبيهات -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> سابعاً: تنبيهات هامة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 1: المقام لا يمكن أن يكون صفراً</h4>
+                <p>إذا كان المقام = 0، فالعدد <strong>ليس نسبياً</strong> (غير معرّف).</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 2: الأعداد النسبية تشمل كل شيء!</h4>
+                <p>كل عدد صحيح هو عدد نسبي (يمكن كتابته على صورة كسر مقامه 1).</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>مثال:</strong> <span style="font-family: 'Fira Code', monospace;">5 = 5/1</span> ✅</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> تنبيه 3: التقريب الصحيح</h4>
+                <p>عند التقريب، انظر إلى المنزلة التي تلي المنزلة المطلوبة:</p>
+                <ul style="padding-right: 20px; margin-top: 10px;">
+                    <li>إذا كانت <strong>≥ 5</strong> ➔ زد المنزلة المطلوبة بـ 1</li>
+                    <li>إذا كانت <strong>&lt; 5</strong> ➔ اتركها كما هي</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 5</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: var(--subject-primary); margin-bottom: 10px;">🎉 أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: var(--success-color);"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;">
+                        <i class="fas fa-redo"></i> إعادة النشاط
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid var(--subject-primary);">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>العدد النسبي:</strong> أي عدد يمكن كتابته على صورة a/b حيث b ≠ 0.</li>
+                <li><strong>من كسر إلى عشري:</strong> اقسم البسط على المقام.</li>
+                <li><strong>عشري منتهٍ:</strong> ينتهي بعد عدد محدود من المنازل (مثل 0.625).</li>
+                <li><strong>عشري دوري:</strong> يتكرر فيه رقم أو مجموعة أرقام (مثل 0.333...).</li>
+                <li><strong>من عشري منتهٍ إلى كسر:</strong> اكتب العدد بدون فاصلة / 10، 100، 1000... ثم بسّط.</li>
+                <li><strong>من عشري دوري إلى كسر:</strong> استخدم الجبر (افرض س، اضرب، اطرح، اقسم).</li>
+                <li><strong>التقريب:</strong> انظر للمنزلة التالية، إذا كانت ≥ 5 ➔ زد 1، وإلا اتركها.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <!-- سكربت النشاط التفاعلي -->
+    <script>
+        // بيانات الأسئلة
+        const quizQuestions = [
+            {
+                sentence: "حوّل الكسر 5/6 إلى عدد عشري (مقرّب لأقرب جزء من ألف):",
+                options: ["0.833", "0.83", "0.834", "0.84"],
+                correct: 0,
+                explanation: "5 ÷ 6 = 0.8333...، المنزلة الرابعة هي 3 (أقل من 5)، فنترك الثالثة كما هي: 0.833."
+            },
+            {
+                sentence: "حوّل العدد 0.36 إلى كسر في أبسط صورة:",
+                options: ["36/100", "9/25", "18/50", "4/9"],
+                correct: 1,
+                explanation: "0.36 = 36/100، وبالتبسيط (القسمة على 4): 9/25."
+            },
+            {
+                sentence: "حوّل العدد الدوري 0.7̄ إلى كسر:",
+                options: ["7/10", "7/9", "7/99", "7/100"],
+                correct: 1,
+                explanation: "افرض س = 0.777...، اضرب في 10: 10س = 7.777...، اطرح: 9س = 7، إذن س = 7/9."
+            },
+            {
+                sentence: "أيّ مما يلي ليس عدداً نسبياً؟",
+                options: ["−3", "0", "√2", "2/5"],
+                correct: 2,
+                explanation: "√2 لا يمكن كتابته على صورة a/b (كسر)، فهو عدد غير نسبي (أصم)."
+            },
+            {
+                sentence: "سجّل أحمد 12 هدفاً من 7 محاولات. ما المتوسط مقرّباً لأقرب جزء من مئة؟",
+                options: ["1.71", "1.72", "1.7", "1.714"],
+                correct: 0,
+                explanation: "12 ÷ 7 = 1.71428...، المنزلة الثالثة (4) أقل من 5، فنترك الثانية كما هي: 1.71."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            
+            let html = `
+                <div class="quiz-question">
+                    ${question.sentence}
+                </div>
+                <div class="quiz-options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                html += `<div class="quiz-option" onclick="checkAnswer(${index})">${option}</div>`;
+            });
+            
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            updateCounter();
+            updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (answered[currentQuestion]) return;
+            
+            const question = quizQuestions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackBox = document.getElementById('feedbackBox');
+            
+            answered[currentQuestion] = true;
+            
+            if (selectedIndex === question.correct) {
+                options[selectedIndex].classList.add('correct');
+                feedbackBox.className = 'feedback-box show success';
+                feedbackBox.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${question.explanation}`;
+                score++;
+            } else {
+                options[selectedIndex].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                feedbackBox.className = 'feedback-box show error';
+                feedbackBox.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${question.explanation}`;
+            }
+            
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else {
+                document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            
+            const finalScore = document.getElementById('finalScore');
+            finalScore.style.display = 'block';
+            
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${percentage}%)`;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            
+            loadQuestion();
+        }
+
+        // تحميل السؤال الأول عند بدء الصفحة
+        loadQuestion();
+    </script>
+</body>
+</html>

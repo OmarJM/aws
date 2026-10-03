@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إرادة الدنيا بعمل الآخرة - مادة الدراسات الإسلامية - الصف الثاني المتوسط">
+    <title>إرادة الدنيا بعمل الآخرة | الدراسات الإسلامية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        .lesson-hero { background: linear-gradient(135deg, #1e8449, #27ae60); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 40px; }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-family: 'Amiri', serif; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.95; }
+        .content-card { background: var(--card-bg); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .section-title { color: #1e8449; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #27ae60; padding-bottom: 10px; font-family: 'Amiri', serif; }
+        .highlight-box { background-color: rgba(30, 132, 73, 0.08); border-right: 4px solid #1e8449; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; color: #1e8449; }
+        .quran-box { background: linear-gradient(135deg, #fef9e7, #fdebd0); border: 2px solid #f39c12; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.4rem; color: #7d6608; line-height: 2; }
+        .hadith-box { background: linear-gradient(135deg, #eafaf1, #d5f5e3); border: 2px solid #27ae60; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.2rem; color: #1e8449; line-height: 1.8; }
+        .math-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border: 2px solid #27ae60; margin: 15px 0; text-align: center; font-family: 'Amiri', serif; font-size: 1.3rem; font-weight: 700; color: #1e8449; }
+        .step-box { background: var(--bg-color); padding: 20px; border-radius: 12px; border-right: 4px solid #1e8449; margin: 15px 0; }
+        .step-box h4 { color: #1e8449; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .step-box .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e8449; color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; }
+        .custom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        .custom-table th, .custom-table td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        .custom-table th { background-color: #1e8449; color: white; font-weight: 700; }
+        .custom-table tr:nth-child(even) { background-color: var(--bg-color); }
+        .custom-table tr:hover { background-color: rgba(30, 132, 73, 0.05); }
+        .two-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .three-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .column-card { background: var(--bg-color); padding: 20px; border-radius: 12px; }
+        .column-card h3 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-family: 'Amiri', serif; }
+        .golden-tip { background: linear-gradient(135deg, #fff3cd, #ffe69c); border-right: 5px solid #f39c12; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .golden-tip { background: linear-gradient(135deg, #3d3200, #4a3d00); }
+        .golden-tip h4 { margin-bottom: 10px; color: #856404; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .golden-tip h4 { color: #f1c40f; }
+        .warning-box { background: linear-gradient(135deg, #f8d7da, #f5c6cb); border-right: 5px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        [data-theme="dark"] .warning-box { background: linear-gradient(135deg, #3d1015, #4a1520); }
+        .warning-box h4 { color: #721c24; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        [data-theme="dark"] .warning-box h4 { color: #f0909a; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: #1e8449; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+        .example-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 4px solid #27ae60; margin-bottom: 15px; }
+        .example-card h4 { color: #1e8449; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .example-card .solution { background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border-right: 3px solid #27ae60; font-weight: 600; color: #1e8449; margin-top: 10px; }
+        .tree-list { list-style: none; padding: 0; }
+        .tree-list li { position: relative; padding: 10px 0 10px 30px; border-right: 2px solid #27ae60; margin-right: 10px; }
+        .tree-list li::before { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -8px; top: 12px; color: #1e8449; font-size: 0.8rem; background: var(--card-bg); padding: 2px; }
+        .tree-list li strong { color: #1e8449; }
+        .interactive-activity { background: linear-gradient(135deg, rgba(30, 132, 73, 0.05), rgba(39, 174, 96, 0.05)); border: 2px dashed #1e8449; padding: 25px; border-radius: 15px; margin-top: 20px; }
+        .interactive-activity h3 { color: #1e8449; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-family: 'Amiri', serif; }
+        .quiz-question { font-size: 1.1rem; font-weight: 600; margin: 15px 0; padding: 15px; background: var(--card-bg); border-radius: 10px; text-align: center; font-family: 'Amiri', serif; }
+        .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+        .quiz-option { padding: 12px; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 10px; text-align: center; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: 'Amiri', serif; }
+        .quiz-option:hover { border-color: #1e8449; transform: translateY(-2px); }
+        .quiz-option.correct { background: #d4edda; border-color: #27ae60; color: #155724; }
+        .quiz-option.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .feedback-box { margin-top: 15px; padding: 15px; border-radius: 10px; display: none; font-weight: 600; }
+        .feedback-box.show { display: block; animation: slideIn 0.3s ease; }
+        .feedback-box.success { background: #d4edda; color: #155724; border-right: 4px solid #27ae60; }
+        .feedback-box.error { background: #f8d7da; color: #721c24; border-right: 4px solid #dc3545; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
+        .quiz-counter { background: #1e8449; color: white; padding: 5px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; }
+        .btn { padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .btn-primary { background: #1e8449; color: white; }
+        .btn-outline { background: transparent; border: 2px solid #1e8449; color: #1e8449; }
+        .niyyah-card { background: var(--bg-color); padding: 20px; border-radius: 12px; border-top: 5px solid #1e8449; text-align: center; transition: transform 0.3s; }
+        .niyyah-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .niyyah-card h4 { margin-bottom: 10px; color: #1e8449; font-family: 'Amiri', serif; }
+        .niyyah-card .icon { font-size: 2.5rem; margin-bottom: 10px; color: #1e8449; }
+        .niyyah-card.correct { border-top-color: #27ae60; }
+        .niyyah-card.correct h4, .niyyah-card.correct .icon { color: #27ae60; }
+        .niyyah-card.wrong { border-top-color: #e74c3c; }
+        .niyyah-card.wrong h4, .niyyah-card.wrong .icon { color: #e74c3c; }
+        .niyyah-card.neutral { border-top-color: #3498db; }
+        .niyyah-card.neutral h4, .niyyah-card.neutral .icon { color: #3498db; }
+        .bismillah { text-align: center; font-family: 'Amiri', serif; font-size: 2rem; color: #1e8449; margin: 20px 0; }
+        @media (max-width: 768px) { .lesson-hero h1 { font-size: 1.6rem; } .custom-table { display: block; overflow-x: auto; } .two-columns, .three-columns { grid-template-columns: 1fr; } .quran-box { font-size: 1.1rem; } }
+    </style>
+</head>
+<body class="subject-islamic">
+
+    <div class="student-dedication"><i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي</div>
+
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo"><i class="fas fa-book-quran"></i> منصتي التعليمية</a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/islamic.html" class="active">الدراسات الإسلامية</a></li>
+                    <li><a href="../../quizzes/islamic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">الوضع الليلي</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../subjects/islamic.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة لمادة الدراسات الإسلامية</a>
+
+        <div class="lesson-hero">
+            <h1><i class="fas fa-heart"></i> إرادة الدنيا بعمل الآخرة</h1>
+            <p>معناها، أمثلتها، وحكمها في الإسلام</p>
+            <p>مادة الدراسات الإسلامية – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- الفكرة الكبيرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> الفكرة الكبيرة</h2>
+            <div class="highlight-box">
+                <i class="fas fa-quote-right"></i>
+                <strong>هل تعلم أن نفس العمل قد يكون لك أو عليك؟</strong>
+                <p style="margin-top: 10px;">الصلاة، الصيام، الصدقة، قراءة القرآن... كلها أعمال عظيمة، لكن <strong>النية</strong> هي التي تحدد قيمتها! إذا أردت بها الدنيا، خسرت الآخرة. وإذا أردت بها الآخرة، حصلت على <strong>الأجرين معاً</strong>. في هذا الدرس، سنتعلم كيف نحمي أعمالنا من هذا المرض الخطير!</p>
+            </div>
+
+            <div class="quran-box">
+                ﴿ مَن كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا وَهُمْ فِيهَا لَا يُبْخَسُونَ ۝ أُولَٰئِكَ الَّذِينَ لَيْسَ لَهُمْ فِي الْآخِرَةِ إِلَّا النَّارُ ۖ وَحَبِطَ مَا صَنَعُوا فِيهَا وَبَاطِلٌ مَّا كَانُوا يَعْمَلُونَ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة هود: 15-16]</p>
+            </div>
+        </div>
+
+        <!-- أولاً: معنى إرادة الدنيا بعمل الآخرة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> أولاً: معنى إرادة الدنيا بعمل الآخرة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>التعريف:</strong> أن يعمل الإنسان عملاً صالحاً (عبادة) لكنه يقصد به <strong>الدنيا</strong> لا الآخرة، مثل الرياء، أو طلب المدح، أو المال، أو الشهرة.
+            </div>
+
+            <div class="two-columns">
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <h4>النية الصحيحة</h4>
+                    <p>أن تعمل العبادة <strong>لوجه الله وحده</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> أصلي لأن الله أمرني، وأرجو ثوابه</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-times-circle"></i></div>
+                    <h4>إرادة الدنيا</h4>
+                    <p>أن تعمل العبادة <strong>لأغراض دنيوية</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> أصلي ليراني الناس ويمدحوني</p>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif; font-size: 1.4rem;">
+                العمل الصالح + النية الصحيحة = أجر عند الله<br>
+                العمل الصالح + نية الدنيا = حابط (لا أجر فيه)
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة توضيحية</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> في الصلاة</h4>
+                    <p><strong>النية الصحيحة:</strong> أصلي امتثالاً لأمر الله وطلباً لمرضاته</p>
+                    <p><strong>إرادة الدنيا:</strong> أصلي لأُرى أمام الناس بأنني متدين</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> في الصدقة</h4>
+                    <p><strong>النية الصحيحة:</strong> أتصدق ابتغاء وجه الله ومساعدة المحتاج</p>
+                    <p><strong>إرادة الدنيا:</strong> أتصدق ليُقال عني كريم أو لأحصل على شهرة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> في طلب العلم</h4>
+                    <p><strong>النية الصحيحة:</strong> أتعلم لأرفع الجهل عن نفسي وأُعلّم غيري</p>
+                    <p><strong>إرادة الدنيا:</strong> أتعلم لأحصل على وظيفة مرموقة أو مكانة اجتماعية</p>
+                </div>
+
+                <div class="solution">✅ النية هي التي تحدد قيمة العمل عند الله</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> قاعدة مهمة:</h4>
+                <p>العمل الصالح لا يُقبل إلا بشرطين:</p>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>الإخلاص:</strong> أن يكون العمل لله وحده</li>
+                    <li><strong>المتابعة:</strong> أن يكون وفق سنة النبي ﷺ</li>
+                </ul>
+                <p style="margin-top: 10px;">من فقد أحدهما، فقد حبط عمله!</p>
+            </div>
+        </div>
+
+        <!-- ثانياً: الأدلة من القرآن والسنة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-scroll"></i> ثانياً: الأدلة من القرآن والسنة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>حذّر الإسلام بشدة</strong> من إرادة الدنيا بعمل الآخرة، وجاءت الأدلة كثيرة في القرآن والسنة.
+            </div>
+
+            <div class="quran-box">
+                ﴿ فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الكهف: 110]</p>
+            </div>
+
+            <div class="quran-box">
+                ﴿ مَنْ كَانَ يُرِيدُ حَرْثَ الْآخِرَةِ نَزِدْ لَهُ فِي حَرْثِهِ ۖ وَمَن كَانَ يُرِيدُ حَرْثَ الدُّنْيَا نُؤتِهِ مِنْهَا وَمَا لَهُ فِي الْآخِرَةِ مِن نَّصِيبٍ ﴾
+                <p style="font-size: 0.9rem; margin-top: 10px;">[سورة الشورى: 20]</p>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله ﷺ:</p>
+                <p style="font-weight: 700; margin: 10px 0;">"إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى"</p>
+                <p style="font-size: 0.85rem; color: #666;">[متفق عليه]</p>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله :</p>
+                <p style="font-weight: 700; margin: 10px 0;">"من تعلم علماً مما يُبتغى به وجه الله لا يتعلمه إلا ليُصيب به عرضاً من الدنيا لم يجد عرف الجنة يوم القيامة"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه أبو داود]</p>
+            </div>
+
+            <div class="hadith-box">
+                <i class="fas fa-quote-right" style="color: #f39c12;"></i>
+                <p>قال رسول الله ﷺ:</p>
+                <p style="font-weight: 700; margin: 10px 0;">"من كانت نيته الدنيا، جعل الله فقره بين عينيه، وشتت أمره، ولم يأته من الدنيا إلا ما كُتب له"</p>
+                <p style="font-size: 0.85rem; color: #666;">[رواه ابن ماجه]</p>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> شرح الأدلة</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> حديث "إنما الأعمال بالنيات"</h4>
+                    <p>أعظم حديث في الإسلام، يُبيّن أن قيمة العمل تُقاس بالنية، لا بالصور الظاهرية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> حديث "من تعلم علماً..."</h4>
+                    <p>تحذير خاص من طلب العلم للدنيا (الوظيفة، الشهرة) لا للآخرة</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> حديث "من كانت نيته الدنيا"</h4>
+                    <p>يُبيّن العواقب الوخيمة: الفقر، تشتت الأمر، وحرمان البركة</p>
+                </div>
+
+                <div class="solution">✅ النية الخالصة شرط أساسي لقبول العمل</div>
+            </div>
+        </div>
+
+        <!-- ثالثاً: صور إرادة الدنيا -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> ثالثاً: صور إرادة الدنيا بعمل الآخرة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>إرادة الدنيا</strong> لها صور متعددة، بعضها خفي لا يشعر به الإنسان!
+            </div>
+
+            <div class="three-columns">
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <h4>1. الرياء</h4>
+                    <p>إظهار العبادة للناس ليُمدح</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> إطالة الصلاة أمام الناس</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>2. السمعة</h4>
+                    <p>العمل ليشتهر بين الناس</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> نشر الصدقة على وسائل التواصل</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-coins"></i></div>
+                    <h4>3. طلب المال</h4>
+                    <p>العبادة لأجل الكسب المادي</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> تعلم القرآن ليُؤجَّر عليه فقط</p>
+                </div>
+            </div>
+
+            <div class="three-columns">
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <h4>4. طلب الجاه</h4>
+                    <p>العبادة للوصول إلى مناصب</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> التظاهر بالدين للحصول على وظيفة</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-thumbs-up"></i></div>
+                    <h4>5. طلب المدح</h4>
+                    <p>العمل ليُقال "صالح" أو "تقي"</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> كثرة الذكر أمام الناس</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-heart-broken"></i></div>
+                    <h4>6. العجب</h4>
+                    <p>الإعجاب بالنفس والعمل</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><strong>مثال:</strong> الفخر بالعبادة والتكبر</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> أمثلة من الحياة اليومية</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> في الصلاة</h4>
+                    <p>يصلي في الصف الأول فقط إذا رآه الناس، ويتأخر إذا كان وحده</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> في الصدقة</h4>
+                    <p>يتصدق بمبالغ كبيرة أمام الناس، ولا يتصدق في السر</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> في الصيام</h4>
+                    <p>يُظهر صيامه للناس ليُمدح، ولا يصوم في السفر أو المرض أمام أحد</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> في طلب العلم</h4>
+                    <p>يتعلم ليُقال عنه "عالم" أو "شيخ"، لا ليعمل بعلمه</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> في الجهاد</h4>
+                    <p>يقاتل ليُقال "شجاع" أو "بطل"، لا لرفع كلمة الله</p>
+                </div>
+
+                <div class="solution">✅ كل هذه الصور تُحبط العمل عند الله</div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>بعض هذه الصور <strong>خفية جداً</strong>، قد لا يشعر بها الإنسان! لذلك كان السلف الصالح يخافون من الرياء أكثر من الشرك الأكبر.</p>
+            </div>
+        </div>
+
+        <!-- رابعاً: حكم إرادة الدنيا -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> رابعاً: حكم إرادة الدنيا بعمل الآخرة</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>الحكم الشرعي:</strong> إرادة الدنيا بعمل الآخرة <strong>محرمة</strong> وتُعدّ من <strong>الشرك الأصغر</strong>.
+            </div>
+
+            <div class="two-columns">
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-ban"></i></div>
+                    <h4>إذا كانت النية خالصة للدنيا</h4>
+                    <p>العمل <strong>حابط تماماً</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">لا أجر عليه، بل قد يكون عليه إثم</p>
+                </div>
+                <div class="niyyah-card neutral">
+                    <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <h4>إذا كانت النية مختلطة</h4>
+                    <p>العمل <strong>ناقص الأجر</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يُحبط الجزء الدنيوي، ويبقى الجزء الأخروي</p>
+                </div>
+            </div>
+
+            <div class="math-box" style="font-family: 'Amiri', serif; font-size: 1.3rem;">
+                إرادة الدنيا = شرك أصغر = يُحبط العمل
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> تفصيل الحكم</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> من عمل لله والدنيا معاً</h4>
+                    <p>عمله <strong>مردود</strong> (حابط) لأن الله غني عن الشرك</p>
+                    <div class="hadith-box" style="font-size: 1rem;">
+                        <p>قال ﷺ: "من عمل عملاً أشرك فيه معي غيري، تركته وشركه"</p>
+                        <p style="font-size: 0.85rem;">[رواه مسلم]</p>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> من عمل للدنيا فقط</h4>
+                    <p>عمله <strong>حابط تماماً</strong>، ولا أجر له في الآخرة</p>
+                    <div class="quran-box" style="font-size: 1.1rem;">
+                        ﴿ مَّثَلُ الَّذِينَ كَفَرُوا بِرَبِّهِمْ ۖ أَعْمَالُهُمْ كَرَمَادٍ اشْتَدَّتْ بِهِ الرِّيحُ فِي يَوْمٍ عَاصِفٍ ﴾
+                        <p style="font-size: 0.85rem;">[سورة إبراهيم: 18]</p>
+                    </div>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> من عمل لله ثم بدت له الدنيا</h4>
+                    <p>إن <strong>دفعها</strong> فله أجره، وإن <strong>استمر</strong> حبط عمله</p>
+                </div>
+
+                <div class="solution">✅ النية الخالصة شرط أساسي لقبول العمل</div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> الفرق بين إرادة الدنيا المحرمة والمباحة:</h4>
+                <ul style="padding-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>المحرمة:</strong> أن تكون الدنيا هي <strong>الهدف الأساسي</strong> من العبادة</li>
+                    <li><strong>المباحة:</strong> أن تكون الدنيا <strong>نتيجة ثانوية</strong> للعبادة (مثل الرزق الذي يأتي بطاعة الله)</li>
+                </ul>
+                <div class="quran-box" style="font-size: 1.1rem; margin-top: 15px;">
+                    ﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾
+                    <p style="font-size: 0.85rem;">[سورة الطلاق: 2-3]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خامساً: عواقب إرادة الدنيا -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-skull-crossbones"></i> خامساً: عواقب إرادة الدنيا</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>إرادة الدنيا</strong> لها عواقب وخيمة في الدنيا والآخرة.
+            </div>
+
+            <div class="three-columns">
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-fire"></i></div>
+                    <h4>1. حبط العمل</h4>
+                    <p>يُحبط الله العمل بالرياء</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">لا يُكتب لصاحبه أجر</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-heart-broken"></i></div>
+                    <h4>2. مرض القلب</h4>
+                    <p>يُضعف القلب ويُميته</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يمنع الخشوع والإيمان</p>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-user-slash"></i></div>
+                    <h4>3. البعد عن الله</h4>
+                    <p>يجعل العبد أسير الناس</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يفقد حلاوة المناجاة</p>
+                </div>
+            </div>
+
+            <div class="two-columns" style="margin-top: 20px;">
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <h4>4. العقاب يوم القيامة</h4>
+                    <p>يُنادى بالمرائي يوم القيامة</p>
+                    <div class="hadith-box" style="margin-top: 10px; font-size: 0.95rem;">
+                        <p>"أيها الناس، من كان يعمل عملاً أشرك فيه معي غيري، فأنا أغنى الشركاء عن الشرك"</p>
+                    </div>
+                </div>
+                <div class="niyyah-card wrong">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h4>5. فساد المجتمع</h4>
+                    <p>يُنشر النفاق والتمثيل</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">يضيع الصدق والإخلاص بين الناس</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> قصة تحذيرية: أول من تُسعر بهم النار</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الشهيد</h4>
+                    <p>قُتل في سبيل الله، لكن نيته أن يُقال "شجاع"</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> العالم</h4>
+                    <p>تعلّم وعلّم وقرأ القرآن، لكن نيته أن يُقال "عالم"</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> المتصدق</h4>
+                    <p>تصدق وأعطى، لكن نيته أن يُقال "كريم"</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> المصير</h4>
+                    <p>يُقال لهم: كذبتم، إنما أردتم أن يُقال، فادخلوا النار!</p>
+                </div>
+
+                <div class="solution">✅ النية الصالحة شرط لقبول العمل</div>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> تنبيه مهم:</h4>
+                <p>الرياء <strong>أخفى من دبيب النمل</strong> على الصخرة السوداء في الليلة الظلماء! لذلك كان السلف يخافون منه أشد الخوف.</p>
+            </div>
+        </div>
+
+        <!-- سادساً: كيف نحمي أنفسنا؟ -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-shield-alt"></i> سادساً: كيف نحمي أنفسنا من إرادة الدنيا؟</h2>
+            
+            <div class="highlight-box">
+                <i class="fas fa-star"></i>
+                <strong>العلاج:</strong> مجاهدة النفس، ومراقبة القلب، والالتزام بالشرع.
+            </div>
+
+            <div class="three-columns">
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-book-quran"></i></div>
+                    <h4>1. العلم</h4>
+                    <p>معرفة خطر الرياء وحكمه</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">وأنه يُحبط العمل</p>
+                </div>
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-praying-hands"></i></div>
+                    <h4>2. الدعاء</h4>
+                    <p>سؤال الله الإخلاص</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">والاستعاذة من الشرك</p>
+                </div>
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-eye-slash"></i></div>
+                    <h4>3. إخفاء العمل</h4>
+                    <p>الحرص على الأعمال الخفية</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">التي لا يراها إلا الله</p>
+                </div>
+            </div>
+
+            <div class="two-columns" style="margin-top: 20px;">
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h4>4. محاسبة النفس</h4>
+                    <p>مراقبة النية قبل العمل وبعده</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">ومحاسبتها على كل عمل</p>
+                </div>
+                <div class="niyyah-card correct">
+                    <div class="icon"><i class="fas fa-star-and-crescent"></i></div>
+                    <h4>5. تذكر الموت والآخرة</h4>
+                    <p>تذكر أن كل عمل سيعرض على الله</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">ولا ينفع فيه إلا الإخلاص</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-pen"></i> خطوات عملية للعلاج</h4>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> تجنّب مدح الناس</h4>
+                    <p>لا تفرح بمدحهم، وتذكر أن مدحهم لا ينفعك عند الله</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> أخفِ أعمالك الصالحة</h4>
+                    <p>اجتهد في إخفاء الصدقة والصيام والقيام ما استطعت</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> استعذ بالله</h4>
+                    <p>قل: "اللهم إني أعوذ بك أن أشرك بك شيئاً وأنا أعلم، وأستغفرك لما لا أعلم"</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">4</span> تذكر عظمة الله</h4>
+                    <p>كلما هممت بعمل، تذكر أنك بين يدي الله، وأنه يراك</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">5</span> صحبة المخلصين</h4>
+                    <p>اختر من يُعينك على الإخلاص ويحذرك من الرياء</p>
+                </div>
+
+                <div class="quran-box" style="font-size: 1.1rem; margin-top: 15px;">
+                    ﴿ قُلْ إِنَّمَا أَنَا بَشَرٌ مِّثْلُكُمْ يُوحَىٰ إِلَيَّ أَنَّمَا إِلَٰهُكُمْ إِلَٰهٌ وَاحِدٌ ۖ فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا ﴾
+                    <p style="font-size: 0.85rem; margin-top: 5px;">[سورة الكهف: 110]</p>
+                </div>
+            </div>
+
+            <div class="golden-tip">
+                <h4><i class="fas fa-lightbulb"></i> دعاء مهم:</h4>
+                <p>كان النبي ﷺ يُكثر من قول:</p>
+                <div class="hadith-box" style="margin-top: 10px;">
+                    <p style="font-weight: 700;">"اللهم إني أعوذ بك من أن أشرك بك شيئاً وأنا أعلم، وأستغفرك لما لا أعلم"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- سابعاً: تطبيقات حياتية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-life-ring"></i> سابعاً: تطبيقات حياتية</h2>
+            
+            <div class="example-card">
+                <h4><i class="fas fa-mosque"></i> مثال 1: في الصلاة</h4>
+                <p><strong>المسألة:</strong> تطيل الصلاة إذا كنت في المسجد، وتقصّرها إذا صليت وحدك. ما الحل؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> التشخيص</h4>
+                    <p>هذا من علامات الرياء، لأنك تُظهر العبادة للناس</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> العلاج</h4>
+                    <p>اجعل صلاتك في الخلوة كصلاتك في العلن، وحاسب نفسك</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> التطبيق</h4>
+                    <p>صلِّ في بيتك نوافل لا يعلم بها إلا الله</p>
+                </div>
+
+                <div class="solution">✅ الصلاة في الخلوة علاج للرياء</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-hand-holding-heart"></i> مثال 2: في الصدقة</h4>
+                <p><strong>المسألة:</strong> تتصدق أمام الناس لتُمدح. ما التصرف الصحيح؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الحكم</h4>
+                    <p>هذا رياء يُحبط الأجر</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الحل</h4>
+                    <p>أخفِ صدقتك، وضعها في يد الفقير سراً</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> القاعدة</h4>
+                    <p>يسارك لا يعلم ما تنفق يمينك</p>
+                </div>
+
+                <div class="solution">✅ الصدقة في السر أفضل من العلن</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-graduation-cap"></i> مثال 3: في الدراسة</h4>
+                <p><strong>المسألة:</strong> تدرس بجد لتُقال عنك "متفوق". كيف تُصحح النية؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> تجديد النية</h4>
+                    <p>انوي أن تنفع نفسك وأمتك، وأن ترفع الجهل عنك</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> الإخلاص</h4>
+                    <p>اجعل طلب العلم عبادة لله، لا لمدح الناس</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> النتيجة</h4>
+                    <p>يُكتب لك أجران: أجر العلم، وأجر الإخلاص</p>
+                </div>
+
+                <div class="solution">✅ النية الصالحة تحول العمل إلى عبادة</div>
+            </div>
+
+            <div class="example-card">
+                <h4><i class="fas fa-mobile-alt"></i> مثال 4: في وسائل التواصل</h4>
+                <p><strong>المسألة:</strong> تنشر صور عباداتك لتُمدح. ما الحكم؟</p>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">1</span> الحكم</h4>
+                    <p>هذا رياء وسمعة، يُحبط العمل</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">2</span> البديل</h4>
+                    <p>انشر العلم النافع، ولا تنشر أعمالك الشخصية</p>
+                </div>
+                
+                <div class="step-box" style="margin: 15px 0;">
+                    <h4><span class="step-number">3</span> القاعدة</h4>
+                    <p>لا لا تجعل وسائل التواصل سبباً لإحباط أعمالك</p>
+                </div>
+
+                <div class="solution">✅ وسائل التواصل أداة للخير لا للرياء</div>
+            </div>
+        </div>
+
+        <!-- ثامناً: تنبيهات وأخطاء شائعة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-exclamation-circle"></i> ثامناً: تنبيهات وأخطاء شائعة</h2>
+            
+            <div class="warning-box">
+                <h4><i class="fas fa-times-circle"></i> خطأ 1: الوسوسة في النية</h4>
+                <p>بعض الناس يوسوس له الشيطان: "لعلك مرائي!" فيترك العمل. هذا <strong>خطأ</strong>! الوسوسة في النية ليست رياءً.</p>
+                <div class="example-card" style="margin-top: 15px; background: rgba(255, 255, 255, 0.5);">
+                    <p><strong>✅ الصحيح:</strong> استعذ بالله وأكمل عملك</p>
+                    <p style="margin-top: 8px;"><strong>❌ الخطأ:</strong> ترك العمل بسبب الوسوسة</p>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 2: الفرح بالمدح على الطاعة</h4>
+                <p>إذا مُدحت على عمل صالح، فلا تفرح بالمدح، بل <strong>احمد الله</strong> على التوفيق.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 3: الاعتقاد أن الرياء لا يؤثر</h4>
+                <p>الرياء <strong>يُحبط العمل</strong>، وقد يكون سبباً في دخول النار! فلا تستهن به.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 4: إخبار الناس بالعبادة للتشجيع</h4>
+                <p>بعض الناس يبرر إخباره بعباداته بـ"التشجيع". هذا <strong>ذريعة للرياء</strong>، إلا إذا كانت مصلحة شرعية معتبرة.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 5: اليأس من العلاج</h4>
+                <p>من وجد في نفسه شيئاً من الرياء، فلا ييأس، بل <strong>يجاهد نفسه</strong> ويتوب إلى الله.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <h4><i class="fas fa-times-circle"></i> خطأ 6: الظن بالناس سوءاً</h4>
+                <p>لا تحكم على الناس بالرياء! <strong>نحن نرى الظاهر</strong>، والله يتولى السرائر.</p>
+            </div>
+        </div>
+
+        <!-- تاسعاً: ملخص الدرس -->
+        <div class="content-card" style="border-right: 5px solid #1e8449;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;"><i class="fas fa-flag-checkered"></i> ملخص الدرس</h2>
+            <ul class="tree-list">
+                <li><strong>إرادة الدنيا:</strong> أن تعمل العبادة لأغراض دنيوية لا لوجه الله.</li>
+                <li><strong>الحكم:</strong> محرمة، من الشرك الأصغر، تُحبط العمل.</li>
+                <li><strong>الصور:</strong> الرياء، السمعة، طلب المال، الجاه، المدح، العجب.</li>
+                <li><strong>العواقب:</strong> حبط العمل، مرض القلب، البعد عن الله، العقاب يوم القيامة.</li>
+                <li><strong>العلاج:</strong> العلم، الدعاء، إخفاء العمل، محاسبة النفس، تذكر الآخرة.</li>
+                <li><strong>النية الصحيحة:</strong> أن تعمل العبادة لوجه الله وحده.</li>
+                <li><strong>تنبيه:</strong> الوسوسة في النية ليست رياءً، فلا تترك العمل بسببها.</li>
+                <li><strong>تنبيه:</strong> لا نحكم على الناس بالرياء، فالله يتولى السرائر.</li>
+            </ul>
+        </div>
+
+        <!-- نشاط تفاعلي -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> نشاط تفاعلي: اختبر فهمك!</h2>
+            
+            <div class="interactive-activity">
+                <h3><i class="fas fa-hand-pointer"></i> اختر الإجابة الصحيحة</h3>
+                
+                <div id="quizContainer"></div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prevBtn" disabled><i class="fas fa-arrow-right"></i> السابق</button>
+                    <span class="quiz-counter" id="quizCounter">السؤال 1 من 6</span>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div id="finalScore" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background: var(--bg-color); border-radius: 15px;">
+                    <h3 style="color: #1e8449; margin-bottom: 10px;"> أحسنت! أكملت النشاط</h3>
+                    <p style="font-size: 1.3rem; font-weight: 700;">نتيجتك: <span id="scoreDisplay" style="color: #27ae60;"></span></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 15px;"><i class="fas fa-redo"></i> إعادة النشاط</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: #1e8449; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+
+    <script>
+        const quizQuestions = [
+            {
+                sentence: "ما معنى إرادة الدنيا بعمل الآخرة؟",
+                options: [
+                    "العمل للدنيا فقط",
+                    "العمل الصالح بنية دنيوية",
+                    "ترك العمل الصالح",
+                    "العمل للآخرة فقط"
+                ],
+                correct: 1,
+                explanation: "إرادة الدنيا بعمل الآخرة هي أن يعمل الإنسان عملاً صالحاً لكنه يقصد به الدنيا لا الآخرة."
+            },
+            {
+                sentence: "ما حكم إرادة الدنيا بعمل الآخرة؟",
+                options: ["مباح", "مستحب", "محرمة ومن الشرك الأصغر", "مكروه فقط"],
+                correct: 2,
+                explanation: "إرادة الدنيا بعمل الآخرة محرمة وتُعدّ من الشرك الأصغر الذي يُحبط العمل."
+            },
+            {
+                sentence: "أي من هذه النوايا صحيحة؟",
+                options: [
+                    "أصلي ليراني الناس",
+                    "أصلي لأُمدح",
+                    "أصلي لوجه الله وحده",
+                    "أصلي لأحصل على مكانة"
+                ],
+                correct: 2,
+                explanation: "النية الصحيحة هي أن تعمل العبادة لوجه الله وحده، لا لمدح الناس أو طلب الدنيا."
+            },
+            {
+                sentence: "ما أثر الرياء على العمل؟",
+                options: ["يزيده", "يُحبطه", "لا يؤثر عليه", "يجعله مستحباً"],
+                correct: 1,
+                explanation: "الرياء يُحبط العمل، فلا يُكتب لصاحبه أجر عند الله."
+            },
+            {
+                sentence: "كيف نعالج مرض الرياء؟",
+                options: [
+                    "إظهار الأعمال أكثر",
+                    "إخفاء الأعمال الصالحة",
+                    "الفرح بالمدح",
+                    "التحدث عن العبادة"
+                ],
+                correct: 1,
+                explanation: "من أهم علاج الرياء إخفاء الأعمال الصالحة، والحرص على الأعمال الخفية التي لا يراها إلا الله."
+            },
+            {
+                sentence: "ما الدعاء الذي كان النبي ﷺ يستعيذ به من الشرك؟",
+                options: [
+                    "اللهم اهدني",
+                    "اللهم إني أعوذ بك من أن أشرك بك شيئاً وأنا أعلم",
+                    "اللهم ارزقني",
+                    "اللهم اغفر لي"
+                ],
+                correct: 1,
+                explanation: "كان النبي  يقول: 'اللهم إني أعوذ بك من أن أشرك بك شيئاً وأنا أعلم، وأستغفرك لما لا أعلم'."
+            }
+        ];
+
+        let currentQuestion = 0, score = 0;
+        let answered = new Array(quizQuestions.length).fill(false);
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuestion];
+            const container = document.getElementById('quizContainer');
+            let html = `<div class="quiz-question">${q.sentence}</div><div class="quiz-options">`;
+            q.options.forEach((opt, i) => { html += `<div class="quiz-option" onclick="checkAnswer(${i})">${opt}</div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+            updateCounter(); updateButtons();
+            document.getElementById('feedbackBox').className = 'feedback-box';
+        }
+
+        function checkAnswer(idx) {
+            if (answered[currentQuestion]) return;
+            const q = quizQuestions[currentQuestion];
+            const opts = document.querySelectorAll('.quiz-option');
+            const fb = document.getElementById('feedbackBox');
+            answered[currentQuestion] = true;
+            if (idx === q.correct) {
+                opts[idx].classList.add('correct');
+                fb.className = 'feedback-box show success';
+                fb.innerHTML = `<i class="fas fa-check-circle"></i> إجابة صحيحة! ${q.explanation}`;
+                score++;
+            } else {
+                opts[idx].classList.add('wrong');
+                opts[q.correct].classList.add('correct');
+                fb.className = 'feedback-box show error';
+                fb.innerHTML = `<i class="fas fa-times-circle"></i> إجابة خاطئة. ${q.explanation}`;
+            }
+            opts.forEach(o => o.style.pointerEvents = 'none');
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) { currentQuestion++; loadQuestion(); }
+            else { showFinalScore(); }
+        }
+        function previousQuestion() { if (currentQuestion > 0) { currentQuestion--; loadQuestion(); } }
+        function updateCounter() { document.getElementById('quizCounter').textContent = `السؤال ${currentQuestion + 1} من ${quizQuestions.length}`; }
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answered[currentQuestion];
+            if (currentQuestion === quizQuestions.length - 1 && answered[currentQuestion]) {
+                document.getElementById('nextBtn').innerHTML = 'إنهاء <i class="fas fa-flag-checkered"></i>';
+            } else { document.getElementById('nextBtn').innerHTML = 'التالي <i class="fas fa-arrow-left"></i>'; }
+        }
+        function showFinalScore() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('feedbackBox').style.display = 'none';
+            const fs = document.getElementById('finalScore'); fs.style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${score} من ${quizQuestions.length} (${Math.round((score / quizQuestions.length) * 100)}%)`;
+        }
+        function resetQuiz() {
+            currentQuestion = 0; score = 0;
+            answered = new Array(quizQuestions.length).fill(false);
+            document.getElementById('quizContainer').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'flex';
+            document.getElementById('feedbackBox').style.display = 'block';
+            document.getElementById('finalScore').style.display = 'none';
+            loadQuestion();
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدخل الوحدة الأولى: القيم الإسلامية - مادة لغتي الخالدة - الصف الثاني المتوسط">
+    <title>مدخل الوحدة الأولى: القيم الإسلامية | لغتي الخالدة</title>
+    
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات الأنماط المركزية -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/subjects-specific.css">
+
+    <style>
+        /* أنماط خاصة بصفحة الدرس */
+        .lesson-hero {
+            background: linear-gradient(135deg, var(--subject-primary), var(--subject-accent));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .lesson-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .lesson-hero p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            color: var(--subject-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--subject-secondary);
+            padding-bottom: 10px;
+        }
+
+        .quran-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--subject-primary);
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid var(--subject-secondary);
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+        }
+        .custom-table th {
+            background-color: var(--subject-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: var(--bg-color);
+        }
+        .custom-table tr:hover {
+            background-color: rgba(26, 95, 122, 0.05);
+        }
+
+        .tree-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tree-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-right: 2px solid var(--subject-secondary);
+            margin-right: 10px;
+        }
+        .tree-list li::before {
+            content: '\f054'; /* FontAwesome chevron-left */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -8px;
+            top: 12px;
+            color: var(--subject-primary);
+            font-size: 0.8rem;
+            background: var(--card-bg);
+            padding: 2px;
+        }
+        .tree-list li strong {
+            color: var(--subject-primary);
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .activity-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--subject-secondary);
+        }
+        .activity-card h4 {
+            color: var(--subject-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .checklist li i {
+            color: var(--success-color);
+            margin-top: 4px;
+        }
+
+        .golden-tip {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        [data-theme="dark"] .golden-tip {
+            background: linear-gradient(135deg, #3d3200, #4a3d00);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--subject-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+            background: var(--subject-accent);
+        }
+
+        @media (max-width: 768px) {
+            .lesson-hero h1 { font-size: 1.6rem; }
+            .custom-table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body class="subject-arabic">
+
+    <!-- الشريط العلوي -->
+    <div class="student-dedication">
+        <i class="fas fa-graduation-cap"></i> مخصص للطالب: أوس عبد الجبار الأحمدي
+    </div>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <i class="fas fa-book-open"></i>
+                    منصتي التعليمية
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../subjects/arabic.html" class="active">لغتي</a></li>
+                    <li><a href="../../quizzes/arabic-quiz.html">الاختبارات</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">الوضع الليلي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        
+        <a href="../../subjects/arabic.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة لمادة لغتي الخالدة
+        </a>
+
+        <!-- قسم العنوان -->
+        <div class="lesson-hero">
+            <h1><i class="fas fa-star-and-crescent"></i> مدخل الوحدة الأولى: القيم الإسلامية</h1>
+            <p>مادة لغتي الخالدة – الصف الثاني المتوسط – الفصل الدراسي الأول 1448هـ</p>
+        </div>
+
+        <!-- أولاً: التمهيد العام -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-door-open"></i> أولاً: التمهيد العام للوحدة</h2>
+            <div class="quran-text" style="text-align: center; border: none; background: transparent; font-size: 1.6rem;">
+                الحمد لله رب العالمين، والصلاة والسلام على أشرف الأنبياء والمرسلين، نبينا محمد وعلى آله وصحبه أجمعين.
+            </div>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                أبنائي وبناتي طلاب الصف الثاني المتوسط، أهلاً ومرحبًا بكم في عام دراسي جديد مليء بالعلم والمعرفة. نبدأ رحلتنا هذا الفصل مع الوحدة الأولى التي تحمل عنوانًا عظيمًا يمسّ حياتنا اليومية في كل لحظة، ألا وهو: <strong style="color: var(--subject-primary);">«القيم الإسلامية»</strong>.
+            </p>
+            <p style="line-height: 1.8;">
+                تخيّلوا معي مجتمعًا بلا صدقٍ ولا أمانةٍ ولا إحسان... كيف ستكون الحياة؟ بالتأكيد ستكون فوضى عارمة! لذلك جاءت شريعتنا الإسلامية الغرّاء لتغرس في نفوسنا قيمًا نبيلة تُصلح الفرد والمجتمع معًا. هذه الوحدة ليست مجرد دروس تُحفظ وتُنسى، بل هي منهج حياة نعيشه في تعاملاتنا مع والدينا، ومعلمينا، وأصدقائنا، وحتى مع أنفسنا.
+            </p>
+        </div>
+
+        <!-- ثانياً: الأهداف التعليمية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-bullseye"></i> ثانياً: الأهداف التعليمية العامة للوحدة</h2>
+            
+            <h3 style="color: var(--subject-secondary); margin: 20px 0 10px;"><i class="fas fa-brain"></i> أ- الأهداف المعرفية (ماذا سأتعلم؟)</h3>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>#</th><th>الهدف المعرفي</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>أن يتعرّف الطالب على مفهوم القيم الإسلامية وأهميتها في حياة الفرد والمجتمع.</td></tr>
+                        <tr><td>2</td><td>أن يستخلص الطالب الأفكار الرئيسة والجزئية من النصوص المقرّرة (الاستماع والقراءة).</td></tr>
+                        <tr><td>3</td><td>أن يُفرّق الطالب بين المعاني الحقيقية والمجازية في المفردات الجديدة.</td></tr>
+                        <tr><td>4</td><td>أن يتعرّف الطالب على الصنف اللغوي المقرّر في الوحدة ويوظّفه في جمل مفيدة.</td></tr>
+                        <tr><td>5</td><td>أن يُحلّل الطالب الأسلوب اللغوي المقرّر ويُميّزه عن غيره من الأساليب.</td></tr>
+                        <tr><td>6</td><td>أن يُعرِب الطالب التراكيب النحوية المقرّرة في الوظيفة النحوية إعرابًا صحيحًا.</td></tr>
+                        <tr><td>7</td><td>أن يتعرّف الطالب على القاعدة الإملائية المقرّرة ويطبّقها في كتاباته.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--subject-secondary); margin: 20px 0 10px;"><i class="fas fa-tools"></i> ب- الأهداف المهارية (ماذا سأستطيع أن أفعل؟)</h3>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>#</th><th>الهدف المهاري</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>أن يقرأ الطالب النص قراءةً جهريةً معبّرةً خاليةً من الأخطاء.</td></tr>
+                        <tr><td>2</td><td>أن يستمع الطالب إلى نصٍّ مسموعٍ ويُجيب عن أسئلته إجابةً دقيقة.</td></tr>
+                        <tr><td>3</td><td>أن يكتب الطالب نصًّا إنشائيًّا قصيرًا يتضمّن القيم الإسلامية بأسلوب سليم.</td></tr>
+                        <tr><td>4</td><td>أن يُحاور الطالب زملاءه بلغة عربية فصيحة حول موضوعات القيم.</td></tr>
+                        <tr><td>5</td><td>أن يرسم الطالب الحروف والكلمات وفق قواعد الخط العربي المقرّرة.</td></tr>
+                        <tr><td>6</td><td>أن يُوظّف الطالب المفردات الجديدة في سياقات تواصلية متنوعة.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--subject-secondary); margin: 20px 0 10px;"><i class="fas fa-heart"></i> ج- الأهداف الوجدانية (ماذا سأشعر وأقتنع به؟)</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> أن يعتزّ الطالب بقيمه الإسلامية ويفتخر بانتمائه لهذا الدين العظيم.</li>
+                <li><i class="fas fa-check-circle"></i> أن يحرص الطالب على التخلّق بالأخلاق الحميدة في حياته اليومية.</li>
+                <li><i class="fas fa-check-circle"></i> أن يُقدّر الطالب عظمة اللغة العربية باعتبارها لغة القرآن الكريم.</li>
+                <li><i class="fas fa-check-circle"></i> أن يستشعر الطالب المسؤولية تجاه نشر القيم النبيلة في محيطه.</li>
+            </ul>
+        </div>
+
+        <!-- ثالثاً: المفردات الجديدة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-book"></i> ثالثاً: المفردات الجديدة والتراكيب اللغوية</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 15px;">📚 أ- بنك المفردات الرئيسة للوحدة</h3>
+            
+            <h4 style="margin: 15px 0 10px; color: var(--text-color);">1. مجال القيم والأخلاق:</h4>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>المفردة</th><th>المعنى</th><th>المثال</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>التَّقْوَى</strong></td><td>خشية الله تعالى بامتثال أوامره واجتناب نواهيه</td><td>التقوى هي زاد المؤمن في الدنيا والآخرة.</td></tr>
+                        <tr><td><strong>الإحْسَان</strong></td><td>بذل الخير والمعروف للناس</td><td>الإحسان إلى الجيران من أعظم القربات.</td></tr>
+                        <tr><td><strong>الأَمَانَة</strong></td><td>حفظ ما يُؤتمن عليه الإنسان وأداؤه لأهله</td><td>الأمانة خُلق الأنبياء جميعًا.</td></tr>
+                        <tr><td><strong>الصِّدْق</strong></td><td>مطابقة القول للواقع والحقيقة</td><td>الصدق منجاةٌ لصاحبه في الدنيا والآخرة.</td></tr>
+                        <tr><td><strong>الإخْلَاص</strong></td><td>تصفية العمل من كل شائبةٍ لوجه الله</td><td>الإخلاص سرّ قبول الأعمال عند الله.</td></tr>
+                        <tr><td><strong>البِرّ</strong></td><td>الإكثار من فعل الخير والطاعة</td><td>برّ الوالدين من أوجب الواجبات.</td></tr>
+                        <tr><td><strong>الصَّبْر</strong></td><td>حبس النفس عن الجزع وتحمّل المشاق</td><td>الصبر مفتاح الفرج بإذن الله.</td></tr>
+                        <tr><td><strong>التَّوَاضُع</strong></td><td>عدم التكبّر على الناس ولين الجانب</td><td>التواضع يرفع صاحبه بين الناس.</td></tr>
+                        <tr><td><strong>العِفَّة</strong></td><td>النزاهة عن الحرام وصون النفس</td><td>العفّة تاجٌ على رأس المؤمن.</td></tr>
+                        <tr><td><strong>الوَفَاء</strong></td><td>الإخلاص في العهد وحفظه</td><td>الوفاء بالعقود من صفات المؤمنين.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 style="margin: 25px 0 10px; color: var(--text-color);">2. مجال الأفعال المرتبطة بالقيم:</h4>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>الفعل</th><th>المعنى</th><th>المثال</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>ارْتَقَى</strong></td><td>صعد وعلا في المكانة</td><td>ارتقى الطالب بأخلاقه بين زملائه.</td></tr>
+                        <tr><td><strong>تَجَلَّى</strong></td><td>ظهر ووضح</td><td>تجلّى صدقُ المؤمن في أفعاله.</td></tr>
+                        <tr><td><strong>اسْتَقَامَ</strong></td><td>اعتدل والتزم الطريق الصحيح</td><td>استقام الشاب على طاعة الله.</td></tr>
+                        <tr><td><strong>تَحَلَّى</strong></td><td>تزيّن وتخلّق</td><td>تحلّى المسلم بالصبر والرضا.</td></tr>
+                        <tr><td><strong>أَثَّرَ</strong></td><td>ترك أثرًا وبصمةً</td><td>أثّرت نصيحة الأب في ابنه.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 style="margin: 25px 0 10px; color: var(--text-color);">3. مجال الصفات والأحوال:</h4>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>الصفة</th><th>المعنى</th><th>المثال</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>نَبِيل</strong></td><td>رفيع الخُلق والشرف</td><td>الرجل النبيل يُعفو عمّن أخطأ.</td></tr>
+                        <tr><td><strong>سَوِيّ</strong></td><td>مستقيم ومعتدل</td><td>المجتمع السويّ يسوده العدل.</td></tr>
+                        <tr><td><strong>فَاضِل</strong></td><td>ذو فضلٍ وخُلقٍ حسن</td><td>المعلم الفاضل قدوةٌ لطلابه.</td></tr>
+                        <tr><td><strong>رَشِيد</strong></td><td>صاحب حكمةٍ وصواب</td><td>القرار الرشيد يُحقّق المصلحة.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 30px 0 15px;">📚 ب- التراكيب والعبارات الاصطلاحية</h3>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>العبارة</th><th>المعنى</th><th>السياق</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>حبلُ اللهِ المتين</strong></td><td>القرآن الكريم</td><td>تمسّكوا بحبل الله المتين.</td></tr>
+                        <tr><td><strong>قدوةٌ حسنة</strong></td><td>نموذجٌ يُحتذى به</td><td>كان النبي ﷺ قدوة حسنة لنا.</td></tr>
+                        <tr><td><strong>ثمرةُ الإيمان</strong></td><td>نتيجة الإيمان وجزاؤه</td><td>الصدق ثمرة من ثمرات الإيمان.</td></tr>
+                        <tr><td><strong>زادُ الآخرة</strong></td><td>ما يتزوّد به المسلم ليوم القيامة</td><td>التقوى زاد الآخرة.</td></tr>
+                        <tr><td><strong>مكارم الأخلاق</strong></td><td>أعالي الأخلاق وأفضلها</td><td>بُعث النبي ﷺ ليُتمّم مكارم الأخلاق.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- رابعاً: خريطة الوحدة -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-map"></i> رابعاً: خريطة الوحدة ومكوّناتها</h2>
+            <div style="background: var(--bg-color); padding: 20px; border-radius: 10px;">
+                <h3 style="color: var(--subject-primary); margin-bottom: 15px;">🗺️ الهيكل التنظيمي لدروس الوحدة الأولى: القيم الإسلامية</h3>
+                <ul class="tree-list">
+                    <li><strong>أولًا: نص الاستماع</strong> <br> <small>الاستماع لنصٍّ حول قيمة إسلامية والإجابة عن أسئلته</small></li>
+                    <li><strong>ثانيًا: نص القراءة (الانطلاق)</strong>
+                        <ul style="list-style: disc; padding-right: 20px; margin-top: 5px; color: var(--text-muted);">
+                            <li>القراءة الجهرية النموذجية</li>
+                            <li>الفهم القرائي (الأفكار – المعاني – التذوّق)</li>
+                            <li>الثروة اللغوية (المفردات – التراكيب)</li>
+                            <li>التذوّق الأدبي (الصور – الأساليب)</li>
+                        </ul>
+                    </li>
+                    <li><strong>ثالثًا: الرسم الإملائي</strong> <br> <small>القاعدة الإملائية المقرّرة وتطبيقاتها</small></li>
+                    <li><strong>رابعًا: الرسم الكتابي (الخط)</strong> <br> <small>تدريب على كتابة الحروف والكلمات بخط النسخ</small></li>
+                    <li><strong>خامسًا: الصنف اللغوي</strong> <br> <small>التعرّف على الصنف اللغوي الجديد وتحليله</small></li>
+                    <li><strong>سادسًا: الأسلوب اللغوي</strong> <br> <small>دراسة الأسلوب اللغوي المقرّر وتوظيفه</small></li>
+                    <li><strong>سابعًا: الوظيفة النحوية</strong> <br> <small>القاعدة النحوية وتطبيقاتها الإعرابية</small></li>
+                    <li><strong>ثامنًا: التواصل اللغوي</strong>
+                        <ul style="list-style: disc; padding-right: 20px; margin-top: 5px; color: var(--text-muted);">
+                            <li>الكتابة (التعبير الكتابي)</li>
+                            <li>التحدث (التعبير الشفهي – الحوار – المناقشة)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- خامساً: الأنشطة التمهيدية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-running"></i> خامساً: الأنشطة التمهيدية المقترحة</h2>
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <h4><i class="fas fa-brain"></i> نشاط 1: العصف الذهني (5 دقائق)</h4>
+                    <p><strong>السؤال:</strong> اكتب على السبورة كلمة «قِيمة» واطلب من الطلاب أن يذكروا كل ما يخطر ببالهم من كلمات مرتبطة بها.</p>
+                    <p><strong>النتيجة المتوقّعة:</strong> صدق، أمانة، احترام، برّ، إحسان، تعاون، صبر...</p>
+                </div>
+                <div class="activity-card">
+                    <h4><i class="fas fa-balance-scale"></i> نشاط 2: الموقف الأخلاقي (7 دقائق)</h4>
+                    <p><strong>السيناريو:</strong> «وجدتَ حقيبةً فيها مبلغٌ كبير من المال في فناء المدرسة، ولا أحد يراك. ماذا تفعل؟ ولماذا؟»</p>
+                    <p><strong>الهدف:</strong> استثارة الدافعية وربط القيم بالواقع المعيش.</p>
+                </div>
+                <div class="activity-card">
+                    <h4><i class="fas fa-quran"></i> نشاط 3: آية وحديث (5 دقائق)</h4>
+                    <div class="quran-text" style="font-size: 1.1rem; padding: 10px;">﴿إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ﴾ [النحل: 90]</div>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">قال ﷺ: «إنّما بُعثتُ لأُتمّم مكارم الأخلاق» (رواه أحمد).</p>
+                    <p><strong>المناقشة:</strong> ما القيم التي تضمّنتها الآية والحديث؟</p>
+                </div>
+                <div class="activity-card">
+                    <h4><i class="fas fa-project-diagram"></i> نشاط 4: شبكة المفردات (8 دقائق)</h4>
+                    <p>اطلب من الطلاب تصنيف المفردات الجديدة في خريطة ذهنية وفق المحاور:</p>
+                    <ul style="padding-right: 20px; font-size: 0.9rem;">
+                        <li>قيمٌ تتعلق بالعبادة (التقوى – الإخلاص)</li>
+                        <li>قيمٌ تتعلق بالمعاملة (الصدق – الأمانة – الوفاء)</li>
+                        <li>قيمٌ تتعلق بالنفس (الصبر – العفّة)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- سادساً: الربط بالمواد الأخرى -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-link"></i> سادساً: الربط بالمواد الأخرى والحياة الواقعية</h2>
+            
+            <h3 style="color: var(--subject-primary); margin-bottom: 15px;">🔗 التكامل المعرفي</h3>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th>المادة</th><th>نقطة الربط</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>الدراسات الإسلامية</strong></td><td>دروس الأخلاق والآداب الإسلامية في الفقه والتوحيد.</td></tr>
+                        <tr><td><strong>الدراسات الاجتماعية</strong></td><td>دور القيم في بناء الحضارة الإسلامية والمجتمع.</td></tr>
+                        <tr><td><strong>العلوم</strong></td><td>الأمانة العلمية في نقل التجارب والنتائج.</td></tr>
+                        <tr><td><strong>الرياضيات</strong></td><td>الدقة والصدق في حل المسائل وعرض البيانات.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: var(--subject-primary); margin: 25px 0 15px;">🌍 الربط بالحياة اليومية</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> الصدق في الامتحانات وعدم الغش.</li>
+                <li><i class="fas fa-check-circle"></i> الأمانة في حفظ ممتلكات الزملاء.</li>
+                <li><i class="fas fa-check-circle"></i> الإحسان في التعامل مع العمالة والخدم.</li>
+                <li><i class="fas fa-check-circle"></i> برّ الوالدين وطاعتهما في غير معصية.</li>
+                <li><i class="fas fa-check-circle"></i> الصدق في التعاملات على وسائل التواصل الاجتماعي.</li>
+            </ul>
+        </div>
+
+        <!-- سابعاً: مخرجات التعلم -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> سابعاً: مخرجات التعلّم المتوقّعة بنهاية الوحدة</h2>
+            <p style="margin-bottom: 15px;">✅ في نهاية هذه الوحدة – بإذن الله – سيكون الطالب قادرًا على أن:</p>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> يُعرّف القيم الإسلامية ويذكر أمثلةً عليها من القرآن والسنة.</li>
+                <li><i class="fas fa-check-circle"></i> يقرأ النصوص المقرّرة قراءةً سليمةً معبّرةً ويستخلص أفكارها.</li>
+                <li><i class="fas fa-check-circle"></i> يُوظّف المفردات الجديدة في جملٍ وفقراتٍ ذات معنى.</li>
+                <li><i class="fas fa-check-circle"></i> يُطبّق القاعدة الإملائية في كتاباته اليومية.</li>
+                <li><i class="fas fa-check-circle"></i> يكتب بخطٍّ واضحٍ ومنظّمٍ وفق قواعد خط النسخ.</li>
+                <li><i class="fas fa-check-circle"></i> يُحلّل الصنف اللغوي والأسلوب اللغوي في نصوصٍ جديدة.</li>
+                <li><i class="fas fa-check-circle"></i> يُعرِب الجمل والتراكيب وفق القاعدة النحوية المقرّرة.</li>
+                <li><i class="fas fa-check-circle"></i> يُنتج نصًّا كتابيًّا وحوارًا شفهيًّا يتضمّن قيمًا إسلامية.</li>
+            </ul>
+        </div>
+
+        <!-- ثامناً: نصائح ذهبية -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> ثامناً: نصائح ذهبية للطالب 🌟</h2>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead><tr><th style="width: 30%;">النصيحة</th><th>التفاصيل</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>📌 اقرأ قبل الدرس</strong></td><td>اطّلع على النص في البيت قبل الحصة لتسبق زملاءك في الفهم.</td></tr>
+                        <tr><td><strong>📌 دوّن المفردات</strong></td><td>اجعل لك دفترًا خاصًّا بالمفردات الجديدة وراجعها يوميًّا.</td></tr>
+                        <tr><td><strong>📌 استمع بتركيز</strong></td><td>نص الاستماع فرصةٌ ذهبية لتقوية مهارة الإنصات.</td></tr>
+                        <tr><td><strong>📌 شارك بفعالية</strong></td><td>لا تتردّد في المشاركة والمناقشة، فالخطأ طريق التعلّم.</td></tr>
+                        <tr><td><strong>📌 طبّق ما تتعلّمه</strong></td><td>اجعل القيم الإسلامية سلوكًا عمليًّا قبل أن تكون مادةً دراسية.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- الخاتمة -->
+        <div class="golden-tip">
+            <h3 style="color: #856404; margin-bottom: 10px;"><i class="fas fa-star"></i> خاتمة تمهيدية</h3>
+            <p style="color: #856404; line-height: 1.8; font-size: 1.05rem;">
+                أبنائي الأعزّاء، إن اللغة العربية ليست مجرد كلماتٍ وقواعدَ نحوية، بل هي وعاءٌ لحضارةٍ عريقة وحاملٌ لقيمٍ خالدة. ومن خلال هذه الوحدة سنكتشف معًا كيف وظّف الكتّاب والشعراء هذه اللغة العظيمة لنقل أسمى القيم وأجلّها.
+                <br><br>
+                <strong>فاستعدّوا للرحلة، وأعدّوا أقلامكم وعقولكم وقلوبكم، وانطلقوا بثقةٍ نحو التميّز والإبداع! 🚀</strong>
+            </p>
+        </div>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>مخصص للطالب: أوس عبد الجبار الأحمدي &copy; 1448هـ</p>
+            <p>جميع الحقوق محفوظة | تم التطوير لمنصة GitHub Pages</p>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--subject-primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الملفات المركزية -->
+    <script src="../../js/darkmode.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/questionbank.js"></script>
+</body>
+</html>
